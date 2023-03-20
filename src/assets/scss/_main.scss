@@ -8,8 +8,9 @@ a {text-decoration: none; cursor: pointer;}
 
 /*header*/
 .header {display: flex; justify-content: space-between;}
-.logo_b {font-size: 32px; line-height: 52px; font-weight:500; margin: 60px 0 0 80px; padding-left:64px; background: url('../images/logo.png') no-repeat; background-size: contain;}
-.logo_w {font-size: 32px; line-height: 52px; font-weight:500; margin: 60px 0 0 80px; padding-left:64px; background: url('../images/logo_w.png') no-repeat; background-size: contain; color:#fff}
+.logo_b span{display: inline-block;}
+.logo_b {font-size: 32px; line-height: 52px; font-weight:500; margin: 60px 0 0 80px; background: url('../images/logo.svg') no-repeat; background-size: contain;border: 1px solid red;}
+.logo_w {font-size: 32px; line-height: 52px; font-weight:500; margin: 60px 0 0 80px; background: url('../images/logo_w.png') no-repeat; background-size: contain; color:#fff}
 .header ul.top_nav {display: flex; justify-content: flex-end;margin: 72px 76px 0 0;}
 .header ul.top_nav li {display: grid; width: 40px; height: 40px; margin-left:24px;}
 .header ul.top_nav li:last-child {width: inherit; position: relative;}

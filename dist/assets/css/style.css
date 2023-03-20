@@ -96,14 +96,18 @@ a {
       justify-content: space-between;
 }
 
+.logo_b span {
+  display: inline-block;
+}
+
 .logo_b {
   font-size: 32px;
   line-height: 52px;
   font-weight: 500;
   margin: 60px 0 0 80px;
-  padding-left: 64px;
-  background: url("../images/logo.png") no-repeat;
+  background: url("../images/logo.svg") no-repeat;
   background-size: contain;
+  border: 1px solid red;
 }
 
 .logo_w {
@@ -111,7 +115,6 @@ a {
   line-height: 52px;
   font-weight: 500;
   margin: 60px 0 0 80px;
-  padding-left: 64px;
   background: url("../images/logo_w.png") no-repeat;
   background-size: contain;
   color: #fff;
