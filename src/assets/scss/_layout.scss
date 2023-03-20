@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  .hamburger {
+    path {
+      fill:none;
+      stroke:#000;
+      stroke-linecap: round;
+    }
+  }
+}
+

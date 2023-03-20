@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* ★★★★ node-normalize-scss 호출 ★★★★ */
+div {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  border: 1px solid red;
+  background-color: yellow;
+}

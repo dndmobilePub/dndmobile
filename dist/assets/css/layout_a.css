@@ -1,0 +1,9 @@
+div {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+}
