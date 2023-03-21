@@ -221,17 +221,18 @@ html {
   font-family: "Pretendard";
 }
 
-html, body {
-  font-size: 16px;
+body {
+  line-height: 1;
 }
 
 li {
   list-style: none;
 }
 
-a {
+a:link {
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 }
 
 ::-moz-selection {
@@ -245,106 +246,10 @@ a {
 }
 
 /*header*/
-.header {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-}
-
-.logo_b span {
-  display: inline-block;
-}
-
-.logo_b {
-  font-size: 2rem;
-  line-height: 3.25rem;
-  font-weight: 500;
-  margin: 3.75rem 0 0 5rem;
-  background: url("../images/logo.svg") no-repeat;
-  background-size: contain;
-}
-
-.logo_w {
-  font-size: 2rem;
-  line-height: 3.25rem;
-  font-weight: 500;
-  margin: 3.75rem 0 0 5rem;
-  background: url("../images/logo_w.png") no-repeat;
-  background-size: contain;
-  color: #fff;
-}
-
-.header ul.top_nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  margin: 4.5rem 4.75rem 0 0;
-}
-
-.header ul.top_nav li {
-  display: -ms-grid;
-  display: grid;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-left: 1.5rem;
-}
-
-.header ul.top_nav li:last-child {
-  width: inherit;
-  position: relative;
-}
-
-.header ul.top_nav .ico1 {
-  background: url("../images/company_b.png") no-repeat;
-  background-size: contain;
-}
-
-.header ul.top_nav .ico1_w {
-  background: url("../images/company_w.png") no-repeat;
-  background-size: contain;
-}
-
-.header ul.top_nav .ico1:hover,
-.header ul.top_nav .ico1_w:hover {
-  background: url("../images/company_g.png") no-repeat;
-}
-
-.header ul.top_nav .ico2 {
-  background: url("../images/Instagram_b.png") no-repeat;
-  background-size: contain;
-}
-
-.header ul.top_nav .ico2_w {
-  background: url("../images/Instagram_w.png") no-repeat;
-  background-size: contain;
-}
-
-.header ul.top_nav .ico2:hover,
-.header ul.top_nav .ico2_w:hover {
-  background: url("../images/Instagram_g.png") no-repeat;
-}
-
-.header ul.top_nav .ico3 {
-  background: url("../images/blog_b.png") no-repeat;
-  background-size: contain;
-}
-
-.header ul.top_nav .ico3_w {
-  background: url("../images/blog_w.png") no-repeat;
-  background-size: contain;
-}
-
-.header ul.top_nav .ico3:hover,
-.header ul.top_nav .ico3_w:hover {
-  background: url("../images/blog_g.png") no-repeat;
-}
-
 .ico4 {
   display: inline-block;
   cursor: pointer;
-  margin-top: 0.31rem;
+  margin-top: 5px;
   position: absolute;
   z-index: 50;
 }
@@ -354,20 +259,20 @@ a {
 }
 
 .bar1, .bar3 {
-  width: 1.88rem;
-  height: 0.13rem;
+  width: 30px;
+  height: 2px;
   background-color: #333;
   transition: 0.4s;
-  border-radius: 0 0.63rem 0.63rem 0;
+  border-radius: 0 10px 10px 0;
 }
 
 .bar2 {
-  width: 1.63rem;
-  height: 0.13rem;
+  width: 26px;
+  height: 2px;
   background-color: #333;
-  margin: 0.63rem 0;
+  margin: 10px 0;
   transition: 0.4s;
-  border-radius: 0 0.63rem 0.63rem 0;
+  border-radius: 0 10px 10px 0;
 }
 
 .change .bar1 {
@@ -396,14 +301,14 @@ a {
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 3.75rem;
+  padding-top: 60px;
   z-index: 10;
 }
 
 .sidenav a {
-  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 1.56rem;
+  font-size: 25px;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -416,52 +321,52 @@ a {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 1.56rem;
-  font-size: 2.25rem;
-  margin-left: 3.13rem;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 /*recruit*/
 .wrap_recruit {
-  margin: 8.13rem 10rem 15.63rem 10rem;
+  margin: 130px 160px 250px 160px;
 }
 
 h2 {
-  font-size: 5.63rem;
+  font-size: 90px;
   font-weight: 100;
 }
 
 h2 + p {
-  font-size: 1.5rem;
-  line-height: 2.13rem;
+  font-size: 24px;
+  line-height: 34px;
   font-weight: 300;
   color: #000;
-  margin-top: 2.5rem;
+  margin-top: 40px;
 }
 
 dl {
-  margin-top: 10rem;
+  margin-top: 160px;
   border-bottom: 1px solid #B4B4B4;
 }
 
 dt.accordion {
   border-top: 1px solid #B4B4B4;
-  background: url(../images/icon_plus.png) calc(100% - 2.5rem) 50% no-repeat;
-  background-size: 3.13rem;
+  background: url(../images/icon_plus.png) calc(100% - 40px) 50% no-repeat;
+  background-size: 50px;
   color: #000;
   cursor: pointer;
-  padding: 3.5rem 2.5rem;
-  font-size: 3rem;
+  padding: 56px 40px;
+  font-size: 48px;
   font-weight: 700;
 }
 
 dt.active {
-  background: url(../images/icon_minus.png) calc(100% - 2.5rem) 50% no-repeat;
-  background-size: 3.13rem;
+  background: url(../images/icon_minus.png) calc(100% - 40px) 50% no-repeat;
+  background-size: 50px;
 }
 
 dd.panel {
-  margin-left: 35rem;
+  margin-left: 560px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -475,25 +380,25 @@ dd.panel .part {
 }
 
 dd.panel .part:last-child {
-  padding-bottom: 7.5rem;
+  padding-bottom: 120px;
 }
 
 dd.panel p {
-  width: 16.88rem;
-  font-size: 1.88rem;
+  width: 270px;
+  font-size: 30px;
   font-weight: 600;
 }
 
 dd.panel ul li {
   list-style-type: disc;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 24px;
+  line-height: 32px;
   font-weight: 300;
-  padding-inline-start: 0.63rem;
+  padding-inline-start: 10px;
 }
 
 dd.panel ul li:last-child {
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 /*button*/
@@ -502,23 +407,23 @@ dd.panel ul li:last-child {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  margin-top: 5rem;
+  margin-top: 80px;
 }
 
 .btn_wrap input[type=button] {
-  width: 20.19rem;
-  height: 5rem;
+  width: 323px;
+  height: 80px;
   background: #fff;
   border: 0;
   outline: 0;
   border-radius: 8px;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 500;
   cursor: pointer;
 }
 
 .btn_wrap input[type=button]:last-child {
-  margin-left: 1.25rem;
+  margin-left: 20px;
 }
 
 .btn_wrap input[type=button].type1 {
@@ -550,7 +455,7 @@ dd.panel ul li:last-child {
 
 /*footer*/
 .footer {
-  padding: 5rem;
+  padding: 80px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -559,16 +464,16 @@ dd.panel ul li:last-child {
 }
 
 .footer p {
-  font-size: 2.38rem;
-  line-height: 2.38rem;
+  font-size: 38px;
+  line-height: 38px;
   font-weight: 800;
 }
 
 .footer ul li {
   display: inline-block;
-  margin-right: 1.88rem;
-  font-size: 1.25rem;
-  line-height: 2.38rem;
+  margin-right: 30px;
+  font-size: 20px;
+  line-height: 38px;
 }
 
 .footer ul li:last-child {
@@ -578,7 +483,7 @@ dd.panel ul li:last-child {
 .footer ul li strong {
   font-style: normal;
   font-weight: 600;
-  margin-right: 0.5rem;
+  margin-right: 8px;
 }
 
 .footer ul li:last-child strong {
@@ -587,13 +492,13 @@ dd.panel ul li:last-child {
 
 /*contact*/
 .wrap_contact {
-  margin: 8.13rem 10rem 15.63rem 10rem;
+  margin: 130px 160px 250px 160px;
 }
 
 .wrap_contact h2 {
-  font-size: 5rem;
+  font-size: 80px;
   font-weight: 700;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 
 .wrap_contact .btn_wrap {
@@ -603,12 +508,12 @@ dd.panel ul li:last-child {
 
 .wrap_contact li {
   color: #555;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 }
 
 .wrap_contact li strong {
   color: #000;
-  margin-right: 1rem;
+  margin-right: 16px;
 }
 
 .bg_contact {
