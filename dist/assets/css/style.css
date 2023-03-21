@@ -59,14 +59,170 @@
   font-weight: 900;
   font-display: swap;
 }
+/* color */
+/** font-size **/
+/*12px*/
+/*14px*/
+/*15px*/
+/*16px*/
+/*18px*/
+/*20px*/
+/*24px*/
+/*26px*/
+/*30px*/
+/*32px*/
+/*48px*/
+/*64px*/
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.header--inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 57px 20px;
+}
+.header--inner .logo_b {
+  margin-right: auto;
+}
+.header--inner .top-nav--container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.header--inner .top-nav--container .top-nav li {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 2%;
+}
+.header--inner .top-nav--container .top-nav li a {
+  display: inline-block;
+  text-indent: -999em;
+  font-size: 0;
+  overflow: hidden;
+}
+.header--inner .top-nav--container .top-nav li a .ico {
+  width: 26px;
+  height: 26px;
+}
+.header--inner nav {
+  position: relative;
+  z-index: 10;
+}
+.header--inner nav li {
+  transition: transform 300ms ease-in-out;
+  overflow: hidden;
+}
+.header--inner nav li + li {
+  margin-top: 20px;
+}
+.header--inner nav li a {
+  font-size: 17vw;
+}
+
+.logo_b .ico {
+  width: 8vw;
+  height: 8vw;
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2699_995)'%3E%3Cpath d='M29.9774 28.5016C30.0388 28.4951 30.0998 28.4851 30.16 28.4717C30.5176 28.4138 30.839 28.2206 31.0576 27.9317C31.2416 27.7672 31.3903 27.5667 31.4945 27.3429C31.5987 27.1191 31.6562 26.8765 31.6637 26.6298C31.679 26.4097 31.6469 26.189 31.5694 25.9824C31.4919 25.7759 31.371 25.5883 31.2147 25.4327C31.0411 25.2774 30.839 25.1579 30.6192 25.0809C30.3995 25.0038 30.1664 24.9707 29.9339 24.9837C29.4979 24.9632 29.0713 25.1151 28.7459 25.406C28.5996 25.5392 28.4848 25.7034 28.4102 25.8867C28.3356 26.0701 28.3031 26.2678 28.3149 26.4654C28.3305 26.9425 28.5001 27.4018 28.7982 27.7747C28.9144 27.988 29.0845 28.167 29.2913 28.2945C29.4981 28.422 29.7346 28.4935 29.9774 28.5016Z' fill='black'/%3E%3Cpath d='M45.636 37.3656C44.5895 37.3513 43.5508 37.5502 42.5838 37.9504C41.6168 38.3507 40.7415 38.9439 40.0113 39.6937C39.6656 40.0408 39.3505 40.4173 39.0699 40.8189L39.0926 40.8459H39.0491C38.0473 42.3161 37.5665 44.0794 37.6832 45.8546C37.7999 47.6299 38.5074 49.3149 39.6931 50.6413C40.8788 51.9676 42.4744 52.8587 44.2255 53.1729C45.9766 53.487 47.7827 53.2061 49.3555 52.3747C50.9284 51.5432 52.1776 50.2093 52.9042 48.5853C53.6307 46.9614 53.7927 45.1408 53.3644 43.414C52.9362 41.6873 51.9422 40.1535 50.541 39.0573C49.1398 37.9611 47.4118 37.3657 45.6327 37.3656H45.636Z' fill='black'/%3E%3Cpath d='M16.8111 12.3789C14.9723 12.3795 13.1909 13.0174 11.7699 14.1843C10.3488 15.3512 9.37593 16.9749 9.01761 18.7784C8.6593 20.5819 8.9374 22.4539 9.80449 24.0754C10.6716 25.6969 12.0743 26.9677 13.7732 27.6711C15.4721 28.3746 17.3621 28.467 19.1217 27.9331C20.8812 27.3991 22.4014 26.2718 23.4228 24.7428C24.4443 23.2139 24.9039 21.378 24.7237 19.5481C24.5435 17.7182 23.7345 16.0073 22.4343 14.7071C21.7046 13.957 20.8298 13.3638 19.8629 12.9634C18.8961 12.5631 17.8575 12.3642 16.8111 12.3789Z' fill='black'/%3E%3Cpath d='M32 0C25.671 0 19.4843 1.87649 14.2219 5.39269C8.95952 8.9089 4.85793 13.9069 2.43593 19.7541C0.0139258 25.6013 -0.619863 32.0354 0.614864 38.2427C1.84959 44.4501 4.89714 50.1519 9.37242 54.6272C13.8477 59.1025 19.5499 62.1504 25.7573 63.3851C31.9647 64.6199 38.3987 63.9861 44.2459 61.5641C50.0932 59.1421 55.0907 55.0405 58.6069 49.7781C62.1232 44.5157 64 38.329 64 32C64 23.5131 60.6284 15.3735 54.6273 9.37237C48.6261 3.37121 40.487 0 32 0ZM56.1459 42.9439V45.3213C56.1459 48.1088 55.0384 50.7822 53.0674 52.7532C51.0964 54.7242 48.4234 55.8316 45.6359 55.8316C42.8485 55.8316 40.1751 54.7242 38.2041 52.7532C36.2331 50.7822 35.1256 48.1088 35.1256 45.3213C35.1079 43.7764 35.4401 42.2474 36.097 40.8489H36.0656L34.6109 39.0833C33.9837 39.7705 33.2216 40.3208 32.3719 40.6998C31.5223 41.0788 30.6037 41.2782 29.6734 41.2858C28.1334 41.3413 26.6325 40.7931 25.4909 39.758C24.9173 39.2317 24.4673 38.5854 24.1729 37.8647C23.8785 37.1439 23.7471 36.3669 23.7882 35.5895C23.8231 34.4052 24.1864 33.2537 24.8374 32.2637C25.4884 31.2737 26.4017 30.484 27.4753 29.9827C27.2211 29.7405 26.9941 29.4713 26.7988 29.1794C26.252 28.5004 25.9375 27.6639 25.9012 26.7929C25.8947 26.2316 25.9904 25.6737 26.1839 25.1468C25.672 26.1118 25.016 26.9933 24.2387 27.7609C22.768 29.2259 20.8961 30.2222 18.8595 30.6239C16.8229 31.0255 14.7129 30.8147 12.7961 30.0178C10.8793 29.2209 9.24171 27.8738 8.09018 26.1466C6.93866 24.4195 6.32501 22.3896 6.32647 20.3137C6.32793 18.2379 6.94463 16.2093 8.09859 14.4838C9.25255 12.7582 10.8921 11.4134 12.81 10.6192C14.7279 9.82497 16.8381 9.61697 18.8741 10.0215C20.9101 10.4261 22.7807 11.425 24.2493 12.8921C24.4318 13.0777 24.5843 13.2767 24.7519 13.4697V6.26651H27.3164V20.3316C27.3334 21.8586 27.0101 23.3701 26.3695 24.7563C26.5592 24.3713 26.8169 24.0239 27.1308 23.7312C27.9368 23.0509 28.9646 22.69 30.019 22.7167C30.5427 22.6941 31.0656 22.7748 31.558 22.9546C32.0505 23.1343 32.5028 23.4094 32.8888 23.7641C33.263 24.1371 33.5551 24.5842 33.7466 25.0766C33.938 25.569 34.0244 26.096 34.0005 26.6237C34.0005 28.7634 32.7123 30.3899 30.1746 31.4582C29.0953 31.8593 28.1057 32.4695 27.2627 33.2537C26.608 33.851 26.2163 34.6835 26.1733 35.5687C26.1563 36.0213 26.2295 36.4725 26.3885 36.8966C26.5475 37.3207 26.789 37.709 27.0994 38.0389C27.4067 38.3523 27.7764 38.5978 28.1844 38.7597C28.5923 38.9215 29.0295 38.996 29.4681 38.9785C30.3258 38.9731 31.1651 38.7281 31.8908 38.2709C32.7531 37.7833 33.4547 37.0556 33.9106 36.1762C34.4436 35.0566 34.6961 33.8238 34.6456 32.5848V31.7709H36.9916V32.591C37.0157 34.1328 36.6932 35.66 36.0477 37.0602L37.4179 38.7556C37.6669 38.4493 37.9311 38.1558 38.2095 37.876C40.1833 35.9063 42.8578 34.8001 45.6461 34.8001C48.4345 34.8001 51.109 35.9063 53.0827 37.876C53.2653 38.0615 53.4182 38.2605 53.5858 38.4535V31.2504H56.1502V42.9362L56.1459 42.9439Z' fill='black'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2699_995'%3E%3Crect width='64' height='64' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-size: cover;
+}
+
+.ico {
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+}
+.ico .line-black {
+  stroke: #222;
+}
+.ico .white {
+  fill: #222;
+}
+
+.menu-toggle {
+  background: transparent;
+  border: none;
+  position: relative;
+  z-index: 100;
+  border: 1px solid red;
+  cursor: pointer;
+}
+.menu-toggle .hamburger path {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+}
+
+.fullpage-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 768px;
+  height: 100vh;
+  background-color: #000;
+  z-index: 99;
+  transform: translate(0%, 0%);
+}
+.fullpage-menu--inner {
+  height: inherit;
+  padding: 0 160px 0 160px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.fullpage-menu--inner .main-menu li {
+  padding-bottom: 48px;
+}
+.fullpage-menu--inner .main-menu li a {
+  color: #fff;
+  opacity: 0.3;
+  font-size: 3.333vw;
+  font-weight: 300;
+  line-height: 3.333vw;
+}
+.fullpage-menu--inner .main-menu li a:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .top-nav {
+    display: none;
+  }
+  .logo_b a {
+    font-size: 4vw;
+  }
+  .logo_b .ico {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2303_10665)'%3E%3Cpath d='M14.0519 13.3602C14.0807 13.3571 14.1093 13.3524 14.1375 13.3461C14.3051 13.319 14.4558 13.2284 14.5583 13.093C14.6445 13.0159 14.7142 12.9219 14.7631 12.817C14.8119 12.7121 14.8389 12.5984 14.8423 12.4827C14.8495 12.3796 14.8345 12.2761 14.7982 12.1793C14.7619 12.0825 14.7051 11.9945 14.6319 11.9216C14.5505 11.8488 14.4558 11.7928 14.3528 11.7567C14.2497 11.7206 14.1405 11.7051 14.0315 11.7111C13.8271 11.7015 13.6272 11.7727 13.4747 11.9091C13.4061 11.9715 13.3522 12.0485 13.3173 12.1344C13.2823 12.2204 13.2671 12.3131 13.2726 12.4057C13.2799 12.6293 13.3594 12.8446 13.4991 13.0194C13.5536 13.1194 13.6334 13.2033 13.7303 13.2631C13.8272 13.3228 13.9381 13.3563 14.0519 13.3602Z' fill='%23222222'/%3E%3Cpath d='M21.3922 17.5152C20.9016 17.5085 20.4148 17.6017 19.9615 17.7894C19.5082 17.977 19.0979 18.2551 18.7556 18.6065C18.5936 18.7693 18.4458 18.9457 18.3143 19.1339L18.3249 19.1466H18.3046C17.835 19.8358 17.6096 20.6623 17.6643 21.4945C17.719 22.3266 18.0507 23.1165 18.6065 23.7382C19.1623 24.3599 19.9102 24.7776 20.731 24.9249C21.5518 25.0722 22.3985 24.9405 23.1357 24.5507C23.873 24.161 24.4586 23.5357 24.7991 22.7745C25.1397 22.0133 25.2156 21.1598 25.0149 20.3504C24.8141 19.541 24.3482 18.8221 23.6914 18.3082C23.0346 17.7944 22.2246 17.5153 21.3906 17.5152H21.3922Z' fill='%23222222'/%3E%3Cpath d='M7.88088 5.8026C7.01896 5.80288 6.18392 6.10188 5.51779 6.64886C4.85166 7.19585 4.39564 7.95696 4.22768 8.80236C4.05972 9.64777 4.19008 10.5252 4.59653 11.2853C5.00298 12.0454 5.6605 12.6411 6.45686 12.9708C7.25322 13.3006 8.13918 13.3439 8.96397 13.0936C9.78876 12.8433 10.5013 12.3149 10.9801 11.5982C11.459 10.8815 11.6744 10.0209 11.5899 9.16316C11.5054 8.30539 11.1262 7.50341 10.5168 6.89391C10.1747 6.54231 9.76462 6.26424 9.31141 6.07658C8.8582 5.88893 8.37136 5.79571 7.88088 5.8026Z' fill='%23222222'/%3E%3Cpath d='M15 0C12.0333 0 9.13325 0.879604 6.66651 2.52782C4.19978 4.17605 2.27716 6.51884 1.14184 9.25973C0.00652772 12.0006 -0.290561 15.0166 0.288218 17.9263C0.866996 20.836 2.29553 23.5087 4.39332 25.6065C6.49111 27.7043 9.164 29.133 12.0737 29.7118C14.9834 30.2906 17.9994 29.9935 20.7403 28.8582C23.4812 27.7228 25.8238 25.8002 27.472 23.3335C29.1202 20.8668 30 17.9667 30 15C30 11.0217 28.4196 7.20634 25.6065 4.3933C22.7935 1.58025 18.9783 0 15 0ZM26.3184 20.13V21.2444C26.3184 22.551 25.7993 23.8041 24.8753 24.7281C23.9514 25.652 22.6985 26.1711 21.3918 26.1711C20.0852 26.1711 18.8321 25.652 17.9082 24.7281C16.9842 23.8041 16.4651 22.551 16.4651 21.2444C16.4568 20.5202 16.6126 19.8035 16.9205 19.1479H16.9057L16.2239 18.3203C15.9299 18.6424 15.5726 18.9004 15.1743 19.078C14.7761 19.2557 14.3455 19.3491 13.9094 19.3527C13.1876 19.3787 12.484 19.1218 11.9489 18.6366C11.68 18.3899 11.469 18.0869 11.3311 17.7491C11.1931 17.4112 11.1315 17.047 11.1507 16.6826C11.1671 16.1274 11.3374 15.5877 11.6425 15.1236C11.9477 14.6596 12.3758 14.2894 12.8791 14.0544C12.7599 13.9409 12.6535 13.8147 12.5619 13.6779C12.3056 13.3596 12.1582 12.9675 12.1412 12.5592C12.1381 12.2961 12.183 12.0345 12.2737 11.7876C12.0337 12.2399 11.7262 12.6531 11.3619 13.0129C10.6725 13.6997 9.79504 14.1666 8.84039 14.3549C7.88573 14.5432 6.89666 14.4444 5.99817 14.0708C5.09968 13.6973 4.33205 13.0658 3.79227 12.2562C3.25249 11.4466 2.96485 10.4951 2.96553 9.52207C2.96622 8.54902 3.25529 7.59811 3.79621 6.78927C4.33713 5.98043 5.10566 5.35002 6.00468 4.97774C6.90369 4.60545 7.89285 4.50796 8.84724 4.69759C9.80163 4.88722 10.6784 5.35549 11.3668 6.04318C11.4524 6.13016 11.5239 6.22343 11.6025 6.31391V2.93743H12.8046V9.53046C12.8125 10.2462 12.661 10.9547 12.3607 11.6045C12.4496 11.424 12.5704 11.2612 12.7176 11.124C13.0954 10.8051 13.5772 10.6359 14.0714 10.6485C14.3169 10.6379 14.562 10.6757 14.7928 10.76C15.0237 10.8442 15.2357 10.9732 15.4166 11.1394C15.592 11.3142 15.729 11.5239 15.8187 11.7547C15.9084 11.9855 15.9489 12.2325 15.9377 12.4799C15.9377 13.4829 15.3339 14.2452 14.1443 14.746C13.6384 14.9341 13.1746 15.2201 12.7794 15.5877C12.4725 15.8677 12.2889 16.2579 12.2688 16.6728C12.2608 16.885 12.2951 17.0965 12.3696 17.2953C12.4441 17.4941 12.5574 17.6761 12.7028 17.8307C12.8469 17.9776 13.0202 18.0927 13.2114 18.1686C13.4027 18.2445 13.6076 18.2794 13.8132 18.2712C14.2152 18.2687 14.6086 18.1538 14.9488 17.9395C15.353 17.7109 15.6819 17.3698 15.8956 16.9576C16.1454 16.4328 16.2638 15.8549 16.2401 15.2741V14.8926H17.3398V15.2771C17.3511 15.9997 17.1999 16.7156 16.8973 17.372L17.5397 18.1667C17.6563 18.0231 17.7802 17.8855 17.9107 17.7544C18.8359 16.8311 20.0896 16.3125 21.3966 16.3125C22.7037 16.3125 23.9573 16.8311 24.8825 17.7544C24.9681 17.8413 25.0398 17.9346 25.1183 18.0251V14.6486H26.3204V20.1264L26.3184 20.13Z' fill='%23222222'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2303_10665'%3E%3Crect width='30' height='30' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+    background-size: contain;
+  }
+  .fullpage-menu {
+    width: 100%;
+  }
+}
 * {
   margin: 0;
   padding: 0;
   font-family: "Pretendard";
 }
 
-body {
-  font-size: 24px;
+html, body {
+  font-size: 16px;
 }
 
 li {
@@ -101,20 +257,19 @@ a {
 }
 
 .logo_b {
-  font-size: 32px;
-  line-height: 52px;
+  font-size: 2rem;
+  line-height: 3.25rem;
   font-weight: 500;
-  margin: 60px 0 0 80px;
+  margin: 3.75rem 0 0 5rem;
   background: url("../images/logo.svg") no-repeat;
   background-size: contain;
-  border: 1px solid red;
 }
 
 .logo_w {
-  font-size: 32px;
-  line-height: 52px;
+  font-size: 2rem;
+  line-height: 3.25rem;
   font-weight: 500;
-  margin: 60px 0 0 80px;
+  margin: 3.75rem 0 0 5rem;
   background: url("../images/logo_w.png") no-repeat;
   background-size: contain;
   color: #fff;
@@ -125,15 +280,15 @@ a {
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end;
-  margin: 72px 76px 0 0;
+  margin: 4.5rem 4.75rem 0 0;
 }
 
 .header ul.top_nav li {
   display: -ms-grid;
   display: grid;
-  width: 40px;
-  height: 40px;
-  margin-left: 24px;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1.5rem;
 }
 
 .header ul.top_nav li:last-child {
@@ -189,7 +344,7 @@ a {
 .ico4 {
   display: inline-block;
   cursor: pointer;
-  margin-top: 5px;
+  margin-top: 0.31rem;
   position: absolute;
   z-index: 50;
 }
@@ -199,20 +354,20 @@ a {
 }
 
 .bar1, .bar3 {
-  width: 30px;
-  height: 2px;
+  width: 1.88rem;
+  height: 0.13rem;
   background-color: #333;
   transition: 0.4s;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 0.63rem 0.63rem 0;
 }
 
 .bar2 {
-  width: 26px;
-  height: 2px;
+  width: 1.63rem;
+  height: 0.13rem;
   background-color: #333;
-  margin: 10px 0;
+  margin: 0.63rem 0;
   transition: 0.4s;
-  border-radius: 0 10px 10px 0;
+  border-radius: 0 0.63rem 0.63rem 0;
 }
 
 .change .bar1 {
@@ -241,14 +396,14 @@ a {
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 3.75rem;
   z-index: 10;
 }
 
 .sidenav a {
-  padding: 8px 8px 8px 32px;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.56rem;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -261,52 +416,52 @@ a {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  right: 1.56rem;
+  font-size: 2.25rem;
+  margin-left: 3.13rem;
 }
 
 /*recruit*/
 .wrap_recruit {
-  margin: 130px 160px 250px 160px;
+  margin: 8.13rem 10rem 15.63rem 10rem;
 }
 
 h2 {
-  font-size: 90px;
+  font-size: 5.63rem;
   font-weight: 100;
 }
 
 h2 + p {
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 1.5rem;
+  line-height: 2.13rem;
   font-weight: 300;
   color: #000;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 dl {
-  margin-top: 160px;
+  margin-top: 10rem;
   border-bottom: 1px solid #B4B4B4;
 }
 
 dt.accordion {
   border-top: 1px solid #B4B4B4;
-  background: url(../images/icon_plus.png) calc(100% - 40px) 50% no-repeat;
-  background-size: 50px;
+  background: url(../images/icon_plus.png) calc(100% - 2.5rem) 50% no-repeat;
+  background-size: 3.13rem;
   color: #000;
   cursor: pointer;
-  padding: 56px 40px;
-  font-size: 48px;
+  padding: 3.5rem 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 
 dt.active {
-  background: url(../images/icon_minus.png) calc(100% - 40px) 50% no-repeat;
-  background-size: 50px;
+  background: url(../images/icon_minus.png) calc(100% - 2.5rem) 50% no-repeat;
+  background-size: 3.13rem;
 }
 
 dd.panel {
-  margin-left: 560px;
+  margin-left: 35rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -320,25 +475,25 @@ dd.panel .part {
 }
 
 dd.panel .part:last-child {
-  padding-bottom: 120px;
+  padding-bottom: 7.5rem;
 }
 
 dd.panel p {
-  width: 270px;
-  font-size: 30px;
+  width: 16.88rem;
+  font-size: 1.88rem;
   font-weight: 600;
 }
 
 dd.panel ul li {
   list-style-type: disc;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 300;
-  padding-inline-start: 10px;
+  padding-inline-start: 0.63rem;
 }
 
 dd.panel ul li:last-child {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 /*button*/
@@ -347,23 +502,23 @@ dd.panel ul li:last-child {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  margin-top: 80px;
+  margin-top: 5rem;
 }
 
 .btn_wrap input[type=button] {
-  width: 323px;
-  height: 80px;
+  width: 20.19rem;
+  height: 5rem;
   background: #fff;
   border: 0;
   outline: 0;
   border-radius: 8px;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
 }
 
 .btn_wrap input[type=button]:last-child {
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 
 .btn_wrap input[type=button].type1 {
@@ -395,7 +550,7 @@ dd.panel ul li:last-child {
 
 /*footer*/
 .footer {
-  padding: 80px;
+  padding: 5rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -404,16 +559,16 @@ dd.panel ul li:last-child {
 }
 
 .footer p {
-  font-size: 38px;
-  line-height: 38px;
+  font-size: 2.38rem;
+  line-height: 2.38rem;
   font-weight: 800;
 }
 
 .footer ul li {
   display: inline-block;
-  margin-right: 30px;
-  font-size: 20px;
-  line-height: 38px;
+  margin-right: 1.88rem;
+  font-size: 1.25rem;
+  line-height: 2.38rem;
 }
 
 .footer ul li:last-child {
@@ -423,7 +578,7 @@ dd.panel ul li:last-child {
 .footer ul li strong {
   font-style: normal;
   font-weight: 600;
-  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .footer ul li:last-child strong {
@@ -432,13 +587,13 @@ dd.panel ul li:last-child {
 
 /*contact*/
 .wrap_contact {
-  margin: 130px 160px 250px 160px;
+  margin: 8.13rem 10rem 15.63rem 10rem;
 }
 
 .wrap_contact h2 {
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 
 .wrap_contact .btn_wrap {
@@ -448,12 +603,12 @@ dd.panel ul li:last-child {
 
 .wrap_contact li {
   color: #555;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .wrap_contact li strong {
   color: #000;
-  margin-right: 16px;
+  margin-right: 1rem;
 }
 
 .bg_contact {
@@ -465,21 +620,4 @@ dd.panel ul li:last-child {
   top: 0;
   left: 0;
   z-index: -1;
-}
-
-.menu-toggle {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-.menu-toggle .hamburger path {
-  fill: none;
-  stroke: #000;
-  stroke-linecap: round;
-}
-
-.box {
-  width: 300px;
-  height: 300px;
-  background-color: #ddd;
 }
