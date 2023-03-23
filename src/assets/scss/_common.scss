@@ -38,17 +38,20 @@ html{
 
 header{
 	.header--inner{
+		position: fixed;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
 		padding:60px 4.16vw 0 4.16vw;
+		width: 100%;
+		background-color: #fff;
 		.logo {
 			&--black{
 				display: flex;
 				align-items: center;
 				.ico{
 					width: 64px;
-					height: 64px;
+					// height: 64px;
 					margin-right: 16px;
 					img {
 						object-fit: contain;
@@ -101,8 +104,9 @@ header{
 	background: transparent;
 	border: none;
 	position: absolute;
+	top: 70px;
 	right: 20px;
-	z-index: 100;
+	z-index: 1002;
 	cursor: pointer;
 	.hamburger {
 		path {
@@ -126,6 +130,7 @@ header{
 	top: 0;
 	width: 40vw;
 	height: 100vh;
+	z-index: 1001;
 	display: none;
 	&--inner{
 		display: flex;
@@ -149,9 +154,6 @@ header{
 			}
 		}
 		nav {
-			// position: absolute;
-			// top: 20%;
-			// left: 20%;
 			.main{
 				&-menu{
 					li{
@@ -173,9 +175,9 @@ header{
 						&:hover{
 							transform: translateX(50px);
 						}
-					&+li{
-						margin-top: 48px;
-					}
+						&+li{
+							margin-top: 48px;
+						}
 					}
 					
 				}
@@ -205,11 +207,25 @@ header{
 									fill:$primary;
 								}
 							}
+							span{
+								color: $primary;
+							}
 						}
 					}
 					&.active{
 						a{
-
+							color: $primary;
+							span{
+								color:inherit
+							}
+						}
+						.ico{
+							.stroke-black{
+								stroke: $primary;
+							}
+							.fill-black{
+								fill:$primary;
+							}
 						}
 					}
 				}
@@ -217,7 +233,7 @@ header{
 			.line{
 				display: block;
 				background: #2f2f2f;
-				height: 2px;
+				height: 1px;
 				width: 260%;
 			}
 		}
@@ -226,20 +242,24 @@ header{
 
 
 @media screen and (max-width:767px) {
+	header{}
+	.menu-toggle{
+		top: 52px !important;
+	}
 	.header{
 		&--inner{
-			padding: 15.2vw 20px;
+			padding: 57px 20px;
 			.logo {
 				&--black{
 					.ico{
 							width: 30px !important;
 							height: 30px;
 							margin-right: 8px !important;
-						img{
-							width: inherit;
-							height: inherit;
+							img{
+								width: inherit;
+								height: inherit;
+							}
 						}
-					}
 					a{
 						font-size: .9375rem;
 					}
@@ -249,7 +269,8 @@ header{
 		&--footer{
 			position: absolute;
 			left: 15px;
-			top: 76px;
+			top: 60px;
+			z-index: 1002;
 			.logo {
 				&--white{
 					display: flex;
@@ -257,7 +278,7 @@ header{
 					overflow:hidden;
 					transition: transform 300ms ease-in-out 0s;
 					a{
-						color: #fff !important;
+						color: #000;
 						font-size: .9375rem !important;
 						line-height: 1;
 					}
@@ -267,13 +288,12 @@ header{
 				}
 			}
 		}
-		
 	}
 	.fullpage-menu{
 		width: 100%;
 		&--inner{
 			align-items: flex-start;
-			padding: 50% 60px 0 ;
+			padding: 42% 60px 0 ;
 			nav{
 				// padding-top: 35vw;
 				.main{
@@ -294,7 +314,7 @@ header{
 				width: 260px;
 			}
 			}
-		}
+	}
 	
 		.hide {
 		&-mobile{
