@@ -1,0 +1,179 @@
+// PC VW : 1920
+@mixin vw-convert-pc($property, $pc-pixel) {
+	@if type-of($pc-pixel)==number {
+		#{$property}: $pc-pixel*1px;
+		#{$property}: $pc-pixel*100/1920*1vw;
+
+		@media (min-width: $screen-xlg) {
+			#{$property}: $pc-pixel*1px;
+		}
+	}
+
+	@else if type-of($pc-pixel)==string {
+		#{$property}: auto;
+
+		@media (min-width: $screen-xlg) {
+			#{$property}: auto;
+		}
+	}
+
+	@else if type-of($pc-pixel)==list {
+		$px: ();
+		$vw: ();
+
+		@each $value in $pc-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value*1px);
+				$vw: append($vw, $value*100/1920*1vw);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+
+		#{$property}: $px;
+		#{$property}: $vw;
+		$px: ();
+
+		@each $value in $pc-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value*1px);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+			}
+		}
+
+		@media (min-width:$screen-xlg) {
+			#{$property}: $px;
+		}
+	}
+}
+
+// TB VW : 1366
+@mixin vw-convert-tb($property, $tb-pixel) {
+	@if type-of($tb-pixel)==number {
+		@media (max-width: $screen-lg) {
+			#{$property}: $tb-pixel*1px;
+			#{$property}: $tb-pixel*100/1366*1vw;
+		}
+	}
+
+	@else if type-of($tb-pixel)==string {
+		@media (max-width: $screen-lg) {
+			#{$property}: auto;
+		}
+	}
+
+	@else if type-of($tb-pixel)==list {
+		$px: ();
+		$vw: ();
+
+		@each $value in $tb-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value*1px);
+				$vw: append($vw, $value*100/1366*1vw);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+
+		@media (max-width: $screen-lg) {
+			#{$property}: $px;
+			#{$property}: $vw;
+		}
+	}
+}
+
+// MO VW : 414
+@mixin vw-convert-mo($property, $mo-pixel) {
+	@if type-of($mo-pixel)==number {
+		#{$property}: $mo-pixel/414*828*1px; // 기준사이즈 * (기준사이즈 * 2) * 1px;
+		#{$property}: $mo-pixel*100/414*1vw;
+
+		@media (max-width: 414px) {
+			#{$property}: $mo-pixel*1px;
+			#{$property}: $mo-pixel*100/414*1vw;
+		}
+	}
+
+	@else if type-of($mo-pixel)==string {
+		#{$property}: auto;
+
+		@media (max-width: 414px) {
+			#{$property}: auto;
+		}
+	}
+
+	@else if type-of($mo-pixel)==list {
+		$px: ();
+		$vw: ();
+
+		@each $value in $mo-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value/414*828*1px);
+				$vw: append($vw, $value*100/414*1vw);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+
+		#{$property}:$px;
+		#{$property}:$vw;
+		$px: ();
+		$vw: ();
+
+		@each $value in $mo-pixel {
+			@if type-of($value)==number {
+				$px: append($px, $value*1px);
+				$vw: append($vw, $value*100/414*1vw);
+			}
+
+			@else if type-of($value)==string {
+				$px: append($px, auto);
+				$vw: append($vw, auto);
+			}
+		}
+
+		@media (max-width:414px) {
+			#{$property}: $px;
+			#{$property}: $vw;
+		}
+	}
+}
+
+// PC VW Font Size : 1920
+@mixin vw-font-size-pc($pc-pixel) {
+	font-size: $pc-pixel*1px;
+	font-size: $pc-pixel*100/1920*1vw;
+
+	@media (min-width: $screen-xlg) {
+		font-size: $pc-pixel*1px;
+	}
+}
+
+// TB VW Font Size : 1366
+@mixin vw-font-size-tb($tb-pixel) {
+	font-size: $tb-pixel*1px;
+	font-size: $tb-pixel*100/1366*1vw;
+}
+
+// MO VW Font Size : 414
+@mixin vw-font-size-mo($mo-pixel) {
+	font-size: $mo-pixel/414*828*1px; // 기준사이즈 * (기준사이즈 * 2) * 1px;
+	font-size: $mo-pixel*100/414*1vw;
+
+	@media (max-width: 414px) {
+		font-size: $mo-pixel*1px;
+		font-size: $mo-pixel*100/414*1vw;
+	}
+}
