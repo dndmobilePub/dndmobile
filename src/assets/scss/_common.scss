@@ -22,6 +22,7 @@ $font32: 8.53vw; /*32px*/
 $font48: 12.8vw; /*48px*/
 $font64: 17.06vw; /*64px*/
 
+
 .hide{
 	&-mobile {
 		display: block;
@@ -37,14 +38,17 @@ html{
 }
 
 header{
+	width: 100%;
+	transition: all 0.2s ease-in-out;
+	height: 100%;
+	opacity: 1;
+	transform: translateY(0);
 	.header--inner{
-		position: fixed;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		padding:60px 4.16vw 0 4.16vw;
-		width: 100%;
-		background-color: #fff;
+		padding:0px 80px 0 80px;
+		padding-top: 60px;
 		.logo {
 			&--black{
 				display: flex;
@@ -70,10 +74,15 @@ header{
 			}
 			display: flex;
 			align-items: center;
+			
 			li{
 				padding-right: 38px;
 			}
 		}
+	}
+	&.active{
+		opacity: 0;
+		transform: translateY(-100%);
 	}
 }
 
@@ -103,7 +112,7 @@ header{
 .menu-toggle {
 	background: transparent;
 	border: none;
-	position: absolute;
+	position: fixed;
 	top: 70px;
 	right: 20px;
 	z-index: 1002;
@@ -240,15 +249,14 @@ header{
 	}
 }
 
-
 @media screen and (max-width:767px) {
-	header{}
 	.menu-toggle{
-		top: 52px !important;
+		top: 30px;
 	}
-	.header{
+	header{
+		.header{
 		&--inner{
-			padding: 57px 20px;
+			padding-top: 60px;
 			.logo {
 				&--black{
 					.ico{
@@ -269,7 +277,7 @@ header{
 		&--footer{
 			position: absolute;
 			left: 15px;
-			top: 60px;
+			top: 35px;
 			z-index: 1002;
 			.logo {
 				&--white{
@@ -289,6 +297,8 @@ header{
 			}
 		}
 	}
+	}	
+	
 	.fullpage-menu{
 		width: 100%;
 		&--inner{
@@ -325,3 +335,5 @@ header{
 		}
 	}
 }
+
+

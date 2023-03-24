@@ -3,6 +3,9 @@ const menuBar = gsap.timeline();
 var tl = gsap.timeline({ paused: true});
 const width = window.innerWidth;
 
+const header = document.querySelector('header');
+const headerHeight = header.offsetHeight;
+
 menuBar.to('.bar-1', 0.5,{
 	attr:{d: "M8,2 L2,8"},
 	x:1,
@@ -32,6 +35,7 @@ tl.from('.menu-bg span', {
 	stagger: 0.1,
 	ease: 'Expo.easeInOut'
 });
+
 
 if( width <= 767) {
   tl.from('.logo--white', {
@@ -88,23 +92,24 @@ menuBar.reverse();
 tl.reverse();
 
 
-const menuClass= document.querySelector('.menu-toggle');
 menuToggle.addEventListener('click', function(){
+  console.dir(menuToggle);
 	menuBar.reversed(!menuBar.reversed());
 	tl.reversed(!tl.reversed());
-  menuClass.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+ 
 });
 
+window.addEventListener('scroll', () => {
+  headerFixed();
+})
 
-// window.addEventListener('resize', () => {
-//   const windowWidth = window.innerWidth;
-//   console.log(windowWidth);
-//   if(windowWidth <= 767) {
-//     logoAni();
-//   }
-// })
-
-
-function logoAni() {
-  
+function headerFixed() {
+  const windowScroll = window.pageYOffset;
+  if(windowScroll > header.offsetHeight) {
+    header.classList.add('active');
+  } else {
+    header.classList.remove('active');
+  }
 }
+
