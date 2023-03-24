@@ -1,5 +1,17 @@
 /**
  * ==============================+
+ * scrollSmooth
+ * ==============================+
+ */
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+ScrollSmoother.create({
+  smooth: 1,
+  effects: true,
+});
+
+/**
+ * ==============================+
  * 애니메이션 정의
  * ==============================+
  */
@@ -67,9 +79,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-
-
-
-
- 
