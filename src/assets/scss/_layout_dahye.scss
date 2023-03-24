@@ -69,6 +69,55 @@ $font32: 9.6vw;
     text-align:center;
 }
 
+.main-indicator-wrap {
+    position:fixed;
+    right: 80px;
+    top:50%;
+    transform:translateY(-50%);
+    ul {
+        li {
+            margin:24px 0;
+            position:relative;
+            
+            &::before {
+                content:'';
+                background:#fff;
+                display:block;
+                position:absolute;
+                right:0;
+                top:6px;
+                width:30px;
+                height:2px;
+                transition:all .5s;
+            }
+            a {
+                position:relative;
+                display:block;
+                @include vw-font-size-pc(18);
+                color:#fff;
+                padding-right:55px;
+                text-align:right;
+                opacity:0;
+                transition:all .5s;
+            }
+            &.active {
+                &::before {
+                    content: '';
+                    background:transparent;
+                    width:12px;
+                    height:12px;
+                    border:2px solid #fff;
+                    border-radius:50%;
+                    top:3px;
+                }
+                a {
+                    opacity:1;
+                }
+            }
+        }
+    }
+}
+
 
 // 프로젝트 공통
 .pjt-con-wrap {
@@ -76,7 +125,7 @@ $font32: 9.6vw;
     .pjt-top {
         display: flex;
         height: 100vh;
-        padding-top: 254px;
+        padding-top:254px;
         padding-left: 160px;
         
     }
@@ -85,8 +134,10 @@ $font32: 9.6vw;
         height:auto;
         padding-top:250px;
         .pjt-top-img {
+            width:68%;
             padding-top:100px;
             text-align:center;
+            margin: 0 auto;
         }
     }
     .pjt-title {
@@ -126,7 +177,12 @@ $font32: 9.6vw;
         justify-content: center;
         gap: 50px;
         padding-top: 110px;
+        width:68%;
         margin: 0 auto;
+        &.type02 {
+            width:46%;
+            gap:80px;
+        }
         div {
             text-align:center;
         }
@@ -366,7 +422,7 @@ $font32: 9.6vw;
 
 
 //mobile
-@media screen and (max-width:991px) {
+@media screen and (max-width:767px) {
     .mo-hide {
         display: none;
     }
