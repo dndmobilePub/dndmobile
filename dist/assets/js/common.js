@@ -1,10 +1,14 @@
+
+
+
+
+/**
+ * ==============================+
+ * 메뉴토글 정의
+ * ==============================+
+ */
 const menuToggle = document.getElementById("menuToggle");
 const menuBar = gsap.timeline();
-var tl = gsap.timeline({ paused: true});
-const width = window.innerWidth;
-
-const header = document.querySelector('header');
-const headerHeight = header.offsetHeight;
 
 menuBar.to('.bar-1', 0.5,{
 	attr:{d: "M8,2 L2,8"},
@@ -23,6 +27,15 @@ menuBar.to('.bar-3', 0.5,{
 }, 'start')
 
 
+/**
+ * ==============================+
+ * 전체메뉴 정의
+ * ==============================+
+ */
+
+var tl = gsap.timeline({ paused: true});
+const width = window.innerWidth;
+
 tl.to('.fullpage-menu', {
 	duration:0,
 	display: "block",
@@ -30,42 +43,42 @@ tl.to('.fullpage-menu', {
 });
 
 tl.from('.menu-bg span', {
-	duration:0.4,
+	duration:0.35,
 	x:"100%",
 	stagger: 0.1,
 	ease: 'Expo.easeInOut'
 });
 
 
-if( width <= 767) {
-  tl.from('.logo--white', {
-    duration:0,
-    opacity:1,
-    x:"0%",
-    stagger: 0.1,
-    ease: 'Expo.easeInOut'
-  });
+// if( width <= 767) {
+//   tl.from('.logo--white', {
+//     duration:0,
+//     opacity:1,
+//     x:"0%",
+//     stagger: 0.1,
+//     ease: 'Expo.easeInOut'
+//   });
   
-  tl.fromTo('.logo--white .fill-black', {
-    duration:0,
-    fill:'#000',
-    ease: 'Expo.easeInOut'
-    },
-    {
-      fill:'#fff'
-    }
-  );
+//   tl.fromTo('.logo--white .fill-black', {
+//     duration:0,
+//     fill:'#000',
+//     ease: 'Expo.easeInOut'
+//     },
+//     {
+//       fill:'#fff'
+//     }
+//   );
   
-  tl.fromTo('.logo--white a' , {
-    duration: 0,
-    color:'#000',
-    ease: 'Expo.easeInOut'
-    },
-    {
-      color:'#fff'
-    }
-  )
-}
+//   tl.fromTo('.logo--white a' , {
+//     duration: 0,
+//     color:'#000',
+//     ease: 'Expo.easeInOut'
+//     },
+//     {
+//       color:'#fff'
+//     }
+//   )
+// }
 
 tl.from('.main-menu li a', {
 	duration:1,
@@ -81,7 +94,7 @@ tl.from('.line', {
 });
 
 tl.from('.social-links li', {
-	duration: 1,
+	duration: 0.8,
 	y:"-100%",
 	opacity:0,
 	stagger: 0.1,
@@ -100,16 +113,19 @@ menuToggle.addEventListener('click', function(){
  
 });
 
-window.addEventListener('scroll', () => {
-  headerFixed();
-})
 
-function headerFixed() {
-  const windowScroll = window.pageYOffset;
-  if(windowScroll > header.offsetHeight) {
-    header.classList.add('active');
-  } else {
-    header.classList.remove('active');
-  }
-}
+/**
+ * ==============================+
+ * 헤더 정의
+ * ==============================+
+ */
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+	const windowScroll = window.pageYOffset;
+	if(windowScroll > header.offsetHeight) {
+	  header.classList.add('active');
+	} else {
+	  header.classList.remove('active');
+	}
+})
 
