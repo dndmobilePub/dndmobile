@@ -1,45 +1,125 @@
 @charset"utf-8";
+/*button*/
+.btn_wrap {
+  @include vw-convert-pc(margin-top, 80);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  a {
+    @include vw-convert-pc(width, 323);
+    @include vw-convert-pc(height, 80);
+    @include vw-font-size-pc(24);
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  a:last-child {
+    @include vw-convert-pc(margin-left, 20);
+  }
+
+  a.type1 {
+    color: #000;
+    outline: 1px solid #383838;
+  }
+
+  a.type1:hover {
+    background-color: #f1f1f1;
+  }
+
+  a.type2 {
+    color: #fff;
+    background-color: #222;
+  }
+
+  a.type2:hover {
+    background-color: #383838;
+  }
+
+  a.type3 {
+    color: #fff;
+    background-color: $primary;
+  }
+
+  a.type3:hover {
+    background-color: #D00D3B;
+  }
+}
+
+/*footer*/
+.footer {
+  @include vw-convert-pc(padding, 80);
+  display: flex;
+  justify-content: space-between;
+  color: #222;
+
+  p {
+    @include vw-font-size-pc(38);
+    line-height: 1.3;
+    font-weight: 800;
+  }
+
+  ul {
+    li {
+      display: inline-block;
+      @include vw-convert-pc(margin-right, 30);
+      @include vw-font-size-pc(20);
+      line-height: 1.3;
+
+      strong {
+        font-style: normal;
+        font-weight: 600;
+        margin-right: 8px;
+      }
+    }
+
+    li:last-child {
+      margin-right: 0;
+
+      strong {
+        margin-right: 0;
+      }
+    }
+  }
+}
 
 /*contact*/
 .wrap_contact {
   @include vw-convert-pc(margin, 0 160);
 
   h2 {
-    @include vw-font-size-pc(80);
-    @include vw-convert-pc(margin-top, 400);
-    font-weight: 700;
-  }
-
-  ul {
-    @include vw-convert-pc(margin-top, 40);
-
-    li {
-      color: #555;
-      @include vw-convert-pc(margin-top, 24);
-
-      strong {
-        @include vw-convert-pc(margin-right, 16);
-        color: #000;
-
-        .btn_wrap {
-          justify-content: start;
-        }
-
-        .bg_contact {
-          background: url(../images/map.png) 0 0 no-repeat;
-          background-size: cover;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: -1;
+      @include vw-font-size-pc(80);
+      @include vw-convert-pc(margin-top, 400);
+      font-weight: 700;
+    }
+  
+    ul {
+      @include vw-convert-pc(margin-top, 40);
+      @include vw-font-size-pc(24);
+  
+      li {
+        color: #555;
+        @include vw-convert-pc(margin-top, 24);
+  
+        strong {
+          @include vw-convert-pc(margin-right, 16);
+          color: #000;
         }
       }
+  
     }
   }
+.bg_contact {
+  background: url(../images/map.png) 0 0 no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-
 .wrap_recruit {
   @include vw-convert-pc(margin, 130 160 250 160);
 
@@ -63,7 +143,7 @@
   dt.accordion {
     border-top: 1px solid #B4B4B4;
     background: url(../images/icon_plus.png) right 50% no-repeat;
-      background-size: 2.5vw;
+    background-size: 2.5vw;
     cursor: pointer;
     @include vw-convert-tb(padding, 56 40);
     @include vw-font-size-pc(48);
@@ -72,7 +152,7 @@
 
   dt.active {
     background: url(../images/icon_minus.png) right 50% no-repeat;
-      background-size: 2.5vw;
+    background-size: 2.5vw;
   }
 
   dd.panel {
@@ -85,51 +165,51 @@
       width: 100%;
       display: flex;
       justify-content: start;
+
+      p {
+        @include vw-convert-pc(width, 270);
+        @include vw-font-size-pc(30);
+        font-weight: 600;
+      }
+
+      ul {
+        // width: calc(100% - 270px);
+
+        li {
+          list-style-type: disc;
+          @include vw-font-size-pc(24);
+          line-height: 1.3;
+          font-weight: 300;
+          padding-inline-start: 10px;
+        }
+
+        li:last-child {
+          @include vw-convert-pc(margin-bottom, 40);
+        }
+      }
     }
 
     .part:last-child {
       @include vw-convert-pc(padding-bottom, 120);
     }
 
-    p {
-      @include vw-convert-pc(width, 270);
-      @include vw-font-size-pc(30);
-      font-weight: 600;
-    }
 
-    ul {
-      // width: calc(100% - 270px);
-
-      li {
-        list-style-type: disc;
-        @include vw-font-size-pc(24);
-        line-height: 1.3;
-        font-weight: 300;
-        padding-inline-start: 10px;
-      }
-
-      li:last-child {
-        @include vw-convert-pc(margin-bottom, 40);
-      }
-    }
   }
 }
 
 
-.footer {
-  p {
-    width: 34.375rem;
-  }
+// .footer {
+//   p {
+//     width: 34.375rem;
+//   }
 
-  ul {
-    width: calc(100% - 34.375rem);
+//   ul {
+//     width: calc(100% - 34.375rem);
+//   }
 
-  }
-
-}
+// }
 
 .wrap-about {
-
   .sec01,
   .sec02,
   .sec03,
@@ -138,7 +218,6 @@
 
     .img-box {
       position: relative;
-
       img {
         position: absolute;
         left: -5rem;
@@ -232,89 +311,7 @@
   }
 }
 
-/*button*/
-.btn_wrap {
-  @include vw-convert-pc(margin-top, 80);
-  display: flex;
-  justify-content: left;
-  align-items: center;
 
-  a {
-    @include vw-convert-pc(width, 323);
-    @include vw-convert-pc(height, 80);
-    @include vw-font-size-pc(24);
-    border-radius: 8px;
-    font-weight: 500;
-    text-align: center;
-  }
-
-  a:last-child {
-    @include vw-convert-pc(margin-left, 20);
-  }
-
-  a.type1 {
-    color: #000;
-    outline: 1px solid #383838;
-  }
-
-  a.type1:hover {
-    background-color: #f1f1f1;
-  }
-
-  a.type2 {
-    color: #fff;
-    background-color: #222;
-  }
-
-  a.type2:hover {
-    background-color: #383838;
-  }
-
-  a.type3 {
-    color: #fff;
-    background-color: $primary;
-  }
-
-  a.type3:hover {
-    background-color: #D00D3B;
-  }
-}
-/*footer*/
-.footer {
-  padding: 80px;
-  display: flex;
-  justify-content: space-between;
-  color: #222;
-
-  p {
-    font-size: 38px;
-    line-height: 38px;
-    font-weight: 800;
-  }
-
-  ul {
-    li {
-      display: inline-block;
-      margin-right: 30px;
-      font-size: 20px;
-      line-height: 38px;
-
-      strong {
-        font-style: normal;
-        font-weight: 600;
-        margin-right: 8px;
-      }
-    }
-
-    li:last-child {
-      margin-right: 0;
-
-      strong {
-        margin-right: 0;
-      }
-    }
-  }
-}
 
 
 /*테블릿*/
@@ -341,11 +338,7 @@
     }
   }
 
-  .btn_wrap {
-    a {
-      width: 100%;
-    }
-  }
+
 
   .footer {
     @include vw-convert-pc(margin-top, 100);
