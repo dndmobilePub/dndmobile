@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="wrap">
-      @@include('./include/header.html') 
+      <!-- @@include('./include/header.html')  -->
         <section class="wrap_recruit">
           <h2>디앤디모바일과 같이 <strong>생각</strong>할<strong><br>'나'</strong>를 <strong>초대</strong>합니다.</h2>
           <p>
@@ -104,10 +104,26 @@
             </dd>
           </dl>
           <div class="btn_wrap">
-            <input type="button" value="잡코리아에서 지원하기" class="type1">
-            <input type="button" value="이메일 지원하기" class="type2">
+            <a href="#" name="잡코리아에서 지원하기" class="type1" target="_blank">잡코리아에서 지원하기</a>
+            <a href="#" name="이메일 지원하기" class="type2" target="_blank">이메일 지원하기</a>
           </div>
         </section>
+        <script>
+          var acc = document.getElementsByClassName("accordion");
+          var i;
+
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+              } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+              }
+            });
+          }
+        </script>
       @@include('./include/footer.html')
     </div>
 </body>

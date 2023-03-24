@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="wrap">
-        @@include('./include/header.html') 
+        <!-- @@include('./include/header.html')  -->
 
         <section class="wrap_contact">
           <h2>CONTACT</h2>
@@ -22,28 +22,12 @@
             <li><strong>F.</strong>+82 2 6448-2284</li>
            </ul>
           <div class="btn_wrap">
-            <input type="button" value="회사소개서" class="type3">
-            <input type="button" value="이메일 문의" class="type2">
+            <a href="#" name="회사소개서" class="type3" target="_blank">회사소개서</a>
+            <a href="#" name="이메일 문의" class="type2" target="_blank">이메일 문의</a>
           </div>
         </section>
     
         <div class="bg_contact"></div>
     </div>
-    <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-      });
-    }
-  </script>
 </body>
 </html>
