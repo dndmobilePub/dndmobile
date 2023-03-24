@@ -51,9 +51,8 @@
   p {
     @include vw-font-size-pc(24);
     @include vw-convert-pc(margin-top, 40);
-    line-height: 34px;
+    line-height: 1.3;
     font-weight: 300;
-    color: #000;
   }
 
   dl {
@@ -63,9 +62,8 @@
 
   dt.accordion {
     border-top: 1px solid #B4B4B4;
-    background: url(../images/icon_plus.png) calc(100% - 40px) 50% no-repeat;
-    background-size: 50px;
-    color: #000;
+    background: url(../images/icon_plus.png) right 50% no-repeat;
+      background-size: 2.5vw;
     cursor: pointer;
     @include vw-convert-tb(padding, 56 40);
     @include vw-font-size-pc(48);
@@ -73,8 +71,8 @@
   }
 
   dt.active {
-    background: url(../images/icon_minus.png) calc(100% - 40px) 50% no-repeat;
-    background-size: 50px;
+    background: url(../images/icon_minus.png) right 50% no-repeat;
+      background-size: 2.5vw;
   }
 
   dd.panel {
@@ -100,12 +98,12 @@
     }
 
     ul {
-      width: calc(100% - 270px);
+      // width: calc(100% - 270px);
 
       li {
         list-style-type: disc;
         @include vw-font-size-pc(24);
-        line-height: 32px;
+        line-height: 1.3;
         font-weight: 300;
         padding-inline-start: 10px;
       }
@@ -168,7 +166,7 @@
       p {
         @include vw-font-size-pc(24);
         @include vw-convert-pc(margin-top, 40);
-        line-height: 2.125rem;
+        line-height: 1.3;
       }
     }
   }
@@ -274,16 +272,56 @@
 
   a.type3 {
     color: #fff;
-    background-color: #E30D3F;
+    background-color: $primary;
   }
 
   a.type3:hover {
     background-color: #D00D3B;
   }
 }
+/*footer*/
+.footer {
+  padding: 80px;
+  display: flex;
+  justify-content: space-between;
+  color: #222;
+
+  p {
+    font-size: 38px;
+    line-height: 38px;
+    font-weight: 800;
+  }
+
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 30px;
+      font-size: 20px;
+      line-height: 38px;
+
+      strong {
+        font-style: normal;
+        font-weight: 600;
+        margin-right: 8px;
+      }
+    }
+
+    li:last-child {
+      margin-right: 0;
+
+      strong {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+
+/*테블릿*/
+@media screen and (max-width:1440px) {}
 
 /*모바일*/
-@media only screen and (max-width: 1000px) {
+@media screen and (max-width:767px) {
   .wrap_contact {
     @include vw-convert-mo(margin, 130 80 0 80);
   }
