@@ -53,17 +53,17 @@
 	}
 }
 
-// TB VW : 1024
+// TB VW : 1440
 @mixin vw-convert-tb($property, $tb-pixel) {
 	@if type-of($tb-pixel)==number {
-		@media (max-width: 1024px) {
+		@media (max-width: 1440px) {
 			#{$property}: $tb-pixel*1px;
-			#{$property}: $tb-pixel*100/1024*1vw;
+			#{$property}: $tb-pixel*100/1440*1vw;
 		}
 	}
 
 	@else if type-of($tb-pixel)==string {
-		@media (max-width: 1024px) {
+		@media (max-width: 1440px) {
 			#{$property}: auto;
 		}
 	}
@@ -75,7 +75,7 @@
 		@each $value in $tb-pixel {
 			@if type-of($value)==number {
 				$px: append($px, $value*1px);
-				$vw: append($vw, $value*100/1024*1vw);
+				$vw: append($vw, $value*100/1440*1vw);
 			}
 
 			@else if type-of($value)==string {
@@ -84,7 +84,7 @@
 			}
 		}
 
-		@media (max-width: 1024px) {
+		@media (max-width: 1440px) {
 			#{$property}: $px;
 			#{$property}: $vw;
 		}
@@ -135,7 +135,7 @@
 		@each $value in $mo-pixel {
 			@if type-of($value)==number {
 				$px: append($px, $value*1px);
-				$vw: append($vw, $value*100/414*1vw);
+				$vw: append($vw, $value*100/767*1vw);
 			}
 
 			@else if type-of($value)==string {
@@ -144,7 +144,7 @@
 			}
 		}
 
-		@media (max-width:414px) {
+		@media (max-width:767px) {
 			#{$property}: $px;
 			#{$property}: $vw;
 		}
@@ -161,20 +161,16 @@
 	}
 }
 
-// TB VW Font Size : 1024
+// TB VW Font Size : 1440
 @mixin vw-font-size-tb($tb-pixel) {
 	font-size: $tb-pixel*1px;
-	font-size: $tb-pixel*100/1024*1vw;
+	font-size: $tb-pixel*100/1440*1vw;
 }
 
 // MO VW Font Size : 767
 @mixin vw-font-size-mo($mo-pixel) {
 	font-size: $mo-pixel/767*1px; // 기준사이즈 * (기준사이즈 * 2) * 1px;
 	font-size: $mo-pixel*100/767*1vw;
-
-
-
-	
 	@media (max-width: 767px) {
 		font-size: $mo-pixel*1px;
 		font-size: $mo-pixel*100/767*1vw;
