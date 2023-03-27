@@ -94,7 +94,7 @@
 // MO VW : 767
 @mixin vw-convert-mo($property, $mo-pixel) {
 	@if type-of($mo-pixel)==number {
-		#{$property}: $mo-pixel/767*1px; // 기준사이즈 * (기준사이즈 * 2) * 1px;
+		#{$property}: $mo-pixel/767*1534*1px; // 기준사이즈 * (기준사이즈 * 2) * 1px;
 		#{$property}: $mo-pixel*100/767*1vw;
 
 		@media (max-width: 767px) {
@@ -117,7 +117,7 @@
 
 		@each $value in $mo-pixel {
 			@if type-of($value)==number {
-				$px: append($px, $value/767*1px);
+				$px: append($px, $value/767*1534*1px);
 				$vw: append($vw, $value*100/767*1vw);
 			}
 
@@ -169,7 +169,7 @@
 
 // MO VW Font Size : 767
 @mixin vw-font-size-mo($mo-pixel) {
-	font-size: $mo-pixel/767*1px; // 기준사이즈 * (기준사이즈 * 2) * 1px;
+	font-size: $mo-pixel/767*1534*1px; // 기준사이즈 * (기준사이즈 * 2) * 1px;
 	font-size: $mo-pixel*100/767*1vw;
 	@media (max-width: 767px) {
 		font-size: $mo-pixel*1px;

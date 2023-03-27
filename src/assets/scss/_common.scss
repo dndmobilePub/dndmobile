@@ -22,6 +22,7 @@ $font32: 8.53vw; /*32px*/
 $font48: 12.8vw; /*48px*/
 $font64: 17.06vw; /*64px*/
 
+
 .hide{
 	&-mobile {
 		display: block;
@@ -32,19 +33,41 @@ $font64: 17.06vw; /*64px*/
 }
 
 html{
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 }
 
+img {
+    vertical-align: top;
+    max-width: 100%;
+}
+
+.ta-c {
+    text-align:center;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 header{
+	width: 100%;
+	transition: all 0.2s ease-in-out;
+	height: 100%;
+	opacity: 1;
+	transform: translateY(0);
+	position:relative;
+	z-index:10;
 	.header--inner{
-		position: fixed;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		padding:60px 4.16vw 0 4.16vw;
-		width: 100%;
-		background-color: #fff;
+		padding:0px 80px 0 80px;
+		padding-top: 60px;
 		.logo {
 			&--black{
 				display: flex;
@@ -63,17 +86,45 @@ header{
 					}
 				}
 			}
+			&--white{
+				display: flex;
+				align-items: center;
+				.ico{
+					width: 64px;
+					// height: 64px;
+					margin-right: 16px;
+					img {
+						object-fit: contain;
+						width: inherit;
+						height: inherit;
+					}
+				}
+				a{
+					color:#fff;
+				}
+			}
 		}
 		.top-nav{
 			&--container{
 				margin-left: auto;
+				&.white {
+					a {
+						color:#fff;
+					}
+				}
 			}
 			display: flex;
 			align-items: center;
+			
 			li{
 				padding-right: 38px;
 			}
+			
 		}
+	}
+	&.active{
+		opacity: 0;
+		transform: translateY(-100%);
 	}
 }
 
@@ -103,7 +154,7 @@ header{
 .menu-toggle {
 	background: transparent;
 	border: none;
-	position: absolute;
+	position: fixed;
 	top: 70px;
 	right: 20px;
 	z-index: 1002;
@@ -116,6 +167,13 @@ header{
 		}
 	}
 	&.active{
+		.hamburger {
+			path {
+				stroke:#fff;
+			}
+		}
+	}
+	&.white {
 		.hamburger {
 			path {
 				stroke:#fff;
@@ -240,15 +298,14 @@ header{
 	}
 }
 
-
 @media screen and (max-width:767px) {
-	header{}
 	.menu-toggle{
-		top: 52px !important;
+		top: 30px;
 	}
-	.header{
+	header{
+		.header{
 		&--inner{
-			padding: 57px 20px;
+			padding-top: 60px;
 			.logo {
 				&--black{
 					.ico{
@@ -269,10 +326,24 @@ header{
 		&--footer{
 			position: absolute;
 			left: 15px;
-			top: 60px;
+			top: 35px;
 			z-index: 1002;
 			.logo {
 				&--white{
+					display: flex;
+					align-items: center;
+					overflow:hidden;
+					transition: transform 300ms ease-in-out 0s;
+					a{
+						color: #fff;
+						font-size: .9375rem !important;
+						line-height: 1;
+					}
+					.ico{
+						margin-right: 8px;
+					}
+				}
+				&--black{
 					display: flex;
 					align-items: center;
 					overflow:hidden;
@@ -289,11 +360,13 @@ header{
 			}
 		}
 	}
+	}	
+	
 	.fullpage-menu{
 		width: 100%;
 		&--inner{
 			align-items: flex-start;
-			padding: 42% 60px 0 ;
+			padding: 28% 60px 0 ;
 			nav{
 				// padding-top: 35vw;
 				.main{
@@ -325,3 +398,5 @@ header{
 		}
 	}
 }
+
+

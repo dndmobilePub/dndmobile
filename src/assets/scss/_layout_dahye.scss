@@ -1,44 +1,8 @@
-// 상단 css 정리 필요
-html {
-    width: 100%;
-}
-
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-img {
-    vertical-align: top;
-    max-width: 100%;
-}
-
-$margin5: 1.33vw;
-/*5px*/
-$margin10: 2.6vw;
-/*10px*/
-$margin20: 5.33vw;
-/*20px*/
-$margin30: 8vw;
-/*30px*/
-$margin40: 10.66vw;
-/*40px*/
-$margin50: 13.333vw;
-/*50px*/
-
-$con_pt: 0 10vw;
-
-$font32: 9.6vw;
-
-/*36px*/
 .mt40 {
-    margin-top: $margin40;
+    @include vw-convert-pc(margin-top, 40);
 }
 .mt160 {
-    margin-top: 160px;
+    @include vw-convert-pc(margin-top, 160);
 }
 
 [class *='flex'] {
@@ -59,29 +23,23 @@ $font32: 9.6vw;
     }
 }
 
-.mo-hide {
-    display: block;
+.wrap {
+    position:relative;
 }
-.pc-hide {
-    display:none;
-}
-.ta-c {
-    text-align:center;
-}
-
 .main-indicator-wrap {
     position:fixed;
     right: 80px;
     top:50%;
     transform:translateY(-50%);
+    z-index:1;
     ul {
         li {
-            margin:24px 0;
+            @include vw-convert-pc(margin, 24 0);
             position:relative;
             
             &::before {
                 content:'';
-                background:#fff;
+                background:#000;
                 display:block;
                 position:absolute;
                 right:0;
@@ -94,24 +52,46 @@ $font32: 9.6vw;
                 position:relative;
                 display:block;
                 @include vw-font-size-pc(18);
-                color:#fff;
-                padding-right:55px;
+                color:#000;
+                @include vw-convert-pc(padding-right, 55);
                 text-align:right;
                 opacity:0;
+                right:-20%;
                 transition:all .5s;
             }
-            &.active {
+            &.active, &:hover {
                 &::before {
                     content: '';
                     background:transparent;
                     width:12px;
                     height:12px;
-                    border:2px solid #fff;
+                    border:2px solid #000;
                     border-radius:50%;
                     top:3px;
                 }
                 a {
                     opacity:1;
+                    right: 0;
+                }
+            }
+        }
+    }
+    &.white {
+        ul {
+            li {
+                &::before {
+                    content:'';
+                    background:#fff;
+                }
+                a {
+                    color:#fff;
+                }
+                &.active, &:hover {
+                    &::before {
+                        content: '';
+                        border:2px solid #fff;
+                        background:transparent
+                    }
                 }
             }
         }
@@ -125,17 +105,17 @@ $font32: 9.6vw;
     .pjt-top {
         display: flex;
         height: 100vh;
-        padding-top:254px;
-        padding-left: 160px;
+        @include vw-convert-pc(padding-top, 254);
+        @include vw-convert-pc(padding-left, 160);
         
     }
     .pjt-top-full {
         display:block;
         height:auto;
-        padding-top:250px;
+        @include vw-convert-pc(padding-top, 250);
         .pjt-top-img {
-            width:68%;
-            padding-top:100px;
+            @include vw-convert-pc(width, 1263);
+            @include vw-convert-pc(padding-top, 100);
             text-align:center;
             margin: 0 auto;
         }
@@ -150,14 +130,14 @@ $font32: 9.6vw;
         }
 
         &.type02 {
-            max-width:67%;
+            @include vw-convert-pc(width, 1276);
             margin:0 auto;
-            margin-top:160px;
+            @include vw-convert-pc(margin-top, 160);
         }
 
         .tit {
-            font-size: 5.2vw;
-            padding-bottom: 40px;
+            @include vw-font-size-pc(100);
+            @include vw-convert-pc(padding-bottom, 40);
             font-weight: bold;
 
             span {
@@ -166,7 +146,7 @@ $font32: 9.6vw;
         }
 
         .desc {
-            font-size: 1.25vw;
+            @include vw-font-size-pc(24);
             line-height: 1.3;
             word-break: keep-all;
             font-weight:300;
@@ -176,11 +156,11 @@ $font32: 9.6vw;
         display: flex;
         justify-content: center;
         gap: 50px;
-        padding-top: 110px;
-        width:68%;
+        @include vw-convert-pc(padding-top, 110);
+        @include vw-convert-pc(width, 1276);
         margin: 0 auto;
         &.type02 {
-            width:46%;
+            @include vw-convert-pc(width, 864);
             gap:80px;
         }
         div {
@@ -196,8 +176,8 @@ $font32: 9.6vw;
             li {
                 text-align:center;
                 .txt {
-                    padding-top:20px;
-                    font-size:1vw;
+                    @include vw-convert-pc(padding-top, 20);
+                    @include vw-font-size-pc(20);
                 }
             }
         }
@@ -205,22 +185,22 @@ $font32: 9.6vw;
     .tool-list {
         display:flex;
         gap:14px;
-        margin-top:80px;
+        @include vw-convert-pc(margin-top, 80);
     }
     &.kb {
         .pjt-top {
             .pjt-title {
-                width: 34%;
+                @include vw-convert-pc(width, 600);
             }
 
             .pjt-top-img {
                 position: relative;
-                margin-top: 40px;
+                @include vw-convert-pc(width, 800);
+                @include vw-convert-pc(margin-top, 40);
                 text-align: center;
-                width: 50%;
 
                 .pjt-img {
-                    width: 362px;
+                    @include vw-convert-pc(width, 362);
                 }
 
                 .circle {
@@ -232,24 +212,24 @@ $font32: 9.6vw;
                         background: rgba(255, 223, 98, 0.2);
                         right: 0;
                         bottom: -40px;
-                        width: 575px;
-                        height: 575px;
+                        @include vw-convert-pc(width, 575);
+                        @include vw-convert-pc(height, 575);
                     }
 
                     &.type02 {
                         background: linear-gradient(180deg, rgba(255, 240, 181, 0.7) 90.04%, rgba(255, 206, 14, 0.7) 190.04%);
                         right: 0;
-                        top: 37px;
-                        width: 222px;
-                        height: 222px;
+                        @include vw-convert-pc(top, 37);
+                        @include vw-convert-pc(width, 222);
+                        @include vw-convert-pc(height, 222);
                     }
 
                     &.type03 {
                         background: linear-gradient(180deg, rgba(255, 240, 181, 0.6) 0%, rgba(255, 206, 14, 0.6) 100%);
-                        left: 150px;
-                        bottom: 100px;
-                        width: 143px;
-                        height: 143px;
+                        @include vw-convert-pc(left, 150);
+                        @include vw-convert-pc(bottom, 100);
+                        @include vw-convert-pc(width, 143);
+                        @include vw-convert-pc(height, 143);
                         opacity: 0.5;
                     }
 
@@ -257,7 +237,7 @@ $font32: 9.6vw;
             }
         }
         .pjt-con {
-            padding: 160px 20px 300px;
+            @include vw-convert-pc(padding, 160 20 300);
             background: #ffdf62;
         }
     }
@@ -270,40 +250,39 @@ $font32: 9.6vw;
         }
         .pjt-con {
             background:#000;
-            padding-top:290px;
-            padding-bottom:250px;
-            margin-top:-130px;
+            @include vw-convert-pc(padding, 290 0 250);
+            @include vw-convert-pc(margin-top, -130);
         }
     }
     &.cj {
         .pjt-top {
             .pjt-top-img {
                 position: relative;
-                width: 50%;
+                @include vw-convert-pc(width, 900);
 
                 .pjt-img01 {
                     position: absolute;
-                    left: -80px;
-                    bottom: -200px;
-                    width: 728px;
+                    @include vw-convert-pc(left, -80);
+                    @include vw-convert-pc(bottom, -200);
+                    @include vw-convert-pc(width, 728);
                 }
 
                 .pjt-img02 {
                     position: absolute;
-                    right: -80px;
-                    top: -100px;
-                    width: 728px;
+                    @include vw-convert-pc(right, 0);
+                    @include vw-convert-pc(bottom, -100);
+                    @include vw-convert-pc(width, 728);
                 }
             }
         }
 
         .pjt-con {
-            padding: 160px 20px 300px;
+            @include vw-convert-pc(padding, 160 20 300);
             background: url(../images/bg_cj.jpg) center no-repeat;
             background-size:cover;
 
             .icon {
-                padding-top: 100px;
+                @include vw-convert-pc(padding-top, 100);
                 text-align: center;
             }
         }
@@ -315,16 +294,16 @@ $font32: 9.6vw;
         }
         .pjt-con {
             background:#000;
-            padding-top:290px;
-            padding-bottom:250px;
-            margin-top:-130px;
+            @include vw-convert-pc(padding-top, 290);
+            @include vw-convert-pc(padding-bottom, 250);
+            @include vw-convert-pc(margin-top, -130);
             .phone-layout{
                 &.bg {
                     background:url('../images/img_wooriopen01_bg.png') center no-repeat;
                     background-size:100%;
-                    max-width:1155px;
+                    @include vw-convert-pc(max-width, 1155);
                     margin:0 auto;
-                    margin-top:90px;
+                    @include vw-convert-pc(margin-top, 90);
                 }
             }
         }
@@ -333,23 +312,24 @@ $font32: 9.6vw;
         .pjt-top {
             .pjt-top-img {
                 position:absolute;
-                right:12%;
+                @include vw-convert-pc(right, 230);
+                @include vw-convert-pc(width, 1183);
             }
         }
         .pjt-con {
             &.bg01 {
                 background: #0F98C6;
-                padding-top:200px;
-                margin-top:60px;
+                @include vw-convert-pc(padding-top, 200);
+                @include vw-convert-pc(margin-top, 60);
             }
             &.bg02 {
                 background:#fff;
-                padding:332px 0 160px;
-                margin-top:-232px;
+                @include vw-convert-pc(padding, 332 0 160);
+                @include vw-convert-pc(margin-top, -230);
             }
             &.bg03 {
                 background: #0E2A78;
-                padding:160px 0 250px;
+                @include vw-convert-pc(padding, 160 0 250);
             }
         }
     }
@@ -357,13 +337,13 @@ $font32: 9.6vw;
         .pjt-top-full {
             background:url('../images/bg_wooricerti.jpg') center no-repeat;
             background-size:cover;
-            padding-top:254px;
-            padding-bottom:1027px;
+            @include vw-convert-pc(padding-top, 254);
+            @include vw-convert-pc(padding-bottom, 1027);
         }
         .pjt-con {
-            padding-top:290px;
-            padding-bottom:250px;
-            margin-top:-130px;
+            @include vw-convert-pc(padding-top, 290);
+            @include vw-convert-pc(padding-bottom, 250);
+            @include vw-convert-pc(margin-top, -130);
         }
     }
 }
@@ -371,38 +351,57 @@ $font32: 9.6vw;
 @media screen and (max-width:1440px) {
     .pjt-con-wrap {
         .pjt-top {
-            padding-top:180px;
-            padding-left:100px;
+            @include vw-convert-tb(padding-top, 180);
+            @include vw-convert-tb(padding-left, 100);
+            @include vw-convert-tb(padding-bottom, 200);
+            height:auto
         }
         .pjt-title {
             .tit {
-                font-size: 6vw;
-                padding-bottom:20px;
+                @include vw-font-size-tb(70);
+                @include vw-convert-tb(padding-bottom, 20);
             }
-    
             .desc {
-                font-size: 1.5vw;
+                @include vw-font-size-tb(30);
             }
         }
         .tool-list {
-            margin-top:50px;
+            @include vw-convert-tb(margin-top, 50);
         }
         .phone-layout {
-            padding-top:80px;
+            @include vw-convert-tb(padding-top, 80);
+            &.type02 {
+                @include vw-convert-tb(width, 864);
+            }
         }
         &.kb {
             .pjt-top {
                 .pjt-title {
-                    width: 50%;
+                    @include vw-convert-tb(width, 800);
                 }
                 .pjt-top-img {
                     .pjt-img {
-                        width:300px;
+                        @include vw-convert-tb(width, 400);
                     }
                     .circle {
                         &.type03 {
-                            left:-50px;
+                            @include vw-convert-tb(left, -50);
                         }
+                    }
+                }
+            }
+        }
+        &.cj {
+            .pjt-top {
+                @include vw-convert-tb(padding-bottom, 400);
+                .pjt-top-img {
+                    .pjt-img01 {
+                        bottom: auto;
+                        @include vw-convert-tb(top, 250);
+                    }
+                    .pjt-img02 {
+                        bottom: auto;
+                        top: 0;
                     }
                 }
             }
@@ -410,43 +409,27 @@ $font32: 9.6vw;
     }
 }
 
-// @media screen and (max-width:1024px) {
-//     .pjt-con-wrap {
-//         .pjt-top {
-//             padding-top:100px;
-//             padding-left:80px;
-//         }
-//     }
-// }
-
-
 
 //mobile
 @media screen and (max-width:767px) {
-    .mo-hide {
-        display: none;
-    }
-    .pc-hide {
-        display:block;
-    }
-
     .pjt-con-wrap {
         .pjt-top {
             position: relative;
             display: block;
             width: 100%;
             height: 100%;
-            padding:126px 20px 0;
+            @include vw-convert-mo(padding, 252 40 0);
         }
         .pjt-top-full {
             position: relative;
             display: block;
             width: 100%;
             height: 100%;
-            padding:126px 20px 0;
+            @include vw-convert-mo(padding, 252 40 0);
             .pjt-top-img {
+                width:100%;
                 position:relative;
-                padding-top:40px;
+                @include vw-convert-mo(padding-top, 80);
                 z-index:2;
             }
         }
@@ -457,26 +440,30 @@ $font32: 9.6vw;
                 text-align: left;
             }
             &.type02 {
-                max-width:100%;
-                margin-top:50px;
+                width:100%;
+                @include vw-convert-mo(margin-top, 100);
             }
 
             .tit {
-                padding-bottom:20px;
-                font-size: $font32;
+                @include vw-convert-mo(padding-bottom, 24);
+                @include vw-font-size-mo(64);
             }
 
             .desc {
-                font-size: $font16;
+                @include vw-font-size-mo(32);
                 font-weight:300;
             }
         }
         .phone-layout {
             width: 100%;
-            padding-top: 40px;
+            @include vw-convert-mo(padding-top, 80);
             gap:25px;
             div:nth-child(2) {
-                margin-top: 40px;
+                @include vw-convert-mo(margin-top, 80);
+            }
+            &.type02 {
+                width:100%;
+                gap:25px;
             }
         }
 
@@ -487,8 +474,8 @@ $font32: 9.6vw;
                 li {
                     width:18%;
                     .txt {
-                        padding-top:8px;
-                        font-size:$font12;
+                        @include vw-convert-mo(padding-top, 16);
+                        @include vw-font-size-mo(24);
                     }
                 }
             }
@@ -497,9 +484,9 @@ $font32: 9.6vw;
         .tool-list {
             display:flex;
             gap:4px;
-            margin-top:26px;
+            @include vw-convert-mo(margin-top, 52);
             div {
-                width:26px;
+                @include vw-convert-mo(width, 52);
             }
         }
 
@@ -511,53 +498,54 @@ $font32: 9.6vw;
                 .pjt-top-img {
                     width: 100%;
                     .pjt-img {
-                        width: 40%;
+                        @include vw-convert-mo(width, 284);
                     }
     
                     .circle {
                         &.type01 {
                             right: 0;
-                            bottom: -40px;
-                            width: 66vw;
-                            height: 66vw;
+                            @include vw-convert-mo(bottom, -80);
+                            @include vw-convert-mo(width, 500);
+                            @include vw-convert-mo(height, 500);
                         }
     
                         &.type02 {
                             right: 0;
-                            top: 37px;
-                            width: 27vw;
-                            height: 27vw;
+                            @include vw-convert-mo(top, 74);
+                            @include vw-convert-mo(width, 200);
+                            @include vw-convert-mo(height, 200);
                         }
     
                         &.type03 {
-                            left: 16px;
-                            bottom: 20px;
-                            width: 27vw;
-                            height: 27vw;
+                            @include vw-convert-mo(left, 32);
+                            @include vw-convert-mo(bottom, 100);
+                            @include vw-convert-mo(width, 130);
+                            @include vw-convert-mo(height, 130);
                         }
                     }
                 }
             }
             .pjt-con {
-                padding: 130px 20px 54px;
+                @include vw-convert-mo(padding, 260 40 80);
                 margin-top: -104px;
             }
         }
         &.sc {
             .pjt-con {
                 position:relative;
-                padding:60px 20px 50px;
-                margin-top:-20px;
+                @include vw-convert-mo(padding, 120 40 100);
+                @include vw-convert-mo(margin-top, -40);
             }
         }
         &.woori-open {
             .pjt-con {
                 position:relative;
-                padding:60px 20px 50px;
-                margin-top:-20px;
+                @include vw-convert-mo(padding, 120 40 100);
+                @include vw-convert-mo(margin-top, -40);
                 .phone-layout {
                     &.bg {
-                        margin-top:40px;
+                        max-width:100%;
+                        @include vw-convert-mo(margin-top, 80);
                     }
                 }
             }
@@ -570,13 +558,14 @@ $font32: 9.6vw;
                 .pjt-top-img {
                     position:relative;
                     right:auto;
-                    margin-top:50px;
+                    width:100%;
+                    @include vw-convert-mo(margin-top, 100);
                 }
             }
             .pjt-con {
                 &.bg01 {
-                    padding:80px 20px 0;
-                    margin-top:-20px;
+                    @include vw-convert-mo(padding, 160 40 0);
+                    @include vw-convert-mo(margin-top, -40);
                     .phone-layout {
                         div:nth-child(2) {
                             margin-top:0;
@@ -584,33 +573,35 @@ $font32: 9.6vw;
                     }
                 }
                 &.bg02 {
-                    padding:100px 20px 50px;
-                    margin-top:-50px;
+                    @include vw-convert-mo(padding, 200 40 100);
+                    @include vw-convert-mo(margin-top, -100);
                 }
                 &.bg03 {
-                    padding:50px 20px;
+                    @include vw-convert-mo(padding, 100 40);
                 }
             }
         }
         &.woori-certi {
             .pjt-top-full {
-                height:100vh;
-                padding-top:126px;
-                padding-bottom:0;
+                // height:100vh;
+                @include vw-convert-mo(padding-top, 252);
+                @include vw-convert-mo(padding-bottom, 748);
             }
             .pjt-con {
-                padding:50px 20px;
+                @include vw-convert-mo(padding, 100 40);
                 margin-top:0;
             }
         }
         &.cj {
             .pjt-top {
+                padding-bottom:0;
                 .pjt-title {
                     width:100%;
                 }
                 .pjt-top-img {
                     width:100%;
-                    height:30vh;
+                    @include vw-convert-mo(height, 648);
+                    @include vw-convert-mo(margin-top, 80);
                     .pjt-img01 {
                         // position:static;
                         left:0;
@@ -626,11 +617,11 @@ $font32: 9.6vw;
                 }
             }
             .pjt-con {
-                padding:90px 20px 54px;
-                margin-top: -50px;
+                @include vw-convert-mo(padding, 180 40 108);
+                @include vw-convert-mo(margin-top, -100);
                 .icon {
-                    padding-top: 40px;
-                    margin:0 20px;
+                    @include vw-convert-mo(padding-top, 80);
+                    @include vw-convert-mo(margin, 0 40);
                 }
             }
         }

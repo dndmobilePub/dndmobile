@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,54 +9,36 @@
     <link rel="stylesheet" href="../../dist/assets/css/style.css">
     <script src="../../dist/assets/js/jquery-3.6.0.min.js"></script>
     <script src="../../dist/assets/js/gsap.min.js" defer></script>
+    <script src="../../dist/assets/js/ScrollSmoother.min.js" defer></script>
     <script src="../../dist/assets/js/ScrollTrigger.min.js" defer></script>
     <script src="../../dist/assets/js/common.js" defer></script>
     <script src="../../dist/assets/js/ui.js" defer></script>
 </head>
+
 <body>
     <div class="wrap">
-        <!-- @@include('./include/header.html')  -->
+        @@include('./include/header.html') 
         <!-- <main class="cover-full">
             <div class="box"></div>
             <section></section>
         </main> -->
 
+
         @@include('./project_kb.html')
 
-        @@include('./project_sc.html') 
+        <!-- @@include('./project_sc.html')
 
-        @@include('./project_cj.html') 
+        @@include('./project_cj.html')
 
-        @@include('./project_wooriopen.html') 
+        @@include('./project_wooriopen.html')
 
-        @@include('./project_woorimy.html') 
+        @@include('./project_woorimy.html')
 
-        @@include('./project_wooricerti.html') 
+        @@include('./project_wooricerti.html')-->
 
-        @@include('./include/footer.html') 
-
-        <section class="main-indicator-wrap">
-            <ul>
-                <li class="active"><a href="">KB국민은행</a></li>
-                <li><a href="">SC제일은행</a></li>
-                <li><a href="">CJ대한통운</a></li>
-                <li><a href="">우리은행</a></li>
-                <li><a href="">우리은행</a></li>
-                <li><a href="">우리은행</a></li>
-            </ul>
-            <svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="150px" viewBox="0 0 570 150" xml:space="preserve">
-                <circle fill="none" cx="100" cy="100" r="100" stroke="#fff" stroke-width="f"/>
-                <line x1="0" y1="0" x2="30" y2="0" stroke="#fff" stroke-width="2"/>
-            </svg>
-
-        </section>
+        
 
     </div>
-
-    <script>
-        $('.main-indicator-wrap li').click(function(){
-            $(this).addClass('active');
-        });
-    </script>
+    
 </body>
 </html>
