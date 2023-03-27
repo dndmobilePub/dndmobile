@@ -238,73 +238,78 @@
     display: none;
   }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .tab-detail.on {
+  .tab-detail.on {
     display: block;
-dl {
-    // @include vw-convert-pc(margin-top, 160);
-    border-top: 1px solid #B4B4B4;
-  }
 
-  dl:last-child {
-    border-bottom: 1px solid #B4B4B4;
-  }
-
-  dt.accordion {
-    background: url(../images/icon_plus.png) right 50% no-repeat;
-    background-size: 2.5vw;
-    cursor: pointer;
-    @include vw-convert-tb(padding, 56 40);
-    @include vw-font-size-pc(48);
-    font-weight: 700;
-
-    sup {
-      @include vw-font-size-pc(12);
+    dl {
+      // @include vw-convert-pc(margin-top, 160);
+      border-top: 1px solid #B4B4B4;
     }
-  }
 
-  dt.active {
-    background: url(../images/icon_minus.png) right 50% no-repeat;
-    background-size: 2.5vw;
-    border-bottom: 1px solid rgba(217, 217, 217, 0.5);
-  }
+    dl:last-child {
+      border-bottom: 1px solid #B4B4B4;
+    }
 
-  dd.panel {
-    @include vw-convert-pc(margin-left, 40);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    dt.accordion {
+      background: url(../images/icon_plus.png) right 50% no-repeat;
+      background-size: 2.5vw;
+      cursor: pointer;
+      @include vw-convert-tb(padding, 56 40);
+      @include vw-font-size-pc(48);
+      font-weight: 700;
 
-    ul {
-      @include vw-convert-tb(padding, 46 0 48 40);
-
-
-      li {
-        list-style-type: disc;
-        @include vw-font-size-pc(38);
-        @include vw-convert-pc(margin-top, 34);
-        line-height: 1.3;
-        font-weight: 300;
-        padding-inline-start: 10px;
-
+      sup {
+        // @include vw-font-size-pc(12);
       }
+    }
 
-      li.ing {
-        color: #E30D3F;
+    dt.active {
+      background: url(../images/icon_minus.png) right 50% no-repeat;
+      background-size: 2.5vw;
+      border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+    }
 
-        span {
-          background-color: #000;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          color: #fff;
-          border-radius: 40px;
-          @include vw-font-size-pc(24);
-          @include vw-convert-tb(padding, 12 20 15 20);
-          @include vw-convert-pc(margin-left, 40);
+    dd.panel {
+      @include vw-convert-pc(margin-left, 40);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+
+      ul {
+        @include vw-convert-tb(padding, 46 0 48 40);
+
+
+        li {
+          list-style-type: disc;
+          @include vw-font-size-pc(38);
+          @include vw-convert-pc(margin-top, 34);
+          line-height: 1.3;
+          font-weight: 300;
+          padding-inline-start: 10px;
+
         }
-      }
-      li.webaward{background:url(../images/icon_webaward.svg) 0 right no-repeat;}
 
+        li.ing {
+          color: #E30D3F;
+
+          span {
+            background-color: #000;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: #fff;
+            border-radius: 40px;
+            @include vw-font-size-pc(24);
+            @include vw-convert-tb(padding, 12 20 15 20);
+            @include vw-convert-pc(margin-left, 40);
+          }
+        }
+
+        li.webaward {
+          background: url(../images/icon_webaward.svg) right 0 no-repeat;
+          background-size: contain;
+        }
+
+      }
     }
-  }
   }
 }
 
