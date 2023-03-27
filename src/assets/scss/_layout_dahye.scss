@@ -1,22 +1,3 @@
-// 상단 css 정리 필요
-html {
-    width: 100%;
-}
-
-*,
-*:before,
-*:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-img {
-    vertical-align: top;
-    max-width: 100%;
-}
-
-/*36px*/
 .mt40 {
     @include vw-convert-pc(margin-top, 40);
 }
@@ -42,15 +23,6 @@ img {
     }
 }
 
-.mo-hide {
-    display: block;
-}
-.pc-hide {
-    display:none;
-}
-.ta-c {
-    text-align:center;
-}
 .wrap {
     position:relative;
 }
@@ -114,10 +86,11 @@ img {
                 a {
                     color:#fff;
                 }
-                &.active {
+                &.active, &:hover {
                     &::before {
                         content: '';
                         border:2px solid #fff;
+                        background:transparent
                     }
                 }
             }
@@ -439,13 +412,6 @@ img {
 
 //mobile
 @media screen and (max-width:767px) {
-    .mo-hide {
-        display: none;
-    }
-    .pc-hide {
-        display:block;
-    }
-
     .pjt-con-wrap {
         .pjt-top {
             position: relative;

@@ -1,45 +1,74 @@
-<section class="main-indicator-wrap">
-    <ul>
-        <li><a href="javascript:void(0)">KB국민은행</a></li>
-        <li><a href="javascript:void(0)">SC제일은행</a></li>
-        <li><a href="javascript:void(0)">CJ대한통운</a></li>
-        <li><a href="javascript:void(0)">우리은행</a></li>
-        <li><a href="javascript:void(0)">우리은행</a></li>
-        <li class="active"><a href="javascript:void(0)">우리은행</a></li>
-    </ul>
-</section>
+<!DOCTYPE html>
+<html lang="en">
 
-<div id="smooth-wrapper">
-    <div id="smooth-content">
-        <section class="pjt-con-wrap woori-certi">
-            <div class="pjt-top-full">
-                <div class="pjt-title center white">
-                    <p class="tit gs-up">
-                        <span>우리은행</span> <br class="pc-hide">
-                        사설인증 구축
-                    </p>
-                    <p class="desc gs-up pc-hide">
-                        단순하게, 명쾌하게, 가치있게 디앤디모바일은 <br>
-                        스스로의 긍정적 경험을 제공합니다.
-                    </p>
-                </div>
-            </div>
-        
-            <div class="pjt-con">
-                <div class="pjt-title center">
-                    <p class="tit gs-up">Design Concept</p>
-                    <p class="desc gs-up">
-                        사설인증시스템을 기반으로 우리금융 종합서비스 측면에서 시너지를 창출하고, 금융서비스 제공의 다양성 확보와 <br class="mo-hide"> 그룹고객 편의성 및 경쟁력을 강화했습니다. <br>
-                        서비스는 개인과 사업자로 구분되지만 통일성을 유지하여 UI/UX를 개선했습니다.
-                    </p>
-                </div>
-                
-                <div class="phone-layout type02">
-                    <div class="gs-up delay-1"><img src="../assets/images/img_wooricerti01.png" alt="" class="pjt-img"></div>
-                    <div class="gs-up delay-2"><img src="../assets/images/img_wooricerti02.png" alt="" class="pjt-img"></div>
-                </div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DnD모바일입니다.</title>
+    <link rel="stylesheet" href="../../dist/assets/css/style.css">
+    <script src="../../dist/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../../dist/assets/js/gsap.min.js" defer></script>
+    <script src="../../dist/assets/js/ScrollSmoother.min.js" defer></script>
+    <script src="../../dist/assets/js/ScrollTrigger.min.js" defer></script>
+    <script src="../../dist/assets/js/common.js" defer></script>
+    <script src="../../dist/assets/js/ui.js" defer></script>
+</head>
+
+<body>
+    <div class="wrap">
+        @@include('./include/header.html') 
+
+        <section class="main-indicator-wrap">
+            <ul>
+                <li><a href="./project_kb.html">KB국민은행</a></li>
+                <li><a href="./project_sc.html">SC제일은행</a></li>
+                <li><a href="./project_cj.html">CJ대한통운</a></li>
+                <li><a href="./project_wooriopen.html">우리은행</a></li>
+                <li><a href="./project_woorimy.html">우리은행</a></li>
+                <li class="active"><a href="./project_wooricerti.html">우리은행</a></li>
+            </ul>
         </section>
-        @@include('./include/footer.html') 
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <section class="pjt-con-wrap woori-certi">
+                    <div class="pjt-top-full">
+                        <div class="pjt-title center white">
+                            <p class="tit gs-up">
+                                <span>우리은행</span> <br class="hide-pc">
+                                사설인증 구축
+                            </p>
+                            <p class="desc gs-up hide-pc">
+                                단순하게, 명쾌하게, 가치있게 디앤디모바일은 <br>
+                                스스로의 긍정적 경험을 제공합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pjt-con">
+                        <div class="pjt-title center">
+                            <p class="tit gs-up">Design Concept</p>
+                            <p class="desc gs-up">
+                                사설인증시스템을 기반으로 우리금융 종합서비스 측면에서 시너지를 창출하고, 금융서비스 제공의 다양성 확보와 <br class="hide-mobile"> 그룹고객 편의성
+                                및 경쟁력을 강화했습니다. <br>
+                                서비스는 개인과 사업자로 구분되지만 통일성을 유지하여 UI/UX를 개선했습니다.
+                            </p>
+                        </div>
+
+                        <div class="phone-layout type02">
+                            <div class="gs-up delay-1"><img src="../assets/images/img_wooricerti01.png" alt=""
+                                    class="pjt-img"></div>
+                            <div class="gs-up delay-2"><img src="../assets/images/img_wooricerti02.png" alt=""
+                                    class="pjt-img"></div>
+                        </div>
+                    </div>
+                </section>
+                @@include('./include/footer.html')
+            </div>
+        </div>
+
     </div>
-</div>
+</body>
+
+</html>
