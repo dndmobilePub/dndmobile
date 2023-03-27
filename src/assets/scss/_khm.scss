@@ -9,7 +9,8 @@
 
   a {
     @include vw-convert-pc(width, 323);
-    height: 4.16vh;
+    @include vw-convert-pc(padding, 28 0);
+      // height: 4.16vh;
     @include vw-font-size-pc(24);
     border-radius: 8px;
     font-weight: 500;
@@ -117,8 +118,8 @@
 .bg_contact {
   background: url(../images/map.png) 0 0 no-repeat;
   background-size: cover;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+    height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -315,8 +316,14 @@
 
 
 /*테블릿*/
-@media screen and (max-width:1440px) {}
+@media screen and (max-width:1440px) {
+  .btn_wrap {
 
+    a {
+        // @include vw-convert-pc(padding, 56 0);
+      }
+    }
+    }
 /*모바일*/
 @media screen and (max-width:767px) {
   .btn_wrap {
@@ -324,6 +331,7 @@
     flex-direction: column;
 
     a {
+      @include vw-convert-pc(padding, 56 0);
       width: 100%;
     }
 
