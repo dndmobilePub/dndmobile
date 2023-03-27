@@ -206,13 +206,105 @@
 }
 
 
-.project_wrap {
-  .tab_detail {
+.project-wrap {
+  @include vw-convert-pc(margin, 96 160 250 160);
+
+  .tab-top {
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      @include vw-convert-pc(margin, 36 0 38 0);
+
+      li {
+        @include vw-convert-pc(margin-right, 120);
+        @include vw-font-size-pc(30);
+        font-weight: 700;
+
+      }
+
+      li:last-child {
+        @include vw-convert-pc(margin-right, 0);
+      }
+
+      li.on {
+        color: #E30D3F;
+      }
+    }
+  }
+
+  .tab-detail {
     display: none;
   }
 
-  .tab_detail.on {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                .tab-detail.on {
     display: block;
+dl {
+    // @include vw-convert-pc(margin-top, 160);
+    border-top: 1px solid #B4B4B4;
+  }
+
+  dl:last-child {
+    border-bottom: 1px solid #B4B4B4;
+  }
+
+  dt.accordion {
+    background: url(../images/icon_plus.png) right 50% no-repeat;
+    background-size: 2.5vw;
+    cursor: pointer;
+    @include vw-convert-tb(padding, 56 40);
+    @include vw-font-size-pc(48);
+    font-weight: 700;
+
+    sup {
+      @include vw-font-size-pc(12);
+    }
+  }
+
+  dt.active {
+    background: url(../images/icon_minus.png) right 50% no-repeat;
+    background-size: 2.5vw;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+  }
+
+  dd.panel {
+    @include vw-convert-pc(margin-left, 40);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+    ul {
+      @include vw-convert-tb(padding, 46 0 48 40);
+
+
+      li {
+        list-style-type: disc;
+        @include vw-font-size-pc(38);
+        @include vw-convert-pc(margin-top, 34);
+        line-height: 1.3;
+        font-weight: 300;
+        padding-inline-start: 10px;
+
+      }
+
+      li.ing {
+        color: #E30D3F;
+
+        span {
+          background-color: #000;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          color: #fff;
+          border-radius: 40px;
+          @include vw-font-size-pc(24);
+          @include vw-convert-tb(padding, 12 20 15 20);
+          @include vw-convert-pc(margin-left, 40);
+        }
+      }
+      li.webaward{background:url(../images/icon_webaward.svg) 0 right no-repeat;}
+
+    }
+  }
   }
 }
 
