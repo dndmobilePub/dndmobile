@@ -516,13 +516,13 @@ header {
 		align-items: flex-start;
 
 		p {
-			@include vw-font-size-mo(20);
+			@include vw-font-size-mo(40);
 		}
 
 		ul {
 			li {
 				display: block;
-				@include vw-font-size-mo(14);
+				@include vw-font-size-mo(28);
 			}
 
 			li:first-child {
