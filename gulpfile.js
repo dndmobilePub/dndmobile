@@ -126,7 +126,7 @@ gulp.task('browserSync', function (done) {
       baseDir: "./", // ★★★★ 서버에 띄울 폴더 위치 지정 
       directory: true
     },
-    startPath: "dist/html/main.html", //첫페이지
+    startPath: "dist/html/contact.html", //첫페이지
     browser: 'chrome',
   });
   gulp.watch('./sass/**/*.scss', scss)

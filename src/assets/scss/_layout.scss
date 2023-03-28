@@ -1573,7 +1573,7 @@
                         @include vw-font-size-mo(32);
                         padding:0;
                         li{
-                            @include vw-convert-mo(margin-top, 20); 
+                            @include vw-convert-mo(margin-top, 20);
                         }
                     }
                 }

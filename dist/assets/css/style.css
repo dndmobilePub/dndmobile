@@ -453,27 +453,27 @@ header.active {
 }
 @media screen and (max-width: 767px) {
   .footer p {
-    font-size: 40px;
-    font-size: 2.6075619296vw;
+    font-size: 80px;
+    font-size: 5.2151238592vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .footer p {
-    font-size: 20px;
-    font-size: 2.6075619296vw;
+    font-size: 40px;
+    font-size: 5.2151238592vw;
   }
 }
 @media screen and (max-width: 767px) {
   .footer ul li {
     display: block;
-    font-size: 28px;
-    font-size: 1.8252933507vw;
+    font-size: 56px;
+    font-size: 3.6505867014vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .footer ul li {
-    font-size: 14px;
-    font-size: 1.8252933507vw;
+    font-size: 28px;
+    font-size: 3.6505867014vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2453,7 +2453,8 @@ button.swiper-pagination-bullet {
   background: #E30D3F;
 }
 .accordion-wrap .panel ul li.webaward {
-  background: url(../images/icon_webaward.svg) 0 right no-repeat;
+  background: url(../images/icon_webaward.svg) right 0 no-repeat;
+  background-size: contain;
 }
 
 .btn-wrap {
@@ -4206,5 +4207,83 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part {
     flex-direction: column;
+    padding-top: 160px;
+    padding-top: 10.4302477184vw;
+    padding-left: 40px;
+    padding-left: 2.6075619296vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part {
+    padding-top: 80px;
+    padding-top: 10.4302477184vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part {
+    padding-left: 20px;
+    padding-left: 2.6075619296vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part:first-child {
+    padding-top: 80px;
+    padding-top: 5.2151238592vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part:first-child {
+    padding-top: 40px;
+    padding-top: 5.2151238592vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part:last-child {
+    padding-bottom: 100px;
+    padding-bottom: 6.518904824vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part:last-child {
+    padding-bottom: 50px;
+    padding-bottom: 6.518904824vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part p {
+    width: 100%;
+    font-size: 72px;
+    font-size: 4.6936114733vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part p {
+    font-size: 36px;
+    font-size: 4.6936114733vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul {
+    font-size: 64px;
+    font-size: 4.1720990874vw;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul {
+    font-size: 32px;
+    font-size: 4.1720990874vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul li {
+    margin-top: 40px;
+    margin-top: 2.6075619296vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul li {
+    margin-top: 20px;
+    margin-top: 2.6075619296vw;
   }
 }
