@@ -20,7 +20,7 @@ function animateFrom(elem, direction) {
   direction = direction || 1;
   var x = 0,
     y = direction * 100,
-    delay = 0;
+    delay = 0.3;
   if (elem.classList.contains("gs-left")) {
     x = -100;
     y = 0;
@@ -28,11 +28,19 @@ function animateFrom(elem, direction) {
     x = 100;
     y = 0;
   } else if (elem.classList.contains("delay-1")) {
-    delay = 0.3;
-  } else if (elem.classList.contains("delay-2")) {
     delay = 0.6;
-  }  else if (elem.classList.contains("delay-3")) {
+  } else if (elem.classList.contains("delay-2")) {
     delay = 0.9;
+  } else if (elem.classList.contains("delay-3")) {
+    delay = 1.2;
+  } else if (elem.classList.contains("delay-4")) {
+    delay = 1.5;
+  } else if (elem.classList.contains("gs-opacity")) {
+    x = 0;
+    y = 0;
+  } else if (elem.classList.contains("txt-ani")) {
+    x = 1000;
+    y = 0;
   }
   elem.style.transform = "translate(" + x + "px, " + y + "px)";
   elem.style.opacity = "0";
@@ -40,7 +48,7 @@ function animateFrom(elem, direction) {
     elem,
     { x: x, y: y, autoAlpha: 0 },
     {
-      duration: 1.25,
+      duration: 2,
       x: 0,
       y: 0,
       delay: delay,
@@ -49,7 +57,14 @@ function animateFrom(elem, direction) {
       ease: "expo",
       overwrite: "auto",
     }
-  );
+  )
+  // gsap.fromTo(".txt-ani", 
+  // { 
+  //   scale: 0.8 
+  // }, {
+  //   scale: 1,
+  //   delay: 0.8
+  // })
 }
 
 function hide(elem) {
@@ -63,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hide(elem);
     ScrollTrigger.create({
       trigger: elem,
-      
       onEnter: function () {
         animateFrom(elem);
       },
@@ -78,4 +92,64 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+  
+});
+
+
+
+/**
+ * ==============================+
+ * 상단 스플래쉬 이미지 스와이프
+ * ==============================+
+ */
+
+new Swiper('.splash-swiper', {
+  autoplay: {
+      delay: 2000,
+  },
+  speed: 500,
+  loop: true,
+  watchSlidesProgress: true,
+  on: {
+      init: function () {
+          this.slides.css('overflow', 'hidden');
+      },
+      progress: function () {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+              var slideProgress = swiper.slides[i].progress;
+              var innerOffset = swiper.width * 1;
+              var innerTranslate = slideProgress * innerOffset;
+              swiper.slides[i].querySelector('img').style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
+          }
+      },
+      touchStart: function () {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = "";
+          }
+      },
+      setTransition: function (speed) {
+          var swiper = this;
+          for (var i = 0; i < swiper.slides.length; i++) {
+              swiper.slides[i].style.transition = speed + "ms";
+              swiper.slides[i].querySelector('img').style.transition = speed + "ms";
+          }
+      }
+  }
+});
+
+
+new Swiper('.project-swiper', {
+  slidesPerView: 3,
+  spaceBetween: 110,
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 40,
+      autoplay: {
+        delay: 2000,
+      },
+    }
+  },
 });

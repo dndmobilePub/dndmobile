@@ -244,6 +244,7 @@
     <title>DnD모바일입니다.</title>
     <link rel="stylesheet" href="../../dist/assets/css/style.css">
     <script src="../../dist/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../../dist/assets/js/swiper.min.js"></script>
     <script src="../../dist/assets/js/gsap.min.js" defer></script>
     <script src="../../dist/assets/js/ScrollSmoother.min.js" defer></script>
     <script src="../../dist/assets/js/ScrollTrigger.min.js" defer></script>
@@ -499,21 +500,29 @@
                         </div>
 
                         <div class="pjt-top-img">
-                            <!-- <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="../assets/images/img_kb_splash.svg" alt="kb국민은행 이미지" class="pjt-img">
+                            <div class="swiper-container splash-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../assets/images/img_kb_splash01.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../assets/images/img_kb_splash02.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../assets/images/img_kb_splash03.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../assets/images/img_kb_splash04.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../assets/images/img_kb_splash05.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../assets/images/img_kb_splash06.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/images/img_kb_splash.svg" alt="kb국민은행 이미지" class="pjt-img">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/images/img_kb_splash.svg" alt="kb국민은행 이미지" class="pjt-img">
-                            </div>
-                        </div>
-                    </div> -->
-                            <img src="../assets/images/img_kb_splash.png" alt="kb국민은행 이미지"
-                                class="pjt-img gs-up gs-left">
+                            <!-- <img src="../assets/images/img_kb_splash.png" alt="kb국민은행 이미지" class="pjt-img gs-up gs-left"> -->
                             <span class="circle type01 gs-up delay-1"></span>
                             <span class="circle type02 gs-up delay-2"></span>
                             <span class="circle type03 gs-up delay-3"></span>
@@ -539,44 +548,6 @@
                         </div>
                     </div>
                 </section>
-
-                <!-- <script>
-            new Swiper('.kb .pjt-top .swiper-container', {
-                autoplay: {
-                    delay: 2000,
-                },
-                speed: 500,
-                loop: true,
-                watchSlidesProgress: true,
-                on: {
-                    init: function () {
-                        this.slides.css('overflow', 'hidden');
-                    },
-                    progress: function () {
-                        var swiper = this;
-                        for (var i = 0; i < swiper.slides.length; i++) {
-                            var slideProgress = swiper.slides[i].progress;
-                            var innerOffset = swiper.width * 1;
-                            var innerTranslate = slideProgress * innerOffset;
-                            swiper.slides[i].querySelector('img').style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
-                        }
-                    },
-                    touchStart: function () {
-                        var swiper = this;
-                        for (var i = 0; i < swiper.slides.length; i++) {
-                            swiper.slides[i].style.transition = "";
-                        }
-                    },
-                    setTransition: function (speed) {
-                        var swiper = this;
-                        for (var i = 0; i < swiper.slides.length; i++) {
-                            swiper.slides[i].style.transition = speed + "ms";
-                            swiper.slides[i].querySelector('img').style.transition = speed + "ms";
-                        }
-                    }
-                }
-            });
-        </script> -->
                    <!-- footer -->
    <div class="footer">
       <p>고객의 생각을 디자인합니다.</p>
