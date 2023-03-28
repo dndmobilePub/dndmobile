@@ -399,7 +399,7 @@ header.active {
     top: 30px;
   }
   header .header--inner {
-    padding-top: 60px;
+    padding-top: 70px;
   }
   header .header--inner .logo--black .ico {
     width: 30px !important;
@@ -1142,7 +1142,7 @@ button.swiper-pagination-bullet {
 
 .wrap {
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .btn-top {
@@ -2806,14 +2806,14 @@ button.swiper-pagination-bullet {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 504px 80px 0px;
-    padding: 32.8552803129vw 5.2151238592vw 0vw;
+    padding: 400px 80px 0px;
+    padding: 26.075619296vw 5.2151238592vw 0vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .pjt-con-wrap .pjt-top {
-    padding: 252px 40px 0px;
-    padding: 32.8552803129vw 5.2151238592vw 0vw;
+    padding: 200px 40px 0px;
+    padding: 26.075619296vw 5.2151238592vw 0vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2822,14 +2822,14 @@ button.swiper-pagination-bullet {
     display: block;
     width: 100%;
     height: 100%;
-    padding: 504px 80px 0px;
-    padding: 32.8552803129vw 5.2151238592vw 0vw;
+    padding: 400px 80px 0px;
+    padding: 26.075619296vw 5.2151238592vw 0vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .pjt-con-wrap .pjt-top-full {
-    padding: 252px 40px 0px;
-    padding: 32.8552803129vw 5.2151238592vw 0vw;
+    padding: 200px 40px 0px;
+    padding: 26.075619296vw 5.2151238592vw 0vw;
   }
 }
 @media screen and (max-width: 767px) {
