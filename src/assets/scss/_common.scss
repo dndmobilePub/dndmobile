@@ -7,33 +7,11 @@ $black: '#000';
 $yellow: #FFDF62;
 $white: #fff;
 
-
-/** font-size **/
-$font12: 3.2vw;
-/*12px*/
-$font14: 3.73vw;
-/*14px*/
-$font15: 4vw;
-/*15px*/
-$font16: 4.26vw;
-/*16px*/
-$font18: 4.8vw;
-/*18px*/
-$font20: 5.33vw;
-/*20px*/
-$font24: 6.4vw;
-/*24px*/
-$font26: 6.93vw;
-/*26px*/
-$font30: 8vw;
-/*30px*/
-$font32: 8.53vw;
-/*32px*/
-$font48: 12.8vw;
-/*48px*/
-$font64: 17.06vw;
-/*64px*/
-
+* {margin:0; padding:0; font-family: 'Pretendard';}
+body {line-height: 1;}
+li {list-style: none;}
+a:link, a {text-decoration: none; cursor: pointer;color:#222}
+::selection {color:#fff; background-color: rgba(55, 147, 224, 0.5);}
 
 .hide {
 	&-mobile {
@@ -66,6 +44,24 @@ img {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+[class *='flex'] {
+    display: flex;
+}
+
+.flex {
+    &-center {
+        align-items: center;
+    }
+
+    &-between {
+        justify-content: space-between;
+    }
+
+    &-around {
+        justify-content: space-around;
+    }
 }
 
 header {
@@ -523,14 +519,16 @@ header {
 			li {
 				display: block;
 				@include vw-font-size-mo(28);
+				font-weight:300;
+				line-height:1.5;
 			}
 
 			li:first-child {
-				@include vw-convert-mo(margin-top, 30);
+				@include vw-convert-mo(margin-top, 60);
 			}
 
 			li:last-child {
-				@include vw-convert-mo(margin-top, 20);
+				@include vw-convert-mo(margin-top, 40);
 
 			}
 		}

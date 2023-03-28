@@ -2,24 +2,6 @@
     @include vw-convert-pc(margin-top, 160);
 }
 
-[class *='flex'] {
-    display: flex;
-}
-
-.flex {
-    &-center {
-        align-items: center;
-    }
-
-    &-between {
-        justify-content: space-between;
-    }
-
-    &-around {
-        justify-content: space-around;
-    }
-}
-
 .wrap {
     position: relative;
     overflow-x:hidden;
@@ -1571,6 +1553,7 @@
                     }
                     ul{
                         padding:0;
+                        @include vw-convert-mo(margin-top, 10);
                         li{
                             @include vw-convert-mo(margin-top, 20);
                             @include vw-font-size-mo(32);
