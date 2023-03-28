@@ -1361,7 +1361,7 @@
     }
 
     .project-wrap {
-        @include vw-convert-mo(padding, 120 0 150);
+        @include vw-convert-mo(padding, 220 0 150);
         // padding:0;
         .tab-top {
             position:relative;
@@ -1518,7 +1518,6 @@
             }
         }
     }
-
 
     .recruit-wrap {
         @include vw-convert-mo(margin, 130 40 20);

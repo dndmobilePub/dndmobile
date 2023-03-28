@@ -135,10 +135,10 @@ img {
 header {
   width: 100%;
   transition: all 0.2s ease-in-out;
-  height: 100%;
+  height: auto;
   opacity: 1;
   transform: translateY(0);
-  position: relative;
+  position: fixed;
   z-index: 10;
 }
 header .header--inner {
@@ -3706,14 +3706,14 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .project-wrap {
-    padding: 240px 0px 300px;
-    padding: 15.6453715776vw 0vw 19.556714472vw;
+    padding: 440px 0px 300px;
+    padding: 28.6831812256vw 0vw 19.556714472vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .project-wrap {
-    padding: 120px 0px 150px;
-    padding: 15.6453715776vw 0vw 19.556714472vw;
+    padding: 220px 0px 150px;
+    padding: 28.6831812256vw 0vw 19.556714472vw;
   }
 }
 @media screen and (max-width: 767px) {
