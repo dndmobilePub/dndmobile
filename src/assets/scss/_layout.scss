@@ -738,7 +738,8 @@
             }
 
             li.webaward {
-                background: url(../images/icon_webaward.svg) 0 right no-repeat;
+                background: url(../images/icon_webaward.svg) right 0 no-repeat;
+                background-size: contain;
             }
 
         }
@@ -1560,6 +1561,25 @@
             dd.panel {
                 .part {
                     flex-direction: column;
+                    @include vw-convert-mo(padding-top, 80);
+                    @include vw-convert-mo(padding-left, 20);
+                    &:first-child{
+                        @include vw-convert-mo(padding-top, 40);
+                    }
+                    &:last-child{
+                        @include vw-convert-mo(padding-bottom, 50);
+                    }
+                    p{
+                        width: 100%;
+                        @include vw-font-size-mo(36);
+                    }
+                    ul{
+                        @include vw-font-size-mo(32);
+                        padding:0;
+                        li{
+                            @include vw-convert-mo(margin-top, 20); 
+                        }
+                    }
                 }
             }
         }
