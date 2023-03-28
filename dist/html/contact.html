@@ -159,7 +159,7 @@
 		</div>
 		<nav>
 			<ul class="main-menu">
-				<li><a href="../main.html" class="active">PROJECTS</a></li>
+				<li><a href="project.html" class="active">PROJECTS</a></li>
 				<li><a href="about.html">ABOUT US</a></li>
 				<li><a href="recruit.html">RECRUIT</a></li>
 				<li><a href="contact.html">CONTACT</a></li>
@@ -238,21 +238,21 @@
 
         <section class="contact-wrap">
             <div class="inner">
-                <h2>CONTACT</h2>
+                <h2 class="gs-up">CONTACT</h2>
                 <div class="hide-mobile">
-                    <ul class="tel-wrap">
+                    <ul class="tel-wrap gs-up">
                         <li><strong>L.</strong>(03995) 서울시 마포구 월드컵북로2길 11 삼희빌딩 7F</li>
                         <li><strong>T.</strong>+82 2 6448-2286</li>
                         <li><strong>F.</strong>+82 2 6448-2284</li>
                     </ul>
-                    <div class="btn-wrap">
+                    <div class="btn-wrap gs-up">
                         <a href="#" name="회사소개서" class="type3" target="_blank">회사소개서</a>
                         <a href="#" name="이메일 문의" class="type2" target="_blank">이메일 문의</a>
                     </div>
                 </div>
             </div>
             <div class="hide-pc">
-                <ul class="tel-wrap">
+                <ul class="tel-wrap gs-up">
                     <li>
                         <strong>L.</strong>
                         (03995) 서울시 마포구 월드컵북로2길 11 삼희빌딩 7F
@@ -260,7 +260,7 @@
                     <li><strong>T.</strong>+82 2 6448-2286</li>
                     <li><strong>F.</strong>+82 2 6448-2284</li>
                 </ul>
-                <div class="btn-wrap">
+                <div class="btn-wrap gs-up">
                     <a href="#" name="회사소개서" class="type3" target="_blank">회사소개서</a>
                     <a href="#" name="이메일 문의" class="type2" target="_blank">이메일 문의</a>
                 </div>
@@ -294,8 +294,7 @@
          }
       }
       function topFunction() {
-         document.body.scrollTop = 0;
-         document.documentElement.scrollTop = 0;
+         window.scrollTo({ top: 0, behavior: "smooth" });
       }
    </script>
 
