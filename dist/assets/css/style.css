@@ -3006,6 +3006,8 @@ button.swiper-pagination-bullet {
   .pjt-con-wrap.kb .pjt-top .pjt-top-img .pjt-img {
     width: 568px;
     width: 37.0273794003vw;
+    border: 5px solid #000;
+    border-radius: 30px;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {

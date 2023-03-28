@@ -1082,6 +1082,8 @@
 
                     .pjt-img {
                         @include vw-convert-mo(width, 284);
+                        border:5px solid #000;
+                        border-radius:30px;
                     }
 
                     .circle {
