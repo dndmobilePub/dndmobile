@@ -523,14 +523,16 @@ header {
 			li {
 				display: block;
 				@include vw-font-size-mo(28);
+				font-weight:300;
+				line-height:1.5;
 			}
 
 			li:first-child {
-				@include vw-convert-mo(margin-top, 30);
+				@include vw-convert-mo(margin-top, 60);
 			}
 
 			li:last-child {
-				@include vw-convert-mo(margin-top, 20);
+				@include vw-convert-mo(margin-top, 40);
 
 			}
 		}

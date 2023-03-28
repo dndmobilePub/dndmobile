@@ -1570,10 +1570,11 @@
                         @include vw-font-size-mo(36);
                     }
                     ul{
-                        @include vw-font-size-mo(32);
                         padding:0;
+                        @include vw-convert-mo(margin-top, 10);
                         li{
                             @include vw-convert-mo(margin-top, 20);
+                            @include vw-font-size-mo(32);
                         }
                     }
                 }
