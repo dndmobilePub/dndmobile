@@ -12,6 +12,40 @@ ScrollSmoother.create({
 
 /**
  * ==============================+
+ * 탭
+ * ==============================+
+ */
+$(".tab-top > ul > li").click(function () {
+  var tabIdx = $(this).index();
+  $(this).addClass("on").siblings().removeClass("on");
+  $(".tab-detail").eq(tabIdx).addClass("on").siblings().removeClass("on");
+  $(".tab-detail").fadeOut(0);
+  $(".tab-detail").eq(tabIdx).fadeIn(600);
+});
+
+
+/**
+ * ==============================+
+ * 아코디언
+ * ==============================+
+ */
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+      } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+  });
+}
+
+/**
+ * ==============================+
  * 애니메이션 정의
  * ==============================+
  */
@@ -139,6 +173,11 @@ new Swiper('.splash-swiper', {
   }
 });
 
+/**
+ * ==============================+
+ * 프로젝트 스와이프
+ * ==============================+
+ */
 
 new Swiper('.project-swiper', {
   slidesPerView: 3,
@@ -146,7 +185,9 @@ new Swiper('.project-swiper', {
   breakpoints: {
     768: {
       slidesPerView: 1,
-      spaceBetween: 40,
+      spaceBetween: 30,
+      loop:true,
+      centeredSlides: true,
       autoplay: {
         delay: 2000,
       },
