@@ -1151,6 +1151,8 @@ button.swiper-pagination-bullet {
   bottom: 40px;
   right: 20px;
   z-index: 100;
+  width: 48px;
+  height: 48px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -2166,18 +2168,18 @@ button.swiper-pagination-bullet {
 }
 
 .project-wrap {
-  padding: 100px 160px 200px 160px;
-  padding: 5.2083333333vw 8.3333333333vw 10.4166666667vw 8.3333333333vw;
+  padding: 200px 160px 200px 160px;
+  padding: 10.4166666667vw 8.3333333333vw 10.4166666667vw 8.3333333333vw;
 }
 @media (min-width: 1920px) {
   .project-wrap {
-    padding: 100px 160px 200px 160px;
+    padding: 200px 160px 200px 160px;
   }
 }
 .project-wrap .tab-top {
   position: relative;
 }
-.project-wrap .tab-top .bg-tit {
+.project-wrap .tab-top .bg-tit p {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -2193,7 +2195,7 @@ button.swiper-pagination-bullet {
   z-index: -1;
 }
 @media (min-width: 1920px) {
-  .project-wrap .tab-top .bg-tit {
+  .project-wrap .tab-top .bg-tit p {
     font-size: 100px;
   }
 }
@@ -2580,12 +2582,12 @@ button.swiper-pagination-bullet {
 }
 
 .recruit-wrap {
-  margin: 130px 160px 250px 160px;
-  margin: 6.7708333333vw 8.3333333333vw 13.0208333333vw 8.3333333333vw;
+  margin: 200px 160px 250px 160px;
+  margin: 10.4166666667vw 8.3333333333vw 13.0208333333vw 8.3333333333vw;
 }
 @media (min-width: 1920px) {
   .recruit-wrap {
-    margin: 130px 160px 250px 160px;
+    margin: 200px 160px 250px 160px;
   }
 }
 .recruit-wrap .title-wrap .tit {
@@ -2797,10 +2799,54 @@ button.swiper-pagination-bullet {
     top: 20.8333333333vw;
   }
 }
+@media screen and (max-width: 1440px) and (max-width: 1440px) {
+  .recruit-wrap {
+    margin-top: 260px;
+    margin-top: 18.0555555556vw;
+  }
+}
 @media screen and (max-width: 767px) {
   .main-indicator-wrap {
     display: none;
   }
+  .pjt-con-wrap .btn-pjt-next {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    width: 19.556714472vw;
+    height: 300px;
+    height: 19.556714472vw;
+    margin: 0 auto;
+    margin-top: -150px;
+    margin-top: -9.778357236vw;
+    border-radius: 50%;
+    background: #D00D3B;
+    color: #fff;
+    font-weight: 700;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .pjt-con-wrap .btn-pjt-next {
+    width: 150px;
+    width: 19.556714472vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .pjt-con-wrap .btn-pjt-next {
+    height: 150px;
+    height: 19.556714472vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .pjt-con-wrap .btn-pjt-next {
+    margin-top: -75px;
+    margin-top: -9.778357236vw;
+  }
+}
+@media screen and (max-width: 767px) {
   .pjt-con-wrap .pjt-top {
     position: relative;
     display: block;
@@ -3186,21 +3232,21 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .pjt-con-wrap.woori-my .pjt-top .pjt-top-img .splash-img {
-    right: 228px;
-    right: 11.875vw;
+    right: 240px;
+    right: 12.5vw;
     top: 3px;
-    width: 550px;
-    width: 28.6458333333vw;
+    width: 560px;
+    width: 29.1666666667vw;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 1920px) {
   .pjt-con-wrap.woori-my .pjt-top .pjt-top-img .splash-img {
-    right: 228px;
+    right: 240px;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 1920px) {
   .pjt-con-wrap.woori-my .pjt-top .pjt-top-img .splash-img {
-    width: 550px;
+    width: 560px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -4136,14 +4182,14 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .recruit-wrap {
-    margin: 260px 80px 40px;
-    margin: 16.9491525424vw 5.2151238592vw 2.6075619296vw;
+    margin: 480px 80px 40px;
+    margin: 31.2907431551vw 5.2151238592vw 2.6075619296vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap {
-    margin: 130px 40px 20px;
-    margin: 16.9491525424vw 5.2151238592vw 2.6075619296vw;
+    margin: 240px 40px 20px;
+    margin: 31.2907431551vw 5.2151238592vw 2.6075619296vw;
   }
 }
 @media screen and (max-width: 767px) {

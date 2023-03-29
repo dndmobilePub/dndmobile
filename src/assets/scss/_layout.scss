@@ -13,6 +13,8 @@
 	bottom: 40px;
 	right: 20px;
 	z-index:100;
+    width:48px;
+    height:48px;
 	border: none;
 	outline: none;
 	cursor: pointer;
@@ -570,22 +572,24 @@
 
 //프로젝트 메인
 .project-wrap {
-    @include vw-convert-pc(padding, 100 160 200 160);
+    @include vw-convert-pc(padding, 200 160 200 160);
     .tab-top {
         position:relative;
         .bg-tit {
-            position:absolute;
-            left:50%;
-            top:50%;
-            width:100%;
-            transform:translate(-50%, -50%);
-            @include vw-font-size-pc(100);
-            font-weight:700;
-            color:#dfdfdf;
-            text-align:center;
-            letter-spacing:-5%;
-            opacity:.2;
-            z-index:-1;
+            p {
+                position:absolute;
+                left:50%;
+                top:50%;
+                width:100%;
+                transform:translate(-50%, -50%);
+                @include vw-font-size-pc(100);
+                font-weight:700;
+                color:#dfdfdf;
+                text-align:center;
+                letter-spacing:-5%;
+                opacity:.2;
+                z-index:-1;
+            }
         }
         ul {
             width: 100%;
@@ -809,7 +813,7 @@
 }
 
 .recruit-wrap {
-    @include vw-convert-pc(margin, 130 160 250 160);
+    @include vw-convert-pc(margin, 200 160 250 160);
 
     .title-wrap {
         .tit {
@@ -958,6 +962,10 @@
             }
         }
     }
+
+    .recruit-wrap {
+        @include vw-convert-tb(margin-top, 260);
+    }
 }
 
 //mobile
@@ -967,6 +975,22 @@
     }
 
     .pjt-con-wrap {
+        .btn-pjt-next{
+            position:relative;
+            z-index:2;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            @include vw-convert-mo(width, 150);
+            @include vw-convert-mo(height, 150);
+            margin:0 auto;
+            @include vw-convert-mo(margin-top, -75);
+            border-radius:50%;
+            background:#D00D3B;
+            color:#fff;
+            font-weight: 700;
+
+        }
         .pjt-top {
             position: relative;
             display: block;
@@ -1136,9 +1160,9 @@
                     @include vw-convert-mo(margin-top, 100);
 
                     .splash-img {
-                        @include vw-convert-pc(right, 228);
+                        @include vw-convert-pc(right, 240);
                         top: 3px;
-                        @include vw-convert-pc(width, 550);
+                        @include vw-convert-pc(width, 560);
 
                     }
 
@@ -1520,7 +1544,7 @@
     }
 
     .recruit-wrap {
-        @include vw-convert-mo(margin, 130 40 20);
+        @include vw-convert-mo(margin, 240 40 20);
 
         .title-wrap {
             .tit {
