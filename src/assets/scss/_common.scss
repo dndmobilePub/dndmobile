@@ -140,6 +140,9 @@ header {
 
 			li {
 				padding-right: 38px;
+				&:last-child {
+						padding-right: 76px;
+					}
 			}
 
 		}
@@ -185,7 +188,7 @@ header {
 	border: none;
 	position: fixed;
 	top: 70px;
-	right: 20px;
+	right: 80px;
 	z-index: 1002;
 	cursor: pointer;
 
@@ -297,16 +300,17 @@ header {
 
 					a {
 						span {
-							color: #2f2f2f;
+							color: #fff;
 							margin-left: 14px;
 						}
 
 						&:hover {
 							.ico {
+								.stroke-white,
 								.stroke-black {
 									stroke: $primary;
 								}
-
+								.fill-white,
 								.fill-black {
 									fill: $primary;
 								}
@@ -392,6 +396,7 @@ header {
 @media screen and (max-width:767px) {
 	.menu-toggle {
 		top: 30px;
+		right: 40px;
 	}
 
 	header {
@@ -421,7 +426,7 @@ header {
 
 			&--footer {
 				position: absolute;
-				left: 15px;
+				left: 40px;
 				top: 35px;
 				z-index: 1002;
 
