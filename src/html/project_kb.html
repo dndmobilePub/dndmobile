@@ -17,7 +17,7 @@
 
 <body>
     <div class="wrap">
-        @@include('./include/header.html') 
+        @@include('./include/header.html')
         <section class="main-indicator-wrap">
             <ul>
                 <li class="active"><a href="./project_kb.html">KB국민은행</a></li>
@@ -98,9 +98,60 @@
                     </div>
                 </div>
             </div>
+
+            <div class="hide-pc">
+                <a href="./project_sc.html" class="btn-pjt-next">
+                    <p>NEXT</p>
+                </a>
+            </div>
         </section>
         @@include('./include/footer.html')
 
+        <script>
+
+
+            /**
+             * ==============================+
+             * 상단 스플래쉬 이미지 스와이프
+             * ==============================+
+             */
+
+            new Swiper('.splash-swiper', {
+                autoplay: {
+                    delay: 2000,
+                },
+                speed: 500,
+                loop: true,
+                watchSlidesProgress: true,
+                on: {
+                    init: function () {
+                        this.slides.css('overflow', 'hidden');
+                    },
+                    progress: function () {
+                        var swiper = this;
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            var slideProgress = swiper.slides[i].progress;
+                            var innerOffset = swiper.width * 1;
+                            var innerTranslate = slideProgress * innerOffset;
+                            swiper.slides[i].querySelector('img').style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
+                        }
+                    },
+                    touchStart: function () {
+                        var swiper = this;
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            swiper.slides[i].style.transition = "";
+                        }
+                    },
+                    setTransition: function (speed) {
+                        var swiper = this;
+                        for (var i = 0; i < swiper.slides.length; i++) {
+                            swiper.slides[i].style.transition = speed + "ms";
+                            swiper.slides[i].querySelector('img').style.transition = speed + "ms";
+                        }
+                    }
+                }
+            });
+        </script>
     </div>
 </body>
 

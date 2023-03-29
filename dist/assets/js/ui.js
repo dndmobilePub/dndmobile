@@ -133,48 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**
  * ==============================+
- * 상단 스플래쉬 이미지 스와이프
- * ==============================+
- */
-
-new Swiper('.splash-swiper', {
-  autoplay: {
-      delay: 2000,
-  },
-  speed: 500,
-  loop: true,
-  watchSlidesProgress: true,
-  on: {
-      init: function () {
-          this.slides.css('overflow', 'hidden');
-      },
-      progress: function () {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-              var slideProgress = swiper.slides[i].progress;
-              var innerOffset = swiper.width * 1;
-              var innerTranslate = slideProgress * innerOffset;
-              swiper.slides[i].querySelector('img').style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
-          }
-      },
-      touchStart: function () {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = "";
-          }
-      },
-      setTransition: function (speed) {
-          var swiper = this;
-          for (var i = 0; i < swiper.slides.length; i++) {
-              swiper.slides[i].style.transition = speed + "ms";
-              swiper.slides[i].querySelector('img').style.transition = speed + "ms";
-          }
-      }
-  }
-});
-
-/**
- * ==============================+
  * 프로젝트 스와이프
  * ==============================+
  */
