@@ -77,8 +77,7 @@ header {
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		padding: 0px 80px 0 80px;
-		padding-top: 60px;
+		padding: 60px 80px 0 80px;
 
 		.logo {
 			&--black {
@@ -258,7 +257,7 @@ header {
 						transition: transform 300ms ease-in-out 0s;
 
 						a {
-							font-size: 4rem;
+							@include vw-font-size-pc(64);
 							color: #fff;
 							text-decoration: none;
 							text-transform: uppercase;
@@ -483,7 +482,7 @@ header {
 					&-menu {
 						li {
 							a {
-								font-size: 1.875rem;
+								@include vw-font-size-mo(60);
 							}
 						}
 					}
