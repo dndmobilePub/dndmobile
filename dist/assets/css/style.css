@@ -101,6 +101,10 @@ html {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+  transition: background 0.5s;
+}
+html.bg-black {
+  background: #000;
 }
 
 img {
@@ -130,6 +134,16 @@ img {
 }
 .flex-around {
   justify-content: space-around;
+}
+
+.mt160 {
+  margin-top: 160px;
+  margin-top: 8.3333333333vw;
+}
+@media (min-width: 1920px) {
+  .mt160 {
+    margin-top: 160px;
+  }
 }
 
 header {
@@ -402,6 +416,25 @@ header.active {
 }
 .footer ul li:last-child strong {
   margin-right: 0;
+}
+
+.btn-top {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 70px;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+.btn-top:hover {
+  background-color: #d0d0d0;
 }
 
 @media screen and (max-width: 767px) {
@@ -1154,44 +1187,9 @@ button.swiper-pagination-bullet {
   -ms-perspective: 1200px;
 }
 
-html {
-  transition: background 0.5s;
-}
-html.bg-black {
-  background: #000;
-}
-
-.mt160 {
-  margin-top: 160px;
-  margin-top: 8.3333333333vw;
-}
-@media (min-width: 1920px) {
-  .mt160 {
-    margin-top: 160px;
-  }
-}
-
 .wrap {
   position: relative;
-}
-
-.btn-top {
-  display: none;
-  position: fixed;
-  bottom: 40px;
-  right: 70px;
-  z-index: 100;
-  width: 48px;
-  height: 48px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 12px;
-  border-radius: 50%;
-  background-color: #ddd;
-}
-.btn-top:hover {
-  background-color: #d0d0d0;
+  overflow-x: hidden;
 }
 
 .main-indicator-wrap {
@@ -1269,12 +1267,12 @@ html.bg-black {
   border: 2px solid #fff;
 }
 
-.panel {
+.main .panel {
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s;
 }
-.panel.active, .panel:nth-child(1) {
+.main .panel.active, .main .panel:nth-child(1) {
   display: block;
   opacity: 1;
   visibility: visible;
@@ -2567,77 +2565,6 @@ html.bg-black {
   background-size: contain;
 }
 
-.btn-wrap {
-  margin-top: 80px;
-  margin-top: 4.1666666667vw;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-@media (min-width: 1920px) {
-  .btn-wrap {
-    margin-top: 80px;
-  }
-}
-.btn-wrap a {
-  width: 323px;
-  width: 16.8229166667vw;
-  padding: 28px 0px;
-  padding: 1.4583333333vw 0vw;
-  font-size: 24px;
-  font-size: 1.25vw;
-  border-radius: 8px;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-@media (min-width: 1920px) {
-  .btn-wrap a {
-    width: 323px;
-  }
-}
-@media (min-width: 1920px) {
-  .btn-wrap a {
-    padding: 28px 0px;
-  }
-}
-@media (min-width: 1920px) {
-  .btn-wrap a {
-    font-size: 24px;
-  }
-}
-.btn-wrap a:last-child {
-  margin-left: 20px;
-  margin-left: 1.0416666667vw;
-}
-@media (min-width: 1920px) {
-  .btn-wrap a:last-child {
-    margin-left: 20px;
-  }
-}
-.btn-wrap a.type1 {
-  color: #000;
-  outline: 1px solid #383838;
-}
-.btn-wrap a.type1:hover {
-  background-color: #f1f1f1;
-}
-.btn-wrap a.type2 {
-  color: #fff;
-  background-color: #222;
-}
-.btn-wrap a.type2:hover {
-  background-color: #383838;
-}
-.btn-wrap a.type3 {
-  color: #fff;
-  background-color: #E30D3F;
-}
-.btn-wrap a.type3:hover {
-  background-color: #D00D3B;
-}
-
 /*contact*/
 .contact-wrap .inner {
   background: url(../images/map.png) center no-repeat;
@@ -2929,6 +2856,10 @@ html.bg-black {
 @media screen and (max-width: 767px) {
   .main-indicator-wrap {
     display: none;
+  }
+  .main .panel {
+    opacity: 1;
+    visibility: visible;
   }
   .pjt-con-wrap .btn-pjt-next {
     position: relative;
@@ -3313,6 +3244,19 @@ html.bg-black {
   }
 }
 @media screen and (max-width: 767px) {
+  .pjt-con-wrap.woori-open .bg-area {
+    display: none;
+  }
+  .pjt-con-wrap.woori-open .pjt-top-full {
+    background: url("../images/bg_wooriopen_mo.jpg") center no-repeat;
+    background-size: cover;
+  }
+  .pjt-con-wrap.woori-open .pjt-top-full .pjt-title {
+    margin-top: 0;
+  }
+  .pjt-con-wrap.woori-open .pjt-top-full .pin-spacer {
+    display: none;
+  }
   .pjt-con-wrap.woori-open .pjt-con {
     position: relative;
     padding: 240px 80px 200px;
@@ -3453,10 +3397,12 @@ html.bg-black {
 }
 @media screen and (max-width: 767px) {
   .pjt-con-wrap.woori-certi .pjt-top-full {
+    background: url("../images/bg_wooricerti_mo.jpg") center no-repeat;
+    background-size: cover;
+    padding: 0;
     padding-top: 504px;
     padding-top: 32.8552803129vw;
-    padding-bottom: 1496px;
-    padding-bottom: 97.5228161669vw;
+    padding-bottom: 0;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -3465,10 +3411,16 @@ html.bg-black {
     padding-top: 32.8552803129vw;
   }
 }
+@media screen and (max-width: 767px) {
+  .pjt-con-wrap.woori-certi .pjt-top-full .pjt-title {
+    padding: 0px 80px;
+    padding: 0vw 5.2151238592vw;
+  }
+}
 @media screen and (max-width: 767px) and (max-width: 767px) {
-  .pjt-con-wrap.woori-certi .pjt-top-full {
-    padding-bottom: 748px;
-    padding-bottom: 97.5228161669vw;
+  .pjt-con-wrap.woori-certi .pjt-top-full .pjt-title {
+    padding: 0px 40px;
+    padding: 0vw 5.2151238592vw;
   }
 }
 @media screen and (max-width: 767px) {

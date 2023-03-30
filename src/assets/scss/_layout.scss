@@ -1,35 +1,6 @@
-html {
-    transition:background .5s;
-    &.bg-black {
-        background:#000;
-    }
-}
-
-.mt160 {
-    @include vw-convert-pc(margin-top, 160);
-}
-
 .wrap {
     position: relative;
-}
-
-.btn-top {
-	display: none;
-	position: fixed;
-	bottom: 40px;
-	right: 70px;
-	z-index:100;
-    width:48px;
-    height:48px;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	padding: 12px;
-	border-radius: 50%;
-	background-color: #ddd;
-    &:hover {
-        background-color: #d0d0d0;
-    }
+    overflow-x:hidden;
 }
 
 .main-indicator-wrap {
@@ -98,7 +69,8 @@ html {
         }
     }
 }
-.panel {
+
+.main .panel {
     // display:none;
     opacity:0;
     visibility:hidden;
@@ -803,57 +775,6 @@ html {
     }
 }
 
-// button
-.btn-wrap {
-    @include vw-convert-pc(margin-top, 80);
-    display: flex;
-    justify-content: left;
-    align-items: center;
-
-    a {
-        @include vw-convert-pc(width, 323);
-        @include vw-convert-pc(padding, 28 0);
-        // height: 4.16vh;
-        @include vw-font-size-pc(24);
-        border-radius: 8px;
-        font-weight: 500;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    a:last-child {
-        @include vw-convert-pc(margin-left, 20);
-    }
-
-    a.type1 {
-        color: #000;
-        outline: 1px solid #383838;
-    }
-
-    a.type1:hover {
-        background-color: #f1f1f1;
-    }
-
-    a.type2 {
-        color: #fff;
-        background-color: #222;
-    }
-
-    a.type2:hover {
-        background-color: #383838;
-    }
-
-    a.type3 {
-        color: #fff;
-        background-color: $primary;
-    }
-
-    a.type3:hover {
-        background-color: #D00D3B;
-    }
-}
-
 /*contact*/
 .contact-wrap {
     .inner {
@@ -1050,6 +971,13 @@ html {
         display: none;
     }
 
+    .main {
+        .panel {
+            opacity:1;
+            visibility: visible;
+        }
+    }
+
     .pjt-con-wrap {
         .btn-pjt-next{
             position:relative;
@@ -1222,6 +1150,19 @@ html {
         }
 
         &.woori-open {
+            .bg-area {
+                display:none;
+            }
+            .pjt-top-full {
+                background: url('../images/bg_wooriopen_mo.jpg') center no-repeat;
+                background-size: cover;
+                .pjt-title {
+                    margin-top:0;
+                }
+                .pin-spacer {
+                    display:none;
+                }
+            }
             .pjt-con {
                 position: relative;
                 @include vw-convert-mo(padding, 120 40 100);
@@ -1286,9 +1227,15 @@ html {
 
         &.woori-certi {
             .pjt-top-full {
+                background: url('../images/bg_wooricerti_mo.jpg') center no-repeat;
+                background-size: cover;
                 // height:100vh;
+                padding: 0;
                 @include vw-convert-mo(padding-top, 252);
-                @include vw-convert-mo(padding-bottom, 748);
+                padding-bottom:0;
+                .pjt-title {
+                    @include vw-convert-mo(padding, 0 40);
+                }
             }
 
             .pjt-con {

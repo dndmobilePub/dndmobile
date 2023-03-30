@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="wrap">
+    <div class="wrap main">
 
         <!-- header -->
 <header>
@@ -722,6 +722,9 @@
                 스스로의 긍정적 경험을 제공합니다.
             </p>
         </div>
+        <div class="pjt-img-wrap hide-pc gs-up">
+            <img src="../assets/images/bg_wooricerti_phone_mo.png" alt="우리은행 사설인증 이미지" class="">
+        </div>
     </div>
 
     <div class="pjt-con">
@@ -781,8 +784,12 @@
         <script>
             gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-            let links = gsap.utils.toArray(".main-indicator-wrap a");
-            let panels = gsap.utils.toArray(".panel");
+            //responsive
+            let mm = gsap.matchMedia();
+
+            mm.add("(min-width: 800px)", () => {
+                let links = gsap.utils.toArray(".main-indicator-wrap a");
+            let panels = gsap.utils.toArray(".main .panel");
             links.forEach(a => {
                 let element = document.querySelector(a.getAttribute("href")),
                     linkST = ScrollTrigger.create({
@@ -837,6 +844,8 @@
                     document.querySelector("html").classList.remove('bg-black')
                 }
             }
+            });
+            
         </script>
 
     </div>

@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="wrap">
+    <div class="wrap main">
 
         @@include('./include/header.html') 
 
@@ -85,8 +85,12 @@
         <script>
             gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-            let links = gsap.utils.toArray(".main-indicator-wrap a");
-            let panels = gsap.utils.toArray(".panel");
+            //responsive
+            let mm = gsap.matchMedia();
+
+            mm.add("(min-width: 800px)", () => {
+                let links = gsap.utils.toArray(".main-indicator-wrap a");
+            let panels = gsap.utils.toArray(".main .panel");
             links.forEach(a => {
                 let element = document.querySelector(a.getAttribute("href")),
                     linkST = ScrollTrigger.create({
@@ -141,6 +145,8 @@
                     document.querySelector("html").classList.remove('bg-black')
                 }
             }
+            });
+            
         </script>
 
     </div>
