@@ -2565,6 +2565,77 @@ button.swiper-pagination-bullet {
   background-size: contain;
 }
 
+.btn-wrap {
+  margin-top: 80px;
+  margin-top: 4.1666666667vw;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+@media (min-width: 1920px) {
+  .btn-wrap {
+    margin-top: 80px;
+  }
+}
+.btn-wrap a {
+  width: 323px;
+  width: 16.8229166667vw;
+  padding: 28px 0px;
+  padding: 1.4583333333vw 0vw;
+  font-size: 24px;
+  font-size: 1.25vw;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1920px) {
+  .btn-wrap a {
+    width: 323px;
+  }
+}
+@media (min-width: 1920px) {
+  .btn-wrap a {
+    padding: 28px 0px;
+  }
+}
+@media (min-width: 1920px) {
+  .btn-wrap a {
+    font-size: 24px;
+  }
+}
+.btn-wrap a:last-child {
+  margin-left: 20px;
+  margin-left: 1.0416666667vw;
+}
+@media (min-width: 1920px) {
+  .btn-wrap a:last-child {
+    margin-left: 20px;
+  }
+}
+.btn-wrap a.type1 {
+  color: #000;
+  outline: 1px solid #383838;
+}
+.btn-wrap a.type1:hover {
+  background-color: #f1f1f1;
+}
+.btn-wrap a.type2 {
+  color: #fff;
+  background-color: #222;
+}
+.btn-wrap a.type2:hover {
+  background-color: #383838;
+}
+.btn-wrap a.type3 {
+  color: #fff;
+  background-color: #E30D3F;
+}
+.btn-wrap a.type3:hover {
+  background-color: #D00D3B;
+}
+
 /*contact*/
 .contact-wrap .inner {
   background: url(../images/map.png) center no-repeat;

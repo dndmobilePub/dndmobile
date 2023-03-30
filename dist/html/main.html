@@ -230,7 +230,7 @@
 			</ul>
 		</div>
 	</div>
-</section> 
+</section>
 
         <section class="main-indicator-wrap">
             <div>
@@ -270,7 +270,6 @@
                 </a>
             </div>
         </section>
-
 
         <section class="panel" id="one">
             <section class="pjt-con-wrap kb">
@@ -779,17 +778,11 @@
       }
    </script>
 
- <!--// footer --> 
+ <!--// footer -->
 
         <script>
             gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-            //responsive
-            let mm = gsap.matchMedia();
-
-            mm.add("(min-width: 800px)", () => {
-                let links = gsap.utils.toArray(".main-indicator-wrap a");
-            let panels = gsap.utils.toArray(".main .panel");
+            let links = gsap.utils.toArray(".main-indicator-wrap a");
             links.forEach(a => {
                 let element = document.querySelector(a.getAttribute("href")),
                     linkST = ScrollTrigger.create({
@@ -808,33 +801,11 @@
                 });
             });
 
-            panels.forEach((panel, i) => {
-                ScrollTrigger.create({
-                    trigger: panel,
-                    start: "top bottom",
-                    end: "bottom bottom",
-                    scrub: true,
-                    onEnter: () => {
-                        panels.forEach((e) => {
-                            e.classList.remove("active");
-                        });
-                        panels[i].classList.add("active");
-                    },
-                    onEnterBack: () => {
-                        panels.forEach((e) => {
-                            e.classList.remove("active");
-                        });
-                        panels[i].classList.add("active");
-                    }
-                });
-            });
-            
-
             function setActive(link) {
                 links.forEach(el => el.classList.remove("active"));
                 link.classList.add("active");
-                
-                if(link.classList.contains("indi-white")) {
+
+                if (link.classList.contains("indi-white")) {
                     document.querySelector(".main-indicator-wrap").classList.add('white')
                     document.querySelector(".menu-toggle").classList.add('white')
                     document.querySelector("html").classList.add('bg-black')
@@ -844,8 +815,33 @@
                     document.querySelector("html").classList.remove('bg-black')
                 }
             }
+
+            //responsive
+            let mm = gsap.matchMedia();
+            mm.add("(min-width: 800px)", () => {
+                let panels = gsap.utils.toArray(".main .panel");
+                panels.forEach((panel, i) => {
+                    ScrollTrigger.create({
+                        trigger: panel,
+                        start: "top bottom",
+                        end: "bottom bottom",
+                        scrub: true,
+                        onEnter: () => {
+                            panels.forEach((e) => {
+                                e.classList.remove("active");
+                            });
+                            panels[i].classList.add("active");
+                        },
+                        onEnterBack: () => {
+                            panels.forEach((e) => {
+                                e.classList.remove("active");
+                            });
+                            panels[i].classList.add("active");
+                        }
+                    });
+                });
             });
-            
+
         </script>
 
     </div>

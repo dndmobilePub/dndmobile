@@ -775,6 +775,57 @@
     }
 }
 
+// button
+.btn-wrap {
+    @include vw-convert-pc(margin-top, 80);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    a {
+        @include vw-convert-pc(width, 323);
+        @include vw-convert-pc(padding, 28 0);
+        // height: 4.16vh;
+        @include vw-font-size-pc(24);
+        border-radius: 8px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a:last-child {
+        @include vw-convert-pc(margin-left, 20);
+    }
+
+    a.type1 {
+        color: #000;
+        outline: 1px solid #383838;
+    }
+
+    a.type1:hover {
+        background-color: #f1f1f1;
+    }
+
+    a.type2 {
+        color: #fff;
+        background-color: #222;
+    }
+
+    a.type2:hover {
+        background-color: #383838;
+    }
+
+    a.type3 {
+        color: #fff;
+        background-color: $primary;
+    }
+
+    a.type3:hover {
+        background-color: #D00D3B;
+    }
+}
+
 /*contact*/
 .contact-wrap {
     .inner {

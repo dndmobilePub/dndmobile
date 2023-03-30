@@ -1,17 +1,5 @@
 /**
  * ==============================+
- * scrollSmooth
- * ==============================+
- */
-
-// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-// ScrollSmoother.create({
-//   smooth: 1,
-//   effects: true,
-// });
-
-/**
- * ==============================+
  * 탭
  * ==============================+
  */
@@ -131,28 +119,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
-});
-
-
-
-/**
- * ==============================+
- * 프로젝트 스와이프
- * ==============================+
- */
-
-new Swiper('.project-swiper', {
-  slidesPerView: 3,
-  spaceBetween: 110,
-  breakpoints: {
-    768: {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop:true,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2000,
-      },
-    }
-  },
 });

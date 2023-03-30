@@ -502,6 +502,23 @@
         </section>
         @@include('./include/footer.html')
     </div>
+    <script>
+        new Swiper('.project-swiper', {
+            slidesPerView: 3,
+            spaceBetween: 110,
+            breakpoints: {
+                768: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop:true,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2000,
+                },
+                }
+            },
+        });
+    </script>
 </body>
 
 </html>
