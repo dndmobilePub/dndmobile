@@ -363,7 +363,7 @@ header {
 }
 
 .footer {
-	@include vw-convert-pc(padding, 80);
+	padding: 80px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -404,7 +404,7 @@ header {
 	display: none;
 	position: fixed;
 	bottom: 40px;
-	right: 70px;
+	right: 80px;
 	z-index:100;
     width:48px;
     height:48px;
@@ -423,8 +423,8 @@ header {
 
 @media screen and (max-width:767px) {
 	.menu-toggle {
-		top: 30px;
-		right: 40px;
+		top: 57px;
+		right: 18px;
 	}
 
 	header {
@@ -454,8 +454,8 @@ header {
 
 			&--footer {
 				position: absolute;
-				left: 40px;
-				top: 35px;
+				left: 20px;
+				top: 57px;
 				z-index: 1002;
 
 				.logo {
@@ -506,7 +506,6 @@ header {
 
 			nav {
 
-				// padding-top: 35vw;
 				.main {
 					&-menu {
 						li {
@@ -539,9 +538,9 @@ header {
 	}
 
 	.footer {
-		@include vw-convert-mo(margin-top, 100);
 		flex-direction: column;
 		align-items: flex-start;
+		padding: 40px 20px;
 
 		p {
 			@include vw-font-size-mo(40);
@@ -553,16 +552,16 @@ header {
 				@include vw-font-size-mo(28);
 				font-weight:300;
 				line-height:1.5;
-			}
-
-			li:first-child {
-				@include vw-convert-mo(margin-top, 60);
-			}
-
-			li:last-child {
-				@include vw-convert-mo(margin-top, 40);
-
+				&:first-child {
+					@include vw-convert-mo(margin-top, 60);
+				}
+				&:last-child {
+					@include vw-convert-mo(margin-top, 40);
+				}
 			}
 		}
+	}
+	.btn-top {
+		right: 20px;
 	}
 }
