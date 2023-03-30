@@ -1,16 +1,24 @@
 <section class="pjt-con-wrap woori-open">
     <div class="pjt-top-full">
+        <div class="bg-area">
+            <div class="image before-image">
+                <img src="../assets/images/bg_wooriopen.jpg" alt="before">
+            </div>
+            <div class="image after-image">
+                <img src="../assets/images/bg_wooriopen_after.png" alt="after">
+            </div>
+        </div>
         <div class="pjt-title center white">
-            <p class="tit gs-up">
+            <p class="tit">
                 <span>우리은행</span> <br class="hide-pc">
                 오픈뱅킹 시스템
             </p>
-            <p class="desc gs-up">
+            <p class="desc">
                 우리은행의 브랜드 색상을 적용하고 고해상도의 깔끔한 이미지와 아이콘을 배치해 <br class="hide-mobile">모던한 분위기의 디자인을 적용했습니다.
             </p>
         </div>
 
-        <div class="pjt-top-img gs-up">
+        <div class="pjt-top-img">
             <img src="../assets/images/img_wooriopen_splash.png" alt="우리은행 오픈뱅킹 시스템 이미지" class="">
         </div>
     </div>
@@ -24,22 +32,40 @@
             </p>
         </div>
         <div class="phone-layout bg">
-            <div class="gs-up gs-left delay-1"><img src="../assets/images/img_wooriopen01.png" alt=""
-                    class="pjt-img"></div>
+            <div class="gs-up gs-left delay-1"><img src="../assets/images/img_wooriopen01.png" alt="" class="pjt-img">
+            </div>
         </div>
 
         <div class="phone-layout">
-            <div class="gs-up gs-right delay-1"><img src="../assets/images/img_wooriopen02.png" alt=""
-                    class="pjt-img"></div>
-            <div class="gs-up gs-right delay-2"><img src="../assets/images/img_wooriopen03.png" alt=""
-                    class="pjt-img"></div>
+            <div class="gs-up gs-right delay-1"><img src="../assets/images/img_wooriopen02.png" alt="" class="pjt-img">
+            </div>
+            <div class="gs-up gs-right delay-2"><img src="../assets/images/img_wooriopen03.png" alt="" class="pjt-img">
+            </div>
             <div class="gs-up gs-right delay-3 hide-mobile"><img src="../assets/images/img_wooriopen04.png" alt=""
                     class="pjt-img"></div>
         </div>
     </div>
-    <div class="hide-pc">
+    <!-- <div class="hide-pc">
         <a href="./project_woorimy.html" class="btn-pjt-next">
             <p>NEXT</p>
         </a>
-    </div>
+    </div> -->
 </section>
+
+<script>
+    gsap.utils.toArray(".woori-open .bg-area").forEach(section => {
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "center center",
+                end: () => "+=" + section.offsetWidth,
+                scrub: true,
+                pin: true,
+                anticipatePin: 1
+            },
+            defaults: { ease: "none" }
+        });
+        tl.fromTo(section.querySelector(".after-image"), { xPercent: 100, x: 0 }, { xPercent: 0 })
+            .fromTo(section.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
+    });
+</script>

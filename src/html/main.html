@@ -134,9 +134,11 @@
                 if(link.classList.contains("indi-white")) {
                     document.querySelector(".main-indicator-wrap").classList.add('white')
                     document.querySelector(".menu-toggle").classList.add('white')
+                    document.querySelector("html").classList.add('bg-black')
                 } else {
                     document.querySelector(".main-indicator-wrap").classList.remove('white')
                     document.querySelector(".menu-toggle").classList.remove('white')
+                    document.querySelector("html").classList.remove('bg-black')
                 }
             }
         </script>
