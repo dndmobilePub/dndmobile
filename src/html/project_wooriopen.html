@@ -53,19 +53,19 @@
 </section>
 
 <script>
-    gsap.utils.toArray(".woori-open .bg-area").forEach(section => {
-        let tl = gsap.timeline({
+    gsap.utils.toArray(".woori-open .bg-area").forEach(section2 => {
+        let tl2 = gsap.timeline({
             scrollTrigger: {
-                trigger: section,
+                trigger: section2,
                 start: "center center",
-                end: () => "+=" + section.offsetWidth,
+                end: () => "+=" + section2.offsetWidth,
                 scrub: true,
                 pin: true,
                 anticipatePin: 1
             },
             defaults: { ease: "none" }
         });
-        tl.fromTo(section.querySelector(".after-image"), { xPercent: 100, x: 0 }, { xPercent: 0 })
-            .fromTo(section.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
+        tl2.fromTo(section2.querySelector(".after-image"), { xPercent: 100, x: 0 }, { xPercent: 0 })
+            .fromTo(section2.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
     });
 </script>

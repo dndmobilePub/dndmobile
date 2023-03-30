@@ -11,6 +11,8 @@
     <script src="../../dist/assets/js/swiper.min.js"></script>
     <script src="../../dist/assets/js/gsap.min.js"></script>
     <script src="../../dist/assets/js/ScrollTrigger.min.js"></script>
+    <script src="../../dist/assets/js/ScrollSmoother.min.js"></script>
+
     <script src="../../dist/assets/js/ScrollToPlugin.min.js"></script>
     <script src="../../dist/assets/js/common.js" defer></script>
     <script src="../../dist/assets/js/ui.js" defer></script>
@@ -60,26 +62,29 @@
             </div>
         </section>
 
-        <section class="panel" id="one">
-            @@include('./project_kb.html')
-        </section>
-        <section class="panel" id="two">
-            @@include('./project_sc.html')
-        </section>
-        <section class="panel" id="three">
-            @@include('./project_cj.html')
-        </section>
-        <section class="panel" id="four">
-            @@include('./project_wooriopen.html')
-        </section>
-        <section class="panel" id="five">
-            @@include('./project_woorimy.html')
-        </section>
-        <section class="panel" id="six">
-            @@include('./project_wooricerti.html')
-        </section>
-
-        @@include('./include/footer.html')
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <section class="panel" id="one">
+                    @@include('./project_kb.html')
+                </section>
+                <section class="panel" id="two">
+                    @@include('./project_sc.html')
+                </section>
+                <section class="panel" id="three">
+                    @@include('./project_cj.html')
+                </section>
+                <section class="panel" id="four">
+                    @@include('./project_wooriopen.html')
+                </section>
+                <section class="panel" id="five">
+                    @@include('./project_woorimy.html')
+                </section>
+                <section class="panel" id="six">
+                    @@include('./project_wooricerti.html')
+                </section>
+                @@include('./include/footer.html')
+            </div>
+        </div>
     </div>
 </body>
 
@@ -126,10 +131,11 @@
         panels.forEach((panel, i) => {
             ScrollTrigger.create({
                 trigger: panel,
-                start: "top bottom",
-                // end: "bottom bottom",
-                end: () => "+=" + panel.offsetHeight,
+                start: "top center",
+                end: "bottom bottom",
+                // end: () => "+=" + panel.offsetHeight,
                 scrub: true,
+                // markers: true,
                 onEnter: () => {
                     panels.forEach((e) => {
                         e.classList.remove("active");

@@ -96,7 +96,7 @@
     .pjt-top-full {
         display: block;
         height: auto;
-        @include vw-convert-pc(padding-top, 250);
+        // @include vw-convert-pc(padding-top, 250);
 
         .pjt-top-img {
             @include vw-convert-pc(width, 1263);
@@ -705,7 +705,7 @@
     .accordion {
         background: url(../images/icon_plus.png) calc(100% - 40px) 50% no-repeat;
         background-size: 30px;
-        cursor: pointer;
+        cursor: none;
         @include vw-convert-pc(padding, 50 40);
         @include vw-font-size-pc(48);
         font-weight: 700;

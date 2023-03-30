@@ -1292,13 +1292,6 @@ button.swiper-pagination-bullet {
 .pjt-con-wrap .pjt-top-full {
   display: block;
   height: auto;
-  padding-top: 250px;
-  padding-top: 13.0208333333vw;
-}
-@media (min-width: 1920px) {
-  .pjt-con-wrap .pjt-top-full {
-    padding-top: 250px;
-  }
 }
 .pjt-con-wrap .pjt-top-full .pjt-top-img {
   width: 1263px;
@@ -2426,7 +2419,7 @@ button.swiper-pagination-bullet {
 .accordion-wrap .accordion {
   background: url(../images/icon_plus.png) calc(100% - 40px) 50% no-repeat;
   background-size: 30px;
-  cursor: pointer;
+  cursor: none;
   padding: 50px 40px;
   padding: 2.6041666667vw 2.0833333333vw;
   font-size: 48px;

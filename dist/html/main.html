@@ -11,6 +11,8 @@
     <script src="../../dist/assets/js/swiper.min.js"></script>
     <script src="../../dist/assets/js/gsap.min.js"></script>
     <script src="../../dist/assets/js/ScrollTrigger.min.js"></script>
+    <script src="../../dist/assets/js/ScrollSmoother.min.js"></script>
+
     <script src="../../dist/assets/js/ScrollToPlugin.min.js"></script>
     <script src="../../dist/assets/js/common.js" defer></script>
     <script src="../../dist/assets/js/ui.js" defer></script>
@@ -232,6 +234,28 @@
 	</div>
 </section>
 
+<button onclick="topFunction()" id="topBtn" class="btn-top">
+	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+	   <path d="M12 20.25V3.75" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+	   <path d="M5.25 10.5L12 3.75L18.75 10.5" stroke="white" stroke-width="1.8" stroke-linecap="round"
+		  stroke-linejoin="round" />
+	</svg>
+ </button>
+ <script>
+	let mybutton = document.getElementById("topBtn");
+	window.onscroll = function () { scrollFunction() };
+	function scrollFunction() {
+	   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		  mybutton.style.display = "block";
+	   } else {
+		  mybutton.style.display = "none";
+	   }
+	}
+	function topFunction() {
+	   window.scrollTo({ top: 0, behavior: "smooth" });
+	}
+ </script>
+
         <section class="main-indicator-wrap">
             <div>
                 <a href="#one" class="active">
@@ -271,8 +295,10 @@
             </div>
         </section>
 
-        <section class="panel" id="one">
-            <section class="pjt-con-wrap kb">
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <section class="panel" id="one">
+                    <section class="pjt-con-wrap kb">
     <div class="pjt-top">
         <div class="pjt-title">
             <p class="tit gs-up">
@@ -395,10 +421,9 @@
     });
 
 </script>
-        </section>
-        <section class="panel" id="two">
-            <section class="pjt-con-wrap sc">
-
+                </section>
+                <section class="panel" id="two">
+                    <section class="pjt-con-wrap sc">
     <div class="pjt-top-full">
         <div class="bg-area">
             <div class="image before-image">
@@ -465,15 +490,16 @@
 
 
 <script>
-    gsap.utils.toArray(".bg-area").forEach(section => {
+    gsap.utils.toArray(".sc .bg-area").forEach(section => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
-                start: "center center",
+                start: "top top",
                 end: () => "+=" + section.offsetWidth,
                 scrub: true,
                 pin: true,
-                anticipatePin: 1
+                anticipatePin: 1,
+                // markers: true,
             },
             defaults: { ease: "none" }
         });
@@ -481,9 +507,9 @@
             .fromTo(section.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
     });
 </script>
-        </section>
-        <section class="panel" id="three">
-            <section class="pjt-con-wrap cj">
+                </section>
+                <section class="panel" id="three">
+                    <section class="pjt-con-wrap cj">
     <div class="pjt-top">
         <div class="pjt-title">
             <p class="tit gs-up">
@@ -533,9 +559,9 @@
         </a>
     </div> -->
 </section>
-        </section>
-        <section class="panel" id="four">
-            <section class="pjt-con-wrap woori-open">
+                </section>
+                <section class="panel" id="four">
+                    <section class="pjt-con-wrap woori-open">
     <div class="pjt-top-full">
         <div class="bg-area">
             <div class="image before-image">
@@ -590,25 +616,25 @@
 </section>
 
 <script>
-    gsap.utils.toArray(".woori-open .bg-area").forEach(section => {
-        let tl = gsap.timeline({
+    gsap.utils.toArray(".woori-open .bg-area").forEach(section2 => {
+        let tl2 = gsap.timeline({
             scrollTrigger: {
-                trigger: section,
+                trigger: section2,
                 start: "center center",
-                end: () => "+=" + section.offsetWidth,
+                end: () => "+=" + section2.offsetWidth,
                 scrub: true,
                 pin: true,
                 anticipatePin: 1
             },
             defaults: { ease: "none" }
         });
-        tl.fromTo(section.querySelector(".after-image"), { xPercent: 100, x: 0 }, { xPercent: 0 })
-            .fromTo(section.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
+        tl2.fromTo(section2.querySelector(".after-image"), { xPercent: 100, x: 0 }, { xPercent: 0 })
+            .fromTo(section2.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
     });
 </script>
-        </section>
-        <section class="panel" id="five">
-            <section class="pjt-con-wrap woori-my">
+                </section>
+                <section class="panel" id="five">
+                    <section class="pjt-con-wrap woori-my">
     <div class="pjt-top">
         <div class="pjt-title">
             <p class="tit gs-up">
@@ -707,9 +733,9 @@
         </a>
     </div> -->
 </section>
-        </section>
-        <section class="panel" id="six">
-            <section class="pjt-con-wrap woori-certi">
+                </section>
+                <section class="panel" id="six">
+                    <section class="pjt-con-wrap woori-certi">
     <div class="pjt-top-full">
         <div class="pjt-title center white">
             <p class="tit gs-up">
@@ -744,9 +770,8 @@
         </div>
     </div>
 </section>
-        </section>
-
-           <!-- footer -->
+                </section>
+                   <!-- footer -->
    <div class="footer">
       <p>고객의 생각을 디자인합니다.</p>
       <ul>
@@ -756,29 +781,9 @@
       <li><strong>(2022), ALL RIGHTS RESERVED.</strong></li>
       </ul>
    </div>
-   <button onclick="topFunction()" id="topBtn" class="btn-top">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-         <path d="M12 20.25V3.75" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-         <path d="M5.25 10.5L12 3.75L18.75 10.5" stroke="white" stroke-width="1.8" stroke-linecap="round"
-            stroke-linejoin="round" />
-      </svg>
-   </button>
-   <script>
-      let mybutton = document.getElementById("topBtn");
-      window.onscroll = function () { scrollFunction() };
-      function scrollFunction() {
-         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-         } else {
-            mybutton.style.display = "none";
-         }
-      }
-      function topFunction() {
-         window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-   </script>
-
  <!--// footer -->
+            </div>
+        </div>
     </div>
 </body>
 
@@ -825,10 +830,11 @@
         panels.forEach((panel, i) => {
             ScrollTrigger.create({
                 trigger: panel,
-                start: "top bottom",
-                // end: "bottom bottom",
-                end: () => "+=" + panel.offsetHeight,
+                start: "top center",
+                end: "bottom bottom",
+                // end: () => "+=" + panel.offsetHeight,
                 scrub: true,
+                // markers: true,
                 onEnter: () => {
                     panels.forEach((e) => {
                         e.classList.remove("active");

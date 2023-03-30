@@ -1,5 +1,4 @@
 <section class="pjt-con-wrap sc">
-
     <div class="pjt-top-full">
         <div class="bg-area">
             <div class="image before-image">
@@ -66,15 +65,16 @@
 
 
 <script>
-    gsap.utils.toArray(".bg-area").forEach(section => {
+    gsap.utils.toArray(".sc .bg-area").forEach(section => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
-                start: "center center",
+                start: "top top",
                 end: () => "+=" + section.offsetWidth,
                 scrub: true,
                 pin: true,
-                anticipatePin: 1
+                anticipatePin: 1,
+                // markers: true,
             },
             defaults: { ease: "none" }
         });
