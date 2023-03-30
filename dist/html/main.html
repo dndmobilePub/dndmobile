@@ -27,7 +27,7 @@
 				<i class="ico">
 					<img src="../assets/images/logo_black_large.png" alt="">
 				</i>
-				<a href="main.html">
+				<a href="https://dndmobile.co.kr/">
 					디앤디모바일
 				</a>
 			</h1>
@@ -35,7 +35,7 @@
 		<div class="top-nav--container hide-mobile">
 			<ul class="top-nav">
 				<li>
-					<a href="./about.html">
+					<a href="../assets/download/dndmobile_company_Brochure.pdf" target="_blank">
 						<i class="ico">
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="https://blog.naver.com/dndmobile/223007997586">
+					<a href="https://blog.naver.com/dndmobile" target="_blank">
 						<i class="ico">
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -85,7 +85,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="#">
+					<a href="https://blog.naver.com/dndmobile" target="_blank">
 						<i class="ico">
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -165,7 +165,7 @@
 			<span class="line"></span>
 			<ul class="social-links">
 				<li>
-					<a href="http://">
+					<a href="../assets/download/dndmobile_company_Brochure.pdf" target="_blank">
 						<i class="ico">
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="width"
 								xmlns="http://www.w3.org/2000/svg">
@@ -189,7 +189,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="http://">
+					<a href="https://blog.naver.com/dndmobile" target="_blank">
 						<i class="ico">
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -215,7 +215,7 @@
 					</a>
 				</li>
 				<li>
-					<a href="http://">
+					<a href="https://blog.naver.com/dndmobile" target="_blank">
 						<i class="ico">
 							<svg width="26" height="29" viewBox="0 0 26 29" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
@@ -408,7 +408,7 @@
                 <img src="../assets/images/bg_sc_after.png" alt="after">
             </div>
         </div>
-        <div class="pjt-title center white">
+        <div class="pjt-title center white gs-up gs-left">
             <p class="tit">
                 <span>SC제일은행</span> <br class="hide-pc">
                 비즈니스 뱅킹
@@ -418,7 +418,7 @@
             </p>
         </div>
 
-        <div class="pjt-top-img">
+        <div class="pjt-top-img gs-up gs-right">
             <img src="../assets/images/img_sc_splash.png" alt="sc제일은행 이미지" class="">
         </div>
         
@@ -434,9 +434,9 @@
             </p>
         </div>
         <div class="phone-layout type02">
-            <div class="gs-up delay-1"><img src="../assets/images/img_sc01.png" alt="" class="pjt-img">
+            <div class="gs-up"><img src="../assets/images/img_sc01.png" alt="" class="pjt-img">
             </div>
-            <div class="gs-up delay-2 mt160"><img src="../assets/images/img_sc02.png" alt="" class="pjt-img"></div>
+            <div class="gs-up delay-1 mt160"><img src="../assets/images/img_sc02.png" alt="" class="pjt-img"></div>
         </div>
 
         <div class="pjt-title type02 white">
@@ -545,7 +545,7 @@
                 <img src="../assets/images/bg_wooriopen_after.png" alt="after">
             </div>
         </div>
-        <div class="pjt-title center white">
+        <div class="pjt-title center white gs-up gs-left">
             <p class="tit">
                 <span>우리은행</span> <br class="hide-pc">
                 오픈뱅킹 시스템
@@ -555,7 +555,7 @@
             </p>
         </div>
 
-        <div class="pjt-top-img">
+        <div class="pjt-top-img gs-up gs-right">
             <img src="../assets/images/img_wooriopen_splash.png" alt="우리은행 오픈뱅킹 시스템 이미지" class="">
         </div>
     </div>
@@ -628,7 +628,7 @@
             </div>
         </div>
 
-        <div class="pjt-top-img">
+        <div class="pjt-top-img gs-up gs-right">
             <div class="bg-area">
                 <img src="../assets/images/img_woorimy_bg.png" alt="">
                 <div class="splash-img">
@@ -779,73 +779,72 @@
    </script>
 
  <!--// footer -->
-
-        <script>
-            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-            let links = gsap.utils.toArray(".main-indicator-wrap a");
-            links.forEach(a => {
-                let element = document.querySelector(a.getAttribute("href")),
-                    linkST = ScrollTrigger.create({
-                        trigger: element,
-                        start: "top top"
-                    });
-                ScrollTrigger.create({
-                    trigger: element,
-                    start: "top center",
-                    end: "bottom center",
-                    onToggle: self => self.isActive && setActive(a)
-                });
-                a.addEventListener("click", e => {
-                    e.preventDefault();
-                    gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
-                });
-            });
-
-            function setActive(link) {
-                links.forEach(el => el.classList.remove("active"));
-                link.classList.add("active");
-
-                if (link.classList.contains("indi-white")) {
-                    document.querySelector(".main-indicator-wrap").classList.add('white')
-                    document.querySelector(".menu-toggle").classList.add('white')
-                    document.querySelector("html").classList.add('bg-black')
-                } else {
-                    document.querySelector(".main-indicator-wrap").classList.remove('white')
-                    document.querySelector(".menu-toggle").classList.remove('white')
-                    document.querySelector("html").classList.remove('bg-black')
-                }
-            }
-
-            //responsive
-            let mm = gsap.matchMedia();
-            mm.add("(min-width: 800px)", () => {
-                let panels = gsap.utils.toArray(".main .panel");
-                panels.forEach((panel, i) => {
-                    ScrollTrigger.create({
-                        trigger: panel,
-                        start: "top bottom",
-                        end: "bottom bottom",
-                        scrub: true,
-                        onEnter: () => {
-                            panels.forEach((e) => {
-                                e.classList.remove("active");
-                            });
-                            panels[i].classList.add("active");
-                        },
-                        onEnterBack: () => {
-                            panels.forEach((e) => {
-                                e.classList.remove("active");
-                            });
-                            panels[i].classList.add("active");
-                        }
-                    });
-                });
-            });
-
-        </script>
-
     </div>
-
 </body>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    let links = gsap.utils.toArray(".main-indicator-wrap a");
+    links.forEach(a => {
+        let element = document.querySelector(a.getAttribute("href")),
+            linkST = ScrollTrigger.create({
+                trigger: element,
+                start: "top top"
+            });
+        ScrollTrigger.create({
+            trigger: element,
+            start: "top center",
+            end: "bottom center",
+            onToggle: self => self.isActive && setActive(a)
+        });
+        a.addEventListener("click", e => {
+            e.preventDefault();
+            gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
+        });
+    });
+
+    function setActive(link) {
+        links.forEach(el => el.classList.remove("active"));
+        link.classList.add("active");
+
+        if (link.classList.contains("indi-white")) {
+            document.querySelector(".main-indicator-wrap").classList.add('white')
+            document.querySelector(".menu-toggle").classList.add('white')
+            document.querySelector("html").classList.add('bg-black')
+        } else {
+            document.querySelector(".main-indicator-wrap").classList.remove('white')
+            document.querySelector(".menu-toggle").classList.remove('white')
+            document.querySelector("html").classList.remove('bg-black')
+        }
+    }
+
+    //responsive
+    let mm = gsap.matchMedia();
+    mm.add("(min-width: 800px)", () => {
+        let panels = gsap.utils.toArray(".main .panel");
+        panels.forEach((panel, i) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top bottom",
+                // end: "bottom bottom",
+                end: () => "+=" + panel.offsetHeight,
+                scrub: true,
+                onEnter: () => {
+                    panels.forEach((e) => {
+                        e.classList.remove("active");
+                    });
+                    panels[i].classList.add("active");
+                },
+                onEnterBack: () => {
+                    panels.forEach((e) => {
+                        e.classList.remove("active");
+                    });
+                    panels[i].classList.add("active");
+                }
+            });
+        });
+    });
+
+</script>
 
 </html>

@@ -41,13 +41,13 @@ for (i = 0; i < acc.length; i++) {
 function animateFrom(elem, direction) {
   direction = direction || 1;
   var x = 0,
-    y = direction * 100,
+    y = direction * 150,
     delay = 0;
   if (elem.classList.contains("gs-left")) {
-    x = -100;
+    x = -150;
     y = 0;
   } else if (elem.classList.contains("gs-right")) {
-    x = 100;
+    x = 150;
     y = 0;
   } else if (elem.classList.contains("gs-opacity")) {
     x = 0;
