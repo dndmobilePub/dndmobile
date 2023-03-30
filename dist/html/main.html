@@ -8,40 +8,17 @@
     <title>DnD모바일입니다.</title>
     <link rel="stylesheet" href="../../dist/assets/css/style.css">
     <script src="../../dist/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="../../dist/assets/js/gsap.min.js" defer></script>
-    <script src="../../dist/assets/js/ScrollTrigger.min.js" defer></script>
-    <script src="../../dist/assets/js/common.js" defer></script>
-    <script src="../../dist/assets/js/ui.js" defer></script>
-</head>
-
-<body>
-    <div class="wrap">
-        
-        <!-- <main class="cover-full">
-            <div class="box"></div>
-            <section></section>
-        </main> -->
-
-
-        <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DnD모바일입니다.</title>
-    <link rel="stylesheet" href="../../dist/assets/css/style.css">
-    <script src="../../dist/assets/js/jquery-3.6.0.min.js"></script>
     <script src="../../dist/assets/js/swiper.min.js"></script>
-    <script src="../../dist/assets/js/gsap.min.js" defer></script>
-    <script src="../../dist/assets/js/ScrollTrigger.min.js" defer></script>
+    <script src="../../dist/assets/js/gsap.min.js"></script>
+    <script src="../../dist/assets/js/ScrollTrigger.min.js"></script>
+    <script src="../../dist/assets/js/ScrollToPlugin.min.js"></script>
     <script src="../../dist/assets/js/common.js" defer></script>
     <script src="../../dist/assets/js/ui.js" defer></script>
 </head>
 
 <body>
     <div class="wrap">
+
         <!-- header -->
 <header>
 	<div class="header--inner">
@@ -78,7 +55,7 @@
 								</defs>
 							</svg>
 						</i>
-						Company Brief
+						<!-- Company Brief -->
 					</a>
 				</li>
 				<li>
@@ -104,7 +81,7 @@
 								</defs>
 							</svg>
 						</i>
-						Instagram
+						<!-- Instagram -->
 					</a>
 				</li>
 				<li>
@@ -124,7 +101,7 @@
 								</defs>
 							</svg>
 						</i>
-						Blog
+						<!-- Blog -->
 					</a>
 				</li>
 			</ul>
@@ -187,19 +164,19 @@
 		<div class="header-nav--footer">
 			<span class="line"></span>
 			<ul class="social-links">
-				<li class="active">
+				<li>
 					<a href="http://">
 						<i class="ico">
-							<svg width="26" height="26" viewBox="0 0 26 26" fill="none"
+							<svg width="26" height="26" viewBox="0 0 26 26" fill="width"
 								xmlns="http://www.w3.org/2000/svg">
 								<g clip-path="url(#clip0_2708_1005)">
 									<path
 										d="M13 2.34299C16.4732 2.34299 16.8809 2.35848 18.2537 2.42041C19.5232 2.47717 20.2096 2.68877 20.6689 2.86939C21.2779 3.10679 21.7114 3.38547 22.1656 3.83962C22.6197 4.29377 22.9036 4.72727 23.1358 5.33625C23.3113 5.79555 23.528 6.48194 23.5848 7.75149C23.6467 9.12426 23.6622 9.53196 23.6622 13.0052C23.6622 16.4784 23.6467 16.8861 23.5848 18.2588C23.528 19.5284 23.3164 20.2148 23.1358 20.6741C22.8984 21.2831 22.6197 21.7166 22.1656 22.1707C21.7114 22.6249 21.2779 22.9087 20.6689 23.1409C20.2096 23.3164 19.5232 23.5331 18.2537 23.5899C16.8809 23.6518 16.4732 23.6673 13 23.6673C9.5268 23.6673 9.1191 23.6518 7.74634 23.5899C6.47678 23.5331 5.7904 23.3216 5.33109 23.1409C4.72212 22.9035 4.28861 22.6249 3.83446 22.1707C3.38031 21.7166 3.09647 21.2831 2.86423 20.6741C2.68877 20.2148 2.47202 19.5284 2.41525 18.2588C2.35332 16.8861 2.33783 16.4784 2.33783 13.0052C2.33783 9.53196 2.35332 9.12426 2.41525 7.75149C2.47202 6.48194 2.68361 5.79555 2.86423 5.33625C3.10163 4.72727 3.38031 4.29377 3.83446 3.83962C4.28861 3.38547 4.72212 3.10163 5.33109 2.86939C5.7904 2.69393 6.47678 2.47717 7.74634 2.42041C9.1191 2.35332 9.53197 2.34299 13 2.34299ZM13 0C9.47004 0 9.02621 0.0154823 7.63796 0.0774117C6.25487 0.139341 5.31045 0.361254 4.48472 0.681223C3.62803 1.01151 2.90552 1.4605 2.18301 2.18301C1.4605 2.90552 1.01667 3.63319 0.681223 4.48472C0.361255 5.31044 0.139341 6.25486 0.0774117 7.64311C0.0154823 9.0262 0 9.47003 0 13C0 16.53 0.0154823 16.9738 0.0774117 18.362C0.139341 19.7451 0.361255 20.6896 0.681223 21.5204C1.01151 22.3771 1.4605 23.0996 2.18301 23.8222C2.90552 24.5447 3.63319 24.9885 4.48472 25.3239C5.31045 25.6439 6.25487 25.8658 7.64312 25.9277C9.03137 25.9897 9.47004 26.0052 13.0052 26.0052C16.5403 26.0052 16.979 25.9897 18.3672 25.9277C19.7503 25.8658 20.6947 25.6439 21.5256 25.3239C22.3823 24.9937 23.1048 24.5447 23.8273 23.8222C24.5498 23.0996 24.9937 22.372 25.3291 21.5204C25.6491 20.6947 25.871 19.7503 25.9329 18.362C25.9949 16.9738 26.0103 16.5351 26.0103 13C26.0103 9.46487 25.9949 9.0262 25.9329 7.63795C25.871 6.25486 25.6491 5.31044 25.3291 4.47956C24.9988 3.62287 24.5498 2.90036 23.8273 2.17785C23.1048 1.45534 22.3772 1.01151 21.5256 0.676062C20.6999 0.356094 19.7555 0.13418 18.3672 0.0722509C16.9738 0.0154823 16.53 0 13 0Z"
-										class="fill-black" />
+										class="fill-white"  fill="white"/>
 									<line x1="9" y1="9" x2="17" y2="9" stroke-width="2" stroke-linecap="round"
-										class="stroke-black" />
+										class="stroke-white" />
 									<line x1="9" y1="15" x2="17" y2="15" stroke-width="2" stroke-linecap="round"
-										class="stroke-black" />
+										class="stroke-white" />
 								</g>
 								<defs>
 									<clipPath id="clip0_2708_1005">
@@ -233,7 +210,8 @@
 									</clipPath>
 								</defs>
 							</svg>
-						</i><span>Instagram</span>
+						</i>
+						<!-- <span>Instagram</span> -->
 					</a>
 				</li>
 				<li>
@@ -246,100 +224,526 @@
 									class="fill-black" />
 							</svg>
 						</i>
-						<span>Blog</span>
+						<!-- <span>Blog</span> -->
 					</a>
 				</li>
 			</ul>
 		</div>
 	</div>
-</section>
+</section> 
+
         <section class="main-indicator-wrap">
-            <ul>
-                <li class="active"><a href="./project_kb.html">KB국민은행</a></li>
-                <li><a href="./project_sc.html">SC제일은행</a></li>
-                <li><a href="./project_cj.html">CJ대한통운</a></li>
-                <li><a href="./project_wooriopen.html">우리은행</a></li>
-                <li><a href="./project_woorimy.html">우리은행</a></li>
-                <li><a href="./project_wooricerti.html">우리은행</a></li>
-            </ul>
-        </section>
-
-        <section class="pjt-con-wrap kb">
-            <div class="pjt-top">
-                <div class="pjt-title">
-                    <p class="tit gs-up">
-                        <span>KB국민은행</span><br>
-                        비대면 마케팅
-                    </p>
-                    <p class="desc gs-up">
-                        이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, 인지성을 고려하여 UX/UI(GUI) 환경을 제공합니다. 고객의 니즈가 반영된 콘텐츠 큐레이션을 통해
-                        긍정적인 경험과
-                        이를 바탕한
-                        지속적인 참여가 가능하도록 합니다.
-                    </p>
-
-                    <div class="tool-list gs-up">
-                        <div><img src="../assets/images/icon_ps.svg" alt=""></div>
-                        <div><img src="../assets/images/icon_ai.svg" alt=""></div>
-                        <div><img src="../assets/images/icon_pigma.svg" alt=""></div>
-                    </div>
-                </div>
-
-                <div class="pjt-top-img">
-                    <div class="swiper-container splash-swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="../assets/images/img_kb_splash01.jpg" alt="kb국민은행 이미지" class="pjt-img">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/images/img_kb_splash02.jpg" alt="kb국민은행 이미지" class="pjt-img">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/images/img_kb_splash03.jpg" alt="kb국민은행 이미지" class="pjt-img">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/images/img_kb_splash04.jpg" alt="kb국민은행 이미지" class="pjt-img">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/images/img_kb_splash05.jpg" alt="kb국민은행 이미지" class="pjt-img">
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="../assets/images/img_kb_splash06.jpg" alt="kb국민은행 이미지" class="pjt-img">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <img src="../assets/images/img_kb_splash.png" alt="kb국민은행 이미지" class="pjt-img gs-up gs-left"> -->
-                    <span class="circle type01 gs-up delay-1"></span>
-                    <span class="circle type02 gs-up delay-2"></span>
-                    <span class="circle type03 gs-up delay-3"></span>
-                </div>
+            <div>
+                <a href="#one" class="active">
+                    <span></span>
+                    <em>KB국민은행</em>
+                </a>
             </div>
-
-            <div class="pjt-con">
-                <div class="pjt-title center">
-                    <p class="tit gs-up">Wallet</p>
-                    <p class="desc gs-up">
-                        이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, 인지성을 고려하여 UX/UI(GUI) 환경을 제공합니다. <br class="hide-mobile">
-                        고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 경험과 이를 바탕한 지속적인 참여가 가능하도록 합니다.
-                    </p>
-                </div>
-                <div class="phone-layout">
-                    <div class="gs-up delay-1"><img src="../assets/images/img_kb01.png " alt="" class="pjt-img">
-                    </div>
-                    <div class="gs-up delay-2"><img src="../assets/images/img_kb02.png" alt="" class="pjt-img">
-                    </div>
-                    <div class="hide-mobile gs-up delay-3"><img src="../assets/images/img_kb03.png" alt=""
-                            class="pjt-img">
-                    </div>
-                </div>
+            <div>
+                <a href="#two" class="indi-white">
+                    <span></span>
+                    <em>SC제일은행</em>
+                </a>
             </div>
-
-            <div class="hide-pc">
-                <a href="./project_sc.html" class="btn-pjt-next">
-                    <p>NEXT</p>
+            <div>
+                <a href="#three">
+                    <span></span>
+                    <em>CJ대한통운</em>
+                </a>
+            </div>
+            <div>
+                <a href="#four" class="indi-white">
+                    <span></span>
+                    <em>우리은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#five">
+                    <span></span>
+                    <em>우리은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#six">
+                    <span></span>
+                    <em>우리은행</em>
                 </a>
             </div>
         </section>
+
+
+        <section class="panel" id="one">
+            <section class="pjt-con-wrap kb">
+    <div class="pjt-top">
+        <div class="pjt-title">
+            <p class="tit gs-up">
+                <span>KB국민은행</span><br>
+                비대면 마케팅
+            </p>
+            <p class="desc gs-up">
+                이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, 인지성을 고려하여 UX/UI(GUI) 환경을 제공합니다. 고객의 니즈가 반영된 콘텐츠 큐레이션을 통해
+                긍정적인 경험과
+                이를 바탕한
+                지속적인 참여가 가능하도록 합니다.
+            </p>
+
+            <div class="tool-list gs-up">
+                <div><img src="../assets/images/icon_ps.svg" alt=""></div>
+                <div><img src="../assets/images/icon_ai.svg" alt=""></div>
+                <div><img src="../assets/images/icon_pigma.svg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="pjt-top-img">
+            <div class="swiper-container splash-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../assets/images/img_kb_splash01.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/images/img_kb_splash02.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/images/img_kb_splash03.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/images/img_kb_splash04.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/images/img_kb_splash05.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../assets/images/img_kb_splash06.jpg" alt="kb국민은행 이미지" class="pjt-img">
+                    </div>
+                </div>
+            </div>
+            <!-- <img src="../assets/images/img_kb_splash.png" alt="kb국민은행 이미지" class="pjt-img gs-up gs-left"> -->
+            <span class="circle type01 gs-up delay-1"></span>
+            <span class="circle type02 gs-up delay-2"></span>
+            <span class="circle type03 gs-up delay-3"></span>
+        </div>
+    </div>
+
+    <div class="pjt-con">
+        <div class="pjt-title center">
+            <p class="tit gs-up">Wallet</p>
+            <p class="desc gs-up">
+                이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, 인지성을 고려하여 UX/UI(GUI) 환경을 제공합니다. <br class="hide-mobile">
+                고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 경험과 이를 바탕한 지속적인 참여가 가능하도록 합니다.
+            </p>
+        </div>
+        <div class="phone-layout">
+            <div class="gs-up gs-left delay-1"><img src="../assets/images/img_kb01.png " alt="" class="pjt-img">
+            </div>
+            <div class="gs-up gs-left delay-2"><img src="../assets/images/img_kb02.png" alt="" class="pjt-img">
+            </div>
+            <div class="hide-mobile gs-up gs-left delay-3"><img src="../assets/images/img_kb03.png" alt="" class="pjt-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="hide-pc">
+        <a href="./project_sc.html" class="btn-pjt-next">
+            <p>NEXT</p>
+        </a>
+    </div> -->
+</section>
+
+
+<script>
+
+
+    /**
+     * ==============================+
+     * 상단 스플래쉬 이미지 스와이프
+     * ==============================+
+     */
+
+    new Swiper('.splash-swiper', {
+        autoplay: {
+            delay: 2000,
+        },
+        speed: 500,
+        loop: true,
+        watchSlidesProgress: true,
+        on: {
+            init: function () {
+                this.slides.css('overflow', 'hidden');
+            },
+            progress: function () {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    var slideProgress = swiper.slides[i].progress;
+                    var innerOffset = swiper.width * 1;
+                    var innerTranslate = slideProgress * innerOffset;
+                    swiper.slides[i].querySelector('img').style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
+                }
+            },
+            touchStart: function () {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = "";
+                }
+            },
+            setTransition: function (speed) {
+                var swiper = this;
+                for (var i = 0; i < swiper.slides.length; i++) {
+                    swiper.slides[i].style.transition = speed + "ms";
+                    swiper.slides[i].querySelector('img').style.transition = speed + "ms";
+                }
+            }
+        }
+    });
+
+</script>
+        </section>
+        <section class="panel" id="two">
+            <section class="pjt-con-wrap sc">
+
+    <div class="pjt-top-full">
+        <div class="bg-area">
+            <div class="image before-image">
+                <img src="../assets/images/bg_sc.jpg" alt="before">
+            </div>
+            <div class="image after-image">
+                <img src="../assets/images/bg_sc_after.png" alt="after">
+            </div>
+        </div>
+        <div class="pjt-title center white">
+            <p class="tit">
+                <span>SC제일은행</span> <br class="hide-pc">
+                비즈니스 뱅킹
+            </p>
+            <p class="desc">
+                단순하게, 명쾌하게, 가치있게 디앤디모바일은 스스로의 긍정적 경험을 제공합니다.
+            </p>
+        </div>
+
+        <div class="pjt-top-img">
+            <img src="../assets/images/img_sc_splash.png" alt="sc제일은행 이미지" class="">
+        </div>
+        
+    </div>
+
+    <div class="pjt-con">
+        <div class="pjt-title center white">
+            <p class="tit gs-up">Design Concept</p>
+            <p class="desc gs-up">
+                기존의 '퍼스트비즈(First Biz)'를 개편한 중소기업 전용 플랫폼인 '비즈니스뱅킹'은 <br class="hide-mobile">
+                고객 편의를 높이기 위해 사용자환경(UI)과 사용자경험(UX)을 대폭 개선하고,<br class="hide-mobile">
+                핵심 서비스들을 이용자 중심으로 전면 개편했습니다.
+            </p>
+        </div>
+        <div class="phone-layout type02">
+            <div class="gs-up delay-1"><img src="../assets/images/img_sc01.png" alt="" class="pjt-img">
+            </div>
+            <div class="gs-up delay-2 mt160"><img src="../assets/images/img_sc02.png" alt="" class="pjt-img"></div>
+        </div>
+
+        <div class="pjt-title type02 white">
+            <p class="tit gs-up">Design Element</p>
+            <p class="desc gs-up">
+                Global SC Group의 UXUI Guide Line을 토대로 직관적인 시인성과 가독성을 위해 새롭게 가이드라인을 정립하여<br class="hide-mobile">
+                Korea SC Business Banking의 브랜딩 Idntity를 확립하는데 주력하였습니다.
+            </p>
+        </div>
+        <div class="phone-layout">
+            <div class="gs-up gs-right delay-1"><img src="../assets/images/img_sc03.png " alt="" class="pjt-img">
+            </div>
+            <div class="gs-up gs-right delay-2"><img src="../assets/images/img_sc04.png" alt="" class="pjt-img">
+            </div>
+            <div class="gs-up gs-right delay-3 hide-mobile"><img src="../assets/images/img_sc05.png" alt=""
+                    class="pjt-img"></div>
+        </div>
+    </div>
+    <!-- <div class="hide-pc">
+        <a href="./project_cj.html" class="btn-pjt-next">
+            <p>NEXT</p>
+        </a>
+    </div> -->
+</section>
+
+
+
+<script>
+    gsap.utils.toArray(".bg-area").forEach(section => {
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "center center",
+                end: () => "+=" + section.offsetWidth,
+                scrub: true,
+                pin: true,
+                anticipatePin: 1
+            },
+            defaults: { ease: "none" }
+        });
+        tl.fromTo(section.querySelector(".after-image"), { xPercent: 100, x: 0 }, { xPercent: 0 })
+            .fromTo(section.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
+    });
+</script>
+        </section>
+        <section class="panel" id="three">
+            <section class="pjt-con-wrap cj">
+    <div class="pjt-top">
+        <div class="pjt-title">
+            <p class="tit gs-up">
+                <span>CJ대한통운</span><br>
+                차세대 택배시스템
+            </p>
+            <p class="desc gs-up">
+                배송과정에 일련의 과정 및 상태를 직관적으로 디자인하고 <br class="hide-mobile">서비스의 질을 높일 수 있도록 시스템을 구성하였습니다.
+            </p>
+            <div class="tool-list gs-up">
+                <div><img src="../assets/images/icon_ps.svg" alt=""></div>
+                <div><img src="../assets/images/icon_ai.svg" alt=""></div>
+                <div><img src="../assets/images/icon_xd.svg" alt=""></div>
+                <div><img src="../assets/images/icon_pigma.svg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="pjt-top-img">
+            <div class="pjt-img01 gs-up gs-left delay-1"><img src="../assets/images/img_cj_splash01.png"
+                    alt="CJ대한통운 이미지" class=""></div>
+            <div class="pjt-img02 gs-up gs-right delay-2"><img src="../assets/images/img_cj_splash02.png"
+                    alt="CJ대한통운 이미지" class=""></div>
+        </div>
+    </div>
+
+    <div class="pjt-con">
+        <div class="pjt-title center white">
+            <p class="tit gs-up">Design Concept </p>
+            <p class="desc gs-up">
+                CJ 대한통운의 일원화된 브랜드 경험을 만드는 것을 목표로 고객 중심의 사용성을 우선으로 하는 UI/UX를 구현했습니다. <br class="hide-mobile">
+                그룹 가이드라인을 준수한 일관된 브랜드 아이덴티티를 제공하고 정서적 몰입과 공감을 이끌어 내는 디자인으로 개선했습니다.
+            </p>
+        </div>
+        <div class="icon gs-up"><img src="../assets/images/img_cj_icon.png" alt=""></div>
+        <div class="phone-layout">
+            <div class="gs-up gs-left delay-1"><img src="../assets/images/img_cj01.png" alt="" class="pjt-img">
+            </div>
+            <div class="gs-up gs-left delay-2"><img src="../assets/images/img_cj02.png" alt="" class="pjt-img">
+            </div>
+            <div class="hide-mobile gs-up gs-left delay-3"><img src="../assets/images/img_cj03.png" alt=""
+                    class="pjt-img"></div>
+        </div>
+    </div>
+    <!-- <div class="hide-pc">
+        <a href="./project_wooriopen.html" class="btn-pjt-next">
+            <p>NEXT</p>
+        </a>
+    </div> -->
+</section>
+        </section>
+        <section class="panel" id="four">
+            <section class="pjt-con-wrap woori-open">
+    <div class="pjt-top-full">
+        <div class="bg-area">
+            <div class="image before-image">
+                <img src="../assets/images/bg_wooriopen.jpg" alt="before">
+            </div>
+            <div class="image after-image">
+                <img src="../assets/images/bg_wooriopen_after.png" alt="after">
+            </div>
+        </div>
+        <div class="pjt-title center white">
+            <p class="tit">
+                <span>우리은행</span> <br class="hide-pc">
+                오픈뱅킹 시스템
+            </p>
+            <p class="desc">
+                우리은행의 브랜드 색상을 적용하고 고해상도의 깔끔한 이미지와 아이콘을 배치해 <br class="hide-mobile">모던한 분위기의 디자인을 적용했습니다.
+            </p>
+        </div>
+
+        <div class="pjt-top-img">
+            <img src="../assets/images/img_wooriopen_splash.png" alt="우리은행 오픈뱅킹 시스템 이미지" class="">
+        </div>
+    </div>
+
+    <div class="pjt-con">
+        <div class="pjt-title center white">
+            <p class="tit gs-up">Design Concept</p>
+            <p class="desc gs-up">
+                우리은행에 위비 뱅크 앱에 복잡한 기능을 사용자가 편리하게 사용할 수 있도록 재구성하고 <br class="hide-mobile">
+                브랜드 아이덴티티가 일관성있게 적용될 수 있도록 디자인시스템을 정리하고 UI를 직관적으로 설계하였습니다.
+            </p>
+        </div>
+        <div class="phone-layout bg">
+            <div class="gs-up gs-left delay-1"><img src="../assets/images/img_wooriopen01.png" alt="" class="pjt-img">
+            </div>
+        </div>
+
+        <div class="phone-layout">
+            <div class="gs-up gs-right delay-1"><img src="../assets/images/img_wooriopen02.png" alt="" class="pjt-img">
+            </div>
+            <div class="gs-up gs-right delay-2"><img src="../assets/images/img_wooriopen03.png" alt="" class="pjt-img">
+            </div>
+            <div class="gs-up gs-right delay-3 hide-mobile"><img src="../assets/images/img_wooriopen04.png" alt=""
+                    class="pjt-img"></div>
+        </div>
+    </div>
+    <!-- <div class="hide-pc">
+        <a href="./project_woorimy.html" class="btn-pjt-next">
+            <p>NEXT</p>
+        </a>
+    </div> -->
+</section>
+
+<script>
+    gsap.utils.toArray(".woori-open .bg-area").forEach(section => {
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: "center center",
+                end: () => "+=" + section.offsetWidth,
+                scrub: true,
+                pin: true,
+                anticipatePin: 1
+            },
+            defaults: { ease: "none" }
+        });
+        tl.fromTo(section.querySelector(".after-image"), { xPercent: 100, x: 0 }, { xPercent: 0 })
+            .fromTo(section.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
+    });
+</script>
+        </section>
+        <section class="panel" id="five">
+            <section class="pjt-con-wrap woori-my">
+    <div class="pjt-top">
+        <div class="pjt-title">
+            <p class="tit gs-up">
+                <span>우리은행</span><br>
+                마이데이터 운영
+            </p>
+            <p class="desc gs-up">
+                우리은행 마이데이터 운영과 고도화. <br class="hide-mobile">
+                그리고 마케팅 운영까지 방대한 금융 콘텐츠와<br class="hide-mobile">
+                과도한 정보 값을 모바일 플랫폼에 맞춰<br class="hide-mobile">
+                재정립 시킵니다.
+            </p>
+            <div class="tool-list gs-up">
+                <div><img src="../assets/images/icon_ps.svg" alt=""></div>
+                <div><img src="../assets/images/icon_ai.svg" alt=""></div>
+                <div><img src="../assets/images/icon_pigma.svg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="pjt-top-img">
+            <div class="bg-area">
+                <img src="../assets/images/img_woorimy_bg.png" alt="">
+                <div class="splash-img">
+                    <img src="../assets/images/img_woorimy_splash.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pjt-con bg01">
+        <div class="phone-layout type02">
+            <div class="gs-up delay-1"><img src="../assets/images/img_woorimy01.png" alt=""
+                    class="pjt-img"></div>
+            <div class="gs-up delay-2"><img src="../assets/images/img_woorimy02.png" alt=""
+                    class="pjt-img"></div>
+        </div>
+    </div>
+
+    <div class="pjt-con bg02">
+        <div class="icon-list-wrap">
+            <ul>
+                <li class="gs-up gs-right delay-1">
+                    <img src="../assets/images/icon_woorimy01.svg" alt="">
+                    <p class="txt">카페</p>
+                </li>
+                <li class="gs-up gs-right delay-2">
+                    <img src="../assets/images/icon_woorimy02.svg" alt="">
+                    <p class="txt">외식</p>
+                </li>
+                <li class="gs-up gs-right delay-3">
+                    <img src="../assets/images/icon_woorimy03.svg" alt="">
+                    <p class="txt">편의점</p>
+                </li>
+                <li class="gs-up gs-right delay-4">
+                    <img src="../assets/images/icon_woorimy04.svg" alt="">
+                    <p class="txt">대형마트</p>
+                </li>
+                <li class="gs-up gs-right delay-5">
+                    <img src="../assets/images/icon_woorimy05.svg" alt="">
+                    <p class="txt">세금/공과금</p>
+                </li>
+                <li class="gs-up gs-right delay-6">
+                    <img src="../assets/images/icon_woorimy06.svg" alt="">
+                    <p class="txt">저축/투자</p>
+                </li>
+                <li class="gs-up gs-right delay-7">
+                    <img src="../assets/images/icon_woorimy07.svg" alt="">
+                    <p class="txt">보험</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="pjt-con bg03">
+        <div class="pjt-title center white">
+            <p class="tit ta-c gs-up">
+                마이데이터 마케팅
+            </p>
+            <p class="desc gs-up">
+                이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, 인지성을 고려하여 UX/UI(GUI) 환경을 제공합니다. <br class="hide-mobile">
+                고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 경험과 이를 바탕한 지속적인 참여가 가능하도록 합니다.
+            </p>
+        </div>
+        <div class="phone-layout">
+            <div class="gs-up gs-left delay-1"><img src="../assets/images/img_woorimy03.png" alt=""
+                    class="pjt-img"></div>
+            <div class="gs-up gs-left delay-2"><img src="../assets/images/img_woorimy04.png" alt=""
+                    class="pjt-img"></div>
+            <div class="gs-up gs-left delay-3 hide-mobile"><img src="../assets/images/img_woorimy05.png" alt=""
+                    class="pjt-img"></div>
+        </div>
+    </div>
+    <!-- <div class="hide-pc">
+        <a href="./project_wooricerti.html" class="btn-pjt-next">
+            <p>NEXT</p>
+        </a>
+    </div> -->
+</section>
+        </section>
+        <section class="panel" id="six">
+            <section class="pjt-con-wrap woori-certi">
+    <div class="pjt-top-full">
+        <div class="pjt-title center white">
+            <p class="tit gs-up">
+                <span>우리은행</span> <br class="hide-pc">
+                사설인증 구축
+            </p>
+            <p class="desc gs-up hide-pc">
+                단순하게, 명쾌하게, 가치있게 디앤디모바일은 <br>
+                스스로의 긍정적 경험을 제공합니다.
+            </p>
+        </div>
+    </div>
+
+    <div class="pjt-con">
+        <div class="pjt-title center">
+            <p class="tit gs-up">Design Concept</p>
+            <p class="desc gs-up">
+                사설인증시스템을 기반으로 우리금융 종합서비스 측면에서 시너지를 창출하고, 금융서비스 제공의 다양성 확보와 <br class="hide-mobile"> 그룹고객 편의성
+                및 경쟁력을 강화했습니다. <br>
+                서비스는 개인과 사업자로 구분되지만 통일성을 유지하여 UI/UX를 개선했습니다.
+            </p>
+        </div>
+
+        <div class="phone-layout type02">
+            <div class="gs-up gs-right delay-1"><img src="../assets/images/img_wooricerti01.png" alt=""
+                    class="pjt-img"></div>
+            <div class="gs-up gs-right delay-2"><img src="../assets/images/img_wooricerti02.png" alt=""
+                    class="pjt-img"></div>
+        </div>
+    </div>
+</section>
+        </section>
+
            <!-- footer -->
    <div class="footer">
       <p>고객의 생각을 디자인합니다.</p>
@@ -372,63 +776,71 @@
       }
    </script>
 
- <!--// footer -->
+ <!--// footer --> 
 
         <script>
+            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-
-            /**
-             * ==============================+
-             * 상단 스플래쉬 이미지 스와이프
-             * ==============================+
-             */
-
-            new Swiper('.splash-swiper', {
-                autoplay: {
-                    delay: 2000,
-                },
-                speed: 500,
-                loop: true,
-                watchSlidesProgress: true,
-                on: {
-                    init: function () {
-                        this.slides.css('overflow', 'hidden');
-                    },
-                    progress: function () {
-                        var swiper = this;
-                        for (var i = 0; i < swiper.slides.length; i++) {
-                            var slideProgress = swiper.slides[i].progress;
-                            var innerOffset = swiper.width * 1;
-                            var innerTranslate = slideProgress * innerOffset;
-                            swiper.slides[i].querySelector('img').style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
-                        }
-                    },
-                    touchStart: function () {
-                        var swiper = this;
-                        for (var i = 0; i < swiper.slides.length; i++) {
-                            swiper.slides[i].style.transition = "";
-                        }
-                    },
-                    setTransition: function (speed) {
-                        var swiper = this;
-                        for (var i = 0; i < swiper.slides.length; i++) {
-                            swiper.slides[i].style.transition = speed + "ms";
-                            swiper.slides[i].querySelector('img').style.transition = speed + "ms";
-                        }
-                    }
-                }
+            let links = gsap.utils.toArray(".main-indicator-wrap a");
+            let panels = gsap.utils.toArray(".panel");
+            links.forEach(a => {
+                let element = document.querySelector(a.getAttribute("href")),
+                    linkST = ScrollTrigger.create({
+                        trigger: element,
+                        start: "top top"
+                    });
+                ScrollTrigger.create({
+                    trigger: element,
+                    start: "top center",
+                    end: "bottom center",
+                    onToggle: self => self.isActive && setActive(a)
+                });
+                a.addEventListener("click", e => {
+                    e.preventDefault();
+                    gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
+                });
             });
+
+            panels.forEach((panel, i) => {
+                ScrollTrigger.create({
+                    trigger: panel,
+                    start: "top bottom",
+                    end: "bottom bottom",
+                    scrub: true,
+                    onEnter: () => {
+                        panels.forEach((e) => {
+                            e.classList.remove("active");
+                        });
+                        panels[i].classList.add("active");
+                    },
+                    onEnterBack: () => {
+                        panels.forEach((e) => {
+                            e.classList.remove("active");
+                        });
+                        panels[i].classList.add("active");
+                    }
+                });
+            });
+            
+
+            function setActive(link) {
+                links.forEach(el => el.classList.remove("active"));
+                link.classList.add("active");
+                
+                if(link.classList.contains("indi-white")) {
+                    document.querySelector(".main-indicator-wrap").classList.add('white')
+                    document.querySelector(".menu-toggle").classList.add('white')
+                    document.querySelector("html").classList.add('bg-black')
+                } else {
+                    document.querySelector(".main-indicator-wrap").classList.remove('white')
+                    document.querySelector(".menu-toggle").classList.remove('white')
+                    document.querySelector("html").classList.remove('bg-black')
+                }
+            }
         </script>
-    </div>
-</body>
-
-</html>
-
-        
-
-        
 
     </div>
-    
+
 </body>
+
 </html>

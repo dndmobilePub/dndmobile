@@ -1,17 +1,23 @@
+html {
+    transition:background .5s;
+    &.bg-black {
+        background:#000;
+    }
+}
+
 .mt160 {
     @include vw-convert-pc(margin-top, 160);
 }
 
 .wrap {
     position: relative;
-    overflow:hidden;
 }
 
 .btn-top {
 	display: none;
 	position: fixed;
 	bottom: 40px;
-	right: 20px;
+	right: 70px;
 	z-index:100;
     width:48px;
     height:48px;
@@ -33,84 +39,80 @@
     transform: translateY(-50%);
     z-index: 1;
 
-    ul {
-        li {
-            @include vw-convert-pc(margin, 24 0);
+    a {
+        position:relative;
+        display:block;
+        @include vw-convert-pc(margin, 24 0);
+        span {
+            background: #000;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 6px;
+            width: 30px;
+            height: 2px;
+            transition: all .5s;
+        }
+        em {
             position: relative;
-
-            &::before {
-                content: '';
-                background: #000;
-                display: block;
-                position: absolute;
-                right: 0;
-                top: 6px;
-                width: 30px;
-                height: 2px;
-                transition: all .5s;
+            display: block;
+            @include vw-font-size-pc(18);
+            color: #000;
+            @include vw-convert-pc(padding-right, 55);
+            text-align: right;
+            opacity: 0;
+            right: -20%;
+            transition: all .5s;
+            font-style: normal;
+        }
+        &.active, &:hover {
+            span {
+                background: transparent;
+                width: 12px;
+                height: 12px;
+                border: 2px solid #000;
+                border-radius: 50%;
+                top: 3px;
             }
-
-            a {
-                position: relative;
-                display: block;
-                @include vw-font-size-pc(18);
-                color: #000;
-                @include vw-convert-pc(padding-right, 55);
-                text-align: right;
-                opacity: 0;
-                right: -20%;
-                transition: all .5s;
-            }
-
-            &.active,
-            &:hover {
-                &::before {
-                    content: '';
-                    background: transparent;
-                    width: 12px;
-                    height: 12px;
-                    border: 2px solid #000;
-                    border-radius: 50%;
-                    top: 3px;
-                }
-
-                a {
-                    opacity: 1;
+            em {
+                opacity: 1;
                     right: 0;
-                }
             }
         }
     }
 
     &.white {
-        ul {
-            li {
-                &::before {
-                    content: '';
-                    background: #fff;
-                }
-
-                a {
-                    color: #fff;
-                }
-
-                &.active,
-                &:hover {
-                    &::before {
-                        content: '';
-                        border: 2px solid #fff;
-                        background: transparent
-                    }
+        a {
+            span {
+                background: #fff;
+            }
+            em {
+                color: #fff;
+            }
+            &.active, &:hover {
+                span {
+                    background: transparent;
+                    border: 2px solid #fff;
                 }
             }
         }
     }
 }
-
+.panel {
+    // display:none;
+    opacity:0;
+    visibility:hidden;
+    transition:all .5s;
+    &.active, &:nth-child(1) {
+        display:block;
+        opacity:1;
+        visibility:visible;
+    }
+}
 // project contents
 .pjt-con-wrap {
     box-sizing: border-box;
-
+    
     .pjt-top {
         display: flex;
         height: 100vh;
@@ -129,6 +131,9 @@
             @include vw-convert-pc(padding-top, 100);
             text-align: center;
             margin: 0 auto;
+            img {
+                max-width:90%;
+            }
         }
     }
 
@@ -181,6 +186,9 @@
         div {
             text-align: center;
         }
+        img {
+            max-width:90%;
+        }
     }
 
     .icon-list-wrap {
@@ -209,6 +217,7 @@
 
     &.kb {
         .pjt-top {
+            @include vw-convert-pc(margin-bottom, 90);
             .pjt-title {
                 @include vw-convert-pc(width, 600);
             }
@@ -260,17 +269,50 @@
         }
 
         .pjt-con {
-            @include vw-convert-pc(padding, 160 20 300);
+            @include vw-convert-pc(padding, 160 20 200);
             background: #ffdf62;
         }
     }
 
     &.sc {
+        .bg-area {
+            position: relative;
+            padding-bottom: 56.25%;
+            .image {
+                width: 100%;
+                height: 100%;
+                &.after-image {
+                    position: absolute;
+                    overflow: hidden;
+                    top: 0;
+                    transform: translate(100%, 0px);
+                    img {
+                        transform: translate(-100%, 0px);
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
         .pjt-top-full {
-            background: url('../images/bg_sc.jpg') center no-repeat;
-            background-size: cover;
+            // background: url('../images/bg_sc.jpg') center no-repeat;
+            // background-size: cover;
             height: auto;
             text-align: center;
+            .pjt-title {
+                margin-top: -40%;
+                position:relative;
+                z-index:1;
+            }
+            .pjt-top-img {
+                position:relative;
+                z-index:1;
+            }
         }
 
         .pjt-con {
@@ -315,9 +357,42 @@
     }
 
     &.woori-open {
+        .bg-area {
+            position: relative;
+            padding-bottom: 56.25%;
+            .image {
+                width: 100%;
+                height: 100%;
+                &.after-image {
+                    position: absolute;
+                    overflow: hidden;
+                    top: 0;
+                    transform: translate(100%, 0px);
+                    img {
+                        transform: translate(-100%, 0px);
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
         .pjt-top-full {
-            background: url('../images/bg_wooriopen.jpg') center no-repeat;
-            background-size: cover;
+            // background: url('../images/bg_wooriopen.jpg') center center no-repeat;
+            // background-size: cover;
+            .pjt-title {
+                margin-top:-40%;
+                position:relative;
+                z-index:1;
+            }
+            .pjt-top-img {
+                position:relative;
+                z-index:1;
+            }
         }
 
         .pjt-con {
@@ -332,6 +407,7 @@
                     background-size: 100%;
                     @include vw-convert-pc(max-width, 1155);
                     margin: 0 auto;
+                    @include vw-convert-pc(padding-top, 130);
                     @include vw-convert-pc(margin-top, 90);
                 }
             }
@@ -871,7 +947,7 @@
         .pjt-top {
             @include vw-convert-tb(padding-top, 180);
             @include vw-convert-tb(padding-left, 100);
-            @include vw-convert-tb(padding-bottom, 200);
+            @include vw-convert-tb(padding-bottom, 150);
             height: auto
         }
 
@@ -1125,6 +1201,19 @@
         }
 
         &.sc {
+            .bg-area {
+                display:none;
+            }
+            .pjt-top-full {
+                background: url('../images/bg_sc_mo.jpg') center no-repeat;
+                background-size: cover;
+                .pjt-title {
+                    margin-top:0;
+                }
+                .pin-spacer {
+                    display:none;
+                }
+            }
             .pjt-con {
                 position: relative;
                 @include vw-convert-mo(padding, 120 40 100);

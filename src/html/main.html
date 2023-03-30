@@ -8,36 +8,143 @@
     <title>DnD모바일입니다.</title>
     <link rel="stylesheet" href="../../dist/assets/css/style.css">
     <script src="../../dist/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="../../dist/assets/js/gsap.min.js" defer></script>
-    <script src="../../dist/assets/js/ScrollTrigger.min.js" defer></script>
+    <script src="../../dist/assets/js/swiper.min.js"></script>
+    <script src="../../dist/assets/js/gsap.min.js"></script>
+    <script src="../../dist/assets/js/ScrollTrigger.min.js"></script>
+    <script src="../../dist/assets/js/ScrollToPlugin.min.js"></script>
     <script src="../../dist/assets/js/common.js" defer></script>
     <script src="../../dist/assets/js/ui.js" defer></script>
 </head>
 
 <body>
     <div class="wrap">
-        <!-- @@include('./include/header.html')  -->
-        <!-- <main class="cover-full">
-            <div class="box"></div>
-            <section></section>
-        </main> -->
+
+        @@include('./include/header.html') 
+
+        <section class="main-indicator-wrap">
+            <div>
+                <a href="#one" class="active">
+                    <span></span>
+                    <em>KB국민은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#two" class="indi-white">
+                    <span></span>
+                    <em>SC제일은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#three">
+                    <span></span>
+                    <em>CJ대한통운</em>
+                </a>
+            </div>
+            <div>
+                <a href="#four" class="indi-white">
+                    <span></span>
+                    <em>우리은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#five">
+                    <span></span>
+                    <em>우리은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#six">
+                    <span></span>
+                    <em>우리은행</em>
+                </a>
+            </div>
+        </section>
 
 
-        @@include('./project_kb.html')
+        <section class="panel" id="one">
+            @@include('./project_kb.html')
+        </section>
+        <section class="panel" id="two">
+            @@include('./project_sc.html')
+        </section>
+        <section class="panel" id="three">
+            @@include('./project_cj.html')
+        </section>
+        <section class="panel" id="four">
+            @@include('./project_wooriopen.html')
+        </section>
+        <section class="panel" id="five">
+            @@include('./project_woorimy.html')
+        </section>
+        <section class="panel" id="six">
+            @@include('./project_wooricerti.html')
+        </section>
 
-        <!-- @@include('./project_sc.html')
+        @@include('./include/footer.html') 
 
-        @@include('./project_cj.html')
+        <script>
+            gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-        @@include('./project_wooriopen.html')
+            let links = gsap.utils.toArray(".main-indicator-wrap a");
+            let panels = gsap.utils.toArray(".panel");
+            links.forEach(a => {
+                let element = document.querySelector(a.getAttribute("href")),
+                    linkST = ScrollTrigger.create({
+                        trigger: element,
+                        start: "top top"
+                    });
+                ScrollTrigger.create({
+                    trigger: element,
+                    start: "top center",
+                    end: "bottom center",
+                    onToggle: self => self.isActive && setActive(a)
+                });
+                a.addEventListener("click", e => {
+                    e.preventDefault();
+                    gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
+                });
+            });
 
-        @@include('./project_woorimy.html')
+            panels.forEach((panel, i) => {
+                ScrollTrigger.create({
+                    trigger: panel,
+                    start: "top bottom",
+                    end: "bottom bottom",
+                    scrub: true,
+                    onEnter: () => {
+                        panels.forEach((e) => {
+                            e.classList.remove("active");
+                        });
+                        panels[i].classList.add("active");
+                    },
+                    onEnterBack: () => {
+                        panels.forEach((e) => {
+                            e.classList.remove("active");
+                        });
+                        panels[i].classList.add("active");
+                    }
+                });
+            });
+            
 
-        @@include('./project_wooricerti.html')-->
-
-        
+            function setActive(link) {
+                links.forEach(el => el.classList.remove("active"));
+                link.classList.add("active");
+                
+                if(link.classList.contains("indi-white")) {
+                    document.querySelector(".main-indicator-wrap").classList.add('white')
+                    document.querySelector(".menu-toggle").classList.add('white')
+                    document.querySelector("html").classList.add('bg-black')
+                } else {
+                    document.querySelector(".main-indicator-wrap").classList.remove('white')
+                    document.querySelector(".menu-toggle").classList.remove('white')
+                    document.querySelector("html").classList.remove('bg-black')
+                }
+            }
+        </script>
 
     </div>
-    
+
 </body>
+
 </html>
