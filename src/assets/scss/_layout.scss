@@ -705,7 +705,6 @@
     .accordion {
         background: url(../images/icon_plus.png) calc(100% - 40px) 50% no-repeat;
         background-size: 30px;
-        cursor: none;
         @include vw-convert-pc(padding, 50 40);
         @include vw-font-size-pc(48);
         font-weight: 700;
