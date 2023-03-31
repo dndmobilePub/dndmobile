@@ -30,7 +30,7 @@
 				<i class="ico">
 					<img src="../assets/images/logo_black_large.png" alt="">
 				</i>
-				<a href="https://dndmobile.co.kr/">
+				<a href="main.html">
 					디앤디모바일
 				</a>
 			</h1>
@@ -135,7 +135,7 @@
 					</defs>
 				</svg>
 			</i>
-			<a href="http://">
+			<a href="main.html">
 				디앤디모바일
 			</a>
 		</h1>
@@ -234,28 +234,6 @@
 		</div>
 	</div>
 </section>
-
-<button onclick="topFunction()" id="topBtn" class="btn-top">
-	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-	   <path d="M12 20.25V3.75" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-	   <path d="M5.25 10.5L12 3.75L18.75 10.5" stroke="white" stroke-width="1.8" stroke-linecap="round"
-		  stroke-linejoin="round" />
-	</svg>
- </button>
- <script>
-	let mybutton = document.getElementById("topBtn");
-	window.onscroll = function () { scrollFunction() };
-	function scrollFunction() {
-	   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		  mybutton.style.display = "block";
-	   } else {
-		  mybutton.style.display = "none";
-	   }
-	}
-	function topFunction() {
-	   window.scrollTo({ top: 0, behavior: "smooth" });
-	}
- </script>
 
         <section class="main-indicator-wrap">
             <div>
@@ -727,17 +705,38 @@
     </div>
 </section>
         </section>
-           <!-- footer -->
-   <div class="footer">
-      <p>고객의 생각을 디자인합니다.</p>
-      <ul>
-      <li>(03995) 서울시 마포구 월드컵북로2길 11 삼희빌딩 7F</li>
-      <li><strong>T.</strong>+82 2 6448-2286</li>
-      <li><strong>F.</strong>+82 2 6448-2284</li>
-      <li><strong>(2022), ALL RIGHTS RESERVED.</strong></li>
-      </ul>
-   </div>
- <!--// footer -->
+        <!-- footer -->
+<div class="footer">
+    <p>고객의 생각을 디자인합니다.</p>
+    <ul>
+        <li>(03995) 서울시 마포구 월드컵북로2길 11 삼희빌딩 7F</li>
+        <li><strong>T.</strong>+82 2 6448-2286</li>
+        <li><strong>F.</strong>+82 2 6448-2284</li>
+        <li><strong>(2022), ALL RIGHTS RESERVED.</strong></li>
+    </ul>
+</div>
+<button onclick="topFunction()" id="topBtn" class="btn-top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 20.25V3.75" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M5.25 10.5L12 3.75L18.75 10.5" stroke="white" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </svg>
+</button>
+<script>
+    let mybutton = document.getElementById("topBtn");
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+</script>
+<!--// footer -->
     </div>
 </body>
 
