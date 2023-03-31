@@ -1,5 +1,4 @@
 <section class="pjt-con-wrap sc">
-
     <div class="pjt-top-full">
         <div class="bg-area">
             <div class="image before-image">
@@ -9,7 +8,7 @@
                 <img src="../assets/images/bg_sc_after.png" alt="after">
             </div>
         </div>
-        <div class="pjt-title center white">
+        <div class="pjt-title center white gs-up gs-left">
             <p class="tit">
                 <span>SC제일은행</span> <br class="hide-pc">
                 비즈니스 뱅킹
@@ -19,7 +18,7 @@
             </p>
         </div>
 
-        <div class="pjt-top-img">
+        <div class="pjt-top-img gs-up gs-right">
             <img src="../assets/images/img_sc_splash.png" alt="sc제일은행 이미지" class="">
         </div>
         
@@ -35,9 +34,9 @@
             </p>
         </div>
         <div class="phone-layout type02">
-            <div class="gs-up delay-1"><img src="../assets/images/img_sc01.png" alt="" class="pjt-img">
+            <div class="gs-up"><img src="../assets/images/img_sc01.png" alt="" class="pjt-img">
             </div>
-            <div class="gs-up delay-2 mt160"><img src="../assets/images/img_sc02.png" alt="" class="pjt-img"></div>
+            <div class="gs-up delay-1 mt160"><img src="../assets/images/img_sc02.png" alt="" class="pjt-img"></div>
         </div>
 
         <div class="pjt-title type02 white">
@@ -66,15 +65,16 @@
 
 
 <script>
-    gsap.utils.toArray(".bg-area").forEach(section => {
+    gsap.utils.toArray(".sc .bg-area").forEach(section => {
         let tl = gsap.timeline({
             scrollTrigger: {
                 trigger: section,
-                start: "center center",
+                start: "top top",
                 end: () => "+=" + section.offsetWidth,
                 scrub: true,
                 pin: true,
-                anticipatePin: 1
+                anticipatePin: 1,
+                // markers: true,
             },
             defaults: { ease: "none" }
         });

@@ -8,7 +8,7 @@
                 <img src="../assets/images/bg_wooriopen_after.png" alt="after">
             </div>
         </div>
-        <div class="pjt-title center white">
+        <div class="pjt-title center white gs-up gs-left">
             <p class="tit">
                 <span>우리은행</span> <br class="hide-pc">
                 오픈뱅킹 시스템
@@ -18,7 +18,7 @@
             </p>
         </div>
 
-        <div class="pjt-top-img">
+        <div class="pjt-top-img gs-up gs-right">
             <img src="../assets/images/img_wooriopen_splash.png" alt="우리은행 오픈뱅킹 시스템 이미지" class="">
         </div>
     </div>
@@ -53,19 +53,19 @@
 </section>
 
 <script>
-    gsap.utils.toArray(".woori-open .bg-area").forEach(section => {
-        let tl = gsap.timeline({
+    gsap.utils.toArray(".woori-open .bg-area").forEach(section2 => {
+        let tl2 = gsap.timeline({
             scrollTrigger: {
-                trigger: section,
+                trigger: section2,
                 start: "center center",
-                end: () => "+=" + section.offsetWidth,
+                end: () => "+=" + section2.offsetWidth,
                 scrub: true,
                 pin: true,
                 anticipatePin: 1
             },
             defaults: { ease: "none" }
         });
-        tl.fromTo(section.querySelector(".after-image"), { xPercent: 100, x: 0 }, { xPercent: 0 })
-            .fromTo(section.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
+        tl2.fromTo(section2.querySelector(".after-image"), { xPercent: 100, x: 0 }, { xPercent: 0 })
+            .fromTo(section2.querySelector(".after-image img"), { xPercent: -100, x: 0 }, { xPercent: 0 }, 0);
     });
 </script>
