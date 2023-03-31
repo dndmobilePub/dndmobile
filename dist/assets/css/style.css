@@ -3907,14 +3907,14 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .project-wrap {
-    padding: 440px 0px 300px;
-    padding: 28.6831812256vw 0vw 19.556714472vw;
+    padding: 560px 0px 300px;
+    padding: 36.5058670143vw 0vw 19.556714472vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .project-wrap {
-    padding: 220px 0px 150px;
-    padding: 28.6831812256vw 0vw 19.556714472vw;
+    padding: 280px 0px 150px;
+    padding: 36.5058670143vw 0vw 19.556714472vw;
   }
 }
 @media screen and (max-width: 767px) {
