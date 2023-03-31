@@ -1,7 +1,4 @@
-// ScrollSmoother.create({
-//     smooth: 1,
-//     effects: true,
-// });
+AOS.init();
 
 /**
  * ==============================+
@@ -43,43 +40,20 @@ for (i = 0; i < acc.length; i++) {
  * 애니메이션 정의
  * ==============================+
  */
-
 function animateFrom(elem) {
     var x = 0,
-        y = 150,
-        delay = 0;
+        y = 150;
+
     if (elem.classList.contains("gs-left")) {
         x = -150;
         y = 0;
     } else if (elem.classList.contains("gs-right")) {
         x = 150;
         y = 0;
-    } else if (elem.classList.contains("gs-opacity")) {
-        x = 0;
-        y = 0;
     } else if (elem.classList.contains("txt-ani")) {
         x = 1000;
         y = 0;
     }
-
-    if (elem.classList.contains("delay-1")) {
-        delay = 0.6;
-    } else if (elem.classList.contains("delay-2")) {
-        delay = 0.9;
-    } else if (elem.classList.contains("delay-3")) {
-        delay = 1.2;
-    } else if (elem.classList.contains("delay-4")) {
-        delay = 1.5;
-    } else if (elem.classList.contains("delay-5")) {
-        delay = 1.8;
-    } else if (elem.classList.contains("delay-6")) {
-        delay = 2.1;
-    } else if (elem.classList.contains("delay-7")) {
-        delay = 2.4;
-    } else if (elem.classList.contains("delay-8")) {
-        delay = 2.7;
-    }
-
     elem.style.transform = "translate(" + x + "px, " + y + "px)";
     elem.style.opacity = "0";
     gsap.fromTo(
@@ -89,7 +63,6 @@ function animateFrom(elem) {
             duration: 1.5,
             x: 0,
             y: 0,
-            delay: delay,
             autoAlpha: 1,
             stagger: 0.2,
             ease: "expo",

@@ -1,30 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../dist/assets/css/style.css">
-    <script src="../../dist/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="../../dist/assets/js/swiper.min.js"></script>
-    <script src="../../dist/assets/js/gsap.min.js" defer></script>
-    <script src="../../dist/assets/js/ScrollTrigger.min.js" defer></script>
-    <script src="../../dist/assets/js/common.js" defer></script>
-    <script src="../../dist/assets/js/ui.js" defer></script>
-</head>
-
+@@include('./include/head.html')
 <body>
     <div class="wrap">
         @@include('./include/header.html')
         <section class="project-wrap">
             <div class="project-box">
                 <div class="tab-top">
-                    <div class="bg-tit hide-mobile gs-up delay-1">
+                    <div class="bg-tit hide-mobile" data-aos="fade-left" data-aos-delay="300">
                         <p>Creative Digital Transformation</p>
                     </div>
-                    <ul class="gs-up">
+                    <ul data-aos="fade-up">
                         <li>
                             <p>2023</p>
                         </li>
@@ -73,7 +59,7 @@
                 <div class="tab-detail tab-2022 on">
                     <div class="swiper-container project-swiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide box-wrap gs-up delay-2">
+                            <div class="swiper-slide box-wrap" data-aos="fade-up">
                                 <p class="img"><img src="../assets/images/img_kb_thumb.png" alt=""></p>
                                 <div class="box">
                                     <p class="tit">
@@ -86,7 +72,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="swiper-slide box-wrap gs-up delay-3">
+                            <div class="swiper-slide box-wrap" data-aos="fade-up" data-aos-delay="300">
                                 <p class="img"><img src="../assets/images/img_sc_thumb.png" alt=""></p>
                                 <div class="box">
                                     <p class="tit">
@@ -99,7 +85,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="swiper-slide box-wrap gs-up delay-4">
+                            <div class="swiper-slide box-wrap" data-aos="fade-up" data-aos-delay="600">
                                 <p class="img"><img src="../assets/images/img_cj_thumb.png" alt=""></p>
                                 <div class="box">
                                     <p class="tit">
