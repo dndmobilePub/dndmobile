@@ -649,12 +649,14 @@
                 @include vw-convert-pc(margin-right, 120);
                 @include vw-font-size-pc(30);
                 font-weight: 700;
-            }
-            li:last-child {
-                @include vw-convert-pc(margin-right, 0);
-            }
-            li.on {
-                color: #E30D3F;
+                cursor: pointer;
+                
+                &:last-child {
+                    @include vw-convert-pc(margin-right, 0);
+                }
+                &.on {
+                    color: #E30D3F;
+                }
             }
         }
     }
@@ -708,6 +710,8 @@
         @include vw-convert-pc(padding, 50 40);
         @include vw-font-size-pc(48);
         font-weight: 700;
+        cursor: pointer;
+
         sup {
             @include vw-font-size-pc(30);
         }

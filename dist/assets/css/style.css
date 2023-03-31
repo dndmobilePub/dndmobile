@@ -425,10 +425,10 @@ header.active {
   cursor: pointer;
   padding: 12px;
   border-radius: 50%;
-  background-color: #ddd;
+  background-color: #D0D0D0;
 }
 .btn-top:hover {
-  background-color: #d0d0d0;
+  background-color: #222222;
 }
 
 @media screen and (max-width: 767px) {
@@ -2320,6 +2320,7 @@ button.swiper-pagination-bullet {
   font-size: 30px;
   font-size: 1.5625vw;
   font-weight: 700;
+  cursor: pointer;
 }
 @media (min-width: 1920px) {
   .project-wrap .tab-top ul li {
@@ -2424,6 +2425,7 @@ button.swiper-pagination-bullet {
   font-size: 48px;
   font-size: 2.5vw;
   font-weight: 700;
+  cursor: pointer;
 }
 @media (min-width: 1920px) {
   .accordion-wrap .accordion {
