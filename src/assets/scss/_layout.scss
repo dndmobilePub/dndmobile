@@ -204,6 +204,7 @@
                     @include vw-convert-pc(width, 362);
                     border: 10px solid #000;
                     border-radius: 50px;
+                    // box-shadow: 13px 0px 20px 0px rgba(0, 0, 0, 0.13);
                 }
 
                 .circle {
@@ -243,6 +244,10 @@
         .pjt-con {
             @include vw-convert-pc(padding, 160 20 200);
             background: #ffdf62;
+            .pjt-img {
+                @include vw-convert-pc(border-radius, 50);
+                box-shadow: 47px 47px 55px rgba(0, 0, 0, 0.13);
+            }
         }
     }
 
@@ -490,6 +495,14 @@
                     @include vw-convert-pc(margin-top, 162);
                     color: #d9d9d9;
                     text-align: center;
+                    .service-list {
+                        &:nth-child(4) {
+                            @include vw-convert-pc(margin-left, 35);
+                        }
+                        &:nth-child(5) {
+                            @include vw-convert-pc(margin-right, 40);
+                        }
+                    }
 
                     .bg-area {
                         position: absolute;
@@ -506,7 +519,7 @@
 
                         .circle02 {
                             position: absolute;
-                            @include vw-convert-pc(right, 60);
+                            @include vw-convert-pc(right, 90);
                             top: 0;
                             width: 60%;
                         }
@@ -1160,6 +1173,9 @@
             .pjt-con {
                 @include vw-convert-mo(padding, 260 40 80);
                 margin-top: -104px;
+                .pjt-img {
+                    @include vw-convert-mo(border-radius, 40);
+                }
             }
         }
 
@@ -1385,12 +1401,18 @@
 
                             .circle02 {
                                 top: auto;
-                                @include vw-convert-mo(bottom, 80);
+                                @include vw-convert-mo(bottom, 90);
                             }
                         }
 
                         .service-list {
                             @include vw-convert-mo(margin, 100 0 180);
+                            &:nth-child(4) {
+                                margin-left: 0;
+                            }
+                            &:nth-child(5) {
+                                margin-right: 0;
+                            }
                         }
 
                         .tit01 {
