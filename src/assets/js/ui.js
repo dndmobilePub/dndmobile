@@ -40,20 +40,24 @@ for (i = 0; i < acc.length; i++) {
  * 애니메이션 정의
  * ==============================+
  */
+
 function animateFrom(elem) {
     var x = 0,
-        y = 150;
-
-    if (elem.classList.contains("gs-left")) {
-        x = -150;
-        y = 0;
-    } else if (elem.classList.contains("gs-right")) {
-        x = 150;
-        y = 0;
-    } else if (elem.classList.contains("txt-ani")) {
+        y = 150,
+        delay = 0;
+    if (elem.classList.contains("txt-ani")) {
         x = 1000;
         y = 0;
     }
+
+    if (elem.classList.contains("delay-1")) {
+        delay = 0.6;
+    } else if (elem.classList.contains("delay-2")) {
+        delay = 0.9;
+    } else if (elem.classList.contains("delay-3")) {
+        delay = 1.2;
+    }
+
     elem.style.transform = "translate(" + x + "px, " + y + "px)";
     elem.style.opacity = "0";
     gsap.fromTo(
@@ -63,6 +67,7 @@ function animateFrom(elem) {
             duration: 1.5,
             x: 0,
             y: 0,
+            delay: delay,
             autoAlpha: 1,
             stagger: 0.2,
             ease: "expo",
