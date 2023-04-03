@@ -96,7 +96,7 @@
     .pjt-top-full {
         display: block;
         height: auto;
-        // @include vw-convert-pc(padding-top, 250);
+        @include vw-convert-pc(padding-top, 250);
 
         .pjt-top-img {
             @include vw-convert-pc(width, 1263);
@@ -247,44 +247,33 @@
     }
 
     &.sc {
-        .bg-area {
-            position: relative;
-            padding-bottom: 56.25%;
-            .image {
-                width: 100%;
-                height: 100%;
-                &.after-image {
-                    position: absolute;
-                    overflow: hidden;
-                    top: 0;
-                    transform: translate(100%, 0px);
-                    img {
-                        transform: translate(-100%, 0px);
-                    }
-                }
-                img {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-            }
-        }
+        // .bg-area {
+        //     position: relative;
+        //     padding-bottom: 56.25%;
+        //     .image {
+        //         width: 100%;
+        //         height: 100%;
+        //         &.after-image {
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top: 0;
+        //             transform: translate(100%, 0px);
+        //             img {
+        //                 transform: translate(-100%, 0px);
+        //             }
+        //         }
+        //         img {
+        //             width: 100%;
+        //             height: 100%;
+        //             position: absolute;
+        //             top: 0;
+        //             left: 0;
+        //         }
+        //     }
+        // }
         .pjt-top-full {
-            // background: url('../images/bg_sc.jpg') center no-repeat;
-            // background-size: cover;
-            height: auto;
-            text-align: center;
-            .pjt-title {
-                margin-top: -40%;
-                position:relative;
-                z-index:1;
-            }
-            .pjt-top-img {
-                position:relative;
-                z-index:1;
-            }
+            background: url('../images/bg_sc_default.jpg') center no-repeat;
+            background-size: cover;
         }
 
         .pjt-con {
@@ -329,42 +318,33 @@
     }
 
     &.woori-open {
-        .bg-area {
-            position: relative;
-            padding-bottom: 56.25%;
-            .image {
-                width: 100%;
-                height: 100%;
-                &.after-image {
-                    position: absolute;
-                    overflow: hidden;
-                    top: 0;
-                    transform: translate(100%, 0px);
-                    img {
-                        transform: translate(-100%, 0px);
-                    }
-                }
-                img {
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-            }
-        }
+        // .bg-area {
+        //     position: relative;
+        //     padding-bottom: 56.25%;
+        //     .image {
+        //         width: 100%;
+        //         height: 100%;
+        //         &.after-image {
+        //             position: absolute;
+        //             overflow: hidden;
+        //             top: 0;
+        //             transform: translate(100%, 0px);
+        //             img {
+        //                 transform: translate(-100%, 0px);
+        //             }
+        //         }
+        //         img {
+        //             width: 100%;
+        //             height: 100%;
+        //             position: absolute;
+        //             top: 0;
+        //             left: 0;
+        //         }
+        //     }
+        // }
         .pjt-top-full {
-            // background: url('../images/bg_wooriopen.jpg') center center no-repeat;
-            // background-size: cover;
-            .pjt-title {
-                margin-top:-40%;
-                position:relative;
-                z-index:1;
-            }
-            .pjt-top-img {
-                position:relative;
-                z-index:1;
-            }
+            background: url('../images/bg_wooriopen_default.jpg') center center no-repeat;
+            background-size: cover;
         }
 
         .pjt-con {

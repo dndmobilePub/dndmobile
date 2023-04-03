@@ -2246,6 +2246,13 @@ button.swiper-pagination-bullet {
 .pjt-con-wrap .pjt-top-full {
   display: block;
   height: auto;
+  padding-top: 250px;
+  padding-top: 13.0208333333vw;
+}
+@media (min-width: 1920px) {
+  .pjt-con-wrap .pjt-top-full {
+    padding-top: 250px;
+  }
 }
 .pjt-con-wrap .pjt-top-full .pjt-top-img {
   width: 1263px;
@@ -2533,42 +2540,9 @@ button.swiper-pagination-bullet {
     padding: 160px 20px 200px;
   }
 }
-.pjt-con-wrap.sc .bg-area {
-  position: relative;
-  padding-bottom: 56.25%;
-}
-.pjt-con-wrap.sc .bg-area .image {
-  width: 100%;
-  height: 100%;
-}
-.pjt-con-wrap.sc .bg-area .image.after-image {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  transform: translate(100%, 0px);
-}
-.pjt-con-wrap.sc .bg-area .image.after-image img {
-  transform: translate(-100%, 0px);
-}
-.pjt-con-wrap.sc .bg-area .image img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .pjt-con-wrap.sc .pjt-top-full {
-  height: auto;
-  text-align: center;
-}
-.pjt-con-wrap.sc .pjt-top-full .pjt-title {
-  margin-top: -40%;
-  position: relative;
-  z-index: 1;
-}
-.pjt-con-wrap.sc .pjt-top-full .pjt-top-img {
-  position: relative;
-  z-index: 1;
+  background: url("../images/bg_sc_default.jpg") center no-repeat;
+  background-size: cover;
 }
 .pjt-con-wrap.sc .pjt-con {
   background: #000;
@@ -2666,38 +2640,9 @@ button.swiper-pagination-bullet {
     padding-top: 100px;
   }
 }
-.pjt-con-wrap.woori-open .bg-area {
-  position: relative;
-  padding-bottom: 56.25%;
-}
-.pjt-con-wrap.woori-open .bg-area .image {
-  width: 100%;
-  height: 100%;
-}
-.pjt-con-wrap.woori-open .bg-area .image.after-image {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  transform: translate(100%, 0px);
-}
-.pjt-con-wrap.woori-open .bg-area .image.after-image img {
-  transform: translate(-100%, 0px);
-}
-.pjt-con-wrap.woori-open .bg-area .image img {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.pjt-con-wrap.woori-open .pjt-top-full .pjt-title {
-  margin-top: -40%;
-  position: relative;
-  z-index: 1;
-}
-.pjt-con-wrap.woori-open .pjt-top-full .pjt-top-img {
-  position: relative;
-  z-index: 1;
+.pjt-con-wrap.woori-open .pjt-top-full {
+  background: url("../images/bg_wooriopen_default.jpg") center center no-repeat;
+  background-size: cover;
 }
 .pjt-con-wrap.woori-open .pjt-con {
   background: #000;
