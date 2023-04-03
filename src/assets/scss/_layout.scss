@@ -1,6 +1,6 @@
 .wrap {
     position: relative;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 .main-indicator-wrap {
@@ -11,9 +11,10 @@
     z-index: 1;
 
     a {
-        position:relative;
-        display:block;
+        position: relative;
+        display: block;
         @include vw-convert-pc(margin, 24 0);
+
         span {
             background: #000;
             display: block;
@@ -24,6 +25,7 @@
             height: 2px;
             transition: all .5s;
         }
+
         em {
             position: relative;
             display: block;
@@ -36,7 +38,9 @@
             transition: all .5s;
             font-style: normal;
         }
-        &.active, &:hover {
+
+        &.active,
+        &:hover {
             span {
                 background: transparent;
                 width: 12px;
@@ -45,9 +49,10 @@
                 border-radius: 50%;
                 top: 3px;
             }
+
             em {
                 opacity: 1;
-                    right: 0;
+                right: 0;
             }
         }
     }
@@ -57,10 +62,13 @@
             span {
                 background: #fff;
             }
+
             em {
                 color: #fff;
             }
-            &.active, &:hover {
+
+            &.active,
+            &:hover {
                 span {
                     background: transparent;
                     border: 2px solid #fff;
@@ -72,19 +80,22 @@
 
 .main .panel {
     // display:none;
-    opacity:0;
-    visibility:hidden;
-    transition:all .5s;
-    &.active, &:nth-child(1) {
-        display:block;
-        opacity:1;
-        visibility:visible;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+
+    &.active,
+    &:nth-child(1) {
+        display: block;
+        opacity: 1;
+        visibility: visible;
     }
 }
+
 // project contents
 .pjt-con-wrap {
     box-sizing: border-box;
-    
+
     .pjt-top {
         display: flex;
         height: 100vh;
@@ -103,8 +114,9 @@
             @include vw-convert-pc(padding-top, 100);
             text-align: center;
             margin: 0 auto;
+
             img {
-                max-width:90%;
+                max-width: 90%;
             }
         }
     }
@@ -131,6 +143,7 @@
 
             span {
                 font-weight: 100;
+                line-height: 1.1;
             }
         }
 
@@ -145,7 +158,7 @@
     .phone-layout {
         display: flex;
         justify-content: center;
-        gap: 50px;
+        gap: 20px;
         @include vw-convert-pc(padding-top, 110);
         @include vw-convert-pc(width, 1276);
         margin: 0 auto;
@@ -158,8 +171,9 @@
         div {
             text-align: center;
         }
+
         img {
-            max-width:90%;
+            max-width: 90%;
         }
     }
 
@@ -189,7 +203,8 @@
 
     &.kb {
         .pjt-top {
-            @include vw-convert-pc(margin-bottom, 90);
+            @include vw-convert-pc(margin-bottom, 40);
+
             .pjt-title {
                 @include vw-convert-pc(width, 600);
             }
@@ -197,14 +212,15 @@
             .pjt-top-img {
                 position: relative;
                 @include vw-convert-pc(width, 800);
-                @include vw-convert-pc(margin-top, 40);
+                // @include vw-convert-pc(margin-top, 40);
                 text-align: center;
 
                 .pjt-img {
                     @include vw-convert-pc(width, 362);
                     border: 10px solid #000;
                     border-radius: 50px;
-                    // box-shadow: 13px 0px 20px 0px rgba(0, 0, 0, 0.13);
+                    box-shadow: 23px 23px 28px rgba(0, 0, 0, 0.13);
+                    margin-bottom: 40px;
                 }
 
                 .circle {
@@ -244,6 +260,7 @@
         .pjt-con {
             @include vw-convert-pc(padding, 160 20 200);
             background: #ffdf62;
+
             .pjt-img {
                 @include vw-convert-pc(border-radius, 50);
                 box-shadow: 47px 47px 55px rgba(0, 0, 0, 0.13);
@@ -252,6 +269,7 @@
     }
 
     &.sc {
+
         // .bg-area {
         //     position: relative;
         //     padding-bottom: 56.25%;
@@ -276,6 +294,15 @@
         //         }
         //     }
         // }
+        .ico-if {
+            &:before {
+                content: "";
+                background: url(../images/ico-if.svg) 0;
+
+
+            }
+        }
+
         .pjt-top-full {
             background: url('../images/bg_sc_default.jpg') center no-repeat;
             background-size: cover;
@@ -323,6 +350,7 @@
     }
 
     &.woori-open {
+
         // .bg-area {
         //     position: relative;
         //     padding-bottom: 56.25%;
@@ -495,10 +523,12 @@
                     @include vw-convert-pc(margin-top, 162);
                     color: #d9d9d9;
                     text-align: center;
+
                     .service-list {
                         &:nth-child(4) {
                             @include vw-convert-pc(margin-left, 35);
                         }
+
                         &:nth-child(5) {
                             @include vw-convert-pc(margin-right, 40);
                         }
@@ -614,39 +644,44 @@
 //프로젝트 메인
 .project-wrap {
     @include vw-convert-pc(padding, 200 160 200 160);
+
     .tab-top {
-        position:relative;
+        position: relative;
+
         .bg-tit {
             p {
-                position:absolute;
-                left:50%;
-                top:50%;
-                width:100%;
-                transform:translate(-50%, -50%);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 100%;
+                transform: translate(-50%, -50%);
                 @include vw-font-size-pc(100);
-                font-weight:700;
-                color:#dfdfdf;
-                text-align:center;
-                letter-spacing:-5%;
-                opacity:.2;
-                z-index:-1;
+                font-weight: 700;
+                color: #dfdfdf;
+                text-align: center;
+                letter-spacing: -5%;
+                opacity: .2;
+                z-index: -1;
             }
         }
+
         ul {
             width: 100%;
             display: flex;
             flex-direction: row;
             justify-content: center;
             @include vw-convert-pc(margin, 36 0 38 0);
+
             li {
                 @include vw-convert-pc(margin-right, 120);
                 @include vw-font-size-pc(30);
                 font-weight: 700;
                 cursor: pointer;
-                
+
                 &:last-child {
                     @include vw-convert-pc(margin-right, 0);
                 }
+
                 &.on {
                     color: #E30D3F;
                 }
@@ -664,21 +699,25 @@
 
     .project-swiper {
         @include vw-convert-pc(margin, 80 0 0);
-        overflow:visible;
+        overflow: visible;
+
         .box-wrap {
             box-shadow: 0px 5px 20px 0px #00000026;
-            border-radius:30px;
+            border-radius: 30px;
+
             .box {
                 @include vw-convert-pc(padding, 48 48 56);
+
                 .tit {
                     @include vw-convert-pc(padding-bottom, 40);
                     @include vw-font-size-pc(42);
-                    font-weight:600;
-                    line-height:1.3;
+                    font-weight: 600;
+                    line-height: 1.3;
                 }
+
                 .tag {
                     @include vw-font-size-pc(22);
-                    color:#666;
+                    color: #666;
                 }
             }
         }
@@ -688,6 +727,7 @@
 // 아코디언
 .accordion-wrap {
     @include vw-convert-pc(margin-top, 180);
+
     dl {
         // @include vw-convert-pc(margin-top, 160);
         border-top: 1px solid #B4B4B4;
@@ -708,6 +748,7 @@
         sup {
             @include vw-font-size-pc(30);
         }
+
         &.active {
             background: url(../images/icon_minus.png) calc(100% - 40px) 50% no-repeat;
             background-size: 30px;
@@ -723,26 +764,29 @@
 
         ul {
             @include vw-convert-pc(padding, 16 0 50);
+
             li {
-                position:relative;
+                position: relative;
                 @include vw-convert-pc(padding-left, 34);
                 @include vw-convert-pc(margin-top, 34);
                 @include vw-font-size-pc(38);
                 line-height: 1.57;
                 font-weight: 300;
+
                 &::before {
-                    content:'';
-                    display:block;
-                    position:absolute;
-                    left:10px;
-                    top:50%;
-                    transform:translateY(-50%);
-                    width:5px;
-                    height:5px;
-                    border-radius:50%;
-                    background:#000;
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: #000;
                 }
             }
+
             li.ing {
                 color: #E30D3F;
 
@@ -754,11 +798,12 @@
                     border-radius: 40px;
                     @include vw-font-size-pc(24);
                     color: #fff;
-                    
+
                 }
+
                 &::before {
-                    content:'';
-                    background:#E30D3F;
+                    content: '';
+                    background: #E30D3F;
                 }
             }
 
@@ -826,14 +871,15 @@
 .contact-wrap {
     .inner {
         background: url(../images/map.png) center no-repeat;
-        background-size:100%;
-        width:100%;
-        height:100%;
-        display:flex;
+        background-size: 100%;
+        width: 100%;
+        height: 100%;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         @include vw-convert-pc(padding, 400 160 280);
     }
+
     h2 {
         @include vw-font-size-pc(80);
         font-weight: 700;
@@ -863,8 +909,9 @@
         .tit {
             @include vw-font-size-pc(90);
             font-weight: 100;
-            line-height:1.2;
+            line-height: 1.2;
         }
+
         .desc {
             @include vw-convert-pc(padding-top, 40);
             @include vw-font-size-pc(24);
@@ -878,6 +925,10 @@
     }
 
     .accordion-wrap {
+        .accordion {
+            border-bottom: 0;
+        }
+
         dd.panel {
             .part {
                 width: 100%;
@@ -885,26 +936,31 @@
                 justify-content: start;
                 align-items: baseline;
                 @include vw-convert-pc(padding-left, 560);
-    
+
+                &:last-child ul {
+                    padding-bottom: 0;
+                }
+
                 p {
                     @include vw-convert-pc(width, 270);
                     @include vw-font-size-pc(30);
                     font-weight: 600;
                 }
-    
+
                 ul {
                     li {
                         @include vw-font-size-pc(24);
                         line-height: 1.3;
                         font-weight: 300;
+                        margin-top: 0;
                     }
                 }
             }
-    
+
             .part:last-child {
                 @include vw-convert-pc(padding-bottom, 120);
             }
-    
+
         }
     }
 }
@@ -1020,28 +1076,29 @@
 
     .main {
         .panel {
-            opacity:1;
+            opacity: 1;
             visibility: visible;
         }
     }
 
     .pjt-con-wrap {
-        .btn-pjt-next{
-            position:relative;
-            z-index:2;
-            display:flex;
+        .btn-pjt-next {
+            position: relative;
+            z-index: 2;
+            display: flex;
             justify-content: center;
             align-items: center;
             @include vw-convert-mo(width, 150);
             @include vw-convert-mo(height, 150);
-            margin:0 auto;
+            margin: 0 auto;
             @include vw-convert-mo(margin-top, -75);
-            border-radius:50%;
-            background:#D00D3B;
-            color:#fff;
+            border-radius: 50%;
+            background: #D00D3B;
+            color: #fff;
             font-weight: 700;
 
         }
+
         .pjt-top {
             position: relative;
             display: block;
@@ -1132,6 +1189,7 @@
         &.kb {
             .pjt-top {
                 @include vw-convert-mo(padding-top, 252);
+
                 .pjt-title {
                     width: 100%;
                 }
@@ -1141,8 +1199,8 @@
 
                     .pjt-img {
                         @include vw-convert-mo(width, 284);
-                        border:5px solid #000;
-                        border-radius:30px;
+                        border: 5px solid #000;
+                        border-radius: 30px;
                     }
 
                     .circle {
@@ -1173,6 +1231,7 @@
             .pjt-con {
                 @include vw-convert-mo(padding, 260 40 80);
                 margin-top: -104px;
+
                 .pjt-img {
                     @include vw-convert-mo(border-radius, 40);
                 }
@@ -1181,18 +1240,22 @@
 
         &.sc {
             .bg-area {
-                display:none;
+                display: none;
             }
+
             .pjt-top-full {
                 background: url('../images/bg_sc_mo.jpg') center no-repeat;
                 background-size: cover;
+
                 .pjt-title {
-                    margin-top:0;
+                    margin-top: 0;
                 }
+
                 .pin-spacer {
-                    display:none;
+                    display: none;
                 }
             }
+
             .pjt-con {
                 position: relative;
                 @include vw-convert-mo(padding, 120 40 100);
@@ -1202,18 +1265,22 @@
 
         &.woori-open {
             .bg-area {
-                display:none;
+                display: none;
             }
+
             .pjt-top-full {
                 background: url('../images/bg_wooriopen_mo.jpg') center no-repeat;
                 background-size: cover;
+
                 .pjt-title {
-                    margin-top:0;
+                    margin-top: 0;
                 }
+
                 .pin-spacer {
-                    display:none;
+                    display: none;
                 }
             }
+
             .pjt-con {
                 position: relative;
                 @include vw-convert-mo(padding, 120 40 100);
@@ -1236,16 +1303,17 @@
 
                 .pjt-top-img {
                     position: relative;
-                    right:auto;
+                    right: auto;
                     width: 100%;
                     @include vw-convert-mo(margin-top, 100);
+
                     .bg-area {
                         @include vw-convert-mo(padding-bottom, 30);
                     }
-                    
+
                     .splash-img {
                         left: 50%;
-                        transform:translateX(-25%);
+                        transform: translateX(-25%);
                         top: -30px;
                         @include vw-convert-pc(width, 560);
 
@@ -1287,7 +1355,8 @@
                 // height:100vh;
                 padding: 0;
                 @include vw-convert-mo(padding-top, 252);
-                padding-bottom:0;
+                padding-bottom: 0;
+
                 .pjt-title {
                     @include vw-convert-mo(padding, 0 40);
                 }
@@ -1407,9 +1476,11 @@
 
                         .service-list {
                             @include vw-convert-mo(margin, 100 0 180);
+
                             &:nth-child(4) {
                                 margin-left: 0;
                             }
+
                             &:nth-child(5) {
                                 margin-right: 0;
                             }
@@ -1483,69 +1554,80 @@
 
     .project-wrap {
         @include vw-convert-mo(padding, 280 0 150);
+
         // padding:0;
         .tab-top {
-            position:relative;
+            position: relative;
+
             ul {
                 margin: 0;
                 @include vw-convert-mo(padding, 0 40 15);
-                justify-content:flex-start;
-                overflow-x:auto;
+                justify-content: flex-start;
+                overflow-x: auto;
+
                 li {
                     @include vw-convert-mo(margin-right, 68);
                     @include vw-font-size-mo(60);
                 }
             }
+
             .bg {
                 @include vw-convert-mo(width, 130);
-                height:100%;
+                height: 100%;
                 background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-                position:absolute;
-                right:0;
-                top:0;
+                position: absolute;
+                right: 0;
+                top: 0;
             }
         }
-    
+
         .project-swiper {
-            width:70%;
+            width: 70%;
             @include vw-convert-mo(margin, 100 auto 0);
-            
+
             // @include vw-convert-mo(padding, 220 160 200 160);
             .swiper-wrapper {
-                align-items:center;
+                align-items: center;
             }
+
             .box-wrap {
-                width:100% !important;
+                width: 100% !important;
+
                 .img {
                     img {
-                        border-radius:30px;
-                        transition:all .3s;
+                        border-radius: 30px;
+                        transition: all .3s;
                     }
                 }
+
                 .box {
-                    display:none;
+                    display: none;
                     @include vw-convert-mo(padding, 48);
-                    transition:all .5s;
+                    transition: all .5s;
+
                     .tit {
                         @include vw-convert-mo(padding-bottom, 20);
                         @include vw-font-size-mo(36);
                         word-break: keep-all;
                     }
+
                     .tag {
                         @include vw-font-size-mo(24);
-                        color:#666;
-                        line-height:1.3;
+                        color: #666;
+                        line-height: 1.3;
                     }
                 }
             }
+
             .swiper-slide-active {
                 .img {
                     img {
-                        border-radius:0;
+                        border-radius: 0;
                     }
                 }
+
                 .box {
-                    display:block;
+                    display: block;
                 }
             }
         }
@@ -1554,36 +1636,43 @@
     .accordion-wrap {
         @include vw-convert-mo(margin, 140 40 0);
         @include vw-convert-mo(margin-top, 140);
+
         .accordion {
             background: url(../images/icon_plus.png) calc(100% - 20px) 50% no-repeat;
-            background-size:24px;
+            background-size: 24px;
             @include vw-convert-mo(padding, 60 40);
             @include vw-font-size-mo(60);
-            line-height:1.2;
+            line-height: 1.2;
+
             &.active {
                 background: url(../images/icon_minus.png) calc(100% - 20px) 50% no-repeat;
-            background-size:24px;
+                background-size: 24px;
             }
+
             sup {
                 @include vw-font-size-mo(50);
             }
         }
-    
+
         .panel {
             @include vw-convert-mo(margin-left, 40);
+
             ul {
                 @include vw-convert-mo(padding, 30 0 60);
+
                 li {
                     @include vw-convert-mo(padding-left, 20);
                     @include vw-convert-mo(margin-top, 32);
                     @include vw-font-size-mo(32);
+
                     &::before {
-                        content:'';
-                        left:0;
+                        content: '';
+                        left: 0;
                         @include vw-convert-mo(width, 6);
                         @include vw-convert-mo(height, 6);
                     }
                 }
+
                 li.ing {
                     span {
                         @include vw-convert-mo(padding, 10 16);
@@ -1613,9 +1702,10 @@
     .contact-wrap {
         .inner {
             background: url(../images/m_map.png) center no-repeat;
-            background-size:cover;
+            background-size: cover;
             @include vw-convert-mo(padding, 280 40 20);
         }
+
         h2 {
             @include vw-font-size-mo(80);
             @include vw-convert-mo(margin-bottom, 900);
@@ -1627,11 +1717,12 @@
 
         .tel-wrap {
             li {
-                display:flex;
+                display: flex;
                 @include vw-convert-mo(padding-bottom, 24);
                 @include vw-font-size-mo(32);
-                line-height:1.3;
-                font-weight:300;
+                line-height: 1.3;
+                font-weight: 300;
+
                 strong {
                     @include vw-convert-mo(width, 60);
                 }
@@ -1647,34 +1738,41 @@
             .tit {
                 @include vw-font-size-mo(60);
             }
+
             .desc {
                 @include vw-convert-mo(padding-top, 60);
                 @include vw-font-size-mo(32);
-                word-break:keep-all;
+                word-break: keep-all;
             }
         }
 
         .accordion-wrap {
             @include vw-convert-mo(margin, 100 0 120);
+
             dd.panel {
                 .part {
                     flex-direction: column;
                     @include vw-convert-mo(padding-top, 80);
                     @include vw-convert-mo(padding-left, 20);
-                    &:first-child{
+
+                    &:first-child {
                         @include vw-convert-mo(padding-top, 40);
                     }
-                    &:last-child{
+
+                    &:last-child {
                         @include vw-convert-mo(padding-bottom, 50);
                     }
-                    p{
+
+                    p {
                         width: 100%;
                         @include vw-font-size-mo(36);
                     }
-                    ul{
-                        padding:0;
+
+                    ul {
+                        padding: 0;
                         @include vw-convert-mo(margin-top, 10);
-                        li{
+
+                        li {
                             @include vw-convert-mo(margin-top, 20);
                             @include vw-font-size-mo(32);
                         }
