@@ -4332,17 +4332,24 @@ button.swiper-pagination-bullet {
   }
 }
 @media screen and (max-width: 767px) {
-  .pjt-con-wrap.woori-my .pjt-top .pjt-top-img .splash-img {
-    right: 240px;
-    right: 12.5vw;
-    top: 3px;
-    width: 560px;
-    width: 29.1666666667vw;
+  .pjt-con-wrap.woori-my .pjt-top .pjt-top-img .bg-area {
+    padding-bottom: 60px;
+    padding-bottom: 3.9113428944vw;
   }
 }
-@media screen and (max-width: 767px) and (min-width: 1920px) {
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .pjt-con-wrap.woori-my .pjt-top .pjt-top-img .bg-area {
+    padding-bottom: 30px;
+    padding-bottom: 3.9113428944vw;
+  }
+}
+@media screen and (max-width: 767px) {
   .pjt-con-wrap.woori-my .pjt-top .pjt-top-img .splash-img {
-    right: 240px;
+    left: 50%;
+    transform: translateX(-25%);
+    top: -30px;
+    width: 560px;
+    width: 29.1666666667vw;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 1920px) {

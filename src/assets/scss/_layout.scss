@@ -1240,13 +1240,17 @@
 
                 .pjt-top-img {
                     position: relative;
-                    right: auto;
+                    right:auto;
                     width: 100%;
                     @include vw-convert-mo(margin-top, 100);
-
+                    .bg-area {
+                        @include vw-convert-mo(padding-bottom, 30);
+                    }
+                    
                     .splash-img {
-                        @include vw-convert-pc(right, 240);
-                        top: 3px;
+                        left: 50%;
+                        transform:translateX(-25%);
+                        top: -30px;
                         @include vw-convert-pc(width, 560);
 
                     }
