@@ -55,10 +55,12 @@
     
         if(scroll >= articleTop && scroll < articleBottom) {
             $(".main-indicator-wrap").addClass("white");
+            $(".menu-toggle").addClass('white')
         }
 
         if(scroll >= articleTop2 && scroll < articleBottom2) {
             $(".main-indicator-wrap").removeClass("white");
+            $(".menu-toggle").removeClass('white')
         }
     });
 </script>
