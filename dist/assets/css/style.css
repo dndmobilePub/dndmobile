@@ -321,10 +321,10 @@ header.active {
   margin-top: 48px;
 }
 .fullpage-menu .header-nav--footer {
-  padding-top: 40px;
+  padding-top: 80px;
 }
 .fullpage-menu .header-nav--footer .social-links {
-  margin-top: 40px;
+  margin-top: 70px;
   width: 100%;
 }
 .fullpage-menu .header-nav--footer .social-links li {
@@ -365,7 +365,7 @@ header.active {
 }
 
 .footer {
-  padding: 80px;
+  padding: 65px 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;

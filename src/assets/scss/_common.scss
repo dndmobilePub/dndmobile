@@ -295,10 +295,10 @@ header {
 
 	.header-nav {
 		&--footer {
-			padding-top: 40px;
+			padding-top: 80px;
 
 			.social-links {
-				margin-top: 40px;
+				margin-top: 70px;
 				width: 100%;
 
 				li {
@@ -361,7 +361,7 @@ header {
 }
 
 .footer {
-	padding: 80px;
+	padding: 65px 80px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
