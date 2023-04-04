@@ -158,14 +158,14 @@
     .phone-layout {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
         @include vw-convert-pc(padding-top, 110);
         @include vw-convert-pc(width, 1276);
         margin: 0 auto;
 
         &.type02 {
             @include vw-convert-pc(width, 864);
-            gap: 80px;
+            gap: 20px;
         }
 
         div {
@@ -293,19 +293,18 @@
         //             left: 0;
         //         }
         //     }
-        // }
-        .ico-if {
-            &:before {
-                content: "";
-                background: url(../images/ico-if.svg) 0;
+                                // }
 
-
-            }
-        }
 
         .pjt-top-full {
             background: url('../images/bg_sc_default.jpg') center no-repeat;
             background-size: cover;
+            .icon-if {
+                    @include vw-convert-pc(padding-right, 100);
+                    background: url(../images/ico-if.svg) right 10px no-repeat;
+                    background-size: 7%;
+                    display: inline-block;
+                }
         }
 
         .pjt-con {
@@ -559,6 +558,9 @@
                         @include vw-convert-pc(padding-bottom, 16);
                         @include vw-font-size-pc(36);
                         font-weight: 600;
+                        span {
+                            font-weight: 100;
+                        }
                     }
 
                     .tit02 {
@@ -785,11 +787,12 @@
                     border-radius: 50%;
                     background: #000;
                 }
+                &:hover{
+                    color: #E30D3F;
+                }
             }
 
             li.ing {
-                color: #E30D3F;
-
                 span {
                     background-color: #000;
                     @include vw-convert-pc(padding, 15 20);
@@ -1249,6 +1252,11 @@
 
                 .pjt-title {
                     margin-top: 0;
+                    .icon-if {
+                            @include vw-convert-mo(padding-right, 60);
+                            background: url(../images/ico-if.svg) right 72% no-repeat;
+                            background-size: 10%;
+                        }
                 }
 
                 .pin-spacer {
