@@ -1,7 +1,6 @@
 {
-  "name": "dndmobile",
+  "name": "khm",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,5 +32,6 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.59.3"
-  }
+  },
+  "description": ""
 }

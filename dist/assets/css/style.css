@@ -2437,8 +2437,8 @@ button.swiper-pagination-bullet {
   width: 18.8541666667vw;
   border: 10px solid #000;
   border-radius: 50px;
-  box-shadow: 23px 23px 28px rgba(0, 0, 0, 0.13);
-  margin-bottom: 40px;
+  /* box-shadow: 23px 23px 28px rgba(0, 0, 0, 0.13);
+    margin-bottom: 40px; */
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.kb .pjt-top .pjt-top-img .pjt-img {
@@ -2539,7 +2539,7 @@ button.swiper-pagination-bullet {
 .pjt-con-wrap.kb .pjt-con .pjt-img {
   border-radius: 50px;
   border-radius: 2.6041666667vw;
-  box-shadow: 47px 47px 55px rgba(0, 0, 0, 0.13);
+  /* box-shadow: 47px 47px 55px rgba(0, 0, 0, 0.13); */
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.kb .pjt-con .pjt-img {
