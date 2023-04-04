@@ -219,8 +219,6 @@
                     @include vw-convert-pc(width, 362);
                     border: 10px solid #000;
                     border-radius: 50px;
-                    box-shadow: 23px 23px 28px rgba(0, 0, 0, 0.13);
-                    margin-bottom: 40px;
                 }
 
                 .circle {
@@ -263,7 +261,6 @@
 
             .pjt-img {
                 @include vw-convert-pc(border-radius, 50);
-                box-shadow: 47px 47px 55px rgba(0, 0, 0, 0.13);
             }
         }
     }
