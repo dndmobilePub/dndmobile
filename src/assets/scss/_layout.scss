@@ -1122,6 +1122,9 @@
                 position: relative;
                 @include vw-convert-mo(padding-top, 80);
                 z-index: 2;
+                img {
+                    max-width:100%;
+                }
             }
         }
 
@@ -1139,12 +1142,14 @@
 
             .tit {
                 @include vw-convert-mo(padding-bottom, 24);
-                @include vw-font-size-mo(64);
+                @include vw-font-size-mo(72);
+                line-height:1.2;
             }
 
             .desc {
                 @include vw-font-size-mo(32);
                 font-weight: 300;
+                line-height: 1.375;
             }
         }
 
@@ -1152,6 +1157,9 @@
             width: 100%;
             @include vw-convert-mo(padding-top, 80);
             gap: 25px;
+            img {
+                max-width: 100%;
+            }
 
             div:nth-child(2) {
                 @include vw-convert-mo(margin-top, 80);
@@ -1199,6 +1207,7 @@
 
                 .pjt-top-img {
                     width: 100%;
+                    @include vw-convert-mo(padding-top, 40);
 
                     .pjt-img {
                         @include vw-convert-mo(width, 284);
@@ -1305,6 +1314,7 @@
 
         &.woori-my {
             .pjt-top {
+                @include vw-convert-mo(padding-bottom, 60);
                 .pjt-title {
                     width: 100%;
                 }
@@ -1313,7 +1323,7 @@
                     position: relative;
                     right: auto;
                     width: 100%;
-                    @include vw-convert-mo(margin-top, 100);
+                    @include vw-convert-mo(margin-top, 214);
 
                     .bg-area {
                         @include vw-convert-mo(padding-bottom, 30);
@@ -1321,9 +1331,11 @@
 
                     .splash-img {
                         left: 50%;
-                        transform: translateX(-25%);
-                        top: -30px;
-                        @include vw-convert-pc(width, 560);
+                        transform: translateX(-50%);
+                        // top: -30px;
+                        @include vw-convert-mo(top, -120);
+                        // width:46%;
+                        @include vw-convert-mo(width, 284);
 
                     }
 
@@ -1430,10 +1442,13 @@
                 @include vw-convert-mo(padding-bottom, 60);
                 @include vw-font-size-mo(60);
                 font-weight: 700;
+                line-height: 1.26;
             }
 
             .desc {
                 @include vw-font-size-mo(32);
+                line-height: 1.375;
+                word-break: keep-all;
 
             }
         }
@@ -1556,6 +1571,10 @@
                         @include vw-font-size-mo(32);
                     }
                 }
+            }
+
+            .clients-list-wrap {
+                @include vw-convert-mo(margin-top, 120);
             }
         }
     }
@@ -1740,7 +1759,7 @@
     }
 
     .recruit-wrap {
-        @include vw-convert-mo(margin, 240 40 20);
+        @include vw-convert-mo(margin, 280 40 20);
 
         .title-wrap {
             .tit {

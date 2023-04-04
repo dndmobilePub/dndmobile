@@ -43,3 +43,22 @@
         </div>
     </div>
 </section>
+
+<script>
+    $(window).scroll(function(){
+        let scroll = $(window).scrollTop();
+        let articleTop = $(".cj .pjt-con").offset().top;
+        let articleBottom = articleTop + $(".cj .pjt-con").outerHeight();
+
+        let articleTop2 = $(".cj .pjt-top").offset().top;
+        let articleBottom2 = articleTop2 + $(".cj .pjt-top").outerHeight();
+    
+        if(scroll >= articleTop && scroll < articleBottom) {
+            $(".main-indicator-wrap").addClass("white");
+        }
+
+        if(scroll >= articleTop2 && scroll < articleBottom2) {
+            $(".main-indicator-wrap").removeClass("white");
+        }
+    });
+</script>
