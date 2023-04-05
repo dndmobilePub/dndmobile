@@ -433,7 +433,7 @@ header.active {
 
 @media screen and (max-width: 767px) {
   .menu-toggle {
-    top: 57px;
+    top: 20px;
     right: 18px;
   }
   header .header--inner {
