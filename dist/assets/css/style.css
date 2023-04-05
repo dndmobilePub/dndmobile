@@ -3006,6 +3006,7 @@ button.swiper-pagination-bullet {
   left: 0;
   top: 0;
   width: 60%;
+  opacity: 0.5;
 }
 .about-wrap .section.nth02 .inner .service-list-wrap .bg-area .circle02 {
   position: absolute;
@@ -3013,6 +3014,7 @@ button.swiper-pagination-bullet {
   right: 4.6875vw;
   top: 0;
   width: 60%;
+  opacity: 0.5;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .bg-area .circle02 {
@@ -3450,6 +3452,9 @@ button.swiper-pagination-bullet {
 }
 .accordion-wrap .panel ul li:hover {
   color: #E30D3F;
+}
+.accordion-wrap .panel ul li:hover::before {
+  background-color: #E30D3F;
 }
 .accordion-wrap .panel ul li.ing span {
   background-color: #000;
@@ -4102,8 +4107,8 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .pjt-con-wrap.kb .pjt-top {
-    padding-top: 252px;
-    padding-top: 32.8552803129vw;
+    padding-top: 208px;
+      padding-top: 27.118644068vw;
   }
 }
 @media screen and (max-width: 767px) {

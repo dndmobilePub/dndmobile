@@ -421,7 +421,7 @@ header {
 
 @media screen and (max-width:767px) {
 	.menu-toggle {
-		top: 57px;
+		top: 20px;
 		right: 18px;
 	}
 
@@ -453,7 +453,7 @@ header {
 			&--footer {
 				position: absolute;
 				left: 20px;
-				top: 57px;
+				top: 26px;
 				z-index: 1002;
 
 				.logo {

@@ -544,6 +544,7 @@
                             left: 0;
                             top: 0;
                             width: 60%;
+                            opacity: 0.5;
                         }
 
                         .circle02 {
@@ -551,6 +552,7 @@
                             @include vw-convert-pc(right, 90);
                             top: 0;
                             width: 60%;
+                            opacity: 0.5;
                         }
                     }
 
@@ -790,6 +792,9 @@
                 &:hover{
                     color: #E30D3F;
                 }
+                                                                &:hover::before {
+                                                                    background-color: #E30D3F;
+                                                                }
             }
 
             li.ing {
@@ -804,10 +809,10 @@
 
                 }
 
-                &::before {
-                    content: '';
-                    background: #E30D3F;
-                }
+                                                                // &::before {
+                                                                //     content: '';
+                                                                //     background: #E30D3F;
+                                                                // }
             }
 
             li.webaward {
@@ -1199,7 +1204,7 @@
 
         &.kb {
             .pjt-top {
-                @include vw-convert-mo(padding-top, 252);
+                @include vw-convert-mo(padding-top, 208);
 
                 .pjt-title {
                     width: 100%;
