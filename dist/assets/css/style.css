@@ -454,7 +454,7 @@ header.active {
   header .header--footer {
     position: absolute;
     left: 20px;
-    top: 57px;
+    top: 26px;
     z-index: 1002;
   }
   header .header--footer .logo--white {
