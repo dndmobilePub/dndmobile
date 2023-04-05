@@ -1733,7 +1733,7 @@
 
     .contact-wrap {
         .inner {
-            background: url(../images/m_map.png) center no-repeat;
+            background: url(../images/m_map.png) center 20% no-repeat;
             background-size: cover;
             @include vw-convert-mo(padding, 280 40 20);
         }

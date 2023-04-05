@@ -5310,7 +5310,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .contact-wrap .inner {
-    background: url(../images/m_map.png) center no-repeat;
+    background: url(../images/m_map.png) center 20% no-repeat;
     background-size: cover;
     padding: 560px 80px 40px;
     padding: 36.5058670143vw 5.2151238592vw 2.6075619296vw;
