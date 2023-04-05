@@ -3423,6 +3423,7 @@ button.swiper-pagination-bullet {
   line-height: 1.57;
   font-weight: 300;
 }
+
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li {
     padding-left: 34px;
@@ -3450,10 +3451,10 @@ button.swiper-pagination-bullet {
   border-radius: 50%;
   background: #000;
 }
-.accordion-wrap .panel ul li:hover {
+.project-wrap .accordion-wrap .panel ul li:hover {
   color: #E30D3F;
 }
-.accordion-wrap .panel ul li:hover::before {
+.project-wrap .accordion-wrap .panel ul li:hover::before {
   background-color: #E30D3F;
 }
 .accordion-wrap .panel ul li.ing span {
@@ -3483,10 +3484,7 @@ button.swiper-pagination-bullet {
     font-size: 24px;
   }
 }
-.accordion-wrap .panel ul li.ing::before {
-  content: "";
-  background: #E30D3F;
-}
+
 .accordion-wrap .panel ul li.webaward {
   background: url(../images/icon_webaward.svg) right 0 no-repeat;
   background-size: contain;
@@ -5310,7 +5308,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .contact-wrap .inner {
-    background: url(../images/m_map.png) center 20% no-repeat;
+    background: url(../images/m_map.png) center no-repeat;
     background-size: cover;
     padding: 560px 80px 40px;
     padding: 36.5058670143vw 5.2151238592vw 2.6075619296vw;

@@ -789,12 +789,6 @@
                     border-radius: 50%;
                     background: #000;
                 }
-                &:hover{
-                    color: #E30D3F;
-                }
-                                                                &:hover::before {
-                                                                    background-color: #E30D3F;
-                                                                }
             }
 
             li.ing {
@@ -1702,6 +1696,12 @@
                         left: 0;
                         @include vw-convert-mo(width, 6);
                         @include vw-convert-mo(height, 6);
+                    }
+                    &:hover{
+                        color: #E30D3F;
+                    }
+                    &:hover::before {
+                        background-color: #E30D3F;
                     }
                 }
 
