@@ -2437,8 +2437,6 @@ button.swiper-pagination-bullet {
   width: 18.8541666667vw;
   border: 10px solid #000;
   border-radius: 50px;
-  /* box-shadow: 23px 23px 28px rgba(0, 0, 0, 0.13);
-    margin-bottom: 40px; */
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.kb .pjt-top .pjt-top-img .pjt-img {
@@ -2539,7 +2537,6 @@ button.swiper-pagination-bullet {
 .pjt-con-wrap.kb .pjt-con .pjt-img {
   border-radius: 50px;
   border-radius: 2.6041666667vw;
-  /* box-shadow: 47px 47px 55px rgba(0, 0, 0, 0.13); */
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.kb .pjt-con .pjt-img {
@@ -3423,7 +3420,6 @@ button.swiper-pagination-bullet {
   line-height: 1.57;
   font-weight: 300;
 }
-
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li {
     padding-left: 34px;
@@ -3450,12 +3446,6 @@ button.swiper-pagination-bullet {
   height: 5px;
   border-radius: 50%;
   background: #000;
-}
-.project-wrap .accordion-wrap .panel ul li:hover {
-  color: #E30D3F;
-}
-.project-wrap .accordion-wrap .panel ul li:hover::before {
-  background-color: #E30D3F;
 }
 .accordion-wrap .panel ul li.ing span {
   background-color: #000;
@@ -3484,7 +3474,6 @@ button.swiper-pagination-bullet {
     font-size: 24px;
   }
 }
-
 .accordion-wrap .panel ul li.webaward {
   background: url(../images/icon_webaward.svg) right 0 no-repeat;
   background-size: contain;
@@ -4099,14 +4088,14 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .pjt-con-wrap.kb .pjt-top {
-    padding-top: 504px;
-    padding-top: 32.8552803129vw;
+    padding-top: 416px;
+    padding-top: 27.1186440678vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .pjt-con-wrap.kb .pjt-top {
     padding-top: 208px;
-      padding-top: 27.118644068vw;
+    padding-top: 27.1186440678vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5242,6 +5231,16 @@ button.swiper-pagination-bullet {
   }
 }
 @media screen and (max-width: 767px) {
+  .accordion-wrap .panel ul li:hover {
+    color: #E30D3F;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accordion-wrap .panel ul li:hover::before {
+    background-color: #E30D3F;
+  }
+}
+@media screen and (max-width: 767px) {
   .accordion-wrap .panel ul li.ing span {
     padding: 20px 32px;
     padding: 1.3037809648vw 2.0860495437vw;
@@ -5308,7 +5307,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .contact-wrap .inner {
-    background: url(../images/m_map.png) center no-repeat;
+    background: url(../images/m_map.png) center 20% no-repeat;
     background-size: cover;
     padding: 560px 80px 40px;
     padding: 36.5058670143vw 5.2151238592vw 2.6075619296vw;
