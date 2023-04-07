@@ -3,59 +3,59 @@
   font-weight: 45 920;
   font-style: normal;
   font-display: swap;
-  src: local("Pretendard Variable"), url("/dndmobile/font/PretendardVariable.woff2") format("woff2-variations");
+  src: local("Pretendard Variable"), url("/dndmobile/assets/font/PretendardVariable.woff2") format("woff2-variations");
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/dndmobile/font/Pretendard-Thin.woff") format("woff");
+  src: url("/dndmobile/assets/font/Pretendard-Thin.woff") format("woff");
   font-weight: 100;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/dndmobile/font/Pretendard-ExtraLight.woff") format("woff");
+  src: url("/dndmobile/assets/font/Pretendard-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/dndmobile/font/Pretendard-Light.woff") format("woff");
+  src: url("/dndmobile/assets/font/Pretendard-Light.woff") format("woff");
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/dndmobile/font/Pretendard-Regular.woff") format("woff");
+  src: url("/dndmobile/assets/font/Pretendard-Regular.woff") format("woff");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/dndmobile/font/Pretendard-Medium.woff") format("woff");
+  src: url("/dndmobile/assets/font/Pretendard-Medium.woff") format("woff");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/dndmobile/font/Pretendard-SemiBold.woff") format("woff");
+  src: url("/dndmobile/assets/font/Pretendard-SemiBold.woff") format("woff");
   font-weight: 600;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/dndmobile/font/Pretendard-Bold.woff") format("woff");
+  src: url("/dndmobile/assets/font/Pretendard-Bold.woff") format("woff");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/dndmobile/font/Pretendard-ExtraBold.woff") format("woff");
+  src: url("/dndmobile/assets/font/Pretendard-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-display: swap;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/dndmobile/font/Pretendard-Black.woff") format("woff");
+  src: url("/dndmobile/assets/font/Pretendard-Black.woff") format("woff");
   font-weight: 900;
   font-display: swap;
 }
@@ -1092,7 +1092,6 @@ button.swiper-pagination-bullet {
 
 .swiper-container-cube .swiper-slide {
   pointer-events: none;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
   visibility: hidden;
@@ -1127,7 +1126,6 @@ button.swiper-pagination-bullet {
 .swiper-container-cube .swiper-slide-shadow-left,
 .swiper-container-cube .swiper-slide-shadow-right {
   z-index: 0;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -1149,7 +1147,6 @@ button.swiper-pagination-bullet {
 
 .swiper-container-flip .swiper-slide {
   pointer-events: none;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
 }
@@ -1168,7 +1165,6 @@ button.swiper-pagination-bullet {
 .swiper-container-flip .swiper-slide-shadow-left,
 .swiper-container-flip .swiper-slide-shadow-right {
   z-index: 0;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -2094,8 +2090,7 @@ button.swiper-pagination-bullet {
 }
 
 [data-aos^=flip][data-aos^=flip] {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition-property: transform;
 }
 
@@ -2544,13 +2539,13 @@ button.swiper-pagination-bullet {
   }
 }
 .pjt-con-wrap.sc .pjt-top-full {
-  background: url("/dndmobile/images/bg_sc_default.jpg") center no-repeat;
+  background: url("/dndmobile/assets/images/bg_sc_default.jpg") center no-repeat;
   background-size: cover;
 }
 .pjt-con-wrap.sc .pjt-top-full .icon-if {
   padding-right: 100px;
   padding-right: 5.2083333333vw;
-  background: url(/dndmobile/images/ico-if.svg) right 10px no-repeat;
+  background: url(/dndmobile/assets/images/ico-if.svg) right 10px no-repeat;
   background-size: 7%;
   display: inline-block;
 }
@@ -2637,7 +2632,7 @@ button.swiper-pagination-bullet {
 .pjt-con-wrap.cj .pjt-con {
   padding: 160px 20px 300px;
   padding: 8.3333333333vw 1.0416666667vw 15.625vw;
-  background: url(/dndmobile/images/bg_cj.jpg) center no-repeat;
+  background: url(/dndmobile/assets/images/bg_cj.jpg) center no-repeat;
   background-size: cover;
 }
 @media (min-width: 1920px) {
@@ -2656,7 +2651,7 @@ button.swiper-pagination-bullet {
   }
 }
 .pjt-con-wrap.woori-open .pjt-top-full {
-  background: url("/dndmobile/images/bg_wooriopen_default.jpg") center center no-repeat;
+  background: url("/dndmobile/assets/images/bg_wooriopen_default.jpg") center center no-repeat;
   background-size: cover;
 }
 .pjt-con-wrap.woori-open .pjt-con {
@@ -2684,7 +2679,7 @@ button.swiper-pagination-bullet {
   }
 }
 .pjt-con-wrap.woori-open .pjt-con .phone-layout.bg {
-  background: url("/dndmobile/images/img_wooriopen01_bg.png") center no-repeat;
+  background: url("/dndmobile/assets/images/img_wooriopen01_bg.png") center no-repeat;
   background-size: 100%;
   max-width: 1155px;
   max-width: 60.15625vw;
@@ -2798,7 +2793,7 @@ button.swiper-pagination-bullet {
   }
 }
 .pjt-con-wrap.woori-certi .pjt-top-full {
-  background: url("/dndmobile/images/bg_wooricerti.jpg") center no-repeat;
+  background: url("/dndmobile/assets/images/bg_wooricerti.jpg") center no-repeat;
   background-size: cover;
   padding-top: 254px;
   padding-top: 13.2291666667vw;
@@ -3355,7 +3350,7 @@ button.swiper-pagination-bullet {
   border-bottom: 1px solid #B4B4B4;
 }
 .accordion-wrap .accordion {
-  background: url(/dndmobile/images/icon_plus.png) calc(100% - 40px) 50% no-repeat;
+  background: url(/dndmobile/assets/images/icon_plus.png) calc(100% - 40px) 50% no-repeat;
   background-size: 30px;
   padding: 50px 40px;
   padding: 2.6041666667vw 2.0833333333vw;
@@ -3384,7 +3379,7 @@ button.swiper-pagination-bullet {
   }
 }
 .accordion-wrap .accordion.active {
-  background: url(/dndmobile/images/icon_minus.png) calc(100% - 40px) 50% no-repeat;
+  background: url(/dndmobile/assets/images/icon_minus.png) calc(100% - 40px) 50% no-repeat;
   background-size: 30px;
   border-bottom: 1px solid rgba(217, 217, 217, 0.5);
 }
@@ -3475,7 +3470,7 @@ button.swiper-pagination-bullet {
   }
 }
 .accordion-wrap .panel ul li.webaward {
-  background: url(/dndmobile/images/icon_webaward.svg) right 0 no-repeat;
+  background: url(/dndmobile/assets/images/icon_webaward.svg) right 0 no-repeat;
   background-size: contain;
 }
 
@@ -3530,7 +3525,7 @@ button.swiper-pagination-bullet {
 }
 .btn-wrap a.type1 {
   color: #000;
-  outline: 1px solid #383838;
+  border: 1px solid #383838;
 }
 .btn-wrap a.type1:hover {
   background-color: #f1f1f1;
@@ -3538,6 +3533,7 @@ button.swiper-pagination-bullet {
 .btn-wrap a.type2 {
   color: #fff;
   background-color: #222;
+  border: 1px solid #222;
 }
 .btn-wrap a.type2:hover {
   background-color: #383838;
@@ -3545,6 +3541,7 @@ button.swiper-pagination-bullet {
 .btn-wrap a.type3 {
   color: #fff;
   background-color: #E30D3F;
+  border: 1px solid #E30D3F;
 }
 .btn-wrap a.type3:hover {
   background-color: #D00D3B;
@@ -3552,7 +3549,7 @@ button.swiper-pagination-bullet {
 
 /*contact*/
 .contact-wrap .inner {
-  background: url(/dndmobile/images/map.png) center no-repeat;
+  background: url(/dndmobile/assets/images/map.png) center no-repeat;
   background-size: 100%;
   width: 100%;
   height: 100%;
@@ -4254,7 +4251,7 @@ button.swiper-pagination-bullet {
     display: none;
   }
   .pjt-con-wrap.sc .pjt-top-full {
-    background: url("/dndmobile/images/bg_sc_mo.jpg") center no-repeat;
+    background: url("/dndmobile/assets/images/bg_sc_mo.jpg") center no-repeat;
     background-size: cover;
   }
   .pjt-con-wrap.sc .pjt-top-full .pjt-title {
@@ -4263,7 +4260,7 @@ button.swiper-pagination-bullet {
   .pjt-con-wrap.sc .pjt-top-full .pjt-title .icon-if {
     padding-right: 120px;
     padding-right: 7.8226857888vw;
-    background: url(/dndmobile/images/ico-if.svg) right 72% no-repeat;
+    background: url(/dndmobile/assets/images/ico-if.svg) right 72% no-repeat;
     background-size: 10%;
   }
 }
@@ -4304,7 +4301,7 @@ button.swiper-pagination-bullet {
     display: none;
   }
   .pjt-con-wrap.woori-open .pjt-top-full {
-    background: url("/dndmobile/images/bg_wooriopen_mo.jpg") center no-repeat;
+    background: url("/dndmobile/assets/images/bg_wooriopen_mo.jpg") center no-repeat;
     background-size: cover;
   }
   .pjt-con-wrap.woori-open .pjt-top-full .pjt-title {
@@ -4482,7 +4479,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .pjt-con-wrap.woori-certi .pjt-top-full {
-    background: url("/dndmobile/images/bg_wooricerti_mo.jpg") center no-repeat;
+    background: url("/dndmobile/assets/images/bg_wooricerti_mo.jpg") center no-repeat;
     background-size: cover;
     padding: 0;
     padding-top: 504px;
@@ -5117,7 +5114,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .accordion-wrap .accordion {
-    background: url(/dndmobile/images/icon_plus.png) calc(100% - 20px) 50% no-repeat;
+    background: url(/dndmobile/assets/images/icon_plus.png) calc(100% - 20px) 50% no-repeat;
     background-size: 24px;
     padding: 120px 80px;
     padding: 7.8226857888vw 5.2151238592vw;
@@ -5140,7 +5137,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .accordion-wrap .accordion.active {
-    background: url(/dndmobile/images/icon_minus.png) calc(100% - 20px) 50% no-repeat;
+    background: url(/dndmobile/assets/images/icon_minus.png) calc(100% - 20px) 50% no-repeat;
     background-size: 24px;
   }
 }
@@ -5307,7 +5304,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .contact-wrap .inner {
-    background: url(/dndmobile/images/m_map.png) center 20% no-repeat;
+    background: url(/dndmobile/assets/images/m_map.png) center 20% no-repeat;
     background-size: cover;
     padding: 560px 80px 40px;
     padding: 36.5058670143vw 5.2151238592vw 2.6075619296vw;

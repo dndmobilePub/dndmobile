@@ -3525,7 +3525,7 @@ button.swiper-pagination-bullet {
 }
 .btn-wrap a.type1 {
   color: #000;
-  outline: 1px solid #383838;
+  border: 1px solid #383838;
 }
 .btn-wrap a.type1:hover {
   background-color: #f1f1f1;
@@ -3533,6 +3533,7 @@ button.swiper-pagination-bullet {
 .btn-wrap a.type2 {
   color: #fff;
   background-color: #222;
+  border: 1px solid #222;
 }
 .btn-wrap a.type2:hover {
   background-color: #383838;
@@ -3540,6 +3541,7 @@ button.swiper-pagination-bullet {
 .btn-wrap a.type3 {
   color: #fff;
   background-color: #E30D3F;
+  border: 1px solid #E30D3F;
 }
 .btn-wrap a.type3:hover {
   background-color: #D00D3B;

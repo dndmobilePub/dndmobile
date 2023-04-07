@@ -843,7 +843,7 @@
 
     a.type1 {
         color: #000;
-        outline: 1px solid #383838;
+        border: 1px solid #383838;
     }
 
     a.type1:hover {
@@ -853,6 +853,7 @@
     a.type2 {
         color: #fff;
         background-color: #222;
+        border: 1px solid #222;
     }
 
     a.type2:hover {
@@ -862,6 +863,7 @@
     a.type3 {
         color: #fff;
         background-color: $primary;
+        border: 1px solid $primary;
     }
 
     a.type3:hover {
