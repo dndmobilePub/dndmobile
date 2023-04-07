@@ -1,6 +1,4 @@
-# Project Title
-
-dndmobile homepage
+# DnD Mobile
 
 ## Description
 
