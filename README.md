@@ -17,11 +17,21 @@ git clone https://github.com/misunyang/dndmobile.git
 npm install
 ```
 ```
+npm install gulp
+```
+```
 npm install -g gulp
 ```
 ```
 npm install --save-dev gulp
 ```
+```
+npm link gulp
+```
+```
+npm link gulp-file-include gulp-sourcemaps gulp-concat gulp-uglify gulp-rename gulp-sass sass gulp-postcss cssnano autoprefixer browser-sync
+```
+
 3. Local start
 ```
 gulp
