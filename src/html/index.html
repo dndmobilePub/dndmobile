@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./include/head.html')
+<body>
+    <div class="wrap main">
+
+        @@include('./include/header.html')
+
+        <section class="main-indicator-wrap">
+            <div>
+                <a href="#one" class="active">
+                    <span></span>
+                    <em>KB국민은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#two" class="indi-white">
+                    <span></span>
+                    <em>SC제일은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#three" class="cj-white">
+                    <span></span>
+                    <em>CJ대한통운</em>
+                </a>
+            </div>
+            <div>
+                <a href="#four" class="indi-white">
+                    <span></span>
+                    <em>우리은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#five">
+                    <span></span>
+                    <em>우리은행</em>
+                </a>
+            </div>
+            <div>
+                <a href="#six">
+                    <span></span>
+                    <em>우리은행</em>
+                </a>
+            </div>
+        </section>
+
+        <section class="panel" id="one">
+            @@include('./project_kb.html')
+        </section>
+        <section class="panel" id="two">
+            @@include('./project_sc.html')
+        </section>
+        <section class="panel" id="three">
+            @@include('./project_cj.html')
+        </section>
+        <section class="panel" id="four">
+            @@include('./project_wooriopen.html')
+        </section>
+        <section class="panel" id="five">
+            @@include('./project_woorimy.html')
+        </section>
+        <section class="panel" id="six">
+            @@include('./project_wooricerti.html')
+        </section>
+        @@include('./include/footer.html')
+    </div>
+</body>
+
+</html>
