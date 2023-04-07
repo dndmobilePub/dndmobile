@@ -1,15 +1,12 @@
 # DnD Mobile
 
-## Description
+## 설명
 
 디앤디모바일 홈페이지 퍼블리싱 파일
 
-## Getting Started
+## 시작하기
 
-### Installing
-
-* How to run the program
-* Step-by-step bullets
+### 설치
 
 1. Clone the repo
 ```
@@ -29,3 +26,9 @@ npm install --save-dev gulp
 ```
 gulp
 ```
+
+### 배포
+1. src 폴더에서 수정 후 local 확인 필수 (현행화 필수)
+2. ftp_upload 폴더에서 한번 더 수정 후 ftp upload 진행 (ftp_upload 파일에서 진행하는 이유 : 폴더 구조 변경으로 인한 경로 수정)
+3. /(루트 폴더)에 html 파일 upload
+4. dndmobile 폴더에 assets 파일 업로드
