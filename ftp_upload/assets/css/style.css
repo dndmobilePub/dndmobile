@@ -534,7 +534,7 @@ header.active {
   .footer {
     flex-direction: column;
     align-items: flex-start;
-    padding: 100px 20px;
+    padding: 0 20px 100px;
   }
   .footer p {
     font-size: 80px;
@@ -4957,14 +4957,14 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .project-wrap {
-    padding: 384px 0px 300px;
-    padding: 25.0325945241vw 0vw 19.556714472vw;
+    padding: 384px 0px 400px;
+    padding: 25.0325945241vw 0vw 26.075619296vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .project-wrap {
-    padding: 192px 0px 150px;
-    padding: 25.0325945241vw 0vw 19.556714472vw;
+    padding: 192px 0px 200px;
+    padding: 25.0325945241vw 0vw 26.075619296vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5128,17 +5128,17 @@ button.swiper-pagination-bullet {
   .accordion-wrap .accordion {
     background: url(/dndmobile/assets/images/icon_plus.png) calc(100% - 20px) 50% no-repeat;
     background-size: 20px;
-    padding: 112px 80px;
-    padding: 7.3011734029vw 5.2151238592vw;
+    padding: 104px 80px;
+    padding: 6.7796610169vw 5.2151238592vw;
     font-size: 96px;
     font-size: 6.258148631vw;
-    line-height: 1.2;
+    line-height: 1;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .accordion-wrap .accordion {
-    padding: 56px 40px;
-    padding: 7.3011734029vw 5.2151238592vw;
+    padding: 52px 40px;
+    padding: 6.7796610169vw 5.2151238592vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -5155,14 +5155,14 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .accordion-wrap .accordion sup {
-    font-size: 100px;
-    font-size: 6.518904824vw;
+    font-size: 72px;
+    font-size: 4.6936114733vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .accordion-wrap .accordion sup {
-    font-size: 50px;
-    font-size: 6.518904824vw;
+    font-size: 36px;
+    font-size: 4.6936114733vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5259,6 +5259,8 @@ button.swiper-pagination-bullet {
     margin-left: 2.6075619296vw;
     font-size: 40px;
     font-size: 2.6075619296vw;
+    position: relative;
+    top: -3px;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -5282,7 +5284,17 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 767px) {
   .btn-wrap {
     flex-direction: column;
+    margin-top: 0px;
+    margin-top: 0vw;
   }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .btn-wrap {
+    margin-top: 0px;
+    margin-top: 0vw;
+  }
+}
+@media screen and (max-width: 767px) {
   .btn-wrap a {
     padding: 96px 0px;
     padding: 6.258148631vw 0vw;
@@ -5314,6 +5326,31 @@ button.swiper-pagination-bullet {
   .btn-wrap a:last-child {
     margin-top: 32px;
     margin-top: 4.1720990874vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .btn-wrap a:first-child {
+    margin-left: 0;
+    margin-top: 0px;
+    margin-top: 0vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .btn-wrap a:first-child {
+    margin-top: 0px;
+    margin-top: 0vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-wrap {
+    padding-bottom: 400px;
+    padding-bottom: 26.075619296vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .contact-wrap {
+    padding-bottom: 200px;
+    padding-bottom: 26.075619296vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5419,14 +5456,14 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .recruit-wrap {
-    margin: 560px 80px 40px;
-    margin: 36.5058670143vw 5.2151238592vw 2.6075619296vw;
+    margin: 384px 80px 400px;
+    margin: 25.0325945241vw 5.2151238592vw 26.075619296vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap {
-    margin: 280px 40px 20px;
-    margin: 36.5058670143vw 5.2151238592vw 2.6075619296vw;
+    margin: 192px 40px 200px;
+    margin: 25.0325945241vw 5.2151238592vw 26.075619296vw;
   }
 }
 @media screen and (max-width: 767px) {

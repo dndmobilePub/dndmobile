@@ -1588,7 +1588,7 @@
 	}
 
 	.project-wrap {
-		@include vw-convert-mo(padding, 192 0 150);
+		@include vw-convert-mo(padding, 192 0 200);
 
 		// padding:0;
 		.tab-top {
@@ -1675,9 +1675,9 @@
 		.accordion {
 			background: url(../images/icon_plus.png) calc(100% - 20px) 50% no-repeat;
 			background-size: 20px;
-			@include vw-convert-mo(padding, 56 40);
+			@include vw-convert-mo(padding, 52 40);
 			@include vw-font-size-mo(48);
-			line-height: 1.2;
+			line-height: 1;
 
 			&.active {
 				background: url(../images/icon_minus.png) calc(100% - 20px) 50% no-repeat;
@@ -1685,7 +1685,7 @@
 			}
 
 			sup {
-				@include vw-font-size-mo(50);
+				@include vw-font-size-mo(36);
 			}
 		}
 
@@ -1723,6 +1723,8 @@
 						@include vw-convert-mo(padding, 10 16);
 						@include vw-convert-mo(margin-left, 20);
 						@include vw-font-size-mo(20);
+						position: relative;
+						top:-3px;
 					}
 				}
 			}
@@ -1731,6 +1733,7 @@
 
 	.btn-wrap {
 		flex-direction: column;
+		@include vw-convert-mo(margin-top, 0);
 
 		a {
 			@include vw-convert-mo(padding, 48 0);
@@ -1742,9 +1745,16 @@
 			margin-left: 0;
 			@include vw-convert-mo(margin-top, 32);
 		}
+
+		a:first-child {
+			margin-left: 0;
+			@include vw-convert-mo(margin-top, 0);
+		}
 	}
 
 	.contact-wrap {
+		@include vw-convert-mo(padding-bottom, 200);
+
 		.inner {
 			background: url(../images/m_map.png) center 20% no-repeat;
 			background-size: cover;
@@ -1780,7 +1790,7 @@
 	}
 
 	.recruit-wrap {
-		@include vw-convert-mo(margin, 280 40 20);
+		@include vw-convert-mo(margin, 192 40 200);
 
 		.title-wrap {
 			.tit {
