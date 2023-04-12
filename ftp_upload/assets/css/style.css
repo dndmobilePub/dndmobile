@@ -5603,3 +5603,8 @@ button.swiper-pagination-bullet {
     font-size: 4.6936114733vw;
   }
 }
+@media screen and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul li::before {
+    top: 12px;
+  }
+}

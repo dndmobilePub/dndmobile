@@ -1837,6 +1837,10 @@
 						li {
 							@include vw-convert-mo(margin-top, 32);
 							@include vw-font-size-mo(36);
+
+							&::before {
+								top: 12px;
+							}
 						}
 					}
 				}
