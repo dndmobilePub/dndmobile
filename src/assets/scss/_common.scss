@@ -367,6 +367,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	color: #222;
+	background: #fff;
 
 	p {
 		@include vw-font-size-pc(38);
@@ -561,7 +562,7 @@ header {
 	.footer {
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 0 20px 100px;
+		padding: 100px 20px;
 
 		p {
 			@include vw-font-size-mo(40);

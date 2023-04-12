@@ -370,6 +370,7 @@ header.active {
   justify-content: space-between;
   align-items: center;
   color: #222;
+  background: #fff;
 }
 .footer p {
   font-size: 38px;
@@ -534,7 +535,7 @@ header.active {
   .footer {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 20px 100px;
+    padding: 100px 20px;
   }
   .footer p {
     font-size: 80px;
@@ -4847,6 +4848,18 @@ button.swiper-pagination-bullet {
   }
 }
 @media screen and (max-width: 767px) {
+  .about-wrap .section:last-child {
+    padding-bottom: 0px;
+    padding-bottom: 0vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .about-wrap .section:last-child {
+    padding-bottom: 0px;
+    padding-bottom: 0vw;
+  }
+}
+@media screen and (max-width: 767px) {
   .about-wrap .section .txt-ani {
     left: 80px;
     left: 5.2151238592vw;
@@ -4957,14 +4970,14 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .project-wrap {
-    padding: 384px 0px 400px;
-    padding: 25.0325945241vw 0vw 26.075619296vw;
+    padding: 384px 0px 0px;
+    padding: 25.0325945241vw 0vw 0vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .project-wrap {
-    padding: 192px 0px 200px;
-    padding: 25.0325945241vw 0vw 26.075619296vw;
+    padding: 192px 0px 0px;
+    padding: 25.0325945241vw 0vw 0vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5342,18 +5355,6 @@ button.swiper-pagination-bullet {
   }
 }
 @media screen and (max-width: 767px) {
-  .contact-wrap {
-    padding-bottom: 400px;
-    padding-bottom: 26.075619296vw;
-  }
-}
-@media screen and (max-width: 767px) and (max-width: 767px) {
-  .contact-wrap {
-    padding-bottom: 200px;
-    padding-bottom: 26.075619296vw;
-  }
-}
-@media screen and (max-width: 767px) {
   .contact-wrap .inner {
     background: url(../images/m_map.png) center 20% no-repeat;
     background-size: cover;
@@ -5456,14 +5457,14 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .recruit-wrap {
-    margin: 384px 80px 400px;
-    margin: 25.0325945241vw 5.2151238592vw 26.075619296vw;
+    margin: 384px 80px 0px;
+    margin: 25.0325945241vw 5.2151238592vw 0vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap {
-    margin: 192px 40px 200px;
-    margin: 25.0325945241vw 5.2151238592vw 26.075619296vw;
+    margin: 192px 40px 0px;
+    margin: 25.0325945241vw 5.2151238592vw 0vw;
   }
 }
 @media screen and (max-width: 767px) {

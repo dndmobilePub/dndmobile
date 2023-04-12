@@ -602,6 +602,7 @@
 			}
 		}
 
+
 		.txt-ani {
 			position: absolute;
 			@include vw-convert-pc(left, -80);
@@ -1551,6 +1552,10 @@
 				}
 			}
 
+			&:last-child {
+				@include vw-convert-mo(padding-bottom, 0);
+			}
+
 			.txt-ani {
 				@include vw-convert-mo(left, 40);
 				@include vw-font-size-mo(80);
@@ -1588,7 +1593,7 @@
 	}
 
 	.project-wrap {
-		@include vw-convert-mo(padding, 192 0 200);
+		@include vw-convert-mo(padding, 192 0 0);
 
 		// padding:0;
 		.tab-top {
@@ -1753,7 +1758,6 @@
 	}
 
 	.contact-wrap {
-		@include vw-convert-mo(padding-bottom, 200);
 
 		.inner {
 			background: url(../images/m_map.png) center 20% no-repeat;
@@ -1790,7 +1794,7 @@
 	}
 
 	.recruit-wrap {
-		@include vw-convert-mo(margin, 192 40 200);
+		@include vw-convert-mo(margin, 192 40 0);
 
 		.title-wrap {
 			.tit {
