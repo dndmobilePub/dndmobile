@@ -295,14 +295,31 @@ header {
 
 	.header-nav {
 		&--footer {
-			padding-top: 80px;
+			padding-top: 60px;
 
 			.social-links {
-				margin-top: 70px;
+				margin-top: 30px;
 				width: 100%;
 
 				li {
 					margin-bottom: 20px;
+
+					&:first-child {
+						.ico {
+							.stroke-white,
+							.stroke-black {
+								stroke: $primary;
+							}
+							.fill-white,
+							.fill-black {
+								fill: $primary;
+							}
+						}
+
+						span {
+							color: $primary;
+						}
+					}
 
 					a {
 						span {
@@ -310,22 +327,6 @@ header {
 							margin-left: 14px;
 						}
 
-						&:hover {
-							.ico {
-								.stroke-white,
-								.stroke-black {
-									stroke: $primary;
-								}
-								.fill-white,
-								.fill-black {
-									fill: $primary;
-								}
-							}
-
-							span {
-								color: $primary;
-							}
-						}
 					}
 
 					&.active {
@@ -421,14 +422,36 @@ header {
 
 @media screen and (max-width:767px) {
 	.menu-toggle {
-		top: 20px;
+		top: 13px;
 		right: 18px;
+	
+		&.white {
+			.hamburger {
+				path {
+					stroke: #000;
+				}
+			}
+		}
+		&.active {
+			.hamburger {
+				path {
+					stroke: #fff;
+				}
+			}
+		}
 	}
 
 	header {
+
+		&.active {
+			opacity: 1;
+			transform: translateY(0%);
+			background: #fff;
+		}
+
 		.header {
 			&--inner {
-				padding-top: 70px;
+				padding-top: 56px;
 
 				.logo {
 					&--black {
@@ -453,7 +476,7 @@ header {
 			&--footer {
 				position: absolute;
 				left: 20px;
-				top: 26px;
+				top: 13px;
 				z-index: 1002;
 
 				.logo {
@@ -538,7 +561,7 @@ header {
 	.footer {
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 40px 20px;
+		padding: 100px 20px;
 
 		p {
 			@include vw-font-size-mo(40);
