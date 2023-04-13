@@ -401,15 +401,16 @@
 
 	&.woori-my {
 		.pjt-top {
+			position: relative;
 			.pjt-top-img {
 				position: absolute;
-				@include vw-convert-pc(right, 230);
+				@include vw-convert-pc(right, 188);
 				@include vw-convert-pc(width, 1183);
 
 				.splash-img {
 					position: absolute;
-					@include vw-convert-pc(right, 163);
-					top: 3px;
+					@include vw-convert-pc(right, 160);
+					top: -30px;
 					@include vw-convert-pc(width, 390);
 
 				}
@@ -1041,6 +1042,12 @@
 						top: 0;
 					}
 				}
+			}
+		}
+
+		&.woori-my {
+			.pjt-top-img {
+				@include vw-convert-tb(bottom, -80);
 			}
 		}
 	}

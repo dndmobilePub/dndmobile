@@ -2716,16 +2716,19 @@ button.swiper-pagination-bullet {
     margin-top: 90px;
   }
 }
+.pjt-con-wrap.woori-my .pjt-top {
+  position: relative;
+}
 .pjt-con-wrap.woori-my .pjt-top .pjt-top-img {
   position: absolute;
-  right: 230px;
-  right: 11.9791666667vw;
+  right: 188px;
+  right: 9.7916666667vw;
   width: 1183px;
   width: 61.6145833333vw;
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.woori-my .pjt-top .pjt-top-img {
-    right: 230px;
+    right: 188px;
   }
 }
 @media (min-width: 1920px) {
@@ -2735,15 +2738,15 @@ button.swiper-pagination-bullet {
 }
 .pjt-con-wrap.woori-my .pjt-top .pjt-top-img .splash-img {
   position: absolute;
-  right: 163px;
-  right: 8.4895833333vw;
-  top: 3px;
+  right: 160px;
+  right: 8.3333333333vw;
+  top: -30px;
   width: 390px;
   width: 20.3125vw;
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.woori-my .pjt-top .pjt-top-img .splash-img {
-    right: 163px;
+    right: 160px;
   }
 }
 @media (min-width: 1920px) {
@@ -3821,6 +3824,12 @@ button.swiper-pagination-bullet {
   .pjt-con-wrap.cj .pjt-top .pjt-top-img .pjt-img02 {
     bottom: auto;
     top: 0;
+  }
+}
+@media screen and (max-width: 1440px) and (max-width: 1440px) {
+  .pjt-con-wrap.woori-my .pjt-top-img {
+    bottom: -80px;
+    bottom: -5.5555555556vw;
   }
 }
 @media screen and (max-width: 1440px) {
