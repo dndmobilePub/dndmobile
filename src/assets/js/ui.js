@@ -13,6 +13,23 @@ $(".tab-top > ul > li").click(function () {
     $(".tab-detail").eq(tabIdx).fadeIn(600);
 });
 
+function tabScollHorizen() {
+    if (tabScollHorizen.read) {
+       return;
+    }
+    tabScollHorizen = this.scrollWidth - (Math.floor(this.scrollLeft)) === this.clientWidth;
+    if(tabScollHorizen == true ){
+       $('.bg.hide-pc').css('display','none');
+    }else{
+         $('.bg.hide-pc').css('display','block');
+     }
+ }
+ 
+ onload = function () {
+    var tabList = document.querySelector(".tab-top ul");
+    tabList.onscroll = tabScollHorizen;
+ };
+
 
 /**
  * ==============================+

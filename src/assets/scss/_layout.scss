@@ -655,6 +655,12 @@
 
 	.tab-top {
 		position: relative;
+		-ms-overflow-style: none; /* 인터넷 익스플로러 */
+		scrollbar-width: none; /* 파이어폭스 */
+
+		::-webkit-scrollbar {
+			display: none; /* 크롬, 사파리, 오페라, 엣지 */
+		}
 
 		.bg-tit {
 			p {
@@ -679,14 +685,6 @@
 			flex-direction: row;
 			justify-content: center;
 			@include vw-convert-pc(margin, 36 0 38 0);
-
-			-ms-overflow-style: none; /* 인터넷 익스플로러 */
-			scrollbar-width: none; /* 파이어폭스 */
-
-			::-webkit-scrollbar {
-				display: none; /* 크롬, 사파리, 오페라, 엣지 */
-			}
-
 
 			li {
 				@include vw-convert-pc(margin-right, 120);
@@ -1001,13 +999,13 @@
 						font-weight: 300;
 						margin-top: 0;
 
-						// &:hover{
-						// 	color:inherit;
-						// 	&:before{
-						// 		background-color: #000;
-						// 	}
+						&:hover{
+							color:inherit;
+							&:before{
+								background-color: #000;
+							}
 
-						// }
+						}
 					}
 				}
 			}

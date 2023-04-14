@@ -3231,6 +3231,11 @@ button.swiper-pagination-bullet {
 }
 .project-wrap .tab-top {
   position: relative;
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
+}
+.project-wrap .tab-top ::-webkit-scrollbar {
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 .project-wrap .tab-top .bg-tit p {
   position: absolute;
@@ -3259,16 +3264,11 @@ button.swiper-pagination-bullet {
   justify-content: center;
   margin: 36px 0px 38px 0px;
   margin: 1.875vw 0vw 1.9791666667vw 0vw;
-  -ms-overflow-style: none; /* 인터넷 익스플로러 */
-  scrollbar-width: none; /* 파이어폭스 */
 }
 @media (min-width: 1920px) {
   .project-wrap .tab-top ul {
     margin: 36px 0px 38px 0px;
   }
-}
-.project-wrap .tab-top ul ::-webkit-scrollbar {
-  display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 .project-wrap .tab-top ul li {
   margin-right: 120px;
@@ -3792,6 +3792,12 @@ button.swiper-pagination-bullet {
   .recruit-wrap .accordion-wrap dd.panel .part ul li {
     font-size: 24px;
   }
+}
+.recruit-wrap .accordion-wrap dd.panel .part ul li:hover {
+  color: inherit;
+}
+.recruit-wrap .accordion-wrap dd.panel .part ul li:hover:before {
+  background-color: #000;
 }
 .recruit-wrap .accordion-wrap dd.panel .part:last-child {
   padding-bottom: 120px;
