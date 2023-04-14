@@ -303,7 +303,15 @@ header {
 
 				li {
 					margin-bottom: 20px;
-
+					&:not(:first-child) {
+						.ico{
+							svg{
+								.fill-white{
+									opacity: 0.4;
+								}
+							}
+						}
+					}
 					&:first-child {
 						.ico {
 							.stroke-white,
@@ -353,7 +361,7 @@ header {
 
 			.line {
 				display: block;
-				background: #2f2f2f;
+				background: #444;
 				height: 1px;
 				width: 260%;
 			}
@@ -562,7 +570,7 @@ header {
 	.footer {
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 100px 20px;
+		padding: 60px 20px 40px;
 
 		p {
 			@include vw-font-size-mo(40);

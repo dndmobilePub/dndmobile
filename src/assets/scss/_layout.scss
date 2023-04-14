@@ -680,6 +680,14 @@
 			justify-content: center;
 			@include vw-convert-pc(margin, 36 0 38 0);
 
+			-ms-overflow-style: none; /* 인터넷 익스플로러 */
+			scrollbar-width: none; /* 파이어폭스 */
+
+			::-webkit-scrollbar {
+				display: none; /* 크롬, 사파리, 오페라, 엣지 */
+			}
+
+
 			li {
 				@include vw-convert-pc(margin-right, 120);
 				@include vw-font-size-pc(30);
@@ -770,6 +778,29 @@
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
+		position: relative;
+
+		.pc-ico-wa {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			@include vw-convert-pc(right, 40);
+			@include vw-convert-pc(top, 50);
+
+			svg{
+				@include vw-convert-pc(width, 60);
+				@include vw-convert-pc(height, 60);
+			}
+
+			p{
+				@include vw-font-size-pc(18);
+				@include vw-convert-pc(margin-left, 16);
+				span{
+					@include vw-convert-pc(margin-top, 4);
+					display: block;
+				}
+			}
+		}
 
 		ul {
 			@include vw-convert-pc(padding, 16 0 50);
@@ -794,6 +825,16 @@
 					border-radius: 50%;
 					background: #000;
 				}
+				
+				&:hover {
+					color: #E30D3F;
+				}
+
+				&:hover::before {
+					background-color: #E30D3F;
+				}
+
+				.ico-wa{display: none;}
 			}
 
 			li.ing {
@@ -934,9 +975,6 @@
 	}
 
 	.accordion-wrap {
-		.accordion {
-			border-bottom: 0;
-		}
 
 		dd.panel {
 			.part {
@@ -962,6 +1000,14 @@
 						line-height: 1.3;
 						font-weight: 300;
 						margin-top: 0;
+
+						// &:hover{
+						// 	color:inherit;
+						// 	&:before{
+						// 		background-color: #000;
+						// 	}
+
+						// }
 					}
 				}
 			}
@@ -1472,10 +1518,10 @@
 		.section {
 			&.nth01 {
 				width: 100%;
-				@include vw-convert-mo(padding, 320 40 120);
+				@include vw-convert-mo(padding, 192 40 120);
 
 				.txt-ani {
-					@include vw-convert-mo(top, 280);
+					@include vw-convert-mo(top, 162);
 				}
 			}
 
@@ -1704,6 +1750,9 @@
 		.panel {
 			@include vw-convert-mo(margin-left, 40);
 
+			.pc-ico-wa {
+				display: none;
+			}
 			ul {
 				@include vw-convert-mo(padding, 30 0 60);
 
@@ -1721,12 +1770,14 @@
 						@include vw-convert-mo(height, 6);
 					}
 
-					&:hover {
-						color: #E30D3F;
-					}
+					.ico-wa{
+						@include vw-convert-mo(margin-left, 12);
+						@include vw-convert-mo(width, 40);
+						@include vw-convert-mo(height, 40);
+						position: relative;
+						top: 4px;
+						display: inline-block;
 
-					&:hover::before {
-						background-color: #E30D3F;
 					}
 				}
 
@@ -1822,7 +1873,7 @@
 				.part {
 					flex-direction: column;
 					@include vw-convert-mo(padding-top, 80);
-					@include vw-convert-mo(padding-left, 20);
+					@include vw-convert-mo(padding-left, 0);
 
 					&:first-child {
 						@include vw-convert-mo(padding-top, 40);
@@ -1834,7 +1885,7 @@
 
 					p {
 						width: 100%;
-						@include vw-font-size-mo(36);
+						@include vw-font-size-mo(40);
 					}
 
 					ul {
