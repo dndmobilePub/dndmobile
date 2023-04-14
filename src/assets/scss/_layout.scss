@@ -776,29 +776,6 @@
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
-		position: relative;
-
-		.pc-ico-wa {
-			display: flex;
-			align-items: center;
-			position: absolute;
-			@include vw-convert-pc(right, 40);
-			@include vw-convert-pc(top, 50);
-
-			svg{
-				@include vw-convert-pc(width, 60);
-				@include vw-convert-pc(height, 60);
-			}
-
-			p{
-				@include vw-font-size-pc(18);
-				@include vw-convert-pc(margin-left, 16);
-				span{
-					@include vw-convert-pc(margin-top, 4);
-					display: block;
-				}
-			}
-		}
 
 		ul {
 			@include vw-convert-pc(padding, 16 0 50);
@@ -833,6 +810,32 @@
 				}
 
 				.ico-wa{display: none;}
+
+				.pc-ico-wa {
+					display: flex;
+					align-items: center;
+					position: absolute;
+					@include vw-convert-pc(right, 40);
+					@include vw-convert-pc(top, 0);
+		
+					svg{
+						@include vw-convert-pc(width, 60);
+						@include vw-convert-pc(height, 60);
+					}
+		
+					p{
+						@include vw-font-size-pc(18);
+						@include vw-convert-pc(margin-left, 16);
+						span{
+							line-height: 1;
+							display: block;
+							color: #000;
+						}
+						strong{
+							color: #000;
+						}
+					}
+				}
 			}
 
 			li.ing {
@@ -981,6 +984,10 @@
 				justify-content: start;
 				align-items: baseline;
 				@include vw-convert-pc(padding-left, 560);
+
+				&:first-child{
+					@include vw-convert-pc(padding-top, 50);
+				}
 
 				&:last-child ul {
 					padding-bottom: 0;
@@ -1748,9 +1755,6 @@
 		.panel {
 			@include vw-convert-mo(margin-left, 40);
 
-			.pc-ico-wa {
-				display: none;
-			}
 			ul {
 				@include vw-convert-mo(padding, 30 0 60);
 
@@ -1776,6 +1780,9 @@
 						top: 4px;
 						display: inline-block;
 
+					}
+					.pc-ico-wa {
+						display: none;
 					}
 				}
 
