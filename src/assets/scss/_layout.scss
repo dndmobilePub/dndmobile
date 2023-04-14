@@ -986,7 +986,7 @@
 				@include vw-convert-pc(padding-left, 560);
 
 				&:first-child{
-					@include vw-convert-pc(padding-top, 50);
+					@include vw-convert-pc(padding-top, 120);
 				}
 
 				&:last-child ul {

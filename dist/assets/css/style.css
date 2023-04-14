@@ -3759,12 +3759,12 @@ button.swiper-pagination-bullet {
   }
 }
 .recruit-wrap .accordion-wrap dd.panel .part:first-child {
-  padding-top: 50px;
-  padding-top: 2.6041666667vw;
+  padding-top: 120px;
+  padding-top: 6.25vw;
 }
 @media (min-width: 1920px) {
   .recruit-wrap .accordion-wrap dd.panel .part:first-child {
-    padding-top: 50px;
+    padding-top: 120px;
   }
 }
 .recruit-wrap .accordion-wrap dd.panel .part:last-child ul {
