@@ -5704,26 +5704,26 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part:first-child {
-    padding-top: 108px;
-    padding-top: 7.0404172099vw;
+    padding-top: 116px;
+    padding-top: 7.5619295958vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part:first-child {
-    padding-top: 54px;
-    padding-top: 7.0404172099vw;
+    padding-top: 58px;
+    padding-top: 7.5619295958vw;
   }
 }
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part:last-child {
-    padding-bottom: 108px;
-    padding-bottom: 7.0404172099vw;
+    padding-bottom: 116px;
+    padding-bottom: 7.5619295958vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part:last-child {
-    padding-bottom: 54px;
-    padding-bottom: 7.0404172099vw;
+    padding-bottom: 58px;
+    padding-bottom: 7.5619295958vw;
   }
 }
 @media screen and (max-width: 767px) {
