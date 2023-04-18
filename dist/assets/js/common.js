@@ -107,26 +107,25 @@ menuToggle.addEventListener('click', function(){
 	tl.reversed(!tl.reversed());
   menuToggle.classList.toggle('active');
  
-	//230411 수정중
-	const header = document.querySelector('header');
-	const headerFooter = document.querySelector('header .header--footer h1');
-	const headerFooterIco = document.querySelectorAll('header .header--footer h1 path');
+	// const header = document.querySelector('header');
+	// const headerFooter = document.querySelector('header .header--footer h1');
+	// const headerFooterIco = document.querySelectorAll('header .header--footer h1 path');
 
-	if($('.menu-toggle').hasClass('active')){
-		header.style.zIndex = "1002";
-		header.style.background = "transparent";
-		headerFooter.classList.replace('logo--black','logo--white');
-		for ( var i = 0; i < headerFooterIco.length; i++ ) {
-			headerFooterIco[i].classList.replace('fill-black','fill-white');
-		}
-	}else{
-		header.style.zIndex = "10";
-		header.style.background = "#fff";
-		headerFooter.classList.replace('logo--white','logo--black');
-		for ( var i = 0; i < headerFooterIco.length; i++ ) {
-			headerFooterIco[i].classList.replace('fill-white','fill-black');
-		}
-	}
+	// if($('.menu-toggle').hasClass('active')){
+	// 	header.style.zIndex = "1002";
+	// 	header.style.background = "transparent";
+	// 	headerFooter.classList.replace('logo--black','logo--white');
+	// 	for ( var i = 0; i < headerFooterIco.length; i++ ) {
+	// 		headerFooterIco[i].classList.replace('fill-black','fill-white');
+	// 	}
+	// }else{
+	// 	header.style.zIndex = "10";
+	// 	header.style.background = "#fff";
+	// 	headerFooter.classList.replace('logo--white','logo--black');
+	// 	for ( var i = 0; i < headerFooterIco.length; i++ ) {
+	// 		headerFooterIco[i].classList.replace('fill-white','fill-black');
+	// 	}
+	// }
 
 });
 

@@ -142,7 +142,7 @@
 	</div>
 </header>
 <button class="menu-toggle" id="menuToggle">
-	<svg viewBox="0 0 12 10" width="30px" height="30px" class="hamburger">
+	<svg viewBox="0 0 12 10" width="40px" height="40px" class="hamburger">
 		<path d="M10,2 L2,2" class="bar-1"></path>
 		<path d="M2,5 L8,5" class="bar-2"></path>
 		<path d="M10,8 L2,8" class="bar-3"></path>
@@ -261,8 +261,8 @@
 				<div class="tab-detail tab-2023">
 					<div class="accordion-wrap">
 						<dl class="">
-							<dt class="accordion ">진행중인 프로젝트<sup>(16)</sup></dt>
-							<dd class="panel">
+							<dt class="accordion active">진행중인 프로젝트<sup>(16)</sup></dt>
+							<dd class="panel" style="display: block;">
 								<ul>
 									<li>하나캐피탈 디지털채널 운영</li>
 									<li>하나은행 마케팅플랫폼 및 데이터 허브</li>
@@ -752,6 +752,8 @@
 		new Swiper('.project-swiper', {
 			slidesPerView: 3,
 			spaceBetween: 110,
+			observer: true,
+			observeParents: true,
 			breakpoints: {
 				768: {
 					slidesPerView: 1,
@@ -761,6 +763,7 @@
 					autoplay: {
 						delay: 2000,
 					},
+					
 				}
 			},
 		});
