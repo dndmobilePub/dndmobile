@@ -51,15 +51,12 @@ function tabScollHorizen() {
 //     });
 // }
 
-$(".accordion-wrap dl").click(function(){
-    $(this).find(".accordion").toggleClass("active");
-    $(this).siblings().find(".accordion").removeClass("active");
-    $(this).find(".panel").slideToggle(300);
-    $(this).siblings().find(".panel").slideUp(300);
+$(".accordion").click(function(){
+    $(this).toggleClass("active");
+    $(this).parents("dl").siblings().find(".accordion").removeClass("active");
+    $(this).next(".panel").slideToggle(300);
+    $(this).parents("dl").siblings().find(".panel").slideUp(300);
 });
-
-
-
 
 /**
  * ==============================+

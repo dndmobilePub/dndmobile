@@ -1890,11 +1890,11 @@
 					@include vw-convert-mo(padding-left, 0);
 
 					&:first-child {
-						@include vw-convert-mo(padding-top, 40);
+						@include vw-convert-mo(padding-top, 54);
 					}
 
 					&:last-child {
-						@include vw-convert-mo(padding-bottom, 50);
+						@include vw-convert-mo(padding-bottom, 54);
 					}
 
 					p {
