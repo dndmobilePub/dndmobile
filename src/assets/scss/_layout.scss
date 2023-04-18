@@ -1004,16 +1004,20 @@
 					@include vw-convert-pc(width, 270);
 					@include vw-font-size-pc(30);
 					font-weight: 600;
-					line-height: 32px;
+					line-height: 1;
 				}
 
 				ul {
 					@include vw-convert-pc(padding-top, 0);
 					li {
 						@include vw-font-size-pc(24);
-						line-height: 32px;
+						line-height: 1;
 						font-weight: 300;
 						margin-top: 0;
+
+						+ li{
+							margin-top: 12px;
+						}
 
 						&:hover{
 							color:inherit;
@@ -1906,6 +1910,10 @@
 							@include vw-convert-mo(margin-top, 24);
 							@include vw-font-size-mo(36);
 							line-height: 18px ;
+
+							+ li{
+								@include vw-convert-mo(margin-top, 24);
+							}
 
 							&::before {
 								top: 12px;

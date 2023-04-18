@@ -3816,7 +3816,7 @@ button.swiper-pagination-bullet {
   font-size: 30px;
   font-size: 1.5625vw;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 1;
 }
 @media (min-width: 1920px) {
   .recruit-wrap .accordion-wrap dd.panel .part p {
@@ -3840,7 +3840,7 @@ button.swiper-pagination-bullet {
 .recruit-wrap .accordion-wrap dd.panel .part ul li {
   font-size: 24px;
   font-size: 1.25vw;
-  line-height: 32px;
+  line-height: 1;
   font-weight: 300;
   margin-top: 0;
 }
@@ -3848,6 +3848,9 @@ button.swiper-pagination-bullet {
   .recruit-wrap .accordion-wrap dd.panel .part ul li {
     font-size: 24px;
   }
+}
+.recruit-wrap .accordion-wrap dd.panel .part ul li + li {
+  margin-top: 12px;
 }
 .recruit-wrap .accordion-wrap dd.panel .part ul li:hover {
   color: inherit;
@@ -5768,6 +5771,18 @@ button.swiper-pagination-bullet {
   .recruit-wrap .accordion-wrap dd.panel .part ul li {
     font-size: 36px;
     font-size: 4.6936114733vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul li + li {
+    margin-top: 48px;
+    margin-top: 3.1290743155vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul li + li {
+    margin-top: 24px;
+    margin-top: 3.1290743155vw;
   }
 }
 @media screen and (max-width: 767px) {
