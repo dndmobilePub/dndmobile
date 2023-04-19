@@ -1024,6 +1024,10 @@
 							margin-top: 12px;
 						}
 
+						&:before{
+							@include vw-convert-pc(top, 12);
+						}
+
 						&:hover{
 							color:inherit;
 							&:before{

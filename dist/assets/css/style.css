@@ -3862,6 +3862,15 @@ button.swiper-pagination-bullet {
 .recruit-wrap .accordion-wrap dd.panel .part ul li + li {
   margin-top: 12px;
 }
+.recruit-wrap .accordion-wrap dd.panel .part ul li:before {
+  top: 12px;
+  top: 0.625vw;
+}
+@media (min-width: 1920px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul li:before {
+    top: 12px;
+  }
+}
 .recruit-wrap .accordion-wrap dd.panel .part ul li:hover {
   color: inherit;
 }
