@@ -2399,6 +2399,8 @@ button.swiper-pagination-bullet {
   align-items: center;
   justify-content: center;
   gap: 60px;
+  width: 80%;
+  margin: 0 auto;
 }
 .pjt-con-wrap .icon-list-wrap ul li {
   text-align: center;
@@ -3437,20 +3439,18 @@ button.swiper-pagination-bullet {
   }
 }
 .accordion-wrap .panel ul {
-  padding: 16px 0px 50px;
-  padding: 0.8333333333vw 0vw 2.6041666667vw;
+  padding: 60px 0px;
+  padding: 3.125vw 0vw;
 }
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul {
-    padding: 16px 0px 50px;
+    padding: 60px 0px;
   }
 }
 .accordion-wrap .panel ul li {
   position: relative;
   padding-left: 34px;
   padding-left: 1.7708333333vw;
-  margin-top: 34px;
-  margin-top: 1.7708333333vw;
   font-size: 38px;
   font-size: 1.9791666667vw;
   line-height: 1.57;
@@ -3463,12 +3463,16 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li {
-    margin-top: 34px;
+    font-size: 38px;
   }
 }
+.accordion-wrap .panel ul li + li {
+  margin-top: 12px;
+  margin-top: 0.625vw;
+}
 @media (min-width: 1920px) {
-  .accordion-wrap .panel ul li {
-    font-size: 38px;
+  .accordion-wrap .panel ul li + li {
+    margin-top: 12px;
   }
 }
 .accordion-wrap .panel ul li::before {
@@ -3476,12 +3480,18 @@ button.swiper-pagination-bullet {
   display: block;
   position: absolute;
   left: 10px;
-  top: 50%;
+  top: 26px;
+  top: 1.3541666667vw;
   transform: translateY(-50%);
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: #000;
+}
+@media (min-width: 1920px) {
+  .accordion-wrap .panel ul li::before {
+    top: 26px;
+  }
 }
 .accordion-wrap .panel ul li:hover {
   color: #E30D3F;
@@ -3553,10 +3563,10 @@ button.swiper-pagination-bullet {
 }
 .accordion-wrap .panel ul li.ing span {
   background-color: #000;
-  padding: 15px 20px;
-  padding: 0.78125vw 1.0416666667vw;
-  margin-left: 40px;
-  margin-left: 2.0833333333vw;
+  padding: 11px 20px;
+  padding: 0.5729166667vw 1.0416666667vw;
+  margin-left: 22px;
+  margin-left: 1.1458333333vw;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
   border-radius: 40px;
   font-size: 24px;
@@ -3568,12 +3578,12 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li.ing span {
-    padding: 15px 20px;
+    padding: 11px 20px;
   }
 }
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li.ing span {
-    margin-left: 40px;
+    margin-left: 22px;
   }
 }
 @media (min-width: 1920px) {
@@ -3918,6 +3928,11 @@ button.swiper-pagination-bullet {
     width: 60vw;
   }
 }
+@media screen and (max-width: 1440px) {
+  .pjt-con-wrap .icon-list-wrap ul {
+    gap: 30px;
+  }
+}
 @media screen and (max-width: 1440px) and (max-width: 1440px) {
   .pjt-con-wrap.kb .pjt-top .pjt-title {
     width: 800px;
@@ -3995,6 +4010,13 @@ button.swiper-pagination-bullet {
   .recruit-wrap {
     margin-top: 260px;
     margin-top: 18.0555555556vw;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .accordion-wrap .panel ul li::before {
+    left: 6px;
+    width: 3px;
+    height: 3px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5334,25 +5356,24 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .accordion-wrap .panel ul {
-    padding: 60px 0px 120px;
-    padding: 3.9113428944vw 0vw 7.8226857888vw;
+    padding: 104px 0px;
+    padding: 6.7796610169vw 0vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .accordion-wrap .panel ul {
-    padding: 30px 0px 60px;
-    padding: 3.9113428944vw 0vw 7.8226857888vw;
+    padding: 52px 0px;
+    padding: 6.7796610169vw 0vw;
   }
 }
 @media screen and (max-width: 767px) {
   .accordion-wrap .panel ul li {
     padding-left: 40px;
     padding-left: 2.6075619296vw;
-    margin-top: 48px;
-    margin-top: 3.1290743155vw;
     font-size: 72px;
     font-size: 4.6936114733vw;
-    line-height: 22px;
+    line-height: 88px;
+    line-height: 5.7366362451vw;
     word-break: keep-all;
   }
 }
@@ -5364,25 +5385,44 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .accordion-wrap .panel ul li {
-    margin-top: 24px;
-    margin-top: 3.1290743155vw;
+    font-size: 36px;
+    font-size: 4.6936114733vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .accordion-wrap .panel ul li {
-    font-size: 36px;
-    font-size: 4.6936114733vw;
+    line-height: 44px;
+    line-height: 5.7366362451vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accordion-wrap .panel ul li + li {
+    margin-top: 40px;
+    margin-top: 2.6075619296vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .accordion-wrap .panel ul li + li {
+    margin-top: 20px;
+    margin-top: 2.6075619296vw;
   }
 }
 @media screen and (max-width: 767px) {
   .accordion-wrap .panel ul li::before {
     content: "";
     left: 0;
-    top: 14px;
+    top: 40px;
+    top: 2.6075619296vw;
     width: 12px;
     width: 0.7822685789vw;
     height: 12px;
     height: 0.7822685789vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .accordion-wrap .panel ul li::before {
+    top: 20px;
+    top: 2.6075619296vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -5406,7 +5446,8 @@ button.swiper-pagination-bullet {
     height: 80px;
     height: 5.2151238592vw;
     position: relative;
-    top: 4px;
+    top: 16px;
+    top: 1.0430247718vw;
     display: inline-block;
   }
 }
@@ -5428,6 +5469,12 @@ button.swiper-pagination-bullet {
     height: 5.2151238592vw;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .accordion-wrap .panel ul li .ico-wa {
+    top: 8px;
+    top: 1.0430247718vw;
+  }
+}
 @media screen and (max-width: 767px) {
   .accordion-wrap .panel ul li .pc-ico-wa {
     display: none;
@@ -5442,7 +5489,7 @@ button.swiper-pagination-bullet {
     font-size: 40px;
     font-size: 2.6075619296vw;
     position: relative;
-    top: -2px;
+    top: -4px;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -5684,46 +5731,50 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part {
     flex-direction: column;
-    padding-top: 160px;
-    padding-top: 10.4302477184vw;
-    padding-left: 0px;
-    padding-left: 0vw;
+    padding: 128px 0px;
+    padding: 8.3441981747vw 0vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part {
-    padding-top: 80px;
-    padding-top: 10.4302477184vw;
+    padding: 64px 0px;
+    padding: 8.3441981747vw 0vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part + .part {
+    padding-top: 0px;
+    padding-top: 0vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
-  .recruit-wrap .accordion-wrap dd.panel .part {
-    padding-left: 0px;
-    padding-left: 0vw;
+  .recruit-wrap .accordion-wrap dd.panel .part + .part {
+    padding-top: 0px;
+    padding-top: 0vw;
   }
 }
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part:first-child {
-    padding-top: 116px;
-    padding-top: 7.5619295958vw;
+    padding-top: 144px;
+    padding-top: 9.3872229465vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part:first-child {
-    padding-top: 58px;
-    padding-top: 7.5619295958vw;
+    padding-top: 72px;
+    padding-top: 9.3872229465vw;
   }
 }
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part:last-child {
-    padding-bottom: 116px;
-    padding-bottom: 7.5619295958vw;
+    padding-bottom: 144px;
+    padding-bottom: 9.3872229465vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part:last-child {
-    padding-bottom: 58px;
-    padding-bottom: 7.5619295958vw;
+    padding-bottom: 72px;
+    padding-bottom: 9.3872229465vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5742,29 +5793,22 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part ul {
     padding: 0;
-    margin-top: 20px;
-    margin-top: 1.3037809648vw;
+    margin-top: 64px;
+    margin-top: 4.1720990874vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part ul {
-    margin-top: 10px;
-    margin-top: 1.3037809648vw;
+    margin-top: 32px;
+    margin-top: 4.1720990874vw;
   }
 }
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part ul li {
-    margin-top: 48px;
-    margin-top: 3.1290743155vw;
     font-size: 72px;
     font-size: 4.6936114733vw;
-    line-height: 18px;
-  }
-}
-@media screen and (max-width: 767px) and (max-width: 767px) {
-  .recruit-wrap .accordion-wrap dd.panel .part ul li {
-    margin-top: 24px;
-    margin-top: 3.1290743155vw;
+    line-height: 72px;
+    line-height: 4.6936114733vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -5773,20 +5817,33 @@ button.swiper-pagination-bullet {
     font-size: 4.6936114733vw;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul li {
+    line-height: 36px;
+    line-height: 4.6936114733vw;
+  }
+}
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part ul li + li {
-    margin-top: 48px;
-    margin-top: 3.1290743155vw;
+    margin-top: 40px;
+    margin-top: 2.6075619296vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part ul li + li {
-    margin-top: 24px;
-    margin-top: 3.1290743155vw;
+    margin-top: 20px;
+    margin-top: 2.6075619296vw;
   }
 }
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part ul li::before {
-    top: 12px;
+    top: 32px;
+    top: 2.0860495437vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul li::before {
+    top: 16px;
+    top: 2.0860495437vw;
   }
 }
