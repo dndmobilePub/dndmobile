@@ -5489,7 +5489,8 @@ button.swiper-pagination-bullet {
     font-size: 40px;
     font-size: 2.6075619296vw;
     position: relative;
-    top: -4px;
+    top: -8px;
+    top: -0.5215123859vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -5508,6 +5509,12 @@ button.swiper-pagination-bullet {
   .accordion-wrap .panel ul li.ing span {
     font-size: 20px;
     font-size: 2.6075619296vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .accordion-wrap .panel ul li.ing span {
+    top: -4px;
+    top: -0.5215123859vw;
   }
 }
 @media screen and (max-width: 767px) {

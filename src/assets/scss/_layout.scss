@@ -1830,7 +1830,7 @@
 						@include vw-convert-mo(margin-left, 20);
 						@include vw-font-size-mo(20);
 						position: relative;
-						top:-4px;
+						@include vw-convert-mo(top, -4);
 					}
 				}
 			}
