@@ -2182,7 +2182,7 @@ button.swiper-pagination-bullet {
 .main-indicator-wrap {
   position: fixed;
   right: 80px;
-  top: 50%;
+  bottom: -10%;
   transform: translateY(-50%);
   z-index: 1;
 }
@@ -2455,12 +2455,12 @@ button.swiper-pagination-bullet {
   background: url("../images/bg_intro.jpg") center no-repeat;
   background-size: cover;
   height: 100vh;
-  padding-top: 267px;
-  padding-top: 13.90625vw;
+  padding-top: 200px;
+  padding-top: 10.4166666667vw;
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.intro-wrap .pjt-top-full {
-    padding-top: 267px;
+    padding-top: 200px;
   }
 }
 .pjt-con-wrap.intro-wrap .pjt-top-full .pjt-title .tit {
@@ -2505,8 +2505,8 @@ button.swiper-pagination-bullet {
   }
 }
 .pjt-con-wrap.intro-wrap .ico-mouse {
-  height: 60px;
-  width: 40px;
+  height: 96px;
+  width: 74px;
   background: url(../images/icon-mouse.svg) no-repeat center/contain;
   position: absolute;
   bottom: 74px;
