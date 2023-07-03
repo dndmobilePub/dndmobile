@@ -179,7 +179,7 @@ header .header--inner .logo--black a {
 }
 header .header--inner .logo--black a .ico {
   width: 54px;
-  margin-right: 16px;
+  margin-right: 12px;
 }
 header .header--inner .logo--black a .ico img {
   -o-object-fit: contain;
