@@ -8,8 +8,21 @@
 		@@include('./include/header.html')
 
 		<section class="main-indicator-wrap">
+			
 			<div>
-				<a href="#one" class="active">
+				<a href="#intro" class="indi-white" class="active" id="intro-indi">
+					<span></span>
+					<em>DNDMOBILE</em>
+				</a>
+			</div>
+			<div>
+				<a href="#sc_aged">
+					<span></span>
+					<em>SC제일은행</em>
+				</a>
+			</div>
+			<div>
+				<a href="#one">
 					<span></span>
 					<em>KB국민은행</em>
 				</a>
@@ -46,6 +59,12 @@
 			</div>
 		</section>
 
+		<section class="panel intro-panel" id="intro">
+			@@include('./intro_dndmobile.html')
+		</section>
+		<section class="panel" id="sc_aged">
+			@@include('./project_sc_aged.html')
+		</section>
 		<section class="panel" id="one">
 			@@include('./project_kb.html')
 		</section>

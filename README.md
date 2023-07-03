@@ -10,7 +10,7 @@
 
 1. Clone the repo
 ```
-git clone https://github.com/misunyang/dndmobile.git
+git clone https://github.com/dndmobilePub/dndmobile.git
 ```
 2. Install NPM packages
 ```

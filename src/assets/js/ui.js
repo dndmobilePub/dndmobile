@@ -165,6 +165,12 @@ function setActive(link) {
         document.querySelector(".menu-toggle").classList.remove('white')
         document.querySelector("html").classList.remove('bg-black')
     }
+
+    /* 인트로 추가 */
+    if($("#intro-indi").hasClass("active") === true){
+        $(".panel").removeClass("active");
+        $("#intro").addClass("active");
+    }
 }
 
 //responsive

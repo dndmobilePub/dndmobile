@@ -142,7 +142,7 @@
 			font-weight: bold;
 
 			span {
-				font-weight: 100;
+				font-weight: 400;
 				line-height: 1.1;
 			}
 		}
@@ -201,6 +201,101 @@
 		display: flex;
 		gap: 14px;
 		@include vw-convert-pc(margin-top, 80);
+	}
+
+	&.intro-wrap{
+		.pjt-top-full {
+			background: url('../images/bg_intro.jpg') center no-repeat;
+			background-size: cover;
+			height: 100vh;
+
+			.pjt-title{
+				.desc{
+					color: rgba(255, 255, 255, 0.60);
+				}
+			}
+		}
+	}
+
+	&.sc-aged{
+		.pjt-top {
+			@include vw-convert-pc(padding, 180 242 0 160);
+			justify-content: space-between;
+
+			.pjt-title{
+				.desc{
+					@include vw-convert-pc(max-width, 600);
+					@include vw-convert-pc(padding-right, 0);
+				}
+			}
+			.pjt-top-img {
+				img{
+					@include vw-convert-pc(height, 782);
+				}
+			}
+		}
+
+		.pjt-con{
+			@include vw-convert-pc(padding, 160 0);
+			background: #0F71D9;
+		
+			.pjt-title{
+				.tit{
+					@include vw-convert-pc(margin-bottom, 40);
+				}
+			}
+			
+			.icon-layout{
+				@include vw-convert-pc(padding, 90 0 10);
+				@include vw-convert-pc(gap, 60);
+				display: flex;
+				justify-content: center;
+
+				li{
+					color:#fff;
+					text-align: center;
+					@include vw-convert-pc(font-size, 20);
+					span{
+						@include vw-convert-pc(width, 150);
+						@include vw-convert-pc(height, 150);
+						@include vw-convert-pc(margin-bottom, 18);
+						@include vw-convert-pc(border-radius, 150);
+						display: block;
+						border-radius: 150px;
+						background-color: #fff;
+						background-repeat: no-repeat;
+						background-position: center;
+						@include vw-convert-pc(background-size, 81);
+						
+						&.ico-sc-aged01{background-image: url(../images/img_sc_aged_icon01.png);}
+						&.ico-sc-aged02{background-image: url(../images/img_sc_aged_icon02.png);}
+						&.ico-sc-aged03{background-image: url(../images/img_sc_aged_icon03.png);}
+						&.ico-sc-aged04{background-image: url(../images/img_sc_aged_icon04.png);}
+						&.ico-sc-aged05{background-image: url(../images/img_sc_aged_icon05.png);}
+					}
+				}
+
+			}
+
+			&.type-white{
+				background: #fff;
+				
+				
+			}
+
+			.phone-layout{
+				&.type02{
+					.pjt-img{
+						@include vw-convert-pc(border-width, 15);
+						@include vw-convert-pc(border-radius, 55);
+						border-color: #000;
+						border-style: solid;
+					}
+				}
+			}
+
+		}
+
 	}
 
 	&.kb {
@@ -1298,6 +1393,88 @@
 			div {
 				@include vw-convert-mo(width, 52);
 			}
+		}
+
+		&.intro-wrap{
+			.pjt-top-full {
+				background: url('../images/bg_intro_mo.jpg') center no-repeat;
+				background-size: cover;
+
+				.desc {
+					@include vw-convert-mo(margin-right, 200);
+				}
+			}
+		}
+
+		&.sc-aged{
+			.pjt-top {
+				@include vw-convert-mo(padding, 144 40 0);
+
+				.pjt-title{
+					.desc{
+						@include vw-convert-mo(max-width, 600);
+					}
+				}
+	
+				.pjt-top-img {
+					position: relative;
+					@include vw-convert-mo(left, 200);
+					@include vw-convert-mo(top, 80);
+					img{
+						@include vw-convert-mo(height, 600);
+					}
+				}
+			}
+	
+			.pjt-con{
+				@include vw-convert-mo(padding, 160 40 100);
+							
+				.icon-layout{
+					@include vw-convert-mo(padding, 80 0 10);
+					display: flex;
+					justify-content: space-between;
+	
+					li{
+						@include vw-convert-mo(font-size, 24);
+						span{
+							@include vw-convert-mo(width, 100);
+							@include vw-convert-mo(height, 100);
+							@include vw-convert-mo(margin-bottom, 18);
+							@include vw-convert-mo(background-size, 60);
+						}
+					}
+	
+				}
+		
+				.phone-layout{
+					&.type02{
+						.pjt-img{
+							@include vw-convert-mo(border-width, 10);
+							@include vw-convert-mo(border-radius, 40);
+							border-color: #000;
+							border-style: solid;
+						}
+					}
+				}
+	
+				&.type-white{
+					@include vw-convert-mo(padding, 100 40 0);
+					.phone-layout{
+						.aos-init:first-child{
+							display: none;
+						}
+						div {
+							&:nth-child(2){
+								@include vw-convert-mo(margin-top, 0);
+							}
+							&:nth-child(3){
+								@include vw-convert-mo(margin-top, 80);
+							}
+						}
+					}
+				}
+			}
+	
 		}
 
 		&.kb {

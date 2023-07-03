@@ -115,6 +115,7 @@ header {
 			}
 
 			&--white {
+				@include vw-font-size-pc(32);
 				display: flex;
 				align-items: center;
 
@@ -450,7 +451,7 @@ header {
 		&.white {
 			.hamburger {
 				path {
-					stroke: #000;
+					stroke: #fff;
 				}
 			}
 		}
@@ -469,6 +470,25 @@ header {
 			opacity: 1;
 			transform: translateY(0%);
 			background: #fff;
+
+			.header {
+				&--footer {
+					.logo {
+						&--white {
+							a{
+								color: #000;
+								.ico{
+									svg{
+										path{
+											fill:#000;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 
 		.header {
