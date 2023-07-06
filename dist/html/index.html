@@ -304,6 +304,30 @@
 	</div>
 	<div class="ico-mouse"></div>
 </section>
+
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		let articleTop = $(".intro-wrap .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".intro-wrap .pjt-con").outerHeight();
+
+		let articleTop2 = $(".intro-wrap .pjt-top-full").offset().top;
+		let articleBottom2 = articleTop2 + $(".intro-wrap .pjt-top-full").outerHeight();
+
+		if (scroll >= 0 && scroll < articleTop) {
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll > articleBottom) {
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
+		}
+
+
+	});
+</script>
 		</section>
 		<section class="panel" id="sc_aged">
 			<section class="pjt-con-wrap sc-aged">
@@ -396,6 +420,44 @@
 		</div>
 	</div>
 </section>
+
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		let articleTop = $(".sc-aged .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".sc-aged .pjt-con").outerHeight();
+
+		let articleTop2 = $(".sc-aged .pjt-top").offset().top;
+		let articleBottom2 = articleTop2 + $(".sc-aged .pjt-top").outerHeight();
+
+		let articleTop3 = $(".sc-aged .type-white").offset().top;
+		let articleBottom3 = articleTop3 + $(".sc-aged .type-white").outerHeight();
+
+		if (scroll >= articleTop && scroll < articleBottom) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleTop2 && scroll < articleBottom2) {
+			$(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
+		}
+
+		if (scroll >= articleTop3 && scroll < articleBottom3) {
+			$(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
+		}
+
+
+	});
+</script>
 		</section>
 		<section class="panel" id="one">
 			<section class="pjt-con-wrap kb">
@@ -593,6 +655,42 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		let articleTop = $(".sc .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".sc .pjt-con").outerHeight();
+
+		let articleTop2 = $(".sc .pjt-top-full").offset().top;
+		let articleBottom2 = articleTop2 + $(".sc .pjt-top-full").outerHeight();
+
+		if (scroll >= articleTop2 && scroll < articleBottom2) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleTop && scroll < articleBottom) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleBottom && scroll < articleTop2) {
+			$(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
+		}
+
+
+		
+
+	});
+</script>
 		</section>
 		<section class="panel" id="three">
 			<section class="pjt-con-wrap cj">
@@ -655,12 +753,16 @@
 
 		if (scroll >= articleTop && scroll < articleBottom) {
 			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white')
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
 		}
 
 		if (scroll >= articleTop2 && scroll < articleBottom2) {
 			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white')
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
 		}
 	});
 </script>
@@ -776,17 +878,23 @@
 
 		if (scroll >= articleTopWoori && scroll < articleBottomWoori) {
 			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white')
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
 		}
 
 		if (scroll >= articleBottomWoori) {
 			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white')
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
 		}
 
 		if (scroll >= articleTopWoori2 && scroll < articleBottomWoori2) {
 			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white')
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
 		}
 	});
 </script>
@@ -871,6 +979,31 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		let articleTop = $(".woori-open .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".woori-open .pjt-con").outerHeight();
+
+		let articleTop2 = $(".woori-open .pjt-top-full").offset().top;
+		let articleBottom2 = articleTop2 + $(".woori-open .pjt-top-full").outerHeight();
+
+		if (scroll >= articleTop2 && scroll < articleBottom2) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleTop && scroll < articleBottom) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+	});
+</script>
 		</section>
 		<!-- footer -->
 <div class="footer">
@@ -883,12 +1016,13 @@
     </ul>
 </div>
 <button onclick="topFunction()" id="topBtn" class="btn-top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 20.25V3.75" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M5.25 10.5L12 3.75L18.75 10.5" stroke="white" stroke-width="1.8" stroke-linecap="round"
+    <svg class="quick_btn" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 20.25V3.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M5.25 10.5L12 3.75L18.75 10.5" stroke-width="1.8" stroke-linecap="round"
             stroke-linejoin="round" />
     </svg>
 </button>
+
 	</div>
 </body>
 

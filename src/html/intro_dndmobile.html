@@ -15,3 +15,27 @@
 	</div>
 	<div class="ico-mouse"></div>
 </section>
+
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		let articleTop = $(".intro-wrap .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".intro-wrap .pjt-con").outerHeight();
+
+		let articleTop2 = $(".intro-wrap .pjt-top-full").offset().top;
+		let articleBottom2 = articleTop2 + $(".intro-wrap .pjt-top-full").outerHeight();
+
+		if (scroll >= 0 && scroll < articleTop) {
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll > articleBottom) {
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
+		}
+
+
+	});
+</script>

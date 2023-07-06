@@ -50,3 +50,39 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		let articleTop = $(".sc .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".sc .pjt-con").outerHeight();
+
+		let articleTop2 = $(".sc .pjt-top-full").offset().top;
+		let articleBottom2 = articleTop2 + $(".sc .pjt-top-full").outerHeight();
+
+		if (scroll >= articleTop2 && scroll < articleBottom2) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleTop && scroll < articleBottom) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleBottom && scroll < articleTop2) {
+			$(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
+		}
+
+
+		
+
+	});
+</script>

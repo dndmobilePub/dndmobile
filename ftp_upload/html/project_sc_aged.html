@@ -88,3 +88,41 @@
 		</div>
 	</div>
 </section>
+
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		let articleTop = $(".sc-aged .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".sc-aged .pjt-con").outerHeight();
+
+		let articleTop2 = $(".sc-aged .pjt-top").offset().top;
+		let articleBottom2 = articleTop2 + $(".sc-aged .pjt-top").outerHeight();
+
+		let articleTop3 = $(".sc-aged .type-white").offset().top;
+		let articleBottom3 = articleTop3 + $(".sc-aged .type-white").outerHeight();
+
+		if (scroll >= articleTop && scroll < articleBottom) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleTop2 && scroll < articleBottom2) {
+			$(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
+		}
+
+		if (scroll >= articleTop3 && scroll < articleBottom3) {
+			$(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
+		}
+
+
+	});
+</script>

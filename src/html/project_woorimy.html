@@ -108,17 +108,23 @@
 
 		if (scroll >= articleTopWoori && scroll < articleBottomWoori) {
 			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white')
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
 		}
 
 		if (scroll >= articleBottomWoori) {
 			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white')
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
 		}
 
 		if (scroll >= articleTopWoori2 && scroll < articleBottomWoori2) {
 			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white')
+			$(".menu-toggle").removeClass('white');
+			$(".btn-top").removeClass('white');
+			$(".quick_btn").removeClass('white')
 		}
 	});
 </script>

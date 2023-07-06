@@ -41,3 +41,28 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		let articleTop = $(".woori-open .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".woori-open .pjt-con").outerHeight();
+
+		let articleTop2 = $(".woori-open .pjt-top-full").offset().top;
+		let articleBottom2 = articleTop2 + $(".woori-open .pjt-top-full").outerHeight();
+
+		if (scroll >= articleTop2 && scroll < articleBottom2) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleTop && scroll < articleBottom) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".btn-top").addClass('white');
+			$(".quick_btn").addClass('white')
+		}
+	});
+</script>
