@@ -2520,7 +2520,7 @@ button.swiper-pagination-bullet {
   width: 74px;
   background: url(../images/scroll_case01.gif) no-repeat center/contain;
   position: absolute;
-  bottom: 74px;
+  bottom: 54px;
   left: calc(50% - 20px);
 }
 .pjt-con-wrap.intro-wrap .ico-mouse2 {
