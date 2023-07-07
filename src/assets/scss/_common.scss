@@ -73,6 +73,60 @@ img {
     @include vw-convert-pc(margin-top, 160);
 }
 
+
+//메인 헤더 추가(pc)
+.main {
+
+	.header--inner{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 60px 80px 0 80px;
+
+		.ico{
+			display: inline-block;
+			vertical-align: middle;
+
+			.fill-black{
+				fill: #fff;
+			}
+
+			.stroke-black{
+				stroke: #fff;
+			}
+		}
+
+		.main_logo{
+
+			a{
+				color:#fff;
+				font-weight: 500;
+				display: inherit;
+
+				.ico{
+					width: 54px;
+					height: 54px;
+					margin-right: 16px;
+
+					.fill-black{
+	
+						fill: #fff;
+	
+					}
+				}
+
+			}
+		
+		}
+	}
+
+}
+
+
+
+
+
+
 header {
 	width: 100%;
 	transition: all 0.2s ease-in-out;
@@ -81,6 +135,8 @@ header {
 	transform: translateY(0);
 	position: fixed;
 	z-index: 10;
+
+	
 
 	.header--inner {
 		display: flex;
@@ -101,7 +157,7 @@ header {
 					.ico {
 						width: 54px;
 						// height: 54px;
-						margin-right: 12px;
+						margin-right: 16px;
 
 						img {
 							object-fit: contain;
@@ -487,6 +543,73 @@ header {
 			}
 		}
 	}
+
+	//메인 헤더 추가(mobile)
+.main {
+
+  
+	.active{
+
+		.logo--black{
+			a{
+				color: #000 !important;
+			}
+		}
+
+		.ico{
+			.fill-black{
+				fill: #222 !important;
+			}
+		}
+	}
+
+	.header--footer{
+
+		.logo--black{
+			  a{
+					color: #fff;
+				}
+		}
+		.ico{
+			display: inline-block;
+			vertical-align: middle;
+
+			.fill-black{
+				fill: #fff;
+			}
+
+			.stroke-black{
+				stroke: #fff;
+			}
+		}
+
+		.main_logo{
+
+			a{
+				color:#fff;
+				font-weight: 500;
+				display: inherit;
+
+				.ico{
+					width: 54px;
+					height: 54px;
+					margin-right: 16px;
+
+					.fill-black{
+	
+						fill: #fff;
+	
+					}
+				}
+
+			}
+		
+		}
+	}
+
+}
+
+
 
 	header {
 

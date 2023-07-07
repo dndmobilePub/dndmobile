@@ -147,6 +147,36 @@ img {
   }
 }
 
+.main .header--inner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 80px 0 80px;
+}
+.main .header--inner .ico {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main .header--inner .ico .fill-black {
+  fill: #fff;
+}
+.main .header--inner .ico .stroke-black {
+  stroke: #fff;
+}
+.main .header--inner .main_logo a {
+  color: #fff;
+  font-weight: 500;
+  display: inherit;
+}
+.main .header--inner .main_logo a .ico {
+  width: 54px;
+  height: 54px;
+  margin-right: 16px;
+}
+.main .header--inner .main_logo a .ico .fill-black {
+  fill: #fff;
+}
+
 header {
   width: 100%;
   transition: all 0.2s ease-in-out;
@@ -179,7 +209,7 @@ header .header--inner .logo--black a {
 }
 header .header--inner .logo--black a .ico {
   width: 54px;
-  margin-right: 12px;
+  margin-right: 16px;
 }
 header .header--inner .logo--black a .ico img {
   -o-object-fit: contain;
@@ -484,6 +514,38 @@ header.active {
   }
   .menu-toggle.active .hamburger path {
     stroke: #fff;
+  }
+  .main .active .logo--black a {
+    color: #000 !important;
+  }
+  .main .active .ico .fill-black {
+    fill: #222 !important;
+  }
+  .main .header--footer .logo--black a {
+    color: #fff;
+  }
+  .main .header--footer .ico {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .main .header--footer .ico .fill-black {
+    fill: #fff;
+  }
+  .main .header--footer .ico .stroke-black {
+    stroke: #fff;
+  }
+  .main .header--footer .main_logo a {
+    color: #fff;
+    font-weight: 500;
+    display: inherit;
+  }
+  .main .header--footer .main_logo a .ico {
+    width: 54px;
+    height: 54px;
+    margin-right: 16px;
+  }
+  .main .header--footer .main_logo a .ico .fill-black {
+    fill: #fff;
   }
   header.active {
     opacity: 1;
