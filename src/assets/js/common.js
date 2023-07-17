@@ -32,15 +32,15 @@ menuBar.to('.bar-3', 0.5,{
 var tl = gsap.timeline({ paused: true});
 const width = window.innerWidth;
 
-tl.to('.fullpage-menu', {
-	duration:0,
-	display: "block",
-	ease: 'Expo.easeInOut',
-});
+//tl.to('.fullpage-menu', {
+//	duration:0,
+//	display: "block",
+//	ease: 'Expo.easeInOut',
+//});
 
 tl.from('.menu-bg span', {
 	duration:0.35,
-	x:"100%",
+	y:"100%",
 	stagger: 0.1,
 	ease: 'Expo.easeInOut'
 });
@@ -83,19 +83,19 @@ tl.from('.main-menu li a', {
 	ease: 'Expo.easeInOut'
 } , "-=0.5");
 
-tl.from('.line', {
-	duration:0.3,
-	scaleX: 0,
-	transformOrigin: "0px 0px",		
-});
+//tl.from('.line', {
+//	duration:0.3,
+//	scaleX: 0,
+//	transformOrigin: "0px 0px",		
+//});
 
-tl.from('.social-links li', {
-	duration: 0.8,
-	y:"-100%",
-	opacity:0,
-	stagger: 0.1,
-	ease: 'Expo.easeInOut'
-} , "-=0.5");
+//tl.from('.social-links li', {
+//	duration: 0.8,
+//	y:"-100%",
+//	opacity:0,
+//	stagger: 0.1,
+//	ease: 'Expo.easeInOut'
+//} , "-=0.5");
 
 menuBar.reverse();
 tl.reverse();
@@ -128,6 +128,11 @@ menuToggle.addEventListener('click', function(){
 	// }
 
 });
+
+
+$(".menu-toggle").on('click', function(){
+	$('.fullpage-menu').toggleClass('on');
+})
 
 
 /**
