@@ -897,8 +897,6 @@
 			@include vw-convert-pc(height, 394);
 			
 			.img {
-				// @include vw-convert-pc(width, 394);
-				// @include vw-convert-pc(height, 394);
 				transform: scale(1.72808);
 			}
 		}
