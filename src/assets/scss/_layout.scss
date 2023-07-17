@@ -30,7 +30,7 @@
 		em {
 			position: relative;
 			display: block;
-			@include vw-font-size-pc(18);
+			@include vw-font-size-pc(18);    
 			color: #000;
 			@include vw-convert-pc(padding-right, 55);
 			text-align: right;
@@ -747,7 +747,7 @@
 				.tit {
 					@include vw-convert-pc(padding-top, 70);
 					@include vw-convert-pc(padding-bottom, 24);
-					@include vw-font-size-pc(36);
+					@include vw-font-size-pc(36);   
 					font-weight: 700;
 				}
 
@@ -767,7 +767,35 @@
 
 //프로젝트 메인
 .project-wrap {
-	@include vw-convert-pc(padding, 200 160 200 160);
+	@include vw-convert-pc(padding, 180 0 80 0);
+
+	.project-box {
+		+.project-box {
+			@include vw-convert-pc(margin-top, 100);
+		}
+	}
+
+	.title-wrap {
+		text-align: center;
+
+		p {
+			@include vw-font-size-pc(18);
+			font-weight: 700;
+			color: #E30D3F;
+			letter-spacing: 0.1em;
+		}
+
+		h2 {
+			@include vw-convert-pc(margin-top, 25);
+			@include vw-font-size-pc(60);
+			font-weight: 200;
+			letter-spacing: -0.01em;;
+		}
+	}
+
+	.swiper-wrapper {
+		align-items: center;
+	}
 
 	.tab-top {
 		position: relative;
@@ -778,33 +806,18 @@
 			display: none; /* 크롬, 사파리, 오페라, 엣지 */
 		}
 
-		.bg-tit {
-			p {
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				width: 100%;
-				transform: translate(-50%, -50%);
-				@include vw-font-size-pc(100);
-				font-weight: 700;
-				color: #dfdfdf;
-				text-align: center;
-				letter-spacing: -5%;
-				opacity: .2;
-				z-index: -1;
-			}
-		}
-
 		ul {
 			width: 100%;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
-			@include vw-convert-pc(margin, 36 0 38 0);
+			@include vw-convert-pc(margin, 10 0 10 0);
 
 			li {
-				@include vw-convert-pc(margin-right, 120);
-				@include vw-font-size-pc(30);
+				@include vw-convert-pc(margin-right, 40);
+				@include vw-convert-pc(padding, 10 30);
+				@include vw-font-size-pc(22);
+				@include vw-convert-pc(line-height, 26);
 				font-weight: 700;
 				cursor: pointer;
 
@@ -813,7 +826,9 @@
 				}
 
 				&.on {
-					color: #E30D3F;
+					color: #FFFFFF;
+					background: #000000;
+					border-radius: 50px;
 				}
 			}
 		}
@@ -827,14 +842,35 @@
 		display: block;
 	}
 
+	.accordion-wrap {
+		@include vw-convert-pc(margin-top, 54);
+	}
+
 	.project-swiper {
-		@include vw-convert-pc(margin, 80 0 0);
+		@include vw-convert-pc(margin, 100 0 0);
 		overflow: visible;
 
 		.box-wrap {
-			box-shadow: 0px 5px 20px 0px #00000026;
-			border-radius: 36px;
-			overflow: hidden;
+			@include vw-convert-pc(width, 228);
+			@include vw-convert-pc(height, 228);
+			
+			.img {
+				overflow: hidden;
+				display: inline-block;
+				@include vw-convert-pc(width, 228);
+				@include vw-convert-pc(height, 228);
+				position: relative;
+				// background: #000;
+				// border-radius: 6rem;
+				cursor: pointer;
+				transition: .5s ease-in-out;
+				z-index: 1;
+
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
 
 			.box {
 				@include vw-convert-pc(padding, 48 48 56);
@@ -852,43 +888,64 @@
 				}
 			}
 		}
+
+		.swiper-slide-active {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include vw-convert-pc(width, 394);
+			@include vw-convert-pc(height, 394);
+			
+			.img {
+				// @include vw-convert-pc(width, 394);
+				// @include vw-convert-pc(height, 394);
+				transform: scale(1.72808);
+			}
+		}
+
 	}
 }
 
 // 아코디언
 .accordion-wrap {
-	@include vw-convert-pc(margin-top, 180);
+	@include vw-convert-pc(margin-top, 100);
 
 	dl {
-		// @include vw-convert-pc(margin-top, 160);
-		border-top: 1px solid #B4B4B4;
+		// @include vw-convert-pc(padding, 0 160);
+		// border-top: 1px solid #EEEEEE;
 	}
 
 	dl:last-child {
-		border-bottom: 1px solid #B4B4B4;
+		border-bottom: 1px solid #EEEEEE;
 	}
 
 	.accordion {
-		background: url(../images/icon_plus.png) calc(100% - 40px) 50% no-repeat;
-		background-size: 30px;
-		@include vw-convert-pc(padding, 50 40); //padding:50px 40px;
-		@include vw-font-size-pc(48);
+		@include vw-convert-pc(padding, 40 160);
+		background: url(../images/icon_plus.png) calc(100% - 155px) 50% no-repeat;
+		background-size: 42px;
+		border-top: 1px solid #EEEEEE;
+		@include vw-font-size-pc(26);
+		@include vw-convert-pc(line-height, 31);
 		font-weight: 700;
 		cursor: pointer;
 
 		sup {
-			@include vw-font-size-pc(30);
+			@include vw-font-size-pc(16);
+			@include vw-convert-pc(line-height, 19);
 		}
 
+		&:hover,
 		&.active {
-			background: url(../images/icon_minus.png) calc(100% - 40px) 50% no-repeat;
+			background: #000000 url(../images/icon_minus.png) calc(100% - 161px) 50% no-repeat;
 			background-size: 30px;
-			border-bottom: 1px solid rgba(217, 217, 217, 0.5);
+			color: #FFFFFF;
+			// border-bottom: 1px solid rgba(217, 217, 217, 0.5);
 		}
 	}
 
 	.panel {
 		@include vw-convert-pc(margin-left, 40);
+		@include vw-convert-pc(padding, 0 160);
 		display: none;
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
@@ -899,7 +956,7 @@
 			li {
 				position: relative;
 				@include vw-convert-pc(padding-left, 34);
-				@include vw-font-size-pc(38);
+				@include vw-font-size-pc(18);
 				line-height: 1.57;
 				font-weight: 300;
 				
@@ -912,7 +969,8 @@
 					display: block;
 					position: absolute;
 					left: 10px;
-					@include vw-convert-pc(top, 26);
+					// @include vw-convert-pc(top, 26);
+					top: 50%;
 					transform: translateY(-50%);
 					width: 5px;
 					height: 5px;
@@ -938,13 +996,13 @@
 					@include vw-convert-pc(top, 0);
 		
 					svg{
-						@include vw-convert-pc(width, 60);
-						@include vw-convert-pc(height, 60);
+						@include vw-convert-pc(width, 26);
+						@include vw-convert-pc(height, 26);
 					}
 		
 					p{
 						@include vw-font-size-pc(18);
-						@include vw-convert-pc(margin-left, 16);
+						@include vw-convert-pc(margin-left, 10);
 						span{
 							line-height: 1;
 							display: block;
@@ -959,16 +1017,23 @@
 
 			li.ing {
 				span {
-					background-color: #000;
-					@include vw-convert-pc(padding, 11 20);
-					@include vw-convert-pc(margin-left, 22);
-					box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
-					border-radius: 40px;
-					@include vw-font-size-pc(24);
-					color: #fff;
+					@include vw-convert-pc(margin-left, 10);
+					@include vw-convert-pc(padding-left, 10);
+					@include vw-font-size-pc(18);
+					color: #D91550;
 					position: relative;
-					@include vw-convert-pc(top, -5);
 
+					&::before {
+						content: '';
+						display: inline-block;
+						position: absolute;
+						top: 50%;
+						left: 0;
+						@include vw-convert-pc(width, 1);
+						@include vw-convert-pc(height, 14);
+						background-color: rgba(0, 0, 0, 0.2);
+						transform: translateY(-50%);
+					}
 				}
 
 				// &::before {
