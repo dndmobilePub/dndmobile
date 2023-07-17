@@ -853,6 +853,7 @@
 		.box-wrap {
 			@include vw-convert-pc(width, 228);
 			@include vw-convert-pc(height, 228);
+			// margin-left: -32px;
 			
 			.img {
 				overflow: hidden;
@@ -861,14 +862,37 @@
 				@include vw-convert-pc(height, 228);
 				position: relative;
 				// background: #000;
-				// border-radius: 6rem;
+				border-radius: 6rem;
 				cursor: pointer;
-				transition: .5s ease-in-out;
+				// transition: .5s ease-in-out;
+				transition: .5s ease-in;
 				z-index: 1;
+				border-radius: 100%;
+				// transition: all ease 2s 0s;
 
 				img {
 					display: block;
 					width: 100%;
+					// transform: rotate(315deg);
+				}
+			}
+
+			&.kb {
+				.img {
+					background: url(../images/img_kb_bg.png) 50% no-repeat;
+					width: 228px;
+					height: 228px;
+					background-size: contain;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					overflow: hidden;
+					border-radius: 75%;
+					transform: rotate(45deg);
+
+					img {
+						transform: rotate(315deg);
+					}
 				}
 			}
 
@@ -895,11 +919,32 @@
 			align-items: center;
 			@include vw-convert-pc(width, 394);
 			@include vw-convert-pc(height, 394);
-			
-			.img {
-				transform: scale(1.72808);
+			margin-right: -74px;
+
+			&.kb {
+				.img {
+					// background: url(../images/img_kb_bg.png) 50% no-repeat;
+					width: 394px;
+					height: 394px;
+					background-size: contain;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					overflow: hidden;
+					border-radius: 75%;
+					border-radius: 0;
+					transition: .5s ease-in-out;
+					transform: rotate(90deg);
+
+					img {
+						border-radius: 50%;
+						transform: rotate(270deg);
+					}
+				}
 			}
 		}
+
+		
 
 	}
 }

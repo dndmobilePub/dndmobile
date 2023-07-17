@@ -13,35 +13,35 @@
 				</div>
 				<div class="swiper-container project-swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide box-wrap">
-							<p class="img"><img src="../assets/images/img_pj_thumb01.png" alt=""></p>
-							<div class="btn-box">
+						<div class="swiper-slide box-wrap kb">
+							<p class="img"><img src="../assets/images/img_kb_thumb.png" alt=""></p>
+							<!-- <div class="btn-box">
 								<button type="button">Go</button>
-							</div>
+							</div> -->
 						</div>
 						<div class="swiper-slide box-wrap">
 							<p class="img"><img src="../assets/images/img_pj_thumb02.png" alt=""></p>
-							<div class="btn-box">
+							<!-- <div class="btn-box">
 								<button type="button">Go</button>
-							</div>
+							</div> -->
 						</div>
 						<div class="swiper-slide box-wrap">
 							<p class="img"><img src="../assets/images/img_pj_thumb04.png" alt=""></p>
-							<div class="btn-box">
+							<!-- <div class="btn-box">
 								<button type="button">Go</button>
-							</div>
+							</div> -->
 						</div>
 						<div class="swiper-slide box-wrap">
 							<p class="img"><img src="../assets/images/img_pj_thumb01.png" alt=""></p>
-							<div class="btn-box">
+							<!-- <div class="btn-box">
 								<button type="button">Go</button>
-							</div>
+							</div> -->
 						</div>
 						<div class="swiper-slide box-wrap">
 							<p class="img"><img src="../assets/images/img_pj_thumb02.png" alt=""></p>
-							<div class="btn-box">
+							<!-- <div class="btn-box">
 								<button type="button">Go</button>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -513,8 +513,8 @@
 			grabCursor: true,
 			centeredSlides: true,
 			loop: true,
-			// observer: true,
-			// observeParents: true,
+			observer: true,
+			observeParents: true,
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
@@ -532,23 +532,6 @@
 				}
 			},
 		});
-
-		// 슬라이드 변경 이벤트에 대한 핸들러 추가
-mySwiper.on('slideChange', function () {
-   var activeSlide = mySwiper.slides[mySwiper.activeIndex];
-   var swiperContainer = document.querySelector('.project-swiper');
-
-   // 화면 중앙으로 이동시키기 위한 계산
-   var containerWidth = swiperContainer.offsetWidth;
-   var slideWidth = activeSlide.offsetWidth + 166;
-	 
-   var offsetLeft = activeSlide.offsetLeft;
-	 console.log(offsetLeft)
-   var centerOffset = (containerWidth - slideWidth) / 2 - offsetLeft + 166;
-
-   // 화면 중앙으로 이동
-   swiperContainer.scrollLeft += centerOffset;
-});
 	</script>
 </body>
 
