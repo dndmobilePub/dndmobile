@@ -293,9 +293,15 @@ header {
 	right: 0;
 	top: 0;
 	width: 100vw;
-	height: 100vh;
+	height: 0;
 	z-index: 1001;
-	display: none;
+	transition: 0.8s 0.4s cubic-bezier(0.5, 1, 0.89, 1);
+	overflow: hidden;
+
+	&.on{
+		height: 100vh;
+		transition-delay: 0s;
+	}
 
 	&--inner {
 		display: flex;
