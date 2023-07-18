@@ -853,47 +853,207 @@
 		.box-wrap {
 			@include vw-convert-pc(width, 228);
 			@include vw-convert-pc(height, 228);
-			// margin-left: -32px;
 			
 			.img {
 				overflow: hidden;
-				display: inline-block;
+				display: block;
+				position: relative;
 				@include vw-convert-pc(width, 228);
 				@include vw-convert-pc(height, 228);
-				position: relative;
-				// background: #000;
-				border-radius: 6rem;
-				cursor: pointer;
-				// transition: .5s ease-in-out;
 				transition: .5s ease-in;
+				cursor: pointer;
 				z-index: 1;
-				border-radius: 100%;
-				// transition: all ease 2s 0s;
 
 				img {
 					display: block;
 					width: 100%;
-					// transform: rotate(315deg);
+				}
+
+				&:hover + .hover-box {
+					display: block;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+					height: 100%;
+					z-index: 1;
+
+					.box {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						transform: translate(-50%, -50%);
+						width: 100%;
+						text-align: center;
+						height: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						p {
+							font-size: 38px;
+							line-height: 48px;
+							color: #fff;
+						}
+
+						button {
+							width: 78px;
+							height: 78px;
+							background: #272727;
+							font-size: 26px;
+							color: #fff;
+							border-radius: 50px;
+							position: absolute;
+							bottom: 28px;
+							right: 27px;				
+						}
+					}
 				}
 			}
 
-			&.kb {
+			&.bg-sc {
 				.img {
-					background: url(../images/img_kb_bg.png) 50% no-repeat;
-					width: 228px;
-					height: 228px;
-					background-size: contain;
+					overflow: hidden;
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					overflow: hidden;
+					width: 228px;
+					height: 228px;
+					background: url(../images/bg_pj_sc.png) 50% no-repeat;
+					background-size: contain;
 					border-radius: 75%;
-					transform: rotate(45deg);
-
-					img {
-						transform: rotate(315deg);
+					
+					&:hover + .hover-box {
+						background: url(../images/bg_pj_sc_hover.png) 50% no-repeat;
+						background-size: contain;
+						z-index: 1;
 					}
 				}
+			}
+
+			&.bg-cj {
+				.img {
+					overflow: hidden;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 228px;
+					height: 228px;
+					background: url(../images/bg_pj_cj.png) 50% no-repeat;
+					background-size: contain;
+					border-radius: 75%;
+					
+					&:hover + .hover-box {
+						background: url(../images/bg_pj_cj_hover.png) 50% no-repeat;
+						background-size: contain;
+						z-index: 1;
+					}
+				}
+			}
+			
+			&.bg-sc02 {
+				.img {
+					overflow: hidden;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 228px;
+					height: 228px;
+					background: url(../images/bg_pj_sc02.png) 50% no-repeat;
+					background-size: contain;
+					border-radius: 75%;
+					
+					&:hover + .hover-box {
+						background: url(../images/bg_pj_sc02_hover.png) 50% no-repeat;
+						background-size: contain;
+						z-index: 1;
+					}
+				}
+			}
+
+			&.bg-kb {
+				.img {
+					overflow: hidden;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 228px;
+					height: 228px;
+					background: url(../images/bg_pj_kb.png) 50% no-repeat;
+					background-size: contain;
+					border-radius: 75%;
+					
+					&:hover + .hover-box {
+						background: url(../images/bg_pj_kb_hover.png) 50% no-repeat;
+						background-size: contain;
+						z-index: 1;
+					}
+				}
+			}
+			
+			&.bg-ha {
+				.img {
+					overflow: hidden;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 228px;
+					height: 228px;
+					background: url(../images/bg_pj_ha.png) 50% no-repeat;
+					background-size: contain;
+					border-radius: 75%;
+					
+					&:hover + .hover-box {
+						background: url(../images/bg_pj_ha_hover.png) 50% no-repeat;
+						background-size: contain;
+						z-index: 1;
+					}
+				}
+			}
+
+			&.bg-wo {
+				.img {
+					overflow: hidden;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 228px;
+					height: 228px;
+					background: url(../images/bg_pj_wo.png) 50% no-repeat;
+					background-size: contain;
+					border-radius: 75%;
+					
+					&:hover + .hover-box {
+						background: url(../images/bg_pj_wo_hover.png) 50% no-repeat;
+						background-size: contain;
+						z-index: 1;
+					}
+				}
+			}
+
+			&.bg-wo02 {
+				.img {
+					overflow: hidden;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 228px;
+					height: 228px;
+					background: url(../images/bg_pj_wo02.png) 50% no-repeat;
+					background-size: contain;
+					border-radius: 75%;
+					
+					&:hover + .hover-box {
+						background: url(../images/bg_pj_wo02_hover.png) 50% no-repeat;
+						background-size: contain;
+						z-index: 1;
+					}
+				}
+			}
+
+			.hover-box {
+				display: none;
 			}
 
 			.box {
@@ -919,21 +1079,18 @@
 			align-items: center;
 			@include vw-convert-pc(width, 394);
 			@include vw-convert-pc(height, 394);
-			margin-right: -74px;
+			@include vw-convert-pc(margin-right, -74);
 
-			&.kb {
+			&.bg-kb {
 				.img {
-					// background: url(../images/img_kb_bg.png) 50% no-repeat;
-					width: 394px;
-					height: 394px;
-					background-size: contain;
+					overflow: hidden;
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					overflow: hidden;
-					border-radius: 75%;
-					border-radius: 0;
-					transition: .5s ease-in-out;
+					@include vw-convert-pc(width, 394);
+					@include vw-convert-pc(height, 394);
+					background: url(../images/bg_pj_kb.png) 50% no-repeat;
+					background-size: contain;
 					transform: rotate(90deg);
 
 					img {
@@ -943,8 +1100,6 @@
 				}
 			}
 		}
-
-		
 
 	}
 }

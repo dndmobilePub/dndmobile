@@ -13,35 +13,68 @@
 				</div>
 				<div class="swiper-container project-swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide box-wrap kb">
-							<p class="img"><img src="../assets/images/img_kb_thumb.png" alt=""></p>
-							<!-- <div class="btn-box">
-								<button type="button">Go</button>
-							</div> -->
+						<div class="swiper-slide box-wrap bg-sc">
+							<p class="img"><img src="../assets/images/img_kb_thumb01.png" alt=""></p>
+							<div class="hover-box">
+								<div class="box">
+									<p>SC 제일은행<br><strong>모바일 기업뱅킹</strong></p>
+									<button type="button">Go</button>
+								</div>
+							</div>
 						</div>
-						<div class="swiper-slide box-wrap">
-							<p class="img"><img src="../assets/images/img_pj_thumb02.png" alt=""></p>
-							<!-- <div class="btn-box">
-								<button type="button">Go</button>
-							</div> -->
+						<div class="swiper-slide box-wrap bg-cj">
+							<p class="img"><img src="../assets/images/img_pj_thumb02.png" al t=""></p>
+							<div class="hover-box">
+								<div class="box">
+									<p>CJ대한통운<br><strong>차세대 택배시스템</strong></p>
+									<button type="button">Go</button>
+								</div>
+							</div>
 						</div>
-						<div class="swiper-slide box-wrap">
+						<div class="swiper-slide box-wrap bg-sc02">
 							<p class="img"><img src="../assets/images/img_pj_thumb04.png" alt=""></p>
-							<!-- <div class="btn-box">
-								<button type="button">Go</button>
-							</div> -->
+							<div class="hover-box">
+								<div class="box">
+									<p>SC제일은행<br><strong>고령자 편한뱅킹</strong></p>
+									<button type="button">Go</button>
+								</div>
+							</div>
 						</div>
-						<div class="swiper-slide box-wrap">
-							<p class="img"><img src="../assets/images/img_pj_thumb01.png" alt=""></p>
-							<!-- <div class="btn-box">
-								<button type="button">Go</button>
-							</div> -->
+						<div class="swiper-slide box-wrap bg-kb">
+							<p class="img"><img src="../assets/images/img_kb_thumb.png" alt=""></p>
+							<div class="hover-box">
+								<div class="box">
+									<p>KB국민은행<br><strong>비대면 마케팅</strong></p>
+									<button type="button">Go</button>
+								</div>
+							</div>
 						</div>
-						<div class="swiper-slide box-wrap">
+						<div class="swiper-slide box-wrap bg-ha">
 							<p class="img"><img src="../assets/images/img_pj_thumb02.png" alt=""></p>
-							<!-- <div class="btn-box">
-								<button type="button">Go</button>
-							</div> -->
+							<div class="hover-box">
+								<div class="box">
+									<p>하나카드<br><strong>하나머니 고도화</strong></p>
+									<button type="button">Go</button>
+								</div>
+							</div>
+							</div>
+							<div class="swiper-slide box-wrap bg-wo">
+								<p class="img"><img src="../assets/images/img_pj_thumb01.png" alt=""></p>
+								<div class="hover-box">
+									<div class="box">
+										<p>우리은행 사설인증<br><strong>우리WON인증</strong></p>
+										<button type="button">Go</button>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide box-wrap bg-wo02">
+								<p class="img"><img src="../assets/images/img_pj_thumb02.png" alt=""></p>
+								<div class="hover-box">
+									<div class="box">
+										<p>우리은행<br><strong>마이데이터</strong></p>
+										<button type="button">Go</button>
+									</div>
+								</div>
 						</div>
 					</div>
 				</div>
@@ -505,8 +538,9 @@
 		@@include('./include/footer.html')
 	</div>
 	<script>
-		// swiper 초기화 코드
-		var mySwiper = new Swiper('.project-swiper', {
+			var activeSlideIndex = 0;
+
+			var pjSwiper = new Swiper('.project-swiper', {
 			slidesPerView: 'auto',
 			spaceBetween: 74,
 			centeredSlides: true,
@@ -528,10 +562,31 @@
 					autoplay: {
 						delay: 2000,
 					},
-					
 				}
 			},
+			on: {
+				init: function () {
+					activeSlideIndex = this.activeIndex;
+					rotateSlide(this.activeIndex);
+				},
+				slideChange: function () {
+					rotateSlide(this.activeIndex);
+				},
+			},
 		});
+
+	function rotateSlide(index) {
+		var slides = document.querySelectorAll('.project-swiper .swiper-slide');
+		for (var i = 0; i < slides.length; i++) {
+			var slide = slides[i];
+			if (i === index) {
+				slide.querySelector('.img').style.transform = "rotate(45deg)";
+				slide.querySelector('img').style.transform = "rotatd(315deg)";
+			} else {
+				slide.querySelector('.img').style.transform = '';
+			}
+		}
+	}
 	</script>
 </body>
 

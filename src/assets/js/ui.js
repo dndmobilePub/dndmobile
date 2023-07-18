@@ -51,12 +51,50 @@ function tabScollHorizen() {
 //     });
 // }
 
-$(".accordion").click(function(){
-    $(this).toggleClass("active");
-    $(this).parents("dl").siblings().find(".accordion").removeClass("active");
-    $(this).next(".panel").slideToggle(300);
-    $(this).parents("dl").siblings().find(".panel").slideUp(300);
-});
+// $(".accordion").click(function(){
+//     $(this).toggleClass("active");
+//     $(this).parents("dl").siblings().find(".accordion").removeClass("active");
+//     $(this).next(".panel").slideToggle(300);
+//     $(this).parents("dl").siblings().find(".panel").slideUp(300);
+// });
+
+$('.accordion').on('click', function (e) {
+    e.preventDefault()
+
+    const $siblings = $('.accordion')
+
+    $siblings.next('.panel').slideUp()
+    $siblings.removeClass('active')
+
+    const $this = $(this)
+    const $parent = $this.parent()
+    const $nextToggleContents = $this.next('.panel')
+
+    if ($this.next('.panel').is(':hidden')) {
+        $this.addClass('active')
+        $nextToggleContents.slideDown(function() {
+            var offsetTop = $parent.offset().top;
+
+            $('html, body').animate({ 
+                scrollTop: offsetTop
+            }, 300);
+
+            var screenWidth = $(window).width();
+            if (screenWidth < 768) {
+                // 화면 너비가 768px보다 작을 경우
+                var offsetTop = $parent.offset().top;
+                var gnbHeight = $(header).outerHeight();
+
+                $('html, body').animate({ 
+                    scrollTop: offsetTop - gnbHeight
+                }, 300);
+            }
+        });
+    } else {
+        $this.removeClass('active')
+        $nextToggleContents.slideUp();
+    }
+})
 
 /**
  * ==============================+
