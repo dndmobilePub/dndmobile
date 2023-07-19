@@ -19,9 +19,11 @@ function tabScollHorizen() {
     }
     tabScollHorizen = this.scrollWidth - (Math.floor(this.scrollLeft)) === this.clientWidth;
     if(tabScollHorizen == true ){
-       $('.bg.hide-pc').css('display','none');
+        $('.bg.hide-pc').css('display','none');
+        $('.tab-top ul').css('justify-content','');
     }else{
-         $('.bg.hide-pc').css('display','block');
+        $('.bg.hide-pc').css('display','block');
+        $('.tab-top ul').css('justify-content','flex-start');
      }
  }
  
