@@ -858,19 +858,19 @@
 			display: none; /* 크롬, 사파리, 오페라, 엣지 */
 		}
 
-		ul {
-			width: 100%;
+				ul {
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
 			-webkit-box-orient: horizontal;
-   		-webkit-box-direction: normal;
+			-webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
 			-webkit-box-pack: center;
 			-ms-flex-pack: center;
 			justify-content: center;
 			flex-direction: row;
+			width: 100%;
 			@include vw-convert-pc(margin, 10 0 10 0);
 
 			li {
@@ -903,8 +903,8 @@
 	}
 
 	.project-swiper {
-		@include vw-convert-pc(margin, 100 0 0);
 		overflow: visible;
+		@include vw-convert-pc(margin, 100 0 0);
 
 		.box-wrap {
 			@include vw-convert-pc(width, 228);
@@ -925,12 +925,14 @@
 				@include vw-convert-pc(width, 228);
 				@include vw-convert-pc(height, 228);
 				transition: .5s ease-in;
+				transform: rotate(90deg);
 				cursor: pointer;
 				z-index: 1;
 
 				img {
 					display: block;
 					width: 100%;
+					border-radius: 75%;
 					transform: rotate(315deg);
 				}
 			}
@@ -939,6 +941,69 @@
 				display: none;
 			}
 
+						&.bg-sc {
+			
+							.img {
+								background: url(../images/bg_pj_sc.png) 50% no-repeat;
+								background-size: contain;
+							}
+						}
+			
+						&.bg-cj {
+			
+							.img {
+								background: url(../images/bg_pj_cj.png) 50% no-repeat;
+								background-size: contain;
+							}
+						}
+			
+						&.bg-sc02 {
+			
+							.img {
+								background: url(../images/bg_pj_sc.png) 50% no-repeat;
+								background-size: contain;
+							}
+						}
+			
+						&.bg-kb {
+			
+							.img {
+								background: url(../images/bg_pj_kb.png) 50% no-repeat;
+								background-size: contain;
+							}
+						}
+			
+						&.bg-ha {
+			
+							.img {
+								background: url(../images/bg_pj_ha.png) 50% no-repeat;
+								background-size: contain;
+							}
+						}
+			
+						&.bg-wo {
+			
+							.img {
+								background: url(../images/bg_pj_wo.png) 50% no-repeat;
+								background-size: contain;
+							}
+						}
+			
+						&.bg-wo02 {
+			
+							.img {
+								background: url(../images/bg_pj_wo02.png) 50% no-repeat;
+								background-size: contain;
+							}
+						}
+			
+						&.bg-kb {
+			
+							.img {
+								background: url(../images/bg_pj_kb.png) 50% no-repeat;
+								background-size: contain;
+							}
+						}
 			.box {
 				@include vw-convert-pc(padding, 48 48 56);
 
@@ -1021,42 +1086,27 @@
 
 						p {
 							color: #fff;
-							font-size: 38px;
+							@include vw-font-size-pc(38);
 							line-height: 48px;
 						}
 
 						button {
 							position: absolute;
-							right: 27px;				
-							bottom: 28px;
+							@include vw-convert-pc(right, 27);
+								@include vw-convert-pc(bottom, 28);
 							@include vw-convert-pc(width, 78);
 							@include vw-convert-pc(height, 78);
 							border-radius: 50px;
 							background: #272727;
 							color: #fff;
-							font-size: 26px;
+							@include vw-font-size-pc(26);
 						}
-					}
-				}
-			}
-
-			&.bg-kb {
-
-				.img {
-					background: url(../images/bg_pj_kb.png) 50% no-repeat;
-					background-size: contain;
-					transform: rotate(90deg);
-
-					img {
 					}
 				}
 			}
 
 			&.bg-sc {
 				.img {
-					background: url(../images/bg_pj_sc.png) 50% no-repeat;
-					background-size: contain;
-					border-radius: 75%;
 					
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_sc_hover.png) 50% no-repeat;
@@ -1068,9 +1118,6 @@
 
 			&.bg-cj {
 				.img {
-					background: url(../images/bg_pj_cj.png) 50% no-repeat;
-					background-size: contain;
-					border-radius: 75%;
 					
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_cj_hover.png) 50% no-repeat;
@@ -1082,12 +1129,9 @@
 			
 			&.bg-sc02 {
 				.img {
-					background: url(../images/bg_pj_sc02.png) 50% no-repeat;
-					background-size: contain;
-					border-radius: 75%;
 					
 					&:hover + .hover-box {
-						background: url(../images/bg_pj_sc02_hover.png) 50% no-repeat;
+						background: url(../images/bg_pj_sc_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
 					}
@@ -1096,23 +1140,20 @@
 
 			&.bg-kb {
 				.img {
-					background: url(../images/bg_pj_kb.png) 50% no-repeat;
-					background-size: contain;
-					border-radius: 75%;
 					
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_kb_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
+p {
+		color: #000;
+	}
 					}
 				}
 			}
 			
 			&.bg-ha {
 				.img {
-					background: url(../images/bg_pj_ha.png) 50% no-repeat;
-					background-size: contain;
-					border-radius: 75%;
 					
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_ha_hover.png) 50% no-repeat;
@@ -1124,9 +1165,6 @@
 
 			&.bg-wo {
 				.img {
-					background: url(../images/bg_pj_wo.png) 50% no-repeat;
-					background-size: contain;
-					border-radius: 75%;
 					
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_wo_hover.png) 50% no-repeat;
@@ -1138,9 +1176,6 @@
 
 			&.bg-wo02 {
 				.img {
-					background: url(../images/bg_pj_wo02.png) 50% no-repeat;
-					background-size: contain;
-					border-radius: 75%;
 					
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_wo02_hover.png) 50% no-repeat;
@@ -1189,15 +1224,13 @@
 			background-size: 42px;
 			color: #FFFFFF;
 			image-rendering: -webkit-optimize-contrast;
-			// border-bottom: 1px solid rgba(217, 217, 217, 0.5);
 		}
 	}
 
 	.panel {
-		// @include vw-convert-pc(margin-left, 40);
-		@include vw-convert-pc(padding, 0 160);
-		display: none;
 		overflow: hidden;
+			display: none;
+		@include vw-convert-pc(padding, 0 160);
 		transition: max-height 0.2s ease-out;
 
 		ul {
@@ -1229,8 +1262,8 @@
 					position: absolute;
 					@include vw-convert-pc(top, 15);
 					left: 0;
-					width: 5px;
-					height: 5px;
+					@include vw-convert-pc(width, 5);
+						@include vw-convert-pc(height, 5);
 					border-radius: 50%;
 					background: #000;
 				}
@@ -1256,7 +1289,9 @@
 					align-items: center;
 				}
 
-				.ico-wa{display: none;}
+								.ico-wa {
+									display: none;
+								}
 
 				.pc-ico-wa {
 					display: -webkit-box;
@@ -1265,10 +1300,7 @@
 					-webkit-box-align: center;
 					-ms-flex-align: center;
 					align-items: center;
-					width: 210px;
-					// position: absolute;
-					// @include vw-convert-pc(right, 40);
-					// @include vw-convert-pc(top, 0);
+					@include vw-convert-pc(width, 210);
 		
 					svg{
 						@include vw-convert-pc(width, 26);
@@ -1292,11 +1324,11 @@
 
 			li.ing {
 				span {
+					position: relative;
 					@include vw-convert-pc(margin-left, 12);
 					@include vw-convert-pc(padding-left, 10);
 					@include vw-font-size-pc(16);
 					color: #D91550;
-					position: relative;
 
 					&::before {
 						content: '';
@@ -1309,12 +1341,7 @@
 						background-color: rgba(0, 0, 0, 0.2);
 						transform: translateY(-50%);
 					}
-				}
-
-				// &::before {
-				//     content: '';
-				//     background: #E30D3F;
-				// }
+								}
 			}
 
 			li.webaward {
@@ -2268,10 +2295,10 @@
 			position: relative;
 
 			ul {
+				overflow-x: auto;
+					justify-content: center;
 				margin: 0;
 				@include vw-convert-mo(padding, 0 40 0);
-				justify-content: center;
-				overflow-x: auto;
 
 				li {
 					@include vw-convert-mo(margin-right, 52);
@@ -2288,12 +2315,12 @@
 			}
 
 			.bg {
+				position: absolute;
+					right: 0;
+					top: 0;
 				@include vw-convert-mo(width, 130);
 				height: 100%;
 				background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-				position: absolute;
-				right: 0;
-				top: 0;
 			}
 		}
 
@@ -2301,7 +2328,6 @@
 			width: 70%;
 			@include vw-convert-mo(margin, 64 auto 0);
 
-			// @include vw-convert-mo(padding, 220 160 200 160);
 			.swiper-wrapper {
 				align-items: center;
 			}
@@ -2313,6 +2339,7 @@
 				.img {
 					@include vw-convert-mo(width, 260);
 					@include vw-convert-mo(height, 260);
+
 					img {
 						border-radius: 30px;
 						transition: all .3s;
@@ -2366,9 +2393,9 @@
 
 		.accordion {
 			position: relative;
+			@include vw-convert-mo(padding, 40);
 			background: url(../images/icon_plus.png) calc(100% - 20px) 50% no-repeat;
 			background-size: 24px;
-			@include vw-convert-mo(padding, 40);
 			@include vw-font-size-mo(36);
 			line-height: 1;
 

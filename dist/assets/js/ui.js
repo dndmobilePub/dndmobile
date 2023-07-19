@@ -81,9 +81,9 @@ $('.accordion').on('click', function (e) {
                 scrollTop: offsetTop
             }, 300);
 
+            // 화면 너비가 768px보다 작을 경우
             var screenWidth = $(window).width();
             if (screenWidth < 768) {
-                // 화면 너비가 768px보다 작을 경우
                 var offsetTop = $parent.offset().top;
                 var gnbHeight = $(header).outerHeight();
 
