@@ -112,7 +112,7 @@
 
 		.pjt-top-img {
 			@include vw-convert-pc(width, 1263);
-			@include vw-convert-pc(padding-top, 100);
+			@include vw-convert-pc(padding-top, 110);
 			text-align: center;
 			margin: 0 auto;
 
@@ -131,10 +131,12 @@
 			color: #fff;
 		}
 
+
 		&.type02 {
 			@include vw-convert-pc(width, 1276);
 			margin: 0 auto;
 			@include vw-convert-pc(margin-top, 160);
+			text-align: center;
 		}
 
 		.tit {
@@ -142,15 +144,28 @@
 			@include vw-convert-pc(padding-bottom, 30);
 			@include vw-convert-pc(line-height, 95);
 			//@include vw-convert-pc(padding, 80 165 30 0);
-			font-weight: bold;
+			font-weight: 900;
+			
 			&.pd80{
 				@include vw-convert-pc(padding-top, 80);
 			}	
 
+
 			span {
 				font-weight: 400;
 				line-height: 1.1;
+
+				&.fw300{
+					font-weight: 300;
+				}
+
 			}
+
+			&.fw700{
+				font-weight: 700;
+			}
+
+
 		}
 
 		.desc {
@@ -159,6 +174,11 @@
 			line-height: 1.3;
 			word-break: keep-all;
 			font-weight: 300;
+
+			&.clr0{
+				color:#e0e0e0;
+			}	
+			
 		}
 	}
 
@@ -258,7 +278,7 @@
 			}
 			.pjt-top-img {
 				img{
-					@include vw-convert-pc(height, 782);
+					@include vw-convert-pc(height, 800);
 				}
 			}
 		}
@@ -271,7 +291,6 @@
 				.tit{
 					@include vw-convert-pc(margin-bottom, 10);
 					@include vw-convert-pc(font-size, 70);
-				  color:#E0E0E0;	
 				}
 
 				.tit2{
@@ -392,7 +411,7 @@
 		}
 
 		.pjt-con {
-			@include vw-convert-pc(padding, 160 20 200);
+			@include vw-convert-pc(padding, 240 20 150);
 			background: #ffdf62;
 
 			.pjt-img {
@@ -444,7 +463,7 @@
 
 		.pjt-con {
 			background: #000;
-			@include vw-convert-pc(padding, 290 0 250);
+			@include vw-convert-pc(padding, 290 0 190);
 			@include vw-convert-pc(margin-top, -130);
 		}
 	}
@@ -453,31 +472,31 @@
 		.pjt-top {
 			.pjt-top-img {
 				position: relative;
-				@include vw-convert-pc(width, 900);
+				@include vw-convert-pc(width, 916);
 
 				.pjt-img01 {
 					position: absolute;
-					@include vw-convert-pc(left, -80);
-					@include vw-convert-pc(bottom, -200);
+					@include vw-convert-pc(left, 0);
+					@include vw-convert-pc(bottom, -260);
 					@include vw-convert-pc(width, 728);
 				}
 
 				.pjt-img02 {
 					position: absolute;
-					@include vw-convert-pc(right, 0);
-					@include vw-convert-pc(bottom, -100);
-					@include vw-convert-pc(width, 728);
+					@include vw-convert-pc(right, -70);
+					@include vw-convert-pc(bottom, -160);
+					@include vw-convert-pc(width, 672);
 				}
 			}
 		}
 
 		.pjt-con {
-			@include vw-convert-pc(padding, 160 20 300);
+			@include vw-convert-pc(padding, 160 20 150);
 			background: url(../images/bg_cj.jpg) center no-repeat;
 			background-size: cover;
 
 			.icon {
-				@include vw-convert-pc(padding-top, 100);
+				@include vw-convert-pc(padding-top, 90);
 				text-align: center;
 			}
 		}
@@ -526,8 +545,8 @@
 					background-size: 100%;
 					@include vw-convert-pc(max-width, 1155);
 					margin: 0 auto;
-					@include vw-convert-pc(padding-top, 130);
-					@include vw-convert-pc(margin-top, 90);
+					@include vw-convert-pc(padding-top, 100);
+					//@include vw-convert-pc(margin-top, 100);
 				}
 			}
 		}
@@ -537,15 +556,29 @@
 		.pjt-top {
 			position: relative;
 			.pjt-top-img {
-				position: absolute;
+				position: relative;
 				@include vw-convert-pc(right, 188);
-				@include vw-convert-pc(width, 1183);
+				@include vw-convert-pc(width, 1107);
+
+				.woori_bg_left{
+					position:absolute;
+					@include vw-convert-pc(right, 550);
+					@include vw-convert-pc(bottom, 0);
+					@include vw-convert-pc(width, 445);
+				}
+				.woori_bg_right{
+					position:absolute;
+					@include vw-convert-pc(right, 20);
+					@include vw-convert-pc(bottom, 0);
+					@include vw-convert-pc(width, 105);
+				}
+
 
 				.splash-img {
 					position: absolute;
 					@include vw-convert-pc(right, 160);
 					top: -30px;
-					@include vw-convert-pc(width, 390);
+					@include vw-convert-pc(width, 362);
 
 				}
 
@@ -558,19 +591,19 @@
 		.pjt-con {
 			&.bg01 {
 				background: #0F98C6;
-				@include vw-convert-pc(padding-top, 200);
+				@include vw-convert-pc(padding-top, 120);
 				@include vw-convert-pc(margin-top, 60);
 			}
 
 			&.bg02 {
 				background: #fff;
-				@include vw-convert-pc(padding, 332 0 160);
-				@include vw-convert-pc(margin-top, -230);
+				@include vw-convert-pc(padding, 200 0 190);
+				@include vw-convert-pc(margin-top, -140);
 			}
 
 			&.bg03 {
 				background: #0E2A78;
-				@include vw-convert-pc(padding, 160 0 250);
+				@include vw-convert-pc(padding, 150 0 150);
 			}
 		}
 	}
@@ -579,14 +612,15 @@
 		.pjt-top-full {
 			background: url('../images/bg_wooricerti.jpg') center no-repeat;
 			background-size: cover;
-			@include vw-convert-pc(padding-top, 254);
+			@include vw-convert-pc(padding-top, 200);
 			@include vw-convert-pc(padding-bottom, 1027);
+			@include vw-convert-pc(height, 1250);
 		}
 
 		.pjt-con {
-			@include vw-convert-pc(padding-top, 290);
-			@include vw-convert-pc(padding-bottom, 250);
-			@include vw-convert-pc(margin-top, -130);
+			@include vw-convert-pc(padding-top, 150);
+			@include vw-convert-pc(padding-bottom, 150);
+			//@include vw-convert-pc(margin-top, -130);
 		}
 	}
 }
@@ -1126,10 +1160,10 @@
 .accordion-wrap {
 	@include vw-convert-pc(margin-top, 100);
 
-	dl {
+	//dl {
 		// @include vw-convert-pc(padding, 0 160);
 		// border-top: 1px solid #EEEEEE;
-	}
+	//}
 
 	dl:last-child {
 		border-bottom: 1px solid #EEEEEE;

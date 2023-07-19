@@ -472,33 +472,33 @@ header {
 }
 
 .footer {
-	padding: 65px 80px;
+	padding: 48px 60px 46px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #222;
-	background: #fff;
+	color: #fff;
+	background: #000;
 	z-index: 9;
 	position: relative;
 
 
 	p {
-		@include vw-font-size-pc(38);
+		@include vw-font-size-pc(16);
 		line-height: 1.3;
-		font-weight: 800;
+		font-weight: 400;
 	}
 
 	ul {
 		li {
 			display: inline-block;
 			@include vw-convert-pc(margin-right, 30);
-			@include vw-font-size-pc(20);
+			@include vw-font-size-pc(14);
 			line-height: 1.3;
+			font-weight: 400;
 
 			strong {
 				font-style: normal;
-				font-weight: 600;
-				margin-right: 8px;
+				font-weight: bold;
 			}
 		}
 
