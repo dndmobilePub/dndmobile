@@ -171,7 +171,7 @@
 		.desc {
 			@include vw-font-size-pc(20);
 			@include vw-convert-pc(line-height, 30);
-			line-height: 1.3;
+			//line-height: 1.3;
 			word-break: keep-all;
 			font-weight: 300;
 
@@ -1107,6 +1107,18 @@
 				}
 			}
 
+			&.bg-kb {
+
+				.img {
+					background: url(../images/bg_pj_kb.png) 50% no-repeat;
+					background-size: contain;
+					transform: rotate(90deg);
+
+					img {
+					}
+				}
+			}
+
 			&.bg-sc {
 				.img {
 					
@@ -1194,10 +1206,10 @@ p {
 .accordion-wrap {
 	@include vw-convert-pc(margin-top, 54);
 
-	dl {
+	//dl {
 		// @include vw-convert-pc(padding, 0 160);
 		// border-top: 1px solid #EEEEEE;
-	}
+	//}
 
 	dl:last-child {
 		border-bottom: 1px solid #EEEEEE;
@@ -1727,15 +1739,17 @@ p {
 			}
 
 			.tit {
-				@include vw-convert-mo(padding-bottom, 24);
-				@include vw-font-size-mo(72);
+				@include vw-convert-mo(padding-bottom, 32);
+				@include vw-font-size-mo(56);
 				line-height: 1.2;
+				font-weight: 800;
 			}
 
+
 			.desc {
-				@include vw-font-size-mo(32);
+				@include vw-font-size-mo(28);
+				@include vw-convert-mo(line-height, 40);
 				font-weight: 300;
-				line-height: 1.375;
 			}
 		}
 
@@ -1791,15 +1805,15 @@ p {
 				@include vw-convert-mo(padding-top, 212);
 				.pjt-title{
 					.tit{
-						@include vw-convert-mo(font-size, 80);
-						@include vw-convert-mo(line-height, 88);
+						@include vw-convert-mo(font-size, 72);
+						@include vw-convert-mo(line-height, 80);
 						@include vw-convert-mo(padding-bottom, 44);
-						font-weight: 700;
+						font-weight: 600;
 					}
 					.desc {
-						@include vw-convert-mo(font-size, 32);
+						@include vw-convert-mo(font-size, 28);
 						@include vw-convert-mo(line-height, 44);
-						@include vw-convert-mo(margin-right, 200);
+						@include vw-convert-mo(margin-right, 220);
 					}
 				}
 			}
@@ -1816,8 +1830,11 @@ p {
 				@include vw-convert-mo(padding, 144 40 0);
 
 				.pjt-title{
+
 					.desc{
-						@include vw-convert-mo(max-width, 600);
+						@include vw-convert-mo(font-size, 28);
+						@include vw-convert-mo(max-width, 650);
+						@include vw-convert-mo(line-height, 40);
 					}
 				}
 	
@@ -1833,7 +1850,24 @@ p {
 	
 			.pjt-con{
 				@include vw-convert-mo(padding, 160 40 100);
-							
+
+				.pjt-title{
+
+					.tit{
+					@include vw-convert-mo(font-size, 40);
+					font-weight: 600;
+					}
+
+					.tit2 {
+						@include vw-convert-mo(padding-left, 0);
+						@include vw-font-size-mo(40);
+						line-height: 1.2;
+						font-weight: 600;
+						text-align: left;
+					}
+
+				}
+				
 				.icon-layout{
 					@include vw-convert-mo(padding, 80 0 10);
 					display: flex;

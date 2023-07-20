@@ -622,10 +622,6 @@ header {
 			width: 30px;
 			height: 30px;
 
-			path {
-				stroke-width: 0.7px;
-				stroke: #000;
-			}
 
 		}		
 	}
@@ -708,7 +704,7 @@ header {
 
 		.header {
 			&--inner {
-				padding-top: 56px;
+				padding: 26px 36px 24px 40px !important;
 
 				.logo {
 					&--black {
