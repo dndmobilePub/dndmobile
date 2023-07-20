@@ -815,8 +815,8 @@ header {
 
 	.footer {
 		flex-direction: column;
-		align-items: flex-start;
-		padding: 60px 20px 40px;
+		align-items: center;
+		padding: 48px 40px;
 
 		p {
 			@include vw-font-size-mo(40);
@@ -825,14 +825,18 @@ header {
 		ul {
 			li {
 				display: block;
-				@include vw-font-size-mo(28);
-				font-weight:300;
+				@include vw-font-size-mo(26);
+				font-weight:400;
 				line-height:1.5;
-				&:first-child {
-					@include vw-convert-mo(margin-top, 60);
-				}
-				&:last-child {
-					@include vw-convert-mo(margin-top, 40);
+				//&:first-child {
+				//	@include vw-convert-mo(margin-top, 60);
+				//}
+				//&:last-child {
+				//	@include vw-convert-mo(margin-top, 40);
+				//}
+
+				strong{
+					font-weight:700;
 				}
 			}
 		}

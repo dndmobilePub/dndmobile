@@ -577,7 +577,7 @@
 				.splash-img {
 					position: absolute;
 					@include vw-convert-pc(right, 160);
-					top: -30px;
+					@include vw-convert-pc(top, 100);
 					@include vw-convert-pc(width, 362);
 
 				}
@@ -1809,7 +1809,7 @@
 
 			&.type02 {
 				width: 100%;
-				gap: 25px;
+				gap: 28px;
 				@include vw-convert-mo(padding-top, 88);
 			}
 		}
@@ -2081,6 +2081,18 @@
 
 				.pjt-title {
 					margin-top: 0;
+
+					.tit{
+						font-weight: 800;
+
+						span{
+							font-weight: 400;
+						}
+					}
+				}
+
+				.pjt-top-img{
+					@include vw-convert-mo(padding-top, 64);
 				}
 
 				.pin-spacer {
@@ -2091,7 +2103,7 @@
 			.pjt-con {
 				position: relative;
 				@include vw-convert-mo(padding, 120 40 100);
-				@include vw-convert-mo(margin-top, -40);
+				@include vw-convert-mo(margin-top, -80);
 
 				.phone-layout {
 					&.bg {
@@ -2099,6 +2111,14 @@
 						@include vw-convert-mo(margin-top, 80);
 					}
 				}
+
+				.tit{
+					@include vw-convert-mo(font-size, 40);
+					@include vw-convert-mo(padding-top, 28);
+					font-weight: 600;
+
+				}
+
 			}
 		}
 
@@ -2198,10 +2218,10 @@
 			.pjt-top-full {
 				background: url('../images/bg_wooricerti_mo.jpg') center no-repeat;
 				background-size: cover;
-				// height:100vh;
+				height:auto;
 				padding: 0;
-				@include vw-convert-mo(padding-top, 252);
-				padding-bottom: 0;
+				@include vw-convert-mo(padding-top, 128);
+				padding-bottom: 20px;
 
 				.pjt-title {
 					@include vw-convert-mo(padding, 0 40);
@@ -2209,8 +2229,14 @@
 			}
 
 			.pjt-con {
-				@include vw-convert-mo(padding, 100 40);
+				@include vw-convert-mo(padding, 80 40 140);
 				margin-top: 0;
+
+				.tit{
+					@include vw-convert-mo(font-size, 40);
+					@include vw-convert-mo(padding-bottom, 20);
+					font-weight: 600;
+				}
 			}
 		}
 
