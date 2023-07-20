@@ -3381,6 +3381,7 @@ button.swiper-pagination-bullet {
   font-size: 60px;
   font-size: 3.125vw;
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 @media (min-width: 1920px) {
   .about-wrap .title-wrap .tit01 {
@@ -3395,8 +3396,8 @@ button.swiper-pagination-bullet {
 .about-wrap .title-wrap .tit02 {
   padding-bottom: 40px;
   padding-bottom: 2.0833333333vw;
-  font-size: 32px;
-  font-size: 1.6666666667vw;
+  font-size: 30px;
+  font-size: 1.5625vw;
   font-weight: 700;
 }
 @media (min-width: 1920px) {
@@ -3406,33 +3407,33 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .about-wrap .title-wrap .tit02 {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 .about-wrap .title-wrap .desc {
-  font-size: 24px;
-  font-size: 1.25vw;
+  font-size: 20px;
+  font-size: 1.0416666667vw;
   font-weight: 300;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 @media (min-width: 1920px) {
   .about-wrap .title-wrap .desc {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 .about-wrap .section {
   position: relative;
 }
 .about-wrap .section.nth01 {
-  padding: 358px 0px 308px;
-  padding: 18.6458333333vw 0vw 16.0416666667vw;
+  padding: 304px 0px 180px;
+  padding: 15.8333333333vw 0vw 9.375vw;
   width: 1500px;
   width: 78.125vw;
   margin: 0 auto;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth01 {
-    padding: 358px 0px 308px;
+    padding: 304px 0px 180px;
   }
 }
 @media (min-width: 1920px) {
@@ -3441,12 +3442,12 @@ button.swiper-pagination-bullet {
   }
 }
 .about-wrap .section.nth01 .txt-ani {
-  top: 254px;
-  top: 13.2291666667vw;
+  top: 200px;
+  top: 10.4166666667vw;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth01 .txt-ani {
-    top: 254px;
+    top: 200px;
   }
 }
 .about-wrap .section.nth02 {
@@ -3456,8 +3457,8 @@ button.swiper-pagination-bullet {
   position: relative;
   width: 1500px;
   width: 78.125vw;
-  padding: 306px 0px 198px;
-  padding: 15.9375vw 0vw 10.3125vw;
+  padding: 206px 0px 130px;
+  padding: 10.7291666667vw 0vw 6.7708333333vw;
   margin: 0 auto;
 }
 @media (min-width: 1920px) {
@@ -3467,16 +3468,16 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth02 .inner {
-    padding: 306px 0px 198px;
+    padding: 206px 0px 130px;
   }
 }
 .about-wrap .section.nth02 .inner .txt-ani {
-  top: 200px;
-  top: 10.4166666667vw;
+  top: 100px;
+  top: 5.2083333333vw;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth02 .inner .txt-ani {
-    top: 200px;
+    top: 100px;
   }
 }
 .about-wrap .section.nth02 .inner .service-list-wrap {
@@ -3485,8 +3486,8 @@ button.swiper-pagination-bullet {
   justify-content: space-around;
   padding: 100px 0px;
   padding: 5.2083333333vw 0vw;
-  margin-top: 162px;
-  margin-top: 8.4375vw;
+  margin-top: 140px;
+  margin-top: 7.2916666667vw;
   color: #d9d9d9;
   text-align: center;
 }
@@ -3497,7 +3498,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth02 .inner .service-list-wrap {
-    margin-top: 162px;
+    margin-top: 140px;
   }
 }
 .about-wrap .section.nth02 .inner .service-list-wrap .service-list:nth-child(4) {
@@ -3550,6 +3551,7 @@ button.swiper-pagination-bullet {
   font-size: 36px;
   font-size: 1.875vw;
   font-weight: 600;
+  letter-spacing: 0.05em;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .tit01 {
@@ -3593,15 +3595,15 @@ button.swiper-pagination-bullet {
   }
 }
 .about-wrap .section.nth03 {
-  padding: 300px 0px;
-  padding: 15.625vw 0vw;
+  padding: 214px 0px 264px;
+  padding: 11.1458333333vw 0vw 13.75vw;
   width: 1500px;
   width: 78.125vw;
   margin: 0 auto;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth03 {
-    padding: 300px 0px;
+    padding: 214px 0px 264px;
   }
 }
 @media (min-width: 1920px) {
@@ -3610,24 +3612,24 @@ button.swiper-pagination-bullet {
   }
 }
 .about-wrap .section.nth03 .txt-ani {
-  top: 200px;
-  top: 10.4166666667vw;
+  top: 110px;
+  top: 5.7291666667vw;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth03 .txt-ani {
-    top: 200px;
+    top: 110px;
   }
 }
 .about-wrap .section.nth04 {
-  padding: 0px 0px 250px;
-  padding: 0vw 0vw 13.0208333333vw;
+  padding: 0px 0px 80px;
+  padding: 0vw 0vw 4.1666666667vw;
   width: 1500px;
   width: 78.125vw;
   margin: 0 auto;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth04 {
-    padding: 0px 0px 250px;
+    padding: 0px 0px 80px;
   }
 }
 @media (min-width: 1920px) {
@@ -3689,8 +3691,8 @@ button.swiper-pagination-bullet {
   }
 }
 .about-wrap .section .work-list-wrap ul .tit {
-  padding-top: 70px;
-  padding-top: 3.6458333333vw;
+  padding-top: 65px;
+  padding-top: 3.3854166667vw;
   padding-bottom: 24px;
   padding-bottom: 1.25vw;
   font-size: 36px;
@@ -3699,7 +3701,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .about-wrap .section .work-list-wrap ul .tit {
-    padding-top: 70px;
+    padding-top: 65px;
   }
 }
 @media (min-width: 1920px) {
@@ -3723,12 +3725,12 @@ button.swiper-pagination-bullet {
   }
 }
 .about-wrap .section .clients-list-wrap {
-  margin-top: 160px;
-  margin-top: 8.3333333333vw;
+  margin-top: 100px;
+  margin-top: 5.2083333333vw;
 }
 @media (min-width: 1920px) {
   .about-wrap .section .clients-list-wrap {
-    margin-top: 160px;
+    margin-top: 100px;
   }
 }
 
@@ -4170,7 +4172,6 @@ button.swiper-pagination-bullet {
   font-size: 1.3541666667vw;
   line-height: 31px;
   line-height: 1.6145833333vw;
-  letter-spacing: 0.01em;
   font-weight: 700;
   cursor: pointer;
   image-rendering: -webkit-optimize-contrast;
@@ -4369,6 +4370,7 @@ button.swiper-pagination-bullet {
   font-size: 16px;
   font-size: 0.8333333333vw;
   color: #D91550;
+  letter-spacing: -0.01em;
 }
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li.ing span {
@@ -5873,102 +5875,104 @@ button.swiper-pagination-bullet {
     color: #fff;
   }
   .about-wrap .title-wrap .tit01 {
-    padding-bottom: 120px;
-    padding-bottom: 7.8226857888vw;
-    font-size: 120px;
-    font-size: 7.8226857888vw;
+    padding-bottom: 64px;
+    padding-bottom: 4.1720990874vw;
+    font-size: 104px;
+    font-size: 6.7796610169vw;
     font-weight: 700;
     line-height: 1.26;
+    letter-spacing: -0.02em;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .title-wrap .tit01 {
-    padding-bottom: 60px;
-    padding-bottom: 7.8226857888vw;
+    padding-bottom: 32px;
+    padding-bottom: 4.1720990874vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .title-wrap .tit01 {
-    font-size: 60px;
-    font-size: 7.8226857888vw;
+    font-size: 52px;
+    font-size: 6.7796610169vw;
   }
 }
 @media screen and (max-width: 767px) {
   .about-wrap .title-wrap .desc {
-    font-size: 64px;
-    font-size: 4.1720990874vw;
-    line-height: 1.375;
+    font-size: 56px;
+    font-size: 3.6505867014vw;
+    line-height: 1.428;
     word-break: keep-all;
+    letter-spacing: -0.01em;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .title-wrap .desc {
-    font-size: 32px;
-    font-size: 4.1720990874vw;
+    font-size: 28px;
+    font-size: 3.6505867014vw;
   }
 }
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth01 {
     width: 100%;
-    padding: 384px 80px 240px;
-    padding: 25.0325945241vw 5.2151238592vw 15.6453715776vw;
+    padding: 464px 80px 256px;
+    padding: 30.2477183833vw 5.2151238592vw 16.6883963494vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .section.nth01 {
-    padding: 192px 40px 120px;
-    padding: 25.0325945241vw 5.2151238592vw 15.6453715776vw;
+    padding: 232px 40px 128px;
+    padding: 30.2477183833vw 5.2151238592vw 16.6883963494vw;
   }
 }
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth01 .txt-ani {
-    top: 324px;
-    top: 21.1212516297vw;
+    top: 384px;
+    top: 25.0325945241vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .section.nth01 .txt-ani {
-    top: 162px;
-    top: 21.1212516297vw;
+    top: 192px;
+    top: 25.0325945241vw;
   }
 }
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth02 .inner {
     width: 100%;
-    padding: 320px 80px;
-    padding: 20.8604954368vw 5.2151238592vw;
+    padding: 280px 80px;
+    padding: 18.2529335072vw 5.2151238592vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .section.nth02 .inner {
-    padding: 160px 40px;
-    padding: 20.8604954368vw 5.2151238592vw;
+    padding: 140px 40px;
+    padding: 18.2529335072vw 5.2151238592vw;
   }
 }
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .txt-ani {
-    top: 240px;
-    top: 15.6453715776vw;
+    top: 200px;
+    top: 13.037809648vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .txt-ani {
-    top: 120px;
-    top: 15.6453715776vw;
+    top: 100px;
+    top: 13.037809648vw;
   }
 }
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .service-list-wrap {
     flex-direction: column;
     padding: 0;
-    margin-top: 320px;
-    margin-top: 20.8604954368vw;
+    margin-top: 200px;
+    margin-top: 13.037809648vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .service-list-wrap {
-    margin-top: 160px;
-    margin-top: 20.8604954368vw;
+    margin-top: 100px;
+    margin-top: 13.037809648vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5997,19 +6001,27 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .service-list {
-    margin: 200px 0px 360px;
-    margin: 13.037809648vw 0vw 23.4680573664vw;
+    margin: 216px 0px 301.16px;
+    margin: 14.0808344198vw 0vw 19.6323337679vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .service-list {
-    margin: 100px 0px 180px;
-    margin: 13.037809648vw 0vw 23.4680573664vw;
+    margin: 108px 0px 150.58px;
+    margin: 14.0808344198vw 0vw 19.6323337679vw;
   }
 }
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .service-list:nth-child(4) {
     margin-left: 0;
+    margin: 194.84px 0px 301.16px;
+    margin: 12.7014341591vw 0vw 19.6323337679vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .about-wrap .section.nth02 .inner .service-list-wrap .service-list:nth-child(4) {
+    margin: 97.42px 0px 150.58px;
+    margin: 12.7014341591vw 0vw 19.6323337679vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -6021,6 +6033,9 @@ button.swiper-pagination-bullet {
   .about-wrap .section.nth02 .inner .service-list-wrap .tit01 {
     font-size: 80px;
     font-size: 5.2151238592vw;
+    padding-bottom: 32px;
+    padding-bottom: 2.0860495437vw;
+    letter-spacing: 0.05em;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -6029,10 +6044,19 @@ button.swiper-pagination-bullet {
     font-size: 5.2151238592vw;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .about-wrap .section.nth02 .inner .service-list-wrap .tit01 {
+    padding-bottom: 16px;
+    padding-bottom: 2.0860495437vw;
+  }
+}
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .tit02 {
     font-size: 80px;
     font-size: 5.2151238592vw;
+    padding-bottom: 80px;
+    padding-bottom: 5.2151238592vw;
+    letter-spacing: -0.01em;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -6041,16 +6065,23 @@ button.swiper-pagination-bullet {
     font-size: 5.2151238592vw;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .about-wrap .section.nth02 .inner .service-list-wrap .tit02 {
+    padding-bottom: 40px;
+    padding-bottom: 5.2151238592vw;
+  }
+}
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .desc {
-    font-size: 64px;
-    font-size: 4.1720990874vw;
+    font-size: 56px;
+    font-size: 3.6505867014vw;
+    line-height: 1.285;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .desc {
-    font-size: 32px;
-    font-size: 4.1720990874vw;
+    font-size: 28px;
+    font-size: 3.6505867014vw;
   }
 }
 @media screen and (max-width: 767px) {
