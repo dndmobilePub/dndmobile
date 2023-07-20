@@ -1712,7 +1712,7 @@ p {
 			display: block;
 			width: 100%;
 			height: 100%;
-			@include vw-convert-mo(padding, 200 40 0);
+			@include vw-convert-mo(padding, 128 40 0);
 
 			.pjt-top-img {
 				width: 100%;
@@ -1735,7 +1735,12 @@ p {
 
 			&.type02 {
 				width: 100%;
-				@include vw-convert-mo(margin-top, 100);
+				@include vw-convert-mo(margin-top, 60);
+				text-align: left;
+
+				.desc{
+					@include vw-convert-mo(padding-right, 30);
+				}
 			}
 
 			.tit {
@@ -1743,6 +1748,10 @@ p {
 				@include vw-font-size-mo(56);
 				line-height: 1.2;
 				font-weight: 800;
+
+				span{
+					font-weight: 400;
+				}
 			}
 
 
@@ -1755,8 +1764,8 @@ p {
 
 		.phone-layout {
 			width: 100%;
-			@include vw-convert-mo(padding-top, 80);
-			gap: 25px;
+			@include vw-convert-mo(padding-top, 88);
+			gap: 28px;
 
 			img {
 				max-width: 100%;
@@ -1769,6 +1778,7 @@ p {
 			&.type02 {
 				width: 100%;
 				gap: 25px;
+				@include vw-convert-mo(padding-top, 88);
 			}
 		}
 
@@ -1776,6 +1786,7 @@ p {
 			ul {
 				flex-wrap: wrap;
 				gap: 24px;
+				width: 100%;
 
 				li {
 					width: 18%;
@@ -1783,7 +1794,15 @@ p {
 					.txt {
 						@include vw-convert-mo(padding-top, 16);
 						@include vw-font-size-mo(24);
+						color: rgba(0, 0, 0, 0.5);
+						font-weight: 400;
 					}
+
+					img{
+						@include vw-convert-mo(width, 100);
+						@include vw-convert-mo(height, 100);
+					}
+
 				}
 			}
 		}
@@ -1791,7 +1810,7 @@ p {
 		.tool-list {
 			display: flex;
 			gap: 4px;
-			@include vw-convert-mo(margin-top, 52);
+			@include vw-convert-mo(margin-top, 64);
 
 			div {
 				@include vw-convert-mo(width, 52);
@@ -1827,7 +1846,7 @@ p {
 
 		&.sc-aged{
 			.pjt-top {
-				@include vw-convert-mo(padding, 144 40 0);
+				@include vw-convert-mo(padding, 128 40 0);
 
 				.pjt-title{
 
@@ -1849,7 +1868,7 @@ p {
 			}
 	
 			.pjt-con{
-				@include vw-convert-mo(padding, 160 40 100);
+				@include vw-convert-mo(padding, 260 40 88);
 
 				.pjt-title{
 
@@ -1897,7 +1916,7 @@ p {
 				}
 	
 				&.type-white{
-					@include vw-convert-mo(padding, 100 40 0);
+					@include vw-convert-mo(padding, 80 40 140 40);
 					.phone-layout{
 						.aos-init:first-child{
 							display: none;
@@ -1918,53 +1937,66 @@ p {
 
 		&.kb {
 			.pjt-top {
-				@include vw-convert-mo(padding-top, 208);
+				@include vw-convert-mo(padding-top, 128);
 
 				.pjt-title {
 					width: 100%;
+
+					.tit{
+						font-weight: 900;
+					}
 				}
 
 				.pjt-top-img {
 					width: 100%;
-					@include vw-convert-mo(padding-top, 40);
+					@include vw-convert-mo(padding-top, 112);
 
 					.pjt-img {
-						@include vw-convert-mo(width, 284);
-						border: 5px solid #000;
-						border-radius: 30px;
+						@include vw-convert-mo(width, 280);
+						border: 4px solid #000;
+						border-radius: 16px;
 					}
 
 					.circle {
 						&.type01 {
 							right: 0;
-							@include vw-convert-mo(bottom, -80);
-							@include vw-convert-mo(width, 500);
-							@include vw-convert-mo(height, 500);
+							@include vw-convert-mo(bottom,-50);
+							@include vw-convert-mo(right, 50);
+							@include vw-convert-mo(width, 426);
+							@include vw-convert-mo(height, 426);
 						}
 
 						&.type02 {
 							right: 0;
-							@include vw-convert-mo(top, 74);
-							@include vw-convert-mo(width, 200);
-							@include vw-convert-mo(height, 200);
+							@include vw-convert-mo(top, 200);
+							@include vw-convert-mo(width, 160);
+							@include vw-convert-mo(height, 160);
 						}
 
 						&.type03 {
 							@include vw-convert-mo(left, 32);
-							@include vw-convert-mo(bottom, 100);
-							@include vw-convert-mo(width, 130);
-							@include vw-convert-mo(height, 130);
+							@include vw-convert-mo(bottom, 80);
+							@include vw-convert-mo(width, 114);
+							@include vw-convert-mo(height, 114);
 						}
 					}
 				}
 			}
 
 			.pjt-con {
-				@include vw-convert-mo(padding, 260 40 80);
-				margin-top: -104px;
+				@include vw-convert-mo(padding, 260 40 120);
+				margin-top: -64px;
+
+				.pjt-title{
+
+					.tit{
+						@include vw-convert-mo(font-size, 48);
+						@include vw-convert-mo(padding-bottom, 20);
+					}
+				}
 
 				.pjt-img {
-					@include vw-convert-mo(border-radius, 40);
+					@include vw-convert-mo(border-radius, 32);
 				}
 			}
 		}
@@ -1995,8 +2027,14 @@ p {
 
 			.pjt-con {
 				position: relative;
-				@include vw-convert-mo(padding, 120 40 100);
+				@include vw-convert-mo(padding, 120 40 140);
 				@include vw-convert-mo(margin-top, -40);
+
+				.tit{
+					@include vw-convert-mo(font-size, 40);
+					font-weight: 600;
+					
+				}
 			}
 		}
 
@@ -2035,9 +2073,18 @@ p {
 		&.woori-my {
 			.pjt-top {
 				@include vw-convert-mo(padding-bottom, 60);
+				@include vw-convert-mo(padding-top, 128);
 
 				.pjt-title {
 					width: 100%;
+
+					.tit{
+						font-weight: 800;
+
+						span{
+							font-weight: 400;
+						}
+					}
 				}
 
 				.pjt-top-img {
@@ -2048,6 +2095,7 @@ p {
 
 					.bg-area {
 						@include vw-convert-mo(padding-bottom, 30);
+						position: relative;
 					}
 
 					.splash-img {
@@ -2063,28 +2111,53 @@ p {
 					.pjt-img {
 						@include vw-convert-pc(width, 550);
 					}
+
+					.woori_bg_left{
+						@include vw-convert-pc(width, 580);
+						@include vw-convert-mo(left, 15);
+						@include vw-convert-mo(top, 80);
+					}
+
+					.woori_bg_right{
+						@include vw-convert-pc(width, 480);
+						@include vw-convert-mo(right, -10);
+						@include vw-convert-mo(top, 100);
+					}
+
 				}
 			}
 
 			.pjt-con {
 				&.bg01 {
-					@include vw-convert-mo(padding, 160 40 0);
-					@include vw-convert-mo(margin-top, -40);
+					@include vw-convert-mo(padding, 120 40 0);
+					@include vw-convert-mo(margin-top, 300);
+					@include vw-convert-mo(margin-bottom, -150);
 
 					.phone-layout {
 						div:nth-child(2) {
 							margin-top: 0;
 						}
 					}
+
+					.type02{
+						@include vw-convert-mo(padding-top, 120);
+					}
+
 				}
 
 				&.bg02 {
-					@include vw-convert-mo(padding, 200 40 100);
+					@include vw-convert-mo(padding, 232 40 80);
 					@include vw-convert-mo(margin-top, -100);
 				}
 
 				&.bg03 {
 					@include vw-convert-mo(padding, 100 40);
+
+					.tit{
+						text-align: left;
+						@include vw-convert-mo(font-size, 40);
+						font-weight: 600;
+					}
 				}
 			}
 		}
@@ -2112,6 +2185,7 @@ p {
 		&.cj {
 			.pjt-top {
 				padding-bottom: 0;
+				@include vw-convert-mo(padding-top, 128);
 
 				.pjt-title {
 					width: 100%;
@@ -2120,11 +2194,11 @@ p {
 				.pjt-top-img {
 					width: 100%;
 					@include vw-convert-mo(height, 648);
-					@include vw-convert-mo(margin-top, 80);
+					@include vw-convert-mo(margin-top, 108);
 
 					.pjt-img01 {
 						// position:static;
-						left: 0;
+						left: -20px;
 						bottom: -50px;
 						width: 80%;
 					}
@@ -2132,6 +2206,7 @@ p {
 					.pjt-img02 {
 						// position:static;
 						top: auto;
+						bottom:20px;
 						right: 0;
 						width: 70%;
 					}
@@ -2139,11 +2214,17 @@ p {
 			}
 
 			.pjt-con {
-				@include vw-convert-mo(padding, 180 40 108);
+				@include vw-convert-mo(padding, 128 40 140);
 				@include vw-convert-mo(margin-top, -100);
 
+				.tit{
+					@include vw-convert-mo(font-size, 40);
+					@include vw-convert-mo(padding-bottom, 20);
+					font-weight: 600;
+				}
+
 				.icon {
-					@include vw-convert-mo(padding-top, 80);
+					@include vw-convert-mo(padding-top, 64);
 					@include vw-convert-mo(margin, 0 40);
 				}
 			}
