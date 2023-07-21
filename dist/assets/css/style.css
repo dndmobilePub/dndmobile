@@ -3855,21 +3855,13 @@ button.swiper-pagination-bullet {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   margin: 100px auto 0px;
   margin: 5.2083333333vw auto 0vw;
 }
 @media (min-width: 1920px) {
   .project-wrap .project-swiper {
     margin: 100px auto 0px;
-  }
-}
-.project-wrap .project-swiper .swiper-wrapper {
-  padding-left: 20px;
-  padding-left: 1.0416666667vw;
-}
-@media (min-width: 1920px) {
-  .project-wrap .project-swiper .swiper-wrapper {
-    padding-left: 20px;
   }
 }
 .project-wrap .project-swiper .box-wrap {
@@ -3918,6 +3910,9 @@ button.swiper-pagination-bullet {
   width: 100%;
   border-radius: 75%;
   transform: rotate(315deg);
+}
+.project-wrap .project-swiper .box-wrap:first-child .img {
+  margin-left: -74px;
 }
 .project-wrap .project-swiper .box-wrap .hover-box {
   display: none;
@@ -6918,7 +6913,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .project-wrap .project-swiper {
-    width: 70%;
+    width: 100%;
     margin: 128px auto 0px;
     margin: 8.3441981747vw auto 0vw;
   }

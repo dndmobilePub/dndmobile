@@ -928,11 +928,8 @@
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
+		width: 100%;
 		@include vw-convert-pc(margin, 100 auto 0);
-		
-		.swiper-wrapper {
-			@include vw-convert-pc(padding-left, 20);
-		}
 
 		.box-wrap {
 			@include vw-convert-pc(width, 228);
@@ -962,6 +959,12 @@
 					width: 100%;
 					border-radius: 75%;
 					transform: rotate(315deg);
+				}
+			}
+
+			&:first-child {
+				.img {
+					margin-left: -74px;
 				}
 			}
 
@@ -2600,7 +2603,7 @@
 		}
 
 		.project-swiper {
-			width: 70%;
+			width: 100%;
 			@include vw-convert-mo(margin, 64 auto 0);
 
 			.swiper-wrapper {
