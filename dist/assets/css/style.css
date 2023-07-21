@@ -189,6 +189,10 @@ img {
 .main .header--inner .main_logo a .ico .fill-black {
   fill: #fff;
 }
+.main .footer {
+  color: #fff;
+  background: #000;
+}
 
 header {
   width: 100%;
@@ -463,10 +467,6 @@ header.active {
   z-index: 9;
   position: relative;
 }
-.footer.main {
-  color: #fff;
-  background: #000;
-}
 .footer p {
   font-size: 16px;
   font-size: 0.8333333333vw;
@@ -605,6 +605,10 @@ header.active {
   .main .header--footer .main_logo a .ico .fill-black {
     fill: #fff;
   }
+  .main .footer {
+    color: #fff;
+    background: #000;
+  }
   header.active {
     opacity: 1;
     transform: translateY(0%);
@@ -708,10 +712,6 @@ header.active {
     padding: 48px 40px;
     color: #222;
     background: #F3F3F3;
-  }
-  .footer.main {
-    color: #fff;
-    background: #000;
   }
   .footer p {
     font-size: 80px;
