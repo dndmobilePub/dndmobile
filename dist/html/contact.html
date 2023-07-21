@@ -19,12 +19,6 @@
     <script src="../assets/js/common.js" defer></script>
     <script src="../assets/js/ui.js" defer></script>
 </head>
-<style>
-	header {
-		position: fixed;
-		height: auto;
-	}
-</style>
 
 <body>
 	<div class="wrap">
@@ -259,38 +253,41 @@
 		</div>-->
 	</div>
 </section>
-
 		<section class="contact-wrap">
 			<div class="inner">
-				<h2 data-aos="fade-up">CONTACT</h2>
-				<div class="hide-mobile">
-					<ul class="tel-wrap" data-aos="fade-up" data-aos-duration="1000">
-						<li><strong>L.</strong>(03995) 서울시 마포구 월드컵북로2길 11 삼희빌딩 7F</li>
-						<li><strong>T.</strong>+82 2 6448-2286</li>
-						<li><strong>F.</strong>+82 2 6448-2284</li>
-					</ul>
-					<div class="btn-wrap" data-aos="fade-up" data-aos-duration="1000">
-						<a href="../assets/download/dndmobile_company_Brochure.pdf" name="회사소개서" class="type3"
-							target="_blank">회사소개서</a>
-						<a href="mailto:dndmobile@dndmobile.co.kr" name="이메일 문의" class="type2" target="_blank">이메일 문의</a>
-					</div>
+				<div class="title-wrap" data-aos="fade-up" data-aos-duration="1000">
+					<p>Contact Our Company</p>
+					<h2><strong>풍부한 경험과 전문성</strong>으로 <br class="hide-pc">보답합니다</h2>
 				</div>
-			</div>
-			<div class="hide-pc">
-				<ul class="tel-wrap" data-aos="fade-up" data-aos-duration="1000">
-					<li>
-						<strong>L.</strong>
-						(03995) 서울시 마포구 월드컵북로2길 11 삼희빌딩 7F
-					</li>
-					<li><strong>T.</strong>+82 2 6448-2286</li>
-					<li><strong>F.</strong>+82 2 6448-2284</li>
-				</ul>
-				<div class="btn-wrap" data-aos="fade-up" data-aos-duration="1000">
-					<a href="../assets/download/dndmobile_company_Brochure.pdf" target="_blank" name="회사소개서"
-						class="type3">회사소개서</a>
-					<a href="mailto:dndmobile@dndmobile.co.kr" target="_blank" name="이메일 문의" class="type2">이메일 문의</a>
+				<script src="https://maps.googleapis.com/maps/api/js?key=여기에key입력&callback=initMap&v=weekly" defer></script>
+				<div class="map-wrap" data-aos="fade-up" data-aos-duration="1000">
+					<div id="map"></div>
 				</div>
-			</div>
+				<div class="info-wrap" data-aos="fade-up" data-aos-duration="1000">
+					<dl class="addr">
+						<dt>Address</dt>
+						<dd>서울시 마포구 월드컵북로2길 11 삼희빌딩 7F</dd>
+					</dl>
+					<dl class="tel">
+						<dt>Office Line</dt>
+						<dd>
+							<dl>
+								<dt class="title hide-mobile">Tel.</dt>
+								<dt class="title hide-pc">T.</dt>
+								<dd>+82 2 6446-2286</dd>
+							</dl>
+							<dl>
+								<dt class="title hide-mobile">Fax.</dt>
+								<dt class="title hide-pc">F.</dt>
+								<dd>+82 2 6446-2284</dd>
+							</dl>
+						</dd>
+					</dl>
+					<dl class="email">
+						<dt>E-mail</dt>
+						<dd><a href="dndmobile@dndmobile.co.kr" target="_blank">dndmobile@dndmobile.co.kr</a></dd>
+					</dl>
+				</div>
 		</section>
 		<!-- footer -->
 <div class="footer">
@@ -309,5 +306,32 @@
 
 	</div>
 </body>
+
+<script>
+	function initMap() {
+  const center = new google.maps.LatLng(-33.712451, 150.311823);
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 9,
+    center: center,
+  });
+  const svgMarker = {
+    path: "M-1.547 12l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM0 0q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+    fillColor: "blue",
+    fillOpacity: 0.6,
+    strokeWeight: 0,
+    rotation: 0,
+    scale: 2,
+    anchor: new google.maps.Point(0, 20),
+  };
+
+  new google.maps.Marker({
+    position: map.getCenter(),
+    icon: svgMarker,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
+</script>
 
 </html>

@@ -836,14 +836,14 @@
 			@include vw-font-size-pc(18);
 			font-weight: 700;
 			color: #E30D3F;
-			letter-spacing: 0.1em;
+			letter-spacing: 1.8px;
 		}
 
 		h2 {
 			@include vw-convert-pc(margin-top, 25);
 			@include vw-font-size-pc(60);
 			font-weight: 200;
-			letter-spacing: -0.01em;;
+			letter-spacing: -0.6px;
 		}
 	}
 
@@ -860,7 +860,7 @@
 			display: none; /* 크롬, 사파리, 오페라, 엣지 */
 		}
 
-				ul {
+		ul {
 			display: -webkit-box;
 			display: -ms-flexbox;
 			display: flex;
@@ -915,8 +915,11 @@
 		-webkit-box-align: center;
 		-ms-flex-align: center;
 		align-items: center;
-		@include vw-convert-pc(margin, 100 0 0);
+		@include vw-convert-pc(margin, 100 auto 0);
 		
+		.swiper-wrapper {
+			@include vw-convert-pc(padding-left, 20);
+		}
 
 		.box-wrap {
 			@include vw-convert-pc(width, 228);
@@ -1449,35 +1452,107 @@
 /*contact*/
 .contact-wrap {
 	.inner {
-		background: url(../images/map.png) center no-repeat;
-		background-size: 100%;
+		// background: url(../images/map.png) center no-repeat;
+		// background-size: 100%;
 		width: 100%;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		@include vw-convert-pc(padding, 400 160 280);
+		@include vw-convert-pc(padding, 180 160 66);
 	}
 
-	h2 {
-		@include vw-font-size-pc(80);
-		font-weight: 700;
+	.title-wrap {
+		text-align: center;
+
+		p {
+			@include vw-font-size-pc(18);
+			font-weight: 700;
+			color: #E30D3F;
+			letter-spacing: 1.8px;
+		}
+
+		h2 {
+			@include vw-convert-pc(margin-top, 25);
+			@include vw-font-size-pc(60);
+			font-weight: 200;
+			letter-spacing: -0.6px;
+		}
 	}
 
-	.tel-wrap {
-		@include vw-convert-pc(margin-top, 40);
-		@include vw-font-size-pc(24);
+	.map-wrap {
+		width: 100%;
+		@include vw-convert-pc(height, 520);
+		@include vw-convert-pc(margin-top, 50);
+		background: #f5f5f5;
+	}
 
-		li {
-			color: #555;
-			@include vw-convert-pc(margin-top, 24);
+	.info-wrap {
+		display: flex;
+    align-items: flex-start;
+		@include vw-convert-pc(gap, 217);
+		@include vw-convert-pc(margin-top, 60);
 
-			strong {
-				@include vw-convert-pc(margin-right, 16);
-				color: #000;
+		> dl {
+			// flex: 1;
+			white-space: nowrap;
+
+			> dt {
+				position: relative;
+				@include vw-font-size-pc(24);
+				font-weight: 700;
+
+				&::before {
+					content: '';
+					display: inline-block;
+					position: absolute;
+					@include vw-convert-pc(top, -10);
+					left: 0;
+					@include vw-convert-pc(width, 19);
+					@include vw-convert-pc(height, 4);
+					background: #E30D3F;
+				}
+			}
+
+			dd {
+				@include vw-convert-pc(margin-top, 22);
+				@include vw-font-size-pc(20);
+				font-weight: 300;
 			}
 		}
 
+		dl.tel {
+			> dd {
+				display: flex;
+				@include vw-font-size-pc(20);
+				font-weight: 300;
+				
+				> dl {
+					display: flex;
+					@include vw-convert-pc(margin-right, 50);
+				}
+
+				dt,
+				dd {
+					@include vw-convert-pc(margin-top, 0);
+					// @include vw-font-size-pc(20);
+					// font-weight: 300;
+				}
+
+				dt {
+					@include vw-convert-pc(margin-right, 8);
+					font-weight: 400;
+				}
+			}
+			
+		}
+
+		dl.email {
+			a {
+				text-decoration: underline;
+			}
+
+		}
 	}
 }
 
@@ -2467,13 +2542,13 @@
 		.title-wrap {	
 			p {
 				@include vw-font-size-mo(24);
-				letter-spacing: 0.0625em;
+				letter-spacing: 0.12px;
 			}
 	
 			h2 {
 				@include vw-convert-mo(margin-top, 12);
 				@include vw-font-size-mo(56);
-				letter-spacing: -0.02em;
+				letter-spacing: -0.56px;
 				line-height: 1.2em;
 			}
 		}
@@ -2679,37 +2754,81 @@
 	.contact-wrap {
 
 		.inner {
-			background: url(../images/m_map.png) center 20% no-repeat;
-			background-size: cover;
-			@include vw-convert-mo(padding, 10 40 460);
-			@include vw-convert-mo(margin-top, 164)
+			@include vw-convert-mo(padding, 172 0 70);
+			// @include vw-convert-mo(margin-top, 164);
 		}
 
-		h2 {
-			@include vw-font-size-mo(80);
-			@include vw-convert-mo(margin-bottom, 900);
-		}
+		.title-wrap {	
+			text-align: left;
+			@include vw-convert-mo(padding, 0 40);
 
-		.hide-pc {
-			@include vw-convert-mo(padding, 80 40 0);
-		}
-
-		.tel-wrap {
-			@include vw-convert-mo(margin-bottom, 100);
-
-			li {
-				display: flex;
-				@include vw-convert-mo(padding-bottom, 24);
-				@include vw-font-size-mo(36);
-				line-height: 1.3;
-				font-weight: 300;
-
-				strong {
-					@include vw-convert-mo(width, 60);
-				}
-
+			p {
+				@include vw-font-size-mo(24);
+				letter-spacing: 0.12px;
+			}
+	
+			h2 {
+				@include vw-convert-mo(margin-top, 12);
+				@include vw-font-size-mo(56);
+				letter-spacing: -0.56px;
+				line-height: 1.2;
 			}
 		}
+
+		.map-wrap {
+			@include vw-convert-mo(height, 540);
+			@include vw-convert-mo(margin-top, 52);
+		}
+		
+		.info-wrap {
+			flex-direction: column;
+			@include vw-convert-mo(margin, 60 40 0);
+			@include vw-convert-mo(gap, 36);
+	
+			> dl {
+				white-space: normal;
+	
+				> dt {
+					@include vw-font-size-mo(32);
+	
+					&::before {
+						@include vw-convert-mo(top, -12);
+						@include vw-convert-mo(width, 32);
+						@include vw-convert-mo(height, 4);
+					}
+				}
+	
+				dd {
+					@include vw-convert-mo(margin-top, 12);
+					@include vw-font-size-mo(28);
+					line-height: 1.571;
+				}
+			}
+	
+			dl.tel {
+				> dd {
+					
+					> dl {
+						@include vw-convert-pc(margin-right, 28);
+					}
+	
+					dt {
+						@include vw-convert-pc(margin-right, 8);
+						@include vw-font-size-mo(28);
+						font-weight: 400;
+					}
+				}
+				
+			}
+	
+			dl.email {
+				a {
+					text-decoration: underline;
+				}
+	
+			}
+		}
+
 	}
 
 	.recruit-wrap {
