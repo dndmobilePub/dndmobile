@@ -504,10 +504,15 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	color: #fff;
-	background: #000;
+	color: #222;
+	background: #fff;
 	z-index: 9;
 	position: relative;
+
+	&.main {
+		color: #fff;
+		background: #000;
+	}
 
 
 	p {
@@ -845,6 +850,13 @@ header {
 		flex-direction: column;
 		align-items: center;
 		padding: 48px 40px;
+		color: #222;
+		background: #F3F3F3;
+
+		&.main {
+			color: #fff;
+			background: #000;
+		}
 
 		p {
 			@include vw-font-size-mo(40);
