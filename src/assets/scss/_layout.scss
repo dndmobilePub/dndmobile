@@ -201,7 +201,7 @@
 		}
 
 		img {
-			max-width: 90%;
+			max-width: 89%;
 		}
 	}
 
@@ -371,7 +371,7 @@
 				.pjt-img {
 					@include vw-convert-pc(width, 362);
 					border: 10px solid #000;
-					border-radius: 50px;
+					border-radius: 32px;
 					// box-shadow: 23px 23px 28px rgba(0, 0, 0, 0.13);
 					// margin-bottom: 40px;
 				}
@@ -384,7 +384,7 @@
 					&.type01 {
 						background: rgba(255, 223, 98, 0.2);
 						right: 0;
-						bottom: -40px;
+						bottom: -100px;
 						@include vw-convert-pc(width, 575);
 						@include vw-convert-pc(height, 575);
 					}
@@ -392,15 +392,15 @@
 					&.type02 {
 						background: linear-gradient(180deg, rgba(255, 240, 181, 0.7) 90.04%, rgba(255, 206, 14, 0.7) 190.04%);
 						right: 0;
-						@include vw-convert-pc(top, 37);
+						@include vw-convert-pc(top, 107);
 						@include vw-convert-pc(width, 222);
 						@include vw-convert-pc(height, 222);
 					}
 
 					&.type03 {
 						background: linear-gradient(180deg, rgba(255, 240, 181, 0.6) 0%, rgba(255, 206, 14, 0.6) 100%);
-						@include vw-convert-pc(left, 150);
-						@include vw-convert-pc(bottom, 100);
+						@include vw-convert-pc(left, 70);
+						@include vw-convert-pc(bottom, -30);
 						@include vw-convert-pc(width, 143);
 						@include vw-convert-pc(height, 143);
 						opacity: 0.5;
@@ -548,6 +548,11 @@
 					@include vw-convert-pc(padding-top, 100);
 					//@include vw-convert-pc(margin-top, 100);
 				}
+
+				img{
+					max-width:95%;
+				}
+
 			}
 		}
 	}
@@ -604,6 +609,14 @@
 			&.bg03 {
 				background: #0E2A78;
 				@include vw-convert-pc(padding, 150 0 150);
+
+				.phone-layout{
+
+					img{
+						max-width:95%;
+					}
+				}
+
 			}
 		}
 	}
