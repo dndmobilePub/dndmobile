@@ -2557,7 +2557,7 @@ button.swiper-pagination-bullet {
   text-align: center;
 }
 .pjt-con-wrap .phone-layout img {
-  max-width: 90%;
+  max-width: 89%;
 }
 .pjt-con-wrap .icon-list-wrap ul {
   display: flex;
@@ -2900,7 +2900,7 @@ button.swiper-pagination-bullet {
   width: 362px;
   width: 18.8541666667vw;
   border: 10px solid #000;
-  border-radius: 50px;
+  border-radius: 32px;
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.kb .pjt-top .pjt-top-img .pjt-img {
@@ -2915,7 +2915,7 @@ button.swiper-pagination-bullet {
 .pjt-con-wrap.kb .pjt-top .pjt-top-img .circle.type01 {
   background: rgba(255, 223, 98, 0.2);
   right: 0;
-  bottom: -40px;
+  bottom: -100px;
   width: 575px;
   width: 29.9479166667vw;
   height: 575px;
@@ -2934,8 +2934,8 @@ button.swiper-pagination-bullet {
 .pjt-con-wrap.kb .pjt-top .pjt-top-img .circle.type02 {
   background: linear-gradient(180deg, rgba(255, 240, 181, 0.7) 90.04%, rgba(255, 206, 14, 0.7) 190.04%);
   right: 0;
-  top: 37px;
-  top: 1.9270833333vw;
+  top: 107px;
+  top: 5.5729166667vw;
   width: 222px;
   width: 11.5625vw;
   height: 222px;
@@ -2943,7 +2943,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.kb .pjt-top .pjt-top-img .circle.type02 {
-    top: 37px;
+    top: 107px;
   }
 }
 @media (min-width: 1920px) {
@@ -2958,10 +2958,10 @@ button.swiper-pagination-bullet {
 }
 .pjt-con-wrap.kb .pjt-top .pjt-top-img .circle.type03 {
   background: linear-gradient(180deg, rgba(255, 240, 181, 0.6) 0%, rgba(255, 206, 14, 0.6) 100%);
-  left: 150px;
-  left: 7.8125vw;
-  bottom: 100px;
-  bottom: 5.2083333333vw;
+  left: 70px;
+  left: 3.6458333333vw;
+  bottom: -30px;
+  bottom: -1.5625vw;
   width: 143px;
   width: 7.4479166667vw;
   height: 143px;
@@ -2970,12 +2970,12 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.kb .pjt-top .pjt-top-img .circle.type03 {
-    left: 150px;
+    left: 70px;
   }
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.kb .pjt-top .pjt-top-img .circle.type03 {
-    bottom: 100px;
+    bottom: -30px;
   }
 }
 @media (min-width: 1920px) {
@@ -3166,6 +3166,9 @@ button.swiper-pagination-bullet {
     padding-top: 100px;
   }
 }
+.pjt-con-wrap.woori-open .pjt-con .phone-layout img {
+  max-width: 95%;
+}
 .pjt-con-wrap.woori-my .pjt-top {
   position: relative;
 }
@@ -3310,6 +3313,9 @@ button.swiper-pagination-bullet {
   .pjt-con-wrap.woori-my .pjt-con.bg03 {
     padding: 150px 0px 150px;
   }
+}
+.pjt-con-wrap.woori-my .pjt-con.bg03 .phone-layout img {
+  max-width: 95%;
 }
 .pjt-con-wrap.woori-certi .pjt-top-full {
   background: url("../images/bg_wooricerti.jpg") center no-repeat;
