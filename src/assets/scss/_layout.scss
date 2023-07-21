@@ -261,6 +261,49 @@
 			bottom: 30px;	
 			left: calc( 50% - 20px);
 		}
+
+		//메인 화살표 애니메이션
+		.arrow {
+			position:relative;
+			top: -100px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transform: rotate(0deg);
+			cursor: pointer;
+		}
+		
+		.arrow span {
+			display: block;
+			width: 1.5vw;
+			height: 1.5vw;
+			border-bottom: 5px solid white;
+			border-right: 5px solid white;
+			transform: rotate(45deg);
+			margin: -10px;
+			animation: animate 2s infinite;
+		}
+		
+		.arrow span:nth-child(2) {
+			animation-delay: -0.2s;
+		}
+		
+		.arrow span:nth-child(3) {
+			animation-delay: -0.4s;
+		}
+		
+		@keyframes animate {
+			0% {
+				opacity: 0;
+				transform: rotate(45deg) translate(-20px, -20px);
+			}
+			50% {
+				opacity: 1;
+			}
+			100% {
+				opacity: 0;
+				transform: rotate(45deg) translate(20px, 20px);
+			}
+		}
 	}
 
 	&.sc-aged{
@@ -277,6 +320,7 @@
 				}
 			}
 			.pjt-top-img {
+				@include vw-convert-pc(margin-top, 50);
 				img{
 					@include vw-convert-pc(height, 800);
 				}
@@ -1803,6 +1847,18 @@
 			visibility: visible;
 		}
 	}
+
+	.pjt-con-wrap{
+			&.intro-wrap{
+				.arrow{
+					span{
+						width: 5vw;
+						height: 5vw;
+					}
+				} 
+			}
+	} 
+
 
 	.pjt-con-wrap {
 		.btn-pjt-next {

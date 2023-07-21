@@ -151,6 +151,14 @@ window.addEventListener('scroll', () => {
 })
 
 
+$('.main .header--inner .top-nav .dcb .ico').hover(function(){
+	$(".top_hide").css("display", "block");
+}, function(){
+	$(".top_hide").css("display", "none");
+});
+
+
+
 /**
  * ==============================+
  * 푸터 정의
