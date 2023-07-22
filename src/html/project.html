@@ -735,63 +735,62 @@
 			var activeSlideIndex = 0;//현재 활성화 슬라이드 초기화 설정
 
 			var pjSwiper = new Swiper('.project-swiper', {
-			slidesPerView: 'auto',
-			spaceBetween: 74,
-			centeredSlides: true,
-			grabCursor: true,
-			loop: true,
-			loopAdditionalSlides : 1,
-			slidesOffsetBefore: 0,
-			observer: true,
-			observeParents: true,
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			breakpoints: {
-				768: {
-					slidesPerView: 'auto',
-					spaceBetween: 30,
-					loop: true,
-					centeredSlides: true,
-					autoplay: {
-						delay: 3000,
-						disableOnInteraction: false,
-					},
-				}
-			},
-			on: {
-				init: function () {
-					activeSlideIndex = this.activeIndex;
-					rotateSlide(this.activeIndex);
-				},
-				slideChange: function () {
-					rotateSlide(this.activeIndex);
-				},
-			},
-		});
+        slidesPerView: 6,
+        spaceBetween: 1,
+        centeredSlides: true,
+        roundLengths: true,
+        loop: true,
+        loopAdditionalSlides: 30,
+        observer: true,
+        observeParents: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+            loop: true,
+            centeredSlides: true,
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+            },
+          }
+        },
+        on: {
+          init: function () {
+            activeSlideIndex = this.activeIndex;
+            rotateSlide(this.activeIndex);
+          },
+          slideChange: function () {
+            rotateSlide(this.activeIndex);
+          },
+        },
+		  });
 
-		//슬라이드시 이미지 회전 효과
-		function rotateSlide(index) {
-			var slides = document.querySelectorAll('.project-swiper .swiper-slide');
-			for (var i = 0; i < slides.length; i++) {
-				var slide = slides[i];
-				if (i === index) {
-					slide.querySelector('.img').style.transform = "";
-				} else {
-					slide.querySelector('.img').style.transform = "rotate(45deg)";
-					slide.querySelector('img').style.transform = "rotatd(315deg)";
-				}
-			}
-		}
+      //슬라이드시 이미지 회전 효과
+      function rotateSlide(index) {
+        var slides = document.querySelectorAll('.project-swiper .swiper-slide');
+        for (var i = 0; i < slides.length; i++) {
+          var slide = slides[i];
+          if (i === index) {
+            slide.querySelector('.img').style.transform = "";
+          } else {
+            slide.querySelector('.img').style.transform = "rotate(45deg)";
+            slide.querySelector('img').style.transform = "rotatd(315deg)";
+          }
+        }
+      }
 
-		//마우스 오버시 자동 재생 멈춤
-		$('.project-swiper').on('mouseenter', function(e){
-			pjSwiper.autoplay.stop();
-		})
-		$('.project-swiper').on('mouseleave', function(e){
-			pjSwiper.autoplay.start();
-		})
+      //마우스 오버시 자동 재생 멈춤
+      $('.project-swiper').on('mouseenter', function(e){
+        pjSwiper.autoplay.stop();
+      })
+      $('.project-swiper').on('mouseleave', function(e){
+        pjSwiper.autoplay.start();
+      })
 	</script>
 </body>
 
