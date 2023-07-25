@@ -84,7 +84,7 @@ tl.from('.main-menu li a', {
 } , "-=0.5");
 
 tl.from('.main-menu li .count', {
-	duration:1,
+	duration:2,
 	y:"100%",
 	stagger: 0.2,
 	ease: 'Expo.easeInOut'
