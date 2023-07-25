@@ -672,6 +672,10 @@
 			@include vw-convert-pc(padding-top, 200);
 			@include vw-convert-pc(padding-bottom, 1027);
 			@include vw-convert-pc(height, 1250);
+
+			.tit{
+				font-family: 'KOHINanumOTF';
+			}
 		}
 
 		.pjt-con {
