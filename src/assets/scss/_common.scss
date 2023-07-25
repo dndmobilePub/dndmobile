@@ -405,6 +405,7 @@ header {
 							@include vw-convert-pc(top, -25);
 							@include vw-convert-pc(right, -40);
 							padding-top: 7px;
+							opacity: 1;
 
 							b{
 								flex-shrink: 0;

@@ -86,6 +86,7 @@ tl.from('.main-menu li a', {
 tl.from('.main-menu li .count', {
 	duration:2,
 	y:"100%",
+	opacity:0,
 	stagger: 0.2,
 	ease: 'Expo.easeInOut'
 } , "-=1");

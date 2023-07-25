@@ -403,6 +403,7 @@ header.active {
   right: -40px;
   right: -2.0833333333vw;
   padding-top: 7px;
+  opacity: 1;
 }
 @media (min-width: 1920px) {
   .fullpage-menu--inner nav .main-menu li .count {
