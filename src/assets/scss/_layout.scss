@@ -977,14 +977,16 @@
 		-ms-flex-align: center;
 		align-items: center;
 		width: 100%;
+		height: 100%;
     @include vw-convert-pc(height, 384);
-    @include vw-convert-pc(margin, 100 0 0 -110);
+    @include vw-convert-pc(margin, 100 0 0 -70);
 
 		.box-wrap {
       display: flex;
       align-items: center;
       justify-content: center;
       transition: all 100ms linear;
+			width: 100%;
       height: 100%;
 			
 			.img {
@@ -1002,13 +1004,14 @@
 				@include vw-convert-pc(width, 228);
 				@include vw-convert-pc(height, 228);
 				transition: .5s ease-in;
-				transform: rotate(90deg);
+				transform: rotate(92deg);
 				cursor: pointer;
 				z-index: 1;
 
 				img {
-					transform: rotate(315deg);
-					width: 95%;
+					transform: rotate(267deg);
+					width: 100%;
+					display: block;
 				}
 			}
 
@@ -1019,6 +1022,8 @@
 			&.bg-sc.mask {
 
 				.img {
+					// @include vw-convert-pc(width, 228);
+					// @include vw-convert-pc(height, 228);
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_sc.png);
 					background-size: contain;
@@ -1028,8 +1033,8 @@
 						background-color: #2D2C2C;
 						-webkit-mask-image: url(../images/bg_pj_sc.png);
 						mask-image: url(../images/bg_pj_sc.png);
-						-webkit-mask-size: contain;
-						mask-size: contain;
+						-webkit-mask-size: 95%;
+						mask-size: 95%;
 						mask-repeat: no-repeat;
 						mask-position: center;
 						background-image: none;
@@ -1040,6 +1045,8 @@
 			&.bg-cj.mask {
 
 				.img {
+					// @include vw-convert-pc(width, 228);
+					// @include vw-convert-pc(height, 228);
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_cj.png);
 					background-size: contain;
@@ -1049,8 +1056,8 @@
 						background-color: #F3F3F3;
 						-webkit-mask-image: url(../images/bg_pj_cj.png);
 						mask-image: url(../images/bg_pj_cj.png);
-						-webkit-mask-size: contain;
-						mask-size: contain;
+						-webkit-mask-size: 95%;
+						mask-size: 95%;
 						mask-repeat: no-repeat;
 						mask-position: center;
 						background-image: none;
@@ -1070,8 +1077,8 @@
 						background-color: #E8F3FF;
 						-webkit-mask-image: url(../images/bg_pj_sc.png);
 						mask-image: url(../images/bg_pj_sc.png);
-						-webkit-mask-size: contain;
-						mask-size: contain;
+						-webkit-mask-size: 95%;
+						mask-size: 95%;
 						mask-repeat: no-repeat;
 						mask-position: center;
 						background-image: none;
@@ -1091,8 +1098,8 @@
 						background-color: #FFDE5B;
 						-webkit-mask-image: url(../images/bg_pj_kb.png);
 						mask-image: url(../images/bg_pj_kb.png);
-						-webkit-mask-size: contain;
-						mask-size: contain;
+						-webkit-mask-size: 95%;
+						mask-size: 95%;
 						mask-repeat: no-repeat;
 						mask-position: center;
 						background-image: none;
@@ -1103,21 +1110,7 @@
 			&.bg-ha {
 
 				.img {
-					// 지원안되는 브라우저 (색상변경은 안됨)
-					background-image: url(../images/bg_pj_ha.png);
-					background-size: contain;
-					
-					// 지원되는 브라우저
-					// @supports (-webkit-mask-image: url(../images/bg_pj_ha.png)) or (mask-image: url(../images/bg_pj_ha.png)) {
-					// 	background-color: #00CD9C;
-					// 	-webkit-mask-image: url(../images/bg_pj_ha.png);
-					// 	mask-image: url(../images/bg_pj_ha.png);
-					// 	-webkit-mask-size: contain;
-					// 	mask-size: contain;
-					// 	mask-repeat: no-repeat;
-					// 	mask-position: center;
-					// 	background-image: none;
-					// }
+					position: relative;
 				}
 			}
 
@@ -1133,8 +1126,8 @@
 						background-color: #E9ECFF;
 						-webkit-mask-image: url(../images/bg_pj_wo.png);
 						mask-image: url(../images/bg_pj_wo.png);
-						-webkit-mask-size: contain;
-						mask-size: contain;
+						-webkit-mask-size: 95%;
+						mask-size: 95%;
 						mask-repeat: no-repeat;
 						mask-position: center;
 						background-image: none;
@@ -1154,8 +1147,8 @@
 						background-color: #F3F3F3;
 						-webkit-mask-image: url(../images/bg_pj_wo02.png);
 						mask-image: url(../images/bg_pj_wo02.png);
-						-webkit-mask-size: contain;
-						mask-size: contain;
+						-webkit-mask-size: 95%;
+						mask-size: 95%;
 						mask-repeat: no-repeat;
 						mask-position: center;
 						background-image: none;
@@ -1180,8 +1173,7 @@
 		}
 
 		.swiper-slide-active {
-			@include vw-convert-pc(margin-left, 60);
-      margin-right: 3.125vw !important;
+      margin-right: 3.8541666667vw !important;
 			width: 20.5208333333vw !important;
 			height: 20.5208333333vw !important;
 
@@ -1201,7 +1193,8 @@
 
 				img {
 					width: 100%;
-					transform: rotate(270deg);
+					transform: rotate(315deg);
+					display: block;
 				}
 
 				&:hover + .hover-box {
@@ -1209,8 +1202,8 @@
 					position: absolute;
 					top: 50%;
 					left: 50%;
-					width: 101%;
-					height: 101%;
+					width: 100%;
+					height: 100%;
 					z-index: 1;
 					pointer-events: none;
 					transform: translate(-50%, -50%);
@@ -1257,9 +1250,11 @@
 				}
 			}
 
-			&.bg-sc {
+			&.bg-sc.mask {
 				.img {
-					
+					width: 100%;
+    			height: 100%;
+
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_sc_hover.png) 50% no-repeat;
 						background-size: contain;
@@ -1268,9 +1263,11 @@
 				}
 			}
 
-			&.bg-cj {
+			&.bg-cj.mask {
 				.img {
-					
+					width: 100%;
+    			height: 100%;
+
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_cj_hover.png) 50% no-repeat;
 						background-size: contain;
@@ -1279,9 +1276,11 @@
 				}
 			}
 			
-			&.bg-sc02 {
+			&.bg-sc02.mask {
 				.img {
-					
+					width: 100%;
+    			height: 100%;
+
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_sc_hover.png) 50% no-repeat;
 						background-size: contain;
@@ -1290,9 +1289,11 @@
 				}
 			}
 
-			&.bg-kb {
+			&.bg-kb.mask {
 				.img {
-					
+					width: 100%;
+    			height: 100%;
+
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_kb_hover.png) 50% no-repeat;
 						background-size: contain;
@@ -1307,18 +1308,27 @@
 			
 			&.bg-ha {
 				.img {
-					
+					overflow: visible;
+					width: 100%;
+    			height: 100%;
+
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_ha_hover.png) 50% no-repeat;
 						background-size: contain;
 						z-index: 1;
 					}
 				}
+
+				.img-coin {
+					display: none;
+				}
 			}
 
-			&.bg-wo {
+			&.bg-wo.mask {
 				.img {
-					
+					width: 100%;
+    			height: 100%;
+
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_wo_hover.png) 50% no-repeat;
 						background-size: contain;
@@ -1327,8 +1337,10 @@
 				}
 			}
 
-			&.bg-wo02 {
+			&.bg-wo02.mask {
 				.img {
+					width: 100%;
+    			height: 100%;
 					
 					&:hover + .hover-box {
 						background: url(../images/bg_pj_wo02_hover.png) 50% no-repeat;
@@ -2778,6 +2790,7 @@
 						border-radius: 30px;
 						transition: all .3s;
 					}
+
 				}
 			}
 
