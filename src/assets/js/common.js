@@ -83,6 +83,14 @@ tl.from('.main-menu li a', {
 	ease: 'Expo.easeInOut'
 } , "-=0.5");
 
+tl.from('.main-menu li .count', {
+	duration:2,
+	y:"100%",
+	opacity:0,
+	stagger: 0.2,
+	ease: 'Expo.easeInOut'
+} , "-=1");
+
 //tl.from('.line', {
 //	duration:0.3,
 //	scaleX: 0,
@@ -155,6 +163,14 @@ $('.main .header--inner .top-nav .dcb .ico').hover(function(){
 	$(".top_hide").css("display", "block");
 }, function(){
 	$(".top_hide").css("display", "none");
+});
+
+$('.main-menu li a').hover(function(){
+	$(".main-menu li span").css("-webkit-text-stroke-color", "#5E5E5E");
+	$(".main-menu li span").css("-webkit-text-stroke-width", "0.02em");
+}, function(){
+	$(".main-menu li span").css("-webkit-text-stroke-color", "white");
+	$(".main-menu li span").css("-webkit-text-stroke-width", "0.01em");
 });
 
 
