@@ -984,7 +984,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 200ms linear;
+      transition: all 100ms linear;
       height: 100%;
 			
 			.img {
@@ -1016,12 +1016,12 @@
 				display: none;
 			}
 
-			&.bg-sc {
+			&.bg-sc.mask {
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_sc.png);
-					background-size: cover;
+					background-size: contain;
 					
 					// 지원되는 브라우저
 					@supports (-webkit-mask-image: url(../images/bg_pj_sc.png)) or (mask-image: url(../images/bg_pj_sc.png)) {
@@ -1030,7 +1030,6 @@
 						mask-image: url(../images/bg_pj_sc.png);
 						-webkit-mask-size: contain;
 						mask-size: contain;
-						// mask-size: 100vmin;
 						mask-repeat: no-repeat;
 						mask-position: center;
 						background-image: none;
@@ -1038,12 +1037,12 @@
 				}
 			}
 
-			&.bg-cj {
+			&.bg-cj.mask {
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_cj.png);
-					background-size: cover;
+					background-size: contain;
 					
 					// 지원되는 브라우저
 					@supports (-webkit-mask-image: url(../images/bg_pj_cj.png)) or (mask-image: url(../images/bg_pj_cj.png)) {
@@ -1059,12 +1058,12 @@
 				}
 			}
 
-			&.bg-sc02 {
+			&.bg-sc02.mask {
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_sc.png);
-					background-size: cover;
+					background-size: contain;
 					
 					// 지원되는 브라우저
 					@supports (-webkit-mask-image: url(../images/bg_pj_sc.png)) or (mask-image: url(../images/bg_pj_sc.png)) {
@@ -1080,12 +1079,12 @@
 				}
 			}
 
-			&.bg-kb {
+			&.bg-kb.mask {
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_kb.png);
-					background-size: cover;
+					background-size: contain;
 					
 					// 지원되는 브라우저
 					@supports (-webkit-mask-image: url(../images/bg_pj_kb.png)) or (mask-image: url(../images/bg_pj_kb.png)) {
@@ -1106,28 +1105,28 @@
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_ha.png);
-					background-size: cover;
+					background-size: contain;
 					
 					// 지원되는 브라우저
-					@supports (-webkit-mask-image: url(../images/bg_pj_ha.png)) or (mask-image: url(../images/bg_pj_ha.png)) {
-						background-color: #00CD9C;
-						-webkit-mask-image: url(../images/bg_pj_ha.png);
-						mask-image: url(../images/bg_pj_ha.png);
-						-webkit-mask-size: contain;
-						mask-size: contain;
-						mask-repeat: no-repeat;
-						mask-position: center;
-						background-image: none;
-					}
+					// @supports (-webkit-mask-image: url(../images/bg_pj_ha.png)) or (mask-image: url(../images/bg_pj_ha.png)) {
+					// 	background-color: #00CD9C;
+					// 	-webkit-mask-image: url(../images/bg_pj_ha.png);
+					// 	mask-image: url(../images/bg_pj_ha.png);
+					// 	-webkit-mask-size: contain;
+					// 	mask-size: contain;
+					// 	mask-repeat: no-repeat;
+					// 	mask-position: center;
+					// 	background-image: none;
+					// }
 				}
 			}
 
-			&.bg-wo {
+			&.bg-wo.mask {
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_wo.png);
-					background-size: cover;
+					background-size: contain;
 					
 					// 지원되는 브라우저
 					@supports (-webkit-mask-image: url(../images/bg_pj_wo.png)) or (mask-image: url(../images/bg_pj_wo.png)) {
@@ -1143,12 +1142,12 @@
 				}
 			}
 
-			&.bg-wo02 {
+			&.bg-wo02.mask {
 
 				.img {
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_wo02.png);
-					background-size: cover;
+					background-size: contain;
 					
 					// 지원되는 브라우저
 					@supports (-webkit-mask-image: url(../images/bg_pj_wo02.png)) or (mask-image: url(../images/bg_pj_wo02.png)) {
@@ -1210,11 +1209,12 @@
 					position: absolute;
 					top: 50%;
 					left: 50%;
-					width: 102%;
-					height: 102%;
+					width: 101%;
+					height: 101%;
 					z-index: 1;
 					pointer-events: none;
 					transform: translate(-50%, -50%);
+					transition: all;
 
 					.box {
 						display: -webkit-box;
@@ -1258,7 +1258,6 @@
 			}
 
 			&.bg-sc {
-
 				.img {
 					
 					&:hover + .hover-box {

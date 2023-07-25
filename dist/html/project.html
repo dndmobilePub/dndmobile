@@ -264,7 +264,7 @@
 				</div>
 				<div class="swiper-container project-swiper">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide box-wrap bg-sc">
+						<div class="swiper-slide box-wrap bg-sc mask">
 							<p class="img"><img src="../assets/images/img_pj_sc_thumb.png" alt=""></p>
 							<div class="hover-box">
 								<div class="box">
@@ -273,8 +273,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide box-wrap bg-cj">
-							<p class="img"><img src="../assets/images/img_pj_cj_thumb.png" al t=""></p>
+						<div class="swiper-slide box-wrap bg-cj mask">
+							<p class="img"><img src="../assets/images/img_pj_cj_thumb.png" alt=""></p>
 							<div class="hover-box">
 								<div class="box">
 									<p>CJ대한통운<br><strong>차세대 택배시스템</strong></p>
@@ -282,7 +282,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide box-wrap bg-sc02">
+						<div class="swiper-slide box-wrap bg-sc02 mask">
 							<p class="img"><img src="../assets/images/img_pj_sc02_thumb.png" alt=""></p>
 							<div class="hover-box">
 								<div class="box">
@@ -291,7 +291,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide box-wrap bg-kb">
+						<div class="swiper-slide box-wrap bg-kb mask">
 							<p class="img"><img src="../assets/images/img_pj_kb_thumb.png" alt=""></p>
 							<div class="hover-box">
 								<div class="box">
@@ -309,7 +309,7 @@
 								</div>
 							</div>
 							</div>
-							<div class="swiper-slide box-wrap bg-wo">
+							<div class="swiper-slide box-wrap bg-wo mask">
 								<p class="img"><img src="../assets/images/img_pj_wo_thumb.png" alt=""></p>
 								<div class="hover-box">
 									<div class="box">
@@ -318,7 +318,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide box-wrap bg-wo02">
+							<div class="swiper-slide box-wrap bg-wo02 mask">
 								<p class="img"><img src="../assets/images/img_pj_wo02_thumb.png" alt=""></p>
 								<div class="hover-box">
 									<div class="box">
@@ -1015,7 +1015,7 @@
 			breakpoints: {
 				768: {
 					slidesPerView: 2,
-					spaceBetween: 30,
+					spaceBetween: 10,
 					loop: true,
 					centeredSlides: true,
 					autoplay: {
@@ -1031,6 +1031,26 @@
 				},
 				slideChange: function () {
 					rotateSlide(this.activeIndex);
+
+					// 이전 활성화된 슬라이드의 이미지 변경
+					var prevSlide = this.slides[this.previousIndex];
+					var prevImageElement = prevSlide.querySelector('img');
+
+					if (prevImageElement) {
+						var imageUrl = prevImageElement.src;
+						var pngUrl = imageUrl.replace('.gif', '.png');
+						prevImageElement.src = pngUrl;
+					}
+
+					// 활성화된 슬라이드의 이미지 변경
+					var activeSlide = this.slides[this.activeIndex];
+					var activeImageElement = activeSlide.querySelector('img');
+
+					if (activeImageElement) {
+						var imageUrl = activeImageElement.src;
+						var gifUrl = imageUrl.replace('.png', '.gif');
+						activeImageElement.src = gifUrl;
+					}
 				},
 			},
 		});

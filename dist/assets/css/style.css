@@ -3948,7 +3948,7 @@ button.swiper-pagination-bullet {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 200ms linear;
+  transition: all 100ms linear;
   height: 100%;
 }
 .project-wrap .project-swiper .box-wrap .img {
@@ -3983,12 +3983,12 @@ button.swiper-pagination-bullet {
 .project-wrap .project-swiper .box-wrap .hover-box {
   display: none;
 }
-.project-wrap .project-swiper .box-wrap.bg-sc .img {
+.project-wrap .project-swiper .box-wrap.bg-sc.mask .img {
   background-image: url(../images/bg_pj_sc.png);
-  background-size: cover;
+  background-size: contain;
 }
 @supports ((-webkit-mask-image: url(../images/bg_pj_sc.png)) or (mask-image: url(../images/bg_pj_sc.png))) {
-  .project-wrap .project-swiper .box-wrap.bg-sc .img {
+  .project-wrap .project-swiper .box-wrap.bg-sc.mask .img {
     background-color: #2D2C2C;
     -webkit-mask-image: url(../images/bg_pj_sc.png);
     mask-image: url(../images/bg_pj_sc.png);
@@ -4001,12 +4001,12 @@ button.swiper-pagination-bullet {
     background-image: none;
   }
 }
-.project-wrap .project-swiper .box-wrap.bg-cj .img {
+.project-wrap .project-swiper .box-wrap.bg-cj.mask .img {
   background-image: url(../images/bg_pj_cj.png);
-  background-size: cover;
+  background-size: contain;
 }
 @supports ((-webkit-mask-image: url(../images/bg_pj_cj.png)) or (mask-image: url(../images/bg_pj_cj.png))) {
-  .project-wrap .project-swiper .box-wrap.bg-cj .img {
+  .project-wrap .project-swiper .box-wrap.bg-cj.mask .img {
     background-color: #F3F3F3;
     -webkit-mask-image: url(../images/bg_pj_cj.png);
     mask-image: url(../images/bg_pj_cj.png);
@@ -4019,12 +4019,12 @@ button.swiper-pagination-bullet {
     background-image: none;
   }
 }
-.project-wrap .project-swiper .box-wrap.bg-sc02 .img {
+.project-wrap .project-swiper .box-wrap.bg-sc02.mask .img {
   background-image: url(../images/bg_pj_sc.png);
-  background-size: cover;
+  background-size: contain;
 }
 @supports ((-webkit-mask-image: url(../images/bg_pj_sc.png)) or (mask-image: url(../images/bg_pj_sc.png))) {
-  .project-wrap .project-swiper .box-wrap.bg-sc02 .img {
+  .project-wrap .project-swiper .box-wrap.bg-sc02.mask .img {
     background-color: #E8F3FF;
     -webkit-mask-image: url(../images/bg_pj_sc.png);
     mask-image: url(../images/bg_pj_sc.png);
@@ -4037,12 +4037,12 @@ button.swiper-pagination-bullet {
     background-image: none;
   }
 }
-.project-wrap .project-swiper .box-wrap.bg-kb .img {
+.project-wrap .project-swiper .box-wrap.bg-kb.mask .img {
   background-image: url(../images/bg_pj_kb.png);
-  background-size: cover;
+  background-size: contain;
 }
 @supports ((-webkit-mask-image: url(../images/bg_pj_kb.png)) or (mask-image: url(../images/bg_pj_kb.png))) {
-  .project-wrap .project-swiper .box-wrap.bg-kb .img {
+  .project-wrap .project-swiper .box-wrap.bg-kb.mask .img {
     background-color: #FFDE5B;
     -webkit-mask-image: url(../images/bg_pj_kb.png);
     mask-image: url(../images/bg_pj_kb.png);
@@ -4057,28 +4057,14 @@ button.swiper-pagination-bullet {
 }
 .project-wrap .project-swiper .box-wrap.bg-ha .img {
   background-image: url(../images/bg_pj_ha.png);
-  background-size: cover;
+  background-size: contain;
 }
-@supports ((-webkit-mask-image: url(../images/bg_pj_ha.png)) or (mask-image: url(../images/bg_pj_ha.png))) {
-  .project-wrap .project-swiper .box-wrap.bg-ha .img {
-    background-color: #00CD9C;
-    -webkit-mask-image: url(../images/bg_pj_ha.png);
-    mask-image: url(../images/bg_pj_ha.png);
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-            mask-position: center;
-    background-image: none;
-  }
-}
-.project-wrap .project-swiper .box-wrap.bg-wo .img {
+.project-wrap .project-swiper .box-wrap.bg-wo.mask .img {
   background-image: url(../images/bg_pj_wo.png);
-  background-size: cover;
+  background-size: contain;
 }
 @supports ((-webkit-mask-image: url(../images/bg_pj_wo.png)) or (mask-image: url(../images/bg_pj_wo.png))) {
-  .project-wrap .project-swiper .box-wrap.bg-wo .img {
+  .project-wrap .project-swiper .box-wrap.bg-wo.mask .img {
     background-color: #E9ECFF;
     -webkit-mask-image: url(../images/bg_pj_wo.png);
     mask-image: url(../images/bg_pj_wo.png);
@@ -4091,12 +4077,12 @@ button.swiper-pagination-bullet {
     background-image: none;
   }
 }
-.project-wrap .project-swiper .box-wrap.bg-wo02 .img {
+.project-wrap .project-swiper .box-wrap.bg-wo02.mask .img {
   background-image: url(../images/bg_pj_wo02.png);
-  background-size: cover;
+  background-size: contain;
 }
 @supports ((-webkit-mask-image: url(../images/bg_pj_wo02.png)) or (mask-image: url(../images/bg_pj_wo02.png))) {
-  .project-wrap .project-swiper .box-wrap.bg-wo02 .img {
+  .project-wrap .project-swiper .box-wrap.bg-wo02.mask .img {
     background-color: #F3F3F3;
     -webkit-mask-image: url(../images/bg_pj_wo02.png);
     mask-image: url(../images/bg_pj_wo02.png);
@@ -4175,11 +4161,12 @@ button.swiper-pagination-bullet {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 102%;
-  height: 102%;
+  width: 101%;
+  height: 101%;
   z-index: 1;
   pointer-events: none;
   transform: translate(-50%, -50%);
+  transition: all;
 }
 .project-wrap .project-swiper .swiper-slide-active .img:hover + .hover-box .box {
   display: flex;
