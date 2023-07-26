@@ -76,9 +76,10 @@ $('.accordion').on('click', function (e) {
         $this.addClass('active')
         $nextToggleContents.slideDown(function() {
             var offsetTop = $parent.offset().top;
+            var gnbHeight = $(header).outerHeight();
 
             $('html, body').animate({ 
-                scrollTop: offsetTop
+                scrollTop: offsetTop - gnbHeight
             }, 300);
 
             // 화면 너비가 768px보다 작을 경우

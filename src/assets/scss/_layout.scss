@@ -1026,8 +1026,6 @@
 			&.bg-sc.mask {
 
 				.img {
-					// @include vw-convert-pc(width, 228);
-					// @include vw-convert-pc(height, 228);
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_sc.png);
 					background-size: contain;
@@ -1049,8 +1047,6 @@
 			&.bg-cj.mask {
 
 				.img {
-					// @include vw-convert-pc(width, 228);
-					// @include vw-convert-pc(height, 228);
 					// 지원안되는 브라우저 (색상변경은 안됨)
 					background-image: url(../images/bg_pj_cj.png);
 					background-size: contain;
@@ -1236,6 +1232,7 @@
 							color: #fff;
 							@include vw-font-size-pc(38);
 							@include vw-convert-pc(line-height, 48);
+							font-weight: 400;
 						}
 
 						button {
@@ -1249,6 +1246,7 @@
 							color: #fff;
 							@include vw-font-size-pc(26);
 							font-weight: 700;
+							z-index: 10;
 						}
 					}
 				}
@@ -1574,6 +1572,7 @@
 		border: 1px solid #222;
 		color: #222;
 		transition: all 0.3s ease;
+		
 		&:hover {
 			color: #fff;
 	
