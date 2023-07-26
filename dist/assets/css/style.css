@@ -3503,7 +3503,8 @@ button.swiper-pagination-bullet {
   font-size: 60px;
   font-size: 3.125vw;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.6px;
+  letter-spacing: -0.03125vw;
 }
 @media (min-width: 1920px) {
   .about-wrap .title-wrap .tit01 {
@@ -3513,6 +3514,11 @@ button.swiper-pagination-bullet {
 @media (min-width: 1920px) {
   .about-wrap .title-wrap .tit01 {
     font-size: 60px;
+  }
+}
+@media (min-width: 1920px) {
+  .about-wrap .title-wrap .tit01 {
+    letter-spacing: -0.6px;
   }
 }
 .about-wrap .title-wrap .tit02 {
@@ -3682,7 +3688,9 @@ button.swiper-pagination-bullet {
   font-size: 36px;
   font-size: 1.875vw;
   font-weight: 600;
-  letter-spacing: 0.05em;
+  letter-spacing: 1.08px;
+  letter-spacing: 0.05625vw;
+  line-height: 1.111;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .tit01 {
@@ -3692,6 +3700,11 @@ button.swiper-pagination-bullet {
 @media (min-width: 1920px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .tit01 {
     font-size: 36px;
+  }
+}
+@media (min-width: 1920px) {
+  .about-wrap .section.nth02 .inner .service-list-wrap .tit01 {
+    letter-spacing: 1.08px;
   }
 }
 .about-wrap .section.nth02 .inner .service-list-wrap .tit01 span {
@@ -3849,6 +3862,7 @@ button.swiper-pagination-bullet {
   font-size: 20px;
   font-size: 1.0416666667vw;
   font-weight: 200;
+  line-height: 1.45;
 }
 @media (min-width: 1920px) {
   .about-wrap .section .work-list-wrap ul .desc {
@@ -3892,10 +3906,16 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   color: #E30D3F;
   letter-spacing: 1.8px;
+  letter-spacing: 0.09375vw;
 }
 @media (min-width: 1920px) {
   .project-wrap .title-wrap p {
     font-size: 18px;
+  }
+}
+@media (min-width: 1920px) {
+  .project-wrap .title-wrap p {
+    letter-spacing: 1.8px;
   }
 }
 .project-wrap .title-wrap h2 {
@@ -3905,6 +3925,7 @@ button.swiper-pagination-bullet {
   font-size: 3.125vw;
   font-weight: 200;
   letter-spacing: -0.6px;
+  letter-spacing: -0.03125vw;
 }
 @media (min-width: 1920px) {
   .project-wrap .title-wrap h2 {
@@ -3914,6 +3935,11 @@ button.swiper-pagination-bullet {
 @media (min-width: 1920px) {
   .project-wrap .title-wrap h2 {
     font-size: 60px;
+  }
+}
+@media (min-width: 1920px) {
+  .project-wrap .title-wrap h2 {
+    letter-spacing: -0.6px;
   }
 }
 .project-wrap .swiper-wrapper {
@@ -3946,6 +3972,7 @@ button.swiper-pagination-bullet {
   margin-right: 2.0833333333vw;
   padding: 10px 30px;
   padding: 0.5208333333vw 1.5625vw;
+  color: #444;
   font-size: 22px;
   font-size: 1.1458333333vw;
   line-height: 1.12;
@@ -3997,8 +4024,8 @@ button.swiper-pagination-bullet {
   height: 100%;
   height: 384px;
   height: 20vw;
-  margin: 100px 0px 0px -70px;
-  margin: 5.2083333333vw 0vw 0vw -3.6458333333vw;
+  margin: 100px 0px 0px -85px;
+  margin: 5.2083333333vw 0vw 0vw -4.4270833333vw;
 }
 @media (min-width: 1920px) {
   .project-wrap .project-swiper {
@@ -4007,7 +4034,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .project-wrap .project-swiper {
-    margin: 100px 0px 0px -70px;
+    margin: 100px 0px 0px -85px;
   }
 }
 .project-wrap .project-swiper .box-wrap {
@@ -4395,8 +4422,7 @@ button.swiper-pagination-bullet {
   border-top: 1px solid #EEEEEE;
   font-size: 26px;
   font-size: 1.3541666667vw;
-  line-height: 31px;
-  line-height: 1.6145833333vw;
+  line-height: 1.192;
   font-weight: 700;
   cursor: pointer;
   image-rendering: -webkit-optimize-contrast;
@@ -4416,25 +4442,21 @@ button.swiper-pagination-bullet {
     font-size: 26px;
   }
 }
-@media (min-width: 1920px) {
-  .accordion-wrap .accordion {
-    line-height: 31px;
-  }
-}
 .accordion-wrap .accordion sup {
+  margin-left: 2px;
+  margin-left: 0.1041666667vw;
   font-size: 16px;
   font-size: 0.8333333333vw;
-  line-height: 19px;
-  line-height: 0.9895833333vw;
+  line-height: 1.188;
+}
+@media (min-width: 1920px) {
+  .accordion-wrap .accordion sup {
+    margin-left: 2px;
+  }
 }
 @media (min-width: 1920px) {
   .accordion-wrap .accordion sup {
     font-size: 16px;
-  }
-}
-@media (min-width: 1920px) {
-  .accordion-wrap .accordion sup {
-    line-height: 19px;
   }
 }
 .accordion-wrap .accordion:hover, .accordion-wrap .accordion.active {
@@ -4479,7 +4501,6 @@ button.swiper-pagination-bullet {
   padding-left: 0.625vw;
   font-size: 22px;
   font-size: 1.1458333333vw;
-  line-height: 1.57;
   font-weight: 300;
 }
 @media (min-width: 1920px) {
@@ -4505,8 +4526,8 @@ button.swiper-pagination-bullet {
   content: "";
   display: block;
   position: absolute;
-  top: 15px;
-  top: 0.78125vw;
+  top: 11px;
+  top: 0.5729166667vw;
   left: 0;
   width: 5px;
   width: 0.2604166667vw;
@@ -4517,7 +4538,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li::before {
-    top: 15px;
+    top: 11px;
   }
 }
 @media (min-width: 1920px) {
@@ -4542,6 +4563,7 @@ button.swiper-pagination-bullet {
 .accordion-wrap .panel ul li > p {
   display: flex;
   align-items: center;
+  line-height: 1.182;
 }
 .accordion-wrap .panel ul li .ico-wa {
   display: none;
@@ -4578,6 +4600,7 @@ button.swiper-pagination-bullet {
   font-size: 0.9375vw;
   margin-left: 10px;
   margin-left: 0.5208333333vw;
+  line-height: 1.333;
 }
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li .pc-ico-wa p {
@@ -4588,11 +4611,6 @@ button.swiper-pagination-bullet {
   .accordion-wrap .panel ul li .pc-ico-wa p {
     margin-left: 10px;
   }
-}
-.accordion-wrap .panel ul li .pc-ico-wa p span {
-  line-height: 1;
-  display: block;
-  color: #000;
 }
 .accordion-wrap .panel ul li .pc-ico-wa p strong {
   color: #000;
@@ -4606,7 +4624,7 @@ button.swiper-pagination-bullet {
   font-size: 16px;
   font-size: 0.8333333333vw;
   color: #D91550;
-  letter-spacing: -0.01em;
+  line-height: 1.188;
 }
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li.ing span {
@@ -4798,10 +4816,16 @@ button.swiper-pagination-bullet {
   font-weight: 700;
   color: #E30D3F;
   letter-spacing: 1.8px;
+  letter-spacing: 0.09375vw;
 }
 @media (min-width: 1920px) {
   .contact-wrap .title-wrap p {
     font-size: 18px;
+  }
+}
+@media (min-width: 1920px) {
+  .contact-wrap .title-wrap p {
+    letter-spacing: 1.8px;
   }
 }
 .contact-wrap .title-wrap h2 {
@@ -4811,6 +4835,7 @@ button.swiper-pagination-bullet {
   font-size: 3.125vw;
   font-weight: 200;
   letter-spacing: -0.6px;
+  letter-spacing: -0.03125vw;
 }
 @media (min-width: 1920px) {
   .contact-wrap .title-wrap h2 {
@@ -4820,6 +4845,11 @@ button.swiper-pagination-bullet {
 @media (min-width: 1920px) {
   .contact-wrap .title-wrap h2 {
     font-size: 60px;
+  }
+}
+@media (min-width: 1920px) {
+  .contact-wrap .title-wrap h2 {
+    letter-spacing: -0.6px;
   }
 }
 .contact-wrap .map-wrap {
@@ -4863,6 +4893,7 @@ button.swiper-pagination-bullet {
 }
 .contact-wrap .info-wrap > dl > dt {
   position: relative;
+  color: #222;
   font-size: 24px;
   font-size: 1.25vw;
   font-weight: 700;
@@ -4903,6 +4934,7 @@ button.swiper-pagination-bullet {
 .contact-wrap .info-wrap > dl dd {
   margin-top: 22px;
   margin-top: 1.1458333333vw;
+  color: #222;
   font-size: 20px;
   font-size: 1.0416666667vw;
   font-weight: 300;
@@ -4985,11 +5017,26 @@ button.swiper-pagination-bullet {
   font-size: 70px;
   font-size: 3.6458333333vw;
   font-weight: 100;
-  line-height: 1.2;
+  letter-spacing: -0.7px;
+  letter-spacing: -0.0364583333vw;
 }
 @media (min-width: 1920px) {
   .recruit-wrap .title-wrap .tit {
     font-size: 70px;
+  }
+}
+@media (min-width: 1920px) {
+  .recruit-wrap .title-wrap .tit {
+    letter-spacing: -0.7px;
+  }
+}
+.recruit-wrap .title-wrap .tit + .tit {
+  margin-top: 20px;
+  margin-top: 1.0416666667vw;
+}
+@media (min-width: 1920px) {
+  .recruit-wrap .title-wrap .tit + .tit {
+    margin-top: 20px;
   }
 }
 .recruit-wrap .title-wrap .desc {
@@ -5098,14 +5145,14 @@ button.swiper-pagination-bullet {
   }
 }
 .recruit-wrap .accordion-wrap dd.panel .part ul li:before {
-  top: 11px;
-  top: 0.5729166667vw;
+  top: 10px;
+  top: 0.5208333333vw;
   width: 3px;
   height: 3px;
 }
 @media (min-width: 1920px) {
   .recruit-wrap .accordion-wrap dd.panel .part ul li:before {
-    top: 11px;
+    top: 10px;
   }
 }
 .recruit-wrap .accordion-wrap dd.panel .part ul li:hover {
@@ -6660,8 +6707,9 @@ button.swiper-pagination-bullet {
     font-size: 104px;
     font-size: 6.7796610169vw;
     font-weight: 700;
-    line-height: 1.26;
-    letter-spacing: -0.02em;
+    line-height: 1.192;
+    letter-spacing: -1.04px;
+    letter-spacing: -0.0677966102vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -6676,19 +6724,32 @@ button.swiper-pagination-bullet {
     font-size: 6.7796610169vw;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .about-wrap .title-wrap .tit01 {
+    letter-spacing: -0.52px;
+    letter-spacing: -0.0677966102vw;
+  }
+}
 @media screen and (max-width: 767px) {
   .about-wrap .title-wrap .desc {
     font-size: 56px;
     font-size: 3.6505867014vw;
     line-height: 1.428;
+    letter-spacing: -0.28px;
+    letter-spacing: -0.0182529335vw;
     word-break: keep-all;
-    letter-spacing: -0.01em;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .title-wrap .desc {
     font-size: 28px;
     font-size: 3.6505867014vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .about-wrap .title-wrap .desc {
+    letter-spacing: -0.14px;
+    letter-spacing: -0.0182529335vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -6836,7 +6897,8 @@ button.swiper-pagination-bullet {
     font-size: 5.2151238592vw;
     padding-bottom: 32px;
     padding-bottom: 2.0860495437vw;
-    letter-spacing: 0.05em;
+    letter-spacing: 1.2px;
+    letter-spacing: 0.0782268579vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -6851,13 +6913,20 @@ button.swiper-pagination-bullet {
     padding-bottom: 2.0860495437vw;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .about-wrap .section.nth02 .inner .service-list-wrap .tit01 {
+    letter-spacing: 0.6px;
+    letter-spacing: 0.0782268579vw;
+  }
+}
 @media screen and (max-width: 767px) {
   .about-wrap .section.nth02 .inner .service-list-wrap .tit02 {
     font-size: 80px;
     font-size: 5.2151238592vw;
     padding-bottom: 80px;
     padding-bottom: 5.2151238592vw;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.4px;
+    letter-spacing: -0.0260756193vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -6870,6 +6939,12 @@ button.swiper-pagination-bullet {
   .about-wrap .section.nth02 .inner .service-list-wrap .tit02 {
     padding-bottom: 40px;
     padding-bottom: 5.2151238592vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .about-wrap .section.nth02 .inner .service-list-wrap .tit02 {
+    letter-spacing: -0.2px;
+    letter-spacing: -0.0260756193vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7048,13 +7123,20 @@ button.swiper-pagination-bullet {
   .about-wrap .section .work-list-wrap ul .desc {
     font-size: 56px;
     font-size: 3.6505867014vw;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.28px;
+    letter-spacing: -0.0182529335vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .about-wrap .section .work-list-wrap ul .desc {
     font-size: 28px;
     font-size: 3.6505867014vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .about-wrap .section .work-list-wrap ul .desc {
+    letter-spacing: -0.14px;
+    letter-spacing: -0.0182529335vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7097,13 +7179,20 @@ button.swiper-pagination-bullet {
   .project-wrap .title-wrap p {
     font-size: 48px;
     font-size: 3.1290743155vw;
-    letter-spacing: 0.12px;
+    letter-spacing: 0.24px;
+    letter-spacing: 0.0156453716vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .project-wrap .title-wrap p {
     font-size: 24px;
     font-size: 3.1290743155vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .project-wrap .title-wrap p {
+    letter-spacing: 0.12px;
+    letter-spacing: 0.0156453716vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7113,7 +7202,7 @@ button.swiper-pagination-bullet {
     font-size: 112px;
     font-size: 7.3011734029vw;
     letter-spacing: -0.56px;
-    line-height: 1.2em;
+    line-height: 1.2;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7154,6 +7243,7 @@ button.swiper-pagination-bullet {
     padding: 1.8252933507vw 0vw;
     font-size: 56px;
     font-size: 3.6505867014vw;
+    line-height: 1.214;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7318,7 +7408,7 @@ button.swiper-pagination-bullet {
     font-size: 72px;
     font-size: 4.6936114733vw;
     letter-spacing: -0.36px;
-    line-height: 1;
+    line-height: 1.167;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7343,9 +7433,18 @@ button.swiper-pagination-bullet {
   .accordion-wrap .accordion sup {
     position: absolute;
     top: 50%;
-    transform: translate(10%, -100%);
+    transform: translate(0, -70%);
+    margin-left: 8px;
+    margin-left: 0.5215123859vw;
     font-size: 56px;
     font-size: 3.6505867014vw;
+    line-height: 1.214;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .accordion-wrap .accordion sup {
+    margin-left: 4px;
+    margin-left: 0.5215123859vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7412,17 +7511,22 @@ button.swiper-pagination-bullet {
   }
 }
 @media screen and (max-width: 767px) {
+  .accordion-wrap .panel ul li p {
+    line-height: 1.214;
+  }
+}
+@media screen and (max-width: 767px) {
   .accordion-wrap .panel ul li::before {
     content: "";
     left: 0;
-    top: 40px;
-    top: 2.6075619296vw;
+    top: 28px;
+    top: 1.8252933507vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .accordion-wrap .panel ul li::before {
-    top: 20px;
-    top: 2.6075619296vw;
+    top: 14px;
+    top: 1.8252933507vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7434,30 +7538,30 @@ button.swiper-pagination-bullet {
   .accordion-wrap .panel ul li .ico-wa {
     display: inline-block;
     position: relative;
-    width: 80px;
-    width: 5.2151238592vw;
-    height: 80px;
-    height: 5.2151238592vw;
-    margin-left: 24px;
-    margin-left: 1.5645371578vw;
+    width: 96px;
+    width: 6.258148631vw;
+    height: 96px;
+    height: 6.258148631vw;
+    margin-left: 80px;
+    margin-left: 5.2151238592vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .accordion-wrap .panel ul li .ico-wa {
-    width: 40px;
-    width: 5.2151238592vw;
+    width: 48px;
+    width: 6.258148631vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .accordion-wrap .panel ul li .ico-wa {
-    height: 40px;
-    height: 5.2151238592vw;
+    height: 48px;
+    height: 6.258148631vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .accordion-wrap .panel ul li .ico-wa {
-    margin-left: 12px;
-    margin-left: 1.5645371578vw;
+    margin-left: 40px;
+    margin-left: 5.2151238592vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7474,6 +7578,7 @@ button.swiper-pagination-bullet {
     padding-left: 1.8252933507vw;
     font-size: 48px;
     font-size: 3.1290743155vw;
+    line-height: 1.167;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7496,8 +7601,16 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .accordion-wrap .panel ul li.ing span::before {
+    width: 4px;
+    width: 0.260756193vw;
     height: 48px;
     height: 3.1290743155vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .accordion-wrap .panel ul li.ing span::before {
+    width: 2px;
+    width: 0.260756193vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7596,7 +7709,8 @@ button.swiper-pagination-bullet {
   .contact-wrap .title-wrap p {
     font-size: 48px;
     font-size: 3.1290743155vw;
-    letter-spacing: 0.12px;
+    letter-spacing: 0.24px;
+    letter-spacing: 0.0156453716vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7605,14 +7719,21 @@ button.swiper-pagination-bullet {
     font-size: 3.1290743155vw;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .contact-wrap .title-wrap p {
+    letter-spacing: 0.12px;
+    letter-spacing: 0.0156453716vw;
+  }
+}
 @media screen and (max-width: 767px) {
   .contact-wrap .title-wrap h2 {
     margin-top: 24px;
     margin-top: 1.5645371578vw;
     font-size: 112px;
     font-size: 7.3011734029vw;
-    letter-spacing: -0.56px;
-    line-height: 1.2;
+    letter-spacing: -1.12px;
+    letter-spacing: -0.073011734vw;
+    line-height: 1.214;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7625,6 +7746,12 @@ button.swiper-pagination-bullet {
   .contact-wrap .title-wrap h2 {
     font-size: 56px;
     font-size: 7.3011734029vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .contact-wrap .title-wrap h2 {
+    letter-spacing: -0.56px;
+    letter-spacing: -0.073011734vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7673,6 +7800,7 @@ button.swiper-pagination-bullet {
     white-space: normal;
   }
   .contact-wrap .info-wrap > dl > dt {
+    color: #000;
     font-size: 64px;
     font-size: 4.1720990874vw;
   }
@@ -7715,6 +7843,7 @@ button.swiper-pagination-bullet {
   .contact-wrap .info-wrap > dl dd {
     margin-top: 24px;
     margin-top: 1.5645371578vw;
+    color: #000;
     font-size: 56px;
     font-size: 3.6505867014vw;
     line-height: 1.571;
@@ -7796,13 +7925,31 @@ button.swiper-pagination-bullet {
   .recruit-wrap .title-wrap .tit {
     font-size: 112px;
     font-size: 7.3011734029vw;
-    letter-spacing: -0.56px;
+    line-height: 1.214;
+    letter-spacing: -1.12px;
+    letter-spacing: -0.073011734vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .recruit-wrap .title-wrap .tit {
     font-size: 56px;
     font-size: 7.3011734029vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .title-wrap .tit {
+    letter-spacing: -0.56px;
+    letter-spacing: -0.073011734vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recruit-wrap .title-wrap .tit + .tit {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recruit-wrap .title-wrap .tit span {
+    font-weight: 400;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7812,6 +7959,8 @@ button.swiper-pagination-bullet {
     font-size: 56px;
     font-size: 3.6505867014vw;
     line-height: 1.428;
+    letter-spacing: -0.28px;
+    letter-spacing: -0.0182529335vw;
     word-break: keep-all;
   }
 }
@@ -7825,6 +7974,12 @@ button.swiper-pagination-bullet {
   .recruit-wrap .title-wrap .desc {
     font-size: 28px;
     font-size: 3.6505867014vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .title-wrap .desc {
+    letter-spacing: -0.14px;
+    letter-spacing: -0.0182529335vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -7874,7 +8029,9 @@ button.swiper-pagination-bullet {
     padding-bottom: 2.6075619296vw;
     font-size: 64px;
     font-size: 4.1720990874vw;
-    letter-spacing: -0.32px;
+    letter-spacing: -0.64px;
+    letter-spacing: -0.0417209909vw;
+    line-height: 1.5;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7889,6 +8046,12 @@ button.swiper-pagination-bullet {
     font-size: 4.1720990874vw;
   }
 }
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part p {
+    letter-spacing: -0.32px;
+    letter-spacing: -0.0417209909vw;
+  }
+}
 @media screen and (max-width: 767px) {
   .recruit-wrap .accordion-wrap dd.panel .part ul li {
     padding-left: 40px;
@@ -7897,7 +8060,8 @@ button.swiper-pagination-bullet {
     font-size: 3.6505867014vw;
     line-height: 72px;
     line-height: 4.6936114733vw;
-    letter-spacing: -0.28px;
+    letter-spacing: -0.56px;
+    letter-spacing: -0.036505867vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -7916,6 +8080,12 @@ button.swiper-pagination-bullet {
   .recruit-wrap .accordion-wrap dd.panel .part ul li {
     line-height: 36px;
     line-height: 4.6936114733vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .recruit-wrap .accordion-wrap dd.panel .part ul li {
+    letter-spacing: -0.28px;
+    letter-spacing: -0.036505867vw;
   }
 }
 @media screen and (max-width: 767px) {

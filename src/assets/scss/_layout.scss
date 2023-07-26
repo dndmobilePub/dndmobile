@@ -704,7 +704,7 @@
 			@include vw-convert-pc(padding-bottom, 100);
 			@include vw-font-size-pc(60);
 			font-weight: 600;
-			letter-spacing: -0.01em;
+			@include vw-convert-pc(letter-spacing, -0.6);
 		}
 
 		.tit02 {
@@ -795,7 +795,8 @@
 						@include vw-convert-pc(padding-bottom, 16);
 						@include vw-font-size-pc(36);
 						font-weight: 600;
-						letter-spacing: 0.05em;
+						@include vw-convert-pc(letter-spacing, 1.08);
+						line-height: 1.111;
 
 						span {
 							font-weight: 100;
@@ -872,6 +873,7 @@
 				.desc {
 					@include vw-font-size-pc(20);
 					font-weight: 200;
+					line-height: 1.45;
 				}
 			}
 		}
@@ -900,14 +902,14 @@
 			@include vw-font-size-pc(18);
 			font-weight: 700;
 			color: #E30D3F;
-			letter-spacing: 1.8px;
+			@include vw-convert-pc(letter-spacing, 1.8);
 		}
 
 		h2 {
 			@include vw-convert-pc(margin-top, 25);
 			@include vw-font-size-pc(60);
 			font-weight: 200;
-			letter-spacing: -0.6px;
+			@include vw-convert-pc(letter-spacing, -0.6);
 		}
 	}
 
@@ -942,6 +944,7 @@
 			li {
 				@include vw-convert-pc(margin-right, 40);
 				@include vw-convert-pc(padding, 10 30);
+				color: #444;
 				@include vw-font-size-pc(22);
 				line-height: 1.12;
 				font-weight: 700;
@@ -983,7 +986,7 @@
 		width: 100%;
 		height: 100%;
     @include vw-convert-pc(height, 384);
-    @include vw-convert-pc(margin, 100 0 0 -70);
+    @include vw-convert-pc(margin, 100 0 0 -85);
 
 		.box-wrap {
       display: flex;
@@ -1369,14 +1372,15 @@
 		@include vw-convert-pc(background-size, 42);
 		border-top: 1px solid #EEEEEE;
 		@include vw-font-size-pc(26);
-		@include vw-convert-pc(line-height, 31);
+		line-height: 1.192;
 		font-weight: 700;
 		cursor: pointer;
 		image-rendering: -webkit-optimize-contrast;
 
 		sup {
+			@include vw-convert-pc(margin-left, 2);
 			@include vw-font-size-pc(16);
-			@include vw-convert-pc(line-height, 19);
+			line-height: 1.188;
 		}
 
 		&:hover,
@@ -1410,7 +1414,6 @@
 				position: relative;
 				@include vw-convert-pc(padding-left, 12);
 				@include vw-font-size-pc(22);
-				line-height: 1.57;
 				font-weight: 300;
 				
 				+ li{
@@ -1421,7 +1424,7 @@
 					content: '';
 					display: block;
 					position: absolute;
-					@include vw-convert-pc(top, 15);
+					@include vw-convert-pc(top, 11);
 					left: 0;
 					@include vw-convert-pc(width, 5);
 						@include vw-convert-pc(height, 5);
@@ -1448,6 +1451,7 @@
 					-webkit-box-align: center;
 					-ms-flex-align: center;
 					align-items: center;
+					line-height: 1.182;
 				}
 
 				.ico-wa {
@@ -1471,11 +1475,8 @@
 					p{
 						@include vw-font-size-pc(18);
 						@include vw-convert-pc(margin-left, 10);
-						span{
-							line-height: 1;
-							display: block;
-							color: #000;
-						}
+						line-height: 1.333;
+
 						strong{
 							color: #000;
 						}
@@ -1490,7 +1491,7 @@
 					@include vw-convert-pc(padding-left, 10);
 					@include vw-font-size-pc(16);
 					color: #D91550;
-					letter-spacing: -0.01em;
+					line-height: 1.188;
 
 					&::before {
 						content: '';
@@ -1643,14 +1644,14 @@
 			@include vw-font-size-pc(18);
 			font-weight: 700;
 			color: #E30D3F;
-			letter-spacing: 1.8px;
+			@include vw-convert-pc(letter-spacing, 1.8);
 		}
 
 		h2 {
 			@include vw-convert-pc(margin-top, 25);
 			@include vw-font-size-pc(60);
 			font-weight: 200;
-			letter-spacing: -0.6px;
+			@include vw-convert-pc(letter-spacing, -0.6);
 		}
 	}
 
@@ -1673,6 +1674,7 @@
 
 			> dt {
 				position: relative;
+				color: #222;
 				@include vw-font-size-pc(24);
 				font-weight: 700;
 
@@ -1690,6 +1692,7 @@
 
 			dd {
 				@include vw-convert-pc(margin-top, 22);
+				color: #222;
 				@include vw-font-size-pc(20);
 				font-weight: 300;
 			}
@@ -1739,7 +1742,11 @@
 		.tit {
 			@include vw-font-size-pc(70);
 			font-weight: 100;
-			line-height: 1.2;
+			@include vw-convert-pc(letter-spacing, -0.7);
+
+			+ .tit {
+				@include vw-convert-pc(margin-top, 20);
+			}
 		}
 
 		.desc {
@@ -1800,7 +1807,7 @@
 						}
 
 						&:before{
-							@include vw-convert-pc(top, 11);
+							@include vw-convert-pc(top, 10);
 							width: 3px;
 							height: 3px;
 						}
@@ -2563,15 +2570,15 @@
 				@include vw-convert-mo(padding-bottom, 32);
 				@include vw-font-size-mo(52);
 				font-weight: 700;
-				line-height: 1.26;
-				letter-spacing: -0.02em;
+				line-height: 1.192;
+				@include vw-convert-mo(letter-spacing, -0.52);
 			}
 
 			.desc {
 				@include vw-font-size-mo(28);
 				line-height: 1.428;
+				@include vw-convert-mo(letter-spacing, -0.14);
 				word-break: keep-all;
-				letter-spacing: -0.01em;
 			}
 		}
 
@@ -2640,13 +2647,13 @@
 						.tit01 {
 							@include vw-font-size-mo(40);
 							@include vw-convert-mo(padding-bottom, 16);
-							letter-spacing: 0.05em;
+							@include vw-convert-mo(letter-spacing, 0.6);
 						}
 						
 						.tit02 {
 							@include vw-font-size-mo(40);
 							@include vw-convert-mo(padding-bottom, 40);
-							letter-spacing: -0.01em;
+							@include vw-convert-mo(letter-spacing, -0.2);
 						}
 
 						.desc {
@@ -2710,7 +2717,7 @@
 
 					.desc {
 						@include vw-font-size-mo(28);
-						letter-spacing: -0.01em;
+						@include vw-convert-mo(letter-spacing, -0.14);
 					}
 				}
 			}
@@ -2733,14 +2740,14 @@
 		.title-wrap {	
 			p {
 				@include vw-font-size-mo(24);
-				letter-spacing: 0.12px;
+				@include vw-convert-mo(letter-spacing, 0.12);
 			}
 	
 			h2 {
 				@include vw-convert-mo(margin-top, 12);
 				@include vw-font-size-mo(56);
 				letter-spacing: -0.56px;
-				line-height: 1.2em;
+				line-height: 1.2;
 			}
 		}
 
@@ -2757,6 +2764,7 @@
 					@include vw-convert-mo(margin-right, 52);
 					@include vw-convert-mo(padding, 14 0);
 					@include vw-font-size-mo(28);
+					line-height: 1.214;
 
 					&.on {
 						@include vw-convert-mo(padding, 14 30);
@@ -2833,7 +2841,7 @@
 			background-size: 24px;
 			@include vw-font-size-mo(36);
 			letter-spacing: -0.36px;
-			line-height: 1;
+			line-height: 1.167;
 
 			&:hover,
 			&.active {
@@ -2844,8 +2852,10 @@
 			sup {
 				position: absolute;
 				top: 50%;
-				transform: translate(10%, -100%);
+				transform: translate(0, -70%);
+				@include vw-convert-mo(margin-left, 4);
 				@include vw-font-size-mo(28);
+				line-height: 1.214;
 			}
 		}
 
@@ -2865,10 +2875,14 @@
 						@include vw-convert-mo(margin-top, 20);
 					}
 
+					p {
+						line-height: 1.214;
+					}
+
 					&::before {
 						content: '';
 						left: 0;
-						@include vw-convert-mo(top, 20);
+						@include vw-convert-mo(top, 14);
 					}
 
 					&.wa > p {
@@ -2878,9 +2892,9 @@
 					.ico-wa{
 						display: inline-block;
 						position: relative;
-						@include vw-convert-mo(width, 40);
-						@include vw-convert-mo(height, 40);
-						@include vw-convert-mo(margin-left, 12);
+						@include vw-convert-mo(width, 48);
+						@include vw-convert-mo(height, 48);
+						@include vw-convert-mo(margin-left, 40);
 
 					}
 					.pc-ico-wa {
@@ -2894,8 +2908,10 @@
 						@include vw-convert-mo(margin-left, 14);
 						@include vw-convert-mo(padding-left, 14);
 						@include vw-font-size-mo(24);
+						line-height: 1.167;
 
 						&::before {
+							@include vw-convert-mo(width, 2);
 							@include vw-convert-mo(height, 24);
 						}
 					}
@@ -2939,14 +2955,14 @@
 
 			p {
 				@include vw-font-size-mo(24);
-				letter-spacing: 0.12px;
+				@include vw-convert-mo(letter-spacing, 0.12);
 			}
 	
 			h2 {
 				@include vw-convert-mo(margin-top, 12);
 				@include vw-font-size-mo(56);
-				letter-spacing: -0.56px;
-				line-height: 1.2;
+				@include vw-convert-mo(letter-spacing, -0.56);
+				line-height: 1.214;
 			}
 		}
 
@@ -2964,6 +2980,7 @@
 				white-space: normal;
 	
 				> dt {
+					color: #000;
 					@include vw-font-size-mo(32);
 	
 					&::before {
@@ -2975,6 +2992,7 @@
 	
 				dd {
 					@include vw-convert-mo(margin-top, 12);
+					color: #000;
 					@include vw-font-size-mo(28);
 					line-height: 1.571;
 				}
@@ -3014,13 +3032,23 @@
 
 			.tit {
 				@include vw-font-size-mo(56);
-				letter-spacing: -0.56px;
+				line-height: 1.214;
+				@include vw-convert-mo(letter-spacing, -0.56);
+
+				+ .tit {
+					margin-top: 0;
+				}
+
+				span {
+					font-weight: 400;
+				}
 			}
 
 			.desc {
 				@include vw-convert-mo(padding-top, 36);
 				@include vw-font-size-mo(28);
 				line-height: 1.428;
+				@include vw-convert-mo(letter-spacing, -0.14);
 				word-break: keep-all;
 			}
 		}
@@ -3044,7 +3072,8 @@
 					p {
 						@include vw-convert-mo(padding-bottom, 20);
 						@include vw-font-size-mo(32);
-						letter-spacing: -0.32px;
+						@include vw-convert-mo(letter-spacing, -0.32);
+						line-height: 1.5;
 					}
 
 					ul {
@@ -3052,7 +3081,7 @@
 							@include vw-convert-mo(padding-left, 20);
 							@include vw-font-size-mo(28);
 							@include vw-convert-mo(line-height, 36);
-							letter-spacing: -0.28px;
+							@include vw-convert-mo(letter-spacing, -0.28);
 
 							+ li{
 								@include vw-convert-mo(margin-top, 14);
