@@ -1002,7 +1002,7 @@
 		var activeSlideIndex = 0;//현재 활성화 슬라이드 초기화 설정
 
 		var pjSwiper = new Swiper('.project-swiper', {
-			slidesPerView: 6.5,
+			slidesPerView: 6.1,
 			spaceBetween: 74,
 			centeredSlides: true,
 			roundLengths: true,
@@ -1030,6 +1030,8 @@
 				init: function () {
 					activeSlideIndex = this.activeIndex;
 					rotateSlide(this.activeIndex);
+
+					
 				},
 				slideChange: function () {
 					rotateSlide(this.activeIndex);
@@ -1046,12 +1048,15 @@
 
 					// 활성화된 슬라이드의 이미지 변경
 					var activeSlide = this.slides[this.activeIndex];
+					console.log(this.activeIndex)
 					var activeImageElement = activeSlide.querySelector('img');
 
 					if (activeImageElement) {
-						var imageUrl = activeImageElement.src;
-						var gifUrl = imageUrl.replace('.png', '.gif');
-						activeImageElement.src = gifUrl;
+						if(this.activeIndex === 8 || this.activeIndex === 11 || this.activeIndex === 12 || this.activeIndex === 13) {
+							var imageUrl = activeImageElement.src;
+							var gifUrl = imageUrl.replace('.png', '.gif');
+							activeImageElement.src = gifUrl;
+						}
 					}
 				},
 			},
