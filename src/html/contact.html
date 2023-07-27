@@ -11,7 +11,6 @@
 					<p>Contact Our Company</p>
 					<h2><strong>풍부한 경험과 전문성</strong>으로 <br class="hide-pc">보답합니다</h2>
 				</div>
-				<script src="https://maps.googleapis.com/maps/api/js?key=여기에key입력&callback=initMap&v=weekly" defer></script>
 				<div class="map-wrap" data-aos="fade-up" data-aos-duration="1000">
 					<div id="map"></div>
 				</div>
@@ -46,30 +45,44 @@
 </body>
 
 <script>
+	var map;
+	var customMarkers = [];
+
 	function initMap() {
-  const center = new google.maps.LatLng(-33.712451, 150.311823);
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 9,
-    center: center,
-  });
-  const svgMarker = {
-    path: "M-1.547 12l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM0 0q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
-    fillColor: "blue",
-    fillOpacity: 0.6,
-    strokeWeight: 0,
-    rotation: 0,
-    scale: 2,
-    anchor: new google.maps.Point(0, 20),
-  };
+    // 맵 생성
+    const map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 37.556076, lng: 126.921527 },
+      zoom: 17,
+			disableDefaultUI: true,
+			mapId: "e175f89ac704555c",
+    });
 
-  new google.maps.Marker({
-    position: map.getCenter(),
-    icon: svgMarker,
-    map: map,
-  });
-}
+		// 마커 생성 및 설정
+		const marker = new google.maps.Marker({
+			position: { lat: 37.556107, lng: 126.921539 },
+			map: map,
+			icon: "../assets/images/logo_marker.svg",
+			//  defaultMarker.setMap(null);
+		});
 
-window.initMap = initMap;
+		 // 기본 마커를 제거합니다.
+
+		const infowindow = new google.maps.InfoWindow({
+			content: "<p>dndmobile</p>",
+		});
+
+		infowindow.open(map, marker);
+		google.maps.event.addListener(marker, "click", () => {
+			infowindow.open(map, marker);
+		});
+
+    // 기본 마커를 숨깁니다.
+    map.data.forEach(function (feature) {
+      map.data.remove(feature);
+    });
+  }
+
+	window.initMap = initMap;
 </script>
 
 </html>

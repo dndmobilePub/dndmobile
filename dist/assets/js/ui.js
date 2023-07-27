@@ -27,10 +27,12 @@ function tabScollHorizen() {
      }
  }
  
- onload = function () {
-    var tabList = document.querySelector(".tab-top ul");
-    tabList.onscroll = tabScollHorizen;
- };
+ if($(".tab-top ul").length > 0) {
+     onload = function () {
+        var tabList = document.querySelector(".tab-top ul");
+        tabList.onscroll = tabScollHorizen;
+     };
+ }
 
 
 /**

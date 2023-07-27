@@ -992,7 +992,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 100ms linear;
 			width: 100%;
       height: 100%;
 			
@@ -1012,7 +1011,6 @@
 				@include vw-convert-pc(height, 228);
 				transition: .5s ease-in;
 				transform: rotate(92deg);
-				cursor: pointer;
 				z-index: 1;
 
 				img {
@@ -1193,6 +1191,7 @@
 				-webkit-box-align: center;
 				-ms-flex-align: center;
 				align-items: center;
+				cursor: pointer;
 
 				img {
 					width: 100%;
@@ -1225,8 +1224,8 @@
 						position: absolute;
 						top: 50%;
 						left: 50%;
-						width: 100%;
-						height: 100%;
+						width: 101%;
+						height: 101%;
 						padding: 0;
 						text-align: center;
 						transform: translate(-50%, -50%);
@@ -1660,6 +1659,40 @@
 		@include vw-convert-pc(height, 520);
 		@include vw-convert-pc(margin-top, 50);
 		background: #f5f5f5;
+
+		#map {
+			width: 100%;
+			height: 100%;
+
+			.gm-style {
+				.gm-style-iw-t {
+					bottom: 3.3854166667vw !important;
+
+					.gm-style-iw-c{
+						max-height: 1.875vw !important;
+						padding: 0;
+	
+						.gm-style-iw-d {
+							overflow: hidden !important;
+							max-height: 1.875vw !important;
+							@include vw-convert-pc(padding, 10 14);
+							line-height: 1;
+	
+							p {
+								color: #222;
+								@include vw-font-size-pc(16);
+								font-weight: 700;
+								@include vw-convert-pc(letter-spacing, 0.8);
+							}
+						}
+						
+						button {
+							display: none !important;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	.info-wrap {
@@ -2969,6 +3002,34 @@
 		.map-wrap {
 			@include vw-convert-mo(height, 540);
 			@include vw-convert-mo(margin-top, 52);
+
+			.gm-style {
+				.gm-style-iw-a {
+					.gm-style-iw-t {
+						bottom: 3.3854166667vw !important;
+	
+						.gm-style-iw-c{
+							max-height: 7.5619295958vw !important;
+							padding: 0;
+		
+							.gm-style-iw-d {
+								max-height: 7.5619295958vw !important;
+								@include vw-convert-mo(height, 58);
+								@include vw-convert-pc(padding, 10 14);
+		
+								p {
+									@include vw-font-size-pc(28);
+									letter-spacing: 1;
+								}
+							}
+							
+							button {
+								display: none !important;
+							}
+						}
+					}
+				}
+			}
 		}
 		
 		.info-wrap {
@@ -3025,18 +3086,23 @@
 	}
 
 	.recruit-wrap {
-		@include vw-convert-mo(margin, 160 0 282);
+		@include vw-convert-mo(margin, 172 0 282);
 
 		.title-wrap {
 			@include vw-convert-mo(margin, 0 40);
 
 			.tit {
 				@include vw-font-size-mo(56);
+				font-weight: 200;
 				line-height: 1.214;
 				@include vw-convert-mo(letter-spacing, -0.56);
 
 				+ .tit {
 					margin-top: 0;
+				}
+
+				strong {
+					font-weight: 800;
 				}
 
 				span {
