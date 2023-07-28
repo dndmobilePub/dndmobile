@@ -18,8 +18,6 @@
     <script src="../assets/js/aos.js"></script>
     <script src="../assets/js/common.js" defer></script>
     <script src="../assets/js/ui.js" defer></script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9pOeIxO44Vhf6VCi35iiO0tnkO1EqdsM&callback=initMap" async defer></script> -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9pOeIxO44Vhf6VCi35iiO0tnkO1EqdsM&callback=initMap&libraries=marker,places&v=beta" defer ></script>
 </head>
 
 <body>
@@ -311,6 +309,7 @@
 	</div>
 </body>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9pOeIxO44Vhf6VCi35iiO0tnkO1EqdsM&callback=initMap&libraries=marker,places&v=beta" defer ></script>
 <script>
 	var map;
 	var customMarkers = [];
@@ -325,28 +324,33 @@
     });
 
 		// 마커 생성 및 설정
-		const marker = new google.maps.Marker({
+		const customMarkers = new google.maps.Marker({
 			position: { lat: 37.556107, lng: 126.921539 },
 			map: map,
 			icon: "../assets/images/logo_marker.svg",
-			//  defaultMarker.setMap(null);
 		});
-
-		 // 기본 마커를 제거합니다.
 
 		const infowindow = new google.maps.InfoWindow({
 			content: "<p>dndmobile</p>",
 		});
 
-		infowindow.open(map, marker);
-		google.maps.event.addListener(marker, "click", () => {
-			infowindow.open(map, marker);
+		infowindow.open(map, customMarkers);
+		google.maps.event.addListener(customMarkers, "click", () => {
+			infowindow.open(map, customMarkers);
 		});
 
-    // 기본 마커를 숨깁니다.
-    map.data.forEach(function (feature) {
-      map.data.remove(feature);
-    });
+		 // 사용자가 만든 마커를 표시하고 기본 마커를 숨기는 함수
+		 function showOnlyCustomMarkers() {
+			// 기본 마커를 숨깁니다.
+			map.data.forEach(function (feature) {
+				map.data.remove(feature);
+			});
+
+			// 사용자가 만든 마커를 표시합니다.
+			customMarkers.forEach(function (marker) {
+				marker.setMap(map);
+			});
+		}
   }
 
 	window.initMap = initMap;

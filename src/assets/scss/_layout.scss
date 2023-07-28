@@ -1018,6 +1018,12 @@
 					width: 100%;
 					display: block;
 				}
+
+				&:hover {
+					img {
+						display: none;
+					}
+				}
 			}
 
 			.hover-box {
@@ -1671,6 +1677,9 @@
 					.gm-style-iw-c{
 						max-height: 1.875vw !important;
 						padding: 0;
+						-webkit-box-shadow: 0 0.104vw 0.416vw rgba(0,0,0,.10);
+						box-shadow: 0 0.104vw 0.416vw rgba(0,0,0,.10);
+						border: 0.052vw solid #ccc;
 	
 						.gm-style-iw-d {
 							overflow: hidden !important;
@@ -1689,6 +1698,26 @@
 						button {
 							display: none !important;
 						}
+					}
+				}
+
+				.gm-style-iw-tc {
+					@include vw-convert-pc(width, 20);
+					@include vw-convert-pc(height, 10);
+					
+					&::before {
+						content: '';
+						display: inline-block;
+						@include vw-convert-pc(width, 20);
+						@include vw-convert-pc(height, 10);
+						background: #ccc;
+						-webkit-clip-path: polygon(0 0,50% 100%,100% 0);
+    				clip-path: polygon(0 0,50% 100%,100% 0);
+					}
+					
+					&::after {
+						@include vw-convert-pc(width, 20);
+						@include vw-convert-pc(height, 10);
 					}
 				}
 			}
@@ -3003,22 +3032,26 @@
 			@include vw-convert-mo(height, 540);
 			@include vw-convert-mo(margin-top, 52);
 
-			.gm-style {
-				.gm-style-iw-a {
+			#map {
+				.gm-style {
 					.gm-style-iw-t {
-						bottom: 3.3854166667vw !important;
+						bottom: 16.385417vw !important;
 	
 						.gm-style-iw-c{
 							max-height: 7.5619295958vw !important;
 							padding: 0;
+							-webkit-box-shadow: 0 0.2604vw 1.0417vw rgba(0,0,0,.10);
+							box-shadow: 0 0.2604vw 1.0417vw rgba(0,0,0,.10);
+							border: 0.1302vw solid #ccc;
 		
 							.gm-style-iw-d {
 								max-height: 7.5619295958vw !important;
 								@include vw-convert-mo(height, 58);
-								@include vw-convert-pc(padding, 10 14);
+								@include vw-convert-mo(padding, 10 14);
+								line-height: 1.2;
 		
 								p {
-									@include vw-font-size-pc(28);
+									@include vw-font-size-mo(28);
 									letter-spacing: 1;
 								}
 							}
@@ -3026,6 +3059,26 @@
 							button {
 								display: none !important;
 							}
+						}
+					}
+
+					.gm-style-iw-tc {
+						@include vw-convert-mo(width, 40);
+						@include vw-convert-mo(height, 20);
+						
+						&::before {
+							@include vw-convert-mo(top, -3);
+							@include vw-convert-mo(width, 40);
+							@include vw-convert-mo(height, 20);
+							background: #ccc;
+							-webkit-clip-path: polygon(0 0,50% 100%,100% 0);
+							clip-path: polygon(0 0,50% 100%,100% 0);
+						}
+						
+						&::after {
+							@include vw-convert-mo(top, -3);
+							@include vw-convert-mo(width, 40);
+							@include vw-convert-mo(height, 20);
 						}
 					}
 				}
