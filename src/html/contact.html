@@ -66,10 +66,9 @@
 			content: "<p>dndmobile</p>",
 		});
 
-
 		infowindow.open(map, customMarkers);
 		google.maps.event.addListener(customMarkers, "click", () => {
-			infowindow.close(map, customMarkers);
+			infowindow.open(map, customMarkers);
 		});
   }
 
