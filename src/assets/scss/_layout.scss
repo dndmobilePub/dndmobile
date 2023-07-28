@@ -1214,8 +1214,8 @@
 					position: absolute;
 					top: 50%;
 					left: 50%;
-					width: 100%;
-					height: 100%;
+					width: 101%;
+					height: 101%;
 					-webkit-transform: translate(-50%, -50%);
        		-ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1238,8 +1238,8 @@
 						position: absolute;
 						top: 50%;
 						left: 50%;
-						width: 101%;
-						height: 101%;
+						width: 100%;
+						height: 100%;
 						padding: 0;
 						text-align: center;
 						-webkit-transform: translate(-50%, -50%);
@@ -2960,6 +2960,12 @@
           &:hover + .hover-box {
             display: none;
           }
+
+					&:hover {
+						img {
+							display: block;
+						}
+					}
 				}
 
 				.box {
@@ -3265,7 +3271,7 @@
           flex-direction: column;
 					@include vw-convert-mo(padding, 52 0);
 				}
-				
+
 				.part {
 					-webkit-box-orient: vertical;
    				-webkit-box-direction: normal;

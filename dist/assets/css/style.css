@@ -4268,8 +4268,8 @@ button.swiper-pagination-bullet {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
+  width: 101%;
+  height: 101%;
   transform: translate(-50%, -50%);
   transition: all;
   pointer-events: none;
@@ -4282,8 +4282,8 @@ button.swiper-pagination-bullet {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 101%;
-  height: 101%;
+  width: 100%;
+  height: 100%;
   padding: 0;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -7498,6 +7498,11 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 767px) {
   .project-wrap .project-swiper .swiper-slide-active .img:hover + .hover-box {
     display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .project-wrap .project-swiper .swiper-slide-active .img:hover img {
+    display: block;
   }
 }
 @media screen and (max-width: 767px) {
