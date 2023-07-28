@@ -795,12 +795,6 @@
 				},
 			},
 		});
-		
-		//마우스 호버했을 경우 이미지 안보이게 하기
-		document.querySelector('.img').addEvendListenter('mouseover', function() {
-			// this.querySelector('img').style.display = "none";
-			console.log(1);
-		});
 
 		//슬라이드시 이미지 회전 효과
 		function rotateSlide(index) {
@@ -810,7 +804,6 @@
 				var slide = slides[i];
 				if (i === index) {
 					slide.querySelector('.img').style.transform = "rotate(45deg)";
-					slide.querySelector('.img').style.transition = "0.5s ease-in;";
 					slide.querySelector('img').style.transform = "rotatd(265deg)";
 				} else {
 					slide.querySelector('.img').style.transform = "";

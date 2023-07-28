@@ -311,14 +311,11 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9pOeIxO44Vhf6VCi35iiO0tnkO1EqdsM&callback=initMap&libraries=marker,places&v=beta" defer ></script>
 <script>
-	var map;
-	var customMarkers = [];
-
 	function initMap() {
     // 맵 생성
     const map = new google.maps.Map(document.getElementById('map'), {
       center: { lat: 37.556076, lng: 126.921527 },
-      zoom: 17,
+      zoom: 18,
 			disableDefaultUI: true,
 			mapId: "e175f89ac704555c",
     });
@@ -336,21 +333,8 @@
 
 		infowindow.open(map, customMarkers);
 		google.maps.event.addListener(customMarkers, "click", () => {
-			infowindow.open(map, customMarkers);
+			infowindow.close(map, customMarkers);
 		});
-
-		 // 사용자가 만든 마커를 표시하고 기본 마커를 숨기는 함수
-		 function showOnlyCustomMarkers() {
-			// 기본 마커를 숨깁니다.
-			map.data.forEach(function (feature) {
-				map.data.remove(feature);
-			});
-
-			// 사용자가 만든 마커를 표시합니다.
-			customMarkers.forEach(function (marker) {
-				marker.setMap(map);
-			});
-		}
   }
 
 	window.initMap = initMap;
