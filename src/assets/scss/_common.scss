@@ -755,7 +755,7 @@ header {
 		&.active {
 			opacity: 1;
 			transform: translateY(0%);
-			background: #fff;
+			background: #fff !important;
 
 			.header {
 				&--footer {
