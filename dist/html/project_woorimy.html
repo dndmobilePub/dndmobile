@@ -115,21 +115,33 @@
 		if (scroll >= articleTopWoori && scroll < articleBottomWoori) {
 			$(".main-indicator-wrap").addClass("white");
 			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
-			$(".quick_btn").addClass('white')
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".num-box").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
+			$(".quick_btn").addClass('white');
 		}
 
 		if (scroll >= articleBottomWoori) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
 		}
 
 		if (scroll >= articleTopWoori2 && scroll < articleBottomWoori2) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
 		}
 	});

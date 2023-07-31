@@ -202,11 +202,32 @@ function setActive(link) {
     if (link.classList.contains("indi-white")) {
         document.querySelector(".main-indicator-wrap").classList.add('white')
         document.querySelector(".menu-toggle").classList.add('white')
+        document.querySelector(".num-box").classList.add('white')
+        // document.querySelector('.btn-top path:first-child').setAttribute('fill', 'white');
+        // document.querySelector('.btn-top path:last-child').setAttribute('stroke', 'black');
+        document.querySelector(".main_logo").classList.add('white')
+        document.querySelector(".top-nav").classList.add('white')
         document.querySelector("html").classList.add('bg-black')
     } else {
         document.querySelector(".main-indicator-wrap").classList.remove('white')
         document.querySelector(".menu-toggle").classList.remove('white')
+        document.querySelector(".num-box").classList.remove('white')
+        // document.querySelector('.btn-top path:first-child').setAttribute('fill', 'black');
+        // document.querySelector('.btn-top path:last-child').setAttribute('stroke', 'white');
+        document.querySelector(".main_logo").classList.remove('white')
+        document.querySelector(".top-nav").classList.remove('white')
         document.querySelector("html").classList.remove('bg-black')
+    }
+
+    // 화면 너비가 768px보다 작을 경우
+    var screenWidth = $(window).width();
+    if (screenWidth < 768) {
+        // document.querySelector(".main-indicator-wrap").classList.remove('white')
+        // document.querySelector(".menu-toggle").classList.remove('white')
+        // document.querySelector(".num-box").classList.remove('white')
+        // document.querySelector(".main_logo").classList.remove('white')
+        // document.querySelector(".top-nav").classList.remove('white')
+        // document.querySelector("html").classList.remove('bg-black')
     }
 
     /* 인트로 추가 */
