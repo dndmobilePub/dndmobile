@@ -92,7 +92,7 @@ $('.accordion').on('click', function (e) {
 
                 $('html, body').animate({ 
                     scrollTop: offsetTop - gnbHeight
-                }, 300);
+                }, 100);
             }
         });
     } else {

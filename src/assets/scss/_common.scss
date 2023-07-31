@@ -861,7 +861,13 @@ header {
 					&-menu {
 						li {
 							a {
-								@include vw-font-size-mo(60);
+								@include vw-font-size-mo(68);
+								@include vw-convert-mo(letter-spacing, 3.4);
+								font-weight: 500;
+							}
+							
+							span {
+								-webkit-text-stroke-width: 0.02em;
 							}
 
 							.count{
@@ -887,7 +893,11 @@ header {
 								}
 							}
 
+							+ li {
+								@include vw-convert-mo(margin-top, 72);
+							}
 						}
+
 					}
 				}
 			}

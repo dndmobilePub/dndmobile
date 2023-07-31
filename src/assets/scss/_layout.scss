@@ -2097,6 +2097,8 @@
 	.pjt-con-wrap{
 			&.intro-wrap{
 				.arrow{
+					@include vw-convert-mo(top, -120);
+
 					span{
 						width: 5vw;
 						height: 5vw;
@@ -2987,7 +2989,6 @@
 			letter-spacing: -0.36px;
 			line-height: 1.167;
 
-			&:hover,
 			&.active {
 				background: #000 url(../images/icon_minus_mo.png) calc(100% - 20px) 50% no-repeat;
 				background-size: 24px;

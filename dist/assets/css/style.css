@@ -750,14 +750,28 @@ header.active {
     padding: 28% 60px 0;
   }
   .fullpage-menu--inner nav .main-menu li a {
-    font-size: 120px;
-    font-size: 7.8226857888vw;
+    font-size: 136px;
+    font-size: 8.8657105606vw;
+    letter-spacing: 6.8px;
+    letter-spacing: 0.443285528vw;
+    font-weight: 500;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .fullpage-menu--inner nav .main-menu li a {
-    font-size: 60px;
-    font-size: 7.8226857888vw;
+    font-size: 68px;
+    font-size: 8.8657105606vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .fullpage-menu--inner nav .main-menu li a {
+    letter-spacing: 3.4px;
+    letter-spacing: 0.443285528vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .fullpage-menu--inner nav .main-menu li span {
+    -webkit-text-stroke-width: 0.02em;
   }
 }
 @media screen and (max-width: 767px) {
@@ -781,6 +795,18 @@ header.active {
     font-weight: 700;
     line-height: normal;
     letter-spacing: -0.8px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .fullpage-menu--inner nav .main-menu li + li {
+    margin-top: 144px;
+    margin-top: 9.3872229465vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .fullpage-menu--inner nav .main-menu li + li {
+    margin-top: 72px;
+    margin-top: 9.3872229465vw;
   }
 }
 @media screen and (max-width: 767px) {
@@ -5439,6 +5465,18 @@ button.swiper-pagination-bullet {
     opacity: 1;
     visibility: visible;
   }
+  .pjt-con-wrap.intro-wrap .arrow {
+    top: -240px;
+    top: -15.6453715776vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .pjt-con-wrap.intro-wrap .arrow {
+    top: -120px;
+    top: -15.6453715776vw;
+  }
+}
+@media screen and (max-width: 767px) {
   .pjt-con-wrap.intro-wrap .arrow span {
     width: 5vw;
     height: 5vw;
@@ -5446,6 +5484,8 @@ button.swiper-pagination-bullet {
   .pjt-con-wrap.intro-wrap .arrow span .arrow_mo {
     width: 32px;
   }
+}
+@media screen and (max-width: 767px) {
   .pjt-con-wrap .btn-pjt-next {
     position: relative;
     z-index: 2;
@@ -7548,7 +7588,7 @@ button.swiper-pagination-bullet {
   }
 }
 @media screen and (max-width: 767px) {
-  .accordion-wrap .accordion:hover, .accordion-wrap .accordion.active {
+  .accordion-wrap .accordion.active {
     background: #000 url(../images/icon_minus_mo.png) calc(100% - 20px) 50% no-repeat;
     background-size: 24px;
   }
