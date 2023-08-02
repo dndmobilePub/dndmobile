@@ -25,10 +25,39 @@
 		background: #DDDDDD;
 	}
 
+	> div {
+		height: 24.15px;
+
+		// &::after {
+		// 	content: '';
+		// 	display: block;
+		// 	position: absolute;
+		// 	top: 0;
+		// 	right: 20px;
+		// 	width: 1px;
+		// 	height: 24.15px;
+		// 	background: #fff;
+		// 	z-index: 1;
+		// }
+	}
+
 	a {
-		position: relative;
-		display: block;
+		// position: relative;
+		// display: block;
+		// width: 100%;
+		// height: 100%;
 		// @include vw-convert-pc(margin, 24 0);
+		position: absolute;
+    /* top: 0; */
+    left: 50%;
+    transform: translate(-50%);
+    margin-left: 1px;
+    display: block;
+    width: 1px;
+    /* height: 100%; */
+    background: #000;
+    height: 24.15px;
+    z-index: 10;
 
 		span {
 			background: #000;
@@ -52,6 +81,23 @@
 			right: -20%;
 			transition: all .5s;
 			font-style: normal;
+		}
+
+		&.active {
+			&::before {
+				content:'';
+				position: absolute;
+				top: -4px;
+				left: 50%;
+				transform: translate(0, 50%);
+				margin-left: -3.5px;
+				display: block;
+				width: 8px;
+				height: 8px;
+				background: #000;
+				border-radius: 50px;
+				z-index: 100;
+			}
 		}
 
 		&.active,
@@ -89,6 +135,12 @@
 					border: 2px solid #fff;
 				}
 			}
+
+			&.active {
+				&::before {
+					background: #fff;
+				}
+			}
 		}
 	}
 
@@ -97,7 +149,7 @@
     align-items: center;
     position: absolute;
     width: 100%;
-    bottom: -24px;
+    bottom: -28px;
     font-size: 14px;
     font-weight: 500;
 		color: rgba(0, 0, 0, 0.30);
@@ -145,7 +197,7 @@
 	.pjt-top {
 		display: flex;
 		height: 100vh;
-		@include vw-convert-pc(padding-top, 254);
+		@include vw-convert-pc(padding-top, 250);
 		@include vw-convert-pc(padding-left, 160);
 
 	}
@@ -186,15 +238,14 @@
 
 		.tit {
 			@include vw-font-size-pc(80); 
-			@include vw-convert-pc(padding-bottom, 30);
-			@include vw-convert-pc(line-height, 98);    
+			@include vw-convert-pc(padding-bottom, 40);
+			line-height: 1.187;
 			//@include vw-convert-pc(padding, 80 165 30 0);
 			font-weight: 900;
 			
-			&.pd80{
-				@include vw-convert-pc(padding-top, 80);
+			&.pd130 {
+					@include vw-convert-pc(padding-top, 130);
 			}	
-
 
 			span {
 				font-weight: 400;
@@ -203,20 +254,18 @@
 				&.fw300{
 					font-weight: 300;
 				}
-
 			}
 
 			&.fw700{
 				font-weight: 700;
 			}
-
-
 		}
 
 		.desc {
 			@include vw-font-size-pc(20);
-			@include vw-convert-pc(line-height, 30);
-			@include vw-convert-pc(letter-spacing, -0.6);
+			// @include vw-convert-pc(line-height, 30);
+				line-height: 1.5;
+				@include vw-convert-pc(letter-spacing, -0.2);
 			word-break: keep-all;
 			font-weight: 300;
 
@@ -230,15 +279,15 @@
 	.phone-layout {
 		display: flex;
 		justify-content: center;
-		gap: 100px;
+		gap: 60px;
 		@include vw-convert-pc(padding-top, 120);
 		@include vw-convert-pc(padding-bottom, 40);
-		@include vw-convert-pc(width, 1276);
+		@include vw-convert-pc(width, 1200);
 		margin: 0 auto;
 
 		&.type02 {
-			@include vw-convert-pc(width, 864);
-			gap: 100px;
+			@include vw-convert-pc(width, 780);
+			gap: 60px;
 		}
 
 		div {
@@ -263,7 +312,7 @@
 				text-align: center;
 
 				.txt {
-					@include vw-convert-pc(padding-top, 20);
+					@include vw-convert-pc(padding-top, 30);
 					@include vw-font-size-pc(20);
 				}
 			}
@@ -278,6 +327,7 @@
 
 	&.intro-wrap{
 		position: relative;
+
 		.pjt-top-full {
 			background: url('../images/bg_intro.jpg') center no-repeat;
 			background-size: cover;
@@ -287,13 +337,16 @@
 			.pjt-title{
 				.tit{
 					@include vw-convert-pc(font-size, 80);
-					@include vw-convert-pc(line-height, 98);    
+					// @include vw-convert-pc(line-height, 98);    
+					line-height: 1.225;
 					@include vw-convert-pc(padding-bottom, 35);
 					font-weight: 600;
 				}
 				.desc{
 					@include vw-convert-pc(font-size, 20);
-					@include vw-convert-pc(line-height, 30);
+					// @include vw-convert-pc(line-height, 30);
+						line-height: 1.5;
+						@include vw-convert-pc(letter-spacing, -0.6);
 					color: rgba(255, 255, 255, 0.60);
 				}
 			}
@@ -348,45 +401,52 @@
 
 	&.sc-aged{
 		.pjt-top {
-			@include vw-convert-pc(padding, 170 242 0 160);
+			@include vw-convert-pc(gap, 260);
 			justify-content: space-between;
+			@include vw-convert-pc(padding, 120 218 0 160);
 
 			.pjt-title{
-				.desc{
-					@include vw-convert-pc(max-width, 600);
-					@include vw-convert-pc(padding-right, 0);
-					@include vw-convert-pc(font-size, 20);
-					@include vw-convert-pc(line-height, 30);
+				.tit {
+					@include vw-convert-pc(padding-bottom, 30);
+					@include vw-convert-pc(letter-spacing, -0.8);
+					white-space: nowrap;
+			
+					span {
+						line-height: inherit;
+					}
 				}
 			}
 			.pjt-top-img {
-				@include vw-convert-pc(margin-top, 50);
+				@include vw-convert-pc(margin-top, 40);
 				img{
-					@include vw-convert-pc(height, 800);
+					// @include vw-convert-pc(height, 800);
 				}
 			}
 		}
 
 		.pjt-con{
-			@include vw-convert-pc(padding, 150 0);
+			@include vw-convert-pc(margin-top, -120);
+				@include vw-convert-pc(margin-bottom, 120);
+				@include vw-convert-pc(padding, 240 0 140);
 			background: #0F71D9;
 		
-			.pjt-title{
+			.pjt-title {
 				.tit{
-					@include vw-convert-pc(margin-bottom, 10);
+					@include vw-convert-pc(padding-bottom, 40);
 					@include vw-convert-pc(font-size, 70);
+					line-height: 1.2;
 				}
 
 				.tit2{
-					@include vw-convert-pc(margin-bottom, 10);
+					// @include vw-convert-pc(margin-bottom, 10);
 					@include vw-convert-pc(font-size, 70);
-					@include vw-convert-pc(padding, 0 245 30 245);
+					@include vw-convert-pc(padding, 0 245 40 245);
 					font-weight: bold;
 				}
 			}
 			
 			.icon-layout{
-				@include vw-convert-pc(padding, 90 0 10);
+				@include vw-convert-pc(padding-top, 90);
 				@include vw-convert-pc(gap, 120);
 				display: flex;
 				justify-content: center;
@@ -395,6 +455,7 @@
 					color:#fff;
 					text-align: center;
 					@include vw-convert-pc(font-size, 20);
+					@include vw-convert-pc(letter-spacing, -0.2);
 					span{
 						@include vw-convert-pc(width, 130);
 						@include vw-convert-pc(height, 130);
@@ -418,9 +479,9 @@
 			}
 
 			&.type-white{
+				@include vw-convert-pc(padding, 150 0);
+					@include vw-convert-pc(margin-bottom, 0);
 				background: #fff;
-				
-				
 			}
 
 			.phone-layout{
@@ -440,16 +501,32 @@
 
 	&.kb {
 		.pjt-top {
-			@include vw-convert-pc(margin-bottom, 40);
+			@include vw-convert-pc(padding, 120 218 0 160);
+			// @include vw-convert-pc(margin-bottom, 40);
+			// @include vw-convert-pc(padding-right, 261);
+			@include vw-convert-pc(gap, 144);
 
-			.pjt-title {
-				@include vw-convert-pc(width, 600);
+			.pjt-title{
+				.tit {
+					@include vw-convert-pc(padding-bottom, 30);
+					line-height: 1.187;
+					@include vw-convert-pc(letter-spacing, -0.8);
+					white-space: nowrap;
+			
+					span {
+						line-height: inherit;
+					}
+				}
 			}
+
+			// .pjt-title {
+			// 	@include vw-convert-pc(width, 600);
+			// }
 
 			.pjt-top-img {
 				position: relative;
 				@include vw-convert-pc(width, 800);
-				// @include vw-convert-pc(margin-top, 40);
+				@include vw-convert-pc(margin-top, 40);
 				text-align: center;
 
 				.pjt-img {
@@ -467,24 +544,24 @@
 
 					&.type01 {
 						background: rgba(255, 223, 98, 0.2);
-						right: 0;
-						bottom: -100px;
+						right: 15px;
+						bottom: 53px;
 						@include vw-convert-pc(width, 575);
 						@include vw-convert-pc(height, 575);
 					}
 
 					&.type02 {
 						background: linear-gradient(180deg, rgba(255, 240, 181, 0.7) 90.04%, rgba(255, 206, 14, 0.7) 190.04%);
-						right: 0;
-						@include vw-convert-pc(top, 107);
+						right: 10px;
+						@include vw-convert-pc(top, 85);
 						@include vw-convert-pc(width, 222);
 						@include vw-convert-pc(height, 222);
 					}
 
 					&.type03 {
 						background: linear-gradient(180deg, rgba(255, 240, 181, 0.6) 0%, rgba(255, 206, 14, 0.6) 100%);
-						@include vw-convert-pc(left, 70);
-						@include vw-convert-pc(bottom, -30);
+						@include vw-convert-pc(left, 66);
+						@include vw-convert-pc(top, 475);
 						@include vw-convert-pc(width, 143);
 						@include vw-convert-pc(height, 143);
 						opacity: 0.5;
@@ -495,8 +572,14 @@
 		}
 
 		.pjt-con {
+			@include vw-convert-pc(margin-top, -165);
 			@include vw-convert-pc(padding, 240 20 150);
 			background: #ffdf62;
+
+			.tit {
+				@include vw-font-size-pc(70);
+				line-height: 1.2;
+			}
 
 			.pjt-img {
 				@include vw-convert-pc(border-radius, 50);
@@ -538,46 +621,77 @@
 			background-size: cover;
 
 			.icon-if {
-				@include vw-convert-pc(padding-right, 100);
-				background: url(../images/ico-if.svg) right 10px no-repeat;
-				background-size: 7%;
 				display: inline-block;
+				padding-right: 3.5%;
+				@include vw-convert-pc(padding-bottom, 30);
+				background: url(../images/ico-if.svg) right 27% no-repeat;
+				background-size: 6% auto;
 			}
 		}
 
 		.pjt-con {
 			background: #000;
-			@include vw-convert-pc(padding, 290 0 190);
-			@include vw-convert-pc(margin-top, -130);
+			@include vw-convert-pc(padding, 180 0 150);
+			
+			.pjt-title {
+				.tit {
+					@include vw-convert-pc(padding-bottom, 40);
+					@include vw-font-size-pc(70);
+					line-height: 1.2;
+				}
+				
+				&.type02 {
+					@include vw-convert-pc(margin-top, 140);
+				}
+			}
+		
+			.mt175 {
+				@include vw-convert-pc(margin-top, 175);
+			}
 		}
 	}
 
 	&.cj {
 		.pjt-top {
+			@include vw-convert-pc(padding, 120 170 135 160);
+
+			.pjt-title {
+				.tit {
+					@include vw-convert-pc(padding-bottom, 30);
+				}
+			}
+
 			.pjt-top-img {
 				position: relative;
 				@include vw-convert-pc(width, 916);
 
 				.pjt-img01 {
 					position: absolute;
-					@include vw-convert-pc(left, 0);
-					@include vw-convert-pc(bottom, -260);
+					@include vw-convert-pc(left, 44);
+					@include vw-convert-pc(bottom, -302);
 					@include vw-convert-pc(width, 728);
 				}
 
 				.pjt-img02 {
 					position: absolute;
-					@include vw-convert-pc(right, -70);
-					@include vw-convert-pc(bottom, -160);
+					@include vw-convert-pc(right, -107);
+					@include vw-convert-pc(bottom, -204);
 					@include vw-convert-pc(width, 672);
 				}
 			}
 		}
 
 		.pjt-con {
-			@include vw-convert-pc(padding, 160 20 150);
+			@include vw-convert-pc(margin-top, -135);
+			@include vw-convert-pc(padding, 250 20 150);
 			background: url(../images/bg_cj.jpg) center no-repeat;
 			background-size: cover;
+
+			.pjt-title {
+				.tit {
+					@include vw-font-size-pc(70);
+				}
+			}
 
 			.icon {
 				@include vw-convert-pc(padding-top, 90);
@@ -642,23 +756,38 @@
 	}
 
 	&.woori-my {
+		
 		.pjt-top {
+			@include vw-convert-pc(padding, 120 203 135 160);
 			position: relative;
+
+			.pjt-title {
+				.tit {
+					@include vw-convert-pc(padding-bottom, 30);
+					white-space: nowrap;
+				}
+
+				.tool-list {
+					@include vw-convert-pc(padding-bottom, 187);
+				}
+			}
+
 			.pjt-top-img {
 				position: relative;
-				@include vw-convert-pc(right, 188);
+				@include vw-convert-pc(right, -20);
 				@include vw-convert-pc(width, 1107);
 
 				.woori_bg_left{
 					position:absolute;
 					@include vw-convert-pc(right, 550);
-					@include vw-convert-pc(bottom, 0);
+					@include vw-convert-pc(bottom, 40);
 					@include vw-convert-pc(width, 445);
+					
 				}
 				.woori_bg_right{
 					position:absolute;
 					@include vw-convert-pc(right, 20);
-					@include vw-convert-pc(bottom, 0);
+					@include vw-convert-pc(bottom, 40);
 					@include vw-convert-pc(width, 105);
 				}
 
@@ -666,7 +795,7 @@
 				.splash-img {
 					position: absolute;
 					@include vw-convert-pc(right, 160);
-					@include vw-convert-pc(top, 100);
+					@include vw-convert-pc(top, 65);
 					@include vw-convert-pc(width, 362);
 
 				}
@@ -678,10 +807,18 @@
 		}
 
 		.pjt-con {
+
+			.pjt-title {
+				.tit {
+					@include vw-font-size-pc(70);
+					@include vw-convert-pc(letter-spacing, -0.7);
+				}
+			}
+
 			&.bg01 {
 				background: #0F98C6;
 				@include vw-convert-pc(padding-top, 120);
-				@include vw-convert-pc(margin-top, 60);
+				@include vw-convert-pc(margin-top, -135);
 			}
 
 			&.bg02 {
@@ -692,7 +829,7 @@
 
 			&.bg03 {
 				background: #0E2A78;
-				@include vw-convert-pc(padding, 150 0 150);
+				@include vw-convert-pc(padding, 150 0);
 
 				.phone-layout{
 
@@ -707,14 +844,25 @@
 
 	&.woori-certi {
 		.pjt-top-full {
-			background: url('../images/bg_wooricerti.jpg') center no-repeat;
+			background: url('../images/bg_wooricerti.png') center no-repeat;
 			background-size: cover;
 			@include vw-convert-pc(padding-top, 200);
-			@include vw-convert-pc(padding-bottom, 1027);
+			// @include vw-convert-pc(padding-bottom, 1027);
 			@include vw-convert-pc(height, 1250);
-
+			
 			.tit{
-				font-family: 'KOHINanumOTF';
+				// font-family: 'KOHINanumOTF';
+				font-weight: 700;
+				@include vw-convert-pc(letter-spacing, -0.8);
+				line-height: 1.193;
+
+				span {
+					font-weight: 300;
+				}
+
+				em {
+					font-family: 'KOHINanum, KOHIN Bold, sans-serif';
+				}
 			}
 		}
 

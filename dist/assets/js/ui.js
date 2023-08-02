@@ -222,6 +222,9 @@ function setActive(link) {
     // 화면 너비가 768px보다 작을 경우
     var screenWidth = $(window).width();
     if (screenWidth < 768) {
+        if($(header).hasClass("active") === true) {
+            $(".menu-toggle").removeClass("white")
+        }
         // document.querySelector(".main-indicator-wrap").classList.remove('white')
         // document.querySelector(".menu-toggle").classList.remove('white')
         // document.querySelector(".num-box").classList.remove('white')

@@ -688,20 +688,20 @@ header {
 				stroke-width: 0.7px;
 			}
 		}
-		&.white {
-			.hamburger {
-				path {
-					stroke: #222;
-				}
-			}
-		}
-		&.active {
-			.hamburger {
-				path {
-					stroke: #222;
-				}
-			}
-		}
+		// &.white {
+		// 	.hamburger {
+		// 		path {
+		// 			stroke: #222;
+		// 		}
+		// 	}
+		// }
+		// &.active {
+		// 	.hamburger {
+		// 		path {
+		// 			stroke: #222;
+		// 		}
+		// 	}
+		// }
 	}
 
 	//메인 헤더 추가(mobile)
