@@ -5,9 +5,6 @@
 
 .main-indicator-wrap {
 	position: fixed;
-	// right: 80px;
-	// bottom:7%;
-	// transform: translateY(-50%);
 	right: 60px;
 	bottom: 147px;
 	width: 45px;
@@ -25,81 +22,77 @@
 		background: #DDDDDD;
 	}
 
-	> div {
-		height: 24.15px;
+	&.white {
 
-		// &::after {
-		// 	content: '';
-		// 	display: block;
-		// 	position: absolute;
-		// 	top: 0;
-		// 	right: 20px;
-		// 	width: 1px;
-		// 	height: 24.15px;
-		// 	background: #fff;
-		// 	z-index: 1;
-		// }
+		.current-circle {
+			background: #fff;
+		}
+	}
+	
+	.current-circle {
+		display: block;
+		position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translate(0, 50%);
+    width: 8px;
+    height: 8px;
+    margin-left: -3px;
+    border-radius: 50px;
+    background: #000;
+		transition: 0.5s;
+    z-index: 100;
 	}
 
-	a {
-		// position: relative;
-		// display: block;
-		// width: 100%;
-		// height: 100%;
-		// @include vw-convert-pc(margin, 24 0);
-		position: absolute;
-    /* top: 0; */
-    left: 50%;
-    transform: translate(-50%);
-    margin-left: 1px;
+	> a {
+		position: relative;
     display: block;
-    width: 1px;
-    /* height: 100%; */
-    background: #000;
+    width: 100%;
     height: 24.15px;
     z-index: 10;
 
-		span {
-			background: #000;
-			display: block;
-			position: absolute;
-			right: 0;
-			top: 6px;
-			width: 30px;
-			height: 2px;
-			transition: all .5s;
-		}
-
-		em {
-			position: relative;
-			display: block;
-			@include vw-font-size-pc(18);    
-			color: #000;
-			@include vw-convert-pc(padding-right, 55);
-			text-align: right;
-			opacity: 0;
-			right: -20%;
-			transition: all .5s;
-			font-style: normal;
-		}
-
-		&.active {
-			&::before {
-				content:'';
-				position: absolute;
+		&:nth-child(1) {
+			&.active ~ .current-circle {
 				top: -4px;
-				left: 50%;
-				transform: translate(0, 50%);
-				margin-left: -3.5px;
-				display: block;
-				width: 8px;
-				height: 8px;
-				background: #000;
-				border-radius: 50px;
-				z-index: 100;
 			}
 		}
-
+		&:nth-child(2) {
+			&.active ~ .current-circle {
+				top: 24.15px;
+			}
+		}
+		&:nth-child(3) {
+			&.active ~ .current-circle {
+				top: 48.3px;
+			}
+		}
+		&:nth-child(4) {
+			&.active ~ .current-circle {
+				top: 72.45px;
+			}
+		}
+		&:nth-child(5) {
+			&.active ~ .current-circle {
+				top: 96.6px;
+			}
+		}
+		&:nth-child(6) {
+			&.active ~ .current-circle {
+				top: 120.75px;
+			}
+		}
+		&:nth-child(7) {
+			&.active ~ .current-circle {
+				top: 144.9px;
+			}
+		}
+		&:nth-child(8) {
+			&.active ~ .current-circle {
+				top: auto;
+				bottom: 3px;
+			}
+		}	
+		
 		&.active,
 		&:hover {
 			span {
@@ -116,16 +109,29 @@
 				right: 0;
 			}
 		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			/* top: 0; */
+			left: 50%;
+			transform: translate(-50%);
+			margin-left: 1.9px;
+			display: block;
+			width: 1px;
+			/* height: 100%; */
+			background: #000;
+			height: 24.15px;
+			z-index: 10;
+		}
+		
 	}
 
 	&.white {
 		a {
-			span {
+			&::after {
 				background: #fff;
-			}
-
-			em {
-				color: #fff;
 			}
 
 			&.active,
@@ -135,14 +141,8 @@
 					border: 2px solid #fff;
 				}
 			}
-
-			&.active {
-				&::before {
-					background: #fff;
-				}
-			}
 		}
-	}
+	}	
 
 	.num-box {
 		display: flex;
@@ -237,9 +237,9 @@
 		}
 
 		.tit {
-			@include vw-font-size-pc(80); 
+			@include vw-font-size-pc(70); 
 			@include vw-convert-pc(padding-bottom, 40);
-			line-height: 1.187;
+			line-height: 1.2;
 			//@include vw-convert-pc(padding, 80 165 30 0);
 			font-weight: 900;
 			
@@ -408,6 +408,8 @@
 			.pjt-title{
 				.tit {
 					@include vw-convert-pc(padding-bottom, 30);
+					@include vw-font-size-pc(80);
+					line-height: 1.187;
 					@include vw-convert-pc(letter-spacing, -0.8);
 					white-space: nowrap;
 			
@@ -509,6 +511,7 @@
 			.pjt-title{
 				.tit {
 					@include vw-convert-pc(padding-bottom, 30);
+					@include vw-font-size-pc(80);
 					line-height: 1.187;
 					@include vw-convert-pc(letter-spacing, -0.8);
 					white-space: nowrap;
@@ -590,32 +593,6 @@
 
 	&.sc {
 
-		// .bg-area {
-		//     position: relative;
-		//     padding-bottom: 56.25%;
-		//     .image {
-		//         width: 100%;
-		//         height: 100%;
-		//         &.after-image {
-		//             position: absolute;
-		//             overflow: hidden;
-		//             top: 0;
-		//             transform: translate(100%, 0px);
-		//             img {
-		//                 transform: translate(-100%, 0px);
-		//             }
-		//         }
-		//         img {
-		//             width: 100%;
-		//             height: 100%;
-		//             position: absolute;
-		//             top: 0;
-		//             left: 0;
-		//         }
-		//     }
-		// }
-
-
 		.pjt-top-full {
 			background: url('../images/bg_sc_default.jpg') center no-repeat;
 			background-size: cover;
@@ -658,6 +635,8 @@
 			.pjt-title {
 				.tit {
 					@include vw-convert-pc(padding-bottom, 30);
+					@include vw-font-size-pc(80);
+					line-height: 1.187;
 				}
 			}
 
@@ -729,21 +708,33 @@
 		.pjt-top-full {
 			background: url('../images/bg_wooriopen_default.jpg') center center no-repeat;
 			background-size: cover;
+
+			.pjt-title {
+				.tit {
+					@include vw-font-size-pc(80);
+					line-height: 1.187;
+					@include vw-convert-pc(letter-spacing, -0.8);
+				}
+			}
+
+			.pjt-top-img {
+				@include vw-convert-pc(padding-top, 120);
+			}
 		}
 
 		.pjt-con {
 			background: #000;
-			@include vw-convert-pc(padding-top, 290);
-			@include vw-convert-pc(padding-bottom, 250);
-			@include vw-convert-pc(margin-top, -130);
+			@include vw-convert-pc(padding-top, 279);
+			@include vw-convert-pc(padding-bottom, 75);
+			@include vw-convert-pc(margin-top, -79);
 
 			.phone-layout {
 				&.bg {
 					background: url('../images/img_wooriopen01_bg.png') center no-repeat;
 					background-size: 100%;
-					@include vw-convert-pc(max-width, 1155);
+					@include vw-convert-pc(max-width, 980);
 					margin: 0 auto;
-					@include vw-convert-pc(padding-top, 100);
+					@include vw-convert-pc(padding, 100 0 0);
 					//@include vw-convert-pc(margin-top, 100);
 				}
 
@@ -764,6 +755,8 @@
 			.pjt-title {
 				.tit {
 					@include vw-convert-pc(padding-bottom, 30);
+					@include vw-font-size-pc(80);
+					line-height: 1.187;
 					white-space: nowrap;
 				}
 
@@ -860,8 +853,22 @@
 					font-weight: 300;
 				}
 
-				em {
-					font-family: 'KOHINanum, KOHIN Bold, sans-serif';
+				strong {
+					display: block;
+					position: relative;
+
+					&::before {
+						content:'"';
+						display: inline-block;
+						font-family: 'BIZ UDPMincho', sans-serif, serif;
+						transform: rotate(180deg) translate(-0.15625vw, 2.1875vw);
+					}
+
+					&::after {
+						content:'"';
+						display: inline-block;
+						font-family: 'BIZ UDPMincho', sans-serif, serif;
+					}
 				}
 			}
 		}
@@ -870,6 +877,10 @@
 			@include vw-convert-pc(padding-top, 150);
 			@include vw-convert-pc(padding-bottom, 150);
 			//@include vw-convert-pc(margin-top, -130);
+
+			.tit {
+				@include vw-font-size-pc(70);
+			}
 		}
 	}
 }
@@ -2433,7 +2444,7 @@
 
 		.tool-list {
 			display: flex;
-			gap: 4px;
+			@include vw-convert-mo(gap, 8);
 			@include vw-convert-mo(margin-top, 64);
 
 			div {
@@ -2445,18 +2456,18 @@
 			.pjt-top-full {
 				background: url('../images/bg_intro_mo.jpg') center no-repeat;
 				background-size: cover;
-				@include vw-convert-mo(padding-top, 212);
+				@include vw-convert-mo(padding-top, 256);
 				.pjt-title{
 					.tit{
 						@include vw-convert-mo(font-size, 72);
-						@include vw-convert-mo(line-height, 80);
-						@include vw-convert-mo(padding-bottom, 44);
+						line-height: 1.1;
+						@include vw-convert-mo(padding-bottom, 48);
 						font-weight: 600;
 					}
 					.desc {
 						@include vw-convert-mo(font-size, 28);
-						@include vw-convert-mo(line-height, 44);
-						@include vw-convert-mo(margin-right, 220);
+						@include vw-convert-mo(letter-spacing, -0.14);
+						line-height: 1.571;
 					}
 				}
 			}
@@ -2473,32 +2484,41 @@
 				@include vw-convert-mo(padding, 128 40 0);
 
 				.pjt-title{
+					.tit {
+						@include vw-convert-mo(margin-bottom, 32);
+						padding: 0;
+						@include vw-font-size-mo(56);
+						line-height: 1.178;
+					}
 
 					.desc{
 						@include vw-convert-mo(font-size, 28);
-						@include vw-convert-mo(max-width, 650);
-						@include vw-convert-mo(line-height, 40);
+						line-height: 1.428;
+						@include vw-convert-mo(letter-spacing, -0.14);
 					}
 				}
 	
 				.pjt-top-img {
 					position: relative;
-					@include vw-convert-mo(left, 200);
-					@include vw-convert-mo(top, 80);
+					@include vw-convert-mo(left, 154);
+					@include vw-convert-mo(top, 120);
+					margin-top: 0;
+
 					img{
-						@include vw-convert-mo(height, 600);
+						@include vw-convert-mo(height, 754);
 					}
 				}
 			}
 	
 			.pjt-con{
+				@include vw-convert-mo(margin-top, 60);
 				@include vw-convert-mo(padding, 260 40 88);
 
 				.pjt-title{
 
 					.tit{
-					@include vw-convert-mo(font-size, 40);
-					font-weight: 600;
+						@include vw-convert-mo(font-size, 40);
+						font-weight: 600;
 					}
 
 					.tit2 {
