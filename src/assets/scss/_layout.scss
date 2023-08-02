@@ -149,7 +149,7 @@
     align-items: center;
     position: absolute;
     width: 100%;
-    bottom: -28px;
+    bottom: -23px;
     font-size: 14px;
     font-weight: 500;
 		color: rgba(0, 0, 0, 0.30);
@@ -279,7 +279,7 @@
 	.phone-layout {
 		display: flex;
 		justify-content: center;
-		gap: 60px;
+		@include vw-convert-pc(gap, 60);
 		@include vw-convert-pc(padding-top, 120);
 		@include vw-convert-pc(padding-bottom, 40);
 		@include vw-convert-pc(width, 1200);
@@ -433,11 +433,11 @@
 			background: #0F71D9;
 		
 			.pjt-title {
-				.tit{
-					@include vw-convert-pc(padding-bottom, 40);
-					@include vw-convert-pc(font-size, 70);
-					line-height: 1.2;
-				}
+				// .tit{
+				// 	@include vw-convert-pc(padding-bottom, 40);
+				// 	@include vw-convert-pc(font-size, 70);
+				// 	line-height: 1.2;
+				// }
 
 				.tit2{
 					// @include vw-convert-pc(margin-bottom, 10);
@@ -2379,28 +2379,27 @@
 			}
 
 			.tit {
-				@include vw-convert-mo(padding-bottom, 32);
-				@include vw-font-size-mo(56);
+				@include vw-convert-mo(padding-bottom, 20);
+				@include vw-font-size-mo(40);
 				line-height: 1.2;
-				font-weight: 800;
+				font-weight: 600;
 
 				span{
 					font-weight: 400;
 				}
 			}
 
-
 			.desc {
 				@include vw-font-size-mo(28);
-				@include vw-convert-mo(line-height, 40);
+				line-height: 1.428;
 				font-weight: 300;
 			}
 		}
 
 		.phone-layout {
 			width: 100%;
-			@include vw-convert-mo(padding-top, 88);
-			gap: 28px;
+			@include vw-convert-mo(gap, 28);
+			@include vw-convert-mo(padding, 88 0 40);
 
 			img {
 				max-width: 100%;
@@ -2511,8 +2510,8 @@
 			}
 	
 			.pjt-con{
-				@include vw-convert-mo(margin-top, 60);
-				@include vw-convert-mo(padding, 260 40 88);
+				@include vw-convert-mo(margin, -35 0 0);
+				@include vw-convert-mo(padding, 260 40 48);
 
 				.pjt-title{
 
@@ -2529,19 +2528,27 @@
 						text-align: left;
 					}
 
+					.desc {
+						@include vw-convert-mo(letter-spacing, -0.14);
+						span {
+							letter-spacing: 0;
+						}
+					}
+
 				}
 				
 				.icon-layout{
-					@include vw-convert-mo(padding, 80 0 10);
+					gap: unset;
 					display: flex;
 					justify-content: space-between;
+					@include vw-convert-mo(padding-top, 64);
 	
 					li{
 						@include vw-convert-mo(font-size, 24);
 						span{
 							@include vw-convert-mo(width, 100);
 							@include vw-convert-mo(height, 100);
-							@include vw-convert-mo(margin-bottom, 18);
+							@include vw-convert-mo(margin-bottom, 16);
 							@include vw-convert-mo(background-size, 60);
 						}
 					}
@@ -2560,7 +2567,9 @@
 				}
 	
 				&.type-white{
-					@include vw-convert-mo(padding, 80 40 140 40);
+					margin: 0;
+					@include vw-convert-mo(padding, 80 40 100 40);
+
 					.phone-layout{
 						.aos-init:first-child{
 							display: none;
