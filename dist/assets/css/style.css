@@ -2550,22 +2550,22 @@ button.swiper-pagination-bullet {
   top: -4px;
 }
 .main-indicator-wrap > a:nth-child(2).active ~ .current-circle {
-  top: 24.15px;
+  top: 20.15px;
 }
 .main-indicator-wrap > a:nth-child(3).active ~ .current-circle {
-  top: 48.3px;
+  top: 44.3px;
 }
 .main-indicator-wrap > a:nth-child(4).active ~ .current-circle {
-  top: 72.45px;
+  top: 68.45px;
 }
 .main-indicator-wrap > a:nth-child(5).active ~ .current-circle {
-  top: 96.6px;
+  top: 92.6px;
 }
 .main-indicator-wrap > a:nth-child(6).active ~ .current-circle {
-  top: 120.75px;
+  top: 116.75px;
 }
 .main-indicator-wrap > a:nth-child(7).active ~ .current-circle {
-  top: 144.9px;
+  top: 140.9px;
 }
 .main-indicator-wrap > a:nth-child(8).active ~ .current-circle {
   top: auto;

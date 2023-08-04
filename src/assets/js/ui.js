@@ -175,9 +175,49 @@ document.addEventListener("DOMContentLoaded", function () {
  * 메인 js
  * ==============================+
  */
+// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+// let links = gsap.utils.toArray(".main-indicator-wrap a");
+// links.forEach(a => {
+//     let element = document.querySelector(a.getAttribute("href")),
+//         linkST = ScrollTrigger.create({
+//             trigger: element,
+//             start: "top top"
+//         });
+//     ScrollTrigger.create({
+//         trigger: element,
+//         start: "top center",
+//         end: "bottom center",
+//         onToggle: self => self.isActive && setActive(a)
+//     });
+//     a.addEventListener("click", e => {
+//         e.preventDefault();
+//         gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
+//     });
+// });
+
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 let links = gsap.utils.toArray(".main-indicator-wrap a");
-links.forEach(a => {
+let currentSpan = document.querySelector(".current"); // current span 요소 선택
+
+// 10초 뒤에 current값이 효과적으로 나타나도록 애니메이션 추가
+setTimeout(function() {
+    gsap.to(currentSpan, {
+        y: -20, // 위로 20px 이동
+        opacity: 0, // 투명도 0으로 변경
+        duration: 0.2,
+        onComplete: () => {
+            const currentNumber = parseInt(currentSpan.textContent); // 현재 current 값
+            currentSpan.textContent = currentNumber.toString().padStart(2, '0'); //현재 current 값에 숫자 2자리에 앞잘 0 표시
+            gsap.to(currentSpan, {
+                y: 0, // 다시 원래 위치로
+                opacity: 1, // 투명도 원래대로
+                duration: 0.2,
+            });
+        }
+    });
+}, 1000);
+
+links.forEach((a, index) => {
     let element = document.querySelector(a.getAttribute("href")),
         linkST = ScrollTrigger.create({
             trigger: element,
@@ -187,7 +227,27 @@ links.forEach(a => {
         trigger: element,
         start: "top center",
         end: "bottom center",
-        onToggle: self => self.isActive && setActive(a)
+        onToggle: self => {
+            if (self.isActive) {
+                // 링크의 숫자값으로 "current" span 내용 변경
+                const linkNumber = index + 1;
+                
+                gsap.to(currentSpan, {
+                    y: -20, // 위로 20px 이동
+                    opacity: 0, // 투명도 0으로 변경
+                    duration: 0.2,
+                    onComplete: () => {
+                        currentSpan.textContent = linkNumber.toString().padStart(2, '0'); // "current" span 내용 변경
+                        gsap.to(currentSpan, {
+                            y: 0, // 다시 원래 위치로
+                            opacity: 1, // 투명도 원래대로
+                            duration: 0.2,
+                        });
+                    }
+                });
+                setActive(a);
+            }
+        }
     });
     a.addEventListener("click", e => {
         e.preventDefault();
@@ -203,8 +263,6 @@ function setActive(link) {
         document.querySelector(".main-indicator-wrap").classList.add('white')
         document.querySelector(".menu-toggle").classList.add('white')
         document.querySelector(".num-box").classList.add('white')
-        // document.querySelector('.btn-top path:first-child').setAttribute('fill', 'white');
-        // document.querySelector('.btn-top path:last-child').setAttribute('stroke', 'black');
         document.querySelector(".main_logo").classList.add('white')
         document.querySelector(".top-nav").classList.add('white')
         document.querySelector("html").classList.add('bg-black')
@@ -212,8 +270,6 @@ function setActive(link) {
         document.querySelector(".main-indicator-wrap").classList.remove('white')
         document.querySelector(".menu-toggle").classList.remove('white')
         document.querySelector(".num-box").classList.remove('white')
-        // document.querySelector('.btn-top path:first-child').setAttribute('fill', 'black');
-        // document.querySelector('.btn-top path:last-child').setAttribute('stroke', 'white');
         document.querySelector(".main_logo").classList.remove('white')
         document.querySelector(".top-nav").classList.remove('white')
         document.querySelector("html").classList.remove('bg-black')
@@ -233,6 +289,7 @@ function setActive(link) {
         $("#intro").addClass("active");
     }
 }
+
 
 //responsive
 let mm = gsap.matchMedia();
