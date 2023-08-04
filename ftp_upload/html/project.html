@@ -29,7 +29,7 @@
 			<h1 class="logo--black main_logo">
 				<a href="index.html">
 					<i class="ico">
-						<svg width="54" height="54" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg width="34" height="34" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_2324_9676)">
 								<path
 									d="M14.0519 13.3602C14.0807 13.3571 14.1093 13.3524 14.1375 13.3461C14.3051 13.319 14.4558 13.2284 14.5583 13.093C14.6445 13.0159 14.7142 12.9219 14.7631 12.817C14.8119 12.7121 14.8389 12.5984 14.8423 12.4827C14.8495 12.3796 14.8345 12.2761 14.7982 12.1793C14.7619 12.0825 14.7051 11.9945 14.6319 11.9216C14.5505 11.8488 14.4558 11.7928 14.3528 11.7567C14.2497 11.7206 14.1405 11.7051 14.0315 11.7111C13.8271 11.7015 13.6272 11.7727 13.4747 11.9091C13.4061 11.9715 13.3522 12.0485 13.3173 12.1344C13.2823 12.2204 13.2671 12.3131 13.2726 12.4057C13.2799 12.6293 13.3594 12.8446 13.4991 13.0194C13.5536 13.1194 13.6334 13.2033 13.7303 13.2631C13.8272 13.3228 13.9381 13.3563 14.0519 13.3602Z"
@@ -51,13 +51,16 @@
 							</defs>
 						</svg>
 					</i>
-					디앤디모바일
+					<span>디앤디모바일</span>
 				</a>
 			</h1>
 		</div>
 		<div class="top-nav--container hide-mobile">
 			<ul class="top-nav">
-				<li>
+				<li class="top_hide">
+					<span>Company Brief</span>
+				</li>
+				<li class="dcb">
 					<a href="/dndmobile/assets/download/dndmobile_company_Brochure.pdf" target="_blank">
 						<i class="ico">
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="none"
@@ -177,14 +180,39 @@
 		</div>
 		<nav>
 			<ul class="main-menu">
-				<li><a href="project" class="active">PROJECTS</a></li>
-				<li><a href="about">ABOUT US</a></li>
-				<li><a href="recruit">RECRUIT</a></li>
-				<li><a href="contact">CONTACT</a></li>
+				<li><a href="project" class="active"><span class="box">PROJECTS</a></span><span class="count"><b>152</b></span></li>
+				<li><a href="about"><span class="box">ABOUT US</span></a></li>
+				<li><a href="recruit"><span class="box">RECRUIT</span></a></li>
+				<li><a href="contact"><span class="box">CONTACT</span></a></li>
+				</ul>
+				<ul class="bot-menu">
+					<li>
+						<a href="https://blog.naver.com/dndmobile" class="active">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M25.6195 9H10.3722C7.96253 9 6 10.9708 6 13.3722V24.7415C6 27.1512 7.97081 29.1137 10.3722 29.1137H15.4951L16.5302 30.9023L17.5487 32.6661C17.7309 32.9891 18.1946 32.9891 18.3851 32.6661L19.4036 30.9023L20.4387 29.1137H25.6278C28.0375 29.1137 30 27.1429 30 24.7415V13.3805C30 10.9708 28.0292 9 25.6195 9ZM19.1877 16.683C17.8711 16.683 16.8029 17.7346 16.8029 19.0347C16.8029 20.3348 17.8711 21.3864 19.1877 21.3864C20.5044 21.3864 21.5726 20.3348 21.5726 19.0347C21.5726 17.7346 20.5126 16.683 19.1877 16.683ZM19.1877 20.1609C18.5584 20.1609 18.045 19.6558 18.045 19.0347C18.045 18.4137 18.5584 17.9085 19.1877 17.9085C19.8171 17.9085 20.3305 18.4137 20.3305 19.0347C20.3305 19.6558 19.8253 20.1609 19.1877 20.1609ZM10.278 17.2209C10.6507 16.8814 11.131 16.6827 11.6444 16.6827C12.8368 16.6827 13.7891 17.7426 13.7891 19.0427C13.7891 20.3427 12.8285 21.3944 11.6444 21.3944C11.1227 21.3944 10.6507 21.1874 10.278 20.8562V21.2785H8.95312V15.2749H10.278V17.2209ZM10.2863 19.4981C10.4685 19.9204 10.8908 20.2103 11.3794 20.2103C12.0418 20.2103 12.5718 19.6886 12.5718 19.0344C12.5718 18.3802 12.0418 17.8585 11.3794 17.8585C10.8908 17.8585 10.4685 18.1484 10.2863 18.5707C10.2201 18.7114 10.187 18.8688 10.187 19.0344C10.187 19.2 10.2284 19.3573 10.2863 19.4981ZM25.7041 16.7831V17.1557C25.3315 16.8659 24.8678 16.692 24.3709 16.692C23.1537 16.692 22.1683 17.7105 22.1683 18.9609C22.1683 20.2113 23.1537 21.2298 24.3709 21.2298C24.8761 21.2298 25.3398 21.0559 25.7041 20.7661V21.3955C25.7041 21.3955 25.5716 22.0165 24.6442 22.0165V23.1841C24.6442 23.1841 25.6462 23.3 26.5405 22.4057C26.5405 22.4057 26.9545 21.9668 27.0456 21.3872V16.7831H25.7041ZM24.6194 20.1119C23.9486 20.1119 23.4104 19.5903 23.4104 18.9526C23.4104 18.315 23.9569 17.7933 24.6194 17.7933C25.0914 17.7933 25.5054 18.0583 25.7041 18.4392C25.7869 18.5966 25.8283 18.7705 25.8283 18.9526C25.8283 19.1348 25.7787 19.317 25.7041 19.466C25.5054 19.8552 25.0914 20.1119 24.6194 20.1119ZM13.9381 16.3596V15.1589C13.9381 15.1589 14.8159 15.0429 15.5942 15.9621C15.5942 15.9621 15.9503 16.4092 16.0331 17.0054V17.0386V21.2783H14.6668V17.0386C14.5509 16.4424 13.9381 16.3596 13.9381 16.3596Z"
+									fill="white" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="/dndmobile/assets/download/dndmobile_company_Brochure.pdf" class="active">
+							Company Brief
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+								<path d="M15.332 17H24.6654" stroke="#E30D3F" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path d="M15.332 23H24.6654" stroke="#E30D3F" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path
+									d="M16.4997 31.6663H23.4997C29.333 31.6663 31.6663 29.333 31.6663 23.4997V16.4997C31.6663 10.6663 29.333 8.33301 23.4997 8.33301H16.4997C10.6663 8.33301 8.33301 10.6663 8.33301 16.4997V23.4997C8.33301 29.333 10.6663 31.6663 16.4997 31.6663Z"
+									stroke="#E30D3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</li>
 			</ul>
 		</nav>
 
-		<div class="header-nav--footer">
+			<!-- <div class="header-nav--footer">
 			<span class="line"></span>
 			<ul class="social-links">
 				<li>
@@ -211,7 +239,7 @@
 						<span>Company Brief</span>
 					</a>
 				</li>
-				<!-- <li>
+			<li>
 					<a href="https://blog.naver.com/dndmobile" target="_blank">
 						<i class="ico">
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="none"
@@ -235,7 +263,7 @@
 							</svg>
 						</i>
 					</a>
-				</li> -->
+				</li>
 				<li>
 					<a href="https://blog.naver.com/dndmobile" target="_blank">
 						<i class="ico">
@@ -246,37 +274,109 @@
 									class="fill-white" />
 							</svg>
 						</i>
-						<!-- <span>Blog</span> -->
+					<span>Blog</span>
 					</a>
 				</li>
 			</ul>
-		</div>
+		</div>-->
 	</div>
 </section>
 		<section class="project-wrap">
 			<div class="project-box">
-				<div class="tab-top">
-					<div class="bg-tit hide-mobile" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-						<p>Creative Digital Transformation</p>
+				<div class="title-wrap" data-aos="fade-up" data-aos-duration="1000">
+					<p>Our Experience</p>
+					<h2>고객의 생각을 <br class="hide-pc"><strong>디자인으로 실현</strong>합니다</h2>
+				</div>
+				<div class="swiper-container project-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide box-wrap bg-sc mask" data-aos="fade-up" data-aos-duration="1000">
+							<p class="img"><img src="/dndmobile/assets/images/img_pj_sc_thumb.png" alt=""></p>
+							<div class="hover-box">
+								<div class="box">
+									<p>SC 제일은행<br><strong>모바일 기업뱅킹</strong></p>
+									<button type="button">GO</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide box-wrap bg-cj mask" data-aos="fade-up" data-aos-duration="1000">
+							<p class="img"><img src="/dndmobile/assets/images/img_pj_cj_thumb.png" alt=""></p>
+							<div class="hover-box">
+								<div class="box">
+									<p>CJ대한통운<br><strong>차세대 택배시스템</strong></p>
+									<button type="button">GO</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide box-wrap bg-sc02 mask" data-aos="fade-up" data-aos-duration="1000">
+							<p class="img"><img src="/dndmobile/assets/images/img_pj_sc02_thumb.png" alt=""></p>
+							<div class="hover-box">
+								<div class="box">
+									<p>SC제일은행<br><strong>고령자 편한뱅킹</strong></p>
+									<button type="button">GO</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide box-wrap bg-kb mask" data-aos="fade-up" data-aos-duration="1000">
+							<p class="img"><img src="/dndmobile/assets/images/img_pj_kb_thumb.png" alt=""></p>
+							<div class="hover-box">
+								<div class="box">
+									<p>KB국민은행<br><strong>비대면 마케팅</strong></p>
+									<button type="button">GO</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide box-wrap bg-ha" data-aos="fade-up" data-aos-duration="1000">
+							<p class="img">
+								<img src="/dndmobile/assets/images/img_pj_ha_thumb.png" alt="">
+							</p>
+							<div class="hover-box">
+								<div class="box">
+									<p>하나카드<br><strong>하나머니 고도화</strong></p>
+									<button type="button">GO</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide box-wrap bg-wo mask" data-aos="fade-up" data-aos-duration="1000">
+							<p class="img"><img src="/dndmobile/assets/images/img_pj_wo_thumb.png" alt=""></p>
+							<div class="hover-box">
+								<div class="box">
+									<p>우리은행 사설인증<br><strong>우리WON인증</strong></p>
+									<button type="button">GO</button>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide box-wrap bg-wo02 mask" data-aos="fade-up" data-aos-duration="1000">
+							<p class="img"><img src="/dndmobile/assets/images/img_pj_wo02_thumb.png" alt=""></p>
+							<div class="hover-box">
+								<div class="box">
+									<p>우리은행<br><strong>마이데이터</strong></p>
+									<button type="button">GO</button>
+								</div>
+							</div>
+						</div>
 					</div>
-					<ul data-aos="fade-up" data-aos-duration="1000">
-						<li>
-							<p>2023</p>
-						</li>
-						<li class="on">
-							<p>2022</p>
-						</li>
-						<li>
-							<p>2021</p>
-						</li>
-						<li>
-							<p>2020</p>
-						</li>
-						<li>
-							<p>2019</p>
-						</li>
-					</ul>
-					<div class="bg hide-pc"></div>
+				</div>
+				</div>
+				<div class="project-box">
+					<div class="tab-top">
+						<ul>
+							<li>
+								<p>2023</p>
+							</li>
+							<li class="on">
+								<p>2022</p>
+							</li>
+							<li>
+								<p>2021</p>
+							</li>
+							<li>
+								<p>2020</p>
+							</li>
+							<li>
+								<p>2019</p>
+							</li>
+						</ul>
+					<div class="bg hide-pc" style="display: none;"></div>
 				</div>
 				<div class="tab-detail tab-2023">
 					<div class="accordion-wrap">
@@ -284,79 +384,127 @@
 							<dt class="accordion active">진행중인 프로젝트<sup>(16)</sup></dt>
 							<dd class="panel" style="display: block;">
 								<ul>
-									<li>하나캐피탈 디지털채널 운영</li>
-									<li>하나은행 마케팅플랫폼 및 데이터 허브</li>
-									<li>롯데제과 SFA영업지원 시스템</li>
-									<li>하나카드 마이데이터 2차</li>
-									<li>원더카드 서비스 마켓 및 카드신청 개발</li>
-									<li>하나머니 App고도화(요건수립)</li>
-									<li>SC제일은행 마이데이터 2차</li>
-									<li>SC제일은행 고령화를 위한 친화적 모바일 App</li>
-									<li>KB국민은행 e-Capital Market 운영</li>
-									<li>부산은행 전자증명서 수취시스템 구축</li>
-									<li>우리은행 마이데이터 운영</li>
-									<li>미래에셋생명 영업지원시스템 재구축</li>
-									<li>라이나생명 대고객 디지털채널 재구축</li>
-									<li>SK m&service 하이닉스 LMS시스템(SKHU) 구축</li>
-									<li>주택도시보증공사 자가진단 안신전세 App 구축</li>
-									<li>CJ대한통운 차세대 App서비스 구축 </li>
+									<!-- <li>
+																			<p>하나캐피탈 디지털채널 운영</p>
+																		</li>
+																		<li>
+																			<p>하나은행 마케팅플랫폼 및 데이터 허브</p>
+																		</li>
+																		<li>
+																			<p>롯데제과 SFA영업지원 시스템</p>
+																		</li>
+																		<li>
+																			<p>하나카드 마이데이터 2차</p>
+																		</li>
+																		<li>
+																			<p>원더카드 서비스 마켓 및 카드신청 개발</p>
+																		</li>
+																		<li>
+																			<p>하나머니 App고도화(요건수립)</p></li>
+																		<li>
+																			<p>SC제일은행 마이데이터 2차</p>
+																		</li>
+																		<li>
+																			<p>SC제일은행 고령화를 위한 친화적 모바일 App</p>
+																		</li>
+																		<li>
+																			<p>KB국민은행 e-Capital Market 운영</p>
+																		</li>
+																		<li>
+																			<p>부산은행 전자증명서 수취시스템 구축</p>
+																		</li>
+																		<li>
+																			<p>우리은행 마이데이터 운영</p>
+																		</li>
+																		<li>
+																			<p>미래에셋생명 영업지원시스템 재구축</p>
+																		</li>
+																		<li>
+																			<p>라이나생명 대고객 디지털채널 재구축</p>
+																		</li>
+																		<li>
+																			<p>SK m&service 하이닉스 LMS시스템(SKHU) 구축</p>
+																		</li>
+																		<li>
+																			<p>주택도시보증공사 자가진단 안신전세 App 구축</p>
+																		</li>
+																		<li>
+																			<p>CJ대한통운 차세대 App서비스 구축</p>
+																		</li> -->
+									<li class="ing">
+										<p>하나캐피탈 디지털채널 운영<span>진행중</span></p>
+									</li>
+									<li>
+										<p>SC제일은행 대출이동<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>하나은행 마케팅 플랫폼 및 데이터 허브 캠페인-CRM 상품제휴<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>롯데제과 SFA 영업지원 시스템<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>우리은행 마이데이터 운영<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>KB국민은행 e-Capital Market 운영(디자인 및 퍼블)<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>KICA(한국정보인증) 비대면 서비스 구축(전자증명서 및 공동인증서 비대면 발급)<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>SC제일은행 Funds SA Revamp 프로젝트<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>우리은행 본인확인 서비스<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>우리은행 금융포털 고도화<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>SC제일은행 금소법대응(2차)<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>우리금융그룹 MZ플랫폼 위탁 운영<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>SC제일은행 웹접근성<span>예정</span></p>
+									</li>
+									<li class="ing">
+										<p>한국투자신탁<span>예정</span></p>
+									</li>
+									<li class="ing">
+										<p>미래에셋생명STO<span>예정</span></p>
+									</li>
+									<li class="ing">
+										<p>삼성생명 더헬스앱 고도화<span>예정</span></p>
+									</li>
+									<li class="ing">
+										<p>부산은행 블록체인기반 통합시민플랫폼<span>예정</span></p>
+									</li>
+									<li class="ing">
+										<p>현대카드 M몰<span>예정</span></p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
 					</div>
 				</div>
 				<div class="tab-detail tab-2022 on">
-					<div class="swiper-container project-swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide box-wrap" data-aos="fade-up" data-aos-duration="1000">
-								<p class="img"><img src="/dndmobile/assets/images/img_kb_thumb.png" alt=""></p>
-								<div class="box">
-									<p class="tit">
-										KB국민은행<br class="hide-mobile">
-										비대면 마케팅<br class="hide-mobile">
-										Tool 구축
-									</p>
-									<p class="tag">
-										#비대면마케팅 #금융쿠폰 #통합어드민
-									</p>
-								</div>
-							</div>
-							<div class="swiper-slide box-wrap" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-								<p class="img"><img src="/dndmobile/assets/images/img_sc_thumb.png" alt=""></p>
-								<div class="box">
-									<p class="tit">
-										SC제일은행 <br class="hide-mobile">
-										First Biz기업뱅킹<br class="hide-mobile">
-										전면 개편
-									</p>
-									<p class="tag">
-										#해외송금 #국내외화자금이체
-									</p>
-								</div>
-							</div>
-							<div class="swiper-slide box-wrap" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-								<p class="img"><img src="/dndmobile/assets/images/img_cj_thumb.png" alt=""></p>
-								<div class="box">
-									<p class="tit">
-										CJ대한통운 <br class="hide-mobile">
-										차세대 택배시스템<br class="hide-mobile">
-										직원 App 구축
-									</p>
-									<p class="tag">
-										#간선기사 #HAMS #NPLUS
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div class="accordion-wrap">
 						<dl>
 							<dt class="accordion ">하나카드<sup>(3)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li class="ing">마이데이터 2차<span>진행중</span></li>
-									<li class="ing">원더카드 서비스 마켓 및 카드신청 개발<span>진행중</span></li>
-									<li class="ing">하나머니 APP고도화(요건수립)<span>진행중</span></li>
+									<li class="ing">
+										<p>마이데이터 2차<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>원더카드 서비스 마켓 및 카드신청 개발<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>하나머니 APP고도화(요건수립)<span>진행중</span></p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -364,26 +512,41 @@
 							<dt class="accordion ">SC제일은행<sup>(5)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li class="ing">마이데이터 2차<span>진행중</span></li>
-									<li class="ing">고령화를 위한 친화적 모바일APP<span>진행중</span></li>
-									<li>현대카드 전략적 파트너쉽</li>
-									<li>온라인 펀드 미스터리 쇼핑
+									<li class="ing">
+										<p>마이데이터 2차<span>진행중</span></p>
+									</li>
+									<li class="ing">
+										<p>고령화를 위한 친화적 모바일APP<span>진행중</span></p>
+									</li>
+									<li>
+										<p>현대카드 전략적 파트너쉽</p>
+									</li>
+									<li class="wa">
+										<p>온라인 펀드 미스터리 쇼핑</p>
 										<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="ico-wa">
 											<rect width="20" height="20" rx="10" fill="#D22127"/>
 											<path d="M13.6395 6.59774L10.8254 11.6627L9.86461 5.8726L8.81972 5.67306L6.01062 10.7119L5.06189 4.95229L3.80762 4.7113L5.18311 12.6169L6.19695 12.8121L8.99704 7.85826L9.98383 13.5383L11.0187 13.7367L13.941 8.57467L14.4219 11.3193L13.5233 11.147L12.849 12.3388L14.6443 12.6834L14.9779 14.4968L16.159 14.7236L14.8727 6.83436L13.6395 6.59774Z" fill="white"/>
 										</svg>					
 										<div class="pc-ico-wa">
-											<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<rect width="26" height="26" rx="13" fill="#D22127" />
+												<path
+													d="M17.7199 8.57638L14.0615 15.1609L12.8126 7.63371L11.4542 7.3743L7.80238 13.9248L6.56904 6.4373L4.93848 6.12402L6.72662 16.4013L8.04462 16.655L11.6847 10.2151L12.9676 17.5991L14.3129 17.8571L18.1119 11.1464L18.737 14.7144L17.5688 14.4904L16.6923 16.0398L19.0262 16.4877L19.4598 18.8451L20.9953 19.14L19.3231 8.88399L17.7199 8.57638Z"
+													fill="white" />
+											</svg>
+											<!-- <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<rect width="60" height="60" rx="30" fill="#D22127"/>
 												<path d="M40.9018 19.7924L32.4595 34.9874L29.5772 17.617L26.4425 17.0183L18.0152 32.1349L15.1691 14.856L11.4062 14.1331L15.5327 37.8498L18.5743 38.4353L26.9745 23.574L29.9349 40.614L33.0395 41.2094L41.8064 25.7232L43.2491 33.957L40.5532 33.4401L38.5305 37.0156L43.9163 38.0493L44.9171 43.4894L48.4605 44.1699L44.6015 20.5022L40.9018 19.7924Z" fill="white"/>
-											</svg>										
+											</svg> -->
 											<p>
 												<strong>WEB AWARD KOREA</strong>
-												<span>웹표준 이노베이션 대상</span>
+												<!-- <span>웹표준 이노베이션 대상</span> -->
 											</p>
 										</div>						
 									</li>
-									<li>공공데이터</li>
+									<li>
+										<p>공공데이터</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -391,8 +554,12 @@
 							<dt class="accordion ">KB국민은행<sup>(2)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>비대면 마케팅 TOOL 구축</li>
-									<li class="ing">e-Capital Market 운영<span>진행중</span></li>
+									<li>
+										<p>비대면 마케팅 TOOL 구축</p>
+									</li>
+									<li class="ing">
+										<p>e-Capital Market 운영<span>진행중</span></p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -400,7 +567,9 @@
 							<dt class="accordion ">부산은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li class="ing">전자증명서 수취시스템 구축<span>진행중</span></li>
+									<li class="ing">
+										<p>전자증명서 수취시스템 구축<span>진행중</span></p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -408,8 +577,12 @@
 							<dt class="accordion ">우리은행<sup>(2)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li class="ing">마이데이터 운영<span>진행중</span></li>
-									<li>사설인증 구축</li>
+									<li class="ing">
+										<p>마이데이터 운영<span>진행중</span></p>
+									</li>
+									<li>
+										<p>사설인증 구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -417,8 +590,12 @@
 							<dt class="accordion ">미래에셋생명<sup>(2)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>운영대응</li>
-									<li class="ing">영업지원시스템 재구축<span>진행중</span></li>
+									<li>
+										<p>운영대응</p>
+									</li>
+									<li class="ing">
+										<p>영업지원시스템 재구축<span>진행중</span></p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -426,7 +603,9 @@
 							<dt class="accordion ">NH농협은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>BI포탈 구축</li>
+									<li>
+										<p>BI포탈 구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -434,7 +613,9 @@
 							<dt class="accordion ">현대캐피탈<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>APP오픈대응</li>
+									<li>
+										<p>APP오픈대응</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -442,7 +623,9 @@
 							<dt class="accordion ">교보생명<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>모바일 청약시스템 구축</li>
+									<li>
+										<p>모바일 청약시스템 구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -450,7 +633,9 @@
 							<dt class="accordion ">BNP생명보험<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>모바일 해피콜</li>
+									<li>
+										<p>모바일 해피콜</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -458,7 +643,9 @@
 							<dt class="accordion ">라이나생명<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li class="ing">대고객 디지털채널 재구축<span>진행중</span></li>
+									<li class="ing">
+										<p>대고객 디지털채널 재구축<span>진행중</span></p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -466,7 +653,9 @@
 							<dt class="accordion ">SK m&service<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li class="ing">하이닉스 LMS시스템(SKHU) 구축<span>진행중</span></li>
+									<li class="ing">
+										<p>하이닉스 LMS시스템(SKHU) 구축<span>진행중</span></p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -474,7 +663,9 @@
 							<dt class="accordion ">주택도시보증공사<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li class="ing">자가진단 안심전세 APP 구축<span>진행중</span></li>
+									<li class="ing">
+										<p>자가진단 안심전세 APP 구축<span>진행중</span></p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -486,7 +677,9 @@
 							<dt class="accordion ">KB국민은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>e-Capital Market 구축</li>
+									<li>
+										<p>e-Capital Market 구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -494,7 +687,9 @@
 							<dt class="accordion ">CJ대한통운<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li class="ing">차세대 APP서비스 구축<span>진행중</span></li>
+									<li class="ing">
+										<p>차세대 APP서비스 구축<span>진행중</span></p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -502,7 +697,9 @@
 							<dt class="accordion ">신한은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>SOL 디지털 채널 개발(신탁 ETF / ISA)</li>
+									<li>
+										<p>SOL 디지털 채널 개발(신탁 ETF / ISA)</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -510,9 +707,15 @@
 							<dt class="accordion ">BNP파리바카디프<sup>(3)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>손해보험 카카오클레임</li>
-									<li>생명보험 UX·UI 운영대응</li>
-									<li>생명보험 메인 홈페이지 재구축(Liferay Replacemant)</li>
+									<li>
+										<p>손해보험 카카오클레임</p>
+									</li>
+									<li>
+										<p>생명보험 UX·UI 운영대응</p>
+									</li>
+									<li>
+										<p>생명보험 메인 홈페이지 재구축(Liferay Replacemant)</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -520,15 +723,33 @@
 							<dt class="accordion ">SC제일은행<sup>(9)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>마이데이터 1차</li>
-									<li class="webaward">비지니스뱅킹 웹어워드대상</li>
-									<li>파워콜</li>
-									<li>금융소비자법</li>
-									<li>자본시장과 그융투자업에 관한법률대응</li>
-									<li>공공데이터</li>
-									<li>증권업무개발BIB</li>
-									<li>데일리론 모바일대응 및 고도화</li>
-									<li>그룹브랜딩 변경대응</li>
+									<li>
+										<p>마이데이터 1차</p>
+									</li>
+									<li class="webaward">
+										<p>비지니스뱅킹 웹어워드대상</p>
+									</li>
+									<li>
+										<p>파워콜</p>
+									</li>
+									<li>
+										<p>금융소비자법</p>
+									</li>
+									<li>
+										<p>자본시장과 그융투자업에 관한법률대응</p>
+									</li>
+									<li>
+										<p>공공데이터</p>
+									</li>
+									<li>
+										<p>증권업무개발BIB</p>
+									</li>
+									<li>
+										<p>데일리론 모바일대응 및 고도화</p>
+									</li>
+									<li>
+										<p>그룹브랜딩 변경대응</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -536,7 +757,9 @@
 							<dt class="accordion ">우리은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>DID인증 및 CBDC 파일럿구축</li>
+									<li>
+										<p>DID인증 및 CBDC 파일럿구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -544,7 +767,9 @@
 							<dt class="accordion ">부산은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>PPR 화면디자인</li>
+									<li>
+										<p>PPR 화면디자인</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -552,7 +777,9 @@
 							<dt class="accordion ">하나카드<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>마이데이터 1차</li>
+									<li>
+										<p>마이데이터 1차</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -560,7 +787,9 @@
 							<dt class="accordion ">제주은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>인터넷뱅킹 재구축</li>
+									<li>
+										<p>인터넷뱅킹 재구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -568,7 +797,9 @@
 							<dt class="accordion ">서민금융진흥원<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>영문사이트 구축</li>
+									<li>
+										<p>영문사이트 구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -580,7 +811,9 @@
 							<dt class="accordion ">한국투자신탁<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>전사 정보관리체계 혁신구축</li>
+									<li>
+										<p>전사 정보관리체계 혁신구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -588,13 +821,27 @@
 							<dt class="accordion ">SC제일은행<sup>(7)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>여신모바일 통합상담</li>
-									<li>WM(모바일APP 자산관리 서비스)</li>
-									<li>모바일 제신고</li>
-									<li>인증고도화</li>
-									<li>모바일 금융상품몰</li>
-									<li>새희망홀씨론</li>
-									<li>전세자금대출</li>
+									<li>
+										<p>여신모바일 통합상담</p>
+									</li>
+									<li>
+										<p>WM(모바일APP 자산관리 서비스)</p>
+									</li>
+									<li>
+										<p>모바일 제신고</p>
+									</li>
+									<li>
+										<p>인증고도화</p>
+									</li>
+									<li>
+										<p>모바일 금융상품몰</p>
+									</li>
+									<li>
+										<p>새희망홀씨론</p>
+									</li>
+									<li>
+										<p>전세자금대출</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -602,7 +849,9 @@
 							<dt class="accordion ">우리은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>오픈뱅킹 시스템 채널확대</li>
+									<li>
+										<p>오픈뱅킹 시스템 채널확대</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -610,8 +859,12 @@
 							<dt class="accordion ">현대카드<sup>(2)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>블록체인 기반 DID 플랫폼구축 1차</li>
-									<li>블록체인 기반 DID 플랫폼구축 2차</li>
+									<li>
+										<p>블록체인 기반 DID 플랫폼구축 1차</p>
+									</li>
+									<li>
+										<p>블록체인 기반 DID 플랫폼구축 2차</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -619,11 +872,21 @@
 							<dt class="accordion ">BNP파리바카디프<sup>(5)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>손해보험 신한 TM서비스</li>
-									<li>생명보험 GPI가입동의</li>
-									<li>생명보험 바이오인증</li>
-									<li>생명보험 모바일 GMS프로젝트</li>
-									<li>생명보험 건강보험공단스크래핑</li>
+									<li>
+										<p>손해보험 신한 TM서비스</p>
+									</li>
+									<li>
+										<p>생명보험 GPI가입동의</p>
+									</li>
+									<li>
+										<p>생명보험 바이오인증</p>
+									</li>
+									<li>
+										<p>생명보험 모바일 GMS프로젝트</p>
+									</li>
+									<li>
+										<p>생명보험 건강보험공단스크래핑</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -631,13 +894,27 @@
 							<dt class="accordion ">SK m&service<sup>(7)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>베네피아 리뉴얼(차세대)</li>
-									<li>영상보안서비스구축</li>
-									<li>SKI_mySUNI분담금 정산시스템 구축</li>
-									<li>베네피아 고도화 운영</li>
-									<li>운영업무 대응(기획)</li>
-									<li>운영 (디자인)</li>
-									<li>제휴사 검색 API연동개발 2차</li>
+									<li>
+										<p>베네피아 리뉴얼(차세대)</p>
+									</li>
+									<li>
+										<p>영상보안서비스구축</p>
+									</li>
+									<li>
+										<p>SKI_mySUNI분담금 정산시스템 구축</p>
+									</li>
+									<li>
+										<p>베네피아 고도화 운영</p>
+									</li>
+									<li>
+										<p>운영업무 대응(기획)</p>
+									</li>
+									<li>
+										<p>운영 (디자인)</p>
+									</li>
+									<li>
+										<p>제휴사 검색 API연동개발 2차</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -645,7 +922,9 @@
 							<dt class="accordion ">메리츠증권<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>MTS서비스 비대면계좌개설</li>
+									<li>
+										<p>MTS서비스 비대면계좌개설</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -653,7 +932,9 @@
 							<dt class="accordion ">한국예탁결제원<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>전자투표시스템구축</li>
+									<li>
+										<p>전자투표시스템구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -661,7 +942,9 @@
 							<dt class="accordion ">현대자동차<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>현대자동차 모바일보이스</li>
+									<li>
+										<p>현대자동차 모바일보이스</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -669,7 +952,9 @@
 							<dt class="accordion ">현대카드<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>M포인트몰 고도화</li>
+									<li>
+										<p>M포인트몰 고도화</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -681,7 +966,9 @@
 							<dt class="accordion ">현대카드<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>현대카드APP리뉴얼</li>
+									<li>
+										<p>현대카드APP리뉴얼</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -689,8 +976,12 @@
 							<dt class="accordion ">SK m&service<sup>(2)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>제휴사 검색 API연동개발 1차</li>
-									<li>모바일학습 시스템</li>
+									<li>
+										<p>제휴사 검색 API연동개발 1차</p>
+									</li>
+									<li>
+										<p>모바일학습 시스템</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -698,8 +989,12 @@
 							<dt class="accordion ">BNP파리바카디프<sup>(2)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>손해보험 SK TM서비스</li>
-									<li>손해보험 EWI WEB GA 시스템구축</li>
+									<li>
+										<p>손해보험 SK TM서비스</p>
+									</li>
+									<li>
+										<p>손해보험 EWI WEB GA 시스템구축</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -707,8 +1002,12 @@
 							<dt class="accordion ">SC제일은행<sup>(2)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>연금신탁해지</li>
-									<li>데일리론</li>
+									<li>
+										<p>연금신탁해지</p>
+									</li>
+									<li>
+										<p>데일리론</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -716,7 +1015,9 @@
 							<dt class="accordion ">퍼시스<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>스마트락커 서비스</li>
+									<li>
+										<p>스마트락커 서비스</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -724,9 +1025,15 @@
 							<dt class="accordion ">산업통상자원부<sup>(3)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>광업등록사무소</li>
-									<li>무역위원회</li>
-									<li>전기위원회</li>
+									<li>
+										<p>광업등록사무소</p>
+									</li>
+									<li>
+										<p>무역위원회</p>
+									</li>
+									<li>
+										<p>전기위원회</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -734,7 +1041,9 @@
 							<dt class="accordion ">우리은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>거래명세시스템</li>
+									<li>
+										<p>거래명세시스템</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -742,7 +1051,9 @@
 							<dt class="accordion ">경남은행<sup>(1)</sup></dt>
 							<dd class="panel">
 								<ul>
-									<li>창구전자문서(PPR) UX·UI</li>
+									<li>
+										<p>창구전자문서(PPR) UX·UI</p>
+									</li>
 								</ul>
 							</dd>
 						</dl>
@@ -752,42 +1063,123 @@
 		</section>
 		<!-- footer -->
 <div class="footer">
-    <p>고객의 생각을 디자인합니다.</p>
+		<p class="hide-mobile">We Design Your Thoughts.</p>
     <ul>
-        <li>(03995) 서울시 마포구 월드컵북로2길 11 삼희빌딩 7F</li>
-        <li><strong>T.</strong>+82 2 6448-2286</li>
-        <li><strong>F.</strong>+82 2 6448-2284</li>
-        <li><strong>(2022), ALL RIGHTS RESERVED.</strong></li>
+				<li><strong>© dndmobile.</strong> All rights reserved.</li>
     </ul>
 </div>
 <button onclick="topFunction()" id="topBtn" class="btn-top">
-    <svg class="quick_btn" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+			<g filter="url(#filter0_b_1275_33233)">
+				<path
+					d="M13.4961 33.002H22.4961C29.9961 33.002 32.9961 30.002 32.9961 22.502V13.502C32.9961 6.00195 29.9961 3.00195 22.4961 3.00195H13.4961C5.99609 3.00195 2.99609 6.00195 2.99609 13.502V22.502C2.99609 30.002 5.99609 33.002 13.4961 33.002Z"
+					fill="black" />
+				<path d="M12.6992 20.1882L17.9942 14.9082L23.2892 20.1882" stroke="white" stroke-linecap="round"
+					stroke-linejoin="round" />
+			</g>
+			<defs>
+				<filter id="filter0_b_1275_33233" x="-7.00391" y="-6.99805" width="50" height="50" filterUnits="userSpaceOnUse"
+					color-interpolation-filters="sRGB">
+					<feFlood flood-opacity="0" result="BackgroundImageFix" />
+					<feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+					<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1275_33233" />
+					<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1275_33233" result="shape" />
+				</filter>
+			</defs>
+		</svg>
+		<!-- <svg class="quick_btn" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 20.25V3.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M5.25 10.5L12 3.75L18.75 10.5" stroke-width="1.8" stroke-linecap="round"
             stroke-linejoin="round" />
-    </svg>
+		</svg> -->
 </button>
 
 	</div>
 	<script>
-		new Swiper('.project-swiper', {
-			slidesPerView: 3,
-			spaceBetween: 110,
+			var activeSlideIndex = 0;//현재 활성화 슬라이드 초기화 설정
+
+			var pjSwiper = new Swiper('.project-swiper', {
+				slidesPerView: 6.1,
+				spaceBetween: 74,
+				centeredSlides: true,
+				roundLengths: true,
+				loop: true,
+				loopedSlides: 7,
 			observer: true,
 			observeParents: true,
+			speed: 1000,
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
 			breakpoints: {
 				768: {
-					slidesPerView: 1,
-					spaceBetween: 30,
+					slidesPerView: 2,
+					spaceBetween: 10,
 					loop: true,
 					centeredSlides: true,
+					speed: 600,
 					autoplay: {
-						delay: 2000,
+						delay: 3000,
+						disableOnInteraction: false,
 					},
-					
 				}
 			},
+			on: {
+				init: function () {
+					activeSlideIndex = this.activeIndex;
+					rotateSlide(this.activeIndex);
+				},
+				slideChange: function () {
+					rotateSlide(this.activeIndex);
+
+					// 이전 활성화된 슬라이드의 이미지 변경
+					var prevSlide = this.slides[this.previousIndex];
+					var prevImageElement = prevSlide.querySelector('img');
+
+					if (prevImageElement) {
+						var imageUrl = prevImageElement.src;
+						var pngUrl = imageUrl.replace('.gif', '.png');
+						prevImageElement.src = pngUrl;
+					}
+
+					// 활성화된 슬라이드의 이미지 변경
+					var activeSlide = this.slides[this.activeIndex];
+					var activeImageElement = activeSlide.querySelector('img');
+
+					if (activeImageElement) {
+						if (this.activeIndex === 8 || this.activeIndex === 11 || this.activeIndex === 12 || this.activeIndex === 13) {
+							var imageUrl = activeImageElement.src;
+							var gifUrl = imageUrl.replace('.png', '.gif');
+							activeImageElement.src = gifUrl;
+						}
+					}
+				},
+			},
 		});
+
+	//슬라이드시 이미지 회전 효과
+	function rotateSlide(index) {
+		var slides = document.querySelectorAll('.project-swiper .swiper-slide');
+
+		for (var i = 0; i < slides.length; i++) {
+			var slide = slides[i];
+			if (i === index) {
+				slide.querySelector('.img').style.transform = "rotate(45deg)";
+				slide.querySelector('img').style.transform = "rotatd(265deg)";
+			} else {
+				slide.querySelector('.img').style.transform = "";
+			}
+		}
+	}
+
+	//마우스 오버시 자동 재생 멈춤
+	$('.project-swiper').on('mouseenter', function (e) {
+		pjSwiper.autoplay.stop();
+	})
+	$('.project-swiper').on('mouseleave', function (e) {
+		pjSwiper.autoplay.start();
+	})
 	</script>
 </body>
 

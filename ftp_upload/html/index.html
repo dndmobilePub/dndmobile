@@ -30,7 +30,7 @@
 			<h1 class="logo--black main_logo">
 				<a href="index.html">
 					<i class="ico">
-						<svg width="54" height="54" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<svg width="34" height="34" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_2324_9676)">
 								<path
 									d="M14.0519 13.3602C14.0807 13.3571 14.1093 13.3524 14.1375 13.3461C14.3051 13.319 14.4558 13.2284 14.5583 13.093C14.6445 13.0159 14.7142 12.9219 14.7631 12.817C14.8119 12.7121 14.8389 12.5984 14.8423 12.4827C14.8495 12.3796 14.8345 12.2761 14.7982 12.1793C14.7619 12.0825 14.7051 11.9945 14.6319 11.9216C14.5505 11.8488 14.4558 11.7928 14.3528 11.7567C14.2497 11.7206 14.1405 11.7051 14.0315 11.7111C13.8271 11.7015 13.6272 11.7727 13.4747 11.9091C13.4061 11.9715 13.3522 12.0485 13.3173 12.1344C13.2823 12.2204 13.2671 12.3131 13.2726 12.4057C13.2799 12.6293 13.3594 12.8446 13.4991 13.0194C13.5536 13.1194 13.6334 13.2033 13.7303 13.2631C13.8272 13.3228 13.9381 13.3563 14.0519 13.3602Z"
@@ -52,13 +52,16 @@
 							</defs>
 						</svg>
 					</i>
-					디앤디모바일
+					<span>디앤디모바일</span>
 				</a>
 			</h1>
 		</div>
 		<div class="top-nav--container hide-mobile">
 			<ul class="top-nav">
-				<li>
+				<li class="top_hide">
+					<span>Company Brief</span>
+				</li>
+				<li class="dcb">
 					<a href="/dndmobile/assets/download/dndmobile_company_Brochure.pdf" target="_blank">
 						<i class="ico">
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="none"
@@ -178,14 +181,39 @@
 		</div>
 		<nav>
 			<ul class="main-menu">
-				<li><a href="project" class="active">PROJECTS</a></li>
-				<li><a href="about">ABOUT US</a></li>
-				<li><a href="recruit">RECRUIT</a></li>
-				<li><a href="contact">CONTACT</a></li>
+				<li><a href="project" class="active"><span class="box">PROJECTS</a></span><span class="count"><b>152</b></span></li>
+				<li><a href="about"><span class="box">ABOUT US</span></a></li>
+				<li><a href="recruit"><span class="box">RECRUIT</span></a></li>
+				<li><a href="contact"><span class="box">CONTACT</span></a></li>
+				</ul>
+				<ul class="bot-menu">
+					<li>
+						<a href="https://blog.naver.com/dndmobile" class="active">
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+								<path fill-rule="evenodd" clip-rule="evenodd"
+									d="M25.6195 9H10.3722C7.96253 9 6 10.9708 6 13.3722V24.7415C6 27.1512 7.97081 29.1137 10.3722 29.1137H15.4951L16.5302 30.9023L17.5487 32.6661C17.7309 32.9891 18.1946 32.9891 18.3851 32.6661L19.4036 30.9023L20.4387 29.1137H25.6278C28.0375 29.1137 30 27.1429 30 24.7415V13.3805C30 10.9708 28.0292 9 25.6195 9ZM19.1877 16.683C17.8711 16.683 16.8029 17.7346 16.8029 19.0347C16.8029 20.3348 17.8711 21.3864 19.1877 21.3864C20.5044 21.3864 21.5726 20.3348 21.5726 19.0347C21.5726 17.7346 20.5126 16.683 19.1877 16.683ZM19.1877 20.1609C18.5584 20.1609 18.045 19.6558 18.045 19.0347C18.045 18.4137 18.5584 17.9085 19.1877 17.9085C19.8171 17.9085 20.3305 18.4137 20.3305 19.0347C20.3305 19.6558 19.8253 20.1609 19.1877 20.1609ZM10.278 17.2209C10.6507 16.8814 11.131 16.6827 11.6444 16.6827C12.8368 16.6827 13.7891 17.7426 13.7891 19.0427C13.7891 20.3427 12.8285 21.3944 11.6444 21.3944C11.1227 21.3944 10.6507 21.1874 10.278 20.8562V21.2785H8.95312V15.2749H10.278V17.2209ZM10.2863 19.4981C10.4685 19.9204 10.8908 20.2103 11.3794 20.2103C12.0418 20.2103 12.5718 19.6886 12.5718 19.0344C12.5718 18.3802 12.0418 17.8585 11.3794 17.8585C10.8908 17.8585 10.4685 18.1484 10.2863 18.5707C10.2201 18.7114 10.187 18.8688 10.187 19.0344C10.187 19.2 10.2284 19.3573 10.2863 19.4981ZM25.7041 16.7831V17.1557C25.3315 16.8659 24.8678 16.692 24.3709 16.692C23.1537 16.692 22.1683 17.7105 22.1683 18.9609C22.1683 20.2113 23.1537 21.2298 24.3709 21.2298C24.8761 21.2298 25.3398 21.0559 25.7041 20.7661V21.3955C25.7041 21.3955 25.5716 22.0165 24.6442 22.0165V23.1841C24.6442 23.1841 25.6462 23.3 26.5405 22.4057C26.5405 22.4057 26.9545 21.9668 27.0456 21.3872V16.7831H25.7041ZM24.6194 20.1119C23.9486 20.1119 23.4104 19.5903 23.4104 18.9526C23.4104 18.315 23.9569 17.7933 24.6194 17.7933C25.0914 17.7933 25.5054 18.0583 25.7041 18.4392C25.7869 18.5966 25.8283 18.7705 25.8283 18.9526C25.8283 19.1348 25.7787 19.317 25.7041 19.466C25.5054 19.8552 25.0914 20.1119 24.6194 20.1119ZM13.9381 16.3596V15.1589C13.9381 15.1589 14.8159 15.0429 15.5942 15.9621C15.5942 15.9621 15.9503 16.4092 16.0331 17.0054V17.0386V21.2783H14.6668V17.0386C14.5509 16.4424 13.9381 16.3596 13.9381 16.3596Z"
+									fill="white" />
+							</svg>
+						</a>
+					</li>
+					<li>
+						<a href="/dndmobile/assets/download/dndmobile_company_Brochure.pdf" class="active">
+							Company Brief
+							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+								<path d="M15.332 17H24.6654" stroke="#E30D3F" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path d="M15.332 23H24.6654" stroke="#E30D3F" stroke-width="1.5" stroke-linecap="round"
+									stroke-linejoin="round" />
+								<path
+									d="M16.4997 31.6663H23.4997C29.333 31.6663 31.6663 29.333 31.6663 23.4997V16.4997C31.6663 10.6663 29.333 8.33301 23.4997 8.33301H16.4997C10.6663 8.33301 8.33301 10.6663 8.33301 16.4997V23.4997C8.33301 29.333 10.6663 31.6663 16.4997 31.6663Z"
+									stroke="#E30D3F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</a>
+					</li>
 			</ul>
 		</nav>
 
-		<div class="header-nav--footer">
+			<!-- <div class="header-nav--footer">
 			<span class="line"></span>
 			<ul class="social-links">
 				<li>
@@ -212,7 +240,7 @@
 						<span>Company Brief</span>
 					</a>
 				</li>
-				<!-- <li>
+			<li>
 					<a href="https://blog.naver.com/dndmobile" target="_blank">
 						<i class="ico">
 							<svg width="26" height="26" viewBox="0 0 26 26" fill="none"
@@ -236,7 +264,7 @@
 							</svg>
 						</i>
 					</a>
-				</li> -->
+				</li>
 				<li>
 					<a href="https://blog.naver.com/dndmobile" target="_blank">
 						<i class="ico">
@@ -247,75 +275,47 @@
 									class="fill-white" />
 							</svg>
 						</i>
-						<!-- <span>Blog</span> -->
+					<span>Blog</span>
 					</a>
 				</li>
 			</ul>
-		</div>
+		</div>-->
 	</div>
 </section>
 
-		<section class="main-indicator-wrap">
-			
-			<div>
-				<a href="#intro" class="indi-white" class="active" id="intro-indi">
-					<span></span>
-					<em>DNDMOBILE</em>
-				</a>
+		<div class="main-indicator-wrap">
+			<!-- DNDMOBILE -->
+			<a href="#intro" class="indi-white" class="active" id="intro-indi"></a>
+			<!-- SC제일은행 -->
+			<a href="#sc_aged"></a>
+			<!-- SC제일은행 -->
+			<a href="#two" class="indi-white"></a>
+			<!-- KB국민은행 -->
+			<a href="#one"></a>
+			<!-- CJ대한통운 -->
+			<a href="#three" class="cj-white"></a>
+			<!-- 우리은행 -->
+			<a href="#five"></a>
+			<!-- 우리은행 -->
+			<a href="#six"></a>
+			<!-- 우리은행 -->
+			<a href="#four" class="indi-white"></a>
+			<span class="current-circle"></span>
+			<div class="num-box white">
+				<span class="current">01</span>/<span>08</span>
 			</div>
-			<div>
-				<a href="#sc_aged">
-					<span></span>
-					<em>SC제일은행</em>
-				</a>
-			</div>
-			<div>
-				<a href="#one">
-					<span></span>
-					<em>KB국민은행</em>
-				</a>
-			</div>
-			<div>
-				<a href="#two" class="indi-white">
-					<span></span>
-					<em>SC제일은행</em>
-				</a>
-			</div>
-			<div>
-				<a href="#three" class="cj-white">
-					<span></span>
-					<em>CJ대한통운</em>
-				</a>
-			</div>
-			<div>
-				<a href="#five">
-					<span></span>
-					<em>우리은행</em>
-				</a>
-			</div>
-			<div>
-				<a href="#six">
-					<span></span>
-					<em>우리은행</em>
-				</a>
-			</div>
-			<div>
-				<a href="#four" class="indi-white">
-					<span></span>
-					<em>우리은행</em>
-				</a>
-			</div>
-		</section>
+		</div>
 
 		<section class="panel intro-panel" id="intro">
 			<section class="pjt-con-wrap intro-wrap">
 
 	<div class="pjt-top-full">
 		<div class="pjt-title center white">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">We Convert <br class="hide-pc">Your <br class="hide-mobile">Thoughts Into Designs</p>
+			<p class="tit" data-aos="fade-up" data-aos-duration="1000">We Convert <br class="hide-pc">Your <br
+					class="hide-mobile">Thoughts<br class="hide-pc"> Into Designs</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1600">
-				UX · UI · GUI 분야에서 핵심기술을 고객중심의 서비스로 <br class="hide-mobile">
-				최상의 퍼포먼스 최고의 크리에이티브를 만듭니다.
+				UX · UI · GUI 분야에서 핵심기술을 <br class="hide-pc">고객중심의 서비스로 <br class="hide-mobile">
+				최상의 퍼포먼스 <br class="hide-pc">최고의 크리에이티브를 만듭니다.
 			</p>
 		</div>
 	</div>
@@ -323,7 +323,21 @@
 		<div class="pjt-title center white">
 		</div>
 	</div>
-	<div class="ico-mouse"></div>
+	<div class="arrow">
+		<span>
+			<svg class="arrow_mo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+				<path d="M41.5078 27.6455L27.9245 41.2288C26.3203 42.833 23.6953 42.833 22.0911 41.2288L8.50781 27.6455"
+					stroke="white" stroke-opacity="0.31" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+					stroke-linejoin="round" />
+			</svg>
+		</span>
+		<span>
+			<svg class="arrow_mo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+				<path d="M41.5078 7.64551L27.9245 21.2288C26.3203 22.833 23.6953 22.833 22.0911 21.2288L8.50781 7.64551"
+					stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</span>
+	</div>
 </section>
 
 
@@ -337,16 +351,16 @@
 		let articleBottom2 = articleTop2 + $(".intro-wrap .pjt-top-full").outerHeight();
 
 		if (scroll >= 0 && scroll < articleTop) {
-			$(".btn-top").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
 			$(".quick_btn").addClass('white')
 		}
 
 		if (scroll > articleBottom) {
-			$(".btn-top").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
 		}
-
-
 	});
 </script>
 		</section>
@@ -354,13 +368,13 @@
 			<section class="pjt-con-wrap sc-aged">
 	<div class="pjt-top">
 		<div class="pjt-title">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
+			<p class="tit pd130" data-aos="fade-up" data-aos-duration="1000">
 				<span>SC 제일은행</span><br>
 				고령자 위한 편한뱅킹
 			</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				SC제일은행의 모바일 앱을 고령화시대에 맞춰 고령자를 위한 
-				사용자 경험에 기반하여 단순화 한 앱의 편의성과 직관성을 
+				SC제일은행의 모바일 앱을 고령화시대에 맞춰 고령자를 <br class="hide-pc">위한<br class="hide-mobile">
+				사용자 경험에 기반하여 단순화 한 앱의 편의성과 <br class="hide-pc">직관성을<br class="hide-mobile">
 				고려한 UX/UI 환경을 제공합니다.
 			</p>
 
@@ -378,11 +392,12 @@
 
 	<div class="pjt-con">
 		<div class="pjt-title center white">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				고령자의 ‘사용자 경험(User Experinence, UX) 디자인을 적용하기위한 큰 글씨, 아이콘의 텍스트화, <br class="hide-mobile">
-				단순화 한 쉬운모드(고령화) 앱의 편의성과 직관성에 중점을 두었습니다. <br class="hide-mobile">
-				또한 SC제일은행의 새로운 Look & Feel로 dark모드를 선보였습니다.
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
+			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
+				고령자의 ‘사용자 경험<span>(User Experinence, UX)</span> 디자인을 <br class="hide-pc">적용하기위한 큰 글씨, 아이콘의 텍스트화, <br
+					class="hide-mobile">
+				단순화 한 쉬운<br class="hide-pc">모드(고령화) 앱의 편의성과 직관성에 중점을 두었습니다. <br>
+				또한 SC제일은행의 새로운 Look & Feel로 dark모드를 <br class="hide-pc">선보였습니다.
 			</p>
 		</div>
 		<div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
@@ -421,11 +436,12 @@
 	
 	<div class="pjt-con type-white">
 		<div class="pjt-title center">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">Dark Mode</p>
+			<p class="tit2" data-aos="fade-up" data-aos-duration="1000">Dark Mode</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				앱 사용자의 눈 피로도를 덜고자 편한뱅킹 서비스에 ‘다크모드’를 도입하였습니다. <br>
-				휴대전화의 다크모드를 이미 적용 중이라면 SC제일은행 모바일뱅킹 앱에 로그인한 후 ‘편한뱅킹’ 버튼을 <br class="hide-mobile">
-				누르면 자동으로 다크모드가 적용된 서비스를 경험할 수 있습니다. 
+				앱 사용자의 눈 피로도를 덜고자 편한뱅킹 서비스에 <br class="hide-pc">‘다크모드’를 도입하였습니다.<br class="hide-mobile">
+				휴대전화의 다크모드를 이미 <br class="hide-pc">적용 중이라면 SC제일은행 모바일뱅킹 앱에 로그인한 후 <br class="hide-pc">‘편한뱅킹’ 버튼을 <br
+					class="hide-mobile">
+				누르면 자동으로 다크모드가 적용된 서비스<br class="hide-pc">를 경험할 수 있습니다.
 			</p>
 		</div>
 		<div class="phone-layout">
@@ -458,23 +474,137 @@
 		if (scroll >= articleTop && scroll < articleBottom) {
 			$(".main-indicator-wrap").addClass("white");
 			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".num-box").addClass("white");
+			$(".btn-top").find("path:first-child").attr("fill", "white");
+			$(".btn-top").find("path:last-child").attr("stroke", "black");
 			$(".quick_btn").addClass('white')
 		}
 
 		if (scroll >= articleTop2 && scroll < articleBottom2) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass("white");
+			$(".btn-top").find("path:first-child").attr("fill", "black");
+			$(".btn-top").find("path:last-child").attr("stroke", "white");
 			$(".quick_btn").removeClass('white')
 		}
 
 		if (scroll >= articleTop3 && scroll < articleBottom3) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass("white");
+			$(".btn-top").find("path:first-child").attr("fill", "black");
+			$(".btn-top").find("path:last-child").attr("stroke", "white");
 			$(".quick_btn").removeClass('white')
 		}
+
+
+	});
+	</script>
+		</section>
+		<section class="panel" id="two">
+			<section class="pjt-con-wrap sc">
+	<div class="pjt-top-full">
+		<div class="pjt-title center white indi-white" data-aos="fade-right" data-aos-duration="1000">
+			<p class="tit icon-if fw700">
+				<span class="fw300">SC제일은행</span> <br class="hide-pc">
+				비즈니스 뱅킹
+			</p>
+			<p class="desc">
+				기존 기업뱅킹(First Biz)을 새롭게 개편하여 중소기업 전용 <br class="hide-pc">플랫폼인 '비즈니스 뱅킹'으로 새롭게 리뉴얼하여 <br class="hide-mobile">
+				글로벌<br class="hide-pc">기업을 위해 외환 서비스를 더욱 강화합니다.
+			</p>
+		</div>
+
+		<div class="pjt-top-img" data-aos="fade-left" data-aos-duration="1000">
+			<img src="/dndmobile/assets/images/img_sc_splash.png" alt="sc제일은행 이미지" class="">
+		</div>
+
+	</div>
+
+	<div class="pjt-con">
+		<div class="pjt-title center white">
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
+			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
+				핵심 서비스를 고객 중심으로 전면 개편하여 사용이 쉽고 <br class="hide-pc">편한 UX·UI 환경을 제공합니다. <br class="hide-mobile">
+				Global SC Group의 <br class="hide-pc">UX·UI Guide Line을 토대로 Korea SC Business <br class="hide-pc">Banking의 브랜딩 Identity를 확립에 주력합니다.
+			</p>
+		</div>
+		<div class="phone-layout type02">
+			<div data-aos="fade-up" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_sc01.png" alt="" class="pjt-img">
+			</div>
+			<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"><img
+					src="/dndmobile/assets/images/img_sc02.png" alt="" class="pjt-img"></div>
+		</div>
+
+		<div class="pjt-title type02 white">
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Element</p>
+			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
+				부드러운 색표현, 오브젝트와 비주얼 스타일에도 Easy <br class="hide-pc">콘셉트 적용합니다.
+			</p>
+		</div>
+		<div class="phone-layout">
+			<div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_sc03.png "
+					alt="" class="pjt-img">
+			</div>
+			<div data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_sc04.png"
+					alt="" class="pjt-img">
+			</div>
+			<div class="hide-mobile" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000"><img
+					src="/dndmobile/assets/images/img_sc05.png" alt="" class="pjt-img"></div>
+		</div>
+	</div>
+</section>
+
+<script>
+	$(window).scroll(function () {
+		let scroll = $(window).scrollTop();
+		let articleTop = $(".sc .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".sc .pjt-con").outerHeight();
+
+		let articleTop2 = $(".sc .pjt-top-full").offset().top;
+		let articleBottom2 = articleTop2 + $(".sc .pjt-top-full").outerHeight();
+
+		if (scroll >= articleTop2 && scroll < articleBottom2) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".num-box").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleTop && scroll < articleBottom) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".num-box").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
+			$(".quick_btn").addClass('white')
+		}
+
+		if (scroll >= articleBottom && scroll < articleTop2) {
+			$(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
+			$(".quick_btn").removeClass('white')
+		}
+
+
 
 
 	});
@@ -484,14 +614,14 @@
 			<section class="pjt-con-wrap kb">
 	<div class="pjt-top">
 		<div class="pjt-title">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
+			<p class="tit pd130" data-aos="fade-up" data-aos-duration="1000">
 				<span>KB국민은행</span><br>
 				비대면 마케팅
 			</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				비대면 서비스 이용 고객이 증가함에 따라 환경 변화에 신속히 대응할 수 있는 'Marketing Tool'을 제공합니다.<br>
-				즉시성, 지속성, 단순성, 인지성을 고려한 UI·GUI를 제공함으로써 다양한 이용
-				고객층의 참여를 확대합니다.
+				비대면 서비스 이용 고객이 증가함에 따라 환경 변화에 신속히 대응할 수 있는<br class="hide-mobile">
+				'Marketing Tool'을 제공합니다.즉시성, 지속성, 단순성, 인지성을 고려한<br class="hide-mobile">
+				UI·GUI를 제공함으로써 다양한 이용 고객층의 참여를 확대합니다.
 			</p>
 
 			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
@@ -535,7 +665,7 @@
 
 	<div class="pjt-con">
 		<div class="pjt-title center">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">Wallet</p>
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Wallet</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
 				실물 지갑을 대체하는 간편 기능에 생활 연계 서비스를 더한 디지털 지갑 형태의 생활밀착형 플랫폼입니다. <br class="hide-mobile">
 				기존 고객뿐만 아니라 KB국민은행 계좌가 없는 고객도 간편하게 이용이 가능합니다.
@@ -552,31 +682,31 @@
 	</div>
 </section>
 <script>
-	var $cont = $('.kb'),
-		$item = $cont.find('.bg-area').children('span');
-	gsap.to(
-		$item,
-		{
-			duration: 1.5,
-			x: function () {
-				return Math.random() * 100 - 50;
-			},
-			scale: function () {
-				return Math.random() * 0.5 + 0.7;
-			},
-			y: function () {
-				return Math.random() * 50 - 25;
-			},
-			opacity: function () {
-				return Math.random() * 0.3 + 0.5;
-			},
-			autoAlpha: 1,
-			repeat: -1,
-			yoyo: true,
-			ease: Power0.easeNone,
+	// var $cont = $('.kb'),
+	// 	$item = $cont.find('.bg-area').children('span');
+	// gsap.to(
+	// 	$item,
+	// 	{
+	// 		duration: 1.5,
+	// 		x: function () {
+	// 			return Math.random() * 100 - 50;
+	// 		},
+	// 		scale: function () {
+	// 			return Math.random() * 0.5 + 0.7;
+	// 		},
+	// 		y: function () {
+	// 			return Math.random() * 50 - 25;
+	// 		},
+	// 		opacity: function () {
+	// 			return Math.random() * 0.3 + 0.5;
+	// 		},
+	// 		autoAlpha: 1,
+	// 		repeat: -1,
+	// 		yoyo: true,
+	// 		ease: Power0.easeNone,
 
-		}
-	)
+	// 	}
+	// )
 
 
 	/**
@@ -621,108 +751,49 @@
 		}
 	});
 
-</script>
-		</section>
-		<section class="panel" id="two">
-			<section class="pjt-con-wrap sc">
-	<div class="pjt-top-full">
-		<div class="pjt-title center white indi-white" data-aos="fade-right" data-aos-duration="1000">
-			<p class="tit icon-if">
-				<span>SC제일은행</span> <br class="hide-pc">
-				비즈니스 뱅킹
-			</p>
-			<p class="desc">
-				기존 기업뱅킹(First Biz)을 새롭게 개편하여 중소기업 전용 플랫폼인 '비즈니스 뱅킹'으로 새롭게 리뉴얼하여 <br class="hide-mobile">
-				글로벌기업을 위해 외환 서비스를 더욱 강화합니다.
-			</p>
-		</div>
-
-		<div class="pjt-top-img" data-aos="fade-left" data-aos-duration="1000">
-			<img src="/dndmobile/assets/images/img_sc_splash.png" alt="sc제일은행 이미지" class="">
-		</div>
-
-	</div>
-
-	<div class="pjt-con">
-		<div class="pjt-title center white">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				핵심 서비스를 고객 중심으로 전면 개편하여 사용이 쉽고 편한 UX·UI 환경을 제공합니다. <br class="hide-mobile">
-				Global SC Group의 UX·UI Guide Line을 토대로 Korea SC Business Banking의 브랜딩 Identity를 확립에 주력합니다.
-			</p>
-		</div>
-		<div class="phone-layout type02">
-			<div data-aos="fade-up" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_sc01.png" alt="" class="pjt-img">
-			</div>
-			<div class="mt160" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"><img
-					src="/dndmobile/assets/images/img_sc02.png" alt="" class="pjt-img"></div>
-		</div>
-
-		<div class="pjt-title type02 white">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">Design Element</p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				부드러운 색표현, 오브젝트와 비주얼 스타일에도 Easy 콘셉트 적용합니다.
-			</p>
-		</div>
-		<div class="phone-layout">
-			<div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_sc03.png "
-					alt="" class="pjt-img">
-			</div>
-			<div data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_sc04.png"
-					alt="" class="pjt-img">
-			</div>
-			<div class="hide-mobile" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000"><img
-					src="/dndmobile/assets/images/img_sc05.png" alt="" class="pjt-img"></div>
-		</div>
-	</div>
-</section>
-
-<script>
 	$(window).scroll(function () {
 		let scroll = $(window).scrollTop();
-		let articleTop = $(".sc .pjt-con").offset().top;
-		let articleBottom = articleTop + $(".sc .pjt-con").outerHeight();
+		let articleTop = $(".kb .pjt-con").offset().top;
+		let articleBottom = articleTop + $(".kb .pjt-con").outerHeight();
 
-		let articleTop2 = $(".sc .pjt-top-full").offset().top;
-		let articleBottom2 = articleTop2 + $(".sc .pjt-top-full").outerHeight();
-
-		if (scroll >= articleTop2 && scroll < articleBottom2) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
-			$(".quick_btn").addClass('white')
-		}
+		let articleTop2 = $(".kb .pjt-top").offset().top;
+		let articleBottom2 = articleTop2 + $(".kb .pjt-top").outerHeight();
 
 		if (scroll >= articleTop && scroll < articleBottom) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
-			$(".quick_btn").addClass('white')
-		}
-
-		if (scroll >= articleBottom && scroll < articleTop2) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
 		}
 
-
-		
-
+		if (scroll >= articleTop2 && scroll < articleBottom2) {
+			$(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
+			$(".quick_btn").removeClass('white')
+		}
 	});
+
 </script>
 		</section>
 		<section class="panel" id="three">
 			<section class="pjt-con-wrap cj">
 	<div class="pjt-top">
 		<div class="pjt-title">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
+			<p class="tit pd130" data-aos="fade-up" data-aos-duration="1000">
 				<span>CJ대한통운</span><br>
 				차세대 택배시스템
 			</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				사용자의 여정에서 발생하는 일련의 과정 및 상태를<br class="hide-mobile">직관적으로 인지할 수 있도록 디자인합니다.
+				사용자의 여정에서 발생하는 일련의 과정 및 상태를 <br class="hide-mobile">직관적으로 <br class="hide-pc">인지할 수 있도록 디자인합니다.
 			</p>
 			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
 				<div><img src="/dndmobile/assets/images/icon_ps.svg" alt=""></div>
@@ -742,13 +813,14 @@
 
 	<div class="pjt-con">
 		<div class="pjt-title center white">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">Design Concept </p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				CJ 대한통운의 일원화된 브랜드 경험을 만드는 것을 목표로 고객 중심의 사용성을 우선으로 하는 UX·UI를 구현합니다. <br class="hide-mobile">
-				일반고객용, 직원용의 APP UX·UI·GUI 환경을 통일화하여 브랜드 Identity 강화합니다.
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept </p>
+			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
+				CJ 대한통운의 일원화된 브랜드 경험을 만드는 것을 목표로 <br class="hide-pc">고객 중심의 사용성을 우선으로 하는 UX·UI를 구현합니다. <br class="hide-mobile">
+				일반고객용, 직원용의 APP UX·UI·GUI 환경을 통일화하여 <br class="hide-pc">브랜드 Identity 강화합니다.
 			</p>
 		</div>
-		<div class="icon" data-aos="fade-up" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_cj_icon.png" alt="">
+		<div class="icon" data-aos="fade-up" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_cj_icon2.png"
+				alt="">
 		</div>
 		<div class="phone-layout">
 			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_cj01.png"
@@ -775,15 +847,32 @@
 		if (scroll >= articleTop && scroll < articleBottom) {
 			$(".main-indicator-wrap").addClass("white");
 			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
+			$(".num-box").addClass('white');
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
 			$(".quick_btn").addClass('white')
 		}
 
 		if (scroll >= articleTop2 && scroll < articleBottom2) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
+		}
+
+		var screenWidth = $(window).width();
+		if (screenWidth < 768) {
+			if ($(header).hasClass("active") == true) {
+				$(".menu-toggle").removeClass("white")
+			} else {
+				$(".menu-toggle").addClass("white")
+			}
 		}
 	});
 </script>
@@ -794,15 +883,13 @@
 	<div class="black-section">
 		<div class="pjt-top">
 			<div class="pjt-title">
-				<p class="tit" data-aos="fade-up" data-aos-duration="1000">
-					<span>우리은행</span><br>
+				<p class="tit pd130 fw700" data-aos="fade-up" data-aos-duration="1000">
+					<span class="fw300">우리은행</span><br>
 					마이데이터 운영
 				</p>
 				<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-					금융과 비금융을 모두 아우르는 '데이터 관리 종합 플랫폼'으로서<br class="hide-mobile">
-					철저히 고객 관점에서 설계한 UX·UI를 제공합니다.<br class="hide-mobile">
-					고연령층 등 디지털 취약계층 고객도 편리하게<br class="hide-mobile">
-					마이데이터 서비스 이용이 가능한 환경을 제공합니다.
+					금융과 비금융을 모두 아우르는 '데이터 관리 종합 플랫폼'으로<br class="hide-pc">서<br class="hide-mobile">
+					철저히 고객 관점에서 설계한 UX·UI를 제공합니다.
 				</p>
 				<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
 					<div><img src="/dndmobile/assets/images/icon_ps.svg" alt=""></div>
@@ -813,10 +900,16 @@
 
 			<div class="pjt-top-img" data-aos="fade-right" data-aos-duration="1000">
 				<div class="bg-area">
-					<img src="/dndmobile/assets/images/img_woorimy_bg.png" alt="" class="hide-mobile">
-					<img src="/dndmobile/assets/images/img_woorimy_bg_mo.png" alt="" class="hide-pc">
+					<div class="woori_bg_left">
+						<img src="/dndmobile/assets/images/img_woorimy_left.png" alt="" class="hide-mobile">
+						<img src="/dndmobile/assets/images/img_woorimy_left_mo.png" alt="" class="hide-pc">
+					</div>
 					<div class="splash-img">
 						<img src="/dndmobile/assets/images/img_woorimy_splash.gif" alt="">
+					</div>
+					<div class="woori_bg_right">
+						<img src="/dndmobile/assets/images/img_woorimy_right.png" alt="" class="hide-mobile">
+						<img src="/dndmobile/assets/images/img_woorimy_right_mo.png" alt="" class="hide-pc">
 					</div>
 				</div>
 			</div>
@@ -824,9 +917,9 @@
 
 		<div class="pjt-con bg01">
 			<div class="phone-layout type02">
-				<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"><img
+				<div data-aos="fade-up" data-aos-duration="1000"><img
 						src="/dndmobile/assets/images/img_woorimy01.png" alt="" class="pjt-img"></div>
-				<div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000"><img
+				<div data-aos="fade-up" data-aos-duration="1000"><img
 						src="/dndmobile/assets/images/img_woorimy02.png" alt="" class="pjt-img"></div>
 			</div>
 		</div>
@@ -869,12 +962,12 @@
 
 	<div class="pjt-con bg03">
 		<div class="pjt-title center white">
-			<p class="tit ta-c" data-aos="fade-up" data-aos-duration="1000">
+			<p class="tit ta-c fw700" data-aos="fade-up" data-aos-duration="1000">
 				마이데이터 마케팅
 			</p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, 인지성을 고려하여 UX·UI(GUI) 환경을 제공합니다. <br class="hide-mobile">
-				고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 경험과 이를 바탕한 지속적인 참여가 가능하게 합니다.
+			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
+				이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, <br class="hide-pc">인지성을 고려하여 UX·UI(GUI) 환경을 제공합니다. <br>
+				고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 <br class="hide-pc">경험과 이를 바탕한 지속적인 참여가 가능하게 합니다.
 			</p>
 		</div>
 		<div class="phone-layout">
@@ -900,22 +993,43 @@
 		if (scroll >= articleTopWoori && scroll < articleBottomWoori) {
 			$(".main-indicator-wrap").addClass("white");
 			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
-			$(".quick_btn").addClass('white')
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".num-box").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
+			$(".quick_btn").addClass('white');
 		}
 
 		if (scroll >= articleBottomWoori) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
 		}
 
 		if (scroll >= articleTopWoori2 && scroll < articleBottomWoori2) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
+		}
+
+		var screenWidth = $(window).width();
+		if (screenWidth < 768) {
+			if ($(header).hasClass("active") == true) {
+				$(".menu-toggle").removeClass("white")
+			} else {
+				$(".menu-toggle").addClass("white")
+			}
 		}
 	});
 </script>
@@ -925,8 +1039,8 @@
 	<div class="pjt-top-full">
 		<div class="pjt-title center white">
 			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
-				<span>우리은행</span> <br class="hide-pc">
-				사설인증 구축<br>"우리WON인증"
+				<span>우리은행 사설인증 구축</span><br>
+				<strong>우리WON인증</strong>
 			</p>
 			<p class="desc hide-pc" data-aos="fade-up" data-aos-duration="1000">
 				단순하게, 명쾌하게, 가치있게 디앤디모바일은 <br>
@@ -940,10 +1054,11 @@
 
 	<div class="pjt-con">
 		<div class="pjt-title center">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				인증 서비스를 쉽고 빠르게 할 수 있도록 설계하였으며, 시장 환경에 맞춰 유연하게 대처할 수 있도록 확장이 용이하게 구성합니다.<br class="hide-mobile">
-				고객 편의성 및 경쟁력을 강화로 종합서비스 시너지를 창출합니다.
+				인증 서비스를 쉽고 빠르게 할 수 있도록 설계하였으며, 시장 <br class="hide-pc">환경에 맞춰 유연하게 대처할 수 있도록 확장이 용이하게 구성<br class="hide-pc">합니다.<br
+					class="hide-mobile">
+				고객 편의성 및 경쟁력을 강화로 종합서비스 시너지를 <br class="hide-pc">창출합니다.
 			</p>
 		</div>
 
@@ -960,8 +1075,8 @@
 			<section class="pjt-con-wrap woori-open">
 	<div class="pjt-top-full">
 		<div class="pjt-title center white" data-aos="fade-left" data-aos-duration="1000">
-			<p class="tit">
-				<span>우리은행</span> <br class="hide-pc">
+			<p class="tit fw700">
+				<span class="fw300">우리은행</span> <br>
 				오픈뱅킹 시스템
 			</p>
 			<p class="desc">
@@ -976,10 +1091,10 @@
 
 	<div class="pjt-con">
 		<div class="pjt-title center white">
-			<p class="tit" data-aos="fade-right" data-aos-duration="1000">Design Concept</p>
-			<p class="desc" data-aos="fade-right" data-aos-duration="1000">
-				위비 APP의 브랜드 Identity가 일관성 있게 적용될 수 있도록 디자인 시스템을 정리하고 UI를 직관적으로 설계합니다.<br class="hide-mobile">
-				복잡한 기능을 사용자가 편리하게 사용할 수 있도록 UI·GUI 환경 제공합니다.
+			<p class="tit fw700" data-aos="fade-right" data-aos-duration="1000">Design Concept</p>
+			<p class="desc clr0" data-aos="fade-right" data-aos-duration="1000">
+				위비 APP의 브랜드 Identity가 일관성 있게 적용될 수 있도록 <br class="hide-pc">디자인 시스템을 정리하고 UI를 직관적으로 설계합니다.<br>
+				복잡한 기능을 사용자가 편리하게 사용할 수 있도록 UI·GUI <br class="hide-pc">환경을 제공합니다.
 			</p>
 		</div>
 		<div class="phone-layout bg">
@@ -1013,35 +1128,67 @@
 		if (scroll >= articleTop2 && scroll < articleBottom2) {
 			$(".main-indicator-wrap").addClass("white");
 			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".num-box").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
 			$(".quick_btn").addClass('white')
 		}
 
 		if (scroll >= articleTop && scroll < articleBottom) {
 			$(".main-indicator-wrap").addClass("white");
 			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".num-box").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
 			$(".quick_btn").addClass('white')
+		}
+
+		var screenWidth = $(window).width();
+		if (screenWidth < 768) {
+			if ($(header).hasClass("active") == true) {
+				$(".menu-toggle").removeClass("white")
+			} else {
+				$(".menu-toggle").addClass("white")
+			}
 		}
 	});
 </script>
 		</section>
 		<!-- footer -->
 <div class="footer">
-    <p>고객의 생각을 디자인합니다.</p>
+		<p class="hide-mobile">We Design Your Thoughts.</p>
     <ul>
-        <li>(03995) 서울시 마포구 월드컵북로2길 11 삼희빌딩 7F</li>
-        <li><strong>T.</strong>+82 2 6448-2286</li>
-        <li><strong>F.</strong>+82 2 6448-2284</li>
-        <li><strong>(2022), ALL RIGHTS RESERVED.</strong></li>
+				<li><strong>© dndmobile.</strong> All rights reserved.</li>
     </ul>
 </div>
 <button onclick="topFunction()" id="topBtn" class="btn-top">
-    <svg class="quick_btn" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+			<g filter="url(#filter0_b_1275_33233)">
+				<path
+					d="M13.4961 33.002H22.4961C29.9961 33.002 32.9961 30.002 32.9961 22.502V13.502C32.9961 6.00195 29.9961 3.00195 22.4961 3.00195H13.4961C5.99609 3.00195 2.99609 6.00195 2.99609 13.502V22.502C2.99609 30.002 5.99609 33.002 13.4961 33.002Z"
+					fill="black" />
+				<path d="M12.6992 20.1882L17.9942 14.9082L23.2892 20.1882" stroke="white" stroke-linecap="round"
+					stroke-linejoin="round" />
+			</g>
+			<defs>
+				<filter id="filter0_b_1275_33233" x="-7.00391" y="-6.99805" width="50" height="50" filterUnits="userSpaceOnUse"
+					color-interpolation-filters="sRGB">
+					<feFlood flood-opacity="0" result="BackgroundImageFix" />
+					<feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+					<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1275_33233" />
+					<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1275_33233" result="shape" />
+				</filter>
+			</defs>
+		</svg>
+		<!-- <svg class="quick_btn" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M12 20.25V3.75" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
         <path d="M5.25 10.5L12 3.75L18.75 10.5" stroke-width="1.8" stroke-linecap="round"
             stroke-linejoin="round" />
-    </svg>
+		</svg> -->
 </button>
 
 	</div>

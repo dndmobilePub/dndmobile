@@ -32,15 +32,15 @@ menuBar.to('.bar-3', 0.5,{
 var tl = gsap.timeline({ paused: true});
 const width = window.innerWidth;
 
-tl.to('.fullpage-menu', {
-	duration:0,
-	display: "block",
-	ease: 'Expo.easeInOut',
-});
+//tl.to('.fullpage-menu', {
+//	duration:0,
+//	display: "block",
+//	ease: 'Expo.easeInOut',
+//});
 
 tl.from('.menu-bg span', {
 	duration:0.35,
-	x:"100%",
+	y:"100%",
 	stagger: 0.1,
 	ease: 'Expo.easeInOut'
 });
@@ -83,19 +83,27 @@ tl.from('.main-menu li a', {
 	ease: 'Expo.easeInOut'
 } , "-=0.5");
 
-tl.from('.line', {
-	duration:0.3,
-	scaleX: 0,
-	transformOrigin: "0px 0px",		
-});
-
-tl.from('.social-links li', {
-	duration: 0.8,
-	y:"-100%",
+tl.from('.main-menu li .count', {
+	duration:2,
+	y:"100%",
 	opacity:0,
-	stagger: 0.1,
+	stagger: 0.2,
 	ease: 'Expo.easeInOut'
-} , "-=0.5");
+} , "-=1");
+
+//tl.from('.line', {
+//	duration:0.3,
+//	scaleX: 0,
+//	transformOrigin: "0px 0px",		
+//});
+
+//tl.from('.social-links li', {
+//	duration: 0.8,
+//	y:"-100%",
+//	opacity:0,
+//	stagger: 0.1,
+//	ease: 'Expo.easeInOut'
+//} , "-=0.5");
 
 menuBar.reverse();
 tl.reverse();
@@ -130,6 +138,11 @@ menuToggle.addEventListener('click', function(){
 });
 
 
+$(".menu-toggle").on('click', function(){
+	$('.fullpage-menu').toggleClass('on');
+})
+
+
 /**
  * ==============================+
  * 헤더 정의
@@ -144,6 +157,22 @@ window.addEventListener('scroll', () => {
 	  header.classList.remove('active');
 	}
 })
+
+
+$('.main .header--inner .top-nav .dcb .ico').hover(function(){
+	$(".top_hide").css("display", "block");
+}, function(){
+	$(".top_hide").css("display", "none");
+});
+
+$('.main-menu li a').hover(function(){
+	$(".main-menu li span").css("-webkit-text-stroke-color", "#5E5E5E");
+	$(".main-menu li span").css("-webkit-text-stroke-width", "0.02em");
+}, function(){
+	$(".main-menu li span").css("-webkit-text-stroke-color", "white");
+	$(".main-menu li span").css("-webkit-text-stroke-width", "0.01em");
+});
+
 
 
 /**

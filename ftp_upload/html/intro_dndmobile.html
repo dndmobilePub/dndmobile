@@ -2,10 +2,10 @@
 
 	<div class="pjt-top-full">
 		<div class="pjt-title center white">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">We Convert <br class="hide-pc">Your <br class="hide-mobile">Thoughts Into Designs</p>
+			<p class="tit" data-aos="fade-up" data-aos-duration="1000">We Convert <br class="hide-pc">Your <br class="hide-mobile">Thoughts<br class="hide-pc"> Into Designs</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1600">
-				UX · UI · GUI 분야에서 핵심기술을 고객중심의 서비스로 <br class="hide-mobile">
-				최상의 퍼포먼스 최고의 크리에이티브를 만듭니다.
+				UX · UI · GUI 분야에서 핵심기술을 <br class="hide-pc">고객중심의 서비스로 <br class="hide-mobile">
+				최상의 퍼포먼스 <br class="hide-pc">최고의 크리에이티브를 만듭니다.
 			</p>
 		</div>
 	</div>
@@ -13,7 +13,18 @@
 		<div class="pjt-title center white">
 		</div>
 	</div>
-	<div class="ico-mouse"></div>
+	<div class="arrow">
+		<span>
+			<svg class="arrow_mo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+				<path d="M41.5078 27.6455L27.9245 41.2288C26.3203 42.833 23.6953 42.833 22.0911 41.2288L8.50781 27.6455" stroke="white" stroke-opacity="0.31" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</span>
+        <span>
+			<svg class="arrow_mo" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+				<path d="M41.5078 7.64551L27.9245 21.2288C26.3203 22.833 23.6953 22.833 22.0911 21.2288L8.50781 7.64551" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</span>
+	</div>
 </section>
 
 
@@ -27,15 +38,15 @@
 		let articleBottom2 = articleTop2 + $(".intro-wrap .pjt-top-full").outerHeight();
 
 		if (scroll >= 0 && scroll < articleTop) {
-			$(".btn-top").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
 			$(".quick_btn").addClass('white')
 		}
-
+		
 		if (scroll > articleBottom) {
-			$(".btn-top").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
 		}
-
-
 	});
 </script>

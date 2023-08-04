@@ -19,16 +19,20 @@ function tabScollHorizen() {
     }
     tabScollHorizen = this.scrollWidth - (Math.floor(this.scrollLeft)) === this.clientWidth;
     if(tabScollHorizen == true ){
-       $('.bg.hide-pc').css('display','none');
+        $('.bg.hide-pc').css('display','none');
+        $('.tab-top ul').css('justify-content','');
     }else{
-         $('.bg.hide-pc').css('display','block');
+        $('.bg.hide-pc').css('display','block');
+        $('.tab-top ul').css('justify-content','flex-start');
      }
  }
  
- onload = function () {
-    var tabList = document.querySelector(".tab-top ul");
-    tabList.onscroll = tabScollHorizen;
- };
+ if($(".tab-top ul").length > 0) {
+     onload = function () {
+        var tabList = document.querySelector(".tab-top ul");
+        tabList.onscroll = tabScollHorizen;
+     };
+ }
 
 
 /**
@@ -51,12 +55,52 @@ function tabScollHorizen() {
 //     });
 // }
 
-$(".accordion").click(function(){
-    $(this).toggleClass("active");
-    $(this).parents("dl").siblings().find(".accordion").removeClass("active");
-    $(this).next(".panel").slideToggle(300);
-    $(this).parents("dl").siblings().find(".panel").slideUp(300);
-});
+// $(".accordion").click(function(){
+//     $(this).toggleClass("active");
+//     $(this).parents("dl").siblings().find(".accordion").removeClass("active");
+//     $(this).next(".panel").slideToggle(300);
+//     $(this).parents("dl").siblings().find(".panel").slideUp(300);
+// });
+
+$('.accordion').on('click', function (e) {
+    e.preventDefault()
+
+    const $siblings = $('.accordion')
+
+    $siblings.next('.panel').slideUp()
+    $siblings.removeClass('active')
+
+    const $this = $(this)
+    const $parent = $this.parent()
+    const $nextToggleContents = $this.next('.panel')
+
+    if ($this.next('.panel').is(':hidden')) {
+        $this.addClass('active')
+        $nextToggleContents.slideDown(function() {
+            var offsetTop = $parent.offset().top;
+            var gnbHeight = $(header).outerHeight();
+
+            $('html, body').animate({
+                scrollTop: offsetTop - gnbHeight
+            }, 250);
+
+            // 화면 너비가 768px보다 작을 경우
+            var screenWidth = $(window).width();
+            if (screenWidth < 768) {
+                var offsetTop = $parent.offset().top;
+                var gnbHeight = $(header).outerHeight();
+
+                $('html, body').animate({ 
+                    scrollTop: offsetTop - gnbHeight
+                }, 100);
+            }
+        });
+    } else {
+        $this.removeClass('active')
+        $nextToggleContents.slideUp();
+    }
+})
+
 
 /**
  * ==============================+
@@ -87,7 +131,7 @@ function animateFrom(elem) {
         elem,
         { x: x, y: y, autoAlpha: 0 },
         {
-            duration: 1.5,
+            duration: 1,
             x: 0,
             y: 0,
             delay: delay,
@@ -132,9 +176,31 @@ document.addEventListener("DOMContentLoaded", function () {
  * 메인 js
  * ==============================+
  */
+// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+// let links = gsap.utils.toArray(".main-indicator-wrap a");
+// links.forEach(a => {
+//     let element = document.querySelector(a.getAttribute("href")),
+//         linkST = ScrollTrigger.create({
+//             trigger: element,
+//             start: "top top"
+//         });
+//     ScrollTrigger.create({
+//         trigger: element,
+//         start: "top center",
+//         end: "bottom center",
+//         onToggle: self => self.isActive && setActive(a)
+//     });
+//     a.addEventListener("click", e => {
+//         e.preventDefault();
+//         gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
+//     });
+// });
+
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 let links = gsap.utils.toArray(".main-indicator-wrap a");
-links.forEach(a => {
+let currentSpan = document.querySelector(".current"); // current span 요소 선택
+
+links.forEach((a, index) => {
     let element = document.querySelector(a.getAttribute("href")),
         linkST = ScrollTrigger.create({
             trigger: element,
@@ -144,7 +210,29 @@ links.forEach(a => {
         trigger: element,
         start: "top center",
         end: "bottom center",
-        onToggle: self => self.isActive && setActive(a)
+        onToggle: self => {
+            if (self.isActive) {
+                // 링크의 숫자값으로 "current" span 내용 변경
+                const linkNumber = index + 1;
+                
+                if (currentSpan) { // currentSpan이 존재할 경우에만 애니메이션 적용
+                    gsap.to(currentSpan, {
+                        y: -20, // 위로 20px 이동
+                        opacity: 0, // 투명도 0으로 변경
+                        duration: 0.2,
+                        onComplete: () => {
+                            currentSpan.textContent = linkNumber.toString().padStart(2, '0'); // "current" span 내용 변경
+                            gsap.to(currentSpan, {
+                                y: 0, // 다시 원래 위치로
+                                opacity: 1, // 투명도 원래대로
+                                duration: 0.2,
+                            });
+                        }
+                    });
+                }
+                setActive(a);
+            }
+        }
     });
     a.addEventListener("click", e => {
         e.preventDefault();
@@ -159,11 +247,26 @@ function setActive(link) {
     if (link.classList.contains("indi-white")) {
         document.querySelector(".main-indicator-wrap").classList.add('white')
         document.querySelector(".menu-toggle").classList.add('white')
+        document.querySelector(".num-box").classList.add('white')
+        document.querySelector(".main_logo").classList.add('white')
+        document.querySelector(".top-nav").classList.add('white')
         document.querySelector("html").classList.add('bg-black')
     } else {
         document.querySelector(".main-indicator-wrap").classList.remove('white')
         document.querySelector(".menu-toggle").classList.remove('white')
+        document.querySelector(".num-box").classList.remove('white')
+        document.querySelector(".main_logo").classList.remove('white')
+        document.querySelector(".top-nav").classList.remove('white')
         document.querySelector("html").classList.remove('bg-black')
+    }
+
+    // 화면 너비가 768px보다 작을 경우
+    var header = $("header");
+    var screenWidth = $(window).width();
+    if (screenWidth < 768) {
+        if($(header).hasClass("active") == true) {
+            $(".menu-toggle").removeClass("white")
+        }
     }
 
     /* 인트로 추가 */
@@ -172,6 +275,7 @@ function setActive(link) {
         $("#intro").addClass("active");
     }
 }
+
 
 //responsive
 let mm = gsap.matchMedia();

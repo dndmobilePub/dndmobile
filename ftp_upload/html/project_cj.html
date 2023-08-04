@@ -1,12 +1,12 @@
 <section class="pjt-con-wrap cj">
 	<div class="pjt-top">
 		<div class="pjt-title">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
+			<p class="tit pd130" data-aos="fade-up" data-aos-duration="1000">
 				<span>CJ대한통운</span><br>
 				차세대 택배시스템
 			</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				사용자의 여정에서 발생하는 일련의 과정 및 상태를<br class="hide-mobile">직관적으로 인지할 수 있도록 디자인합니다.
+				사용자의 여정에서 발생하는 일련의 과정 및 상태를 <br class="hide-mobile">직관적으로 <br class="hide-pc">인지할 수 있도록 디자인합니다.
 			</p>
 			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
 				<div><img src="/dndmobile/assets/images/icon_ps.svg" alt=""></div>
@@ -26,13 +26,14 @@
 
 	<div class="pjt-con">
 		<div class="pjt-title center white">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">Design Concept </p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				CJ 대한통운의 일원화된 브랜드 경험을 만드는 것을 목표로 고객 중심의 사용성을 우선으로 하는 UX·UI를 구현합니다. <br class="hide-mobile">
-				일반고객용, 직원용의 APP UX·UI·GUI 환경을 통일화하여 브랜드 Identity 강화합니다.
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept </p>
+			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
+				CJ 대한통운의 일원화된 브랜드 경험을 만드는 것을 목표로 <br class="hide-pc">고객 중심의 사용성을 우선으로 하는 UX·UI를 구현합니다. <br class="hide-mobile">
+				일반고객용, 직원용의 APP UX·UI·GUI 환경을 통일화하여 <br class="hide-pc">브랜드 Identity 강화합니다.
 			</p>
 		</div>
-		<div class="icon" data-aos="fade-up" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_cj_icon.png" alt="">
+		<div class="icon" data-aos="fade-up" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_cj_icon2.png"
+				alt="">
 		</div>
 		<div class="phone-layout">
 			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000"><img src="/dndmobile/assets/images/img_cj01.png"
@@ -59,15 +60,32 @@
 		if (scroll >= articleTop && scroll < articleBottom) {
 			$(".main-indicator-wrap").addClass("white");
 			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
+			$(".num-box").addClass('white');
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
 			$(".quick_btn").addClass('white')
 		}
 
 		if (scroll >= articleTop2 && scroll < articleBottom2) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
+		}
+
+		var screenWidth = $(window).width();
+		if (screenWidth < 768) {
+			if ($(header).hasClass("active") == true) {
+				$(".menu-toggle").removeClass("white")
+			} else {
+				$(".menu-toggle").addClass("white")
+			}
 		}
 	});
 </script>

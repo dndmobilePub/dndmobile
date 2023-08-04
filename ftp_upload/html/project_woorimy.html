@@ -3,15 +3,13 @@
 	<div class="black-section">
 		<div class="pjt-top">
 			<div class="pjt-title">
-				<p class="tit" data-aos="fade-up" data-aos-duration="1000">
-					<span>우리은행</span><br>
+				<p class="tit pd130 fw700" data-aos="fade-up" data-aos-duration="1000">
+					<span class="fw300">우리은행</span><br>
 					마이데이터 운영
 				</p>
 				<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-					금융과 비금융을 모두 아우르는 '데이터 관리 종합 플랫폼'으로서<br class="hide-mobile">
-					철저히 고객 관점에서 설계한 UX·UI를 제공합니다.<br class="hide-mobile">
-					고연령층 등 디지털 취약계층 고객도 편리하게<br class="hide-mobile">
-					마이데이터 서비스 이용이 가능한 환경을 제공합니다.
+					금융과 비금융을 모두 아우르는 '데이터 관리 종합 플랫폼'으로<br class="hide-pc">서<br class="hide-mobile">
+					철저히 고객 관점에서 설계한 UX·UI를 제공합니다.
 				</p>
 				<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
 					<div><img src="/dndmobile/assets/images/icon_ps.svg" alt=""></div>
@@ -22,10 +20,16 @@
 
 			<div class="pjt-top-img" data-aos="fade-right" data-aos-duration="1000">
 				<div class="bg-area">
-					<img src="/dndmobile/assets/images/img_woorimy_bg.png" alt="" class="hide-mobile">
-					<img src="/dndmobile/assets/images/img_woorimy_bg_mo.png" alt="" class="hide-pc">
+					<div class="woori_bg_left">
+						<img src="/dndmobile/assets/images/img_woorimy_left.png" alt="" class="hide-mobile">
+						<img src="/dndmobile/assets/images/img_woorimy_left_mo.png" alt="" class="hide-pc">
+					</div>
 					<div class="splash-img">
 						<img src="/dndmobile/assets/images/img_woorimy_splash.gif" alt="">
+					</div>
+					<div class="woori_bg_right">
+						<img src="/dndmobile/assets/images/img_woorimy_right.png" alt="" class="hide-mobile">
+						<img src="/dndmobile/assets/images/img_woorimy_right_mo.png" alt="" class="hide-pc">
 					</div>
 				</div>
 			</div>
@@ -33,9 +37,9 @@
 
 		<div class="pjt-con bg01">
 			<div class="phone-layout type02">
-				<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"><img
+				<div data-aos="fade-up" data-aos-duration="1000"><img
 						src="/dndmobile/assets/images/img_woorimy01.png" alt="" class="pjt-img"></div>
-				<div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000"><img
+				<div data-aos="fade-up" data-aos-duration="1000"><img
 						src="/dndmobile/assets/images/img_woorimy02.png" alt="" class="pjt-img"></div>
 			</div>
 		</div>
@@ -78,12 +82,12 @@
 
 	<div class="pjt-con bg03">
 		<div class="pjt-title center white">
-			<p class="tit ta-c" data-aos="fade-up" data-aos-duration="1000">
+			<p class="tit ta-c fw700" data-aos="fade-up" data-aos-duration="1000">
 				마이데이터 마케팅
 			</p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, 인지성을 고려하여 UX·UI(GUI) 환경을 제공합니다. <br class="hide-mobile">
-				고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 경험과 이를 바탕한 지속적인 참여가 가능하게 합니다.
+			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
+				이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, <br class="hide-pc">인지성을 고려하여 UX·UI(GUI) 환경을 제공합니다. <br>
+				고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 <br class="hide-pc">경험과 이를 바탕한 지속적인 참여가 가능하게 합니다.
 			</p>
 		</div>
 		<div class="phone-layout">
@@ -109,22 +113,43 @@
 		if (scroll >= articleTopWoori && scroll < articleBottomWoori) {
 			$(".main-indicator-wrap").addClass("white");
 			$(".menu-toggle").addClass('white');
-			$(".btn-top").addClass('white');
-			$(".quick_btn").addClass('white')
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".num-box").addClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'white');
+			$(".btn-top").find('path:last-child').attr('stroke', 'black');
+			$(".quick_btn").addClass('white');
 		}
 
 		if (scroll >= articleBottomWoori) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
 		}
 
 		if (scroll >= articleTopWoori2 && scroll < articleBottomWoori2) {
 			$(".main-indicator-wrap").removeClass("white");
 			$(".menu-toggle").removeClass('white');
-			$(".btn-top").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
 			$(".quick_btn").removeClass('white')
+		}
+
+		var screenWidth = $(window).width();
+		if (screenWidth < 768) {
+			if ($(header).hasClass("active") == true) {
+				$(".menu-toggle").removeClass("white")
+			} else {
+				$(".menu-toggle").addClass("white")
+			}
 		}
 	});
 </script>

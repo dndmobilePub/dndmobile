@@ -1,14 +1,14 @@
 <section class="pjt-con-wrap kb">
 	<div class="pjt-top">
 		<div class="pjt-title">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
+			<p class="tit pd130" data-aos="fade-up" data-aos-duration="1000">
 				<span>KB국민은행</span><br>
 				비대면 마케팅
 			</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				비대면 서비스 이용 고객이 증가함에 따라 환경 변화에 신속히 대응할 수 있는 'Marketing Tool'을 제공합니다.<br>
-				즉시성, 지속성, 단순성, 인지성을 고려한 UI·GUI를 제공함으로써 다양한 이용
-				고객층의 참여를 확대합니다.
+				비대면 서비스 이용 고객이 증가함에 따라 환경 변화에 신속히 대응할 수 있는<br class="hide-mobile">
+				'Marketing Tool'을 제공합니다.즉시성, 지속성, 단순성, 인지성을 고려한<br class="hide-mobile">
+				UI·GUI를 제공함으로써 다양한 이용 고객층의 참여를 확대합니다.
 			</p>
 
 			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
@@ -52,7 +52,7 @@
 
 	<div class="pjt-con">
 		<div class="pjt-title center">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">Wallet</p>
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Wallet</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
 				실물 지갑을 대체하는 간편 기능에 생활 연계 서비스를 더한 디지털 지갑 형태의 생활밀착형 플랫폼입니다. <br class="hide-mobile">
 				기존 고객뿐만 아니라 KB국민은행 계좌가 없는 고객도 간편하게 이용이 가능합니다.
@@ -69,31 +69,31 @@
 	</div>
 </section>
 <script>
-	var $cont = $('.kb'),
-		$item = $cont.find('.bg-area').children('span');
-	gsap.to(
-		$item,
-		{
-			duration: 1.5,
-			x: function () {
-				return Math.random() * 100 - 50;
-			},
-			scale: function () {
-				return Math.random() * 0.5 + 0.7;
-			},
-			y: function () {
-				return Math.random() * 50 - 25;
-			},
-			opacity: function () {
-				return Math.random() * 0.3 + 0.5;
-			},
-			autoAlpha: 1,
-			repeat: -1,
-			yoyo: true,
-			ease: Power0.easeNone,
+	// var $cont = $('.kb'),
+	// 	$item = $cont.find('.bg-area').children('span');
+	// gsap.to(
+	// 	$item,
+	// 	{
+	// 		duration: 1.5,
+	// 		x: function () {
+	// 			return Math.random() * 100 - 50;
+	// 		},
+	// 		scale: function () {
+	// 			return Math.random() * 0.5 + 0.7;
+	// 		},
+	// 		y: function () {
+	// 			return Math.random() * 50 - 25;
+	// 		},
+	// 		opacity: function () {
+	// 			return Math.random() * 0.3 + 0.5;
+	// 		},
+	// 		autoAlpha: 1,
+	// 		repeat: -1,
+	// 		yoyo: true,
+	// 		ease: Power0.easeNone,
 
-		}
-	)
+	// 	}
+	// )
 
 
 	/**
@@ -137,5 +137,36 @@
 			}
 		}
 	});
+
+		$(window).scroll(function () {
+			let scroll = $(window).scrollTop();
+			let articleTop = $(".kb .pjt-con").offset().top;
+			let articleBottom = articleTop + $(".kb .pjt-con").outerHeight();
+
+			let articleTop2 = $(".kb .pjt-top").offset().top;
+			let articleBottom2 = articleTop2 + $(".kb .pjt-top").outerHeight();
+
+			if (scroll >= articleTop && scroll < articleBottom) {
+				$(".main-indicator-wrap").removeClass("white");
+				$(".menu-toggle").removeClass('white');
+				$(".main_logo").removeClass('white');
+				$(".top-nav").removeClass('white');
+				$(".num-box").removeClass('white');
+				$(".btn-top").find('path:first-child').attr('fill', 'black');
+				$(".btn-top").find('path:last-child').attr('stroke', 'white');
+				$(".quick_btn").removeClass('white')
+			}
+
+			if (scroll >= articleTop2 && scroll < articleBottom2) {
+				$(".main-indicator-wrap").removeClass("white");
+				$(".menu-toggle").removeClass('white');
+				$(".main_logo").removeClass('white');
+				$(".top-nav").removeClass('white');
+				$(".num-box").removeClass('white');
+				$(".btn-top").find('path:first-child').attr('fill', 'black');
+				$(".btn-top").find('path:last-child').attr('stroke', 'white');
+				$(".quick_btn").removeClass('white')
+			}
+		});
 
 </script>
