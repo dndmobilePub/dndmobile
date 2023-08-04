@@ -82,7 +82,7 @@ $('.accordion').on('click', function (e) {
 
             $('html, body').animate({
                 scrollTop: offsetTop - gnbHeight
-            }, 250);
+            }, 200);
 
             // 화면 너비가 768px보다 작을 경우
             var screenWidth = $(window).width();
