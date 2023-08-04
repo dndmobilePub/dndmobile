@@ -131,7 +131,7 @@ function animateFrom(elem) {
         elem,
         { x: x, y: y, autoAlpha: 0 },
         {
-            duration: 1.5,
+            duration: 1,
             x: 0,
             y: 0,
             delay: delay,
@@ -200,26 +200,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 let links = gsap.utils.toArray(".main-indicator-wrap a");
 let currentSpan = document.querySelector(".current"); // current span 요소 선택
 
-// 10초 뒤에 current값이 효과적으로 나타나도록 애니메이션 추가
-setTimeout(function() {
-    if (currentSpan) { // currentSpan이 존재할 경우에만 애니메이션 적용
-        gsap.to(currentSpan, {
-            y: -20, // 위로 20px 이동
-            opacity: 0, // 투명도 0으로 변경
-            duration: 0.2,
-            onComplete: () => {
-                const currentNumber = parseInt(currentSpan.textContent); // 현재 current 값
-                currentSpan.textContent = currentNumber.toString().padStart(2, '0'); //현재 current 값에 숫자 2자리에 앞자리 0 표시
-                gsap.to(currentSpan, {
-                    y: 0, // 다시 원래 위치로
-                    opacity: 1, // 투명도 원래대로
-                    duration: 0.2,
-                });
-            }
-        });
-    }
-}, 10000);
-
 links.forEach((a, index) => {
     let element = document.querySelector(a.getAttribute("href")),
         linkST = ScrollTrigger.create({
@@ -260,7 +240,6 @@ links.forEach((a, index) => {
     });
 });
 
-
 function setActive(link) {
     links.forEach(el => el.classList.remove("active"));
     link.classList.add("active");
@@ -282,6 +261,7 @@ function setActive(link) {
     }
 
     // 화면 너비가 768px보다 작을 경우
+    var header = $("header");
     var screenWidth = $(window).width();
     if (screenWidth < 768) {
         if($(header).hasClass("active") == true) {

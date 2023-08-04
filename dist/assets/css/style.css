@@ -2536,7 +2536,7 @@ button.swiper-pagination-bullet {
   margin-left: -3px;
   border-radius: 50px;
   background: #000;
-  transition: 0.5s;
+  transition: 0.1s;
   z-index: 100;
 }
 .main-indicator-wrap > a {
@@ -2571,18 +2571,6 @@ button.swiper-pagination-bullet {
   top: auto;
   bottom: 3px;
 }
-.main-indicator-wrap > a.active span, .main-indicator-wrap > a:hover span {
-  background: transparent;
-  width: 12px;
-  height: 12px;
-  border: 2px solid #000;
-  border-radius: 50%;
-  top: 3px;
-}
-.main-indicator-wrap > a.active em, .main-indicator-wrap > a:hover em {
-  opacity: 1;
-  right: 0;
-}
 .main-indicator-wrap > a::after {
   content: "";
   display: block;
@@ -2594,16 +2582,24 @@ button.swiper-pagination-bullet {
   display: block;
   width: 1px;
   /* height: 100%; */
-  background: #000;
+  background: #ddd;
   height: 24.15px;
   z-index: 10;
 }
-.main-indicator-wrap.white a::after {
-  background: #fff;
+.main-indicator-wrap > a.active:after {
+  background-color: #000;
 }
-.main-indicator-wrap.white a.active span, .main-indicator-wrap.white a:hover span {
-  background: transparent;
-  border: 2px solid #fff;
+.main-indicator-wrap > a.active ~ a::after {
+  background-color: #000;
+}
+.main-indicator-wrap.white a::after {
+  background: #ddd;
+}
+.main-indicator-wrap.white a.active:after {
+  background-color: #fff;
+}
+.main-indicator-wrap.white a.active ~ a::after {
+  background-color: #fff;
 }
 .main-indicator-wrap .num-box {
   display: flex;
