@@ -6518,6 +6518,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .pjt-con-wrap.kb .pjt-top {
+    margin-top: 0;
     padding: 256px 80px 0px;
     padding: 16.6883963494vw 5.2151238592vw 0vw;
   }

@@ -2628,6 +2628,7 @@
 
 		&.kb {
 			.pjt-top {
+				margin-top: 0;
 				@include vw-convert-mo(padding, 128 40 0);
 				
 				.pjt-title {
