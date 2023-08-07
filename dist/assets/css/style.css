@@ -7636,6 +7636,28 @@ button.swiper-pagination-bullet {
   }
 }
 @media screen and (max-width: 767px) {
+  .pjt-con-wrap.cj .pjt-con .phone-layout .pjt-img {
+    border-radius: 64px;
+    border-radius: 4.1720990874vw;
+    border-width: 20px;
+    border-width: 1.3037809648vw;
+    border-color: #000;
+    border-style: solid;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .pjt-con-wrap.cj .pjt-con .phone-layout .pjt-img {
+    border-radius: 32px;
+    border-radius: 4.1720990874vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .pjt-con-wrap.cj .pjt-con .phone-layout .pjt-img {
+    border-width: 10px;
+    border-width: 1.3037809648vw;
+  }
+}
+@media screen and (max-width: 767px) {
   .about-wrap .title-wrap.white .desc {
     color: #fff;
   }

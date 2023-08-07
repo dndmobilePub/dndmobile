@@ -2932,6 +2932,13 @@
 						div:nth-child(2) {
 							margin-top: 0;
 						}
+
+						.pjt-img {
+							// @include vw-convert-mo(border-radius, 32);
+							// @include vw-convert-mo(border-width, 10);
+							// border-color: #F3F3F3;
+							// border-style: solid;
+						}
 					}
 
 					.type02{
@@ -3068,6 +3075,13 @@
 
 				.phone-layout {
 					@include vw-convert-mo(padding-top, 70);
+
+					.pjt-img {
+						@include vw-convert-mo(border-radius, 32);
+						@include vw-convert-mo(border-width, 10);
+						border-color: #000;
+						border-style: solid;
+					}
 				}
 			}
 		}
