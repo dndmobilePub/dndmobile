@@ -777,26 +777,26 @@
 			spaceBetween: 74,
 			centeredSlides: true,
 			roundLengths: true,
-			// loop: true,
+			loop: true,
 			loopedSlides: 7,
 			observer: true,
 			observeParents: true,
 			speed: 1000,
-			// autoplay: {
-			// 	delay: 3500,
-			// 	disableOnInteraction: false,
-			// },
+			autoplay: {
+				delay: 3500,
+				disableOnInteraction: false,
+			},
 			breakpoints: {
 				768: {
 					slidesPerView: 2,
 					spaceBetween: 10,
-					// loop: true,
+					loop: true,
 					centeredSlides: true,
 					speed: 600,
-					// autoplay: {
-					// 	delay: 3000,
-					// 	disableOnInteraction: false,
-					// },
+					autoplay: {
+						delay: 3000,
+						disableOnInteraction: false,
+					},
 				}
 			},
 			on: {
@@ -848,12 +848,12 @@
 		}
 
 		//마우스 오버시 자동 재생 멈춤
-		// $('.project-swiper').on('mouseenter', function(e){
-		// 	pjSwiper.autoplay.stop();
-		// })
-		// $('.project-swiper').on('mouseleave', function(e){
-		// 	pjSwiper.autoplay.start();
-		// })
+		$('.project-swiper').on('mouseenter', function(e){
+			pjSwiper.autoplay.stop();
+		})
+		$('.project-swiper').on('mouseleave', function(e){
+			pjSwiper.autoplay.start();
+		})
 	</script>
 </body>
 
