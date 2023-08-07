@@ -68,6 +68,15 @@ img {
     }
 }
 
+button{
+	background: inherit ;
+	border:none; 
+	box-shadow:none; 
+	border-radius:0;
+	padding:0; 
+	overflow:visible; 
+	cursor:pointer
+}
 
 .mt160 {
     @include vw-convert-pc(margin-top, 160);
@@ -102,8 +111,6 @@ img {
 			}		
 
 		}
-
-
 
 		.ico{
 			display: inline-block;
@@ -143,6 +150,10 @@ img {
 					height: 34px;
 					margin-right: 8px;
 
+					svg {
+						// shape-rendering: geometricPrecision;
+					}
+
 					.fill-black{
 						fill: #222;
 					}
@@ -181,6 +192,17 @@ img {
 				.stroke-black {
 					stroke: #fff;
 				}
+
+				:hover{
+
+					.fill-black{
+						fill: #D91550;
+					}
+	
+					.stroke-black{
+						stroke: #D91550;
+					}
+				}
 			}
 		}
 	}
@@ -206,6 +228,45 @@ header {
 		align-items: center;
 		justify-content: flex-start;
 		padding: 44px 60px;
+
+		.top-nav{
+			.top_hide{
+
+				display: none;
+				padding-right: 10px;
+				span{
+					color:#E30D3F
+				}
+
+			}		
+
+		}
+
+		.ico{
+			display: inline-block;
+			vertical-align: middle;
+
+			.fill-black{
+				fill: #222;
+			}
+
+
+			.stroke-black{
+				stroke: #222;
+			}
+
+			:hover{
+
+				.fill-black{
+					fill: #E30D3F;
+				}
+
+				.stroke-black{
+					stroke: #E30D3F;
+				}
+			}
+
+		}
 
 		.logo {
 			&--black {
@@ -258,6 +319,7 @@ header {
 		}
 
 		.top-nav {
+			
 			&--container {
 				margin-left: auto;
 
@@ -930,8 +992,9 @@ header {
 								background: #E30D3F;
 								box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 								display: flex;
+								@include vw-convert-mo(padding, 5 15);
 								padding: 5px 15px;
-								top: -22px;
+								@include vw-convert-mo(top, -35);
 								right: -36px;
 								width: 54px;
 								height: inherit;
@@ -999,7 +1062,7 @@ header {
 	.footer {
 		flex-direction: column;
 		align-items: center;
-		padding: 48px 40px;
+		@include vw-convert-mo(padding, 48 40);
 		color: #222;
 		background: #F3F3F3;
 
@@ -1027,8 +1090,10 @@ header {
 		}
 	}
 	.btn-top {
-		right: 20px;
-		bottom: 20px;
+		@include vw-convert-mo(right, 20);
+		@include vw-convert-mo(bottom, 20);
+		// right: 20px;
+		// bottom: 20px;
 		@include vw-convert-mo(width, 97);
 		@include vw-convert-mo(height, 97);
 

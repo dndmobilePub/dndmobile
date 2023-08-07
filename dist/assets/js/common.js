@@ -159,7 +159,7 @@ window.addEventListener('scroll', () => {
 })
 
 
-$('.main .header--inner .top-nav .dcb .ico').hover(function(){
+$('.header--inner .top-nav .dcb .ico').hover(function(){
 	$(".top_hide").css("display", "block");
 }, function(){
 	$(".top_hide").css("display", "none");
