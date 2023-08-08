@@ -165,13 +165,13 @@ $('.header--inner .top-nav .dcb .ico').hover(function(){
 	$(".top_hide").css("display", "none");
 });
 
-$('.main-menu li a').hover(function(){
-	$(".main-menu li span").css("-webkit-text-stroke-color", "#5E5E5E");
-	$(".main-menu li span").css("-webkit-text-stroke-width", "0.02em");
-}, function(){
-	$(".main-menu li span").css("-webkit-text-stroke-color", "white");
-	$(".main-menu li span").css("-webkit-text-stroke-width", "0.01em");
-});
+// $('.main-menu li a').hover(function(){
+// 	$(".main-menu li span").css("-webkit-text-stroke-color", "#5E5E5E");
+// 	$(".main-menu li span").css("-webkit-text-stroke-width", "0.02em");
+// }, function(){
+// 	$(".main-menu li span").css("-webkit-text-stroke-color", "white");
+// 	$(".main-menu li span").css("-webkit-text-stroke-width", "0.01em");
+// });
 
 
 

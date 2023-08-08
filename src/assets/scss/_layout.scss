@@ -2019,6 +2019,7 @@
 
 		> dl {
 			white-space: nowrap;
+			@include vw-convert-pc(padding-top, 14);
 
 			> dt {
 				position: relative;
@@ -2030,7 +2031,7 @@
 					content: '';
 					display: inline-block;
 					position: absolute;
-					@include vw-convert-pc(top, -10);
+					@include vw-convert-pc(top, -14);
 					left: 0;
 					@include vw-convert-pc(width, 19);
 					@include vw-convert-pc(height, 4);
@@ -3561,7 +3562,7 @@
 						// }
 						
 						&::after {
-							@include vw-convert-mo(top, -3);
+							@include vw-convert-mo(top, -4);
 							@include vw-convert-mo(width, 30);
 							@include vw-convert-mo(height, 15);
 						}
@@ -3579,6 +3580,7 @@
 			@include vw-convert-mo(gap, 36);
 	
 			> dl {
+				@include vw-convert-mo(padding-top, 16);
 				white-space: normal;
 	
 				> dt {
@@ -3586,7 +3588,7 @@
 					color: #000;
 	
 					&::before {
-						@include vw-convert-mo(top, -12);
+						@include vw-convert-mo(top, -16);
 						@include vw-convert-mo(width, 32);
 						@include vw-convert-mo(height, 4);
 					}
@@ -3604,7 +3606,7 @@
 				> dd {
 					
 					> dl {
-						@include vw-convert-pc(margin-right, 28);
+						@include vw-convert-pc(margin-right, 28); 
 					}
 	
 					dt {

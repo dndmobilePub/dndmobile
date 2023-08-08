@@ -432,6 +432,14 @@ header.active {
   background: #000;
   display: block;
 }
+.fullpage-menu--inner .main-menu li a span {
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.01em;
+}
+.fullpage-menu--inner .main-menu li a:hover span, .fullpage-menu--inner .main-menu li a:focus span, .fullpage-menu--inner .main-menu li a:active span {
+  -webkit-text-stroke-color: #5E5E5E;
+  -webkit-text-stroke-width: 0.02em;
+}
 .fullpage-menu--inner nav .main-menu li {
   transition: transform 300ms ease-in-out 0s;
   position: relative;
@@ -971,7 +979,7 @@ header.active {
     font-size: 52px;
     font-size: 3.3898305085vw;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -1539,7 +1547,6 @@ button.swiper-pagination-bullet {
 
 .swiper-container-cube .swiper-slide {
   pointer-events: none;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
   visibility: hidden;
@@ -1574,7 +1581,6 @@ button.swiper-pagination-bullet {
 .swiper-container-cube .swiper-slide-shadow-left,
 .swiper-container-cube .swiper-slide-shadow-right {
   z-index: 0;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -1596,7 +1602,6 @@ button.swiper-pagination-bullet {
 
 .swiper-container-flip .swiper-slide {
   pointer-events: none;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
 }
@@ -1615,7 +1620,6 @@ button.swiper-pagination-bullet {
 .swiper-container-flip .swiper-slide-shadow-left,
 .swiper-container-flip .swiper-slide-shadow-right {
   z-index: 0;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -2541,8 +2545,7 @@ button.swiper-pagination-bullet {
 }
 
 [data-aos^=flip][data-aos^=flip] {
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition-property: transform;
 }
 
@@ -5476,6 +5479,13 @@ button.swiper-pagination-bullet {
 }
 .contact-wrap .info-wrap > dl {
   white-space: nowrap;
+  padding-top: 14px;
+  padding-top: 0.7291666667vw;
+}
+@media (min-width: 1920px) {
+  .contact-wrap .info-wrap > dl {
+    padding-top: 14px;
+  }
 }
 .contact-wrap .info-wrap > dl > dt {
   position: relative;
@@ -5493,8 +5503,8 @@ button.swiper-pagination-bullet {
   content: "";
   display: inline-block;
   position: absolute;
-  top: -10px;
-  top: -0.5208333333vw;
+  top: -14px;
+  top: -0.7291666667vw;
   left: 0;
   width: 19px;
   width: 0.9895833333vw;
@@ -5504,7 +5514,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .contact-wrap .info-wrap > dl > dt::before {
-    top: -10px;
+    top: -14px;
   }
 }
 @media (min-width: 1920px) {
@@ -8806,8 +8816,8 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .contact-wrap .map-wrap #map .gm-style .gm-style-iw-tc::after {
-    top: -6px;
-    top: -0.3911342894vw;
+    top: -8px;
+    top: -0.5215123859vw;
     width: 60px;
     width: 3.9113428944vw;
     height: 30px;
@@ -8816,8 +8826,8 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .contact-wrap .map-wrap #map .gm-style .gm-style-iw-tc::after {
-    top: -3px;
-    top: -0.3911342894vw;
+    top: -4px;
+    top: -0.5215123859vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
@@ -8855,8 +8865,18 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .contact-wrap .info-wrap > dl {
+    padding-top: 32px;
+    padding-top: 2.0860495437vw;
     white-space: normal;
   }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .contact-wrap .info-wrap > dl {
+    padding-top: 16px;
+    padding-top: 2.0860495437vw;
+  }
+}
+@media screen and (max-width: 767px) {
   .contact-wrap .info-wrap > dl > dt {
     font-size: 64px;
     font-size: 4.1720990874vw;
@@ -8871,8 +8891,8 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .contact-wrap .info-wrap > dl > dt::before {
-    top: -24px;
-    top: -1.5645371578vw;
+    top: -32px;
+    top: -2.0860495437vw;
     width: 64px;
     width: 4.1720990874vw;
     height: 8px;
@@ -8881,8 +8901,8 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .contact-wrap .info-wrap > dl > dt::before {
-    top: -12px;
-    top: -1.5645371578vw;
+    top: -16px;
+    top: -2.0860495437vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {

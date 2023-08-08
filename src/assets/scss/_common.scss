@@ -454,6 +454,22 @@ header {
 			}
 		}
 
+		.main-menu{
+			li{
+				a{
+					span{
+						-webkit-text-stroke-color:#fff;
+						-webkit-text-stroke-width:0.01em;
+					}
+				}
+				a:hover,a:focus,a:active{
+					span{
+						-webkit-text-stroke-color:#5E5E5E;
+						-webkit-text-stroke-width:0.02em;
+					}
+				}
+			}
+		}
 		nav {
 			.main {
 				&-menu {
@@ -1075,7 +1091,7 @@ header {
 				display: block;
 				@include vw-font-size-mo(26);
 				font-weight:400;
-				line-height:1.5;
+				line-height:1;
 				//&:first-child {
 				//	@include vw-convert-mo(margin-top, 60);
 				//}
