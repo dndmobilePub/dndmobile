@@ -433,12 +433,12 @@ header.active {
   display: block;
 }
 .fullpage-menu--inner .main-menu li a span {
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-color: #5E5E5E;
   -webkit-text-stroke-width: 0.01em;
 }
 .fullpage-menu--inner .main-menu li a:hover span, .fullpage-menu--inner .main-menu li a:focus span, .fullpage-menu--inner .main-menu li a:active span {
-  -webkit-text-stroke-color: #5E5E5E;
-  -webkit-text-stroke-width: 0.02em;
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 0.01em;
 }
 .fullpage-menu--inner nav .main-menu li {
   transition: transform 300ms ease-in-out 0s;
@@ -448,12 +448,12 @@ header.active {
   font-weight: 900;
   text-align: center;
   cursor: pointer;
-  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-color: #5E5E5E;
   -webkit-text-stroke-width: 0.01em;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-repeat: no-repeat;
-  transition: background-size 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  transition: background-size 0.3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
 }
 .fullpage-menu--inner nav .main-menu li .box {
   background-image: linear-gradient(135deg, white 0%, white 50%, transparent 50.1%);
@@ -806,6 +806,14 @@ header.active {
   .fullpage-menu--inner {
     padding: 346px 30px 50px 30px;
     padding: 45.110821382vw 3.9113428944vw 6.518904824vw 3.9113428944vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .fullpage-menu--inner .main-menu li a span {
+    -webkit-text-fill-color: transparent;
+  }
+  .fullpage-menu--inner .main-menu li a:hover span, .fullpage-menu--inner .main-menu li a:focus span, .fullpage-menu--inner .main-menu li a:active span {
+    -webkit-text-fill-color: #fff;
   }
 }
 @media screen and (max-width: 767px) {
@@ -4548,7 +4556,6 @@ button.swiper-pagination-bullet {
   height: 100%;
 }
 .project-wrap .project-swiper .box-wrap .img {
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4558,7 +4565,7 @@ button.swiper-pagination-bullet {
   height: 228px;
   height: 11.875vw;
   transition: 0.5s ease-in;
-  transform: rotate(92deg);
+  transform: rotate(45deg);
   z-index: 1;
 }
 @media (min-width: 1920px) {
@@ -4574,7 +4581,7 @@ button.swiper-pagination-bullet {
 .project-wrap .project-swiper .box-wrap .img img {
   display: block;
   width: 100%;
-  transform: rotate(267deg);
+  transform: rotate(315deg);
 }
 .project-wrap .project-swiper .box-wrap .hover-box {
   display: none;

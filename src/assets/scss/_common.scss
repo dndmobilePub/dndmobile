@@ -458,14 +458,14 @@ header {
 			li{
 				a{
 					span{
-						-webkit-text-stroke-color:#fff;
+						-webkit-text-stroke-color:#5E5E5E;
 						-webkit-text-stroke-width:0.01em;
 					}
 				}
 				a:hover,a:focus,a:active{
 					span{
-						-webkit-text-stroke-color:#5E5E5E;
-						-webkit-text-stroke-width:0.02em;
+						-webkit-text-stroke-color:#fff;
+						-webkit-text-stroke-width:0.01em;
 					}
 				}
 			}
@@ -483,13 +483,13 @@ header {
 							font-weight: 900;
   						text-align: center;
   						cursor: pointer;
-  						-webkit-text-stroke-color: white;
+  						-webkit-text-stroke-color: #5E5E5E;
   						-webkit-text-stroke-width: 0.01em;
   						-webkit-text-fill-color: transparent;
   						-webkit-background-clip: text;
   						background-repeat: no-repeat;
-  						-webkit-transition: background-size 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
-  						transition: background-size 0.5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  						-webkit-transition: background-size 0.3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+  						transition: background-size 0.3s cubic-bezier(0.67, 0.01, 0.15, 0.98);
 						}
 
 						.box {
@@ -978,6 +978,21 @@ header {
 			align-items: flex-start;
 			@include vw-convert-mo(padding, 346 30 50 30);
 			// padding: 28% 60px 0;
+
+			.main-menu{
+				li{
+					a{
+						span{
+							-webkit-text-fill-color: transparent;
+						}
+					}
+					a:hover,a:focus,a:active{
+						span{
+							-webkit-text-fill-color: #fff;
+						}
+					}
+				}
+			}
 
 			nav {
 				display: flex;

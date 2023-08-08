@@ -1235,7 +1235,7 @@
       height: 100%;
 			
 			.img {
-				overflow: hidden;
+				// overflow: hidden;
 				display: -webkit-box;
 				display: -ms-flexbox;
 				display: flex;
@@ -1251,17 +1251,17 @@
 				-webkit-transition: .5s ease-in;
    			-o-transition: .5s ease-in;
    			transition: .5s ease-in;
-				-webkit-transform: rotate(92deg);
-				-ms-transform: rotate(92deg);
-				transform: rotate(92deg);
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transform: rotate(45deg);
 				z-index: 1;
 
 				img {
 					display: block;
 					width: 100%;
-					-webkit-transform: rotate(267deg);
-       		-ms-transform: rotate(267deg);
-          transform: rotate(267deg);
+					-webkit-transform: rotate(315deg);
+       		-ms-transform: rotate(315deg);
+          transform: rotate(315deg);
 				}
 			}
 
