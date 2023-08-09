@@ -432,23 +432,21 @@ header.active {
   background: #000;
   display: block;
 }
-.fullpage-menu--inner .main-menu li a span {
-  -webkit-text-stroke-color: #5E5E5E;
-  -webkit-text-stroke-width: 0.01em;
-}
-.fullpage-menu--inner .main-menu li a:hover span, .fullpage-menu--inner .main-menu li a:focus span, .fullpage-menu--inner .main-menu li a:active span {
-  -webkit-text-stroke-color: #fff;
-  -webkit-text-stroke-width: 0.01em;
-}
 .fullpage-menu--inner nav .main-menu li {
   transition: transform 300ms ease-in-out 0s;
   position: relative;
+}
+.fullpage-menu--inner nav .main-menu li a span {
+  -webkit-text-stroke-color: #fff;
+}
+.fullpage-menu--inner nav .main-menu li a:hover span, .fullpage-menu--inner nav .main-menu li a:focus span, .fullpage-menu--inner nav .main-menu li a:active span {
+  -webkit-text-stroke-color: #fff;
 }
 .fullpage-menu--inner nav .main-menu li span {
   font-weight: 900;
   text-align: center;
   cursor: pointer;
-  -webkit-text-stroke-color: #5E5E5E;
+  -webkit-text-stroke-color: #fff;
   -webkit-text-stroke-width: 0.01em;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -2619,12 +2617,12 @@ button.swiper-pagination-bullet {
   display: block;
   position: absolute;
   top: -4px;
-  left: 50%;
+  left: 20.5px;
   transform: translate(0, 50%);
-  width: 8px;
-  height: 8px;
-  margin-left: -3px;
-  border-radius: 50px;
+  width: 7px;
+  height: 7px;
+  margin-left: 0px;
+  border-radius: 50%;
   background: #000;
   transition: 0.1s;
   z-index: 100;
@@ -2667,7 +2665,6 @@ button.swiper-pagination-bullet {
   position: absolute;
   /* top: 0; */
   left: 50%;
-  transform: translate(-50%);
   margin-left: 1.9px;
   display: block;
   width: 1px;
@@ -2683,7 +2680,7 @@ button.swiper-pagination-bullet {
   background-color: #000;
 }
 .main-indicator-wrap.white a::after {
-  background: #ddd;
+  background: gray;
 }
 .main-indicator-wrap.white a.active:after {
   background-color: #fff;
@@ -4013,7 +4010,7 @@ button.swiper-pagination-bullet {
   color: #fff;
 }
 .about-wrap .title-wrap.white .desc {
-  color: #929292;
+  color: rgba(255, 255, 255, 0.7);
 }
 .about-wrap .title-wrap .tit01 {
   padding-bottom: 100px;
@@ -4071,20 +4068,13 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 .about-wrap .section.nth01 {
-  padding: 304px 0px 180px;
-  padding: 15.8333333333vw 0vw 9.375vw;
-  width: 1500px;
-  width: 78.125vw;
+  padding: 304px 160px 180px;
+  padding: 15.8333333333vw 8.3333333333vw 9.375vw;
   margin: 0 auto;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth01 {
-    padding: 304px 0px 180px;
-  }
-}
-@media (min-width: 1920px) {
-  .about-wrap .section.nth01 {
-    width: 1500px;
+    padding: 304px 160px 180px;
   }
 }
 .about-wrap .section.nth01 .txt-ani {
@@ -4101,20 +4091,13 @@ button.swiper-pagination-bullet {
 }
 .about-wrap .section.nth02 .inner {
   position: relative;
-  width: 1500px;
-  width: 78.125vw;
-  padding: 206px 0px 130px;
-  padding: 10.7291666667vw 0vw 6.7708333333vw;
+  padding: 206px 160px 130px;
+  padding: 10.7291666667vw 8.3333333333vw 6.7708333333vw;
   margin: 0 auto;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth02 .inner {
-    width: 1500px;
-  }
-}
-@media (min-width: 1920px) {
-  .about-wrap .section.nth02 .inner {
-    padding: 206px 0px 130px;
+    padding: 206px 160px 130px;
   }
 }
 .about-wrap .section.nth02 .inner .txt-ani {
@@ -4257,20 +4240,13 @@ button.swiper-pagination-bullet {
   }
 }
 .about-wrap .section.nth03 {
-  padding: 214px 0px 264px;
-  padding: 11.1458333333vw 0vw 13.75vw;
-  width: 1500px;
-  width: 78.125vw;
+  padding: 214px 160px 264px;
+  padding: 11.1458333333vw 8.3333333333vw 13.75vw;
   margin: 0 auto;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth03 {
-    padding: 214px 0px 264px;
-  }
-}
-@media (min-width: 1920px) {
-  .about-wrap .section.nth03 {
-    width: 1500px;
+    padding: 214px 160px 264px;
   }
 }
 .about-wrap .section.nth03 .txt-ani {
@@ -4283,20 +4259,13 @@ button.swiper-pagination-bullet {
   }
 }
 .about-wrap .section.nth04 {
-  padding: 0px 0px 80px;
-  padding: 0vw 0vw 4.1666666667vw;
-  width: 1500px;
-  width: 78.125vw;
+  padding: 0px 160px 80px;
+  padding: 0vw 8.3333333333vw 4.1666666667vw;
   margin: 0 auto;
 }
 @media (min-width: 1920px) {
   .about-wrap .section.nth04 {
-    padding: 0px 0px 80px;
-  }
-}
-@media (min-width: 1920px) {
-  .about-wrap .section.nth04 {
-    width: 1500px;
+    padding: 0px 160px 80px;
   }
 }
 .about-wrap .section.nth04 .txt-ani {
@@ -4310,8 +4279,8 @@ button.swiper-pagination-bullet {
 }
 .about-wrap .section .txt-ani {
   position: absolute;
-  left: -80px;
-  left: -4.1666666667vw;
+  left: 80px;
+  left: 4.1666666667vw;
   color: #f0f0f0;
   font-size: 160px;
   font-size: 8.3333333333vw;
@@ -4319,7 +4288,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .about-wrap .section .txt-ani {
-    left: -80px;
+    left: 80px;
   }
 }
 @media (min-width: 1920px) {
@@ -4527,6 +4496,9 @@ button.swiper-pagination-bullet {
   color: #FFFFFF;
 }
 .project-wrap .tab-detail {
+  display: none;
+}
+.project-wrap .tab-detail .project-ing .ing span {
   display: none;
 }
 .project-wrap .tab-detail.on {
@@ -5024,12 +4996,12 @@ button.swiper-pagination-bullet {
   }
 }
 .accordion-wrap .panel ul li + li {
-  margin-top: 12px;
-  margin-top: 0.625vw;
+  margin-top: 26px;
+  margin-top: 1.3541666667vw;
 }
 @media (min-width: 1920px) {
   .accordion-wrap .panel ul li + li {
-    margin-top: 12px;
+    margin-top: 26px;
   }
 }
 .accordion-wrap .panel ul li::before {
@@ -5071,7 +5043,7 @@ button.swiper-pagination-bullet {
   width: calc(100% - 210px);
 }
 .accordion-wrap .panel ul li > p {
-  display: flex;
+  display: -ms-flexbox;
   align-items: center;
   line-height: 1.182;
 }
@@ -7675,9 +7647,6 @@ button.swiper-pagination-bullet {
   }
 }
 @media screen and (max-width: 767px) {
-  .about-wrap .title-wrap.white .desc {
-    color: #fff;
-  }
   .about-wrap .title-wrap .tit01 {
     padding-bottom: 64px;
     padding-bottom: 4.1720990874vw;
@@ -8506,6 +8475,18 @@ button.swiper-pagination-bullet {
   .accordion-wrap .panel ul li::before {
     top: 14px;
     top: 1.8252933507vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .accordion-wrap .panel ul li.wa::before {
+    top: 40px;
+    top: 2.6075619296vw;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .accordion-wrap .panel ul li.wa::before {
+    top: 20px;
+    top: 2.6075619296vw;
   }
 }
 @media screen and (max-width: 767px) {

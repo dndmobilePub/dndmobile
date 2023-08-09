@@ -135,7 +135,7 @@
 						<p>CLIENTS</p>
 					</div>
 					<div class="title-wrap">
-						<p class="tit01" data-aos="fade-up" data-aos-duration="1000">고객과의 시선과 호흡을 <br class="hide-pc">맞추다</p>
+						<p class="tit01" data-aos="fade-up" data-aos-duration="1000">고객과의 시선과 호흡을 맞추다</p>
 						<p class="tit02 hide-mobile" data-aos="fade-up" data-aos-duration="1000">고객과의 시선과 호흡을 맞춰 성공적인 프로젝트를 수행하겠습니다.
 						</p>
 						<p class="desc" data-aos="fade-up" data-aos-duration="1000">
@@ -192,6 +192,27 @@
 					</div>
 				</div>
 			</section>
+
+			<script>
+				$(window).scroll(function () {
+					let scroll = $(window).scrollTop();
+					let articleTop = $(".about-wrap .nth02").offset().top;
+					let articleBottom = $(".about-wrap .nth02").outerHeight();
+			
+					if (scroll >= 0 && scroll < articleTop) {
+						$(".btn-top").find('path:first-child').attr('fill', 'white');
+						$(".btn-top").find('path:last-child').attr('stroke', 'black');
+						$(".quick_btn").addClass('white')
+					}
+					
+					if (scroll > articleBottom) {
+						$(".btn-top").find('path:first-child').attr('fill', 'black');
+						$(".btn-top").find('path:last-child').attr('stroke', 'white');
+						$(".quick_btn").removeClass('white')
+					}
+				});
+			</script>
+
 		</div>
 		@@include('./include/footer.html')
 
