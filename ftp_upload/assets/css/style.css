@@ -288,6 +288,7 @@ header .header--inner .logo--black a {
   font-size: 1.25vw;
   display: flex;
   align-items: center;
+  font-weight: 500;
 }
 @media (min-width: 1920px) {
   header .header--inner .logo--black a {

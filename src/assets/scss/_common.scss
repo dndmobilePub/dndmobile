@@ -277,6 +277,7 @@ header {
 					@include vw-font-size-pc(24);
 					display: flex;
 					align-items: center;
+					font-weight: 500;
 
 					.ico {
 						width: 34px;
