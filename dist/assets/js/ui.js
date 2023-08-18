@@ -285,7 +285,7 @@ mm.add("(min-width: 800px)", () => {
         ScrollTrigger.create({
             trigger: panel,
             start: "top center",
-            end: "bottom center",
+            end: "bottom bottom",
             // end: () => "+=" + panel.offsetHeight,
             scrub: true,
             // markers: true,

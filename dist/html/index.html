@@ -323,28 +323,6 @@
 </section>
 
 
-<script>
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		let articleTop = $(".intro-wrap .pjt-con").offset().top;
-		let articleBottom = articleTop + $(".intro-wrap .pjt-con").outerHeight();
-
-		let articleTop2 = $(".intro-wrap .pjt-top-full").offset().top;
-		let articleBottom2 = articleTop2 + $(".intro-wrap .pjt-top-full").outerHeight();
-
-		if (scroll >= 0 && scroll < articleTop) {
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white')
-		}
-		
-		if (scroll > articleBottom) {
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
-	});
-</script>
 		</section>
 		<section class="panel" id="sc_aged">
 			<section class="pjt-con-wrap sc-aged">
@@ -381,7 +359,7 @@
 				또한 SC제일은행의 새로운 Look & Feel로 dark모드를 <br class="hide-pc">선보였습니다.
 			</p>
 		</div>
-		<div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+		<div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" >
 			<ul class="icon-layout">
 				<li>
 					<span  class="ico-sc-aged01"></span>
@@ -405,7 +383,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="phone-layout type02">
+		<div class="phone-layout type02" data-type="white">
 			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
 				<img src="../assets/images/img_sc_aged_phone01.gif " alt="" class="pjt-img">
 			</div>
@@ -416,7 +394,7 @@
 	</div>
 	
 	<div class="pjt-con type-white">
-		<div class="pjt-title center">
+		<div class="pjt-title center" >
 			<p class="tit2" data-aos="fade-up" data-aos-duration="1000">Dark Mode</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
 				앱 사용자의 눈 피로도를 덜고자 편한뱅킹 서비스에 <br class="hide-pc">‘다크모드’를 도입하였습니다.<br class="hide-mobile">
@@ -438,7 +416,7 @@
 	</div>
 </section>
 
-
+<!-- 
 <script>
 	$(window).scroll(function () {
 		let scroll = $(window).scrollTop();
@@ -486,7 +464,7 @@
 
 
 	});
-</script>
+</script> -->
 		</section>
 		<section class="panel" id="two">
 			<section class="pjt-con-wrap sc">
@@ -505,10 +483,9 @@
 		<div class="pjt-top-img" data-aos="fade-left" data-aos-duration="1000">
 			<img src="../assets/images/img_sc_splash.png" alt="sc제일은행 이미지" class="">
 		</div>
-
 	</div>
-
-	<div class="pjt-con">
+	
+	<div class="pjt-con"  data-type="white">
 		<div class="pjt-title center white">
 			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
 			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
@@ -540,55 +517,9 @@
 					src="../assets/images/img_sc05.png" alt="" class="pjt-img"></div>
 		</div>
 	</div>
+
 </section>
 
-<script>
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		let articleTop = $(".sc .pjt-con").offset().top;
-		let articleBottom = articleTop + $(".sc .pjt-con").outerHeight();
-
-		let articleTop2 = $(".sc .pjt-top-full").offset().top;
-		let articleBottom2 = articleTop2 + $(".sc .pjt-top-full").outerHeight();
-
-		if (scroll >= articleTop2 && scroll < articleBottom2) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".num-box").addClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white')
-		}
-
-		if (scroll >= articleTop && scroll < articleBottom) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".num-box").addClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white')
-		}
-
-		if (scroll >= articleBottom && scroll < articleTop2) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
-
-
-		
-
-	});
-</script>
 		</section>
 		<section class="panel" id="one">
 			<section class="pjt-con-wrap kb">
@@ -731,36 +662,36 @@
 		}
 	});
 
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		let articleTop = $(".kb .pjt-con").offset().top;
-		let articleBottom = articleTop + $(".kb .pjt-con").outerHeight();
+	// $(window).scroll(function () {
+	// 	let scroll = $(window).scrollTop();
+	// 	let articleTop = $(".kb .pjt-con").offset().top;
+	// 	let articleBottom = articleTop + $(".kb .pjt-con").outerHeight();
 
-		let articleTop2 = $(".kb .pjt-top").offset().top;
-		let articleBottom2 = articleTop2 + $(".kb .pjt-top").outerHeight();
+	// 	let articleTop2 = $(".kb .pjt-top").offset().top;
+	// 	let articleBottom2 = articleTop2 + $(".kb .pjt-top").outerHeight();
 
-		if (scroll >= articleTop && scroll < articleBottom) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
+	// 	if (scroll >= articleTop && scroll < articleBottom) {
+	// 		$(".main-indicator-wrap").removeClass("white");
+	// 		$(".menu-toggle").removeClass('white');
+	// 		$(".main_logo").removeClass('white');
+	// 		$(".top-nav").removeClass('white');
+	// 		$(".num-box").removeClass('white');
+	// 		$(".btn-top").find('path:first-child').attr('fill', 'black');
+	// 		$(".btn-top").find('path:last-child').attr('stroke', 'white');
+	// 		$(".quick_btn").removeClass('white')
+	// 	}
 
-		if (scroll >= articleTop2 && scroll < articleBottom2) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
-	});
+	// 	if (scroll >= articleTop2 && scroll < articleBottom2) {
+	// 		$(".main-indicator-wrap").removeClass("white");
+	// 		$(".menu-toggle").removeClass('white');
+	// 		$(".main_logo").removeClass('white');
+	// 		$(".top-nav").removeClass('white');
+	// 		$(".num-box").removeClass('white');
+	// 		$(".btn-top").find('path:first-child').attr('fill', 'black');
+	// 		$(".btn-top").find('path:last-child').attr('stroke', 'white');
+	// 		$(".quick_btn").removeClass('white')
+	// 	}
+	// });
 
 </script>
 		</section>
@@ -801,7 +732,7 @@
 		</div>
 		<div class="icon" data-aos="fade-up" data-aos-duration="1000"><img src="../assets/images/img_cj_icon2.png" alt="">
 		</div>
-		<div class="phone-layout">
+		<div class="phone-layout" data-type="white">
 			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000"><img src="../assets/images/img_cj01.png"
 					alt="" class="pjt-img">
 			</div>
@@ -814,7 +745,7 @@
 	</div>
 </section>
 
-<script>
+<!-- <script>
 	$(window).scroll(function () {
 		let scroll = $(window).scrollTop();
 		let articleTop = $(".cj .pjt-con").offset().top;
@@ -855,13 +786,13 @@
 			}
     }
 	});
-</script>
+</script> -->
 		</section>
 		<section class="panel" id="five">
-			<section class="pjt-con-wrap woori-my">
+			<section class="pjt-con-wrap woori-my" >
 
 	<div class="black-section">
-		<div class="pjt-top">
+		<div class="pjt-top" >
 			<div class="pjt-title">
 				<p class="tit pd130 fw700" data-aos="fade-up" data-aos-duration="1000">
 					<span class="fw300">우리은행</span><br>
@@ -904,7 +835,7 @@
 			</div>
 		</div>
 
-		<div class="pjt-con bg02">
+		<div class="pjt-con bg02" >
 			<div class="icon-list-wrap">
 				<ul>
 					<li data-aos="fade-right" data-aos-duration="1000">
@@ -937,10 +868,11 @@
 					</li>
 				</ul>
 			</div>
+			
 		</div>
 	</div>
 
-	<div class="pjt-con bg03">
+	<div class="pjt-con bg03"  data-type="white">
 		<div class="pjt-title center white">
 			<p class="tit ta-c fw700" data-aos="fade-up" data-aos-duration="1000">
 				마이데이터 마케팅
@@ -961,63 +893,11 @@
 	</div>
 </section>
 
-<script>
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		let articleTopWoori = $(".woori-my .pjt-con.bg03").offset().top;
-		let articleBottomWoori = articleTopWoori + $(".woori-my .pjt-con.bg03").outerHeight();
 
-		let articleTopWoori2 = $(".woori-my .black-section").offset().top;
-		let articleBottomWoori2 = articleTopWoori2 + $(".woori-my .black-section").outerHeight();
-
-		if (scroll >= articleTopWoori && scroll < articleBottomWoori) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".num-box").addClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white');
-		}
-
-		if (scroll >= articleBottomWoori) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
-
-		if (scroll >= articleTopWoori2 && scroll < articleBottomWoori2) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
-
-		var header = $("header");
-		var screenWidth = $(window).width();
-		if (screenWidth < 768) {
-			if($(header).hasClass("active") == true) {
-				$(".menu-toggle").removeClass("white")
-			}else{
-				$(".menu-toggle").addClass("white")
-			}
-		}
-	});
-</script>
 		</section>
 		<section class="panel" id="six">
 			<section class="pjt-con-wrap woori-certi">
-	<div class="pjt-top-full">
+	<div class="pjt-top-full" data-type="white">
 		<div class="pjt-title center white">
 			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
 				<span>우리은행 사설인증 구축</span><br>
@@ -1052,8 +932,8 @@
 </section>
 		</section>
 		<section class="panel" id="four">
-			<section class="pjt-con-wrap woori-open">
-	<div class="pjt-top-full">
+			<section class="pjt-con-wrap woori-open" data-type="white">
+	<div class="pjt-top-full" >
 		<div class="pjt-title center white" data-aos="fade-left" data-aos-duration="1000">
 			<p class="tit fw700">
 				<span class="fw300">우리은행</span> <br>
@@ -1069,7 +949,7 @@
 		</div>
 	</div>
 
-	<div class="pjt-con">
+	<div class="pjt-con" >
 		<div class="pjt-title center white">
 			<p class="tit fw700" data-aos="fade-right" data-aos-duration="1000">Design Concept</p>
 			<p class="desc clr0" data-aos="fade-right" data-aos-duration="1000">
@@ -1096,7 +976,7 @@
 	</div>
 </section>
 
-<script>
+<!-- <script>
 	$(window).scroll(function () {
 		let scroll = $(window).scrollTop();
 		let articleTop = $(".woori-open .pjt-con").offset().top;
@@ -1137,7 +1017,7 @@
 			}
 		}
 	});
-</script>
+</script> -->
 		</section>
 		<!-- footer -->
 <div class="footer">
