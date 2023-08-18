@@ -1,7 +1,7 @@
-<section class="pjt-con-wrap woori-my">
+<section class="pjt-con-wrap woori-my" >
 
 	<div class="black-section">
-		<div class="pjt-top">
+		<div class="pjt-top" >
 			<div class="pjt-title">
 				<p class="tit pd130 fw700" data-aos="fade-up" data-aos-duration="1000">
 					<span class="fw300">우리은행</span><br>
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 
-		<div class="pjt-con bg02">
+		<div class="pjt-con bg02" >
 			<div class="icon-list-wrap">
 				<ul>
 					<li data-aos="fade-right" data-aos-duration="1000">
@@ -77,10 +77,11 @@
 					</li>
 				</ul>
 			</div>
+			
 		</div>
 	</div>
 
-	<div class="pjt-con bg03">
+	<div class="pjt-con bg03"  data-type="white">
 		<div class="pjt-title center white">
 			<p class="tit ta-c fw700" data-aos="fade-up" data-aos-duration="1000">
 				마이데이터 마케팅
@@ -101,56 +102,3 @@
 	</div>
 </section>
 
-<script>
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		let articleTopWoori = $(".woori-my .pjt-con.bg03").offset().top;
-		let articleBottomWoori = articleTopWoori + $(".woori-my .pjt-con.bg03").outerHeight();
-
-		let articleTopWoori2 = $(".woori-my .black-section").offset().top;
-		let articleBottomWoori2 = articleTopWoori2 + $(".woori-my .black-section").outerHeight();
-
-		if (scroll >= articleTopWoori && scroll < articleBottomWoori) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".num-box").addClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white');
-		}
-
-		if (scroll >= articleBottomWoori) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
-
-		if (scroll >= articleTopWoori2 && scroll < articleBottomWoori2) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
-
-		var header = $("header");
-		var screenWidth = $(window).width();
-		if (screenWidth < 768) {
-			if($(header).hasClass("active") == true) {
-				$(".menu-toggle").removeClass("white")
-			}else{
-				$(".menu-toggle").addClass("white")
-			}
-		}
-	});
-</script>

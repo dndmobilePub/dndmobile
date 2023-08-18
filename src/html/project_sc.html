@@ -14,10 +14,9 @@
 		<div class="pjt-top-img" data-aos="fade-left" data-aos-duration="1000">
 			<img src="../assets/images/img_sc_splash.png" alt="sc제일은행 이미지" class="">
 		</div>
-
 	</div>
-
-	<div class="pjt-con">
+	
+	<div class="pjt-con"  data-type="white">
 		<div class="pjt-title center white">
 			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
 			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
@@ -49,52 +48,5 @@
 					src="../assets/images/img_sc05.png" alt="" class="pjt-img"></div>
 		</div>
 	</div>
+
 </section>
-
-<script>
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		let articleTop = $(".sc .pjt-con").offset().top;
-		let articleBottom = articleTop + $(".sc .pjt-con").outerHeight();
-
-		let articleTop2 = $(".sc .pjt-top-full").offset().top;
-		let articleBottom2 = articleTop2 + $(".sc .pjt-top-full").outerHeight();
-
-		if (scroll >= articleTop2 && scroll < articleBottom2) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".num-box").addClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white')
-		}
-
-		if (scroll >= articleTop && scroll < articleBottom) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".num-box").addClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white')
-		}
-
-		if (scroll >= articleBottom && scroll < articleTop2) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
-
-
-		
-
-	});
-</script>

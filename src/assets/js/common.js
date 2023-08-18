@@ -193,3 +193,88 @@ function topFunction() {
 	window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
+
+/**
+ * ==============================+
+ * 스크롤 정의
+ * ==============================+
+ */
+
+const scrollEvent = () => {
+    //query selectors
+    const intro = document.querySelector('.intro-wrap')
+	const getDataTypes = document.querySelectorAll('[data-type="white"]');
+    
+	const introObserver = (intro, introWatcher) => {
+		if(intro[0].isIntersecting) {
+			$(".main-indicator-wrap").addClass("white");
+			$(".menu-toggle").addClass('white');
+			$(".main_logo").addClass('white');
+			$(".top-nav").addClass('white');
+			$(".num-box").addClass("white");
+			$(".btn-top").find("path:first-child").attr("fill", "white");
+			$(".btn-top").find("path:last-child").attr("stroke", "black");
+			$(".quick_btn").addClass('white')
+		} else {
+			$(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
+			$(".quick_btn").removeClass('white')
+		}
+	}
+
+	const introObserverOptions = {
+		threshold:1
+	}
+
+    // intersection observer
+    const watchCallback = (getData, sectionWatcher) => {
+        getData.forEach((getData) => {
+            // console.log(getData)
+            if(getData.isIntersecting) {
+                $(".main-indicator-wrap").addClass("white");
+                $(".menu-toggle").addClass('white');
+                $(".main_logo").addClass('white');
+                $(".top-nav").addClass('white');
+                $(".num-box").addClass("white");
+                $(".btn-top").find("path:first-child").attr("fill", "white");
+                $(".btn-top").find("path:last-child").attr("stroke", "black");
+                $(".quick_btn").addClass('white')
+            } else {
+            $(".main-indicator-wrap").removeClass("white");
+			$(".menu-toggle").removeClass('white');
+			$(".main_logo").removeClass('white');
+			$(".top-nav").removeClass('white');
+			$(".num-box").removeClass('white');
+			$(".btn-top").find('path:first-child').attr('fill', 'black');
+			$(".btn-top").find('path:last-child').attr('stroke', 'white');
+			$(".quick_btn").removeClass('white')
+            }
+            
+        })
+       
+    }
+    const watchOptions = {
+        threshold:0.4
+    }
+
+    // 관찰자
+    const sectionWatcher = new IntersectionObserver(watchCallback, watchOptions)
+    const introWatcher = new IntersectionObserver(introObserver, introObserverOptions)
+	
+	//관찰 대상
+	introWatcher.observe(intro)
+
+    getDataTypes.forEach(getData => {
+        sectionWatcher.observe(getData)
+    })
+
+	
+}
+
+
+scrollEvent()
