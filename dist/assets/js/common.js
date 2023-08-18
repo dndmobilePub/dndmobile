@@ -200,11 +200,9 @@ function topFunction() {
  * ==============================+
  */
 
-const scrollEvent = () => {
-    //query selectors
-    const intro = document.querySelector('.intro-wrap')
-	const getDataTypes = document.querySelectorAll('[data-type="white"]');
-  
+setTimeout(function(){
+	const intro = document.querySelector('.intro-wrap');
+	  
 	const introObserver = (intro, introWatcher) => {
 		
 		if(intro[0].isIntersecting) {
@@ -219,13 +217,14 @@ const scrollEvent = () => {
 		} 
 		
 	}
-
 	const introObserverOptions = {threshold:0.5, rootMargin:'100px'}
-
 	const introWatcher = new IntersectionObserver(introObserver, introObserverOptions)
 	introWatcher.observe(intro)
-	// introWatcher.unobserve(intro)
+},100)
 
+const scrollEvent = () => {
+    //query selectors
+	const getDataTypes = document.querySelectorAll('[data-type="white"]');
     // intersection observer
     const watchCallback = (getData, sectionWatcher) => {
         getData.forEach((getData) => {
