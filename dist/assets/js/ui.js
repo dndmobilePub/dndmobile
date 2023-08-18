@@ -243,21 +243,24 @@ links.forEach((a, index) => {
 function setActive(link) {
     links.forEach(el => el.classList.remove("active"));
     link.classList.add("active");
-
     if (link.classList.contains("indi-white")) {
-        document.querySelector(".main-indicator-wrap").classList.add('white')
-        document.querySelector(".menu-toggle").classList.add('white')
-        document.querySelector(".num-box").classList.add('white')
-        document.querySelector(".main_logo").classList.add('white')
-        document.querySelector(".top-nav").classList.add('white')
-        document.querySelector("html").classList.add('bg-black')
+        document.querySelector(".main-indicator-wrap").classList.add('white');
+        document.querySelector(".menu-toggle").classList.add('white');
+        document.querySelector(".num-box").classList.add('white');
+        document.querySelector(".main_logo").classList.add('white');
+        document.querySelector(".top-nav").classList.add('white');
+        document.querySelector("html").classList.add('bg-black');
+        $(".btn-top").find("path:first-child").attr("fill", "white");
+        $(".btn-top").find("path:last-child").attr("stroke", "black");
     } else {
-        document.querySelector(".main-indicator-wrap").classList.remove('white')
-        document.querySelector(".menu-toggle").classList.remove('white')
-        document.querySelector(".num-box").classList.remove('white')
-        document.querySelector(".main_logo").classList.remove('white')
-        document.querySelector(".top-nav").classList.remove('white')
-        document.querySelector("html").classList.remove('bg-black')
+        document.querySelector(".main-indicator-wrap").classList.remove('white');
+        document.querySelector(".menu-toggle").classList.remove('white');
+        document.querySelector(".num-box").classList.remove('white');
+        document.querySelector(".main_logo").classList.remove('white');
+        document.querySelector(".top-nav").classList.remove('white');
+        document.querySelector("html").classList.remove('bg-black');
+        $(".btn-top").find('path:first-child').attr('fill', 'black');
+		$(".btn-top").find('path:last-child').attr('stroke', 'white');
     }
 
     // 화면 너비가 768px보다 작을 경우
