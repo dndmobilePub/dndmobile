@@ -788,32 +788,48 @@ header {
 				fill: #222 !important;
 			}
 		}
+		
+		+ .menu-toggle{
+			&.white {
+				.hamburger {
+					path {
+						stroke: #222;
+					}
+				}
+			}
+			.hamburger {
+				path {
+					stroke: #222;
+				}
+			}
+			&.active{
+
+				.hamburger{
+		
+					path {
+						stroke: #fff;
+					}
+		
+				}	
+	
+			}
+		}
 	}
 
 	.menu-toggle {
 		top: 13px;
 		right: 18px;
 
-		&.active{
-
-			.hamburger{
-				width: 30px;
-				height: 30px;
-	
-				path {
-					stroke-width: 0.7px;
-					stroke: #fff;
-				}
-	
-			}	
-
-		}
 		.hamburger{
 			width: 30px;
 			height: 30px;
 
+			path {
+				stroke-width: 0.7px;
+				stroke: #fff;
+			}
 
-		}		
+		}	
 	}
 
 

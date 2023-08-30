@@ -196,6 +196,16 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
 // });
 
+const indiAni = document.querySelector('.main-indicator-wrap');
+window.addEventListener('scroll', () => {
+	const windowScroll = window.pageYOffset;
+	if(windowScroll > indiAni.offsetHeight) {
+        indiAni.classList.add('on');
+	} else {
+        indiAni.classList.remove('on');
+	}
+})
+
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 let links = gsap.utils.toArray(".main-indicator-wrap a");
 let currentSpan = document.querySelector(".current"); // current span 요소 선택
@@ -246,21 +256,15 @@ function setActive(link) {
     if (link.classList.contains("indi-white")) {
         document.querySelector(".main-indicator-wrap").classList.add('white');
         document.querySelector(".menu-toggle").classList.add('white');
-        document.querySelector(".num-box").classList.add('white');
         document.querySelector(".main_logo").classList.add('white');
         document.querySelector(".top-nav").classList.add('white');
         document.querySelector("html").classList.add('bg-black');
-        $(".btn-top").find("path:first-child").attr("fill", "white");
-        $(".btn-top").find("path:last-child").attr("stroke", "black");
     } else {
         document.querySelector(".main-indicator-wrap").classList.remove('white');
         document.querySelector(".menu-toggle").classList.remove('white');
-        document.querySelector(".num-box").classList.remove('white');
         document.querySelector(".main_logo").classList.remove('white');
         document.querySelector(".top-nav").classList.remove('white');
         document.querySelector("html").classList.remove('bg-black');
-        $(".btn-top").find('path:first-child').attr('fill', 'black');
-		$(".btn-top").find('path:last-child').attr('stroke', 'white');
     }
 
     // 화면 너비가 768px보다 작을 경우
