@@ -457,7 +457,7 @@
 			}
 
 			&.hana-bg01{
-				background:  url(../images/img_hana_bg03.png)no-repeat center/ cover;
+				background:  url(../images/img_hana_bg01.png)no-repeat center/ cover;
 				@include vw-convert-pc(padding, 292 0 274);
 				.pjt-title{
 					.desc{
@@ -505,7 +505,7 @@
 									@include vw-convert-pc(width, 278);
 								}
 								&.pjt-char02{
-									@include vw-convert-pc(right, -110);
+									@include vw-convert-pc(right, -130);
 									@include vw-convert-pc(bottom, -32);
 									@include vw-convert-pc(width, 175);
 								}

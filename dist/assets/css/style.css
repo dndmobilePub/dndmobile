@@ -3111,7 +3111,7 @@ button.swiper-pagination-bullet {
   }
 }
 .pjt-con-wrap.hana .pjt-con.hana-bg01 {
-  background: url(../images/img_hana_bg03.png) no-repeat center/cover;
+  background: url(../images/img_hana_bg01.png) no-repeat center/cover;
   padding: 292px 0px 274px;
   padding: 15.2083333333vw 0vw 14.2708333333vw;
 }
@@ -3217,8 +3217,8 @@ button.swiper-pagination-bullet {
   }
 }
 .pjt-con-wrap.hana .pjt-con.hana-bg01 .phone-layout .phone-wrap .pjt-img + img.pjt-char02 {
-  right: -110px;
-  right: -5.7291666667vw;
+  right: -130px;
+  right: -6.7708333333vw;
   bottom: -32px;
   bottom: -1.6666666667vw;
   width: 175px;
@@ -3226,7 +3226,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.hana .pjt-con.hana-bg01 .phone-layout .phone-wrap .pjt-img + img.pjt-char02 {
-    right: -110px;
+    right: -130px;
   }
 }
 @media (min-width: 1920px) {
