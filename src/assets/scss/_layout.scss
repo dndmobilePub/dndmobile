@@ -461,7 +461,7 @@
 				@include vw-convert-pc(padding, 292 0 274);
 				.pjt-title{
 					.desc{
-						color: #E0E0E0;
+						color: #fff;
 					}
 					.airplane-wrap{
 						position: relative;
@@ -666,12 +666,12 @@
 						margin-top: 0;
 					}
 
-					.pjt-img{
-						@include vw-convert-pc(border-width, 10);
-						@include vw-convert-pc(border-radius, 32);
-						border-color: #000;
-						border-style: solid;
-					}
+					// .pjt-img{
+					// 	@include vw-convert-pc(border-width, 10);
+					// 	@include vw-convert-pc(border-radius, 32);
+					// 	border-color: #000;
+					// 	border-style: solid;
+					// }
 				}
 			}
 
@@ -711,13 +711,20 @@
 				@include vw-convert-pc(margin-top, 40);
 				text-align: center;
 
-				.pjt-img {
+				.img-kb-phone{
+					position: relative;
+					z-index: 1;
 					@include vw-convert-pc(width, 362);
-					border: 10px solid #000;
-					border-radius: 32px;
-					// box-shadow: 23px 23px 28px rgba(0, 0, 0, 0.13);
-					// margin-bottom: 40px;
+					@include vw-convert-pc(right, 30);
+					@include vw-convert-pc(bottom, 100);
 				}
+				// .pjt-img {
+				// 	@include vw-convert-pc(width, 362);
+				// 	border: 10px solid #000;
+				// 	border-radius: 32px;
+				// 	// box-shadow: 23px 23px 28px rgba(0, 0, 0, 0.13);
+				// 	// margin-bottom: 40px;
+				// }
 
 				.circle {
 					position: absolute;
@@ -2778,8 +2785,8 @@
 				}
 
 				&.hana-bg01{
-					@include vw-convert-mo(margin-top, -120);
-					@include vw-convert-mo(padding, 260 40 140);
+					@include vw-convert-mo(margin-top, 60);
+					@include vw-convert-mo(padding, 80 40 140);
 					background: linear-gradient(180deg, #00B6AB 0%, #00CD9C 100%);			
 				}
 
@@ -2909,12 +2916,12 @@
 							@include vw-convert-mo(margin-top, 70);
 						}
 
-						.pjt-img{
-							@include vw-convert-mo(border-width, 10);
-							@include vw-convert-mo(border-radius, 32);
-							border-color: #000;
-							border-style: solid;
-						}
+						// .pjt-img{
+						// 	@include vw-convert-mo(border-width, 10);
+						// 	@include vw-convert-mo(border-radius, 32);
+						// 	border-color: #000;
+						// 	border-style: solid;
+						// }
 					}
 				}
 	
@@ -2963,11 +2970,18 @@
 					margin-top: 0;
 					@include vw-convert-mo(padding-top, 102);
 
-					.pjt-img {
+					.img-kb-phone{
+						position: relative;
+						z-index: 1;
 						@include vw-convert-mo(width, 308.5);
-						border: 4px solid #000;
-						border-radius: 16px;
+						@include vw-convert-mo(right, 0);
+						@include vw-convert-mo(bottom, 0);
 					}
+					// .pjt-img {
+					// 	@include vw-convert-mo(width, 308.5);
+					// 	border: 4px solid #000;
+					// 	border-radius: 16px;
+					// }
 
 					.circle {
 						&.type01 {
