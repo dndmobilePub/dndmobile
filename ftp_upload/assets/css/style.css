@@ -2631,8 +2631,8 @@ button.swiper-pagination-bullet {
   display: block;
   position: absolute;
   /* top: 0; */
-  left: calc(50% - 1px);
-  margin-left: 1.9px;
+  left: calc(50% - 2px);
+  margin-left: 2px;
   display: block;
   width: 2px;
   /* height: 100%; */
@@ -3132,8 +3132,8 @@ button.swiper-pagination-bullet {
   position: absolute;
   right: 220px;
   right: 11.4583333333vw;
-  bottom: -120px;
-  bottom: -6.25vw;
+  bottom: -180px;
+  bottom: -9.375vw;
   animation: playing 2.5s linear infinite;
 }
 @media (min-width: 1920px) {
@@ -3148,7 +3148,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.hana .pjt-con.hana-bg01 .pjt-title .airplane-wrap .img-airplane {
-    bottom: -120px;
+    bottom: -180px;
   }
 }
 @keyframes playing {
@@ -3334,8 +3334,8 @@ button.swiper-pagination-bullet {
   width: 1425px;
   width: 74.21875vw;
   position: absolute;
-  top: 0px;
-  top: 0vw;
+  top: 20px;
+  top: 1.0416666667vw;
   right: -270px;
   right: -14.0625vw;
 }
@@ -3346,7 +3346,7 @@ button.swiper-pagination-bullet {
 }
 @media (min-width: 1920px) {
   .pjt-con-wrap.hana .pjt-con.hana-bg02 .type-motion .phone-swiper .phone-display {
-    top: 0px;
+    top: 20px;
   }
 }
 @media (min-width: 1920px) {
@@ -6676,14 +6676,14 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 767px) {
   .pjt-con-wrap.hana .pjt-top .pjt-top-img {
     width: 100%;
-    margin-top: 240px;
-    margin-top: 15.6453715776vw;
+    margin-top: 160px;
+    margin-top: 10.4302477184vw;
   }
 }
 @media screen and (max-width: 767px) and (max-width: 767px) {
   .pjt-con-wrap.hana .pjt-top .pjt-top-img {
-    margin-top: 120px;
-    margin-top: 15.6453715776vw;
+    margin-top: 80px;
+    margin-top: 10.4302477184vw;
   }
 }
 @media screen and (max-width: 767px) {

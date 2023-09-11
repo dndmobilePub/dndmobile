@@ -28,26 +28,6 @@
 			}
 		}
 	}
-	// &.white {
-
-	// 	.current-circle {
-	// 		background: #fff;
-	// 	}
-	// }
-	// 	.current-circle {
-	// 	display: block;
-	// 	position: absolute;
-  //   top: -4px;
-  //   left: 20.5px;
-  //   transform: translate(0, 50%);
-  //   width: 7px;
-  //   height: 7px;
-  //   margin-left: 0px;
-  //   border-radius: 50%;
-  //   background: #000;
-	// 	transition: 0.1s;
-  //   z-index: 100;
-	// }
 
 	> a {
 		position: relative;
@@ -55,63 +35,15 @@
     width: 100%;
     height: calc(160px / 9);
     z-index: 10;
-
-		// &:nth-child(1) {
-		// 	&.active ~ .current-circle {
-		// 		top: -4px;
-		// 	}
-		// }
-		// &:nth-child(2) {
-		// 	&.active ~ .current-circle {
-		// 		top: 20.15px;
-		// 	}
-		// }
-		// &:nth-child(3) {
-		// 	&.active ~ .current-circle {
-		// 		top: 44.3px;
-		// 	}
-		// }
-		// &:nth-child(4) {
-		// 	&.active ~ .current-circle {
-		// 		top: 68.45px;
-		// 	}
-		// }
-		// &:nth-child(5) {
-		// 	&.active ~ .current-circle {
-		// 		top: 92.6px;
-		// 	}
-		// }
-		// &:nth-child(6) {
-		// 	&.active ~ .current-circle {
-		// 		top: 116.75px;
-		// 	}
-		// }
-		// &:nth-child(7) {
-		// 	&.active ~ .current-circle {
-		// 		top: 140.9px;
-		// 	}
-		// }
-		// &:nth-child(8) {
-		// 	&.active ~ .current-circle {
-		// 		top: auto;
-		// 		bottom: 3px;
-		// 	}
-		// }
-		// &:nth-child(9) {
-		// 	&.active ~ .current-circle {
-		// 		top: auto;
-		// 		bottom: 3px;
-		// 	}
-		// }
 	
 		&::after {
 			content: '';
 			display: block;
 			position: absolute;
 			/* top: 0; */
-			left: calc(50% - 1px);
+			left: calc(50% - 2px);
 			// transform: translate(-50%);
-			margin-left: 1.9px;
+			margin-left: 2px;
 			display: block;
 			width: 2px;
 			/* height: 100%; */
@@ -469,7 +401,7 @@
 							@include vw-convert-pc(width, 216);
 							position: absolute;
 							@include vw-convert-pc(right, 220);
-							@include vw-convert-pc(bottom, -120);
+							@include vw-convert-pc(bottom, -180);
 							animation: playing 2.5s linear infinite;
 							
 						}
@@ -551,7 +483,7 @@
 							transform: rotate(13deg);
 							@include vw-convert-pc(width, 1425);
 							position: absolute;
-							@include vw-convert-pc(top, 0);
+							@include vw-convert-pc(top, 20);
 							@include vw-convert-pc(right, -270);
 							
 							.swiper-slide{
@@ -2758,7 +2690,7 @@
 
 				.pjt-top-img{
 					width: 100%;
-					@include vw-convert-mo(margin-top, 120);
+					@include vw-convert-mo(margin-top, 80);
 				}
 			}
 
