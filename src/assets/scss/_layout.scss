@@ -1320,7 +1320,7 @@
 		.project-ing{
 			.ing{
 				span{
-					display: none;
+					display: inline-block; /* 23/10/11 진행중 표기 inline-block */
 				}
 			}
 		}
