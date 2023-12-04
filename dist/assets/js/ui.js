@@ -67,7 +67,7 @@ $('.accordion').on('click', function (e) {
 
     const $siblings = $('.accordion')
 
-    $siblings.next('.panel').slideUp()
+    // $siblings.next('.panel').slideUp()
     $siblings.removeClass('active')
 
     const $this = $(this)
