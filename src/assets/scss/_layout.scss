@@ -1350,37 +1350,19 @@
 		.swiper-button{
 			&-prev{
 				@include vw-convert-pc(left, 120);
-				transform: scaleX(-1); 
+				background: url(../images/btn_ico_prev.png)no-repeat center/contain;
 			}
 			&-next{
 				@include vw-convert-pc(right, -20);
+				background: url(../images/btn_ico_next.png)no-repeat center/contain;
 			}
 		}
 
 		.swiper-button-prev , .swiper-button-next{
-			background-image:none;
 			padding-top: 20px;
-			background: rgba(0,0,0,0.3);
-			width: 50px;
-			height: 50px;
-			border-radius: 20px;
-			&:after , &:before{
-				content: '';
-				clear: both;
-				position: absolute;
-				width: 16px;
-				height: 2px;
-				background: #fff;
-				right: 10px;
-				top: 24px;
-			}
-			&:after {
-				transform: rotate(45deg) translate(-8px);
-			}
-			&:before {
-				transform: rotate(-45deg) translate(-8px);
-				
-			}
+			width: 60px;
+			height: 60px;
+			border-radius: 10px;
 		}
 
 		.box-wrap {

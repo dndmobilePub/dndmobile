@@ -4798,7 +4798,7 @@ button.swiper-pagination-bullet {
 .project-wrap .project-swiper .swiper-button-prev {
   left: 120px;
   left: 6.25vw;
-  transform: scaleX(-1);
+  background: url(../images/btn_ico_prev.png) no-repeat center/contain;
 }
 @media (min-width: 1920px) {
   .project-wrap .project-swiper .swiper-button-prev {
@@ -4808,6 +4808,7 @@ button.swiper-pagination-bullet {
 .project-wrap .project-swiper .swiper-button-next {
   right: -20px;
   right: -1.0416666667vw;
+  background: url(../images/btn_ico_next.png) no-repeat center/contain;
 }
 @media (min-width: 1920px) {
   .project-wrap .project-swiper .swiper-button-next {
@@ -4815,28 +4816,10 @@ button.swiper-pagination-bullet {
   }
 }
 .project-wrap .project-swiper .swiper-button-prev, .project-wrap .project-swiper .swiper-button-next {
-  background-image: none;
   padding-top: 20px;
-  background: rgba(0, 0, 0, 0.3);
-  width: 50px;
-  height: 50px;
-  border-radius: 20px;
-}
-.project-wrap .project-swiper .swiper-button-prev:after, .project-wrap .project-swiper .swiper-button-prev:before, .project-wrap .project-swiper .swiper-button-next:after, .project-wrap .project-swiper .swiper-button-next:before {
-  content: "";
-  clear: both;
-  position: absolute;
-  width: 16px;
-  height: 2px;
-  background: #fff;
-  right: 10px;
-  top: 24px;
-}
-.project-wrap .project-swiper .swiper-button-prev:after, .project-wrap .project-swiper .swiper-button-next:after {
-  transform: rotate(45deg) translate(-8px);
-}
-.project-wrap .project-swiper .swiper-button-prev:before, .project-wrap .project-swiper .swiper-button-next:before {
-  transform: rotate(-45deg) translate(-8px);
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
 }
 .project-wrap .project-swiper .box-wrap {
   display: flex;
