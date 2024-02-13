@@ -4294,6 +4294,73 @@ button.swiper-pagination-bullet {
   margin-top: 0;
 }
 
+.layer-close {
+  display: none;
+  background: transparent;
+  border: none;
+  position: fixed;
+  top: 40px;
+  right: 67px;
+  z-index: 1005;
+  cursor: pointer;
+}
+.layer-close .hamburger {
+  transition: all 0.8s;
+}
+.layer-close .hamburger:hover {
+  transform: rotate(180deg);
+}
+.layer-close .hamburger path {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-width: 0.5px;
+}
+.layer-close.white .hamburger path {
+  stroke: #fff;
+}
+
+.layer-project-wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1003;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.layer-on {
+  overflow: hidden;
+  height: 100vh;
+}
+.layer-on ~ .layer-close, .layer-on ~ .layer-project-wrap {
+  display: block;
+}
+.layer-on .top-nav--container,
+.layer-on .menu-toggle {
+  display: none;
+}
+.layer-on header {
+  z-index: 1004;
+}
+.layer-on header.active {
+  background: transparent;
+}
+.layer-on .header--inner .main_logo.white a {
+  color: #fff;
+}
+.layer-on .header--inner .main_logo.white a .fill-black {
+  fill: #fff;
+}
+.layer-on .header--inner .main_logo.white a .stroke-black {
+  stroke: #fff;
+}
+.layer-on .header--inner .main_logo.white a span {
+  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
 .about-wrap .title-wrap {
   position: relative;
   z-index: 1;

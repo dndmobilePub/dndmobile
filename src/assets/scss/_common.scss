@@ -101,13 +101,11 @@ button{
 
 		.top-nav{
 			.top_hide{
-
-				display: none;
 				padding-right: 10px;
-				span{
-					color:#E30D3F
-				}
 
+				span{
+					color:#E30D3F;
+				}
 			}		
 
 		}
@@ -126,7 +124,6 @@ button{
 			}
 
 			:hover{
-
 				.fill-black{
 					fill: #E30D3F;
 				}
@@ -231,41 +228,51 @@ header {
 
 		.top-nav{
 			.top_hide{
-
-				display: none;
+				overflow: hidden;
 				padding-right: 10px;
+
 				span{
-					color:#E30D3F
+					display: block;
+					color:#E30D3F;
+					transform: translateX(100%);
+					transition: all .3s;
+					opacity: 0;
+				}
+
+				&.on {
+					span {
+						transform: translateX(0);
+						opacity: 1;
+					}
 				}
 
 			}		
-
+			a {
+				&:hover .ico {
+					.fill-black{
+						fill: #E30D3F;
+					}
+	
+					.stroke-black{
+						stroke: #E30D3F;
+					}
+				}
+			}
 		}
 
 		.ico{
-			display: inline-block;
+			display: block;
 			vertical-align: middle;
 
 			.fill-black{
 				fill: #222;
+				transition: all .5s;
 			}
-
 
 			.stroke-black{
+				transition: all .5s;
 				stroke: #222;
 			}
-
-			:hover{
-
-				.fill-black{
-					fill: #E30D3F;
-				}
-
-				.stroke-black{
-					stroke: #E30D3F;
-				}
-			}
-
 		}
 
 		.logo {
@@ -289,8 +296,16 @@ header {
 							width: inherit;
 							height: inherit;
 						}
+					}
 
-						
+					&:hover .ico {
+						.fill-black{
+							fill: #E30D3F;
+						}
+		
+						.stroke-black{
+							stroke: #E30D3F;
+						}
 					}
 				}
 			}
@@ -315,12 +330,21 @@ header {
 				a {
 					color: #fff;
 					font-weight: 500;
+
+					&:hover .ico {
+						.fill-black{
+							fill: #E30D3F;
+						}
+		
+						.stroke-black{
+							stroke: #E30D3F;
+						}
+					}
 				}
 			}
 		}
 
 		.top-nav {
-			
 			&--container {
 				margin-left: auto;
 
@@ -397,6 +421,12 @@ header {
 			stroke: #000;
 			stroke-linecap: round;
 			stroke-width: 0.5px;
+		}
+
+		&:hover {
+			path:nth-child(2) {
+				stroke: #E30D3F;
+			}
 		}
 	}
 

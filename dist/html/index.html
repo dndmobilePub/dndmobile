@@ -16,6 +16,7 @@
     <script src="../assets/js/ScrollTrigger.min.js"></script>
     <script src="../assets/js/ScrollToPlugin.min.js"></script>
     <script src="../assets/js/aos.js"></script>
+    <script src="../assets/js/lottie.min.js"></script>
     <script src="../assets/js/common.js" defer></script>
     <script src="../assets/js/ui.js" defer></script>
 </head>
@@ -274,20 +275,16 @@
 			<a href="#intro" class="indi-white" class="active" id="intro-indi"></a>
 			<!-- 하나카드 -->
 			<a href="#hana"></a>
-			<!-- SC제일은행 -->
-			<a href="#sc_aged"></a>
+			<!-- 우리은행 -->
+			<a href="#woori_mz"></a>
+			<!-- 우리은행 -->
+			<a href="#woori_won"></a>
+			<!-- ABL 생명 -->
+			<a href="#abl"></a>
+			<!-- 한국정보인증 -->
+			<a href="#kica"></a>
 			<!-- SC제일은행 -->
 			<a href="#two" class="indi-white"></a>
-			<!-- KB국민은행 -->
-			<a href="#one"></a>
-			<!-- CJ대한통운 -->
-			<a href="#three" class="cj-white"></a>
-			<!-- 우리은행 -->
-			<a href="#five"></a>
-			<!-- 우리은행 -->
-			<a href="#six"></a>
-			<!-- 우리은행 -->
-			<a href="#four" class="indi-white"></a>
 		</div>
 
 		<section class="panel intro-panel" id="intro">
@@ -438,11 +435,13 @@
 </section>
 <script>
 
-	var swiper = new Swiper(".phone-display", {
+	var swiperHana = new Swiper(".phone-display", {
 		autoplay: {
 			delay: 3000
 		},
 		slidesPerView: 3,
+		observer : true,
+		observeParents : true,
 		loop:true,
 		centeredSlides: true, 
 		loopAdditionalSlides : 1,  
@@ -456,18 +455,92 @@
 	</script>
 
 		</section>
-		<section class="panel" id="sc_aged">
-			<section class="pjt-con-wrap sc-aged">
+		<section class="panel" id="woori_mz">
+			<section class="pjt-con-wrap woori-mz">
 	<div class="pjt-top">
 		<div class="pjt-title">
-			<p class="tit pd130" data-aos="fade-up" data-aos-duration="1000">
-				<span>SC 제일은행</span><br>
-				고령자 위한 편한뱅킹
+			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
+				<span>우리금융그룹</span><br>
+				MZ플랫폼 위탁 운영
 			</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				SC제일은행의 모바일 앱을 고령화시대에 맞춰 고령자를 <br class="hide-pc">위한<br class="hide-mobile">
-				사용자 경험에 기반하여 단순화 한 앱의 편의성과 <br class="hide-pc">직관성을<br class="hide-mobile">
-				고려한 UX/UI 환경을 제공합니다.
+				저축부터 보험 가입, 카드 사용, 투자에 이르기까지 다양한 <br class="hide-pc">금융<br class="hide-mobile">
+				거래를 할 수 있는 플랫폼인 만큼 신규 사용자 유입 및 <br class="hide-pc">편의성을<br class="hide-mobile">
+				고려한 UI/UX를 구축했습니다.
+			</p>
+
+			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
+				<div><img src="../assets/images/icon_ps.svg" alt=""></div>
+				<div><img src="../assets/images/icon_ai.svg" alt=""></div>
+				<div><img src="../assets/images/icon_pigma.svg" alt=""></div>
+			</div>
+		</div>
+
+		<div class="pjt-top-img" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
+			<div id="lottie-mz-top"></div>
+		</div>
+	</div>
+
+	<div class="pjt-con">
+		<div class="pjt-title center">
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
+			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
+				단조로운 컬러를 개선하고 그라데이션을 배색하여 UI/UX <br class="hide-pc">전반에 생동감과 역동성을 표현했습니다.<br>
+				또한 기능성 콘텐츠에는 브랜드 캐릭터인 하하패밀리를 <br class="hide-pc">활용하여 친근감과 접근성을 제고하고,<br class="hide-mobile">
+				편의성과 실용성을 <br class="hide-pc">목적으로 UI/UX를 개편했습니다.
+			</p>
+		</div>
+		<div class="pjt-con-full">
+			<div class="lottie-box" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+				<div id="lottie-mz-con"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="pjt-con">
+		<div class="pjt-title center">
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Money Box</p>
+			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
+				실시간 환전과 연동된 하나머니의 돈통 디자인을 그라데이션 컬러로 배색하여 금액과 기능적인 요소에 무게를 실어 디자인을 했습니다.<br class="hide-pc"><br class="hide-mobile">
+				이를 통해 사용자에게 있어 접근성과 체류시간을 높이고자 하였으며, 다채로운 컬러는 심미성과 디자인적인 재미요소를 제공합니다.
+			</p>
+		</div>
+		<div class="pjt-con-full opct-bf">
+			<div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+				<img src="../assets/images/img_woori_mz.png" alt="" class="pjt-img">
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	var lottieMzTop = bodymovin.loadAnimation({
+		container: document.getElementById('lottie-mz-top'),
+		path: '../assets/lottie/woori_mz_top_phone.json',
+		renderer: 'svg',
+		loop: true,
+		autoplay: true
+	});
+	var lottieMzCon = bodymovin.loadAnimation({
+		container: document.getElementById('lottie-mz-con'),
+		path: '../assets/lottie/woori_mz_con_phone.json',
+		renderer: 'svg',
+		loop: true,
+		autoplay: true
+	});
+	
+</script>
+		</section>
+		<section class="panel" id="woori_won">
+			<section class="pjt-con-wrap woori-won">
+	<div class="pjt-top">
+		<div class="pjt-title">
+			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
+				<span>우리은행</span><br>
+				본인확인 서비스
+			</p>
+			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
+				이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, <br class="hide-pc">인지성을 <br class="hide-mobile">고려하여 UX/UI(GUI) 환경을 제공합니다. <br>고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 <br class="hide-pc">경험과 <br class="hide-mobile">이를 바탕한 지속적인 참여가 가능하도록 합니다.
 			</p>
 
 			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
@@ -478,126 +551,334 @@
 		</div>
 
 		<div class="pjt-top-img">
-			<img src="../assets/images/img_sc_aged_motion.gif" alt="" class="sc-aged-motion hide-mobile">
-			<img src="../assets/images/img_sc_aged_motion_mob.gif" alt="" class="sc-aged-motion hide-pc">
+			<img src="../assets/images/img_woori_won_phone.png" alt="" class="" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
 		</div>
 	</div>
 
-	<div class="pjt-con" >
+	<div class="pjt-con" data-type="white">
 		<div class="pjt-title center white">
 			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
-			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
-				고령자의 ‘사용자 경험<span>(User Experinence, UX)</span> 디자인을 <br class="hide-pc">적용하기위한 큰 글씨, 아이콘의 텍스트화, <br class="hide-mobile">
-				단순화 한 쉬운<br class="hide-pc">모드(고령화) 앱의 편의성과 직관성에 중점을 두었습니다. <br>
-				또한 SC제일은행의 새로운 Look & Feel로 dark모드를 <br class="hide-pc">선보였습니다.
+			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
+				기존의 '퍼스트비즈(First Biz)'를 개편한 중소기업 전용 플랫폼인 '비즈니스뱅킹'은<br class="hide-mobile"><br class="hide-pc">
+				고객 편의를 높이기 위해 사용자환경(UI)과 사용자경험(UX)을 대폭 개선하고,<br class="hide-mobile"><br class="hide-pc">
+				핵심 서비스들을 이용자 중심으로 전면 개편했습니다.
 			</p>
 		</div>
-		<div class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000"  data-type="white">
-			<ul class="icon-layout">
-				<li>
-					<span  class="ico-sc-aged01"></span>
-					 입금
-				</li>
-				<li>
-					<span  class="ico-sc-aged02"></span>
-					주식
-				</li>
-				<li>
-					<span  class="ico-sc-aged03"></span>
-					지불
-				</li>
-				<li>
-					<span  class="ico-sc-aged04"></span>
-					보안
-				</li>
-				<li>
-					<span  class="ico-sc-aged05"></span>
-					대출
-				</li>
-			</ul>
-		</div>
-		<div class="phone-layout type02" data-type="white">
-			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-				<img src="../assets/images/img_sc_aged_phone01.gif " alt="" class="pjt-img">
+		<div class="pjt-step-wrap" data-aos="fade-left" data-aos-duration="1000">
+			<div class="step-box">
+				<div class="img-box"><img src="../assets/images/img_woori_won_service1.png" alt="" class="pjt-img"></div>
+				<div class="txt-box">
+					<p class="tit">어디서나 사용해요.</p>
+					<p>휴대폰은 물론 태블릿, PC에서도 쉽고 간편하게 사용하세요.</p>
+				</div>
 			</div>
-			<div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
-				<img src="../assets/images/img_sc_aged_phone02.gif " alt="" class="pjt-img">
+			<div class="step-plus"><img src="../assets/images/img_woori_won_plus.png" alt="" class="pjt-img"></div>
+			<div class="step-box">
+				<div class="img-box"><img src="../assets/images/img_woori_won_service2.png" alt="" class="pjt-img"></div>
+				<div class="txt-box">
+					<p class="tit">간편하게 인증해요.</p>
+					<p>[6자리 비밀번호/패턴/생체인증]을 통해 편리하게 인증해요.</p>
+				</div>
+			</div>
+			<div class="step-plus"><img src="../assets/images/img_woori_won_plus.png" alt="" class="pjt-img"></div>
+			<div class="step-box">
+				<div class="img-box"><img src="../assets/images/img_woori_won_service3.png" alt="" class="pjt-img"></div>
+				<div class="txt-box">
+					<p class="tit">안전하게 보관해요.</p>
+					<p>인증서를 클라우드(우리은행 웹 보관서버)와  모바일 기기의 안전한 영역에 보관해요.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="pjt-con-full">
+			<div class="pc-layout" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+				<img src="../assets/images/img_woori_won_bank_inbankPC.png" alt="" class="pjt-img">
+			</div>
+			<div class="phone-layout">
+				<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+					<img src="../assets/images/img_woori_won_phone02.png " alt="" class="pjt-img">
+				</div>
+				<div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
+					<img src="../assets/images/img_woori_won_phone03.png " alt="" class="pjt-img">
+				</div>
 			</div>
 		</div>
 	</div>
-	
-	<div class="pjt-con type-white">
-		<div class="pjt-title center" >
-			<p class="tit2" data-aos="fade-up" data-aos-duration="1000">Dark Mode</p>
+</section>
+		</section>
+		<section class="panel" id="abl">
+			<section class="pjt-con-wrap abl">
+	<div class="pjt-top-full">
+		<div class="pjt-title center" data-aos="fade-right" data-aos-duration="1000">
+			<div style="display: inline-block;">
+				<p class="tit fw700">
+					<span class="fw300">ABL 생명</span><br>
+					보장분석 서비스 <br class="hide-pc">고도화
+				</p>
+			</div>
+			<p class="desc" data-aos="fade-left" data-aos-duration="1000">
+				이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, <br class="hide-pc">인지성을 고려하여 UX/UI(GUI) 환경을 제공합니다.
+				<span class="hide-pc">고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 <br class="hide-pc">경험과 이를 바탕한 지속적인 참여가 가능하도록 합니다.</span>
+			</p>
+
+			<div class="tool-list hide-pc" data-aos="fade-up" data-aos-duration="1000">
+				<div><img src="../assets/images/icon_ps.svg" alt=""></div>
+				<div><img src="../assets/images/icon_ai.svg" alt=""></div>
+				<div><img src="../assets/images/icon_pigma.svg" alt=""></div>
+			</div>
+		</div>
+
+		<div class="abl-swiper-wrap" data-aos="fade-up" data-aos-duration="1000">
+			<div class="swiper-container abl-swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide box-wrap">
+						<p class="img"><img src="../assets/images/img_abl_swiper01.png" alt=""></p>
+					</div>
+					<div class="swiper-slide box-wrap">
+						<p class="img"><img src="../assets/images/img_abl_swiper02.png" alt=""></p>
+					</div>
+					<div class="swiper-slide box-wrap">
+						<p class="img"><img src="../assets/images/img_abl_swiper03.png" alt=""></p>
+					</div>
+					<div class="swiper-slide box-wrap">
+						<p class="img"><img src="../assets/images/img_abl_swiper04.png" alt=""></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- <div class="pjt-top-img hide-pc" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+			<img src="../assets/images/img_abl_phone.png" alt="">
+		</div> -->
+	</div>
+
+	<div class="pjt-con">
+		<div class="pjt-title center">
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
 			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				앱 사용자의 눈 피로도를 덜고자 편한뱅킹 서비스에 <br class="hide-pc">‘다크모드’를 도입하였습니다.<br class="hide-mobile">
-				휴대전화의 다크모드를 이미 <br class="hide-pc">적용 중이라면 SC제일은행 모바일뱅킹 앱에 로그인한 후 <br class="hide-pc">‘편한뱅킹’ 버튼을 <br class="hide-mobile">
-				누르면 자동으로 다크모드가 적용된 서비스<br class="hide-pc">를 경험할 수 있습니다. 
+				단조로운 컬러를 개선하고 그라데이션을 배색하여 UI/UX 전반에 생동감과 역동성을 표현했습니다.<br class="hide-mobile"><br class="hide-pc">
+				또한 기능성 콘텐츠에는 브랜드 캐릭터인 하하패밀리를 활용하여 친근감과 접근성을 제고하고,<br class="hide-mobile"><br class="hide-pc">
+				편의성과 실용성을 목적으로 UI/UX를 개편했습니다.
 			</p>
 		</div>
-		<div class="phone-layout">
+		<div class="pjt-con-full">
+			<div class="phone-layout type02">
+				<div class="" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+					<img src="../assets/images/img_abl_phone01.png " alt="" class="pjt-img">
+				</div>
+				<div class="" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+					<img src="../assets/images/img_abl_phone02.png " alt="" class="pjt-img">
+				</div>
+				<div class="abl-char" data-aos="zoom-in" data-aos-delay="900" data-aos-duration="1000">
+					<div id="lottie-abl-char"></div>
+				</div>
+			</div>
+<!-- 			<div class="hide-pc" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+				<img src="../assets/images/img_abl_pc03.png " alt="" class="pjt-img">
+			</div> -->
+		</div>
+	</div>
+	
+	<div class="pjt-con type02">
+		<div class="pjt-title center">
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Money Box</p>
+			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
+				실시간 환전과 연동된 하나머니의 돈통 디자인을 그라데이션 <br class="hide-pc">컬러로 배색하여 금액과 기능적인 요소에 무게를 실어 디자인을 했습니다.<br class="hide-mobile">
+				이를 통해 사용자에게 있어 접근성과 체류시간을 높이고자 하였으며, 다채로운 컬러는 심미성과 디자인적인 재미요소를 제공합니다.
+			</p>
+		</div>
+
+		<div class="phone-layout hide-mobile">
 			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
-				<img src="../assets/images/img_sc_aged_phone03.png " alt="" class="pjt-img">
+				<img src="../assets/images/img_abl_phone03.png " alt="" class="pjt-img">
 			</div>
 			<div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000">
-				<img src="../assets/images/img_sc_aged_phone04.png " alt="" class="pjt-img">
+				<img src="../assets/images/img_abl_phone04.png " alt="" class="pjt-img">
 			</div>
 			<div data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000">
-				<img src="../assets/images/img_sc_aged_phone05.png " alt="" class="pjt-img">
+				<img src="../assets/images/img_abl_phone05.png " alt="" class="pjt-img">
+			</div>
+			<div data-aos="fade-left" data-aos-delay="1200" data-aos-duration="1000">
+				<img src="../assets/images/img_abl_phone06.png " alt="" class="pjt-img">
+			</div>
+		</div>
+		<div class="phone-layout hide-mobile">
+			<div data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
+				<img src="../assets/images/img_abl_pc02.png " alt="" class="pjt-img">
+			</div>
+			<div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+				<img src="../assets/images/img_abl_pc01.png " alt="" class="pjt-img">
+			</div>
+		</div>
+
+		<div class="pjt-con-full hide-pc">
+			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+				<img src="../assets/images/img_abl_pc04.png " alt="" class="pjt-img">
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- 
 <script>
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		let articleTop = $(".sc-aged .pjt-con").offset().top;
-		let articleBottom = articleTop + $(".sc-aged .pjt-con").outerHeight();
-
-		let articleTop2 = $(".sc-aged .pjt-top").offset().top;
-		let articleBottom2 = articleTop2 + $(".sc-aged .pjt-top").outerHeight();
-
-		let articleTop3 = $(".sc-aged .type-white").offset().top;
-		let articleBottom3 = articleTop3 + $(".sc-aged .type-white").outerHeight();
-
-		if (scroll >= articleTop && scroll < articleBottom) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".num-box").addClass("white");
-			$(".btn-top").find("path:first-child").attr("fill", "white");
-			$(".btn-top").find("path:last-child").attr("stroke", "black");
-			$(".quick_btn").addClass('white')
-		}
-
-		if (scroll >= articleTop2 && scroll < articleBottom2) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass("white");
-			$(".btn-top").find("path:first-child").attr("fill", "black");
-			$(".btn-top").find("path:last-child").attr("stroke", "white");
-			$(".quick_btn").removeClass('white')
-		}
-
-		if (scroll >= articleTop3 && scroll < articleBottom3) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".num-box").removeClass("white");
-			$(".btn-top").find("path:first-child").attr("fill", "black");
-			$(".btn-top").find("path:last-child").attr("stroke", "white");
-			$(".quick_btn").removeClass('white')
-		}
-
-
+	var ablSwiper = new Swiper('.abl-swiper', {
+      	effect: 'ease-in-out',
+      	speed: 1000,
+		autoplay: {
+			delay: 3000
+		},
+		slidesPerView: 1,
+		observer: true,
+		observeParents: true,
+		loop: true,
+		centeredSlides: true
 	});
-</script> -->
+	var lottieAblChar = bodymovin.loadAnimation({
+		container: document.getElementById('lottie-abl-char'),
+		path: '../assets/lottie/abl_con_char.json',
+		renderer: 'svg',
+		loop: true,
+		autoplay: true
+	});
+</script>
+
+		</section>
+		<section class="panel" id="kica">
+			<section class="pjt-con-wrap kica">
+	<div class="pjt-top">
+		<div class="pjt-title">
+			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
+				<span>KICA(한국정보인증)</span><br>
+				띠다. 비대면 서비스
+			</p>
+			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
+				저축부터 보험 가입, 카드 사용, 투자에 이르기까지 다양한 <br class="hide-pc">금융<br class="hide-mobile">
+				거래를 할 수 있는 플랫폼인 만큼 신규 사용자 유입 및 편의성을<br class="hide-mobile">
+				고려한 UI/UX를 구축했습니다. 
+			</p>
+
+			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
+				<div><img src="../assets/images/icon_ps.svg" alt=""></div>
+				<div><img src="../assets/images/icon_ai.svg" alt=""></div>
+				<div><img src="../assets/images/icon_pigma.svg" alt=""></div>
+			</div>
+		</div>
+
+		<div class="pjt-top-img" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+			<div id="lottie-kica-top"></div>
+		</div>
+	</div>
+
+	<div class="pjt-con">
+		<div class="pjt-title center">
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
+			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
+				단조로운 컬러를 개선하고 그라데이션을 배색하여 UI/UX 전반에 생동감과 역동성을 표현했습니다.<br class="hide-mobile"><br class="hide-pc">
+				또한 기능성 콘텐츠에는 브랜드 캐릭터인 하하패밀리를 활용하여 친근감과 접근성을 제고하고,<br class="hide-mobile"><br class="hide-pc">
+				편의성과 실용성을 목적으로 UI/UX를 개편했습니다.
+			</p>
+			<div class="icon-absol icon03"><img src="../assets/images/img_kica_icon03.png" alt=""></div>
+		</div>
+		<div class="phone-layout type-full" data-type="white">
+			<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" class="phone-box hide-mobile">
+				<img src="../assets/images/img_kica_phone01.png" alt="">
+			</div>
+			<div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" class="phone-box hide-mobile">
+				<img src="../assets/images/img_kica_phone02.png" alt="">
+			</div>
+			<div class="hide-mobile">
+				<div class="phone-box" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><img src="../assets/images/img_kica_phone03.png" alt=""></div>
+				<div class="phone-box"data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><img src="../assets/images/img_kica_phone04.png" alt=""></div>
+			</div>
+			<div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" class="phone-box hide-pc">
+				<img src="../assets/images/img_kica_phone04.png" alt="">
+			</div>
+			<div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000" class="phone-box hide-mobile">
+				<img src="../assets/images/img_kica_phone05.png" alt="">
+			</div>
+			<div data-aos="fade-up" data-aos-delay="700" data-aos-duration="1000" class="phone-box">
+				<img src="../assets/images/img_kica_phone06.png" alt="">
+			</div>
+			<div class="icon-absol icon01 hide-mobile"><img src="../assets/images/img_kica_icon01.png" alt=""></div>
+			<div class="icon-absol icon02"><img src="../assets/images/img_kica_icon02.png" alt=""></div>
+			<div class="icon-absol icon04"><img src="../assets/images/img_kica_icon04.png" alt=""></div>
+		</div>
+	</div>
+
+	<div class="pjt-top type02">
+		<div class="pjt-title">
+			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
+				<span>KICA(한국정보인증)</span><br>
+				띠다. 비대면 서비스
+			</p>
+			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
+				저축부터 보험 가입, 카드 사용, 투자에 이르기까지 다양한 금융<br class="hide-mobile"><br class="hide-pc">
+				거래를 할 수 있는 플랫폼인 만큼 신규 사용자 유입 및 편의성을<br class="hide-mobile"><br class="hide-pc">
+				고려한 UI/UX를 구축했습니다. 
+			</p>
+
+			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
+				<div><img src="../assets/images/icon_ps.svg" alt=""></div>
+				<div><img src="../assets/images/icon_ai.svg" alt=""></div>
+				<div><img src="../assets/images/icon_pigma.svg" alt=""></div>
+			</div>
+		</div>
+
+		<div class="pjt-top-img hide-mobile" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+			<img src="../assets/images/img_kica_main_phone.png" alt="">
+		</div>
+
+		<div class="pjt-top-full hide-pc">
+			<div class="pc-layout" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+				<img src="../assets/images/img_kica_pc.png" alt="" class="pjt-img">
+			</div>
+			<div class="phone-layout">
+				<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" class="phone-box">
+					<img src="../assets/images/img_kica_pc_phone05.png " alt="">
+				</div>
+				<div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000" class="phone-box">
+					<img src="../assets/images/img_kica_pc_phone04.png " alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="pjt-con type02">
+		<div class="pjt-title center">
+			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
+			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
+				단조로운 컬러를 개선하고 그라데이션을 배색하여 UI/UX 전반에 생동감과 역동성을 표현했습니다.<br class="hide-mobile"><br class="hide-pc">
+				또한 기능성 콘텐츠에는 브랜드 캐릭터인 하하패밀리를 활용하여 친근감과 접근성을 제고하고,<br class="hide-mobile"><br class="hide-pc">
+				편의성과 실용성을 목적으로 UI/UX를 개편했습니다.
+			</p>
+		</div>
+		<div class="pjt-con-full">
+			<div class="pc-layout hide-mobile" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
+				<img src="../assets/images/img_kica_pc.png" alt="" class="pjt-img">
+			</div>
+			<div class="phone-layout">
+				<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000" class="phone-box hide-mobile">
+					<img src="../assets/images/img_kica_pc_phone01.png " alt="">
+				</div>
+				<div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000" class="phone-box">
+					<img src="../assets/images/img_kica_pc_phone02.png " alt="">
+				</div>
+				<div data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000" class="phone-box">
+					<img src="../assets/images/img_kica_pc_phone03.png " alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script>
+	var lottieKicaTop = bodymovin.loadAnimation({
+		container: document.getElementById('lottie-kica-top'),
+		path: '../assets/lottie/kica_top_phone.json',
+		renderer: 'svg',
+		loop: true,
+		autoplay: true
+	});
+</script>
 		</section>
 		<section class="panel" id="two">
 			<section class="pjt-con-wrap sc">
@@ -659,505 +940,6 @@
 
 </section>
 
-		</section>
-		<section class="panel" id="one">
-			<section class="pjt-con-wrap kb">
-	<div class="pjt-top">
-		<div class="pjt-title">
-			<p class="tit pd130" data-aos="fade-up" data-aos-duration="1000">
-				<span>KB국민은행</span><br>
-				비대면 마케팅
-			</p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				비대면 서비스 이용 고객이 증가함에 따라 환경 변화에 신속히 대응할 수 있는<br class="hide-mobile">
-				'Marketing Tool'을 제공합니다.즉시성, 지속성, 단순성, 인지성을 고려한<br class="hide-mobile">
-				UI·GUI를 제공함으로써 다양한 이용 고객층의 참여를 확대합니다.
-			</p>
-
-			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
-				<div><img src="../assets/images/icon_ps.svg" alt=""></div>
-				<div><img src="../assets/images/icon_ai.svg" alt=""></div>
-				<div><img src="../assets/images/icon_pigma.svg" alt=""></div>
-			</div>
-		</div>
-
-		<div class="pjt-top-img">
-			<!-- <div class="swiper-container splash-swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<img src="../assets/images/img_kb_splash01.jpg" alt="kb국민은행 이미지" class="pjt-img">
-					</div>
-					<div class="swiper-slide">
-						<img src="../assets/images/img_kb_splash02.jpg" alt="kb국민은행 이미지" class="pjt-img">
-					</div>
-					<div class="swiper-slide">
-						<img src="../assets/images/img_kb_splash03.jpg" alt="kb국민은행 이미지" class="pjt-img">
-					</div>
-					<div class="swiper-slide">
-						<img src="../assets/images/img_kb_splash04.jpg" alt="kb국민은행 이미지" class="pjt-img">
-					</div>
-					<div class="swiper-slide">
-						<img src="../assets/images/img_kb_splash05.jpg" alt="kb국민은행 이미지" class="pjt-img">
-					</div>
-					<div class="swiper-slide">
-						<img src="../assets/images/img_kb_splash06.jpg" alt="kb국민은행 이미지" class="pjt-img">
-					</div>
-				</div>
-			</div> -->
-			<img src="../assets/images/img_kb_phone_motion.gif" alt="" class="img-kb-phone">
-			<!-- <img src="../assets/images/img_kb_splash.png" alt="kb국민은행 이미지" class="pjt-img gs-up gs-left"> -->
-			<div class="bg-area">
-				<span class="circle type01 gs-up"></span>
-				<span class="circle type02 gs-up"></span>
-				<span class="circle type03 gs-up"></span>
-			</div>
-		</div>
-	</div>
-
-	<div class="pjt-con">
-		<div class="pjt-title center">
-			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Wallet</p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				실물 지갑을 대체하는 간편 기능에 생활 연계 서비스를 더한 디지털 지갑 형태의 생활밀착형 플랫폼입니다. <br class="hide-mobile">
-				기존 고객뿐만 아니라 KB국민은행 계좌가 없는 고객도 간편하게 이용이 가능합니다.
-			</p>
-		</div>
-		<div class="phone-layout">
-			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000"><img src="../assets/images/img_kb01.png "
-					alt="" class="pjt-img"></div>
-			<div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000"><img src="../assets/images/img_kb02.png"
-					alt="" class="pjt-img"></div>
-			<div class="hide-mobile" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000"><img
-					src="../assets/images/img_kb03.png" alt="" class="pjt-img"></div>
-		</div>
-	</div>
-</section>
-<script>
-	// var $cont = $('.kb'),
-	// 	$item = $cont.find('.bg-area').children('span');
-	// gsap.to(
-	// 	$item,
-	// 	{
-	// 		duration: 1.5,
-	// 		x: function () {
-	// 			return Math.random() * 100 - 50;
-	// 		},
-	// 		scale: function () {
-	// 			return Math.random() * 0.5 + 0.7;
-	// 		},
-	// 		y: function () {
-	// 			return Math.random() * 50 - 25;
-	// 		},
-	// 		opacity: function () {
-	// 			return Math.random() * 0.3 + 0.5;
-	// 		},
-	// 		autoAlpha: 1,
-	// 		repeat: -1,
-	// 		yoyo: true,
-	// 		ease: Power0.easeNone,
-
-	// 	}
-	// )
-
-
-	/**
-	 * ==============================+
-	 * 상단 스플래쉬 이미지 스와이프
-	 * ==============================+
-	 */
-
-	new Swiper('.splash-swiper', {
-		autoplay: {
-			delay: 2000,
-		},
-		speed: 500,
-		loop: true,
-		watchSlidesProgress: true,
-		on: {
-			init: function () {
-				this.slides.css('overflow', 'hidden');
-			},
-			progress: function () {
-				var swiper = this;
-				for (var i = 0; i < swiper.slides.length; i++) {
-					var slideProgress = swiper.slides[i].progress;
-					var innerOffset = swiper.width * 1;
-					var innerTranslate = slideProgress * innerOffset;
-					swiper.slides[i].querySelector('img').style.transform = "translate3d(" + innerTranslate + "px, 0, 0)";
-				}
-			},
-			touchStart: function () {
-				var swiper = this;
-				for (var i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = "";
-				}
-			},
-			setTransition: function (speed) {
-				var swiper = this;
-				for (var i = 0; i < swiper.slides.length; i++) {
-					swiper.slides[i].style.transition = speed + "ms";
-					swiper.slides[i].querySelector('img').style.transition = speed + "ms";
-				}
-			}
-		}
-	});
-
-	// $(window).scroll(function () {
-	// 	let scroll = $(window).scrollTop();
-	// 	let articleTop = $(".kb .pjt-con").offset().top;
-	// 	let articleBottom = articleTop + $(".kb .pjt-con").outerHeight();
-
-	// 	let articleTop2 = $(".kb .pjt-top").offset().top;
-	// 	let articleBottom2 = articleTop2 + $(".kb .pjt-top").outerHeight();
-
-	// 	if (scroll >= articleTop && scroll < articleBottom) {
-	// 		$(".main-indicator-wrap").removeClass("white");
-	// 		$(".menu-toggle").removeClass('white');
-	// 		$(".main_logo").removeClass('white');
-	// 		$(".top-nav").removeClass('white');
-	// 		$(".num-box").removeClass('white');
-	// 		$(".btn-top").find('path:first-child').attr('fill', 'black');
-	// 		$(".btn-top").find('path:last-child').attr('stroke', 'white');
-	// 		$(".quick_btn").removeClass('white')
-	// 	}
-
-	// 	if (scroll >= articleTop2 && scroll < articleBottom2) {
-	// 		$(".main-indicator-wrap").removeClass("white");
-	// 		$(".menu-toggle").removeClass('white');
-	// 		$(".main_logo").removeClass('white');
-	// 		$(".top-nav").removeClass('white');
-	// 		$(".num-box").removeClass('white');
-	// 		$(".btn-top").find('path:first-child').attr('fill', 'black');
-	// 		$(".btn-top").find('path:last-child').attr('stroke', 'white');
-	// 		$(".quick_btn").removeClass('white')
-	// 	}
-	// });
-
-</script>
-		</section>
-		<section class="panel" id="three">
-			<section class="pjt-con-wrap cj">
-	<div class="pjt-top">
-		<div class="pjt-title">
-			<p class="tit pd130" data-aos="fade-up" data-aos-duration="1000">
-				<span>CJ대한통운</span><br>
-				차세대 택배시스템
-			</p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				사용자의 여정에서 발생하는 일련의 과정 및 상태를 <br class="hide-mobile">직관적으로 <br class="hide-pc">인지할 수 있도록 디자인합니다.
-			</p>
-			<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
-				<div><img src="../assets/images/icon_ps.svg" alt=""></div>
-				<div><img src="../assets/images/icon_ai.svg" alt=""></div>
-				<div><img src="../assets/images/icon_xd.svg" alt=""></div>
-				<div><img src="../assets/images/icon_pigma.svg" alt=""></div>
-			</div>
-		</div>
-
-		<div class="pjt-top-img">
-			<div class="pjt-img01" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000"><img
-					src="../assets/images/img_cj_splash01.png" alt="CJ대한통운 이미지" class=""></div>
-			<div class="pjt-img02" data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img
-					src="../assets/images/img_cj_splash02.png" alt="CJ대한통운 이미지" class=""></div>
-		</div>
-	</div>
-
-	<div class="pjt-con">
-		<div class="pjt-title center white">
-			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept </p>
-			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
-				CJ 대한통운의 일원화된 브랜드 경험을 만드는 것을 목표로 <br class="hide-pc">고객 중심의 사용성을 우선으로 하는 UX·UI를 구현합니다. <br class="hide-mobile">
-				일반고객용, 직원용의 APP UX·UI·GUI 환경을 통일화하여 <br class="hide-pc">브랜드 Identity 강화합니다.
-			</p>
-		</div>
-		<div class="icon" data-aos="fade-up" data-aos-duration="1000"><img src="../assets/images/img_cj_icon2.png" alt="">
-		</div>
-		<div class="phone-layout" data-type="white">
-			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000"><img src="../assets/images/img_cj01.png"
-					alt="" class="pjt-img">
-			</div>
-			<div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000"><img src="../assets/images/img_cj02.png"
-					alt="" class="pjt-img">
-			</div>
-			<div class="hide-mobile" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000"><img
-					src="../assets/images/img_cj03.png" alt="" class="pjt-img"></div>
-		</div>
-	</div>
-</section>
-
-<!-- <script>
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		let articleTop = $(".cj .pjt-con").offset().top;
-		let articleBottom = articleTop + $(".cj .pjt-con").outerHeight();
-
-		let articleTop2 = $(".cj .pjt-top").offset().top;
-		let articleBottom2 = articleTop2 + $(".cj .pjt-top").outerHeight();
-
-		if (scroll >= articleTop && scroll < articleBottom) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".num-box").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white')
-		}
-
-		if (scroll >= articleTop2 && scroll < articleBottom2) {
-			$(".main-indicator-wrap").removeClass("white");
-			$(".menu-toggle").removeClass('white');
-			$(".num-box").removeClass('white');
-			$(".main_logo").removeClass('white');
-			$(".top-nav").removeClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'black');
-			$(".btn-top").find('path:last-child').attr('stroke', 'white');
-			$(".quick_btn").removeClass('white')
-		}
-
-		var header = $("header");
-		var screenWidth = $(window).width();
-    if (screenWidth < 768) {
-			if($(header).hasClass("active") == true) {
-				$(".menu-toggle").removeClass("white")
-			}else{
-				$(".menu-toggle").addClass("white")
-			}
-    }
-	});
-</script> -->
-		</section>
-		<section class="panel" id="five">
-			<section class="pjt-con-wrap woori-my" >
-
-	<div class="black-section">
-		<div class="pjt-top" >
-			<div class="pjt-title">
-				<p class="tit pd130 fw700" data-aos="fade-up" data-aos-duration="1000">
-					<span class="fw300">우리은행</span><br>
-					마이데이터 운영
-				</p>
-				<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-					금융과 비금융을 모두 아우르는 '데이터 관리 종합 플랫폼'으로<br class="hide-pc">서<br class="hide-mobile">
-					철저히 고객 관점에서 설계한 UX·UI를 제공합니다.
-				</p>
-				<div class="tool-list" data-aos="fade-up" data-aos-duration="1000">
-					<div><img src="../assets/images/icon_ps.svg" alt=""></div>
-					<div><img src="../assets/images/icon_ai.svg" alt=""></div>
-					<div><img src="../assets/images/icon_pigma.svg" alt=""></div>
-				</div>
-			</div>
-
-			<div class="pjt-top-img" data-aos="fade-right" data-aos-duration="1000">
-				<div class="bg-area">
-					<div class="woori_bg_left">
-					<img src="../assets/images/img_woorimy_left.png" alt="" class="hide-mobile">
-					<img src="../assets/images/img_woorimy_left_mo.png" alt="" class="hide-pc">
-				</div>
-					<div class="splash-img">
-						<img src="../assets/images/img_woorimy_splash.gif" alt="">
-					</div>
-					<div class="woori_bg_right">
-					<img src="../assets/images/img_woorimy_right.png" alt="" class="hide-mobile">
-					<img src="../assets/images/img_woorimy_right_mo.png" alt="" class="hide-pc">
-				</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="pjt-con bg01">
-			<div class="phone-layout type02">
-				<div data-aos="fade-up" data-aos-duration="1000"><img
-						src="../assets/images/img_woorimy01.png" alt="" class="pjt-img"></div>
-				<div data-aos="fade-up" data-aos-duration="1000"><img
-						src="../assets/images/img_woorimy02.png" alt="" class="pjt-img"></div>
-			</div>
-		</div>
-
-		<div class="pjt-con bg02" >
-			<div class="icon-list-wrap">
-				<ul>
-					<li data-aos="fade-right" data-aos-duration="1000">
-						<img src="../assets/images/icon_woorimy01.svg" alt="">
-						<p class="txt">카페</p>
-					</li>
-					<li data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">
-						<img src="../assets/images/icon_woorimy02.svg" alt="">
-						<p class="txt">외식</p>
-					</li>
-					<li data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000">
-						<img src="../assets/images/icon_woorimy03.svg" alt="">
-						<p class="txt">편의점</p>
-					</li>
-					<li data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000">
-						<img src="../assets/images/icon_woorimy04.svg" alt="">
-						<p class="txt">대형마트</p>
-					</li>
-					<li data-aos="fade-right" data-aos-delay="1200" data-aos-duration="1000">
-						<img src="../assets/images/icon_woorimy05.svg" alt="">
-						<p class="txt">세금/공과금</p>
-					</li>
-					<li data-aos="fade-right" data-aos-delay="1500" data-aos-duration="1000">
-						<img src="../assets/images/icon_woorimy06.svg" alt="">
-						<p class="txt">저축/투자</p>
-					</li>
-					<li data-aos="fade-right" data-aos-delay="1800" data-aos-duration="1000">
-						<img src="../assets/images/icon_woorimy07.svg" alt="">
-						<p class="txt">보험</p>
-					</li>
-				</ul>
-			</div>
-			
-		</div>
-	</div>
-
-	<div class="pjt-con bg03"  data-type="white">
-		<div class="pjt-title center white">
-			<p class="tit ta-c fw700" data-aos="fade-up" data-aos-duration="1000">
-				마이데이터 마케팅
-			</p>
-			<p class="desc clr0" data-aos="fade-up" data-aos-duration="1000">
-				이벤트 및 프로모션의 제공은 즉시성, 지속성, 단순성, <br class="hide-pc">인지성을 고려하여 UX·UI(GUI) 환경을 제공합니다. <br>
-				고객의 니즈가 반영된 콘텐츠 큐레이션을 통해 긍정적인 <br class="hide-pc">경험과 이를 바탕한 지속적인 참여가 가능하게 합니다.
-			</p>
-		</div>
-		<div class="phone-layout">
-			<div data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000"><img
-					src="../assets/images/img_woorimy03.png" alt="" class="pjt-img"></div>
-			<div data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000"><img
-					src="../assets/images/img_woorimy04.png" alt="" class="pjt-img"></div>
-			<div class="hide-mobile" data-aos="fade-left" data-aos-delay="900" data-aos-duration="1000"><img
-					src="../assets/images/img_woorimy05.png" alt="" class="pjt-img"></div>
-		</div>
-	</div>
-</section>
-
-
-		</section>
-		<section class="panel" id="six">
-			<section class="pjt-con-wrap woori-certi">
-	<div class="pjt-top-full" data-type="white">
-		<div class="pjt-title center white">
-			<p class="tit" data-aos="fade-up" data-aos-duration="1000">
-				<span>우리은행 사설인증 구축</span><br>
-				<strong>우리WON인증</strong>
-			</p>
-			<p class="desc hide-pc" data-aos="fade-up" data-aos-duration="1000">
-				단순하게, 명쾌하게, 가치있게 디앤디모바일은 <br>
-				스스로의 긍정적 경험을 제공합니다.
-			</p>
-		</div>
-		<div class="pjt-img-wrap hide-pc" data-aos="fade-up" data-aos-duration="1000">
-			<img src="../assets/images/bg_wooricerti_phone_mo.png" alt="우리은행 사설인증 이미지" class="">
-		</div>
-	</div>
-
-	<div class="pjt-con">
-		<div class="pjt-title center">
-			<p class="tit fw700" data-aos="fade-up" data-aos-duration="1000">Design Concept</p>
-			<p class="desc" data-aos="fade-up" data-aos-duration="1000">
-				인증 서비스를 쉽고 빠르게 할 수 있도록 설계하였으며, 시장 <br class="hide-pc">환경에 맞춰 유연하게 대처할 수 있도록 확장이 용이하게 구성<br class="hide-pc">합니다.<br class="hide-mobile">
-				고객 편의성 및 경쟁력을 강화로 종합서비스 시너지를 <br class="hide-pc">창출합니다.
-			</p>
-		</div>
-
-		<div class="phone-layout type02">
-			<div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000"><img
-					src="../assets/images/img_wooricerti01.png" alt="" class="pjt-img"></div>
-			<div data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img
-					src="../assets/images/img_wooricerti02.png" alt="" class="pjt-img"></div>
-		</div>
-	</div>
-</section>
-		</section>
-		<section class="panel" id="four">
-			<section class="pjt-con-wrap woori-open" data-type="white">
-	<div class="pjt-top-full" >
-		<div class="pjt-title center white" data-aos="fade-left" data-aos-duration="1000">
-			<p class="tit fw700">
-				<span class="fw300">우리은행</span> <br>
-				오픈뱅킹 시스템
-			</p>
-			<p class="desc">
-				우리은행의 브랜드 색상을 적용하고 고해상도의 깔끔한 이미지와 아이콘을 배치해 모던한 분위기의 디자인 요소를 적용합니다.
-			</p>
-		</div>
-
-		<div class="pjt-top-img" data-aos="fade-right" data-aos-duration="1000">
-			<img src="../assets/images/img_wooriopen_splash.png" alt="우리은행 오픈뱅킹 시스템 이미지" class="">
-		</div>
-	</div>
-
-	<div class="pjt-con" >
-		<div class="pjt-title center white">
-			<p class="tit fw700" data-aos="fade-right" data-aos-duration="1000">Design Concept</p>
-			<p class="desc clr0" data-aos="fade-right" data-aos-duration="1000">
-				위비 APP의 브랜드 Identity가 일관성 있게 적용될 수 있도록 <br class="hide-pc">디자인 시스템을 정리하고 UI를 직관적으로 설계합니다.<br>
-				복잡한 기능을 사용자가 편리하게 사용할 수 있도록 UI·GUI <br class="hide-pc">환경을 제공합니다.
-			</p>
-		</div>
-		<div class="phone-layout bg">
-			<div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000"><img
-					src="../assets/images/img_wooriopen01.png" alt="" class="pjt-img">
-			</div>
-		</div>
-
-		<div class="phone-layout">
-			<div data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000"><img
-					src="../assets/images/img_wooriopen02.png" alt="" class="pjt-img">
-			</div>
-			<div data-aos="fade-right" data-aos-delay="600" data-aos-duration="1000"><img
-					src="../assets/images/img_wooriopen03.png" alt="" class="pjt-img">
-			</div>
-			<div class="hide-mobile" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000"><img
-					src="../assets/images/img_wooriopen04.png" alt="" class="pjt-img"></div>
-		</div>
-	</div>
-</section>
-
-<!-- <script>
-	$(window).scroll(function () {
-		let scroll = $(window).scrollTop();
-		let articleTop = $(".woori-open .pjt-con").offset().top;
-		let articleBottom = articleTop + $(".woori-open .pjt-con").outerHeight();
-
-		let articleTop2 = $(".woori-open .pjt-top-full").offset().top;
-		let articleBottom2 = articleTop2 + $(".woori-open .pjt-top-full").outerHeight();
-
-		if (scroll >= articleTop2 && scroll < articleBottom2) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".num-box").addClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white')
-		}
-
-		if (scroll >= articleTop && scroll < articleBottom) {
-			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".num-box").addClass('white');
-			$(".btn-top").find('path:first-child').attr('fill', 'white');
-			$(".btn-top").find('path:last-child').attr('stroke', 'black');
-			$(".quick_btn").addClass('white')
-		}
-
-		var header = $("header");
-		var screenWidth = $(window).width();
-		if (screenWidth < 768) {
-			if($(header).hasClass("active") == true) {
-				$(".menu-toggle").removeClass("white")
-			}else{
-				$(".menu-toggle").addClass("white")
-			}
-		}
-	});
-</script> -->
 		</section>
 		<!-- footer -->
 <div class="footer">

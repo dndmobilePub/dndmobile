@@ -259,12 +259,14 @@ function setActive(link) {
         document.querySelector(".main_logo").classList.add('white');
         document.querySelector(".top-nav").classList.add('white');
         document.querySelector("html").classList.add('bg-black');
+        document.querySelector(".layer-close").classList.add('white');
     } else {
         document.querySelector(".main-indicator-wrap").classList.remove('white');
         document.querySelector(".menu-toggle").classList.remove('white');
         document.querySelector(".main_logo").classList.remove('white');
         document.querySelector(".top-nav").classList.remove('white');
         document.querySelector("html").classList.remove('bg-black');
+        document.querySelector(".layer-close").classList.remove('white');
     }
 
     // 화면 너비가 768px보다 작을 경우

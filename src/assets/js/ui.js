@@ -1,4 +1,16 @@
-AOS.init();
+$(document).ready(function(){
+    AOS.init();
+
+    $(window).scroll(function() {
+        var elemTop = $('.pjt-con-wrap').offset().top;
+        var scrollTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        if (scrollTop + windowHeight > elemTop) {
+          AOS.refresh();
+        }
+      });
+  });
 
 /**
  * ==============================+
@@ -259,12 +271,18 @@ function setActive(link) {
         document.querySelector(".main_logo").classList.add('white');
         document.querySelector(".top-nav").classList.add('white');
         document.querySelector("html").classList.add('bg-black');
+        if (document.querySelector(".layer-header")) {
+            document.querySelector(".layer-header").classList.add('white');
+        }
     } else {
         document.querySelector(".main-indicator-wrap").classList.remove('white');
         document.querySelector(".menu-toggle").classList.remove('white');
         document.querySelector(".main_logo").classList.remove('white');
         document.querySelector(".top-nav").classList.remove('white');
         document.querySelector("html").classList.remove('bg-black');
+        if (document.querySelector(".layer-header")) {
+            document.querySelector(".layer-header").classList.remove('white');
+        }
     }
 
     // 화면 너비가 768px보다 작을 경우
@@ -272,7 +290,8 @@ function setActive(link) {
     var screenWidth = $(window).width();
     if (screenWidth < 768) {
         if($(header).hasClass("active") == true) {
-            $(".menu-toggle").removeClass("white")
+            $(".menu-toggle").removeClass("white");
+            $(".layer-header").removeClass("white");
         }
     }
 

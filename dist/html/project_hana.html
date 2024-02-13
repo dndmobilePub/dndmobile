@@ -113,11 +113,13 @@
 </section>
 <script>
 
-	var swiper = new Swiper(".phone-display", {
+	var swiperHana = new Swiper(".phone-display", {
 		autoplay: {
 			delay: 3000
 		},
 		slidesPerView: 3,
+		observer : true,
+		observeParents : true,
 		loop:true,
 		centeredSlides: true, 
 		loopAdditionalSlides : 1,  

@@ -212,6 +212,7 @@ setTimeout(function(){
 			$(".main_logo").addClass('white');
 			$(".top-nav").addClass('white');
 			$(".quick_btn").addClass('white');
+			$(".layer-close").addClass('white');
 		} 
 		
 	}
@@ -233,12 +234,14 @@ const scrollEvent = () => {
                 $(".main_logo").addClass('white');
                 $(".top-nav").addClass('white');
                 $(".quick_btn").addClass('white')
+                $(".layer-close").addClass('white')
             } else {
-								//$(".main-indicator-wrap").removeClass("white");
-								$(".menu-toggle").removeClass('white');
-								$(".main_logo").removeClass('white');
-								$(".top-nav").removeClass('white');
-								$(".quick_btn").removeClass('white')
+				//$(".main-indicator-wrap").removeClass("white");
+				$(".menu-toggle").removeClass('white');
+				$(".main_logo").removeClass('white');
+				$(".top-nav").removeClass('white');
+				$(".quick_btn").removeClass('white')
+				$(".layer-close").removeClass('white')
             }
             
         })
