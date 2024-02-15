@@ -8,7 +8,7 @@
 	right: 59px;
 	bottom: 133px;
 	width: 45px;
-	height: 160px;
+	height: 124px;
 	z-index: 1;
 
 	&::after {
@@ -314,8 +314,8 @@
 
 		//메인 화살표 애니메이션
 		.arrow {
-			position:relative;
-			top: -100px;
+			position:absolute;
+			@include vw-convert-pc(bottom, 100);
 			left: 50%;
 			transform: translate(-50%, -50%);
 			transform: rotate(0deg);
@@ -1047,42 +1047,41 @@
 		}
 
 		.pjt-con {
-			@include vw-convert-pc(padding-top, 100);
+			@include vw-convert-pc(padding-top, 0);
 
 			.pjt-con-full {
-				@include vw-convert-pc(padding, 60 0 70);
-				background: url(../images/bg_abl.png) no-repeat center top/ contain;
+				@include vw-convert-pc(padding, 130 0 140);
+				background: url(../images/bg_woori_mz.png) no-repeat center top/ cover;
 				text-align: center;
 
 				.lottie-box {
 					width: 50%;
+					@include vw-convert-pc(width, 1052);
 					margin: 0 auto;
 				}
 
-				&.opct-bf {
+				&.bg-gradient {
 					position: relative;
 					@include vw-convert-pc(height, auto);
-					@include vw-convert-pc(margin-top, 182);
-					@include vw-convert-pc(padding, 0);
-					background: #DADBFF;
-	
-					&::before {
-						content: '';
-						position: absolute;
-						top: 0; left: 0;
-						z-index: 1;
-						display: block;
-						width: 100%;
-						@include vw-convert-pc(height, 112);
-						background: linear-gradient(to bottom, #fff, transparent);
+					@include vw-convert-pc(margin-top, 0);
+					@include vw-convert-pc(padding, 40 0 250);
+					background: linear-gradient(to bottom, #fff 5%, #DADBFF 40%, #DADBFF);
+
+					.phone-layout {
+						@include vw-convert-pc(gap, 40);
+
+						img {
+							max-width: 100%;
+						}
 					}
-	
 				}
 			}
 		}
 	}
 
 	&.woori-won {
+		background: url(../images/bg_woori_won2.png) no-repeat top center / cover;
+
 		.pjt-top {
 			position: relative;
 			@include vw-convert-pc(padding-top, 164);
@@ -1096,7 +1095,7 @@
 				@include vw-convert-pc(top, 170);
 				right: 0;
 				z-index: 2;
-				@include vw-convert-pc(width, 1200);
+				@include vw-convert-pc(width, 1133);
 				@include vw-convert-pc(padding, 95 244 0 0);
 				background: url(../images/bg_woori_won_waterdrop.png) no-repeat top center/ cover;
 				background-size: auto 87%;
@@ -1105,8 +1104,7 @@
 		}
 
 		.pjt-con {
-			@include vw-convert-pc(padding-top, 236);
-			background: url(../images/bg_woori_won.png) no-repeat top center/ cover;
+			@include vw-convert-pc(padding-top, 200);
 
 			.pjt-step-wrap {
 				display: flex;
@@ -1114,7 +1112,7 @@
 				gap: 30px;
 				align-items: center;
 				justify-content: space-between;
-				@include vw-convert-pc(margin, 100 auto 0);
+				@include vw-convert-pc(margin, 0 auto);
 
 				.step-box {
 					@include vw-convert-pc(width, 320);
@@ -1155,25 +1153,17 @@
 				}
 			}
 
-
 			.pjt-con-full {
 				position: relative;
 				@include vw-convert-pc(padding, 160 175 250);
 
-				.pc-layout {
-					position: relative;
-					@include vw-convert-pc(width, 1263);
-					@include vw-convert-pc(padding-bottom, 139);
-
-				}
-
 				.phone-layout {
-					gap: 0;
-					position: absolute;
-					bottom: 0; right: 0;
-					z-index: 1;
-					@include vw-convert-pc(width, 1020);
-					@include vw-convert-pc(padding, 0 175 250 0);
+					width: 100%;
+					padding: 0;
+
+					img {
+						max-width: 100%;
+					}
 				}
 
 			}
@@ -1181,105 +1171,58 @@
 	}
 
 	&.abl {
-		.pjt-top-full {
-			@include vw-convert-pc(padding, 202 328 0);
-			background: #F1ECE9;
+		.pjt-top {
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+			height: 200vh;
+			margin-bottom: -100vh;
+			@include vw-convert-pc(padding-right, 140);
 
-			.tool-list.hide-pc {
-				display: none;
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: 1;
+				top: 0; left: 0;
+				width: 100%;
+				height: 100%;
+				background: url(../images/bg_abl_top.png) no-repeat top center/ cover;
 			}
 
-			.abl-swiper-wrap {
-				overflow: hidden;
+			.pjt-title,
+			.pjt-top-img {
 				position: relative;
-				z-index: 1;
-				@include vw-convert-pc(max-width, 1265);
-				margin: 0 auto;
-				@include vw-convert-pc(margin-top, 100);
-				@include vw-convert-pc(padding, 20);
-				@include vw-convert-pc(border-radius, 60);
-				border: 1px solid #C3AFA1;
-				background: #DAC8BB;
+				z-index: 2;
+			}
 
-				.abl-swiper {
-					overflow: hidden;
-					@include vw-convert-pc(border-radius, 45);
-					
-					.swiper-wrapper {
-						transition: all 1s ease-in-out;
-						transition-timing-function: ease-in-out;
-					}
-				}
+			.pjt-top-img {
+				@include vw-convert-pc(width, 851);
 			}
 		}
 
 		.pjt-con {
-			@include vw-convert-pc(margin-top, -192);
-			@include vw-convert-pc(padding-top, 352);
-			background-color: #fff;
+			position: relative;
+			@include vw-convert-pc(padding, 189 0 260);
+			background: url(../images/bg_abl_con.png) no-repeat top center/ cover;
 
 			.phone-layout {
 				position: relative;
-				@include vw-convert-pc(padding-top, 100);
+				z-index: 2;
 
-				&.type02 {
-					@include vw-convert-pc(padding-bottom, 160);
-
-					&> div:nth-child(2) {
-						@include vw-convert-pc(margin-top, 160);
-					}
-
-					&> div:last-child {
-						@include vw-convert-pc(margin-top, 0);
-					}
-				}
-
-				.abl-char {
-					position: absolute;
-					@include vw-convert-pc(top, 50);
-					@include vw-convert-pc(right, 10);
-					width: 45%;
-					
-					div {
-						margin: 0;
-					}
+				img {
+					max-width: 100%;
 				}
 			}
-
-			&.type02 {
-				@include vw-convert-pc(padding-top, 160);
-				@include vw-convert-pc(margin-top, 0);
-				background-color: #F1ECE9;
-
-				.phone-layout {
-					justify-content: right;
-					@include vw-convert-pc(gap, 80);
-					width: 100vw;
-					@include vw-convert-pc(padding-left, 300);
-
-					& + .phone-layout {
-						justify-content: left;
-						@include vw-convert-pc(padding, 40 231 250 0);
-					}
-
-					.pjt-img {
-						max-width: 100%;
-						border-radius: 0;
-					}
-				}
-			}
-
 		}
-
 	}
 
 	&.kica {
 		.pjt-top {
 			justify-content: space-between;
 			position: relative;
-			@include vw-convert-pc(padding, 160 160 0);
-			background: url(../images/bg_kica_top.png) no-repeat center/ cover;
-			background-position: center bottom 172px;
+			height: auto;
+			@include vw-convert-pc(padding, 160 160 600);
+			background: url(../images/bg_kica_top.png) no-repeat center top/ contain;
 
 			.pjt-title {
 				@include vw-convert-pc(padding-top, 126);
@@ -1287,151 +1230,68 @@
 
 			.pjt-top-img {
 				position: absolute;
-				bottom: 0;
+				@include vw-convert-pc(top, 160);
 				@include vw-convert-pc(right, 160);
 				@include vw-convert-pc(width, 1113);
 				@include vw-convert-pc(padding, 0);
-			}
-
-			&.type02 {
-				height: auto;
-				@include vw-convert-pc(padding, 0 0 0 160);
-				background: url(../images/bg_kica03.png) no-repeat center top/ cover;
-
-				.pjt-title {
-					@include vw-convert-pc(padding-top, 286);
-				}
-
-				.pjt-top-img {
-					position: relative;
-					@include vw-convert-pc(width, 1084);
-					@include vw-convert-pc(right, 0);
-				}
-				
-				&::before {
-					content: '';
-					position: absolute;
-					bottom: 0; left: 0;
-					z-index: 1;
-					display: block;
-					width: 100%;
-					@include vw-convert-pc(height, 70);
-					background: linear-gradient(to top, #fff, transparent);
-				}
-
-				.pjt-top-full {
-					display: none;
-				}
 			}
 		}
 
 		.pjt-con {
 			position: relative;
-			@include vw-convert-pc(padding-top, 226);
+			@include vw-convert-pc(margin-top, -206);
 
-			.phone-layout {
+			.pjt-con-full {
 				position: relative;
+				@include vw-convert-pc(padding, 0 286 165);
 
-				&.type-full {
-					align-items: center;
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
 					width: 100%;
-	 				@include vw-convert-pc(margin-top, 73);
-	 				@include vw-convert-pc(padding, 109 150 111);
-					background: url(../images/bg_kica_con.png) no-repeat center top/ cover;
-					text-align: center;
+					height: 43vw;
+					background: url(../images/bg_kica_con.png) no-repeat center bottom/ cover;
 				}
 
-				div .phone-box:not(:first-child){
-					@include vw-convert-pc(margin-top, 90);
-				}
-			}
-
-			&.type02 {
-				@include vw-convert-pc(padding-top, 96);
-
-				.pjt-con-full {
+				.pc-layout {
 					position: relative;
-					@include vw-convert-pc(padding, 143 286 137);
-					background: url(../images/bg_kica04.png) no-repeat center bottom/ cover;
-					background-color: linear-gradient(to bottom, #fff, #fff 50%, transparent);
+					z-index: 1;
+					@include vw-convert-pc(width, 963);
+				}
 
-					&::before {
-						content: '';
-						position: absolute;
-						top: 0; left: 0;
-						z-index: 1;
-						display: block;
-						width: 100%;
-						height: 100%;
-						background: linear-gradient(to bottom, #fff, #fff 25%, transparent);
-					}
+				.phone-layout {
+					@include vw-convert-pc(gap, 40);
+					position: absolute;
+					bottom: 0; right: 0;
+					z-index: 2;
+					@include vw-convert-pc(width, 850);
+					@include vw-convert-pc(padding, 0 346 164 0);
 
-					.pc-layout {
-						position: relative;
-						z-index: 2;
-						@include vw-convert-pc(width, 964);
-
-					}
-
-					.phone-layout {
-						@include vw-convert-pc(gap, 40);
-						position: absolute;
-						bottom: 0; right: 0;
-						z-index: 2;
-						@include vw-convert-pc(width, 1026);
-						@include vw-convert-pc(padding, 0 287 137 0);
-
-						.phone-box {
-							border-color: #F3F4F5;
-							@include vw-convert-pc(border-radius, 25);
-							@include vw-convert-pc(border-width, 8);
+					.phone-box {
+						overflow: hidden;
+						@include vw-convert-pc(border-radius, 25);
+						border: 10px solid #F3F4F5;
+						@include vw-convert-pc(border-width, 8);
+						box-shadow: 3px 3px 12px 6px rgba(0, 0, 0, 0.15);
+			
+						img {
+							max-width: 100%;
+							width: 100%;
+							border-radius: 0;
 						}
 					}
-
 				}
-			}
-		}
 
-		.phone-box {
-			overflow: hidden;
-			@include vw-convert-pc(border-radius, 35);
-			border: 10px solid #b1b9c7;
-			@include vw-convert-pc(border-width, 10);
-			box-shadow: 3px 3px 12px 6px rgba(0, 0, 0, 0.15);
-
-			img {
-				max-width: 100%;
-				width: 100%;
-				border-radius: 0;
 			}
 		}
 
 		.icon-absol {
 			position: absolute;
-
-			&.icon01 {
-				@include vw-convert-pc(width, 106);
-				@include vw-convert-pc(bottom, 116);
-				@include vw-convert-pc(left, 640);
-			}
-
-			&.icon02 {
-				@include vw-convert-pc(width, 106);
-				@include vw-convert-pc(top, -29);
-				@include vw-convert-pc(left, 379);
-			}
-
-			&.icon04 {
-				@include vw-convert-pc(width, 77);
-				@include vw-convert-pc(top, 140);
-				@include vw-convert-pc(right, 500);
-			}
-
-			&.icon03 {
-				@include vw-convert-pc(width, 87);
-				@include vw-convert-pc(top, 340);
-				@include vw-convert-pc(right, 211);
-			}
+			@include vw-convert-pc(width, 100);
+			@include vw-convert-pc(bottom, 212);
+			@include vw-convert-pc(right, 352);
 		}
 	}
 }
@@ -3054,6 +2914,10 @@
 				.pjt-title {
 					width: 100%;
 					padding-top: 0;
+
+					.desc {
+						@include vw-font-size-tb(20);
+					}
 				}
 
 				.pjt-top-img {
@@ -3066,17 +2930,20 @@
 
 			.pjt-con {
 				@include vw-convert-tb(padding-top, 0);
+			}
+		}
 
-				.pjt-title{
-					@include vw-convert-tb(padding, 50 40 0);
-		
-					.tit {
-						@include vw-font-size-tb(70);
-						@include vw-convert-tb(padding-bottom, 20);
-					}
+		&.woori-mz {
+			.pjt-top {
+				height: auto;
+			}
 
-					.desc {
-						@include vw-font-size-tb(20);
+			.pjt-con {
+				.pjt-con-full {
+					@include vw-convert-tb(padding, 100 0);
+
+					&.bg-gradient {
+						@include vw-convert-tb(padding, 100 0);
 					}
 				}
 			}
@@ -3084,21 +2951,23 @@
 
 		&.woori-won {
 			.pjt-top {
+				@include vw-convert-tb(padding-bottom, 0);
+
 				.pjt-top-img {
-					@include vw-convert-tb(top, 10);
-					@include vw-convert-tb(right, 50);
+					@include vw-convert-tb(top, 0);
+					@include vw-convert-tb(right, 100);
 				}
 			}
 
 			.pjt-con {
-				@include vw-convert-tb(padding-top, 100);
-				@include vw-convert-tb(margin-top, -50);
+				@include vw-convert-tb(padding-top, 0);
+				@include vw-convert-tb(margin-top, 0);
 
 				.pjt-step-wrap {
 					@include vw-convert-tb(gap, 10);
 					align-items: stretch;
 					width: 100%;
-					@include vw-convert-tb(padding, 80 48);
+					@include vw-convert-tb(padding, 80 100 0);
 	
 					.step-box {
 						width: 25%;
@@ -3111,115 +2980,54 @@
 						align-items: center;
 					}
 				}
+
+				.pjt-con-full {
+					@include vw-convert-tb(padding, 100 80);
+
+				}
 			}
 		}
 
 		&.abl {
-			.pjt-top-full {
-				.abl-swiper-wrap {
-					z-index: 2;
+			.pjt-top {
+				height: 93vw;
+				margin-bottom: -45vw;
+
+				.pjt-title {
+					.tit {
+						white-space: nowrap;
+					}
 				}
 			}
 
 			.pjt-con {
-				position: relative;
-				z-index: 1;
-				@include vw-convert-tb(padding-top, 190);
-				@include vw-convert-tb(margin-top, -90);
-				background: #fff;
-
-				.pjt-title{
-					@include vw-convert-tb(padding, 0 40);
-				}
+				padding: 0;
 
 				.pjt-con-full {
-					@include vw-convert-tb(margin-top, 0);
-					@include vw-convert-tb(padding, 116 40 100);
-
-					.phone-layout.type02 {
-						padding: 0;
-
-						.abl-char {
-							z-index: 1;
-							@include vw-convert-tb(top, -80);
-							@include vw-convert-tb(right, 50);
-							width: 35%;
-
-						}
-					}
-				}
-
-				&.type02 {
-					.pjt-con-full {
-						@include vw-convert-tb(padding, 80 0 100 40);
-					}
+					@include vw-convert-tb(padding, 80 40 120);
 				}
 			}
 		}
 
 		&.kica {
 			.pjt-top {
-				background-position: center;
-				background-size: cover;
-				@include vw-convert-tb(padding-bottom, 80);
+				@include vw-convert-tb(padding-bottom, 380);
 
 				.pjt-top-img {
 					right: 0;
 				}
-
-				&.type02 {
-					.pjt-title {
-						@include vw-convert-tb(padding-top, 90);
-					}
-
-					.pjt-top-img {
-						@include vw-convert-tb(width, 1000);
-					}
-				}
 			}
 
 			.pjt-con {
-				@include vw-convert-tb(padding-top, 50);
-				@include vw-convert-tb(margin-top, 0);
-
-				.phone-layout {
-					&.type-full {
-						@include vw-convert-tb(padding, 46 58 190);
-					}
-				}
-
-				&.type02 {
-					margin-top: 0;
-					@include vw-convert-tb(padding-top, 44);
-
-					.pjt-title {
-						@include vw-convert-tb(padding, 50 40 52);
-					}
-
-					.pjt-con-full {
-						@include vw-convert-tb(padding, 38 58 100);
-
-						&::before {
-							background: rgba(255,255,255,.5);
+				@include vw-convert-pc(margin-top, -206);
+				
+				.pjt-con-full {
+					.phone-layout {
+						.phone-box {
+							@include vw-convert-tb(border-radius, 24);
+							@include vw-convert-tb(border-width, 8);
+							box-shadow: 3px 3px 8px 5px rgba(0, 0, 0, 0.1);
 						}
-
-						.pc-layout {
-							@include vw-convert-tb(width, 800);
-						}
-
-						.phone-layout {
-							align-items: flex-start;
-							@include vw-convert-tb(width, 800);
-							@include vw-convert-tb(padding, 0 100 100 0);
-
-							.phone-box {
-								margin-top: 0;
-								border-color: #fff;
-								@include vw-convert-tb(border-width, 8);
-								@include vw-convert-tb(border-radius, 30);
-							}
-						}
-
 					}
 				}
 			}
@@ -3233,31 +3041,6 @@
 					@include vw-convert-tb(bottom, 40);
 					@include vw-convert-tb(left, 200);
 					transform: rotate(45deg);
-				}
-				&.icon04 {
-					@include vw-convert-tb(width, 58);
-					@include vw-convert-tb(top, -100);
-					@include vw-convert-tb(right, 80);
-				}
-				&.icon03 {
-					@include vw-convert-tb(width, 58);
-					bottom: 0;
-					@include vw-convert-tb(top, 40);
-					@include vw-convert-tb(right, 50);
-				}
-			}
-
-			.phone-box {
-				@include vw-convert-tb(border-radius, 36);
-				border: 12px solid #fff;
-				@include vw-convert-tb(border-width, 12);
-				background: #fff;
-				box-shadow: 3px 3px 8px 5px rgba(0, 0, 0, 0.1);
-
-				img {
-					max-width: 100%;
-					width: 100%;
-					border-radius: 0;
 				}
 			}
 		}
@@ -3330,7 +3113,7 @@
 	.pjt-con-wrap{
 		&.intro-wrap{
 			.arrow{
-				@include vw-convert-mo(top, -120);
+				@include vw-convert-mo(bottom, 150);
 
 				span{
 					width: 5vw;
@@ -4183,10 +3966,22 @@
 		&.woori-won,
 		&.abl,
 		&.kica {
-			.pjt-con {
+			.pjt-top {
+				@include vw-convert-mo(padding, 0);
+
 				.pjt-title {
+					width: 100%;
+					@include vw-convert-mo(padding, 60 40 0);
+
 					.tit {
-						@include vw-font-size-mo(40);
+						padding-top: 0;
+						@include vw-convert-mo(padding, 0 0 32 0);
+						@include vw-font-size-mo(56);
+						font-weight: 900;
+
+						span {
+							line-height: 1.42;
+						}
 					}
 
 					.desc {
@@ -4199,57 +3994,23 @@
 		&.woori-mz {
 			.pjt-top {
 				height: auto;
-				@include vw-convert-mo(padding, 0);
-
-				.pjt-title {
-					width: 100%;
-					@include vw-convert-mo(padding, 60 40 0);
-					
-					.tit{
-						padding-top: 0;
-						@include vw-convert-mo(padding, 0 0 32 0);
-						@include vw-font-size-mo(56);
-						font-weight: 900;
-
-						span {
-							line-height: 1.42;
-						}
-					}
-				}
-
-				.pjt-top-img {
-					position: relative;
-					width: 100%;
-					@include vw-convert-mo(margin-top, 0);
-					padding: 0;
-				}
 			}
 
 			.pjt-con {
-				@include vw-convert-mo(padding-top, 0);
-
-				.pjt-title{
-					@include vw-convert-mo(padding, 50 40 0);
-				}
-
 				.pjt-con-full {
-					@include vw-convert-mo(margin-top, 0);
-					@include vw-convert-mo(padding, 108 0 156);
-					background: url(../images/bg_abl_m.png) no-repeat center top/ cover;
+					@include vw-convert-mo(padding, 100 0 80);
+					background: url(../images/bg_woori_mz_m.png) no-repeat center top/ cover;
 
 					.lottie-box {
 						width: 100%;
 					}
 
-					&.opct-bf {
-					@include vw-convert-mo(margin-top, 28);
-						overflow: hidden;
-						margin-top: 0;
+					&.bg-gradient {
+						padding: 0;
 
-						div {
-							position: relative;
-							right: 16vw;
-							width: 192vw;
+						.phone-layout {
+							@include vw-convert-mo(gap, 40);
+							@include vw-convert-mo(padding, 150 100 100);
 						}
 					}
 				}
@@ -4257,30 +4018,23 @@
 		}
 
 		&.woori-won {
+			position: relative;
+			background: url(../images/bg_woori_won2.png) no-repeat top right / cover;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0; right: 0;
+				z-index: -1;
+				width: 100%;
+				height: 50vw;
+				background-color: #DADBFF;
+			}
+
 			.pjt-top {
-				height: auto;
-				@include vw-convert-mo(padding, 0 40 0);
-
-				.pjt-title {
-					width: 100%;
-					@include vw-convert-mo(padding-top, 52);
-					
-					.tit{
-						padding-top: 0;
-						@include vw-convert-mo(padding, 0 0 32 0);
-						@include vw-font-size-mo(56);
-						font-weight: 900;
-
-						span {
-							line-height: 1.42;
-						}
-					}
-				}
-
 				.pjt-top-img {
 					position: relative;
-					top: 0;
-					z-index: 1;
+					top: 0; right: 0;
 					width: 100%;
 					@include vw-convert-mo(padding, 80 0 0);
 					background-size: auto 84%;
@@ -4289,25 +4043,14 @@
 			}
 
 			.pjt-con {
-				@include vw-convert-mo(padding-top, 250);
-				@include vw-convert-mo(margin-top, -170);
-				background-image: url(../images/bg_woori_won2.png);
-				background-position: top right;
-
-				.pjt-title{
-					@include vw-convert-mo(padding, 50 40 0);
-
-					.desc {
-						color: #E0E0E0;
-					}
-				}
+				@include vw-convert-mo(padding-top, 50);
 
 				.pjt-step-wrap {
 					flex-direction: column;
 					align-items: center;
 					@include vw-convert-mo(gap, 24);
 					width: 100%;
-					@include vw-convert-mo(padding, 80 48);
+					@include vw-convert-mo(padding, 80);
 
 					.step-box {
 						display: flex;
@@ -4326,10 +4069,11 @@
 							text-align: left;
 
 							p {
-								@include vw-convert-mo(font-size, 30);
+								@include vw-convert-mo(font-size, 28);
+								@include vw-convert-mo(line-height, 36);
 							
 								&.tit {
-									@include vw-convert-mo(font-size, 36);
+									@include vw-convert-mo(font-size, 32);
 								}
 							}
 						}
@@ -4342,8 +4086,7 @@
 				}
 
 				.pjt-con-full {
-					@include vw-convert-mo(margin-top, 0);
-					@include vw-convert-mo(padding, 80 54 120);
+					@include vw-convert-mo(padding, 60 80 120);
 
 					.pc-layout {
 						@include vw-convert-mo(padding-bottom, 122);
@@ -4359,209 +4102,65 @@
 		}
 
 		&.abl {
-			.pjt-top-full {
+			.pjt-top {
+				display: block;
 				height: auto;
-				@include vw-convert-mo(padding, 0 40 0);
+				margin-bottom: 0;
 
 				.pjt-title {
 					width: 100%;
-					@include vw-convert-mo(padding-top, 52);
-					
-					.tit{
-						padding-top: 0;
-						@include vw-convert-mo(padding, 0 0 32 0);
-						@include vw-font-size-mo(56);
-						font-weight: 900;
 
-						span {
-							line-height: 1.42;
-						}
-					}
 				}
-
-				.tool-list.hide-pc {
-					display: flex;
-				}
-
 				.pjt-top-img {
+					position: relative;
+					top: 0; right: 0;
 					width: 100%;
-					@include vw-convert-mo(padding, 80 0 0);
-				}
-
-				.abl-swiper-wrap {
-					@include vw-convert-mo(margin-top, 80);
+					@include vw-convert-mo(padding, 0 40 40);
 				}
 			}
 
 			.pjt-con {
-				position: relative;
-				z-index: 1;
-				@include vw-convert-mo(padding-top, 190);
-				@include vw-convert-mo(margin-top, -90);
-				background: #fff;
-
-				.pjt-title{
-					@include vw-convert-mo(padding, 0 40);
-				}
+				@include vw-convert-mo(margin-top, -150);
 
 				.pjt-con-full {
-					@include vw-convert-mo(margin-top, 0);
-					@include vw-convert-mo(padding, 116 40 100);
-
-					.phone-layout.type02 {
-						padding: 0;
-
-						.abl-char {
-							z-index: 1;
-							@include vw-convert-mo(top, -80);
-							@include vw-convert-mo(right, 20);
-							width: 40%;
-
-						}
-					}
-				}
-
-				.hide-mobile {
-					display: none !important;
-				}
-
-				&.type02 {
-					.pjt-con-full {
-						@include vw-convert-mo(padding, 80 0 100 40);
-					}
+					@include vw-convert-mo(padding, 80 80 120);
 				}
 			}
 		}
 
 		&.kica {
-			background: url(../images/bg_kica05.png) no-repeat center top/ contain;
-
 			.pjt-top {
-				background-image: none;
-				@include vw-convert-mo(padding, 0 40 0);
-
-				.pjt-title {
-					@include vw-convert-mo(padding-top, 52);
-					
-					.tit{
-						padding-top: 0;
-						@include vw-convert-mo(padding, 0 0 32 0);
-						@include vw-font-size-mo(56);
-						font-weight: 900;
-
-						span {
-							line-height: 1.42;
-						}
-					}
-				}
+				@include vw-convert-mo(padding-bottom, 200);
+				background-size: cover;
 
 				.pjt-top-img {
-					position: relative;
-					top: 0; right: auto;
-					width: 100%;
-					@include vw-convert-mo(padding, 80 0 0);
+					top: 0;
+					@include vw-convert-mo(padding, 40 0 40);
 
 					#lottie-kica-top {
 						width: 135%;
 						margin-left: -35%;
 					}
 				}
-
-				&.type02 {
-					@include vw-convert-mo(padding, 0 0 0);
-					background-position: bottom right 16%;
-
-					&::before {
-						z-index: 0;
-						height: 100%;
-						background: linear-gradient(to bottom, #fff, transparent);
-					}
-
-					.pjt-title {
-						@include vw-convert-mo(padding, 52 40 60);
-					}
-
-					.pjt-top-full {
-						display: block;
-						@include vw-convert-mo(padding, 48 80 130);
-
-						.phone-layout {
-							@include vw-convert-mo(gap, 26);
-							position: absolute;
-							@include vw-convert-mo(right, 80);
-							@include vw-convert-mo(bottom, 100);
-							width: 45%;
-							padding: 0;
-
-							.phone-box {
-								margin-top: 0;
-								@include vw-convert-mo(border-width, 8);
-								@include vw-convert-mo(border-radius, 20);
-								border-color: #F3F4F5;
-								background-color: #F3F4F5;
-							}
-						}
-
-					}
-				}
 			}
 
 			.pjt-con {
-				@include vw-convert-mo(padding-top, 250);
-				@include vw-convert-mo(margin-top, -170);
+				@include vw-convert-mo(margin-top, -150);
 
-				.pjt-title{
-					position: relative;
-					@include vw-convert-mo(padding, 50 40 50);
-					background: #fff;
-				}
+				.pjt-con-full {
+					@include vw-convert-mo(padding, 30 60 150);
 
-				.phone-layout {
-					&.type-full {
+					.phone-layout {
+						position: relative;
 						align-items: flex-start;
-						margin-top: 0;
-						@include vw-convert-mo(padding, 46 58 190);
-						background: none;
-	
-						.phone-box:not(.hide-pc){
-							@include vw-convert-mo(margin-top, 78);
+						width: 100%;
+						padding: 0;
+
+						.phone-box {
+							border-color: #fff;
+							@include vw-convert-mo(border-width, 10);
+							@include vw-convert-mo(border-radius, 30);
 						}
-					}
-				}
-
-				&.type02 {
-					margin-top: 0;
-					@include vw-convert-mo(padding-top, 44);
-
-					.pjt-title {
-						@include vw-convert-mo(padding, 50 40 52);
-					}
-
-					.pjt-con-full {
-						@include vw-convert-mo(padding, 38 58 204);
-
-						&::before {
-							background: rgba(255,255,255,.5);
-						}
-
-						.phone-layout {
-							position: relative;
-							align-items: flex-start;
-							width: 100%;
-							padding: 0;
-
-							.phone-box {
-								margin-top: 0;
-								border-color: #fff;
-								@include vw-convert-mo(border-width, 8);
-								@include vw-convert-mo(border-radius, 30);
-
-								&:last-child {
-									@include vw-convert-mo(margin-top, 86);
-								}
-							}
-						}
-
 					}
 				}
 			}

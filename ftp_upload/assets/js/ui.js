@@ -1,4 +1,16 @@
-AOS.init();
+$(document).ready(function(){
+    AOS.init();
+
+    $(window).scroll(function() {
+        var elemTop = $('.pjt-con-wrap').offset().top;
+        var scrollTop = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        if (scrollTop + windowHeight > elemTop) {
+          AOS.refresh();
+        }
+    });
+});
 
 /**
  * ==============================+
@@ -250,6 +262,14 @@ links.forEach((a, index) => {
     });
 });
 
+/* document.addEventListener('wheel', function(e) {
+    if (e.deltaY > 0) {
+      gsap.to(window, {duration: 1, scrollTo: {y: '+=' + window.innerHeight, offsetY: 0}});
+    } else {
+      gsap.to(window, {duration: 1, scrollTo: {y: '-=' + window.innerHeight, offsetY: 0}});
+    }
+}); */
+
 function setActive(link) {
     links.forEach(el => el.classList.remove("active"));
     link.classList.add("active");
@@ -258,15 +278,19 @@ function setActive(link) {
         document.querySelector(".menu-toggle").classList.add('white');
         document.querySelector(".main_logo").classList.add('white');
         document.querySelector(".top-nav").classList.add('white');
-        document.querySelector("html").classList.add('bg-black');
-        document.querySelector(".layer-close").classList.add('white');
+        /* document.querySelector("html").classList.add('bg-black'); */
+        if (document.querySelector(".layer-header")) {
+            document.querySelector(".layer-header").classList.add('white');
+        }
     } else {
         document.querySelector(".main-indicator-wrap").classList.remove('white');
         document.querySelector(".menu-toggle").classList.remove('white');
         document.querySelector(".main_logo").classList.remove('white');
         document.querySelector(".top-nav").classList.remove('white');
-        document.querySelector("html").classList.remove('bg-black');
-        document.querySelector(".layer-close").classList.remove('white');
+        /* document.querySelector("html").classList.remove('bg-black'); */
+        if (document.querySelector(".layer-header")) {
+            document.querySelector(".layer-header").classList.remove('white');
+        }
     }
 
     // 화면 너비가 768px보다 작을 경우
@@ -274,7 +298,8 @@ function setActive(link) {
     var screenWidth = $(window).width();
     if (screenWidth < 768) {
         if($(header).hasClass("active") == true) {
-            $(".menu-toggle").removeClass("white")
+            $(".menu-toggle").removeClass("white");
+            $(".layer-header").removeClass("white");
         }
     }
 
