@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+
+  <body>
+    <div class="pjt-wrap">
+      <div class="pjt-header-wrap">
+        <p class="pjt-title"></p>
+        <ul class="nav-swiper">
+          <li>
+            <a class="ico-prev" href="#" aria-label="이전 콘텐츠"></a>
+            <span class="visually-hidden">이전</span>
+          </li>
+          <li>
+            <a class="ico-next" href="#" aria-label="다음 콘텐츠"></a>
+            <span class="visually-hidden">다음</span>
+          </li>
+          <li>
+            <a class="ico-close" href="#" aria-label="닫기"></a>
+            <span class="visually-hidden">닫기</span>
+          </li>
+        </ul>
+      </div>
+
+      <section
+        class="pjt-con-wrap sc"
+        data-index="0"
+        data-title="SC제일은행 X DNDMOBILE"
+      >
+        <div class="pjt-copyright">
+          <div class="pjt-headcopy">
+            <div class="pjt-award">
+              <img
+                class="hide-mobile"
+                src="/dist/assets/images/logo_web_award22.png"
+              />
+            </div>
+
+            <p class="txt">
+              <span class="client">SC제일은행</span><br />
+              비즈니스 뱅킹
+            </p>
+            <p class="desc hide-mobile">
+              고객 신뢰 기반의 Look & Feel을 적용해
+              <br class="hide-mobile" />
+              새롭게 탈바꿈한 SC제일은행 '비즈니스 뱅킹’ 서비스를 구축했습니다.
+            </p>
+          </div>
+
+          <div class="pjt-summary">
+            <div class="pjt-list">
+              <h4 class="title">Award</h4>
+              <p class="info">22 웹표준 이노베이션대상</p>
+            </div>
+            <div class="pjt-list">
+              <h4 class="title">Client</h4>
+              <p class="info">Standard Chartered Bank</p>
+            </div>
+            <div class="pjt-list">
+              <h4 class="title">Categories</h4>
+              <p class="info">WEB, APP</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pjt-content">
+          <div class="img-wrap hide-mobile">
+            <img
+              src="/dist/assets/images/sc_laptop_pc.png"
+              alt="sc랩탑이미지"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(function () {
+      const $sections = $(".pjt-con-wrap");
+      const $title = $(".pjt-header-wrap .pjt-title");
+      const $navButtons = $(".nav-swiper a").not(".ico-close"); // 닫기 버튼 제외
+      let currentIndex = 0;
+
+      // section이 1개일 경우 이전/다음 버튼 비활성화
+      if ($sections.length <= 1) {
+        $navButtons.addClass("disabled");
+      }
+
+      function updateTitleByViewport(rawTitle) {
+        if (window.innerWidth <= 767) {
+          return rawTitle.split(" X ")[0]; // "JB금융그룹"
+        }
+        return rawTitle;
+      }
+
+      function showSection(index) {
+        $sections.hide().eq(index).fadeIn();
+
+        const rawTitle = $sections.eq(index).data("title"); // "JB금융그룹 X DNDMOBILE"
+        const displayTitle = updateTitleByViewport(rawTitle);
+        $title.text(displayTitle);
+      }
+
+      showSection(currentIndex);
+
+      // 다음 버튼
+      $(".ico-next").on("click", function (e) {
+        e.preventDefault();
+        if ($(this).hasClass("disabled")) return;
+
+        if (currentIndex < $sections.length - 1) {
+          currentIndex++;
+          showSection(currentIndex);
+        }
+      });
+
+      // 이전 버튼
+      $(".ico-prev").on("click", function (e) {
+        e.preventDefault();
+        if ($(this).hasClass("disabled")) return;
+
+        if (currentIndex > 0) {
+          currentIndex--;
+          showSection(currentIndex);
+        }
+      });
+
+      // 닫기 버튼
+      $(".ico-close").on("click", function (e) {
+        e.preventDefault();
+        console.log("닫기 버튼 동작");
+      });
+
+      // 리사이즈 시에도 제목 업데이트
+      $(window).on("resize", function () {
+        showSection(currentIndex);
+      });
+    });
+  </script>
+</html>

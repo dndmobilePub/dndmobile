@@ -1,0 +1,905 @@
+/*
+@media screen and (max-width:1440px) {
+
+ }
+*/
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+//new-header
+.pjt-header-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include vw-convert-pc(padding, 26 0 26 0);
+  // @include vw-convert-pc(padding-top, 26);
+  // @include vw-convert-pc(padding-bottom, 27);
+  // @include vw-convert-pc(padding-right, 40);
+  background-color: #000;
+  color: #fff;
+  @include vw-font-size-pc(20);
+  font-weight: 700;
+  z-index: 2;
+
+  // 중앙 텍스트
+}
+
+.intro-video {
+  .pjt-top-full {
+    display: flex;
+    padding: 0;
+  }
+
+  .videos-wrap {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    &.hide-mobile {
+      display: block;
+    }
+
+    &.hide-pc {
+      display: none;
+    }
+  }
+
+  .video-background {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.thumnail {
+  padding-top: 100px;
+  position: relative;
+  .pjt-top-full {
+    padding: 0;
+  }
+}
+
+.box-lst {
+  width: calc((100% - 24px) / 2);
+
+  & + .box-lst > .portfolio-item {
+    // background:red;
+  }
+
+  &-wrap {
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+    .cols {
+      display: flex;
+      justify-content: space-between;
+      width: calc((100% - 24px) / 2);
+    }
+  }
+  & > .portfolio {
+    &-item {
+      & + .portfolio-item {
+        margin-top: 24px;
+      }
+      .pf {
+        &-item {
+          position: relative;
+          &.lg {
+            height: 542px;
+          }
+          position: relative;
+          width: 100%;
+          @include vw-convert-pc(height, 382);
+
+          overflow: hidden; //
+          & > a {
+            display: block;
+          }
+
+          .thumb-label {
+            position: absolute;
+            @include vw-convert-pc(top, 32);
+            @include vw-convert-pc(left, 32);
+            color: #fff;
+            font-weight: 700;
+            @include vw-font-size-pc(24);
+            background-color: transparent;
+            padding: 0;
+
+            &.g800 {
+              color: #24262d;
+            }
+          }
+
+          &:hover,
+          &:focus {
+            border: 1px solid #1a1c23;
+            .thumb-img {
+              transform: translateY(-100%);
+              opacity: 0;
+            }
+            .thumb-btn {
+              transform: translateY(0);
+              opacity: 1;
+            }
+
+            .pf-eff {
+              transform: translateY(0);
+              cursor: default;
+            }
+          }
+        }
+        &-cont {
+          width: 100%;
+          height: 100%;
+          position: relative;
+
+          .thumb-img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+            object-fit: cover;
+          }
+
+          .thumb-btn {
+            position: absolute;
+            bottom: 32px;
+            width: 100%;
+            height: 52px;
+            background-image: url("/dist/assets/images/btn_arrow_next.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            z-index: 2;
+            cursor: pointer;
+          }
+        }
+        &-eff {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          justify-content: center;
+          text-align: center;
+          transform: translateY(100%);
+          transition: transform 0.3s ease-in-out;
+          @include vw-convert-pc(padding, 32 0 32 32);
+          cursor: pointer;
+          z-index: 1;
+        }
+        &-logo {
+          position: absolute;
+          top: 32px;
+          left: 32px;
+          width: auto;
+          height: 34px;
+          z-index: 2;
+        }
+        &-company {
+          display: flex;
+          justify-content: start;
+          @include vw-font-size-pc(24);
+          font-weight: 300;
+          color: #1a1c23;
+          @include vw-convert-pc(margin-top, 66);
+        }
+        &-desc {
+          display: flex;
+          text-align: left;
+          @include vw-font-size-pc(40);
+          line-height: 1.2;
+          font-weight: 700;
+          color: #24262d;
+          @include vw-convert-pc(margin-top, 16);
+        }
+      }
+    }
+  }
+}
+
+.pf-btn-wrap {
+  @include vw-convert-pc(width, 440);
+  @include vw-convert-pc(height, 80);
+  height: 80px;
+  border: 1px solid #24262d;
+  color: #24262d;
+  font-weight: 600;
+  @include vw-font-size-pc(24);
+  margin: 0 auto;
+  margin-top: 140px;
+
+  > .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    @include vw-font-size-pc(24);
+    &::after {
+      content: "";
+      display: block;
+      @include vw-convert-pc(width, 24);
+      @include vw-convert-pc(height, 24);
+      background-image: url(/dist/assets/images/svg/icon_arrow_24.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      @include vw-convert-pc(margin-left, 8);
+    }
+  }
+}
+
+.btm-aboutus {
+  margin-top: 280px;
+  padding-top: 0;
+  height: 100%;
+  .pjt-top-full {
+    padding: 0;
+  }
+
+  .pjt-title {
+    @include vw-font-size-pc(20);
+  }
+
+  .btm-banner-wrap {
+    width: 100%;
+    height: 100%;
+
+    .about-banner {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 360px;
+      background-image: url("/dist/assets/images/bg_aboutus_origin.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-top: 53.5px;
+      padding-left: 160px;
+      transition: transform 0.4s ease-in-out, background-image 0.2s ease-in-out;
+      // border-bottom: 1px solid #d9dad3;
+      box-sizing: border-box;
+
+      &:hover,
+      &:focus {
+        background-image: url("/dist/assets/images/bg_aboutus_active.png");
+        transform: scale(1.05);
+        // border-bottom: 1px solid #d9dad3;
+      }
+
+      .btm-title {
+        @include vw-font-size-pc(72);
+        display: flex;
+        font-weight: 600;
+        color: #fff;
+        height: 124px;
+        margin-bottom: 4px;
+        align-items: center;
+      }
+
+      .btm-txt {
+        @include vw-font-size-pc(24);
+        font-weight: 400;
+        color: #fff;
+      }
+
+      .view-more-btn {
+        color: #fff;
+        display: block;
+        height: 29px;
+        width: auto;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 48px;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 114px;
+          height: 5px;
+          background: url(/dist/assets/images/btn_arrow_next_white.png)
+            no-repeat center;
+          background-size: 100% 100%;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    &.black {
+      // transition: .3s all ease-in-out;
+      &:hover {
+        & + .btm-banner-wrap {
+          &.white {
+            .didi {
+              // transition: .3s all ease-in-out;
+              top: -230px;
+
+              video {
+                transition: 0.3s all ease-in-out;
+                width: 230px;
+                height: 230px;
+              }
+            }
+          }
+        }
+      }
+
+      .about-banner,
+      .btm-title,
+      .btm-txt,
+      .view-more-btn {
+        color: #1a1c23;
+        align-items: flex-end;
+        text-align: right;
+        transition: all 0.3s ease-in-out;
+      }
+      .about-banner {
+        background-image: none;
+        background-color: #fff;
+        padding-right: 160px;
+
+        &:hover,
+        &:focus {
+          border-bottom: 1px solid #d9dad3;
+          .btm-title {
+            color: #e30d40;
+          }
+        }
+      }
+
+      .btm-title {
+        display: flex;
+        align-items: center;
+      }
+
+      .view-more-btn {
+        &::after {
+          content: "";
+          display: block;
+          width: 114px;
+          height: 5px;
+          background: url(/dist/assets/images/btn_arrow_next_g800.png) no-repeat
+            center;
+          background-size: 100% 100%;
+          margin-top: 5px;
+          transform: scaleX(-1);
+        }
+      }
+    }
+
+    &.white {
+      position: relative;
+      border-bottom-right-radius: 32px;
+      border-bottom-left-radius: 32px;
+
+      &:hover {
+        .didi {
+          top: -230px;
+
+          video {
+            transition: 0.3s all ease-in-out;
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        z-index: -1;
+      }
+
+      .about-banner,
+      .btm-title,
+      .btm-txt,
+      .view-more-btn {
+        align-items: flex-start;
+        text-align: left;
+        color: #1a1c23;
+        transition: all 0.3s ease-in-out;
+      }
+      .about-banner {
+        // background-image: none;
+        background: #fff;
+        padding-right: 160px;
+        border-top: 1px solid #d9dad3;
+        border-bottom-right-radius: 32px;
+        border-bottom-left-radius: 32px;
+
+        &:hover,
+        &:focus {
+          // border-top:1px solid #d9dad3;
+          .btm-title {
+            color: #e30d40;
+          }
+        }
+      }
+
+      .btm-title {
+        display: flex;
+        align-items: center;
+      }
+
+      .view-more-btn {
+        &::after {
+          content: "";
+          display: block;
+          width: 114px;
+          height: 5px;
+          background: url(/dist/assets/images/btn_arrow_next_g800.png) no-repeat
+            center;
+          background-size: 100% 100%;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .didi {
+    position: absolute;
+    @include vw-convert-pc(top, -180);
+    @include vw-convert-pc(left, 127);
+    transition: 0.3s all ease-in-out;
+  }
+}
+
+//contact
+.contact-wrap {
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  background-color: #fff;
+
+  + .footer {
+    background-color: #000;
+
+    .footer-txt-wrap {
+      color: #fff;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    z-index: -1;
+  }
+  .title-wrap {
+    .contact {
+      &-txt {
+        text-align: start;
+        font-weight: 700;
+        @include vw-font-size-pc(72);
+        line-height: 1.24;
+      }
+
+      &-info {
+        display: flex;
+        // width: 100%;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .contact {
+    &-info {
+      display: flex;
+      @include vw-convert-pc(margin-top, 32);
+    }
+    &-item {
+      @include vw-font-size-pc(18);
+      font-weight: 500;
+      line-height: 1.6;
+      & + .contact-item {
+        @include vw-convert-pc(margin-left, 32);
+      }
+    }
+  }
+
+  .contact {
+    &-map {
+      width: 100%;
+      @include vw-convert-pc(height, 520);
+      @include vw-convert-pc(margin-top, 50);
+      background: #f5f5f5;
+    }
+  }
+}
+
+.pjt-con-wrap {
+  &.jb,
+  &.hyundai-card,
+  &.sc {
+    display: flex;
+    .pjt {
+      &-copyright {
+        &.white {
+          .pjt-headcopy,
+          .pjt-list {
+            color: #fff;
+          }
+        }
+      }
+      &-copyright,
+      &-content {
+        width: calc(100% / 2);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include vw-convert-pc(padding-top, 128);
+        @include vw-convert-pc(padding-bottom, 120);
+        @include vw-convert-pc(padding-left, 120);
+      }
+      &-headcopy {
+        color: #1a1c23;
+        width: 100%;
+        height: 100%;
+
+        .pjt-award {
+          padding: 0;
+          margin: 0;
+          img {
+            @include vw-convert-pc(max-width, 52);
+            @include vw-convert-pc(max-height, 72);
+          }
+        }
+        .desc {
+          @include vw-convert-pc(margin-top, 20);
+          font-weight: 400;
+          line-height: 1.6;
+          @include vw-font-size-pc(18);
+        }
+        .txt {
+          font-weight: 700;
+          line-height: 1.24;
+          @include vw-font-size-pc(76);
+          @include vw-convert-pc(padding-top, 80);
+          .client {
+            font-weight: 400;
+          }
+        }
+      }
+      &-summary {
+        color: #1a1c23;
+        font-weight: 700;
+        line-height: 1.6;
+      }
+      &-list {
+        display: flex;
+        .title {
+          @include vw-convert-pc(width, 140);
+        }
+        .info {
+          font-weight: 400;
+        }
+      }
+      &-content {
+        position: relative;
+        width: calc(100% / 2);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include vw-convert-pc(padding-top, 128);
+        @include vw-convert-pc(padding-bottom, 120);
+        @include vw-convert-pc(padding-left, 120);
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &.jb {
+    background: url(/dist/assets/images/bg_jb_top.png) no-repeat center/ cover;
+    background-position: 100%;
+
+    .pjt {
+      &-content {
+        position: relative;
+        width: calc(100% / 2);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include vw-convert-pc(padding-top, 128);
+        @include vw-convert-pc(padding-bottom, 120);
+        @include vw-convert-pc(padding-left, 120);
+
+        padding-bottom: 0;
+
+        .img-wrap {
+          position: absolute;
+          display: inline-block;
+          @include vw-convert-pc(right, 0);
+          @include vw-convert-pc(bottom, 0);
+          @include vw-convert-pc(max-width, 800);
+          @include vw-convert-pc(max-height, 800);
+          background: url(/dist/assets/images/img_jb_phone02.png) no-repeat
+            center/ cover;
+          background-position: inherit;
+        }
+      }
+    }
+  }
+
+  &.samsung-life {
+    background: url(/dist/assets/images/bg_samsunglife_pc.png) no-repeat center;
+    background-size: cover;
+    .pjt {
+      &-headcopy {
+        .txt {
+          @include vw-convert-pc(padding-top, 24);
+        }
+      }
+    }
+  }
+  &.kb-wallet {
+    background-color: #f9db6c;
+    .pjt-video {
+      @include vw-convert-pc(width, 697);
+      @include vw-convert-pc(height, 750);
+      background-color: transparent;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  &.kb-remote {
+    background-color: #fff;
+    .pjt-content {
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        background: url(/dist/assets/images/bg_kb_wallet_pc.png) no-repeat
+          center / contain;
+        z-index: 1;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.hana {
+    background-color: #fff;
+
+    .pjt {
+      &-content {
+        position: relative;
+      }
+
+      &-video {
+        @include vw-convert-pc(width, 697);
+        @include vw-convert-pc(height, 750);
+        background-color: transparent;
+        display: block;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+
+  &.woori {
+    background-color: #fff;
+    .pjt-content {
+      position: relative;
+      width: 50%;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        @include vw-convert-pc(right, 100);
+        @include vw-convert-pc(top, 160);
+        width: 65%;
+        height: 65%;
+        background: url(/dist/assets/images/bg_wooriphone_pc.png) no-repeat
+          center / contain;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .pjt-video {
+        width: 100%;
+        height: 100%;
+        scale: 1.3;
+        background-color: transparent;
+        display: block;
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+
+  &.hyundai-card {
+    background: url(/dist/assets/images/bg_hyundai_pc.png) no-repeat;
+    background-size: cover;
+    background-position: 100%;
+
+    .pjt-content {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 55%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        @include vw-convert-pc(width, 291);
+        @include vw-convert-pc(height, 369);
+        background: url(/dist/assets/images/img_hyundai_login.png) no-repeat
+          center / contain;
+        z-index: 2;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.sc {
+    background: url(/dist/assets/images/bg_sc_top.png) no-repeat center/ cover;
+    background-position: 100%;
+
+    .pjt {
+      &-content {
+        position: relative;
+        width: calc(100% / 2);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding-bottom: 0;
+
+        .img-wrap {
+          position: absolute;
+          display: inline-block;
+          width: 100%;
+
+          background-position: inherit;
+
+          &::after {
+            content: url(/dist/assets/images/bg_sc_phone_pc.png);
+            display: block;
+            position: absolute;
+            // top: 60%;// ? 이렇게 잡아도 되는지
+            // left: 85%;// ? 이렇게 잡아도 되는지
+            @include vw-convert-pc(top, 108);
+            @include vw-convert-pc(right, 352);
+          }
+
+          img {
+            position: absolute;
+            @include vw-convert-pc(width, 1200);
+            @include vw-convert-pc(height, 712);
+            @include vw-convert-pc(top, 20);
+            @include vw-convert-pc(right, 550);
+          }
+        }
+      }
+    }
+  }
+}
+
+//tb: 1440px
+@media (max-width: 1440px) {
+  .pjt-con-wrap {
+    &.jb {
+    }
+  }
+}
+
+//mo: 767px
+@media (max-width: 767px) {
+  .thumbnail {
+    border: 2px solid red;
+    padding-top: 0;
+  }
+  .pjt-con-wrap {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: calc(100vh - 56px);
+    width: 100%;
+    @include vw-convert-mo(padding, 30 10 0 0);
+    .pjt-copyright {
+      justify-content: flex-start;
+      @include vw-convert-mo(padding, 0 20);
+      .pjt-headcopy {
+        .txt {
+          padding-top: 0;
+          @include vw-convert-mo(font-size, 34);
+        }
+      }
+    }
+    .pjt-list {
+      @include vw-convert-mo(font-size, 14);
+      .title {
+        @include vw-convert-mo(width, 88);
+      }
+    }
+    .pjt-summary {
+      @include vw-convert-mo(padding, 0 20);
+    }
+    &.woori {
+      .pjt-content {
+        width: 100%;
+      }
+    }
+  }
+  .pjt-header-wrap {
+    padding: 15px 20px;
+    background-color: #fff;
+    height: 56px;
+    justify-content: flex-start;
+    .pjt-title {
+      color: #000;
+      font-size: 18px;
+    }
+  }
+
+  .box-lst-wrap {
+    flex-direction: column;
+    .cols {
+      flex-direction: row;
+      @include vw-convert-mo(padding, 20 20 0 20);
+      width: 100%;
+      gap: 10px;
+      .box-lst {
+        width: 50%;
+        .portfolio-item {
+          .pf-item {
+            height: 168px;
+            &.lg {
+              height: 230px;
+            }
+          }
+          .pf-company {
+            @include vw-convert-mo(font-size, 16);
+            @include vw-convert-mo(padding-bottom, 10);
+          }
+          .pf-desc {
+            @include vw-convert-mo(font-size, 20);
+          }
+          .thumb-label {
+            @include vw-convert-mo(font-size, 16);
+            @include vw-convert-mo(top, 16);
+            @include vw-convert-mo(left, 16);
+          }
+          & + .portfolio-item {
+            margin-top: 10px;
+          }
+        }
+      }
+      & + .cols {
+      }
+    }
+  }
+}

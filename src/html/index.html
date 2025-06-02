@@ -1,52 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-@@include('./include/head.html')
+  @@include('./include/head.html')
 
-<body>  
-	<div class="wrap main">
+  <body>
+    <div class="wrap main">
+      @@include('./include/header.html')
 
-		@@include('./include/header.html')
+      <section class="panel intro-panel" id="intro">
+        @@include('./intro_thumnail.html')
+      </section>
 
-		<div class="main-indicator-wrap">
-			<!-- DNDMOBILE -->
-			<a href="#intro" class="indi-white" class="active" id="intro-indi"></a>
-			<!-- 하나카드 -->
-			<a href="#hana"></a>
-			<!-- SC제일은행 -->
-			<a href="#two" class="indi-white"></a>
-			<!-- 우리은행 -->
-			<a href="#woori_mz"></a>
-			<!-- 우리은행 -->
-			<a href="#woori_won"></a>
-			<!-- ABL 생명 -->
-			<a href="#abl"></a>
-			<!-- 한국정보인증 -->
-			<a href="#kica"></a>
-		</div>
+      @@include('./include/footer.html')
+    </div>
 
-		<section class="panel intro-panel" id="intro">
-			@@include('./intro_dndmobile.html')
-		</section>
-		<section class="panel" id="hana">
-			@@include('./project_hana.html')
-		</section>
-		<section class="panel" id="two">
-			@@include('./project_sc.html')
-		</section>
-		<section class="panel" id="woori_mz">
-			@@include('./project_woori_mz.html')
-		</section>
-		<section class="panel" id="woori_won">
-			@@include('./project_woori_won.html')
-		</section>
-		<section class="panel" id="abl">
-			@@include('./project_abl.html')
-		</section>
-		<section class="panel" id="kica">
-			@@include('./project_kica.html')
-		</section>
-		@@include('./include/footer.html')
-	</div>
-</body>
+    <div id="projectPopup" class="popup-wrap">
+      <div class="popup-container">
+        <div class="pjt-header-wrap">
+          <h2 class="pjt-title" id="popupTitle"></h2>
+          <ul class="nav-swiper">
+            <li>
+              <button
+                class="ico-close"
+                aria-label="닫기"
+                onclick="closeProjectPopup()"
+              >
+                <span class="visually-hidden">닫기</span>
+              </button>
+            </li>
+          </ul>
+        </div>
 
+        <div class="loading" id="popupContent">프로젝트 불어 오는 곳</div>
+      </div>
+    </div>
+  </body>
 </html>

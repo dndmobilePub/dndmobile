@@ -1,30 +1,30 @@
 // gulp 및 패키지 모듈 호출
-const gulp = require('gulp');
-const fileinclude = require('gulp-file-include');
-const sourcemaps = require('gulp-sourcemaps'); 
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
-const scss = require('gulp-sass')(require('sass'));
-const postcss = require('gulp-postcss');
-const cssnano = require('cssnano');
-const autoprefixer = require('autoprefixer');
+const gulp = require("gulp");
+const fileinclude = require("gulp-file-include");
+const sourcemaps = require("gulp-sourcemaps");
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
+const rename = require("gulp-rename");
+const scss = require("gulp-sass")(require("sass"));
+const postcss = require("gulp-postcss");
+const cssnano = require("cssnano");
+const autoprefixer = require("autoprefixer");
 
-const browserSync = require('browser-sync').create(); // browser-sync 호출
+const browserSync = require("browser-sync").create(); // browser-sync 호출
 
 /**
  * ==============================+
  * @Path 정의
  * ==============================+
  */
-const src   = './src';
-const dist  = './dist';
+const src = "./src";
+const dist = "./dist";
 const paths = {
-    html: src + '/html/**/*.html',
-    image: src + '/assets/images/*',
-    font: src + '/assets/font/*',
-    js : src + '/assets/js/**/*.js',
-    scss : src + '/assets/scss/**/*.scss'
+  html: src + "/html/**/*.html",
+  image: src + "/assets/images/*",
+  font: src + "/assets/font/*",
+  js: src + "/assets/js/**/*.js",
+  scss: src + "/assets/scss/**/*.scss",
 };
 
 /**
@@ -33,19 +33,24 @@ const paths = {
  * =====================================+
  */
 
-gulp.task('fileinclude', function() {
-  return gulp.src([
+gulp.task("fileinclude", function () {
+  return gulp
+    .src([
       "./src/html/**/*.html", // ★★★★ 불러올 파일의 위치
-      "!" + "./src/html/include*" // ★★★★ 읽지 않고 패스할 파일의 위치
-  ])
-  .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-      }))
-  .pipe(gulp.dest('./dist/html')) // ★★★★ 변환한 파일의 저장 위치 지정
-  .pipe(browserSync.reload({
-    stream : true
-}));
+      "!" + "./src/html/include*", // ★★★★ 읽지 않고 패스할 파일의 위치
+    ])
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
+    .pipe(gulp.dest("./dist/html", { overwrite: true })) // ★★★★ 변환한 파일의 저장 위치 지정
+    .pipe(
+      browserSync.reload({
+        stream: true,
+      })
+    );
 });
 
 /**
@@ -53,32 +58,34 @@ gulp.task('fileinclude', function() {
  * @task : imgage 병합,압축,min 파일 생성
  * =====================================+
  */
-gulp.task('images',function() {
-  return gulp.src(paths.image)
-    .pipe(gulp.dest('dist/assets/images'))
-    .pipe(browserSync.reload({
-      stream : true
-  }));
-})
-
+gulp.task("images", function () {
+  return gulp
+    .src(paths.image)
+    .pipe(gulp.dest("dist/assets/images"))
+    .pipe(
+      browserSync.reload({
+        stream: true,
+      })
+    );
+});
 
 /**
  * =====================================+
  * @task : Script 병합,압축,min 파일 생성
  * =====================================+
  */
-gulp.task('js', function () {
-    return gulp
-        .src(paths.js)
-        .pipe(gulp.dest('dist/assets/js'))
-        .pipe(uglify())
-        .pipe(rename({suffix : ".min"}))
-        /**
-         * 스크립트 파일을 browserSync 로 브라우저에 반영
-         */
-        .pipe(browserSync.reload(
-            {stream : true}
-        ));
+gulp.task("js", function () {
+  return (
+    gulp
+      .src(paths.js)
+      .pipe(gulp.dest("dist/assets/js"))
+      .pipe(uglify())
+      .pipe(rename({ suffix: ".min" }))
+      /**
+       * 스크립트 파일을 browserSync 로 브라우저에 반영
+       */
+      .pipe(browserSync.reload({ stream: true }))
+  );
 });
 
 /**
@@ -87,9 +94,8 @@ gulp.task('js', function () {
  * ==============================+
  */
 const scssOptions = {
-  outputStyle : "expanded",
+  outputStyle: "expanded",
   sourceComments: false,
-
 };
 
 /**
@@ -98,21 +104,25 @@ const scssOptions = {
  * ==================================+
  */
 
-gulp.task('scss', function () {
-  return gulp
+gulp.task("scss", function () {
+  return (
+    gulp
       .src(paths.scss)
-      // .pipe(sourcemaps.init())
-      .pipe(scss(scssOptions).on('error', scss.logError))
+      .pipe(sourcemaps.init())
+      .pipe(scss(scssOptions).on("error", scss.logError))
       .pipe(postcss([autoprefixer()]))
       // .pipe(concat("style.css"))
       // .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('dist/assets/css'))
+      .pipe(gulp.dest("dist/assets/css"))
       /**
        * SCSS 컴파일을 수행한 후 browserSync 로 브라우저에 반영
        */
-      .pipe(browserSync.reload({
-          stream : true
-      }));
+      .pipe(
+        browserSync.reload({
+          stream: true,
+        })
+      )
+  );
 });
 
 /**
@@ -120,19 +130,19 @@ gulp.task('scss', function () {
  * @task : browserSync
  * ==============================+
  */
-gulp.task('browserSync', function (done) {
+gulp.task("browserSync", function (done) {
   browserSync.init({
     server: {
-      baseDir: "./", // ★★★★ 서버에 띄울 폴더 위치 지정 
-      directory: true
+      baseDir: "./", // ★★★★ 서버에 띄울 폴더 위치 지정
+      directory: true,
     },
     startPath: "dist/html/index.html", //첫페이지
-    browser: 'chrome',
+    browser: "chrome",
   });
-  gulp.watch('./sass/**/*.scss', scss)
+  gulp.watch("./sass/**/*.scss", scss);
   gulp.watch("./*.html").on("change", browserSync.reload);
   gulp.watch("./js/**/.js").on("change", browserSync.reload);
-  done(); 
+  done();
 });
 
 /**
@@ -140,10 +150,10 @@ gulp.task('browserSync', function (done) {
  * @task : watch 파일 변경을 감지
  * ==================================+
  */
-gulp.task('watch', function () {
-    gulp.watch(paths.html, gulp.series('fileinclude')); 
-    gulp.watch(paths.js, gulp.series('js'));
-    gulp.watch(paths.scss, gulp.series('scss'));
+gulp.task("watch", function () {
+  gulp.watch(paths.html, gulp.series("fileinclude"));
+  gulp.watch(paths.js, gulp.series("js"));
+  gulp.watch(paths.scss, gulp.series("scss"));
 });
 
 /**
@@ -151,5 +161,7 @@ gulp.task('watch', function () {
  * @task : gulp default
  * ==============================+
  */
-gulp.task('default', gulp.parallel('fileinclude','scss','js','images','watch','browserSync'));
-
+gulp.task(
+  "default",
+  gulp.parallel("fileinclude", "scss", "js", "images", "watch", "browserSync")
+);
