@@ -98,6 +98,7 @@ button{
 		align-items: center;
 		justify-content: flex-start;
 		padding: 44px 60px;
+		background:rgba(255, 255, 255, 0.8);
 
 		.top-nav{
 			.top_hide{
@@ -456,8 +457,10 @@ header {
 	z-index: 1001;
 	transition: 0.8s 0.4s cubic-bezier(0.5, 1, 0.89, 1);
 	overflow: hidden;
+	display: none;
 
 	&.on{
+		display:block;
 		height: 100vh;
 		transition-delay: 0s;
 	}
@@ -804,6 +807,43 @@ header {
 
 	//메인 헤더 추가(mobile)
 .main {
+	.logo--black{
+			a{
+				color: #000 !important;
+			}
+		}
+
+		.ico{
+			.fill-black{
+				fill: #222 !important;
+			}
+		}
+		
+		+ .menu-toggle{
+			&.white {
+				.hamburger {
+					path {
+						stroke: #222;
+					}
+				}
+			}
+			.hamburger {
+				path {
+					stroke: #222;
+				}
+			}
+			&.active{
+
+				.hamburger{
+		
+					path {
+						stroke: #fff;
+					}
+		
+				}	
+	
+			}
+		}
 
 	.active{
 
@@ -856,7 +896,7 @@ header {
 
 			path {
 				stroke-width: 0.7px;
-				stroke: #fff;
+				// stroke: #fff;
 			}
 
 		}	
@@ -915,6 +955,28 @@ header {
 
 
 	header {
+		opacity: 1;
+		transform: translateY(0%);
+		background: #fff !important;
+
+		.header {
+			&--footer {
+				.logo {
+					&--white {
+						a{
+							color: #000;
+							.ico{
+								svg{
+									path{
+										fill:#000;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 
 		&.active {
 			opacity: 1;

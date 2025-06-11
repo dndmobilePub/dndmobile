@@ -1,37 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  @@include('./include/head.html')
+<html lang="ko">
+@@include('./include/head.html')
 
-  <body>
-    <div class="wrap main">
-      @@include('./include/header.html')
+<body>
+  <div class="wrap main">
+    @@include('./include/header.html')
 
-      <section class="panel intro-panel" id="intro">
-        @@include('./intro_thumnail.html')
-      </section>
+    <section class="panel intro-panel" id="intro">
+      @@include('./intro_thumnail.html')
+    </section>
 
-      @@include('./include/footer.html')
-    </div>
+    @@include('./include/footer.html')
+  </div>
 
-    <div id="projectPopup" class="popup-wrap">
-      <div class="popup-container">
-        <div class="pjt-header-wrap">
-          <h2 class="pjt-title" id="popupTitle"></h2>
-          <ul class="nav-swiper">
-            <li>
-              <button
-                class="ico-close"
-                aria-label="닫기"
-                onclick="closeProjectPopup()"
-              >
-                <span class="visually-hidden">닫기</span>
-              </button>
-            </li>
-          </ul>
-        </div>
-
-        <div class="loading" id="popupContent">프로젝트 불어 오는 곳</div>
+  <div id="projectPopup" class="popup-wrap">
+    <div class="popup-container">
+      <div class="pjt-header-wrap">
+        <h2 class="pjt-title" id="popupTitle"></h2>
+        <ul class="nav-swiper">
+          <li>
+            <button class="ico-close" aria-label="닫기" onclick="closeProjectPopup()">
+              <span class="visually-hidden">닫기</span>
+            </button>
+          </li>
+        </ul>
       </div>
+
+      <div class="loading" id="popupContent">프로젝트 불어 오는 곳</div>
     </div>
-  </body>
+  </div>
+</body>
+<script>
+  AOS.init({
+    duration: 500,
+    once: false,
+  });
+
+  // let scrollTimeout;
+
+  // window.addEventListener('scroll', () => {
+  //   clearTimeout(scrollTimeout);
+  //   scrollTimeout = setTimeout(() => {
+  //     if (window.scrollY === 0) {
+  //       location.reload();
+  //     }
+  //   }, 200); // 200ms 후 스크롤 위치 판단
+  // });
+</script>
+
+
 </html>

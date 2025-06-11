@@ -21,7 +21,8 @@ const src = "./src";
 const dist = "./dist";
 const paths = {
   html: src + "/html/**/*.html",
-  image: src + "/assets/images/*",
+  image: src + "/assets/images/**/*", // 하위 폴더까지 포함
+  // image: src + "/assets/images/*",
   font: src + "/assets/font/*",
   js: src + "/assets/js/**/*.js",
   scss: src + "/assets/scss/**/*.scss",
@@ -60,14 +61,21 @@ gulp.task("fileinclude", function () {
  */
 gulp.task("images", function () {
   return gulp
-    .src(paths.image)
+    .src(paths.image, { buffer: true }) // 안전하게 처리
     .pipe(gulp.dest("dist/assets/images"))
-    .pipe(
-      browserSync.reload({
-        stream: true,
-      })
-    );
+    .pipe(browserSync.stream());
 });
+
+// gulp.task("images", function () {
+//   return gulp
+//     .src(paths.image)
+//     .pipe(gulp.dest("dist/assets/images"))
+//     .pipe(
+//       browserSync.reload({
+//         stream: true,
+//       })
+//     );
+// });
 
 /**
  * =====================================+

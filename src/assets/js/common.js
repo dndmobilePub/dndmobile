@@ -6,19 +6,19 @@
 const menuToggle = document.getElementById("menuToggle");
 const menuBar = gsap.timeline();
 
-menuBar.to('.bar-1', 0.5,{
-	attr:{d: "M8,2 L2,8"},
-	x:1,
+menuBar.to('.bar-1', 0.5, {
+	attr: { d: "M8,2 L2,8" },
+	x: 1,
 	ease: Power2.easeInOut
 }, 'start')
 
-menuBar.to('.bar-2', 0.5,{
+menuBar.to('.bar-2', 0.5, {
 	autoAlpha: 0
 }, 'start')
 
-menuBar.to('.bar-3', 0.5,{
-	attr:{d: "M8,8 L2,2"},
-	x:1,
+menuBar.to('.bar-3', 0.5, {
+	attr: { d: "M8,8 L2,2" },
+	x: 1,
 	ease: Power2.easeInOut
 }, 'start')
 
@@ -29,7 +29,7 @@ menuBar.to('.bar-3', 0.5,{
  * ==============================+
  */
 
-var tl = gsap.timeline({ paused: true});
+var tl = gsap.timeline({ paused: true });
 const width = window.innerWidth;
 
 //tl.to('.fullpage-menu', {
@@ -39,8 +39,8 @@ const width = window.innerWidth;
 //});
 
 tl.from('.menu-bg span', {
-	duration:0.35,
-	y:"100%",
+	duration: 0.35,
+	y: "100%",
 	stagger: 0.1,
 	ease: 'Expo.easeInOut'
 });
@@ -54,7 +54,7 @@ tl.from('.menu-bg span', {
 //     stagger: 0.1,
 //     ease: 'Expo.easeInOut'
 //   });
-  
+
 //   tl.fromTo('.logo--white .fill-black', {
 //     duration:0,
 //     fill:'#000',
@@ -64,7 +64,7 @@ tl.from('.menu-bg span', {
 //       fill:'#fff'
 //     }
 //   );
-  
+
 //   tl.fromTo('.logo--white a' , {
 //     duration: 0,
 //     color:'#000',
@@ -77,19 +77,19 @@ tl.from('.menu-bg span', {
 // }
 
 tl.from('.main-menu li a', {
-	duration:1,
-	y:"100%",
+	duration: 1,
+	y: "100%",
 	stagger: 0.2,
 	ease: 'Expo.easeInOut'
-} , "-=0.5");
+}, "-=0.5");
 
-tl.from('.main-menu li .count', {
-	duration:2,
-	y:"100%",
-	opacity:0,
-	stagger: 0.2,
-	ease: 'Expo.easeInOut'
-} , "-=1");
+// tl.from('.main-menu li .count', {
+// 	duration: 2,
+// 	y: "100%",
+// 	opacity: 0,
+// 	stagger: 0.2,
+// 	ease: 'Expo.easeInOut'
+// }, "-=1");
 
 //tl.from('.line', {
 //	duration:0.3,
@@ -108,13 +108,60 @@ tl.from('.main-menu li .count', {
 menuBar.reverse();
 tl.reverse();
 
+const $menuToggle = $('.menu-toggle');
+const $fullpageMenu = $('.fullpage-menu');
+const $html = $('html');
 
-menuToggle.addEventListener('click', function(){
-  console.dir(menuToggle);
+// Optional: GSAP Timeline 객체와 메뉴 바 제어
+// Assuming `menuBar` and `tl` are GSAP timelines or objects with `.reversed()` method
+
+$menuToggle.on('click', function () {
+	const isActive = $menuToggle.hasClass('active');
+	const willBeActive = !isActive;
+
+	// Toggle Active State
+	$menuToggle.toggleClass('active', willBeActive);
+	$fullpageMenu.toggleClass('on', willBeActive);
+	$html.toggleClass('popup-open', willBeActive);
+	$fullpageMenu.attr('aria-hidden', !willBeActive);
+
+	// GSAP Timeline Reverse
+	if (typeof menuBar?.reversed === 'function') {
+		menuBar.reversed(!menuBar.reversed());
+	}
+	if (typeof tl?.reversed === 'function') {
+		tl.reversed(!tl.reversed());
+	}
+
+	// Optional: Header Style Adjustments
+	const header = document.querySelector('header');
+	const headerFooter = document.querySelector('header .header--footer h1');
+	const headerFooterIco = document.querySelectorAll('header .header--footer h1 path');
+
+	if (willBeActive) {
+		header.style.background = 'none';
+		headerFooter?.classList.replace('logo--black', 'logo--white');
+		headerFooterIco.forEach(path => {
+			path.classList.replace('fill-black', 'fill-white');
+		});
+	} else {
+		header.style.zIndex = '10';
+		header.style.background = '#fff';
+		headerFooter?.classList.replace('logo--white', 'logo--black');
+		headerFooterIco.forEach(path => {
+			path.classList.replace('fill-white', 'fill-black');
+		});
+	}
+});
+
+
+/*
+menuToggle.addEventListener('click', function () {
+	// console.dir(menuToggle);
 	menuBar.reversed(!menuBar.reversed());
 	tl.reversed(!tl.reversed());
-  menuToggle.classList.toggle('active');
- 
+	menuToggle.classList.toggle('active');
+
 	// const header = document.querySelector('header');
 	// const headerFooter = document.querySelector('header .header--footer h1');
 	// const headerFooterIco = document.querySelectorAll('header .header--footer h1 path');
@@ -138,10 +185,21 @@ menuToggle.addEventListener('click', function(){
 });
 
 
-$(".menu-toggle").on('click', function(){
+$(".menu-toggle").on('click', function () {
+	const $toggle = $(this);
 	$('.fullpage-menu').toggleClass('on');
-})
 
+	setTimeout(() => {
+		if ($toggle.hasClass('active')) {
+			$('html').addClass('popup-open');
+			$('.fullpage-menu').attr('aria-hidden', 'false');
+		} else {
+			$('html').removeClass('popup-open');
+			$('.fullpage-menu').attr('aria-hidden', 'true');
+		}
+	}, 0);
+});
+*/
 
 /**
  * ==============================+
@@ -150,25 +208,27 @@ $(".menu-toggle").on('click', function(){
  */
 const header = document.querySelector('header');
 const layerHeader = document.querySelector('.layer-header');
+
 window.addEventListener('scroll', () => {
-	const windowScroll = window.pageYOffset;
-	if(windowScroll > header.offsetHeight) {
-		header.classList.add('active');
+  const windowScroll = window.pageYOffset;
 
-		// 화면 너비가 768px보다 작을 경우
-		var screenWidth = $(window).width();
-		if (screenWidth < 768) {
-			layerHeader.classList.remove("white");
-		}
-	} else {
-		header.classList.remove('active');
-	}
-})
+  if (windowScroll > header.offsetHeight) {
+    header.classList.add('active');
+
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 768 && layerHeader) {
+      layerHeader.classList.remove("white");
+    }
+  } else {
+    header.classList.remove('active');
+  }
+});
 
 
-$('.header--inner .top-nav .dcb .ico').hover(function(){
+
+$('.header--inner .top-nav .dcb .ico').hover(function () {
 	$(".top_hide").addClass('on');
-}, function(){
+}, function () {
 	$(".top_hide").removeClass('on');
 });
 
@@ -208,60 +268,65 @@ function topFunction() {
  * ==============================+
  */
 
-setTimeout(function(){
+setTimeout(function () {
 	const intro = document.querySelector('.intro-wrap');
-	  
-	const introObserver = (intro, introWatcher) => {
-		
-		if(intro[0].isIntersecting) {
+	if (!intro) return; // intro-wrap이 없으면 종료
+
+	const introObserver = (entries, observer) => {
+		if (entries[0].isIntersecting) {
 			$(".main-indicator-wrap").addClass("white");
-			$(".menu-toggle").addClass('white');
-			$(".main_logo").addClass('white');
-			$(".top-nav").addClass('white');
-			$(".quick_btn").addClass('white');
-			$(".layer-header").addClass('white');
-		} 
-		
-	}
-	const introObserverOptions = {threshold:0.5, rootMargin:'100px'}
-	const introWatcher = new IntersectionObserver(introObserver, introObserverOptions)
-	introWatcher.observe(intro)
-},100)
+			$(".menu-toggle").addClass("white");
+			$(".main_logo").addClass("white");
+			$(".top-nav").addClass("white");
+			$(".quick_btn").addClass("white");
+			$(".layer-header").addClass("white");
+		}
+	};
+
+	const introObserverOptions = {
+		threshold: 0.5,
+		rootMargin: '100px',
+	};
+
+	const introWatcher = new IntersectionObserver(introObserver, introObserverOptions);
+	introWatcher.observe(intro); // ✅ intro는 Element이므로 오류 없음
+}, 100);
+
 
 const scrollEvent = () => {
-    //query selectors
+	//query selectors
 	const getDataTypes = document.querySelectorAll('[data-type="white"]');
-    // intersection observer
-    const watchCallback = (getData, sectionWatcher) => {
-        getData.forEach((getData) => {
-            // console.log(getData)
-            if(getData.isIntersecting) {
-                //$(".main-indicator-wrap").addClass("white");
-                $(".menu-toggle").addClass('white');
-                $(".main_logo").addClass('white');
-                $(".top-nav").addClass('white');
-                $(".quick_btn").addClass('white')
-                $(".layer-header").addClass('white')
-            } else {
+	// intersection observer
+	const watchCallback = (getData, sectionWatcher) => {
+		getData.forEach((getData) => {
+			// console.log(getData)
+			if (getData.isIntersecting) {
+				//$(".main-indicator-wrap").addClass("white");
+				$(".menu-toggle").addClass('white');
+				$(".main_logo").addClass('white');
+				$(".top-nav").addClass('white');
+				$(".quick_btn").addClass('white')
+				$(".layer-header").addClass('white')
+			} else {
 				//$(".main-indicator-wrap").removeClass("white");
 				$(".menu-toggle").removeClass('white');
 				$(".main_logo").removeClass('white');
 				$(".top-nav").removeClass('white');
 				$(".quick_btn").removeClass('white')
 				$(".layer-header").removeClass('white')
-            }
-            
-        })
-       
-    }
-    const watchOptions = {threshold:0.4}
-    // 관찰자
-    const sectionWatcher = new IntersectionObserver(watchCallback, watchOptions)
-	
+			}
+
+		})
+
+	}
+	const watchOptions = { threshold: 0.4 }
+	// 관찰자
+	const sectionWatcher = new IntersectionObserver(watchCallback, watchOptions)
+
 	//관찰 대상
-    getDataTypes.forEach(getData => {
-        sectionWatcher.observe(getData)
-    })
+	getDataTypes.forEach(getData => {
+		sectionWatcher.observe(getData)
+	})
 }
 
 scrollEvent()

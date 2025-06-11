@@ -22,7 +22,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  @include vw-convert-pc(padding, 26 0 26 0);
+  padding:20px 0;
+  // @include vw-convert-pc(padding, 26 0 26 0);
   // @include vw-convert-pc(padding-top, 26);
   // @include vw-convert-pc(padding-bottom, 27);
   // @include vw-convert-pc(padding-right, 40);
@@ -69,6 +70,9 @@
     padding: 0;
   }
 }
+@media screen and (max-width:767px) {
+  .thumnail {padding-top: 0px;}
+}
 
 .box-lst {
   width: calc((100% - 24px) / 2);
@@ -78,6 +82,7 @@
   }
 
   &-wrap {
+    @include vw-convert-pc(padding, 0 48);
     margin: 0 auto;
     max-width: 1600px;
     display: flex;
@@ -99,7 +104,8 @@
         &-item {
           position: relative;
           &.lg {
-            height: 542px;
+            @include vw-convert-pc(height, 542);
+            // height: 542px;
           }
           position: relative;
           width: 100%;
@@ -148,7 +154,10 @@
           height: 100%;
           position: relative;
 
+          &.lnk {cursor: pointer;}
+
           .thumb-img {
+            cursor: pointer;
             width: 100%;
             height: 100%;
             display: block;
@@ -158,18 +167,30 @@
 
           .thumb-btn {
             position: absolute;
-            bottom: 32px;
-            width: 100%;
-            height: 52px;
-            background-image: url("/dist/assets/images/btn_arrow_next.png");
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
+            bottom:0;
+            width:100%;
+            height:100%;
+            //bottom: 32px;
+            //width: 100%;
+            //height: 52px;
             transform: translateY(100%);
             opacity: 0;
             transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
             z-index: 2;
             cursor: pointer;
+            &::after {
+              position: absolute;
+              // @include vw-convert-pc(right, 32);
+              // @include vw-convert-pc(bottom, 32);
+              right:32px;
+              bottom:32px;
+              display:block; content:'';
+              width:93px; height:93px;
+              background-image: url("/dist/assets/images/btn_arrow_next.png");
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: 0 100%;
+            }
           }
         }
         &-eff {
@@ -189,10 +210,13 @@
         }
         &-logo {
           position: absolute;
-          top: 32px;
-          left: 32px;
+          @include vw-convert-pc(top, 32);
+          @include vw-convert-pc(left, 32);
+          // top: 32px; left: 32px;
           width: auto;
-          height: 34px;
+          @include vw-convert-pc(height, 34);
+          // height: 34px;
+          min-height:24px;
           z-index: 2;
         }
         &-company {
@@ -201,7 +225,7 @@
           @include vw-font-size-pc(24);
           font-weight: 300;
           color: #1a1c23;
-          @include vw-convert-pc(margin-top, 66);
+          @include vw-convert-pc(margin-top, 98);
         }
         &-desc {
           display: flex;
@@ -217,29 +241,38 @@
   }
 }
 
+@media (max-width: 767px) {
+  .box-lst-wrap .cols .box-lst .portfolio-item .pf-company {margin-top: 32px;}
+
+}
+
 .pf-btn-wrap {
   @include vw-convert-pc(width, 440);
-  @include vw-convert-pc(height, 80);
-  height: 80px;
+  // @include vw-convert-pc(height, 80);
+  // height: 80px;
   border: 1px solid #24262d;
   color: #24262d;
   font-weight: 600;
-  @include vw-font-size-pc(24);
-  margin: 0 auto;
-  margin-top: 140px;
-
+  // @include vw-font-size-pc(24);
+  // height: 80px;
+  font-size:24px;
+  // margin: 0 auto;
+  // margin-top: 140px;
+  @include vw-convert-pc(margin, 140 auto 280);
   > .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    @include vw-font-size-pc(24);
+    width: 100%; height: 100%;
+    @include vw-convert-pc(padding, 23 0);
+    // padding:23px 0;
+    // @include vw-font-size-pc(24);
     &::after {
       content: "";
       display: block;
       @include vw-convert-pc(width, 24);
       @include vw-convert-pc(height, 24);
+      min-width:12px; min-height:12px;
       background-image: url(/dist/assets/images/svg/icon_arrow_24.svg);
       background-repeat: no-repeat;
       background-size: 100%;
@@ -248,13 +281,19 @@
     }
   }
 }
+@media screen and (max-width:767px) {
+  .pf-btn-wrap {
+    width:150px; font-size:14px !important;
+  }
+}
 
 .btm-aboutus {
-  margin-top: 280px;
-  padding-top: 0;
+  // margin-top: 280px;
+  padding: 0;
+  width:100%;
   height: 100%;
   .pjt-top-full {
-    padding: 0;
+    padding: 0; width:100%;
   }
 
   .pjt-title {
@@ -292,13 +331,13 @@
         display: flex;
         font-weight: 600;
         color: #fff;
-        height: 124px;
-        margin-bottom: 4px;
+        //  height: 124px;
+        margin-bottom: 24px;
         align-items: center;
       }
 
       .btm-txt {
-        @include vw-font-size-pc(24);
+        @include vw-font-size-pc(36);
         font-weight: 400;
         color: #fff;
       }
@@ -464,6 +503,28 @@
     @include vw-convert-pc(left, 127);
     transition: 0.3s all ease-in-out;
   }
+}
+@media screen and (max-width:767px) {
+  .btm-aboutus {
+    .btm-banner-wrap.black .about-banner {
+      background-color:transparent;
+      padding-right:40px;
+    }
+    .btm-banner-wrap .about-banner {
+      padding-left:60px;
+      .btm-title {
+        @include vw-font-size-mo(48);
+        margin-bottom:12px;
+        height: auto;
+      }
+      .btm-txt {@include vw-font-size-mo(28);}
+    }
+    .didi {top:-150px;}
+    .btm-banner-wrap.black .about-banner:hover, .btm-banner-wrap.black .about-banner:focus {border-bottom:none;}
+    .btm-banner-wrap.white:hover .didi {top:-180px;}
+    // .btm-banner-wrap.black:hover + .btm-banner-wrap.white .didi {top:-330px;}
+  }
+
 }
 
 //contact
@@ -765,7 +826,7 @@
   }
 
   &.sc {
-    background: url(/dist/assets/images/bg_sc_top.png) no-repeat center/ cover;
+    background:#fff url(/dist/assets/images/bg_sc_top.png) no-repeat center/ cover;
     background-position: 100%;
 
     .pjt {
@@ -826,9 +887,9 @@
   .pjt-con-wrap {
     flex-direction: column;
     justify-content: flex-start;
-    height: calc(100vh - 56px);
+    // height: calc(100vh - 56px);
     width: 100%;
-    @include vw-convert-mo(padding, 30 10 0 0);
+    @include vw-convert-mo(padding, 30 0 0);
     .pjt-copyright {
       justify-content: flex-start;
       @include vw-convert-mo(padding, 0 20);
@@ -850,17 +911,29 @@
     }
     &.woori {
       .pjt-content {
-        width: 100%;
+        width: 100%; z-index:0;
+      }
+    }
+    &.sc {
+      // .pjt-headcopy .txt {
+      //   color:#fff;
+      // }
+      .pjt-copyright {height:auto;}
+      .pjt-content .img-wrap img {
+        top:0; right:0; left:65%;
+      }
+      .pjt-content .img-wrap::after {
+        right:-65%;
       }
     }
   }
   .pjt-header-wrap {
     padding: 15px 20px;
-    background-color: #fff;
+    // background-color: #fff;
     height: 56px;
     justify-content: flex-start;
     .pjt-title {
-      color: #000;
+      // color: #000;
       font-size: 18px;
     }
   }
@@ -903,3 +976,31 @@
     }
   }
 }
+
+//mo: 480px
+@media (max-width:480px) {
+  .pjt-con-wrap.hyundai-card .pjt-content::after {
+    top:30%;
+    width:100%;
+  }
+}
+.portfolio-item {opacity:1 !important; visibility: inherit !important;}
+// .box-lst > .portfolio-item .pf-item .pf-cont{transform:translateY(100%) scaleY(0);}
+// .box-lst > .portfolio-item .pf-item {
+//   animation: boxLstEff 0.8s ease-out forwards;
+//   transform-origin: bottom;
+//   // height: 0;
+// }
+
+// @keyframes boxLstEff {
+//   0% {transform:translateY(100%) scaleY(0);}
+//   100% {transform:translateY(0) scaleY(1);}
+// }
+// [dnd-eff-delay="delay1"] {animation-delay:.2s !important;}
+// [dnd-eff-delay="delay2"] {animation-delay:.4s !important;}
+// [dnd-eff-delay="delay3"] {animation-delay:.6s !important;}
+// [dnd-eff-delay="delay4"] {animation-delay:.8s !important;}
+// [dnd-eff-delay="delay5"] {animation-delay:1s !important;}
+// [dnd-eff-delay="delay6"] {animation-delay:1.2s !important;}
+// [dnd-eff-delay="delay7"] {animation-delay:1.4s !important;}
+// [dnd-eff-delay="delay8"] {animation-delay:1.6s !important;}

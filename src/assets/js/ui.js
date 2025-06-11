@@ -244,7 +244,9 @@ mm.add("(min-width: 800px)", () => {
   });
 });
 
-//팝업 열기
+let clickedThumbnail = null; // 클릭한 썸네일 저장용 변수
+
+// 팝업 열기
 function openProjectPopup(projectId, projectTitle, event) {
   clickedThumbnail = event ? event.currentTarget : null;
 
@@ -255,6 +257,7 @@ function openProjectPopup(projectId, projectTitle, event) {
 
   // 팝업 표시
   popup.style.display = "block";
+  document.documentElement.classList.add("popup-open");
   popup.classList.add("popup-enter");
   document.body.classList.add("popup-open");
 
@@ -262,6 +265,7 @@ function openProjectPopup(projectId, projectTitle, event) {
     .then((response) => response.text())
     .then((html) => {
       popupContent.innerHTML = html;
+
       if (typeof Swiper !== "undefined") {
         new Swiper(".kb-swiper", {
           effect: "fade",
@@ -272,6 +276,17 @@ function openProjectPopup(projectId, projectTitle, event) {
           },
         });
       }
+
+      // ✅ 1. 닫기 버튼으로 먼저 포커스 이동
+      const closeBtn = popup.querySelector("button.ico-close");
+      if (closeBtn) {
+        closeBtn.focus();
+      }
+
+      // ✅ 2. wrap을 aria-hidden 처리
+      setTimeout(() => {
+        document.querySelector('div.wrap')?.setAttribute("aria-hidden", "true");
+      }, 0); // next tick or microtask 이후 실행
     })
     .catch((error) => {
       console.error("HTML 파일 로딩 실패:", error);
@@ -279,6 +294,7 @@ function openProjectPopup(projectId, projectTitle, event) {
         '<div class="loading" style="color: #ff6b6b;"> 정보를 불러오는데 실패했습니다.</div>';
     });
 }
+
 
 // 팝업 닫기
 function closeProjectPopup() {
@@ -290,8 +306,13 @@ function closeProjectPopup() {
   setTimeout(() => {
     popup.style.display = "none";
     popup.classList.remove("popup-exit");
+    document.documentElement.classList.remove("popup-open");
     document.body.classList.remove("popup-open");
+    document.querySelector('div.wrap')?.removeAttribute("aria-hidden");
+
+    // 2. 팝업 띄운 썸네일로 포커스 이동
     if (clickedThumbnail) {
+      clickedThumbnail.focus(); // 포커스 이동
       setTimeout(() => {
         clickedThumbnail.scrollIntoView({
           behavior: "smooth",
@@ -302,6 +323,7 @@ function closeProjectPopup() {
     }
   }, 300);
 }
+
 
 // ESC 키로 팝업 닫기
 document.addEventListener("keydown", function (e) {
