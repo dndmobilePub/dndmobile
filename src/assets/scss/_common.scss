@@ -89,6 +89,7 @@ button{
 	header{
 		&.active{
 			background: none;
+			z-index:11;
 		}
 
 	}

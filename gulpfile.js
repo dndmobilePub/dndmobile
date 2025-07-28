@@ -5,7 +5,9 @@ const sourcemaps = require("gulp-sourcemaps");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
-const scss = require("gulp-sass")(require("sass"));
+// 예전: const scss = require('gulp-sass')(require('sass'));
+const scss = require('gulp-dart-sass');
+
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 const autoprefixer = require("autoprefixer");
