@@ -5,63 +5,292 @@
   <body>
     <div class="wrap">
       @@include('./include/header.html')
-      <section class="recruit-wrap">
-        <div class="title-wrap">
-          <p class="tit hide-mobile" data-aos="fade-up" data-aos-duration="1000">
-            <strong>360º 직원역량향상 피드백</strong>
-          </p>
-        </div>
-
-        <div class="accordion-wrap">
-          <dl>
-            <dt class="accordion">기획자</dt>
-            <dd class="panel">
-              <div class="part-box">
-                <div class="part">
-                  <a href="#" target="_blank">한창호</a>
-                </div>
-              </div>
-            </dd>
-          </dl>
-          <dl>
-            <dt class="accordion">디자이너</dt>
-            <dd class="panel">
-              <div class="part-box">
-                <div class="part">
-                  <a href="#" target="_blank">임민모</a>
-                </div>
-              </div>
-            </dd>
-          </dl>
-          <dl>
-            <dt class="accordion">퍼블리셔</dt>
-            <dd class="panel">
-              <div class="part-box">
-                <div class="part">
-                  <a href="#" target="_blank">백호열</p>
-                </div>
-              </div>
-            </dd>
-          </dl>
-        </div>
-        <div class="btn-wrap" data-aos="fade-up" data-aos-duration="1000">
-          <a 
-            href="mailto:dndmobile@dndmobile.co.kr" 
-            target="_blank" 
-            name="회사에 바라는점" 
-            class="type4 type4-hover"
+      <section class="survey-wrap">
+        <div class="btn-wrap survey-area" data-aos="fade-up" data-aos-duration="1000">
+          <a class="type4 type4-hover center tab1-btn"
+            >직원 역량 향상을<br />
+            위한 360º 피드백</a
           >
-          회사에 바라는점
-          </a>
+          <a class="type4 type4-hover center tab2-btn">회사·팀 성장을 <br />위한 인사이트</a>
+        </div>
+        <!-- 직원역량 향상 -->
+        <div class="tab tab1" style="display: none">
+          <div class="box">
+            <div class="step-box">
+              <h2>직원 역량 향상을 위한 360º 피드백</h2>
+              <a class="pre-step step1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <g filter="url(#filter0_b_1275_33233)">
+                    <path
+                      d="M13.4961 33.002H22.4961C29.9961 33.002 32.9961 30.002 32.9961 22.502V13.502C32.9961 6.00195 29.9961 3.00195 22.4961 3.00195H13.4961C5.99609 3.00195 2.99609 6.00195 2.99609 13.502V22.502C2.99609 30.002 5.99609 33.002 13.4961 33.002Z"
+                      fill="#222"
+                    />
+                    <path
+                      d="M12.6992 20.1882L17.9942 14.9082L23.2892 20.1882"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_b_1275_33233"
+                      x="-7.00391"
+                      y="-6.99805"
+                      width="50"
+                      height="50"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1275_33233" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_backgroundBlur_1275_33233"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+            <p>
+              본 피드백은 '단점 중심 평가'가 아닌 '강점을 발견하고 서로의 성장을 목표'로 합니다. <br />
+              설문은 업무·협업 관점의 강점과 보완점, 그리고 회사에 바라는 점을 중심으로 진행됩니다. 
+            </p>
+            <p class="point-txt">
+              참여 대상자는 본사 재직 1년 이상인 직원이며, 본인과 프로젝트나 제안 작업을 함께 수행한 경험이 있는 직원을
+              대상으로 선택해 작성해 주시면 됩니다. 직원 여러분의 솔직한 의견은 모두 익명으로 수집됩니다.
+            </p>
+            <p>
+              작성하신 피드백은 조직 성장에 소중한 방향으로 활용하겠습니다. <br />여러분의 참여가 조직의 더 나은 내일을
+              만듭니다.
+            </p>
+            <div class="btn-wrap">
+              <a class="type4 type4-hover center pt-btn">직원 역량 향상을 위한 360º 피드백</a>
+            </div>
+          </div>
+        </div>
+        <!-- 회사·팀 성장을 위한 인사이트 -->
+        <div class="tab tab2" style="display: none">
+          <div class="box">
+            <div class="step-box">
+              <h2>회사·팀 성장을 위한 인사이트</h2>
+              <a class="pre-step step2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                  <g filter="url(#filter0_b_1275_33233)">
+                    <path
+                      d="M13.4961 33.002H22.4961C29.9961 33.002 32.9961 30.002 32.9961 22.502V13.502C32.9961 6.00195 29.9961 3.00195 22.4961 3.00195H13.4961C5.99609 3.00195 2.99609 6.00195 2.99609 13.502V22.502C2.99609 30.002 5.99609 33.002 13.4961 33.002Z"
+                      fill="#222"
+                    />
+                    <path
+                      d="M12.6992 20.1882L17.9942 14.9082L23.2892 20.1882"
+                      stroke="white"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_b_1275_33233"
+                      x="-7.00391"
+                      y="-6.99805"
+                      width="50"
+                      height="50"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1275_33233" />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_backgroundBlur_1275_33233"
+                        result="shape"
+                      />
+                    </filter>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+            <p>
+              회사가 더욱 긍정적으로 성장할 수 있도록 다양한 인사이트를 발굴하는 것을 목표로 합니다.<br />근무환경,
+              조직문화, 커뮤니케이션 방식, 지원 제도 등 개선이 필요하다고 느끼는 부분이나 바라는 점을 자유롭게 작성해
+              주시기 바랍니다.<br />또한, 회사와 관련하여 궁금한 점이나 제안하고 싶은 의견도 함께 남겨주셔도 됩니다.
+            </p>
+            <p class="point-txt">본 설문은 본사 직원이라면 재직 기간과 관계없이 누구나 참여할 수 있습니다.</p>
+            <p>여러분의 시선과 의견 하나하나가 조직의 더 나은 방향을 만들어 갑니다.</p>
+            <div class="btn-wrap">
+              <a class="type4 type4-hover center" target="_blank" href="https://forms.gle/N8hTw4mnhqtqzPYn7"
+                >참여하기</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="survey-box" style="display: none">
+          <div class="step-box">
+            <h2>직원 역량 향상을 위한 360º 피드백</h2>
+            <a class="pre-step step3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <g filter="url(#filter0_b_1275_33233)">
+                  <path
+                    d="M13.4961 33.002H22.4961C29.9961 33.002 32.9961 30.002 32.9961 22.502V13.502C32.9961 6.00195 29.9961 3.00195 22.4961 3.00195H13.4961C5.99609 3.00195 2.99609 6.00195 2.99609 13.502V22.502C2.99609 30.002 5.99609 33.002 13.4961 33.002Z"
+                    fill="#222"
+                  />
+                  <path
+                    d="M12.6992 20.1882L17.9942 14.9082L23.2892 20.1882"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_b_1275_33233"
+                    x="-7.00391"
+                    y="-6.99805"
+                    width="50"
+                    height="50"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1275_33233" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1275_33233" result="shape" />
+                  </filter>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="part-box">
+            <!-- 설문대상자 리스트 -->
+          </div>
         </div>
       </section>
-      @@include('./include/footer.html')
+      <!-- @@include('./include/footer.html') -->
     </div>
   </body>
   <script>
     AOS.init({
       duration: 500,
       once: true,
+    });
+
+    var list = [
+      {
+        part: "기획자",
+        per: [
+          {
+            name: "안경화",
+            link: "https://forms.gle/TpbvCV9oFHGuwfwX9",
+          },
+          { name: "최효주", link: "#" },
+          { name: "최용섭", link: "#" },
+          { name: "최홍열", link: "#" },
+          { name: "최희지", link: "#" },
+          { name: "민은경", link: "#" },
+          { name: "김화진", link: "#" },
+          { name: "하헌국", link: "#" },
+          { name: "한창호", link: "#" },
+          { name: "윤창민", link: "#" },
+          { name: "안재호", link: "#" },
+          { name: "김희선", link: "#" },
+          { name: "이상아", link: "#" },
+          { name: "박유석", link: "#" },
+          { name: "정성원", link: "#" },
+          { name: "선영재", link: "#" },
+          { name: "김재운", link: "#" },
+          { name: "배세웅", link: "#" },
+        ],
+      },
+      {
+        part: "디자이너",
+        per: [
+          { name: "김연민", link: "#" },
+          { name: "한상호", link: "#" },
+          { name: "조선영", link: "#" },
+          { name: "백지운", link: "#" },
+          { name: "정영아", link: "#" },
+          { name: "신승희", link: "#" },
+          { name: "임민모", link: "#" },
+          { name: "정지은", link: "#" },
+          { name: "김소영", link: "#" },
+          { name: "이성구", link: "#" },
+          { name: "황연주", link: "#" },
+        ],
+      },
+      {
+        part: "퍼블리셔",
+        per: [
+          { name: "안혜연", link: "#" },
+          { name: "백호열", link: "#" },
+          { name: "김희주", link: "#" },
+          { name: "전지우", link: "#" },
+          { name: "강해미", link: "#" },
+          { name: "김지성", link: "#" },
+          { name: "윤석상", link: "#" },
+          { name: "양미선", link: "#" },
+          { name: "조우성", link: "#" },
+          { name: "김영선", link: "#" },
+          { name: "이승연", link: "#" },
+        ],
+      },
+    ];
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var partBox = document.querySelectorAll(".survey-box .part-box")[0];
+      partBox.innerHTML = "";
+      list.forEach(function (item) {
+        var partDiv = document.createElement("div");
+        partDiv.className = "part";
+
+        var partTitle = document.createElement("h3");
+        partTitle.textContent = item.part;
+        partBox.appendChild(partTitle);
+
+        item.per.forEach(function (person) {
+          var aTag = document.createElement("a");
+          aTag.href = person.link;
+          aTag.target = "_blank";
+          aTag.textContent = person.name;
+          partDiv.appendChild(aTag);
+        });
+
+        partBox.appendChild(partDiv);
+      });
+    });
+
+    // 직원 역량 평가 버튼 클릭 시
+    document.querySelectorAll(".tab1-btn")[0].addEventListener("click", function () {
+      document.querySelectorAll(".survey-area")[0].style.display = "none";
+      document.querySelectorAll(".tab1")[0].style.display = "block";
+    });
+    // 회사·팀 성장 버튼 클릭 시
+    document.querySelectorAll(".tab2-btn")[0].addEventListener("click", function () {
+      document.querySelectorAll(".survey-area")[0].style.display = "none";
+      document.querySelectorAll(".tab2")[0].style.display = "block";
+    });
+    // 직원 역량 평가 참여하기 버튼 클릭 시
+    document.querySelectorAll(".pt-btn")[0].addEventListener("click", function () {
+      document.querySelectorAll(".tab1")[0].style.display = "none";
+      document.querySelectorAll(".survey-box")[0].style.display = "block";
+    });
+
+    document.querySelectorAll(".step1")[0].addEventListener("click", function () {
+      document.querySelectorAll(".survey-area")[0].style.display = "flex";
+      document.querySelectorAll(".tab1")[0].style.display = "none";
+    });
+    document.querySelectorAll(".step2")[0].addEventListener("click", function () {
+      document.querySelectorAll(".survey-area")[0].style.display = "flex";
+      document.querySelectorAll(".tab2")[0].style.display = "none";
+    });
+    document.querySelectorAll(".step3")[0].addEventListener("click", function () {
+      document.querySelectorAll(".tab1")[0].style.display = "block";
+      document.querySelectorAll(".survey-box")[0].style.display = "none";
     });
   </script>
 </html>
