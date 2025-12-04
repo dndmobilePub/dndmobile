@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/head.html')
+
+  <body>
+    <div class="wrap">
+      @@include('./include/header.html')
+      <section class="recruit-wrap">
+        <div class="title-wrap">
+          <p class="tit hide-mobile" data-aos="fade-up" data-aos-duration="1000">
+            <strong>360º 직원역량향상 피드백</strong>
+          </p>
+        </div>
+
+        <div class="accordion-wrap">
+          <dl>
+            <dt class="accordion">기획자</dt>
+            <dd class="panel">
+              <div class="part-box">
+                <div class="part">
+                  <a href="#" target="_blank">한창호</a>
+                </div>
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="accordion">디자이너</dt>
+            <dd class="panel">
+              <div class="part-box">
+                <div class="part">
+                  <a href="#" target="_blank">임민모</a>
+                </div>
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt class="accordion">퍼블리셔</dt>
+            <dd class="panel">
+              <div class="part-box">
+                <div class="part">
+                  <a href="#" target="_blank">백호열</p>
+                </div>
+              </div>
+            </dd>
+          </dl>
+        </div>
+        <div class="btn-wrap" data-aos="fade-up" data-aos-duration="1000">
+          <a 
+            href="mailto:dndmobile@dndmobile.co.kr" 
+            target="_blank" 
+            name="회사에 바라는점" 
+            class="type4 type4-hover"
+          >
+          회사에 바라는점
+          </a>
+        </div>
+      </section>
+      @@include('./include/footer.html')
+    </div>
+  </body>
+  <script>
+    AOS.init({
+      duration: 500,
+      once: true,
+    });
+  </script>
+</html>
