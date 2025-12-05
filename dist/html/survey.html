@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="ko">
   <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="keywords"
-    content="홈페이지제작, 웹사이트구축, 쇼핑몰제작, 쇼핑몰구축, 모바일웹사이트구축, 모바일홈페이지제작, 웹접근성구축, 웹접근성홈페이지제작, 웹표준구축, 웹표준홈페이지제작, 반응형웹구축, 반응형홈페이지제작, 검색엔진최적화, 사전컨설팅, UIUX컨설팅, si업체, 웹사이트디자인, 기업사이트디자인, 디자인제작, UIUX, seo, 기업웹사이트구축"
-  />
-  <title>디앤디모바일</title>
-  <link rel="icon" href="../assets/images/favicon.ico" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="홈페이지제작, 웹사이트구축, 쇼핑몰제작, 쇼핑몰구축, 모바일웹사이트구축, 모바일홈페이지제작, 웹접근성구축, 웹접근성홈페이지제작, 웹표준구축, 웹표준홈페이지제작, 반응형웹구축, 반응형홈페이지제작, 검색엔진최적화, 사전컨설팅, UIUX컨설팅, si업체, 웹사이트디자인, 기업사이트디자인, 디자인제작, UIUX, seo, 기업웹사이트구축"
+    />
+    <title>디앤디모바일</title>
+    <link rel="icon" href="/dndmobile/assets/images/favicon.ico" />
 
-  <link rel="stylesheet" href="../assets/css/style.css" />
-  <script src="../assets/js/jquery-3.6.0.min.js"></script>
-  <script src="../assets/js/swiper.min.js"></script>
-  <script src="../assets/js/gsap.min.js"></script>
-  <script src="../assets/js/ScrollTrigger.min.js"></script>
-  <script src="../assets/js/ScrollToPlugin.min.js"></script>
-  <script src="../assets/js/aos.js"></script>
-  <script src="../assets/js/lib.lottie-player.js" defer></script>
-  <script src="../assets/js/common.js" defer></script>
-  <script src="../assets/js/ui.js" defer></script>
-</head>
-
+    <link rel="stylesheet" href="/dndmobile/assets/css/style.css" />
+    <script src="/dndmobile/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/dndmobile/assets/js/swiper.min.js"></script>
+    <script src="/dndmobile/assets/js/gsap.min.js"></script>
+    <script src="/dndmobile/assets/js/ScrollTrigger.min.js"></script>
+    <script src="/dndmobile/assets/js/ScrollToPlugin.min.js"></script>
+    <script src="/dndmobile/assets/js/aos.js"></script>
+    <script src="/dndmobile/assets/js/lib.lottie-player.js" defer></script>
+    <script src="/dndmobile/assets/js/common.js" defer></script>
+    <script src="/dndmobile/assets/js/ui.js" defer></script>
+  </head>
 
   <body>
     <div class="wrap">
@@ -30,7 +29,7 @@
         <div class="header--inner">
           <div class="hide-mobile">
             <h1 class="logo--black main_logo">
-              <a href="index.html">
+              <a href="survey.html">
                 <i class="ico">
                   <svg width="34px" height="34px" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1965_7010)">
@@ -65,7 +64,7 @@
         </div>
         <div class="header--footer hide-pc">
           <h1 class="logo--black">
-            <a href="index.html">
+            <a href="survey.html">
               <i class="ico">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_2324_9676)">
@@ -98,7 +97,7 @@
           </h1>
         </div>
       </header>
-      <!-- step 1단계 버튼 -->
+      <!-- step 1단계 버튼
       <button class="pre-step" style="display: none">
         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
           <g filter="url(#filter0_b_1275_33233)">
@@ -130,7 +129,7 @@
             </filter>
           </defs>
         </svg>
-      </button>
+      </button> -->
       <section class="survey-wrap">
         <div class="btn-wrap survey-area">
           <a class="type4 type4-hover center tab1-btn"
@@ -186,13 +185,13 @@
         <div class="survey-box" style="display: none">
           <div class="step-box">
             <h2>직원 역량 향상을 위한 360º 피드백</h2>
+            <!-- <p></p> -->
           </div>
           <div class="part-box">
             <!-- 설문대상자 리스트 -->
           </div>
         </div>
       </section>
-      
     </div>
   </body>
   <script>
@@ -311,7 +310,7 @@
       });
     });
 
-    var preStep = document.querySelectorAll(".pre-step")[0];
+    // var preStep = document.querySelectorAll(".pre-step")[0];
     var surveyArea = document.querySelectorAll(".survey-area")[0];
     var tab1 = document.querySelectorAll(".tab1")[0];
     var tab2 = document.querySelectorAll(".tab2")[0];
@@ -324,42 +323,185 @@
     tab1Btn.addEventListener("click", function () {
       surveyArea.style.display = "none";
       tab1.style.display = "block";
-      preStep.style.display = "block";
-      preStep.classList.add("step1");
+      // preStep.style.display = "block";
+      // preStep.classList.add("step1");
     });
     // 회사·팀 성장 버튼 클릭 시
     tab2Btn.addEventListener("click", function () {
       surveyArea.style.display = "none";
       tab2.style.display = "block";
-      preStep.style.display = "block";
-      preStep.classList.add("step2");
+      // preStep.style.display = "block";
+      // preStep.classList.add("step2");
     });
     // 직원 역량 평가 참여하기 버튼 클릭 시
     ptBtn.addEventListener("click", function () {
       tab1.style.display = "none";
       surveyBox.style.display = "block";
-      preStep.classList.add("step3");
-      preStep.classList.remove("step1");
+      // preStep.classList.add("step3");
+      // preStep.classList.remove("step1");
     });
 
     // 버튼
-    preStep.addEventListener("click", function () {
-      if (preStep.classList.contains("step1")) {
-        surveyArea.style.display = "flex";
-        tab1.style.display = "none";
-        preStep.style.display = "none";
-        preStep.classList.remove("step1");
-      } else if (preStep.classList.contains("step2")) {
-        surveyArea.style.display = "flex";
-        tab2.style.display = "none";
-        preStep.style.display = "none";
-        preStep.classList.remove("step2");
-      } else if (preStep.classList.contains("step3")) {
-        tab1.style.display = "block";
-        surveyBox.style.display = "none";
-        preStep.classList.add("step1");
-        preStep.classList.remove("step3");
-      }
-    });
+    // preStep.addEventListener("click", function () {
+    //   if (preStep.classList.contains("step1")) {
+    //     surveyArea.style.display = "flex";
+    //     tab1.style.display = "none";
+    //     preStep.style.display = "none";
+    //     preStep.classList.remove("step1");
+    //   } else if (preStep.classList.contains("step2")) {
+    //     surveyArea.style.display = "flex";
+    //     tab2.style.display = "none";
+    //     preStep.style.display = "none";
+    //     preStep.classList.remove("step2");
+    //   } else if (preStep.classList.contains("step3")) {
+    //     tab1.style.display = "block";
+    //     surveyBox.style.display = "none";
+    //     preStep.classList.add("step1");
+    //     preStep.classList.remove("step3");
+    //   }
+    // });
   </script>
+  <style>
+    .survey-wrap h2 {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: left;
+    }
+    .survey-wrap .tab {
+      margin: 0 auto;
+      margin-top: 120px;
+      padding: 20px;
+      max-width: 760px;
+    }
+    .survey-wrap .tab .box {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .survey-wrap .tab .box p {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: left;
+    }
+    .survey-wrap .tab .box p span {
+      background-color: #ffde5b;
+    }
+    .survey-wrap .tab .btn-wrap {
+      justify-content: center;
+      margin: 20px auto 0;
+      width: 100%;
+    }
+    .survey-wrap .tab .btn-wrap a {
+      width: 350px;
+    }
+    .survey-wrap .step-box {
+      display: grid;
+      gap: 20px;
+      justify-content: space-between;
+      line-height: 1.5;
+    }
+
+    .pre-step {
+      position: fixed;
+      top: 40px;
+      right: 67px;
+      z-index: 1002;
+      width: 36px;
+    }
+    .pre-step svg {
+      transform: rotate(-90deg);
+    }
+
+    .survey-area {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      align-self: center;
+      flex-direction: row;
+      margin: 0 auto;
+      margin-top: 200px;
+      padding: 0 60px;
+      max-width: 760px;
+    }
+    .survey-area > a {
+      display: flex;
+      flex: 1;
+      margin: 0;
+      margin-top: 0 !important;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .survey-box {
+      margin: 0 auto;
+      margin-top: 120px;
+      margin-bottom: 60px;
+      padding: 20px;
+      max-width: 760px;
+    }
+    .survey-box h2 {
+      margin-bottom: 40px;
+    }
+    .survey-box .part-box {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+    }
+    .survey-box .part-box .part + h3 {
+      margin-top: 40px;
+    }
+    .survey-box .part-box .part .accordion-content {
+      display: grid;
+      gap: 10px;
+      margin-top: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .survey-box .part-box .part .accordion-content a {
+      margin: 0;
+      margin-top: 0 !important;
+      padding: 10px 10px;
+      border: 1px solid #000;
+      font-size: 18px;
+      text-align: center;
+      border-radius: 8px;
+    }
+    .survey-box .part-box .part .accordion-content a:hover,
+    .survey-box .part-box .part .accordion-content a:active {
+      background-color: #000;
+      color: #fff;
+    }
+    .survey-box .part-box h3 {
+      padding: 10px;
+      background-color: #eee;
+      font-size: 20px;
+      font-weight: 600;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 767px) {
+      .survey-area {
+        flex-direction: column;
+        padding: 0 20px;
+      }
+      .survey-area a {
+        padding: 14px 0;
+      }
+      .survey-box {
+        margin-top: 80px;
+      }
+      .survey-wrap .tab {
+        margin-top: 80px;
+        padding: 20px;
+      }
+      .survey-wrap .tab .btn-wrap {
+        justify-content: left;
+      }
+      .pre-step {
+        top: 13px;
+        right: 18px;
+      }
+    }
+  </style>
 </html>
