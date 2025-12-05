@@ -5386,8 +5386,9 @@ html.popup-open {
         font-weight: 500;
         line-height: 1.5;
         text-align: left;
-        &.point-txt{
-          color: #00b6ab;
+        span{
+
+          background-color: #ffde5b;
         }
       }
     }
@@ -5402,16 +5403,20 @@ html.popup-open {
   }
   .step-box{
     display: grid;
-      gap: 20px;
-      justify-content: space-between;
-      line-height: 1.5;
-      grid-template-columns: 1fr 36px;
-    .pre-step{
-      width: 36px;
-      svg{
-        transform: rotate(-90deg);
-      }
-    }
+    gap: 20px;
+    justify-content: space-between;
+    line-height: 1.5;
+     
+  }
+}
+.pre-step{
+  position: fixed;
+  top: 40px;
+  right: 67px;
+  z-index:1002;
+  width: 36px;
+  svg{
+    transform: rotate(-90deg);
   }
 }
 .survey-area{
@@ -5445,28 +5450,34 @@ html.popup-open {
     margin-bottom: 40px;
   }
   .part-box{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
     .part{
-      display: grid;
-      gap: 10px;
-      margin-top: 20px;
-      grid-template-columns: 1fr 1fr 1fr;
       & + h3{
         margin-top: 40px;
       }
-    }
-    a{
-      margin:0;
-      margin-top: 0!important;
-      padding: 20px 20px;
-      border: 1px solid #000;
-      font-size: 18px;
-      text-align: center;
-      border-radius: 8px;
-      &:hover , &:active{
-        background-color: #000;
-        color: #fff;
+      .accordion-content{
+        display: grid;
+        gap: 10px;
+        margin-top: 20px;
+        grid-template-columns: 1fr 1fr 1fr;
+        a{
+          margin:0;
+          margin-top: 0!important;
+          padding: 10px 10px;
+          border: 1px solid #000;
+          font-size: 18px;
+          text-align: center;
+          border-radius: 8px;
+          &:hover , &:active{
+            background-color: #000;
+            color: #fff;
+          }
+        }
       }
     }
+    
     h3{
       padding: 10px;
       background-color: #eee;
@@ -5480,7 +5491,11 @@ html.popup-open {
 
 @media (max-width: 767px) {
   .survey-area{
-      padding: 0;
+    flex-direction: column;
+    padding: 0 20px;
+    a{
+      padding: 14px 0;
+    }
   }
  
   .survey-box{
@@ -5496,5 +5511,9 @@ html.popup-open {
       }
 
     }
+  }
+  .pre-step{
+    top:13px;
+    right:18px;
   }
 }

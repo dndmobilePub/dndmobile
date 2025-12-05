@@ -10007,8 +10007,8 @@ html.popup-open {
   line-height: 1.5;
   text-align: left;
 }
-.survey-wrap .tab .box p.point-txt {
-  color: #00b6ab;
+.survey-wrap .tab .box p span {
+  background-color: #ffde5b;
 }
 .survey-wrap .tab .btn-wrap {
   justify-content: center;
@@ -10023,12 +10023,16 @@ html.popup-open {
   gap: 20px;
   justify-content: space-between;
   line-height: 1.5;
-  grid-template-columns: 1fr 36px;
 }
-.survey-wrap .step-box .pre-step {
+
+.pre-step {
+  position: fixed;
+  top: 40px;
+  right: 67px;
+  z-index: 1002;
   width: 36px;
 }
-.survey-wrap .step-box .pre-step svg {
+.pre-step svg {
   transform: rotate(-90deg);
 }
 
@@ -10062,25 +10066,30 @@ html.popup-open {
 .survey-box h2 {
   margin-bottom: 40px;
 }
-.survey-box .part-box .part {
+.survey-box .part-box {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.survey-box .part-box .part + h3 {
+  margin-top: 40px;
+}
+.survey-box .part-box .part .accordion-content {
   display: grid;
   gap: 10px;
   margin-top: 20px;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.survey-box .part-box .part + h3 {
-  margin-top: 40px;
-}
-.survey-box .part-box a {
+.survey-box .part-box .part .accordion-content a {
   margin: 0;
   margin-top: 0 !important;
-  padding: 20px 20px;
+  padding: 10px 10px;
   border: 1px solid #000;
   font-size: 18px;
   text-align: center;
   border-radius: 8px;
 }
-.survey-box .part-box a:hover, .survey-box .part-box a:active {
+.survey-box .part-box .part .accordion-content a:hover, .survey-box .part-box .part .accordion-content a:active {
   background-color: #000;
   color: #fff;
 }
@@ -10094,7 +10103,11 @@ html.popup-open {
 
 @media (max-width: 767px) {
   .survey-area {
-    padding: 0;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .survey-area a {
+    padding: 14px 0;
   }
   .survey-box {
     margin-top: 80px;
@@ -10105,6 +10118,10 @@ html.popup-open {
   }
   .survey-wrap .tab .btn-wrap {
     justify-content: left;
+  }
+  .pre-step {
+    top: 13px;
+    right: 18px;
   }
 }
 /*
