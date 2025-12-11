@@ -141,7 +141,7 @@
             </a>
             <a class="type4 type4-hover center tab2-btn">회사·팀 성장을 <br />위한 인사이트</a>
           </div>
-          <p class="text-box">피드백 결과 확인을 원하는 직원은<br /> 경영지원부 윤가영과장 메일로 요청하세요</p>
+          <div class="text-box"><span>피드백 결과 확인을 원하는 직원은<br /> 경영지원부 윤가영과장 메일로 요청하세요</span></div>
         </div>
         <!-- 직원역량 향상 -->
         <div class="tab tab1" style="display: none">
@@ -474,16 +474,20 @@
     }
 
     .text-area > .text-box{
-      /* text-align: center; */
       margin: 20px auto 0;
-      width: 312px;
+      padding: 0 60px;
+      max-width: 760px;
+    }
+    .text-area > .text-box span{
+      display: block;
+      width: 100%;
       height: 84px;
       padding: 20px 16px;
-      border-radius: 16px;
+      border-radius: 8px;
       background-color: #F6F6F6;
       font-size: 14px;
-      line-height: 22px;
       color: #505050;
+      line-height: 22px;
     }
 
     .survey-area {
@@ -623,6 +627,14 @@
         position: fixed;
         bottom: 40px;
         left: 0;
+      }
+      .text-area > .text-box{
+        /* margin: 20px 20px 0 20px; */
+        padding: 0 20px;
+        width: 100%;
+      }
+      .text-area > .text-box span{
+        padding: 20px 16px;
       }
       .pre-step {
         top: 13px;
