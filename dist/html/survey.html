@@ -132,12 +132,16 @@
         </svg>
       </button> -->
       <section class="survey-wrap">
-        <div class="btn-wrap survey-area">
-          <a class="type4 type4-hover center tab1-btn"
-            >직원 역량 향상을<br />
-            위한 360º 피드백</a
-          >
-          <a class="type4 type4-hover center tab2-btn">회사·팀 성장을 <br />위한 인사이트</a>
+        <div class="text-area">
+          <div class="btn-wrap survey-area">
+            <a class="type4 type4-hover center tab1-btn">
+              직원 역량 향상을
+              <br />
+              위한 360º 피드백
+            </a>
+            <a class="type4 type4-hover center tab2-btn">회사·팀 성장을 <br />위한 인사이트</a>
+          </div>
+          <p class="text-box">피드백 결과 확인을 원하는 직원은<br /> 경영지원부 윤가영과장 메일로 요청하세요</p>
         </div>
         <!-- 직원역량 향상 -->
         <div class="tab tab1" style="display: none">
@@ -155,8 +159,7 @@
               <span>익명으로 수집</span>됩니다.
             </p>
             <p>
-              작성하신 피드백은 조직 성장에 소중한 방향으로 활용하겠습니다. <br />여러분의 참여가 조직의 더 나은 내일을
-              만듭니다.
+              작성하신 피드백은 조직 성장에 소중한 방향으로 활용하겠습니다. <br class="mo"/>여러분의 참여가 조직의 더 나은 내일을 만듭니다.
             </p>
             <div class="btn-wrap">
               <a class="type4 type4-hover center pt-btn">직원 역량 향상을 위한 360º 피드백</a>
@@ -194,6 +197,12 @@
         </div>
       </section>
       
+       <div id="myPopup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="close-btn" id="closePopupBtn">&times;</button>
+            <img src="../assets/images/survey.png" alt="사진" class="survey-img">
+        </div>
+    </div>
     </div>
   </body>
   <script>
@@ -201,59 +210,56 @@
       {
         part: "기획자",
         per: [
-          {
-            name: "안경화",
-            link: "https://forms.gle/TpbvCV9oFHGuwfwX9",
-          },
-          { name: "최효주", link: "https://forms.gle/8VW3sQUAESu3sayk8" },
+          { name: "김재운", link: "#" },
+          { name: "김화진", link: "#" },
+          { name: "김희선", link: "#" },
+          { name: "민은경", link: "#" },
+          { name: "박유석", link: "#" },
+          { name: "배세웅", link: "#" },
+          { name: "선영재", link: "#" },
+          { name: "안경화", link: "https://forms.gle/TpbvCV9oFHGuwfwX9" },
+          { name: "안재호", link: "#" },
+          { name: "윤창민", link: "#" },
+          { name: "이상아", link: "#" },
+          { name: "정성원", link: "#" },
           { name: "최용섭", link: "https://forms.gle/pMH26ZxThBXxSAhP8" },
+          { name: "최효주", link: "https://forms.gle/8VW3sQUAESu3sayk8" },
           { name: "최홍열", link: "https://forms.gle/peesdGpniACXzxqs5" },
           { name: "최희지", link: "#" },
-          { name: "민은경", link: "#" },
-          { name: "김화진", link: "#" },
           { name: "하헌국", link: "#" },
-          { name: "한창호", link: "#" },
-          { name: "윤창민", link: "#" },
-          { name: "안재호", link: "#" },
-          { name: "김희선", link: "#" },
-          { name: "이상아", link: "#" },
-          { name: "박유석", link: "#" },
-          { name: "정성원", link: "#" },
-          { name: "선영재", link: "#" },
-          { name: "김재운", link: "#" },
-          { name: "배세웅", link: "#" },
+          { name: "한창호", link: "#" }
         ],
       },
       {
         part: "디자이너",
         per: [
           { name: "김연민", link: "#" },
-          { name: "한상호", link: "#" },
-          { name: "조선영", link: "#" },
           { name: "백지운", link: "#" },
-          { name: "정영아", link: "#" },
           { name: "신승희", link: "#" },
           { name: "임민모", link: "#" },
-          { name: "정지은", link: "#" },
-          { name: "김소영", link: "#" },
-          { name: "이성구", link: "#" },
-          { name: "황연주", link: "#" },
+          { name: "정영아", link: "#" },
+          { name: "한상호", link: "#" },
+          // { name: "조선영", link: "#" },
+          // { name: "정지은", link: "#" },
+          // { name: "김소영", link: "#" },
+          // { name: "이성구", link: "#" },
+          // { name: "황연주", link: "#" },
         ],
       },
       {
         part: "퍼블리셔",
         per: [
-          { name: "안혜연", link: "#" },
-          { name: "백호열", link: "#" },
-          { name: "김희주", link: "#" },
-          { name: "전지우", link: "#" },
-          { name: "강해미", link: "#" },
-          { name: "김지성", link: "#" },
-          { name: "윤석상", link: "#" },
-          { name: "양미선", link: "#" },
-          { name: "조우성", link: "#" },
+          // { name: "강해미", link: "#" },
           { name: "김영선", link: "#" },
+          { name: "김희주", link: "#" },
+          { name: "박은지", link: "#" },
+          { name: "백호열", link: "#" },
+          { name: "안혜연", link: "#" },
+          { name: "양미선", link: "#" },
           { name: "이승연", link: "#" },
+          { name: "전지우", link: "#" },
+          { name: "조우성", link: "#" },
+          { name: "윤석상", link: "#" }
         ],
       },
     ];
@@ -323,11 +329,13 @@
     var tab1Btn = document.querySelectorAll(".tab1-btn")[0];
     var tab2Btn = document.querySelectorAll(".tab2-btn")[0];
     var ptBtn = document.querySelectorAll(".pt-btn")[0];
+    var subText = document.querySelectorAll(".text-box")[0];
 
     // 직원 역량 평가 버튼 클릭 시
     tab1Btn.addEventListener("click", function () {
       surveyArea.style.display = "none";
       tab1.style.display = "block";
+      subText.style.display = "none";
       // preStep.style.display = "block";
       // preStep.classList.add("step1");
     });
@@ -335,6 +343,7 @@
     tab2Btn.addEventListener("click", function () {
       surveyArea.style.display = "none";
       tab2.style.display = "block";
+      subText.style.display = "none";
       // preStep.style.display = "block";
       // preStep.classList.add("step2");
     });
@@ -344,6 +353,7 @@
       surveyBox.style.display = "block";
       // preStep.classList.add("step3");
       // preStep.classList.remove("step1");
+      myPopup.style.display = "block";
     });
 
     // 버튼
@@ -365,6 +375,50 @@
     //     preStep.classList.remove("step3");
     //   }
     // });
+
+    //팝업
+    const popup = document.getElementById('myPopup');
+    const openBtn = document.getElementById('openPopupBtn');
+    const closeBtn = document.getElementById('closePopupBtn');
+
+    // localStorage에 저장할 키 (구분자 역할)
+    const popupKey = 'hasVisitedPage';
+
+    // 1. 페이지 로드 시 팝업 표시 여부 확인
+    document.addEventListener('DOMContentLoaded', () => {
+        // 'hasVisitedPage' 키의 값이 'true'가 아니면 (즉, 첫 방문이면)
+        if (localStorage.getItem(popupKey) !== 'true') {
+            popup.style.display = 'block';
+            // 팝업이 열렸으므로 localStorage에 방문 기록을 남깁니다.
+            localStorage.setItem(popupKey, 'true');
+        }
+    });
+
+    // 2. 닫기 함수 정의
+    const closePopup = () => {
+        popup.style.display = 'none';
+    };
+
+    // 3. 닫기 버튼 (X) 클릭 시 팝업 닫기
+    closeBtn.addEventListener('click', closePopup);
+
+    // 4. 팝업 배경 오버레이 클릭 시 팝업 닫기
+    // *주의: 팝업 내용(popup-content)을 클릭해도 닫히지 않도록 이벤트 버블링 방지 로직을 사용합니다.
+    popup.addEventListener('click', (event) => {
+        // 클릭된 요소(event.target)가 닫기 버튼이 아닌 경우
+        // 닫기 버튼이 아닌 팝업 영역 (배경이든 내용이든)을 클릭하면 닫히게 합니다.
+        
+        // 닫기 버튼(`closeBtn`)을 클릭한 경우가 아니라면,
+        // (closeBtn 클릭은 이미 위에서 처리했으므로 중복 방지)
+        if (event.target !== closeBtn) {
+            closePopup();
+        }
+    });
+    
+    // (선택 사항) 팝업 내용 영역을 클릭해도 닫히지 않도록 버블링 방지
+    content.addEventListener('click', (event) => {
+          event.stopPropagation(); // 상위 요소(popup-overlay)로 이벤트 전달을 막음
+    });
   </script>
   <style>
     .survey-wrap h2 {
@@ -380,7 +434,7 @@
     }
     .survey-wrap .tab .box {
       display: flex;
-      gap: 30px;
+      gap: 25px;
       flex-wrap: wrap;
       flex-direction: column;
     }
@@ -417,6 +471,19 @@
     }
     .pre-step svg {
       transform: rotate(-90deg);
+    }
+
+    .text-area > .text-box{
+      /* text-align: center; */
+      margin: 20px auto 0;
+      width: 312px;
+      height: 84px;
+      padding: 20px 16px;
+      border-radius: 16px;
+      background-color: #F6F6F6;
+      font-size: 14px;
+      line-height: 22px;
+      color: #505050;
     }
 
     .survey-area {
@@ -496,6 +563,47 @@
       content: "▲";
     }
 
+    /* 팝업 */
+    .popup-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+    }
+
+    .popup-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* background-color: #ffffff; */
+        padding: 20px;
+        border-radius: 8px;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .survey-img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .close-btn {
+        float: right;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        background: none;
+        color: #fff;
+    }
+
     @media (max-width: 767px) {
       .survey-area {
         flex-direction: column;
@@ -512,11 +620,16 @@
         padding: 20px;
       }
       .survey-wrap .tab .btn-wrap {
-        justify-content: left;
+        position: fixed;
+        bottom: 40px;
+        left: 0;
       }
       .pre-step {
         top: 13px;
         right: 18px;
+      }
+      .mo{
+        display: none;
       }
     }
   </style>
