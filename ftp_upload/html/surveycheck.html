@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="keywords"
     content="홈페이지제작, 웹사이트구축, 쇼핑몰제작, 쇼핑몰구축, 모바일웹사이트구축, 모바일홈페이지제작, 웹접근성구축, 웹접근성홈페이지제작, 웹표준구축, 웹표준홈페이지제작, 반응형웹구축, 반응형홈페이지제작, 검색엔진최적화, 사전컨설팅, UIUX컨설팅, si업체, 웹사이트디자인, 기업사이트디자인, 디자인제작, UIUX, seo, 기업웹사이트구축"
@@ -133,9 +133,10 @@
       </button> -->
       <section class="survey-wrap">
         <div class="name-check-wrap">
-          <p class="tit">이름을 입력하세요:</p>
+          <p class="tit">이름을 입력하세요 :)</p>
           <div class="input-box">
             <input type="text" id="nameInput" placeholder="이름 입력">
+            <span class="sub-txt">* 입력된 정보는 기록 및 저장되지 않습니다.</span>
           </div>
           <button id="nameCheckBtn" class="check-btn">확인</button>
         </div>
@@ -148,6 +149,7 @@
             </a>
             <a class="type4 type4-hover center tab2-btn">회사·팀 성장을 <br />위한 인사이트</a>
           </div>
+          <span class="warning-msg">1년차 이상부터 참여가 가능합니다!</span>
           <div class="text-box"><span>피드백 결과 확인을 원하는 직원은<br /> 경영지원부 윤가영과장 메일로 요청하세요</span></div>
         </div>
         <!-- 직원역량 향상 -->
@@ -278,6 +280,7 @@
     const textArea = document.querySelector(".text-area");
     const tab1BtnCheck = document.querySelector(".tab1-btn");
     let currentUserStatus = 0;
+    let currentUserPart = null;
 
     nameInput.addEventListener("input", () => {
       const name = nameInput.value.trim();
@@ -285,6 +288,12 @@
         nameCheckBtn.classList.add("active");
       } else {
         nameCheckBtn.classList.remove("active");
+      }
+    });
+    nameInput.addEventListener("keypress", function(event) {
+      if (event.key === 'Enter' || event.keyCode === 13) {
+          event.preventDefault(); 
+          nameCheckBtn.click(); 
       }
     });
 
@@ -296,6 +305,7 @@
         for (let person of part.per) {
           if (person.name === name) {
             currentUserStatus = person.status;
+            currentUserPart = part.part;
             found = true;
             break;
           }
@@ -321,6 +331,7 @@
         // part 컨테이너
         var partDiv = document.createElement("div");
         partDiv.className = "part";
+        partDiv.setAttribute('data-part', item.part);
 
         // part 제목
         var partTitle = document.createElement("h3");
@@ -381,12 +392,16 @@
     var tab2Btn = document.querySelectorAll(".tab2-btn")[0];
     var ptBtn = document.querySelectorAll(".pt-btn")[0];
     var subText = document.querySelectorAll(".text-box")[0];
+    var warningMsg = document.querySelectorAll(".warning-msg")[0];
 
     // 직원 역량 평가 버튼 클릭 시
     tab1Btn.addEventListener("click", function (e) {
       if (currentUserStatus === 0) {
-        e.preventDefault();
-        alert("1년차 미만 직원은 접근할 수 없습니다.");
+        tab1Btn.style.pointerEvents = 'none';
+        warningMsg.style.display = 'block';
+
+        // e.preventDefault();
+        // alert("1년차 미만 직원은 접근할 수 없습니다.");
       } else {
         surveyArea.style.display = "none";
         tab1.style.display = "block";
@@ -410,7 +425,27 @@
       // preStep.classList.add("step3");
       // preStep.classList.remove("step1");
       myPopup.style.display = "block";
+      autoOpenAccordion(currentUserPart);
     });
+
+    function autoOpenAccordion(userPart) {
+      if (!userPart) return;
+      const allItems = document.querySelectorAll('.survey-box .part-box .part');
+
+      allItems.forEach(item => {
+          const itemPart = item.getAttribute('data-part');
+          const title = item.querySelector('.accordion-title');
+          const content = item.querySelector('.accordion-content');
+
+          if (itemPart === userPart) {
+              content.style.display = 'grid';
+              title.classList.add('active');
+          } else {
+              content.style.display = 'none';
+              title.classList.remove('active');
+          }
+      });
+    }
 
     // 버튼
     // preStep.addEventListener("click", function () {
@@ -522,6 +557,7 @@
 
     .text-area{
       display: none;
+      position: relative;
     }
     .text-area > .text-box{
       margin: 20px auto 0;
@@ -553,9 +589,10 @@
       font-family: Pretendard;
     }
     .name-check-wrap .input-box{
+      position: relative;
       border: 1px solid #D6DBE1;
       border-radius: 8px;
-      margin: 32px 0 24px 0;
+      margin: 32px 0 54px 0;
     }
     .name-check-wrap .input-box input{
       appearance: none;
@@ -570,6 +607,14 @@
     }
     .name-check-wrap .input-box input::placeholder{
       color: #787878;
+    }
+    .name-check-wrap .input-box .sub-txt{
+      position: absolute;
+      bottom: -30px;
+      left: 0;
+      font-size: 13px;
+      line-height: 24px;
+      color: #676767;
     }
     .name-check-wrap .check-btn{
       width: 120px;
@@ -604,6 +649,33 @@
       margin-top: 0 !important;
       line-height: 1.5;
       text-align: center;
+    }
+
+    .warning-msg{
+      display: none;
+      position: absolute;
+      top: -19%;
+      left: 29.5%;
+      padding: 6px 12px;
+      background-color: #111111;
+      color: #fff;
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 20px;
+      text-align: center;
+    }
+    .warning-msg::before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: -6px;
+      left: 15px;
+      border-style: solid;
+      border-width: 0px 11px 7px 11px;
+      border-color: transparent transparent #111111 transparent;
+      transform: rotate(180deg);
     }
 
     .survey-box {
@@ -730,6 +802,11 @@
       }
       .text-area > .text-box span{
         padding: 20px 16px;
+      }
+      .warning-msg{
+        top: -15%;
+        left: 8%;
+        width: 210px;
       }
       .pre-step {
         top: 13px;
