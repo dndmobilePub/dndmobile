@@ -427,6 +427,11 @@
       // preStep.classList.remove("step1");
       myPopup.style.display = "block";
       autoOpenAccordion(currentUserPart);
+
+      if (localStorage.getItem(popupKey) !== 'true') {
+        myPopup.style.display = 'block';
+        localStorage.setItem(popupKey, 'true');
+      }
     });
 
     function autoOpenAccordion(userPart) {
@@ -480,9 +485,9 @@
     document.addEventListener('DOMContentLoaded', () => {
         // 'hasVisitedPage' 키의 값이 'true'가 아니면 (즉, 첫 방문이면)
         if (localStorage.getItem(popupKey) !== 'true') {
-            popup.style.display = 'block';
+            // popup.style.display = 'block';
             // 팝업이 열렸으므로 localStorage에 방문 기록을 남깁니다.
-            localStorage.setItem(popupKey, 'true');
+            // localStorage.setItem(popupKey, 'true');
         }
     });
     const closePopup = () => {
