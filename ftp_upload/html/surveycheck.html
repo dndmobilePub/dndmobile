@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
-  @@include('./include/head.html')
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="keywords"
+    content="홈페이지제작, 웹사이트구축, 쇼핑몰제작, 쇼핑몰구축, 모바일웹사이트구축, 모바일홈페이지제작, 웹접근성구축, 웹접근성홈페이지제작, 웹표준구축, 웹표준홈페이지제작, 반응형웹구축, 반응형홈페이지제작, 검색엔진최적화, 사전컨설팅, UIUX컨설팅, si업체, 웹사이트디자인, 기업사이트디자인, 디자인제작, UIUX, seo, 기업웹사이트구축"
+  />
+  <title>디앤디모바일</title>
+  <link rel="icon" href="/dndmobile/assets/images/favicon.ico" />
+
+  <link rel="stylesheet" href="/dndmobile/assets/css/style.css" />
+  <script src="/dndmobile/assets/js/jquery-3.6.0.min.js"></script>
+  <script src="/dndmobile/assets/js/swiper.min.js"></script>
+  <script src="/dndmobile/assets/js/gsap.min.js"></script>
+  <script src="/dndmobile/assets/js/ScrollTrigger.min.js"></script>
+  <script src="/dndmobile/assets/js/ScrollToPlugin.min.js"></script>
+  <script src="/dndmobile/assets/js/aos.js"></script>
+  <script src="/dndmobile/assets/js/lib.lottie-player.js" defer></script>
+  <script src="/dndmobile/assets/js/common.js" defer></script>
+  <script src="/dndmobile/assets/js/ui.js" defer></script>
+</head>
+
 
   <body>
     <div class="wrap">
@@ -8,7 +30,7 @@
         <div class="header--inner">
           <div class="hide-mobile">
             <h1 class="logo--black main_logo">
-              <a href="survey.html">
+              <a href="surveycheck.html">
                 <i class="ico">
                   <svg width="34px" height="34px" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1965_7010)">
@@ -43,7 +65,7 @@
         </div>
         <div class="header--footer hide-pc">
           <h1 class="logo--black">
-            <a href="survey.html">
+            <a href="surveycheck.html">
               <i class="ico">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_2324_9676)">
@@ -110,6 +132,13 @@
         </svg>
       </button> -->
       <section class="survey-wrap">
+        <div class="name-check-wrap">
+          <p class="tit">이름을 입력하세요:</p>
+          <div class="input-box">
+            <input type="text" id="nameInput" placeholder="이름 입력">
+          </div>
+          <button id="nameCheckBtn" class="check-btn">확인</button>
+        </div>
         <div class="text-area">
           <div class="btn-wrap survey-area">
             <a class="type4 type4-hover center tab1-btn">
@@ -174,11 +203,11 @@
           </div>
         </div>
       </section>
-      <!-- @@include('./include/footer.html') -->
+      
        <div id="myPopup" class="popup-overlay">
         <div class="popup-content">
             <button class="close-btn" id="closePopupBtn">&times;</button>
-            <img src="../assets/images/survey.png" alt="사진" class="survey-img">
+            <img src="/dndmobile/assets/images/survey.png" alt="사진" class="survey-img">
         </div>
     </div>
     </div>
@@ -188,59 +217,101 @@
       {
         part: "기획자",
         per: [
-          { name: "김재운", link: "#" },
-          { name: "김화진", link: "#" },
-          { name: "김희선", link: "#" },
-          { name: "민은경", link: "#" },
-          { name: "박유석", link: "#" },
-          { name: "배세웅", link: "#" },
-          { name: "선영재", link: "#" },
-          { name: "안경화", link: "https://forms.gle/TpbvCV9oFHGuwfwX9" },
-          { name: "안재호", link: "#" },
-          { name: "윤창민", link: "#" },
-          { name: "이상아", link: "#" },
-          { name: "정성원", link: "#" },
-          { name: "최용섭", link: "https://forms.gle/pMH26ZxThBXxSAhP8" },
-          { name: "최효주", link: "https://forms.gle/8VW3sQUAESu3sayk8" },
-          { name: "최홍열", link: "https://forms.gle/peesdGpniACXzxqs5" },
-          { name: "최희지", link: "#" },
-          { name: "하헌국", link: "#" },
-          { name: "한창호", link: "#" }
+          { name: "김재운", link: "#", status: 1},
+          { name: "김화진", link: "#", status: 1},
+          { name: "김희선", link: "#", status: 1 },
+          { name: "민은경", link: "#", status: 1 },
+          { name: "박유석", link: "#", status: 1 },
+          { name: "배세웅", link: "#", status: 1 },
+          { name: "선영재", link: "#", status: 1 },
+          { name: "안경화", link: "https://forms.gle/TpbvCV9oFHGuwfwX9", status: 1 },
+          { name: "안재호", link: "#", status: 1 },
+          { name: "윤창민", link: "#", status: 1 },
+          { name: "이상아", link: "#", status: 1 },
+          { name: "정성원", link: "#", status: 1 },
+          { name: "최용섭", link: "https://forms.gle/pMH26ZxThBXxSAhP8", status: 1 },
+          { name: "최효주", link: "https://forms.gle/8VW3sQUAESu3sayk8", status: 1 },
+          { name: "최홍열", link: "https://forms.gle/peesdGpniACXzxqs5", status: 1 },
+          { name: "최희지", link: "#", status: 1 },
+          { name: "하헌국", link: "#", status: 1 },
+          { name: "한창호", link: "#", status: 1 }
         ],
       },
       {
         part: "디자이너",
         per: [
-          { name: "김연민", link: "#" },
-          { name: "백지운", link: "#" },
-          { name: "신승희", link: "#" },
-          { name: "임민모", link: "#" },
-          { name: "정영아", link: "#" },
-          { name: "한상호", link: "#" },
-          // { name: "조선영", link: "#" },
-          // { name: "정지은", link: "#" },
-          // { name: "김소영", link: "#" },
-          // { name: "이성구", link: "#" },
-          // { name: "황연주", link: "#" },
+          { name: "김연민", link: "#", status: 1},
+          { name: "백지운", link: "#", status: 1},
+          { name: "신승희", link: "#", status: 1},
+          { name: "임민모", link: "#", status: 1},
+          { name: "정영아", link: "#", status: 1},
+          { name: "한상호", link: "#", status: 1},
+          { name: "조선영", link: "#", status: 0},
+          { name: "정지은", link: "#", status: 0},
+          { name: "김소영", link: "#", status: 0},
+          { name: "이성구", link: "#", status: 0},
+          { name: "황연주", link: "#", status: 0},
         ],
       },
       {
         part: "퍼블리셔",
         per: [
-          // { name: "강해미", link: "#" },
-          { name: "김영선", link: "#" },
-          { name: "김희주", link: "#" },
-          { name: "박은지", link: "#" },
-          { name: "백호열", link: "#" },
-          { name: "안혜연", link: "#" },
-          { name: "양미선", link: "#" },
-          { name: "이승연", link: "#" },
-          { name: "전지우", link: "#" },
-          { name: "조우성", link: "#" },
-          { name: "윤석상", link: "#" }
+          { name: "강해미", link: "#", status: 0},
+          { name: "김영선", link: "#", status: 1},
+          { name: "김희주", link: "#", status: 1},
+          { name: "박은지", link: "#", status: 1},
+          { name: "백호열", link: "#", status: 1},
+          { name: "안혜연", link: "#", status: 1},
+          { name: "양미선", link: "#", status: 1},
+          { name: "이승연", link: "#", status: 1},
+          { name: "전지우", link: "#", status: 1},
+          { name: "조우성", link: "#", status: 1},
+          { name: "윤석상", link: "#", status: 1}
         ],
       },
     ];
+
+    //접근권한 확인
+    const nameInput = document.getElementById("nameInput");
+    const nameCheckBtn = document.getElementById("nameCheckBtn");
+    const nameCheckWrap = document.querySelector(".name-check-wrap");
+    const textArea = document.querySelector(".text-area");
+    const tab1BtnCheck = document.querySelector(".tab1-btn");
+    let currentUserStatus = 0;
+
+    nameInput.addEventListener("input", () => {
+      const name = nameInput.value.trim();
+      if (name.length > 0) {
+        nameCheckBtn.classList.add("active");
+      } else {
+        nameCheckBtn.classList.remove("active");
+      }
+    });
+
+     nameCheckBtn.addEventListener("click", () => {
+      const name = nameInput.value.trim();
+      let found = false;
+
+      for (let part of list) {
+        for (let person of part.per) {
+          if (person.name === name) {
+            currentUserStatus = person.status;
+            found = true;
+            break;
+          }
+        }
+        if (found) break;
+      }
+
+      if (!found) {
+        alert("등록되지 않은 이름입니다.");
+        return;
+      }
+
+      // 이름 입력 섹션 숨기고 text-area 보여주기
+      nameCheckWrap.style.display = "none";
+      textArea.style.display = "block";
+    });
 
     document.addEventListener("DOMContentLoaded", function () {
       var partBox = document.querySelectorAll(".survey-box .part-box")[0];
@@ -266,11 +337,13 @@
 
         // 인원 리스트 생성
         item.per.forEach(function (person) {
-          var aTag = document.createElement("a");
-          aTag.href = person.link;
-          aTag.target = "_blank";
-          aTag.textContent = person.name;
-          contentDiv.appendChild(aTag);
+          if (person.status === 1) { 
+            var aTag = document.createElement("a");
+            aTag.href = person.link;
+            aTag.target = "_blank";
+            aTag.textContent = person.name;
+            contentDiv.appendChild(aTag);
+          }
         });
 
         // 아코디언 클릭 이벤트
@@ -310,12 +383,17 @@
     var subText = document.querySelectorAll(".text-box")[0];
 
     // 직원 역량 평가 버튼 클릭 시
-    tab1Btn.addEventListener("click", function () {
-      surveyArea.style.display = "none";
-      tab1.style.display = "block";
-      subText.style.display = "none";
-      // preStep.style.display = "block";
-      // preStep.classList.add("step1");
+    tab1Btn.addEventListener("click", function (e) {
+      if (currentUserStatus === 0) {
+        e.preventDefault();
+        alert("1년차 미만 직원은 접근할 수 없습니다.");
+      } else {
+        surveyArea.style.display = "none";
+        tab1.style.display = "block";
+        subText.style.display = "none";
+        // preStep.style.display = "block";
+        // preStep.classList.add("step1");
+      }
     });
     // 회사·팀 성장 버튼 클릭 시
     tab2Btn.addEventListener("click", function () {
@@ -371,31 +449,19 @@
             localStorage.setItem(popupKey, 'true');
         }
     });
-
-    // 2. 닫기 함수 정의
     const closePopup = () => {
         popup.style.display = 'none';
     };
 
-    // 3. 닫기 버튼 (X) 클릭 시 팝업 닫기
     closeBtn.addEventListener('click', closePopup);
-
-    // 4. 팝업 배경 오버레이 클릭 시 팝업 닫기
-    // *주의: 팝업 내용(popup-content)을 클릭해도 닫히지 않도록 이벤트 버블링 방지 로직을 사용합니다.
     popup.addEventListener('click', (event) => {
-        // 클릭된 요소(event.target)가 닫기 버튼이 아닌 경우
-        // 닫기 버튼이 아닌 팝업 영역 (배경이든 내용이든)을 클릭하면 닫히게 합니다.
-        
-        // 닫기 버튼(`closeBtn`)을 클릭한 경우가 아니라면,
-        // (closeBtn 클릭은 이미 위에서 처리했으므로 중복 방지)
         if (event.target !== closeBtn) {
             closePopup();
         }
     });
     
-    // (선택 사항) 팝업 내용 영역을 클릭해도 닫히지 않도록 버블링 방지
     content.addEventListener('click', (event) => {
-          event.stopPropagation(); // 상위 요소(popup-overlay)로 이벤트 전달을 막음
+          event.stopPropagation();
     });
   </script>
   <style>
@@ -451,6 +517,9 @@
       transform: rotate(-90deg);
     }
 
+    .text-area{
+      display: none;
+    }
     .text-area > .text-box{
       margin: 20px auto 0;
       padding: 0 60px;
@@ -466,6 +535,52 @@
       font-size: 14px;
       color: #505050;
       line-height: 22px;
+    }
+
+    .name-check-wrap{
+      display: flex;
+      flex-direction: column;
+      margin: 200px auto;
+      max-width: 300px;
+    }
+    .name-check-wrap .tit{
+      font-size: 20px;
+      line-height: 24px;
+      color: #121212;
+      font-family: Pretendard;
+    }
+    .name-check-wrap .input-box{
+      border: 1px solid #D6DBE1;
+      border-radius: 8px;
+      margin: 32px 0 24px 0;
+    }
+    .name-check-wrap .input-box input{
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+      background: none;
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+      line-height: 24px;
+    }
+    .name-check-wrap .input-box input::placeholder{
+      color: #787878;
+    }
+    .name-check-wrap .check-btn{
+      width: 120px;
+      height: 36px;
+      padding: 8px 47px;
+      margin: 0 auto;
+      background-color: #c1c1c1;
+      border-radius: 8px;
+      font-size: 15px;
+      line-height: 20px;
+      color: #fff;
+    }
+    .name-check-wrap .check-btn.active{
+      background-color: #121212;
     }
 
     .survey-area {
@@ -607,7 +722,6 @@
         left: 0;
       }
       .text-area > .text-box{
-        /* margin: 20px 20px 0 20px; */
         padding: 0 20px;
         width: 100%;
       }
