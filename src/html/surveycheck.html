@@ -609,7 +609,7 @@
       position: relative;
       display: flex;
       gap: 7rem;
-      align-items: center;
+      align-items: stretch;
       align-self: center;
       flex-direction: row;
       margin: 0 auto;
@@ -618,15 +618,18 @@
       max-width: 76rem;
     }
     .survey-area .item{
+      display: flex;
       position: relative;
+      flex-direction: column;
       width: 100%;
     }
     .survey-area .item a {
+      flex: 1;
       display: flex;
       width: 100%;
-      flex: 1;
       margin: 0;
       margin-top: 0 !important;
+      justify-content: center;
       line-height: 1.5;
       text-align: center;
       font-size: 2rem;
