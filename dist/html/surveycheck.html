@@ -144,18 +144,16 @@
           <div class="btn-wrap survey-area">
             <div class="item">
               <a class="type4 type4-hover center tab1-btn">
-                직원 역량 향상을
-                <br class="mo" />
-                위한 360º 피드백
+                직원 역량 향상을 위한 360º 피드백
+                <span class="sub-text">역량향상 피드백 결과 확인을 원하는 직원은<br /> 경영지원부 윤가영과장 메일로 요청하세요</span>
               </a>
               <span class="warning-msg">재직기간 1년이상 직원만 참여가능합니다.</span>
             </div>
             <div class="item">
-              <a class="type4 type4-hover center tab2-btn">회사·팀 성장을 <br />위한 인사이트</a>
+              <a class="type4 type4-hover center tab2-btn">회사·팀 성장을 위한 인사이트</a>
             </div>
           </div>
           <div class="text-box">
-            <span>역량향상 피드백 결과 확인을 원하는 직원은<br /> 경영지원부 윤가영과장 메일로 요청하세요</span>
           </div>
         </div>
         <!-- 직원역량 향상 -->
@@ -204,7 +202,7 @@
         <div class="survey-box" style="display: none">
           <div class="step-box">
             <h2>직원 역량 향상을 위한 360º 피드백</h2>
-            <span class="sub-text">우리부서 뿐만 아니라 다른 부서도 피드백이 가능합니다!</span>
+            <span class="sub-text">업무부서와 상관없이 자유로운 피드백이 가능합니다.</span>
           </div>
           <div class="part-box">
             <!-- 설문대상자 리스트 -->
@@ -510,7 +508,7 @@
       background-color: #fff;
     }
     .survey-wrap h2 {
-      font-size: 2.4rem;
+      font-size: 2.2rem;
       font-weight: 700;
       text-align: left;
     }
@@ -527,13 +525,13 @@
       flex-direction: column;
     }
     .survey-wrap .tab .box p {
-      font-size: 1.8rem;
-      font-weight: 500;
+      font-size: 1.6rem;
       line-height: 1.5;
       text-align: left;
     }
     .survey-wrap .tab .box p span {
       background-color: #ffde5b;
+      font-weight: bold;
     }
     .survey-wrap .tab .btn-wrap {
       justify-content: center;
@@ -542,14 +540,18 @@
     }
     .survey-wrap .tab .btn-wrap a {
       width: 35rem;
+      font-size: 1.6rem;
+      background-color: #121212;
+      color: #fff;
     }
     .survey-wrap .step-box {
       line-height: 1.5;
     }
     .survey-wrap .step-box .sub-text{
       display: block;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       margin-bottom: 2rem;
+      color: #D91550;
     }
 
     .pre-step {
@@ -567,23 +569,6 @@
       display: none;
       position: relative;
     }
-    .text-area > .text-box{
-      margin: 2rem auto 0;
-      padding: 0 6rem;
-      max-width: 76rem;
-    }
-    .text-area > .text-box span{
-      display: block;
-      width: 100%;
-      height: 8.4rem;
-      padding: 2rem 1.6rem;
-      border-radius: 0.8rem;
-      background-color: #F6F6F6;
-      font-size: 1.4rem;
-      color: #505050;
-      line-height: 2.2rem;
-      text-align: center;
-    }
 
     .name-check-wrap{
       display: flex;
@@ -592,7 +577,7 @@
       max-width: 30rem;
     }
     .name-check-wrap .tit{
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       line-height: 2.4rem;
       color: #121212;
       font-family: Pretendard;
@@ -614,7 +599,7 @@
       height: 100%;
       padding: 1.6rem;
       line-height: 2.4rem;
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
     .name-check-wrap .input-box input::placeholder{
       color: #787878;
@@ -623,7 +608,7 @@
       position: absolute;
       bottom: -3rem;
       left: 0;
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       line-height: 2.4rem;
       color: #676767;
     }
@@ -634,7 +619,7 @@
       margin: 0 auto;
       background-color: #c1c1c1;
       border-radius: 0.8rem;
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       line-height: 2rem;
       color: #fff;
     }
@@ -645,13 +630,13 @@
     .survey-area {
       position: relative;
       display: flex;
-      gap: 1rem;
+      gap: 7rem;
       align-items: center;
       align-self: center;
       flex-direction: row;
       margin: 0 auto;
       margin-top: 20rem;
-      padding: 0 6rem;
+      padding: 0;
       max-width: 76rem;
     }
     .survey-area .item{
@@ -667,13 +652,21 @@
       line-height: 1.5;
       text-align: center;
       font-size: 2rem;
+      border: none;
     }
     .survey-area .tab1-btn{
+      flex-direction: column;
       background-color: #000 !important;
       color: #fff !important;
     }
+    .survey-area .tab1-btn .sub-text{
+      font-size: 1.4rem;
+      color: #ffde5b;
+      font-weight: 300;
+      margin-top: 1rem;
+    }
     .survey-area .tab2-btn{
-      background-color: #D91550 !important; 
+      background-color: #565656 !important; 
       color: #fff !important;
     }
 
@@ -683,11 +676,11 @@
       top: -4rem;
       left: 1rem;
       padding: 0.6rem 1.2rem;
-      background-color: #E8E8E8;
+      background-color: #D91550;
       border-radius: 0.8rem;
-      border: 1px solid #111;
-      color: #000;
-      font-size: 1.3rem;
+      /* border: 1px solid #111; */
+      color: #fff;
+      font-size: 1.6rem;
       line-height: 2rem;
       text-align: center;
     }
@@ -701,7 +694,7 @@
       left: 1.5rem;
       border-style: solid;
       border-width: 0 1.1rem 0.7rem 1.1rem;
-      border-color: transparent transparent #111111 transparent;
+      border-color: transparent transparent #D91550 transparent;
       transform: rotate(180deg);
     }
 
@@ -731,7 +724,7 @@
       margin-top: 0 !important;
       padding: 1rem 1rem;
       border: 0.1rem solid #000;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       text-align: center;
       border-radius: 0.8rem;
     }
@@ -743,7 +736,7 @@
     .survey-box .part-box h3 {
       padding: 1rem;
       background-color: #eee;
-      font-size: 2rem;
+      font-size: 1.6rem;
       font-weight: 600;
       border-radius: 0.8rem;
       position: relative;
@@ -790,7 +783,7 @@
 
     .close-btn {
       float: right;
-      font-size: 3rem;
+      font-size: 1.6rem;
       font-weight: bold;
       cursor: pointer;
       border: none;
@@ -802,12 +795,10 @@
       .survey-area {
         flex-direction: column;
         padding: 0 2rem;
+        gap: 2rem;
       }
       .survey-area a {
         padding: 1.4rem 0;
-      }
-      .survey-area .tab1-btn {
-        padding-bottom: 8rem;
       }
       .survey-box {
         margin-top: 6rem;
@@ -825,26 +816,6 @@
         position: fixed;
         bottom: 4rem;
       }
-      .text-area > .text-box{
-        position: absolute;
-        top: 5.41rem;
-        padding: 0;
-        margin: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 28rem;
-        pointer-events: none;
-      }
-      .text-area > .text-box span{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0;
-        height: 5.2rem;
-        font-size: 1.2rem;
-        line-height: 2.2rem;
-      }
       .warning-msg{
         top: -4.5rem;
         left: 1rem;
@@ -853,7 +824,7 @@
         top: 1.3rem;
         right: 1.8rem;
       }
-      .mo, .pc{
+      .mo{
         display: none;
       }
     }
